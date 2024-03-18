@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<meta charset="utf8" />
+<html>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js'></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+<script>
+  async function init() {
+    const sqlPromise = initSqlJs({
+      locateFile: file => `https://sql.js.org/dist/${file}`
+    });
+    const dataPromise = fetch("db.sqlite").then(res => res.arrayBuffer());
+    const [SQL, buf] = await Promise.all([sqlPromise, dataPromise])
+    const db = new SQL.Database(new Uint8Array(buf));
+    return db
+  }
+
+  function search(string, query) {
+    return query.split(/\s+/).some((token) => string.toLowerCase().includes(token.toLowerCase()))
+  }
+
+  function get_positions(db, reference) {
+    stmt = `
+        SELECT member_id, position
+        FROM votes
+        JOIN positions ON votes.id=vote_id
+        WHERE procedure_ref='${reference}'
+      `
+    return db.exec(stmt)[0].values
+  }
+
+  function get_members(db) {
+    stmt = `
+        SELECT id, party
+        FROM members
+      `
+    return db.exec(stmt)[0].values
+  }
+
+  function r(arr1, arr2) {
+    return arr1.length/arr2.length*100 + '%'
+  }
+
+  function groupBy(arr, index) {
+    ret = Object.groupBy(arr, (e) => e[index])
+    console.log(ret)
+    return ret
+  }
+
+  function getPercentages(positions) {
+    return { FOR: [], AGAINST: [], ABSTENTION: [], ...groupBy(positions, 1) }
+  }
+
+  function selectById(arr, ids) {
+    return arr.filter((e) => ids.includes(e[0]))
+  }
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<body>
+  <main x-data="{ db: null, selected: null }" x-init="db = await init()">
+    <template x-if="db">
+      <article x-data="{ procedures: db.exec('SELECT title, reference FROM procedures')[0].values }">
+        <template x-if="!selected">
+          <div x-data="{ query: '' }">
+            <input x-model="query" type="text" placeholder="Cherchez un sujet de vote" />
+            <ul x-data="{ filtered: [] }" x-effect="filtered = procedures.filter(([title]) => search(title, query))"">
+              <template x-for=" [title, reference] in filtered">
+                <li x-text="title" x-on:click="selected = reference"></li>
+              </template>
+            </ul>
+          </div>
+        </template>
+        <template x-if="selected">
+          <div x-data="{ positions: get_positions(db, selected), members: get_members(db) }">
+            <button x-on:click="selected = null">⟵ Retourner aux résultats</button>
+            <h2>Résultat global</h2>
+            <span x-test="positions"></span>
+            <div x-data="getPercentages(positions)" class="flex h-12 w-full rounded-full bg-gray-200 overflow-hidden">
+              <div class="h-full bg-green-500 rounded-l-full"
+                x-bind:style="{ width: r(FOR, members) }"></div>
+              <div class="h-full bg-red-500" x-bind:style="{ width: r(AGAINST, members) }"></div>
+              <div class="h-full bg-yellow-200" x-bind:style="{ width: r(ABSTENTION, members) }"></div>
+            </div>
+            <h2>Résultat par parti</h2>
+            <template x-for="[party, p_members] in Object.entries(groupBy(members, 1))">
+              <div x-data="{ p_positions: selectById(positions, p_members.map((e) => e[0])) }">
+                <h2 x-text="party"></h2>
+                <div x-data="getPercentages(p_positions)"
+                  class="flex h-12 w-full rounded-full bg-gray-200 overflow-hidden">
+                  <div class="h-full bg-green-500 rounded-l-full"
+                    x-bind:style="{ width: r(FOR, p_members) }"></div>
+                  <div class="h-full bg-red-500" x-bind:style="{ width: r(AGAINST, p_members) }"></div>
+                  <div class="h-full bg-yellow-200" x-bind:style="{ width: r(ABSTENTION, p_members) }"></div>
+                </div>
+              </div>
+            </template>
+          </div>
+        </template>
+      </article>
+    </template>
+  </main>
+</body>
+
+</html>
