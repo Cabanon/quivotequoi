@@ -2,9 +2,10 @@
 <meta charset="utf8" />
 <html>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsdiff/5.2.0/diff.min.js"></script>
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
 />
 <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" /> -->
 <script>
@@ -27,11 +28,19 @@
     return res.values.map((row) => Object.fromEntries(res.columns.map((colname, index) => ([colname, row[index]]))))
   }
 
-  function get_positions(db, reference) {
+  function get_positions(db, vote_id) {
     stmt = `
         SELECT member_id, position
+        FROM positions
+        WHERE vote_id='${vote_id}'
+      `
+    return query(db, stmt)
+  }
+
+  function get_votes(db, reference) {
+    stmt = `
+        SELECT id, title, amendment_id
         FROM votes
-        JOIN positions ON votes.id=vote_id
         WHERE procedure_ref='${reference}'
       `
     return query(db, stmt)
@@ -43,10 +52,19 @@
 
   function get_members(db) {
     stmt = `
-        SELECT id, party
+        SELECT id, party, full_name
         FROM members
       `
-    return db.exec(stmt)[0].values
+    return query(db, stmt)
+  }
+
+  function getAmendment(db, id) {
+    stmt = `
+        SELECT old, new
+        FROM amendments
+        WHERE id='${id}'
+      `
+    return query(db, stmt)[0]
   }
 
   function r(arr1, arr2) {
@@ -55,16 +73,21 @@
 
   function groupBy(arr, key) {
     ret = Object.groupBy(arr, (e) => e[key])
-    console.log(ret)
     return ret
+  }
+
+  function getPosition(positions, member) {
+    position = positions.find(position => position.member_id === member.id)
+    return position ? position.position : 'ABSENT'
   }
 
   function getPercentages(positions) {
     return { FOR: [], AGAINST: [], ABSTENTION: [], ...groupBy(positions, 'position') }
   }
 
-  function selectById(arr, ids) {
-    return arr.filter((e) => ids.includes(e[0]))
+  function filterPositions(positions, members) {
+    ids = members.map((member) => member.id)
+    return positions.filter((position) => ids.includes(position.member_id))
   }
 </script>
 <style>
@@ -73,6 +96,7 @@
   display: flex;
   overflow: hidden;
   background-color: rgb(198, 198, 198);
+  border-radius: 1.5rem;
 }
 .for {
   height: 100%;
@@ -86,53 +110,132 @@
   height: 100%;
   background-color: rgb(217, 200, 0);
 }
+.FOR:before {
+  content: '+';
+  display: inline-block;
+  text-align: center;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  background-color: rgb(57, 135, 18);
+  border-radius: 50%;
+}
+.AGAINST:before {
+  content: '-';
+  display: inline-block;
+  text-align: center;
+  background-color: rgb(217, 53, 38);
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  border-radius: 50%;
+}
+.ABSTENTION:before {
+  content: '=';
+  display: inline-block;
+  text-align: center;
+  background-color: rgb(217, 200, 0);
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  border-radius: 50%;
+}
+.ABSENT:before {
+  content: '*';
+  display: inline-block;
+  text-align: center;
+  background-color: rgb(198, 198, 198);
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  border-radius: 50%;
+}
+.added {
+  background-color: rgb(57, 135, 18);
+}
+.removed {
+  background-color: rgb(217, 53, 38);
+}
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-<body class="p-5 h-screen">
-  <main x-data="{ db: null, selected: null }" x-init="db = await init()" class="h-full">
+<body>
+  <header><h1>QuiVoteQuoi?</h1></header>
+  <main x-data="{ db: null, selected_proc: null, selected_vote: null }" x-init="db = await init()">
     <template x-if="db">
-      <article x-data="{ procedures: get_procedures(db) }">
-        <template x-if="!selected">
+      <div x-data="{ procedures: get_procedures(db) }">
+        <template x-if="!selected_proc && !selected_vote">
           <div x-data="{ query: '' }">
             <input x-model="query" type="search" placeholder="Cherchez un sujet de vote"/>
             <ul x-data="{ filtered: [] }" x-effect="filtered = procedures.filter(({ title }) => search(title, query))"">
               <template x-for="procedure in filtered">
-                <li x-text="procedure.title" x-on:click="selected = procedure"></li>
+                <li x-text="procedure.title" x-on:click="selected_proc = procedure"></li>
               </template>
             </ul>
           </div>
         </template>
-        <template x-if="selected">
-          <div x-data="{ positions: get_positions(db, selected.reference), members: get_members(db) }">
-            <button x-on:click="selected = null">⟵ Retourner aux résultats</button>
-            <h1 x-text="selected.title" class=""></h1>
-            <h3>Résultat global</h3>
-            <div x-data="getPercentages(positions)" class="votes">
-              <div class="for"
-                x-bind:style="{ width: r(FOR, members) }"></div>
-              <div class="against" x-bind:style="{ width: r(AGAINST, members) }"></div>
-              <div class="abstention" x-bind:style="{ width: r(ABSTENTION, members) }"></div>
-            </div>
-            <h2>Résultat par parti</h2>
-            <template x-for="[party, p_members] in Object.entries(groupBy(members, 1))">
-              <div x-data="{ p_positions: selectById(positions, p_members.map((e) => e.id)) }">
-                <h2 x-text="party"></h2>
-                <div x-data="getPercentages(p_positions)"
-                  class="flex h-12 w-full rounded-full bg-gray-200 overflow-hidden">
-                  <div class="h-full bg-green-500 rounded-l-full"
-                    x-bind:style="{ width: r(FOR, p_members) }"></div>
-                  <div class="h-full bg-red-500" x-bind:style="{ width: r(AGAINST, p_members) }"></div>
-                  <div class="h-full bg-yellow-200" x-bind:style="{ width: r(ABSTENTION, p_members) }"></div>
-                </div>
+        <template x-if="selected_proc && !selected_vote">
+          <section x-data="{ votes: get_votes(db, selected_proc.reference) }">
+            <a x-on:click="selected_proc = null">⟵ Retourner aux procédures</a>
+            <h2 x-text="selected_proc.title"></h2>
+            <ul>
+              <template x-for="vote in votes">
+                <li x-text="vote.title" x-on:click="selected_vote = vote"></li>
+              </template>
+            </ul>
+          </section>
+        </template>
+        <template x-if="selected_proc && selected_vote">
+          <div x-data="{ positions: get_positions(db, selected_vote.id), members: get_members(db) }">
+            <a x-on:click="selected_vote = null">⟵ Retourner aux votes</a>
+            <h2 x-text="selected_proc.title"></h2>
+            <h3 x-text="selected_vote.title" class=""></h3>
+            <template x-if="selected_vote.amendment_id">
+              <section x-data="{ amendment: getAmendment(db, selected_vote.amendment_id) }">
+                <h4>Détail de l'amendement</h4>
+                <template x-for="part in Diff.diffWords(amendment.old || '', amendment.new || '')">
+                  <template x-if="part.added">
+                    <ins x-text="part.value"></ins>
+                  </template>
+                  <template x-if="part.deleted">
+                    <del x-text="part.value"></del>
+                  </template>
+                  <template x-if="!part.added && !part.deleted">
+                    <span x-text="part.value"></span>
+                  </template>
+                </template>
+              </section>
+            </template>
+            <h4>Résultat global</h4>
+            <section>
+              <div x-data="getPercentages(positions)" class="votes">
+                <div class="for"
+                  x-bind:style="{ width: r(FOR, members) }"></div>
+                <div class="against" x-bind:style="{ width: r(AGAINST, members) }"></div>
+                <div class="abstention" x-bind:style="{ width: r(ABSTENTION, members) }"></div>
               </div>
+            </section>
+            <h4>Résultat par parti</h4>
+            <template x-for="[party, p_members] in Object.entries(groupBy(members, 'party'))">
+              <section x-data="{ p_positions: filterPositions(positions, p_members) }">
+                <h5 x-text="party"></h5>
+                <div x-data="getPercentages(p_positions)" class="votes">
+                  <div class="for"
+                    x-bind:style="{ width: r(FOR, p_members) }"></div>
+                  <div class="against" x-bind:style="{ width: r(AGAINST, p_members) }"></div>
+                  <div class="abstention" x-bind:style="{ width: r(ABSTENTION, p_members) }"></div>
+                </div>
+              </section>
+            </template>
+            <h4>Résultat par député</h4>
+            <template x-for="member in members">
+              <h5 x-bind:class="getPosition(positions, member)" x-text="member.full_name"></h5>
             </template>
           </div>
         </template>
-      </article>
+      </div>
     </template>
     <template x-if="!db">
-      <h1>Chargement des données...</h1>
+      <h2 aria-busy="true">Chargement des données...</h2>
     </template>
   </main>
 </body>

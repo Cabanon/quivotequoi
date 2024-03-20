@@ -156,7 +156,6 @@ def main(data: Data):
                         and "epref" in pv.keys()
                         and len(pv["epref"]) == 1
                         and "votes" in pv.keys()
-                        and "résolution" in pv["title"].lower()
                     ):
                         vote = Vote(
                             id=pv["voteid"],
