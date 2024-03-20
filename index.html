@@ -2,7 +2,11 @@
 <meta charset="utf8" />
 <html>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.10.2/sql-wasm.js'></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+/>
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" /> -->
 <script>
   async function init() {
     const sqlPromise = initSqlJs({
@@ -18,6 +22,11 @@
     return query.split(/\s+/).some((token) => string.toLowerCase().includes(token.toLowerCase()))
   }
 
+  function query(db, stmt) {
+    res = db.exec(stmt)[0]
+    return res.values.map((row) => Object.fromEntries(res.columns.map((colname, index) => ([colname, row[index]]))))
+  }
+
   function get_positions(db, reference) {
     stmt = `
         SELECT member_id, position
@@ -25,7 +34,11 @@
         JOIN positions ON votes.id=vote_id
         WHERE procedure_ref='${reference}'
       `
-    return db.exec(stmt)[0].values
+    return query(db, stmt)
+  }
+
+  function get_procedures(db) {
+    return query(db, 'SELECT title, reference FROM procedures')
   }
 
   function get_members(db) {
@@ -40,50 +53,70 @@
     return arr1.length/arr2.length*100 + '%'
   }
 
-  function groupBy(arr, index) {
-    ret = Object.groupBy(arr, (e) => e[index])
+  function groupBy(arr, key) {
+    ret = Object.groupBy(arr, (e) => e[key])
     console.log(ret)
     return ret
   }
 
   function getPercentages(positions) {
-    return { FOR: [], AGAINST: [], ABSTENTION: [], ...groupBy(positions, 1) }
+    return { FOR: [], AGAINST: [], ABSTENTION: [], ...groupBy(positions, 'position') }
   }
 
   function selectById(arr, ids) {
     return arr.filter((e) => ids.includes(e[0]))
   }
 </script>
+<style>
+.votes {
+  height: 3rem;
+  display: flex;
+  overflow: hidden;
+  background-color: rgb(198, 198, 198);
+}
+.for {
+  height: 100%;
+  background-color: rgb(57, 135, 18);
+}
+.against {
+  height: 100%;
+  background-color: rgb(217, 53, 38);
+}
+.abstention {
+  height: 100%;
+  background-color: rgb(217, 200, 0);
+}
+</style>
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
-<body>
-  <main x-data="{ db: null, selected: null }" x-init="db = await init()">
+<body class="p-5 h-screen">
+  <main x-data="{ db: null, selected: null }" x-init="db = await init()" class="h-full">
     <template x-if="db">
-      <article x-data="{ procedures: db.exec('SELECT title, reference FROM procedures')[0].values }">
+      <article x-data="{ procedures: get_procedures(db) }">
         <template x-if="!selected">
           <div x-data="{ query: '' }">
-            <input x-model="query" type="text" placeholder="Cherchez un sujet de vote" />
-            <ul x-data="{ filtered: [] }" x-effect="filtered = procedures.filter(([title]) => search(title, query))"">
-              <template x-for=" [title, reference] in filtered">
-                <li x-text="title" x-on:click="selected = reference"></li>
+            <input x-model="query" type="search" placeholder="Cherchez un sujet de vote"/>
+            <ul x-data="{ filtered: [] }" x-effect="filtered = procedures.filter(({ title }) => search(title, query))"">
+              <template x-for="procedure in filtered">
+                <li x-text="procedure.title" x-on:click="selected = procedure"></li>
               </template>
             </ul>
           </div>
         </template>
         <template x-if="selected">
-          <div x-data="{ positions: get_positions(db, selected), members: get_members(db) }">
+          <div x-data="{ positions: get_positions(db, selected.reference), members: get_members(db) }">
             <button x-on:click="selected = null">⟵ Retourner aux résultats</button>
-            <h2>Résultat global</h2>
-            <span x-test="positions"></span>
-            <div x-data="getPercentages(positions)" class="flex h-12 w-full rounded-full bg-gray-200 overflow-hidden">
-              <div class="h-full bg-green-500 rounded-l-full"
+            <h1 x-text="selected.title" class=""></h1>
+            <h3>Résultat global</h3>
+            <div x-data="getPercentages(positions)" class="votes">
+              <div class="for"
                 x-bind:style="{ width: r(FOR, members) }"></div>
-              <div class="h-full bg-red-500" x-bind:style="{ width: r(AGAINST, members) }"></div>
-              <div class="h-full bg-yellow-200" x-bind:style="{ width: r(ABSTENTION, members) }"></div>
+              <div class="against" x-bind:style="{ width: r(AGAINST, members) }"></div>
+              <div class="abstention" x-bind:style="{ width: r(ABSTENTION, members) }"></div>
             </div>
             <h2>Résultat par parti</h2>
             <template x-for="[party, p_members] in Object.entries(groupBy(members, 1))">
-              <div x-data="{ p_positions: selectById(positions, p_members.map((e) => e[0])) }">
+              <div x-data="{ p_positions: selectById(positions, p_members.map((e) => e.id)) }">
                 <h2 x-text="party"></h2>
                 <div x-data="getPercentages(p_positions)"
                   class="flex h-12 w-full rounded-full bg-gray-200 overflow-hidden">
@@ -97,6 +130,9 @@
           </div>
         </template>
       </article>
+    </template>
+    <template x-if="!db">
+      <h1>Chargement des données...</h1>
     </template>
   </main>
 </body>
