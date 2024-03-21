@@ -1,0 +1,127 @@
+---
+pagination:
+    data: votes
+    size: 1
+    alias: vote
+permalink: "vote/{{ vote.id }}"
+---
+<!DOCTYPE html>
+<meta charset="utf8" />
+<html>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" /> -->
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<style>
+.votes {
+  height: 3rem;
+  display: flex;
+  overflow: hidden;
+  background-color: rgb(198, 198, 198);
+  border-radius: 1.5rem;
+}
+.for {
+  height: 100%;
+  background-color: rgb(57, 135, 18);
+}
+.against {
+  height: 100%;
+  background-color: rgb(217, 53, 38);
+}
+.abstention {
+  height: 100%;
+  background-color: rgb(217, 200, 0);
+}
+.FOR:before {
+  content: '+';
+  display: inline-block;
+  text-align: center;
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  background-color: rgb(57, 135, 18);
+  border-radius: 50%;
+}
+.AGAINST:before {
+  content: '-';
+  display: inline-block;
+  text-align: center;
+  background-color: rgb(217, 53, 38);
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  border-radius: 50%;
+}
+.ABSTENTION:before {
+  content: '=';
+  display: inline-block;
+  text-align: center;
+  background-color: rgb(217, 200, 0);
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  border-radius: 50%;
+}
+.ABSENT:before {
+  content: '*';
+  display: inline-block;
+  text-align: center;
+  background-color: rgb(198, 198, 198);
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  border-radius: 50%;
+}
+.added {
+  background-color: rgb(57, 135, 18);
+}
+.removed {
+  background-color: rgb(217, 53, 38);
+}
+</style>
+<body>
+    <header><h1>QuiVoteQuoi?</h1></header>
+    <main>
+        <a href="reference/{{ vote.proc_reference }}">⟵ Retourner aux votes</a>
+        <h2>{{ vote.procedure_title }}</h2>
+        <h3>{{ vote.title }}</h3>
+        <h4>Détail de l'amendement</h4>
+            <template x-for="part in Diff.diffWords(amendment.old || '', amendment.new || '')">
+            <template x-if="part.added">
+                <ins x-text="part.value"></ins>
+            </template>
+            <template x-if="part.deleted">
+                <del x-text="part.value"></del>
+            </template>
+            <template x-if="!part.added && !part.deleted">
+                <span x-text="part.value"></span>
+            </template>
+        </template>
+        <h4>Résultat global</h4>
+        <div class="votes">
+            {% set positions = vote.positions | selectattr('position', 'FOR') %}
+            <div class="for" style="width: {{ positions.length / vote.positions.length * 100 }}%)"></div>
+            {% set positions = vote.positions | selectattr('position', 'FOR') %}
+            <div class="against" style="width: {{ positions.length / vote.positions.length * 100 }}%)"></div>
+            {% set positions = vote.positions | selectattr('position', 'FOR') %}
+            <div class="abstention" style="width: {{ positions.length / vote.positions.length * 100 }}%)"></div>
+        </div>
+        <h4>Résultat par parti</h4>
+        {% for party, p_positions in vote.positions | groupby('party') %}
+          <h5>{{ party }}</h5>
+          {% set positions = vote.positions | selectattr('position', 'FOR') %}
+          <div class="votes">
+            {% set positions = vote.positions | selectattr('position', 'FOR') %}
+            <div class="for" style="width: {{ positions.length / vote.positions.length * 100 }}%)"></div>
+            {% set positions = vote.positions | selectattr('position', 'FOR') %}
+            <div class="against" style="width: {{ positions.length / vote.positions.length * 100 }}%)"></div>
+            {% set positions = vote.positions | selectattr('position', 'FOR') %}
+            <div class="abstention" style="width: {{ positions.length / vote.positions.length * 100 }}%)"></div>
+          </div>
+        {% endfor %}
+        <h4>Résultat par député</h4>
+        {% for item in collection %}
+        <h5 x-bind:class="getPosition(positions, member)" x-text="member.full_name"></h5>
+        {% endfor %} <h5 x-bind:class="getPosition(positions, member)" x-text="member.full_name"></h5>
+    </div>
+</div>
+</html>

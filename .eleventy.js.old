@@ -1,0 +1,32 @@
+
+function r(arr1, arr2) {
+    return arr1.length/arr2.length*100 + '%'
+    }
+
+    function groupBy(arr, key) {
+    ret = Object.groupBy(arr, (e) => e[key])
+    return ret
+    }
+
+    function getPosition(positions, member) {
+    position = positions.find(position => position.member_id === member.id)
+    return position ? position.position : 'ABSENT'
+    }
+
+    function getPercentages(positions) {
+    return { FOR: [], AGAINST: [], ABSTENTION: [], ...groupBy(positions, 'position') }
+    }
+
+    function filterPositions(positions, members) {
+    ids = members.map((member) => member.id)
+    return positions.filter((position) => ids.includes(position.member_id))
+    }
+
+module.exports = function(eleventyConfig) {
+    eleventyConfig.addShortcode("for", function(positions, party=null) {
+        let res = positions.filter(({ position }) => position === 'FOR');
+        if party: res = res.filter()
+    });
+    eleventyConfig.addShortcode("against", function(positions, party=null) { … });
+    eleventyConfig.addShortcode("abstention", function(positions, party=null) { … });
+};
