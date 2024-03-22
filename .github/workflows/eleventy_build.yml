@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   build_deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - name: Build
@@ -14,5 +14,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_dir: _site 
-          publish_branch: gh-pages
+          publish_branch: master
           github_token: ${{ secrets.GITHUB_TOKEN }}
