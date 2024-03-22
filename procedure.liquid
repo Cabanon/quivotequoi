@@ -19,8 +19,9 @@ permalink: "procedure/{{ procedure.reference }}"
         <section>
             <a href="/">⟵ Retourner à la recherche</a>
             <h2>{{ procedure.title }}</h2>
+            {% assign procedure_votes = votes | where: 'procedure_ref', procedure.reference %}
             <ul>
-                {% for vote in procedure.votes %}
+                {% for vote in procedure_votes %}
                 <li><a href="/vote/{{ vote.id }}">{{ vote.title }}</a></li>
                 {% endfor %}
             </ul>

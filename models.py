@@ -2,7 +2,8 @@ from enum import Enum, StrEnum, auto
 from typing import Optional
 from datetime import date
 
-from sqlalchemy import Enum as SAEnum, ForeignKey
+import json
+from sqlalchemy import Enum as SAEnum, ForeignKey, JSON
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 from sqlalchemy.types import JSON
 
@@ -11,38 +12,6 @@ class Base(DeclarativeBase):
     type_annotation_map = {
         Enum: SAEnum(Enum, validate_strings=True),
     }
-
-
-class Party(Enum):
-    LR = "Les Républicains"
-    GRS = "Gauche républicaine et socialiste"
-    LFI = "La France Insoumise"
-    RN = "Rassemblement national"
-    EELV = "Europe Écologie"
-    PS = "Parti socialiste"
-    REC = "Reconquête!"
-    RE = "Renaissance"
-    MODEM = "Mouvement Démocrate"
-    LC = "Les centristes"
-    ND = "Nouvelle Donne"
-    HOR = "Horizons"
-    PP = "Place publique"
-    PR = "Parti Radical"
-    DVC = "Divers centre"
-    DVG = "Divers gauche"
-    DVD = "Divers droite"
-    RPS = "Régions et Peuples Solidaires"
-    IND = "Indépendant"
-
-    @classmethod
-    def from_str(cls, s):
-        match s:
-            case "Agir - La Droite constructive" | "Liste Renaissance" | 'La République en marche' | "Liste L'Europe Ensemble":
-                return cls.RE
-            case 'Mouvement Radical Social-Libéral':
-                return cls.PR
-            case _:
-                return cls(s)
 
 
 class Group(Enum):
@@ -101,7 +70,7 @@ class Member(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     full_name: Mapped[str]
     group: Mapped[Group]
-    party: Mapped[Party]
+    party: Mapped[str]
 
 
 class Procedure(Base):
@@ -157,6 +126,7 @@ class Vote(Base):
     procedure_ref = mapped_column(ForeignKey(Procedure.reference))
     amendment_id = mapped_column(ForeignKey(Amendment.id))
     title: Mapped[str]
+    positions: Mapped[list[dict]] = mapped_column(JSON)
     date: Mapped[date]
 
 

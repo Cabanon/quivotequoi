@@ -14,7 +14,7 @@ from sqlalchemy import select
 from tqdm import tqdm
 
 from database import engine
-from models import Base, Member, Group, Party, Procedure, Vote, Position, Amendment
+from models import Base, Member, Group, Procedure, Vote, Position, Amendment
 
 Base.metadata.create_all(bind=engine)
 
@@ -89,6 +89,15 @@ def read_json(filename):
             yield json.loads(line[1:])
 
 
+def party_from_str(s):
+    match s:
+        case "Agir - La Droite constructive" | "Liste Renaissance" | 'La République en marche' | "Liste L'Europe Ensemble":
+            return "Renaissance"
+        case 'Mouvement Radical Social-Libéral':
+            return "Parti Radical"
+    return s
+
+
 def main(data: Data):
     start_date = date(2019, 7, 2)
     end_date = date(2024, 7, 15)
@@ -112,7 +121,7 @@ def main(data: Data):
                                     id=mep["UserID"],
                                     full_name=mep["Name"]["full"],
                                     group=Group.from_str(group["groupid"]),
-                                    party=Party.from_str(current['party']),
+                                    party=party_from_str(current['party']),
                                 )
                             )
                 print(f'{len(session.new)} members will be imported')
@@ -163,20 +172,19 @@ def main(data: Data):
                             procedure_ref=pv["epref"][0],
                             title=pv["title"],
                         )
-                        votes_to_add.append(vote)
+                        positions = []
                         for position, votes in pv["votes"].items():
                             for meps in votes["groups"].values():
                                 for mep in meps:
                                     if mep["mepid"] in mepids:
-                                        session.add(
-                                            Position(
-                                                vote_id=pv["voteid"],
+                                        positions.append(
+                                            dict(
                                                 member_id=mep["mepid"],
-                                                position=Position.Position.from_str(
-                                                    position
-                                                ),
+                                                position=Position.Position.from_str(position),
                                             )
                                         )
+                        vote.positions = positions
+                        votes_to_add.append(vote)
                 session.add_all(votes_to_add)
                 print(f'{len(votes_to_add)} votes will be imported')
                 session.commit()
@@ -187,6 +195,7 @@ def main(data: Data):
                     if 'vote_ids' in amd:
                         for vote_id in amd['vote_ids']:
                             vote = session.get(Vote, vote_id)
+                            if not vote: break
                             vote.amendment_id = amd['id']
                         amendment = Amendment(
                             id=amd["id"],
