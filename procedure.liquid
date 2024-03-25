@@ -8,7 +8,6 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
 <!DOCTYPE html>
 <meta charset="utf8" />
 <html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jsdiff/5.2.0/diff.min.js"></script>
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
@@ -19,6 +18,14 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
         <section>
             <a href="/">⟵ Retourner à la recherche</a>
             <h2>{{ procedure.title }}</h2>
+            <h3>Sujets</h3>
+            <ul>
+                {% for code in procedure.subject %}
+                    {% assign subject = subjects | find: 'code', code %}
+                    <li><a href="/subject/{{ subject.code }}">{{ subject.name }}</a></li>
+                {% endfor %}
+            </ul>
+            <h3>Votes</h3>
             {% assign procedure_votes = votes | where: 'procedure_ref', procedure.reference %}
             <ul>
                 {% for vote in procedure_votes %}

@@ -106,7 +106,7 @@ class Procedure(Base):
     reference: Mapped[str] = mapped_column(primary_key=True)
     title: Mapped[str]
     type: Mapped[Type]
-    subject: Mapped[dict[str, str]] = mapped_column(JSON)
+    subject: Mapped[str]
     date: Mapped[date]
     url: Mapped[str]
 

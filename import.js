@@ -1,59 +1,43 @@
-const mongoose = require('mongoose');
-const { Member, Vote } = require("./models");
+const { JSDOM } = require("jsdom");
 
-main().catch(err => {console.log(err)});
-
-function normalizeParty(str) {
-    switch (str) {
-        case "Agir - La Droite constructive":
-        case "Liste Renaissance":
-        case 'La République en marche':
-        case "Liste L'Europe Ensemble":
-            return 'Renaissance'
-        case 'Mouvement Radical Social-Libéral':
-            return 'Parti Radical'
-        default:
-            return str
-    }
-}
-
-async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/quivotequoi');
-    const db = mongoose.connection.getClient().db('quivotequoi')
-
-    await Member.collection.drop()
-    let members = await db.collection('raw_meps')
-        .find({ 
-            active: true,
-            Constituencies: { $elemMatch : { term: 9, country: 'France' } }
-        })
-        .toArray()
-    members = members
-        .map((member) => ({
-            id: member.UserID,
-            full_name: member.Name.full,
-            party: normalizeParty(member.Constituencies.find((con) => con.term === 9).party)
-        }))
-    await Member.insertMany(members)
-    
-    const startDate = new Date(2019, 7, 2)
-    await Vote.collection.drop()
-    let votes = await db.collection('raw_votes')
-        .find({ 
-            epref: { $exists: true },
-            votes: { $exists: true },
-            ts: { $gt: startDate.toISOString() }
-        })
-        .toArray()
-    votes = votes
-        .map((vote) => ({
-            id: vote.voteid,
-            title: vote.title,
-            reference: Array.isArray(vote.epref) ? vote.epref[0] : vote.epref,
-            positions: Object.entries(vote.votes).flatMap(([position, { groups }]) => Object.values(groups).flat().map(({ mepid }) => ({ position, mepid }))),
-        }))
-    await Vote.insertMany(votes)
-    console.log('yay')
-    
-    await mongoose.disconnect()
+async function subjects() {
+    await fetch("https://oeil.secure.europarl.europa.eu/oeil/search/search.do?searchTab=y", {
+        "credentials": "same-origin",
+        "headers": {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+            "Accept-Language": "fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3",
+            "Upgrade-Insecure-Requests": "1",
+            "Sec-Fetch-Dest": "document",
+            "Sec-Fetch-Mode": "navigate",
+            "Sec-Fetch-Site": "same-origin",
+            "Sec-Fetch-User": "?1",
+            "Pragma": "no-cache",
+            "Cache-Control": "no-cache"
+        },
+        "referrer": "https://oeil.secure.europarl.europa.eu/oeil/info/info2.do",
+        "method": "GET",
+        "mode": "cors"
+    });
+    const response = await fetch("https://oeil.secure.europarl.europa.eu/oeil/search/facet.do?facet=internetSubject_s&snippet=true&sort=d&rows=10&searchTab=y&_=1711230122958", {
+        "credentials": "same-origin",
+        "headers": {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:123.0) Gecko/20100101 Firefox/123.0",
+            "Accept": "*/*",
+            "Accept-Language": "fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3",
+            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+            "X-Requested-With": "XMLHttpRequest",
+            "Sec-Fetch-Dest": "empty",
+            "Sec-Fetch-Mode": "cors",
+            "Sec-Fetch-Site": "same-origin",
+            "Pragma": "no-cache",
+            "Cache-Control": "no-cache"
+        },
+        "referrer": "https://oeil.secure.europarl.europa.eu/oeil/search/search.do?searchTab=y",
+        "method": "GET",
+        "mode": "cors"
+    });
+    return response.text()
+    const dom = new JSDOM(response.text())
+    return dom.window.document.getElementById('tree')
 }

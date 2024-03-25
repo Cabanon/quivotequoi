@@ -1,5 +1,6 @@
 import requests
 import json
+import csv
 import io
 import unicodedata
 from datetime import datetime as dt, date, timezone
@@ -9,9 +10,11 @@ from enum import StrEnum, auto
 
 import typer
 import lzip
+import bs4
 from sqlalchemy.orm import Session
 from sqlalchemy import select
 from tqdm import tqdm
+from dotted_dict import DottedDict
 
 from database import engine
 from models import Base, Member, Group, Procedure, Vote, Position, Amendment
@@ -24,6 +27,7 @@ PARLTRACK_DUMPS_URL = "https://parltrack.org/dumps/"
 class Data(StrEnum):
     MEMBERS = auto()
     PROCEDURES = auto()
+    SUBJECTS = auto()
     AMENDMENTS = auto()
     VOTES = auto()
     RCV = auto()
@@ -127,10 +131,27 @@ def main(data: Data):
                 print(f'{len(session.new)} members will be imported')
                 session.commit()
 
+        case Data.SUBJECTS:
+            sess = requests.Session()
+            sess.get('https://oeil.secure.europarl.europa.eu/oeil/search/search.do')
+            sess.cookies.update({ 'oeilLanguage': 'fr' })
+            html = sess.get('https://oeil.secure.europarl.europa.eu/oeil/search/facet.do?facet=internetSubject_s').text
+            soup = bs4.BeautifulSoup(html)
+            subject_tree = []
+            for a in soup.find_all('a'):
+                key, subject = str(a.attrs['title']).split(' ', 1)
+                subject_tree.append({ 'code': key, 'name': subject})
+            
+            with open('_data/subjects.json', 'w') as f:
+                json.dump(subject_tree, f, indent=2)
+
         case Data.PROCEDURES:
-            with Session(engine) as session:
-                session.query(Procedure).delete()
+            with open('_data/procedures.csv', 'w') as csvfile, Session(engine) as session:
+                fieldnames = ['reference', 'title', 'type', 'date', 'subject', 'url', 'status']
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                writer.writeheader()
                 procedure_refs = list(session.scalars(select(Vote.procedure_ref)))
+                subjects = set()
                 for doss in read_json("ep_dossiers.json"):
                     if "events" in doss:
                         doss_date = dt.fromisoformat(
@@ -138,19 +159,22 @@ def main(data: Data):
                         ).date()
                         if start_date < doss_date < end_date:
                             proc = doss["procedure"]
-                            if "type" in proc and proc['reference'] in procedure_refs:
-                                session.add(
-                                    Procedure(
-                                        reference=proc["reference"],
-                                        title=proc["title"],
-                                        type=Procedure.Type.from_str(proc_type(proc)),
-                                        subject=proc['subject'],
-                                        date=doss_date,
-                                        url=doss['meta']['source'],
+                            if proc['reference'] in procedure_refs:
+                                subjects.update(proc['subject'].items())
+                                try:
+                                    writer.writerow(
+                                        dict(
+                                            reference=proc["reference"],
+                                            title=proc["title"],
+                                            type=Procedure.Type.from_str(proc_type(proc)),
+                                            date=doss_date,
+                                            subject=json.dumps(list(proc['subject'].keys())),
+                                            url=doss['meta']['source'],
+                                            status=proc['stage_reached'] if 'stage_reached' in proc else proc['Stage reached']
+                                        )
                                     )
-                                )
-                print(f'{len(session.new)} procedures will be imported')
-                session.commit()
+                                except:
+                                    print(proc)
 
         case Data.VOTES:
             with Session(engine) as session:

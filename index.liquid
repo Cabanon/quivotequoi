@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<meta charset="utf8" />
+<meta charset="utf8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
 <script>
 function filter() {
   query = document.getElementById('input').value.toLowerCase();
-  lis = document.getElementById("list").getElementsByTagName('li');
+  lis = document.getElementById("list").getElementsByTagName('article');
   tokens = query.split(/\s+/).map((token) => token).filter(Boolean)
-  console.log(tokens, query)
 
   for (const li of lis) {
     string = li.getElementsByTagName("a")[0].innerText.toLowerCase();
-    if (tokens.some((token) => string.includes(token))) {
+    if (tokens.length == 0 || tokens.some((token) => string.includes(token))) {
       li.style.display = "";
     } else {
       li.style.display = "none";
@@ -19,16 +19,25 @@ function filter() {
   }
 }
 </script>
-</script>
 <body>
-  <header><h1>QuiVoteQuoi?</h1></header>
+  <header>
+    <nav>
+      <ul>
+        <li><h1>QuiVoteQuoi?</h1></li>
+      </ul>
+      <ul>
+        <li><a href="/subjects">Sujets</a></li>
+      </ul>
+    </nav>
+  </header>
   <main>
     <input id="input" oninput="filter()" type="search" placeholder="Cherchez une procédure"/>
-    <ul id="list">
-      {% for procedure in procedures %}
-        <li><a href="procedure/{{ procedure.reference }}">{{ procedure.title }}</a></li>
+    <div id="list">
+      {% assign sorted = procedures | sort: 'date' | reverse %}
+      {% for procedure in sorted %}
+        {% render 'result.liquid' with procedure as procedure %}
       {% endfor %}
-    </ul>
+    </div>
   </main>
 </body>
 

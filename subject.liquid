@@ -1,0 +1,28 @@
+---
+pagination:
+    data: subjects
+    size: 1
+    alias: subject
+permalink: "subject/{{ subject.code }}/index.html"
+---
+<!DOCTYPE html>
+<meta charset="utf8" />
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsdiff/5.2.0/diff.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
+/>
+<body>
+    <header><h1>QuiVoteQuoi?</h1></header>
+    <main>
+        <h2>{{ subject.name }}</h2>
+        {% assign filtered = procedures | where: 'subject', 'includes', subject.code %}
+        {% for procedure in filtered %}
+            {% render 'result.liquid' with procedure as procedure %}
+        {% else %}
+            Aucune procédure dans ce sujet.
+        {% endfor %}
+    </main>
+</body>
+</html>

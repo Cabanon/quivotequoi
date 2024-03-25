@@ -1,8 +1,8 @@
 ---
 pagination:
-    data: votes
-    size: 1
-    alias: vote
+  data: votes
+  size: 1
+  alias: vote
 permalink: "vote/{{ vote.id }}/index.html"
 ---
 <!DOCTYPE html>
@@ -47,6 +47,9 @@ permalink: "vote/{{ vote.id }}/index.html"
   border-radius: 50%;
   vertical-align: middle;
 }
+ins {
+  text-decoration: underline;
+}
 </style>
 <body>
     <header><h1>QuiVoteQuoi?</h1></header>
@@ -74,11 +77,11 @@ permalink: "vote/{{ vote.id }}/index.html"
         <h4>Résultat global</h4>
         <section class="votes">
           {% assign positions = vote.positions | where: 'position', 'for' %}
-          <div class="for" style="width: calc({{ positions.length }}/{{ vote.positions.length }} * 100%)"></div>
+          <div class="for" style="width: calc({{ positions.length }}/{{ members.length }} * 100%)"></div>
           {% assign positions = vote.positions | where: 'position', 'against' %}
-          <div class="against" style="width: calc({{ positions.length }}/{{ vote.positions.length }} * 100%)"></div>
+          <div class="against" style="width: calc({{ positions.length }}/{{ members.length }} * 100%)"></div>
           {% assign positions = vote.positions | where: 'position', 'abstention' %}
-          <div class="abstention" style="width: calc({{ positions.length }}/{{ vote.positions.length }} * 100%)"></div>
+          <div class="abstention" style="width: calc({{ positions.length }}/{{ members.length }} * 100%)"></div>
         </section>
         <h4>Résultat par parti</h4>
         {% assign parties = members | group_by: 'party' %}
@@ -88,11 +91,11 @@ permalink: "vote/{{ vote.id }}/index.html"
           {% assign p_positions = vote.positions | where_in: 'member_id', member_ids %}
           <section class="votes">
             {% assign positions = p_positions | where: 'position', 'for' %}
-            <div class="for" style="width: calc({{ positions.length }}/{{ p_positions.length }} * 100%)"></div>
+            <div class="for" style="width: calc({{ positions.length }}/{{ member_ids.length }} * 100%)"></div>
             {% assign positions = p_positions | where: 'position', 'against' %}
-            <div class="against" style="width: calc({{ positions.length }}/{{ p_positions.length }} * 100%)"></div>
+            <div class="against" style="width: calc({{ positions.length }}/{{ member_ids.length }} * 100%)"></div>
             {% assign positions = p_positions | where: 'position', 'abstention' %}
-            <div class="abstention" style="width: calc({{ positions.length }}/{{ p_positions.length }} * 100%)"></div>
+            <div class="abstention" style="width: calc({{ positions.length }}/{{ member_ids.length }} * 100%)"></div>
           </section>
         {% endfor %}
         <h4>Résultat par député</h4>

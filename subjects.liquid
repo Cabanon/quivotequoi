@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<meta charset="utf8" />
+<html>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><h1>QuiVoteQuoi?</h1></li>
+      </ul>
+      <ul>
+        <li><a href="/subjects">Sujets</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Sujets de votes</h2>
+    {% assign groups = subjects | where_exp: 'code', "code.split('.').length == 1" %}
+    <ul>
+    {% for group in groups %}
+      <li>
+      <details>
+      <summary>{{ group.name }}</summary>
+      {% assign subgroups = subjects | where: 'code', 'startsWith', group.code | where_exp: 'code', "code.split('.').length == 2" %}
+      <ul>
+      {% for subgroup in subgroups %}
+        <li>
+        {% assign subsubgroups = subjects | where: 'code', 'startsWith', subgroup.code | where_exp: 'code', "code.split('.').length == 3" %}
+        {% if subsubgroups.length > 0 %}
+          <details>
+            <summary>{{ subgroup.name }}</summary>
+            <ul>
+              {% for subsubgroup in subsubgroups %}
+                <li>
+                  {% assign subsubsubgroups = subjects | where: 'code', 'startsWith', subsubgroup.code | where_exp: 'code', "code.split('.').length == 4" %}
+                  {% if subsubsubgroups.length > 0 %}
+                    <details>
+                      <summary>{{ subsubgroup.name }}</summary>
+                      <ul>
+                        {% for subsubsubgroup in subsubgroups %}
+                          <li><a href="/subject/{{ subsubsubgroup.code }}">{{ subsubsubgroup.name }}</a></li>
+                        {% endfor %}
+                      </ul>
+                    </details>
+                  {% else %}
+                    <a href="/subject/{{ subsubgroup.code }}">{{ subsubgroup.name }}</a>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          </details>
+        {% else %}
+          <p><a href="/subject/{{ subgroup.code }}">{{ subgroup.name }}</a></p>
+        {% endif %}
+        </li>
+      {% endfor %}
+      </ul>
+      </details>
+      </li>
+    {% endfor %}
+    </ul>
+  </main>
+</body>
+
+</html>
