@@ -1,4 +1,4 @@
-const { parse } = require("csv-parse/sync");
+const { parse } = require("csv-parse/lib/sync");
 const { diffWords } = require("diff");
 
 const dot = (obj, path) => path.split('.').reduce((a, b) => typeof(a[b]) == 'function' ? a[b].bind(a): a[b], obj);
