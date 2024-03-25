@@ -52,7 +52,16 @@ ins {
 }
 </style>
 <body>
-    <header><h1>QuiVoteQuoi?</h1></header>
+  <header>
+    <nav>
+        <ul>
+            <li><h1>QuiVoteQuoi?</h1></li>
+        </ul>
+        <ul>
+            <li><a href="/subjects">Sujets</a></li>
+        </ul>
+    </nav>
+</header>
     <main>
         {% assign procedure = procedures | where: 'reference', vote.procedure_ref | first %}
         <a href="/procedure/{{ vote.procedure_ref }}">⟵ Retourner à la procédure</a>
