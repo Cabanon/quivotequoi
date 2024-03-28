@@ -18,27 +18,31 @@ permalink: "vote/{{ vote.id }}/index.html"
   background-color: rgb(198, 198, 198);
   border-radius: 1.5rem;
 }
-.for {
+.\+ {
   height: 100%;
-  background-color: rgb(57, 135, 18);
+  background-color: green;
+  color: white
 }
-.against {
+.\- {
   height: 100%;
-  background-color: rgb(217, 53, 38);
+  background-color: red;
+  color: white
 }
-.abstention {
+.\30 {
   height: 100%;
-  background-color: rgb(217, 200, 0);
+  background-color: orange;
+  color: white
 }
 .novote {
   height: 100%;
-  background-color: rgb(198, 198, 198);;
+  background-color: lightgrey;;
+  color: white
 }
 .added {
-  background-color: rgb(57, 135, 18);
+  background-color: lightgreen;
 }
 .removed {
-  background-color: rgb(217, 53, 38);
+  background-color: lightcoral;
 }
 .circle {
   display: inline-block;
@@ -54,23 +58,25 @@ ins {
 </style>
 <body>
   <header>
-    <nav>
-        <ul>
-            <li><h1>QuiVoteQuoi?</h1></li>
-        </ul>
-        <ul>
-            <li><a href="/subjects">Sujets</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav>
+            <ul>
+                <li><h1>QuiVoteQuoi?</h1></li>
+            </ul>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/subjects">Sujets</a></li>
+                <li><a href="/members">Membres</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
-        {% assign procedure = procedures | where: 'reference', vote.procedure_ref | first %}
+        {% assign procedure = procedures | find: 'reference', vote.procedure_ref %}
         <a href="/procedure/{{ vote.procedure_ref }}">⟵ Retourner à la procédure</a>
         <h2>{{ procedure.title }}</h2>
         <h3>{{ vote.title }}</h3>
         {% if vote.amendment_id %}
         <h4>Détail de l'amendement</h4>
-        {% assign amendment = amendments | where: 'id', vote.amendment_id | first %}
+        {% assign amendment = amendments | find: 'id', vote.amendment_id %}
         {% assign changes = amendment.old | diff: amendment.new %}
         <section>
         {% for change in changes %}
@@ -84,37 +90,26 @@ ins {
         {% endfor %} 
         </section>
         {% endif %}
+        {% assign active_members = members | current: vote.date %}
         <h4>Résultat global</h4>
-        <section class="votes">
-          {% assign positions = vote.positions | where: 'position', 'for' %}
-          <div class="for" style="width: calc({{ positions.length }}/{{ members.length }} * 100%)"></div>
-          {% assign positions = vote.positions | where: 'position', 'against' %}
-          <div class="against" style="width: calc({{ positions.length }}/{{ members.length }} * 100%)"></div>
-          {% assign positions = vote.positions | where: 'position', 'abstention' %}
-          <div class="abstention" style="width: calc({{ positions.length }}/{{ members.length }} * 100%)"></div>
-        </section>
+        {% render 'components/bar', positions: vote.positions, members: active_members %}
         <h4>Résultat par parti</h4>
-        {% assign parties = members | group_by: 'party' %}
+        {% assign parties = active_members | group_by: 'party' %}
         {% for party in parties %}
-          <h5>{{ party.name }}</h5>
+          <h5>{{ party.name }} ({{ party.items | size }} députés)</h5>
           {% assign member_ids = party.items | map: 'id' %}
           {% assign p_positions = vote.positions | where_in: 'member_id', member_ids %}
-          <section class="votes">
-            {% assign positions = p_positions | where: 'position', 'for' %}
-            <div class="for" style="width: calc({{ positions.length }}/{{ member_ids.length }} * 100%)"></div>
-            {% assign positions = p_positions | where: 'position', 'against' %}
-            <div class="against" style="width: calc({{ positions.length }}/{{ member_ids.length }} * 100%)"></div>
-            {% assign positions = p_positions | where: 'position', 'abstention' %}
-            <div class="abstention" style="width: calc({{ positions.length }}/{{ member_ids.length }} * 100%)"></div>
-          </section>
+          {% render 'components/bar', positions: p_positions, members: party.items  %}
+          <details>
+            <summary>Voir le détail des votes</summary>
+            <p>
+              {% for member in party.items %}
+                  {% assign position = p_positions | find: 'member_id', member.id %}
+                  <span class="{{ position.position | default: 'novote' }}">{{ member.full_name }}</span>
+              {% endfor %}
+            </p>
+        </details>
         {% endfor %}
-        <h4>Résultat par député</h4>
-        <section>
-        {% for member in members %}
-          {% assign position = vote.positions | where: 'member_id', member.id | first %}
-          <span class="circle {{ position.position | default: 'novote' }}"></span> {{ member.full_name }}<br>
-        {% endfor %}
-        </section>
     </div>
 </div>
 </html>

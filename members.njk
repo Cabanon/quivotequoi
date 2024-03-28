@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<meta charset="utf8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsdiff/5.2.0/diff.min.js"></script>
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
+/>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><h1>QuiVoteQuoi?</h1></li>
+      </ul>
+      <ul>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/subjects">Sujets</a></li>
+        <li><a href="/members">Membres</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {% for member in members | current %}
+    <article>
+      <header><a href="/member/{{ member.id }}"><b>{{ member.full_name }}</b> | {{ member.party }}</a></header>
+      {% set atts = attendances | attendance(member) %}
+      {% set attended = atts | where('attend', true) | length %}
+      {% set total = atts | length %}
+      Taux de présence: <b>{{ attended | ratio(total) }}</b> ({{ attended }} plénières sur {{ total }})
+    </article>
+    {% endfor %}
+  </main>
+</body>
+</html>

@@ -3,6 +3,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <html>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
+<style>
+summary h3, summary h4, summary h5 {
+  display: inline;
+}
+
+ul li {
+  list-style: none;
+}
+</style>
 <body>
   <header>
     <nav>
@@ -17,11 +26,9 @@
   <main>
     <h2>Sujets de votes</h2>
     {% assign groups = subjects | where_exp: 'code', "code.split('.').length == 1" %}
-    <ul>
     {% for group in groups %}
-      <li>
       <details>
-      <summary>{{ group.name }}</summary>
+      <summary><h3>{{ group.name }}</h3></summary>
       {% assign subgroups = subjects | where: 'code', 'startsWith', group.code | where_exp: 'code', "code.split('.').length == 2" %}
       <ul>
       {% for subgroup in subgroups %}
@@ -29,37 +36,35 @@
         {% assign subsubgroups = subjects | where: 'code', 'startsWith', subgroup.code | where_exp: 'code', "code.split('.').length == 3" %}
         {% if subsubgroups.length > 0 %}
           <details>
-            <summary>{{ subgroup.name }}</summary>
+            <summary><h3>{{ subgroup.name }}</h3></summary>
             <ul>
               {% for subsubgroup in subsubgroups %}
                 <li>
                   {% assign subsubsubgroups = subjects | where: 'code', 'startsWith', subsubgroup.code | where_exp: 'code', "code.split('.').length == 4" %}
                   {% if subsubsubgroups.length > 0 %}
                     <details>
-                      <summary>{{ subsubgroup.name }}</summary>
+                      <summary><h4>{{ subsubgroup.name }}</h4></summary>
                       <ul>
                         {% for subsubsubgroup in subsubgroups %}
-                          <li><a href="/subject/{{ subsubsubgroup.code }}">{{ subsubsubgroup.name }}</a></li>
+                          <li><h5><a href="/subject/{{ subsubsubgroup.code }}">{{ subsubsubgroup.name }}</a></h5></li>
                         {% endfor %}
                       </ul>
                     </details>
                   {% else %}
-                    <a href="/subject/{{ subsubgroup.code }}">{{ subsubgroup.name }}</a>
+                    <h4><a href="/subject/{{ subsubgroup.code }}">{{ subsubgroup.name }}</a></h4>
                   {% endif %}
                 </li>
               {% endfor %}
             </ul>
           </details>
         {% else %}
-          <p><a href="/subject/{{ subgroup.code }}">{{ subgroup.name }}</a></p>
+          <h3><a href="/subject/{{ subgroup.code }}">{{ subgroup.name }}</a></h3>
         {% endif %}
         </li>
       {% endfor %}
       </ul>
       </details>
-      </li>
     {% endfor %}
-    </ul>
   </main>
 </body>
 

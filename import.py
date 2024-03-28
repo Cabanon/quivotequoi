@@ -3,10 +3,12 @@ import json
 import csv
 import io
 import unicodedata
+import xml.etree.ElementTree as ET
 from datetime import datetime as dt, date, timezone
 from dateutil.parser import parse as parsedate
 from pathlib import Path
 from enum import StrEnum, auto
+from multiprocessing import Pool
 
 import typer
 import lzip
@@ -14,10 +16,9 @@ import bs4
 from sqlalchemy.orm import Session
 from sqlalchemy import select
 from tqdm import tqdm
-from dotted_dict import DottedDict
 
 from database import engine
-from models import Base, Member, Group, Procedure, Vote, Position, Amendment
+from models import Base, Member, Group, Vote, Position, Amendment
 
 Base.metadata.create_all(bind=engine)
 
@@ -31,6 +32,7 @@ class Data(StrEnum):
     AMENDMENTS = auto()
     VOTES = auto()
     RCV = auto()
+    ATTENDANCES = auto()
 
 
 class ReadableIterator(io.IOBase):
@@ -47,14 +49,33 @@ class ReadableIterator(io.IOBase):
 def normalize(s):
     return unicodedata.normalize("NFD", s).encode("ASCII", "ignore").lower()
 
+def parse_subjects(subjects):
+    codes = []
+    for subject in subjects:
+        code = subject['text'].split(' ')[0]
+        if not any(c for c in codes if code in c):
+            codes.append(code)
+    return codes
 
-def proc_type(proc):
-    if "type" in proc:
-        t = proc["type"]
-    if "Type of document" in proc:
-        t = proc["Type of document"]
-    return t[0] if type(t) == list else t
-
+def fetch_proc(ref):
+    sess = requests.Session()
+    sess.cookies.update({ 'oeilLanguage': 'fr'})
+    url = f'https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.json?reference={ref}&l=fr'
+    try:
+        res = sess.get(url)
+        fiche = json.loads(res.text)['procedure']
+        proc = fiche['oeilSpecificData']
+        return dict(
+            reference=proc['reference'],
+            date=proc['events'][0]['date'],
+            title=proc['titles'][0]['text'].replace('&nbsp;', ' '),
+            type=fiche['identifier']['typeProcedure'],
+            subject=parse_subjects(proc['subjects']),
+            status=proc['stageReached'],
+            url=url
+        )
+    except Exception as error:
+        print(url, error)
 
 def download_if_new(filename):
     url = PARLTRACK_DUMPS_URL + filename
@@ -92,44 +113,74 @@ def read_json(filename):
                 return
             yield json.loads(line[1:])
 
-
-def party_from_str(s):
-    match s:
-        case "Agir - La Droite constructive" | "Liste Renaissance" | 'La République en marche' | "Liste L'Europe Ensemble":
-            return "Renaissance"
-        case 'Mouvement Radical Social-Libéral':
-            return "Parti Radical"
-    return s
-
-
 def main(data: Data):
     start_date = date(2019, 7, 2)
     end_date = date(2024, 7, 15)
     match data:
         case Data.MEMBERS:
-            with Session(engine) as session:
-                session.query(Member).delete()
-                for mep in read_json('ep_meps.json'):
-                    if mep['active'] and 'Constituencies' in mep:
-                        current = next(
-                            c for c in mep['Constituencies']
-                            if dt.fromisoformat(c['start']) < dt.now() < dt.fromisoformat(c['end'])
+            members = []
+            for mep in read_json('ep_meps.json'):
+                if 'Constituencies' in mep:
+                    constituencies = list(c for c in mep['Constituencies'] if c and c.get('term') == 9 and c['country'] == 'France')
+                    if constituencies:
+                        members.append(
+                            dict(
+                                id=mep["UserID"],
+                                full_name=mep["Name"]["full"],
+                                last_name=mep["Name"]["family"],
+                                constituencies=json.dumps(constituencies),
+                            )
                         )
-                        if current["country"] == "France":
-                            group = next(
-                                c for c in mep['Groups']
-                                if dt.fromisoformat(c['start']) < dt.now() < dt.fromisoformat(c['end'])
-                            )
-                            session.add(
-                                Member(
-                                    id=mep["UserID"],
-                                    full_name=mep["Name"]["full"],
-                                    group=Group.from_str(group["groupid"]),
-                                    party=party_from_str(current['party']),
-                                )
-                            )
-                print(f'{len(session.new)} members will be imported')
-                session.commit()
+            with open('_data/members.csv', 'w') as csvfile:
+                writer = csv.DictWriter(csvfile, fieldnames=members[0].keys())
+                writer.writeheader()
+                writer.writerows(members)
+
+        case Data.ATTENDANCES:
+            with open('_data/members.csv') as csvfile:
+                reader = csv.DictReader(csvfile)
+                meps = list(mep for mep in reader)
+
+            response = requests.get('https://www.europarl.europa.eu/plenary/fr/ajax/getSessionCalendar.html?family=PV&termId=9').json()
+            start_date = dt.strptime(response['startDate'], '%d/%m/%Y').date()
+            end_date = dt.strptime(response['endDate'], '%d/%m/%Y').date()
+            attendances = []
+            for sess in response['sessionCalendar']:
+                sess_date = date(*map(int, (sess['year'], sess['month'], sess['day'])))
+                if start_date < sess_date < end_date and sess['url']:
+                    try:
+                        url = sess['url'].replace('TOC', 'ATT')
+                        request = requests.get(url)
+                        request.raise_for_status()
+                    except requests.HTTPError:
+                        print(sess)
+                        continue
+                    html = bs4.BeautifulSoup(request.content)
+
+                    attended = []
+                    for content in html.select('p.contents'):
+                        if ':' not in content.text:
+                            attended.extend(content.text.split(', '))
+                    
+                    for mep in meps:
+                        if mep['full_name'].title() in attended:
+                            attend = True
+                        elif key:=mep['last_name'].title() in attended:
+                            attend = True
+                        else:
+                            attend = False
+
+                        attendances.append(dict(
+                            date=sess_date,
+                            member_id=mep['id'],
+                            attend=attend,
+                        ))
+
+            with open('_data/attendances.csv', 'w') as csvfile:
+                fieldnames = attendances[0].keys()
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                writer.writeheader()
+                writer.writerows(attendances)
 
         case Data.SUBJECTS:
             sess = requests.Session()
@@ -141,47 +192,33 @@ def main(data: Data):
             for a in soup.find_all('a'):
                 key, subject = str(a.attrs['title']).split(' ', 1)
                 subject_tree.append({ 'code': key, 'name': subject})
-            
             with open('_data/subjects.json', 'w') as f:
                 json.dump(subject_tree, f, indent=2)
 
         case Data.PROCEDURES:
-            with open('_data/procedures.csv', 'w') as csvfile, Session(engine) as session:
-                fieldnames = ['reference', 'title', 'type', 'date', 'subject', 'url', 'status']
+            with open('_data/votes.csv') as csvfile:
+                reader = csv.DictReader(csvfile)
+                refs = set(vote['procedure_ref'] for vote in reader)
+
+            from tqdm.contrib.concurrent import thread_map
+
+            procs = thread_map(fetch_proc, refs, max_workers=4)
+
+            with open('_data/procedures.csv', 'w') as csvfile:
+                fieldnames = procs[0].keys()
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
                 writer.writeheader()
-                procedure_refs = list(session.scalars(select(Vote.procedure_ref)))
-                subjects = set()
-                for doss in read_json("ep_dossiers.json"):
-                    if "events" in doss:
-                        doss_date = dt.fromisoformat(
-                            doss["events"][0]["date"]
-                        ).date()
-                        if start_date < doss_date < end_date:
-                            proc = doss["procedure"]
-                            if proc['reference'] in procedure_refs:
-                                subjects.update(proc['subject'].items())
-                                try:
-                                    writer.writerow(
-                                        dict(
-                                            reference=proc["reference"],
-                                            title=proc["title"],
-                                            type=Procedure.Type.from_str(proc_type(proc)),
-                                            date=doss_date,
-                                            subject=json.dumps(list(proc['subject'].keys())),
-                                            url=doss['meta']['source'],
-                                            status=proc['stage_reached'] if 'stage_reached' in proc else proc['Stage reached']
-                                        )
-                                    )
-                                except:
-                                    print(proc)
+                writer.writerows(filter(None, procs))
 
         case Data.VOTES:
-            with Session(engine) as session:
-                session.query(Vote).delete()
-                session.query(Position).delete()
-                mepids = list(session.scalars(select(Member.id)))
-                votes_to_add = []
+            with open('_data/members.csv') as csvfile:
+                reader = csv.DictReader(csvfile)
+                mepids = list(mep['id'] for mep in reader)
+
+            with open('_data/votes.csv', 'w') as csvfile:
+                writer = csv.DictWriter(csvfile, fieldnames=['id', 'date', 'procedure_ref', 'title', 'positions'])
+                writer.writeheader()
+
                 for pv in read_json("ep_votes.json"):
                     vote_date = dt.fromisoformat(pv["ts"]).date()
                     if (
@@ -190,7 +227,7 @@ def main(data: Data):
                         and len(pv["epref"]) == 1
                         and "votes" in pv.keys()
                     ):
-                        vote = Vote(
+                        vote = dict(
                             id=pv["voteid"],
                             date=vote_date,
                             procedure_ref=pv["epref"][0],
@@ -200,18 +237,16 @@ def main(data: Data):
                         for position, votes in pv["votes"].items():
                             for meps in votes["groups"].values():
                                 for mep in meps:
-                                    if mep["mepid"] in mepids:
+                                    if str(mep["mepid"]) in mepids:
                                         positions.append(
                                             dict(
                                                 member_id=mep["mepid"],
-                                                position=Position.Position.from_str(position),
+                                                position=position,
                                             )
                                         )
-                        vote.positions = positions
-                        votes_to_add.append(vote)
-                session.add_all(votes_to_add)
-                print(f'{len(votes_to_add)} votes will be imported')
-                session.commit()
+                        vote['positions'] = json.dumps(positions)
+                        writer.writerow(vote)
+
         case Data.AMENDMENTS:
             with Session(engine) as session:
                 session.query(Amendment).delete()
