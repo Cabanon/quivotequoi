@@ -30,7 +30,7 @@ module.exports = function(eleventyConfig) {
         return arr.map((member) => {
             current = getCurrent(member.constituencies, date || new Date().toISOString())
             if (!current) return false
-            return { ...member, ...current }
+            return { ...member, ...current, party: party_from_str(current.party) }
         }).filter(Boolean)
     });
     eleventyConfig.addFilter("attendance", function(atts, member) {
