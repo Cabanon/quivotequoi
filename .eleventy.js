@@ -1,6 +1,11 @@
 const { parse } = require("csv-parse/sync");
 const DiffMatchPatch = require('diff-match-patch');
 
+function regexIndexOf(string, regex, startpos) {
+    var indexOf = string.substring(startpos || 0).search(regex);
+    return (indexOf >= 0) ? (indexOf + (startpos || 0)) : indexOf;
+}
+
 DiffMatchPatch.prototype.diff_linesToWords_ = function(text1, text2) {
     var lineArray = [];  // e.g. lineArray[4] == 'Hello\n'
     var lineHash = {};   // e.g. lineHash['Hello\n'] == 4
@@ -27,7 +32,7 @@ DiffMatchPatch.prototype.diff_linesToWords_ = function(text1, text2) {
       // Keeping our own length variable is faster than looking it up.
       var lineArrayLength = lineArray.length;
       while (lineEnd < text.length - 1) {
-        lineEnd = text.indexOf(' ', lineStart);
+        lineEnd = regexIndexOf(text, /(?!^)\b/, lineStart);
         if (lineEnd == -1) {
           lineEnd = text.length - 1;
         }
