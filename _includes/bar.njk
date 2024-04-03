@@ -1,0 +1,38 @@
+{% set for_positions = positions | where('position', '+') %}
+{% set ag_positions = positions | where('position', '-') %}
+{% set ab_positions = positions | where('position', '0') %}
+<style>
+.votes {
+  height: 3rem;
+  display: flex;
+  overflow: hidden;
+  background-color: rgb(198, 198, 198);
+  border-radius: 1.5rem;
+}
+.\+ {
+  height: 100%;
+  background-color: green;
+  color: white
+}
+.\- {
+  height: 100%;
+  background-color: red;
+  color: white
+}
+.\30 {
+  height: 100%;
+  background-color: orange;
+  color: white
+}
+</style>
+<div class="votes">
+    <div class="+" style="width: calc({{ for_positions | length }}/{{ positions | length }} * 100%)"></div>
+    <div class="-" style="width: calc({{ ag_positions | length }}/{{ positions | length }} * 100%)"></div>
+    <div class="0" style="width: calc({{ ab_positions | length }}/{{ positions | length }} * 100%)"></div>
+</div>
+<small>
+    <span class='+'>Pour</span>: {{ for_positions | length }}.
+    <span class='-'>Contre</span>: {{ ag_positions | length }}.
+    <span class='0'>Abstentions</span>: {{ ab_positions | length }}.
+    Parmi {{ members | length }} députés, {{ positions | length }} ont votés.
+</small>

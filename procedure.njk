@@ -1,0 +1,68 @@
+---
+pagination:
+    data: procedures
+    size: 1
+    alias: procedure
+permalink: "procedure/{{ procedure.reference }}/index.html"
+---
+<!DOCTYPE html>
+<meta charset="utf8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
+/>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><h1>QuiVoteQuoi?</h1></li>
+            </ul>
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/subjects">Sujets</a></li>
+                <li><a href="/members">Membres</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <a href="/">⟵ Retourner à la recherche</a>
+            <h2>{{ procedure.title }} (<a href="{{ procedure.url | replace('.json', '.do') }}" target=”_blank”>source</a>)</h2>
+            {% set procedure_votes = votes | where('procedure_ref', procedure.reference) %}
+            <h3>Vote final</h3>
+            {% set final = procedure_votes | find('amendment', null) %}
+            <section>
+                {% if final %}
+                    {% set positions = final.positions %}
+                    {% include "bar.njk" %}
+                    <p><a href="/vote/{{ final.id }}">Aller sur la page du vote</a></p>
+                {% else %}
+                    Vote final introuvable
+                {% endif %}
+            </section>
+            <h3>Sujets</h3>
+            <ul>
+                {{ procedure.subject }}
+                {% for code in procedure.subjects %}
+                    {% set subject = subjects | find('code', code) %}
+                    {% if subject %}
+                        <li><a href="/subject/{{ subject.code }}">{{ subject.name }}</a></li>
+                    {% else %}
+                        <li>{{ code }}</li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <h3>Amendements</h3>
+            <ul>
+                {% for vote in procedure_votes %}
+                    {% if vote.amendment %}
+                        <li><a href="/vote/{{ vote.id }}">Amendement n°{{ vote.amendment }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

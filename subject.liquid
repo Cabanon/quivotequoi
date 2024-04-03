@@ -29,7 +29,7 @@ permalink: "subject/{{ subject.code }}/index.html"
     </header>
     <main>
         <h2>{{ subject.name }}</h2>
-        {% assign filtered = procedures | where: 'subject', 'includes', subject.code %}
+        {% assign filtered = procedures | where: 'subjects', 'includes', subject.code %}
         {% for procedure in filtered %}
             {% render 'result.liquid' with procedure as procedure %}
         {% else %}

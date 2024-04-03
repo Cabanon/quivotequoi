@@ -1,26 +1,22 @@
-import requests
 import json
 import csv
 import io
+import re
 import unicodedata
 import xml.etree.ElementTree as ET
 from datetime import datetime as dt, date, timezone
 from dateutil.parser import parse as parsedate
 from pathlib import Path
 from enum import StrEnum, auto
-from multiprocessing import Pool
+from itertools import batched
 
 import typer
 import lzip
 import bs4
-from sqlalchemy.orm import Session
-from sqlalchemy import select
+import requests
+from requests_cache import CachedSession
+import pdfplumber as pp
 from tqdm import tqdm
-
-from database import engine
-from models import Base, Member, Group, Vote, Position, Amendment
-
-Base.metadata.create_all(bind=engine)
 
 PARLTRACK_DUMPS_URL = "https://parltrack.org/dumps/"
 
@@ -70,7 +66,7 @@ def fetch_proc(ref):
             date=proc['events'][0]['date'],
             title=proc['titles'][0]['text'].replace('&nbsp;', ' '),
             type=fiche['identifier']['typeProcedure'],
-            subject=parse_subjects(proc['subjects']),
+            subjects=json.dumps(parse_subjects(proc['subjects'])),
             status=proc['stageReached'],
             url=url
         )
@@ -112,6 +108,74 @@ def read_json(filename):
             if line == "]":
                 return
             yield json.loads(line[1:])
+
+
+def extract_table(page):
+    v_lines = (0, page.width / 2, page.width)
+    table = page.extract_table({
+        "explicit_vertical_lines": v_lines,
+        "vertical_strategy": "explicit",
+        "horizontal_strategy": "text",
+        "snap_tolerance": 5,
+        "intersection_tolerance": page.width,
+    })
+    if table:
+        return table
+    return []
+
+
+def extract_amendments(table):
+    nr = None
+    start = False
+    old = ''
+    new = ''
+    for row in table:
+        if row[0].startswith('Amendement'):
+            if nr and (old or new):
+                yield dict(nr=nr, old=old.strip(), new=new.strip())
+            try:
+                nr = re.findall(r'\d+', row[0])[0]
+            except:
+                continue
+            start = False
+            old = new = ''
+        elif row[1].startswith('Amendement'):
+            start = True
+        elif any(re.search(pattern, ''.join(row)) for pattern in (r'\d+.\d+.\d+', r'AM\\', r'PE\d{3}.\d{3}', r'\bFR\b', 'Unie dans la diversité', 'Or. en')):
+            continue
+        elif 'http' in row[0] or 'Justification' in ''.join(row):
+            start = False
+        elif start:
+            old += row[0] + ' '
+            new += row[1] + ' '
+        else:
+            continue
+    if nr and (old or new): yield dict(nr=nr, old=old.strip(), new=new.strip())
+
+
+EP_URL = 'https://www.europarl.europa.eu'
+
+
+def fetch_amendments(doc):
+    parts = doc.split('-')
+    nr, year = parts[-1].split('/')
+    if len(parts) == 3:
+        url = f'https://www.europarl.europa.eu/doceo/document/RC-9-{year}-{nr}_FR.html'
+    else:
+        url = f'https://www.europarl.europa.eu/doceo/document/{parts[0][0]}-9-{year}-{nr}_FR.html'
+    session = CachedSession()
+    html = bs4.BeautifulSoup(session.get(url).content)
+    amendments = []
+    if amd_data := html.find(id='amdData'):
+        for a in amd_data.find_all('a', attrs={'aria-label': 'pdf'}):
+            pdf_url = EP_URL + a.attrs['href']
+            tmp = io.BytesIO(requests.get(pdf_url).content)
+            pdf = pp.open(tmp)
+            for amd in extract_amendments([row for table in map(extract_table, pdf.pages) for row in table]):
+                amd.update(dict(doc=doc, url=pdf_url))
+                amendments.append(amd)
+    return amendments
+
 
 def main(data: Data):
     start_date = date(2019, 7, 2)
@@ -208,7 +272,7 @@ def main(data: Data):
                 fieldnames = procs[0].keys()
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
                 writer.writeheader()
-                writer.writerows(filter(None, procs))
+                writer.writerows(filter(None, procs))       
 
         case Data.VOTES:
             with open('_data/members.csv') as csvfile:
@@ -216,22 +280,41 @@ def main(data: Data):
                 mepids = list(mep['id'] for mep in reader)
 
             with open('_data/votes.csv', 'w') as csvfile:
-                writer = csv.DictWriter(csvfile, fieldnames=['id', 'date', 'procedure_ref', 'title', 'positions'])
+                writer = csv.DictWriter(csvfile, fieldnames=['id', 'date', 'procedure_ref', 'doc', 'amendment', 'positions'])
                 writer.writeheader()
 
                 for pv in read_json("ep_votes.json"):
                     vote_date = dt.fromisoformat(pv["ts"]).date()
                     if (
                         start_date < vote_date < end_date
-                        and "epref" in pv.keys()
+                        and all(key in pv.keys() for key in ('epref', 'votes'))
                         and len(pv["epref"]) == 1
-                        and "votes" in pv.keys()
-                    ):
+                    ):  
+                        title = pv['title'].lower()
+                        parts = re.split(r'\s+-\s+', title)
+                        try:
+                            doc = re.search(r'(RC-)?(A|B|C)[0-9]-[0-9]{4}\/[0-9]{4}', title.upper())[0]
+                        except:
+                            print('Numéro de procédure introuvable dans:', title)
+                            continue
+                        if match := re.search(r'am\s+(\w+)', title):
+                            try:
+                                amendment = int(match[1])
+                            except:
+                                continue
+                        elif any(re.search(pattern, title) for pattern in ('résolution', 'décision', 'vote unique', 'vote final', r'proposition de( la)? commissi?on')):
+                            amendment = None
+                        elif '§' in title or 'considérant' in title:
+                            continue
+                        else:
+                            continue
+
                         vote = dict(
                             id=pv["voteid"],
                             date=vote_date,
+                            amendment=amendment,
                             procedure_ref=pv["epref"][0],
-                            title=pv["title"],
+                            doc=doc,
                         )
                         positions = []
                         for position, votes in pv["votes"].items():
@@ -248,26 +331,19 @@ def main(data: Data):
                         writer.writerow(vote)
 
         case Data.AMENDMENTS:
-            with Session(engine) as session:
-                session.query(Amendment).delete()
-                for amd in read_json('ep_plenary_amendments.json'):
-                    if 'vote_ids' in amd:
-                        for vote_id in amd['vote_ids']:
-                            vote = session.get(Vote, vote_id)
-                            if not vote: break
-                            vote.amendment_id = amd['id']
-                        amendment = Amendment(
-                            id=amd["id"],
-                            procedure_ref=amd["reference"],
-                        )
-                        if "old" in amd:
-                            amendment.old = " ".join(amd["old"])
-                        if "new" in amd:
-                            amendment.new = " ".join(amd["new"])
-                        session.add(amendment)
-                print(f'{len(session.new)} amendments will be imported')
-                session.commit()
+            from tqdm.contrib.concurrent import thread_map
 
+            with open('_data/votes.csv') as csvfile:
+                reader = csv.DictReader(csvfile)
+                docs = set(vote['doc'] for vote in reader)
+
+            with open('_data/amendments.csv', 'w') as csvfile:
+                writer = csv.DictWriter(csvfile, fieldnames=['doc', 'nr', 'old', 'new', 'url'])
+                writer.writeheader()
+                
+                for batch in batched(docs, 200):
+                    amendments = [amd for amendments in thread_map(fetch_amendments, batch, max_workers=4) for amd in amendments]
+                    writer.writerows(amendments)
 
 if __name__ == "__main__":
     typer.run(main)

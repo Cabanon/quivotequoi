@@ -7,10 +7,12 @@
         <div class="-" style="width: calc({{ ag_positions | size }}/{{ positions | size }} * 100%)"></div>
         <div class="0" style="width: calc({{ ab_positions | size }}/{{ positions | size }} * 100%)"></div>
     </div>
-    <small>
-        <span class='+'>Pour</span>: {{ for_positions | size }}.
-        <span class='-'>Contre</span>: {{ ag_positions | size }}.
-        <span class='0'>Abstentions</span>: {{ ab_positions | size }}.
-        Parmi {{ members | size }} députés, {{ positions | size }} ont votés.
-    </small>
+    {% if members %}
+        <small>
+            <span class='+'>Pour</span>: {{ for_positions | size }}.
+            <span class='-'>Contre</span>: {{ ag_positions | size }}.
+            <span class='0'>Abstentions</span>: {{ ab_positions | size }}.
+            Parmi {{ members | size }} députés, {{ positions | size }} ont votés.
+        </small>
+    {% endif %}
 </section>
