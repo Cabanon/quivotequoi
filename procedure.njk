@@ -32,7 +32,7 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
             <h2>{{ procedure.title }} (<a href="{{ procedure.url | replace('.json', '.do') }}" target=”_blank”>source</a>)</h2>
             {% set procedure_votes = votes | where('procedure_ref', procedure.reference) %}
             <h3>Vote final</h3>
-            {% set final = procedure_votes | find('amendment', null) %}
+            {% set final = procedure_votes | find('amendment', '') %}
             <section>
                 {% if final %}
                     {% set positions = final.positions %}

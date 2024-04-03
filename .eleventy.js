@@ -96,7 +96,7 @@ module.exports = function(eleventyConfig) {
         dmp.diff_cleanupSemantic(diffs);
         return diffs;
     });
-    eleventyConfig.addFilter("find", function(arr, key, value) { return arr.find((obj) => value ? obj[key] == value : obj[key]) });
+    eleventyConfig.addFilter("find", function(arr, key, value) { return arr.find((obj) => value === undefined ? obj[key] : obj[key] == value) });
     eleventyConfig.addFilter("where", function(arr, key, test, value) { return arr.filter((obj) => value ? obj[key][test].bind(obj[key])(value) : obj[key] == test )});
     eleventyConfig.addFilter("map", function(arr, key) { return Array.isArray(arr) ? arr.map((obj) => obj[key]) : arr[key] });
     eleventyConfig.addFilter("where_in", function(arr1, key, arr2) { return arr1.filter((e) => arr2.includes(e[key])) });

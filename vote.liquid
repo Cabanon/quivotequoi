@@ -72,9 +72,9 @@ ins {
     <main>
         {% assign procedure = procedures | find: 'reference', vote.procedure_ref %}
         <a href="/procedure/{{ vote.procedure_ref }}">⟵ Retourner à la procédure</a>
-        <h2>{{ procedure.title }} ({% if vote.amendment %}Amendement n°{{ vote.amendment }}{% else %}Vote final{% endif %})</h2>
+        <h2>{{ procedure.title }} ({% if vote.amendment != '' %}Amendement n°{{ vote.amendment }}{% else %}Vote final{% endif %})</h2>
         <h3>{{ vote.title }}</h3>
-        {% if vote.amendment %}
+        {% if vote.amendment != '' %}
         <h4>Détail de l'amendement</h4>
         {% assign amendment = amendments | where: 'doc', vote.doc | find: 'nr', vote.amendment %}
         {% assign changes = amendment.old | diff: amendment.new %}
