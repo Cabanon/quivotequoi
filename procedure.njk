@@ -23,7 +23,7 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
         <h4>Votes de tous les députés européens</h4>
         <section>{{ c.simplebar(final.votes) }}</section>
         <h4>Votes des députés français</h4>
-        {% set finals = votings | where('procedure_ref', procedure.reference ) | where('amendment', '') %}
+        {% set finals = votings | where('procedure_ref', procedure.reference ) | where('type', 'PRIMARY') %}
         {% if finals.length == 1 %}
             <section>
                 {{ c.fullbar(finals[0].positions) }}
@@ -52,7 +52,7 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
     {% endfor %}
 </ul>
 <h3>📓 Amendements</h3>
-{% for vote in procedure_votes | sort('amendment') %}
+{% for vote in procedure_votes | intsort('amendment') %}
     {% set amendment = docs | find('ref', vote.doc) | map('amendments') | find('nr', vote.amendment) %}
     {% if amendment %}
         <h4>📝 Amendement n°{{ vote.amendment }}{% if vote.split %} | Partie {{ vote.split }}{% endif %} | {{ c.adopted(vote.result) }}</h4>
@@ -76,12 +76,12 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
 {% endfor %}
 <h4>Sources</h4>
 <ul>
-  <li><a href="{{ procedure.url | replace('.json', '.do') }}">ℹ️ Procédure</a></li>
+  <li><a href="{{ procedure.url | replace('.json', '.do') }}" target="_blank">ℹ️ Procédure</a></li>
   {% for doc in docs %}
-    <li><a href="{{ doc.url }}">📜 Texte et amendements</a></li>
+    <li><a href="{{ doc.url }}" target="_blank">📜 Texte et amendements</a></li>
   {% endfor %}
   {% for url in procedure_votes | map('url') | uniq %}
-    <li><a href="{{ url | replace('.xml', '.html') }}">🗳 Détails des votes </a></li>
+    <li><a href="{{ url | replace('.xml', '.html') }}" target="_blank">🗳 Détails des votes </a></li>
   {% endfor %}
 </ul>
 {% endblock %}

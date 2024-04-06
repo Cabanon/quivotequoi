@@ -8,8 +8,17 @@
         {% block head %}{% endblock %}
     </head>
     <body>
+        <header>
+            <nav>
+            <ul>
+                <li><h1>QuiVoteQuoi?</h1></li>
+            </ul>
+            <ul>
+                {% block links %}<li><a href="/members">Membres</a></li>{% endblock %}
+            </ul>
+            </nav>
+        </header>
         <main>
-          <h1>QuiVoteQuoi?</h1>
           {% block main %}{% endblock %}
         </main>
     </body>

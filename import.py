@@ -17,6 +17,7 @@ import requests
 from requests_cache import CachedSession
 import pdfplumber as pp
 from tqdm import tqdm
+import country_converter as coco
 
 PARLTRACK_DUMPS_URL = "https://parltrack.org/dumps/"
 
@@ -25,9 +26,10 @@ class Data(StrEnum):
     MEMBERS = auto()
     PROCEDURES = auto()
     SUBJECTS = auto()
+    COUNTRIES = auto()
     DOCS = auto()
     VOTES = auto()
-    RCV = auto()
+    VOTINGS = auto()
     ATTENDANCES = auto()
 
 
@@ -45,14 +47,6 @@ class ReadableIterator(io.IOBase):
 def normalize(s):
     return unicodedata.normalize("NFD", s).encode("ASCII", "ignore").lower()
 
-def parse_subjects(subjects):
-    codes = []
-    for subject in subjects:
-        code = subject['text'].split(' ')[0]
-        if not any(c for c in codes if code in c):
-            codes.append(code)
-    return codes
-
 def parse_committees(players):
     players = [com.get('europeanParliamentPlayer') for com in players]
     codes = [player.get('committeeCode') for player in players if player is not None]
@@ -61,24 +55,57 @@ def parse_committees(players):
 def fetch_proc(ref):
     sess = CachedSession()
     sess.cookies.update({ 'oeilLanguage': 'fr'})
-    url = f'https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.json?reference={ref}&l=fr'
+    url = f'https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference={ref}&l=fr'
     try:
-        res = sess.get(url)
-        fiche = json.loads(res.text)['procedure']
-        proc = fiche['oeilSpecificData']
-        return dict(
-            reference=proc['reference'],
-            date=proc['events'][0]['date'],
-            title=proc['titles'][0]['text'].replace('&nbsp;', ' '),
-            type=fiche['identifier']['typeProcedure'],
-            subjects=json.dumps([sub['text'].split(' ')[0] for sub in proc['subjects']]),
-            committees=json.dumps(parse_committees(proc['players'])),
-            docs=json.dumps([doc['reference'] for doc in proc['documentReferences']]),
-            status=proc.get('stageReached'),
-            url=url
-        )
-    except Exception as error:
-        print(url, error)
+        res = sess.get(url.replace('.do', '.json'))
+        res.raise_for_status()
+    except requests.HTTPError:
+        return {}
+    fiche = json.loads(res.text)['procedure']
+    proc = fiche['oeilSpecificData']
+    if len(proc['events']) == 0:
+        return {}
+    html = bs4.BeautifulSoup(sess.get(url.replace('fr', 'en')).content, features="lxml")
+    tag = html.find(string='Subject')
+    subjects = set()
+    if tag:
+        for elem in tag.parent.next_siblings:
+            match elem.name:
+                case None:
+                    subject = elem.text.strip().split(' ')[0]
+                    if subject:
+                        subjects.add(subject)
+                case 'strong':
+                    break
+    else:
+        print(url)
+    tag = html.find(string='Geographical area')
+    countries = set()
+    if tag:
+        for elem in tag.parent.next_siblings:
+            match elem.name:
+                case None:
+                    country = elem.text.strip().split(',')[0]
+                    if country:
+                        countries.add(coco.convert(country, to='ISO2', not_found=None))
+                case 'strong':
+                    break
+    for subject in list(subjects):
+        parts = subject.split('.')
+        for i in range(len(parts)):
+            subjects.add('.'.join(parts[:i+1]))
+    return dict(
+        reference=proc['reference'],
+        date=proc['events'][0]['date'],
+        title=proc['titles'][0]['text'].replace('&nbsp;', ' '),
+        type=fiche['identifier']['typeProcedure'],
+        subjects=json.dumps(list(subjects)),
+        countries=json.dumps(list(countries)),
+        committees=json.dumps(parse_committees(proc['players'])),
+        docs=json.dumps([doc['reference'] for doc in proc['documentReferences']]),
+        status=proc.get('stageReached'),
+        url=url
+    )
 
 def download_if_new(filename):
     url = PARLTRACK_DUMPS_URL + filename
@@ -129,6 +156,10 @@ def extract_table(page):
     if table:
         return table
     return []
+
+
+def flag_from_iso(code):
+    return chr(0x1f1a5 + ord(code[0])) + chr(0x1f1a5 + ord(code[1]))
 
 
 def extract_amendments(table):
@@ -341,6 +372,54 @@ def main(data: Data):
                 subject_tree.append({ 'code': key, 'name': subject})
             with open('_data/subjects.json', 'w') as f:
                 json.dump(subject_tree, f, indent=2)
+        
+        case Data.COUNTRIES:
+            with open('_data/procedures.csv') as csvfile:
+                reader = csv.DictReader(csvfile)
+                codes = set(code for proc in reader for code in json.loads(proc['countries']))
+
+            with open('iso-3166_country_french.json') as f:
+                iso_map = json.load(f)
+
+            countries = []
+            for code in codes:
+                flag = name = None
+                match code:
+                    case 'ACP countries':
+                        name = "Pays d'Afrique, Caraïbes et Pacifique"
+                        flag = '🌍'
+                    case 'Tibet':
+                        name = code
+                        flag = '🇷🇪'
+                    case 'Atlantic Ocean area':
+                        name = 'Océan Atlantique'
+                        flag = '🌊'
+                    case 'Mediterranean Sea area':
+                        name = 'Mer Méditerranée'
+                        flag = '🐬'
+                    case 'Baltic Sea area':
+                        name = 'Mer Baltique'
+                        flag = '🦭'
+                    case 'Black Sea area':
+                        name = 'Mer Noire'
+                        flag = '🐟'
+                    case 'North Sea area':
+                        name = 'Mer du Nord'
+                        flag = '🐋'
+                    case 'Arctic area':
+                        name = 'Arctique'
+                        flag = '❄️'
+                    case 'Caribbean islands':
+                        name = 'Caraïbes'
+                        flag = '🏝'
+                try:
+                    if not flag: flag = flag_from_iso(code)
+                    if not name: name = iso_map[code]
+                except:
+                    print('ERROR', code)
+                countries.append({ 'code': code, 'flag': flag, 'name': name })
+            with open('_data/countries.json', 'w') as f:
+                json.dump(countries, f, indent=2, ensure_ascii=False)
 
         case Data.PROCEDURES:
             sess = CachedSession()
@@ -356,7 +435,7 @@ def main(data: Data):
             from tqdm.contrib.concurrent import thread_map
             procs = []
             while refs:
-                procs.extend(thread_map(fetch_proc, refs, max_workers=8))
+                procs.extend(thread_map(fetch_proc, refs))
                 page += 1
                 request = sess.get(urltemplate.format(page))
                 html = bs4.BeautifulSoup(request.content)
@@ -432,6 +511,8 @@ def main(data: Data):
                                         if title:
                                             doc = extract_doc(title)
                                     else:
+                                        rcv = voting.find('rcv/value')
+                                        split = extract_split(rcv.text) if (rcv is not None) else None
                                         result = parse_result(voting.get('result'))
                                         if doc and result not in ['LAPSED', None]:
                                             type, amendment = parse_amendment(voting.find('amendmentNumber').text)
@@ -441,7 +522,7 @@ def main(data: Data):
                                                     doc=doc,
                                                     author=voting.find('amendmentAuthor').text,
                                                     type=type,
-                                                    split=extract_split(row['AN, etc.']),
+                                                    split=split,
                                                     amendment=amendment,
                                                     result=result,
                                                     votes=json.dumps(list(map(int, votes.split(', ')))) if votes else None,
@@ -449,13 +530,13 @@ def main(data: Data):
                                                 )
                                             )
                     
-        case Data.RCV:
+        case Data.VOTINGS:
             with open('_data/members.csv') as csvfile:
                 reader = csv.DictReader(csvfile)
                 mepids = list(mep['id'] for mep in reader)
 
             with open('_data/votings.csv', 'w') as csvfile:
-                writer = csv.DictWriter(csvfile, fieldnames=['id', 'date', 'procedure_ref', 'doc', 'amendment', 'split', 'positions', 'url'])
+                writer = csv.DictWriter(csvfile, fieldnames=['id', 'date', 'procedure_ref', 'doc', 'type', 'amendment', 'split', 'positions', 'url'])
                 writer.writeheader()
 
                 for pv in read_json("ep_votes.json"):
@@ -471,16 +552,30 @@ def main(data: Data):
                         except:
                             print('Numéro de procédure introuvable dans:', title)
                             continue
-                        match = re.search(r'am\s+([\d//]+)', title)
+                        match = re.search(r'am\s+(.*)', title)
                         if match:
+                            type = 'AMENDMENT'
                             splits = match[1].split('/')
-                            amendment = int(splits[0])
-                            split = int(splits[1]) if len(splits) > 1 and splits[1] else None
+
+                            try:
+                                amendment = int(splits[0])
+                            except:
+                                amendment = splits[0]
+
+                            try:
+                                split = int(splits[1])
+                            except:
+                                split = None
+                        elif '§' in title or 'recital' in title:
+                            type = 'SEPARATE'
+                            amendment, split = None, None
                         else:
+                            type = 'PRIMARY'
                             amendment, split = None, None
                         vote = dict(
                             id=pv["voteid"],
                             date=vote_date,
+                            type=type,
                             amendment=amendment,
                             split=split,
                             procedure_ref=pv["epref"][0],
@@ -518,3 +613,4 @@ def main(data: Data):
 
 if __name__ == "__main__":
     typer.run(main)
+    

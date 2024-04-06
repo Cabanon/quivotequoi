@@ -98,12 +98,12 @@ module.exports = function(eleventyConfig) {
         dmp.diff_charsToLines_(diffs, lineArray);
         return diffs;
     });
-    eleventyConfig.addFilter("sort", function(arr, key) { return arr.sort((a, b) => { l = a[key]; r = b[key]; return l < r ? -1 : (l > r ? 1 : 0) }) });
+    eleventyConfig.addFilter("intsort", (arr, key) => arr.sort((a, b) => isNaN(a[key]) ? 1 : (isNaN(b[key]) ? -1 : a[key] - b[key])));
     eleventyConfig.addFilter("find", function(arr, key, value) { return arr.find((obj) => value === undefined ? obj[key] : obj[key] == value) });
     eleventyConfig.addFilter("where", (arr, key, test, value) => arr.filter((obj) => test !== undefined ? (value !== undefined ? obj[key][test].bind(obj[key])(value) : obj[key] == test) : obj[key] ));
     eleventyConfig.addFilter("map", function(arr, key) { return Array.isArray(arr) ? arr.map((obj) => obj[key]) : arr[key] });
     eleventyConfig.addFilter("int", function(arr) { return Array.isArray(arr) ? arr.map(i => parseInt(i)) : parseInt(arr) });
-    eleventyConfig.addFilter("where_in", function(arr1, key, arr2) { return arr1.filter((e) => arr2.includes(e[key])) });
+    eleventyConfig.addFilter("where_in", (arr1, key, arr2) => arr1.filter((e) => arr2.includes(e[key])));
     eleventyConfig.addFilter("current", function(arr, date) {
         return arr.map((member) => {
             current = getCurrent(member.constituencies, date || new Date().toISOString())
@@ -111,6 +111,7 @@ module.exports = function(eleventyConfig) {
             return { ...member, ...current, party: party_from_str(current.party) }
         }).filter(Boolean)
     });
+
     eleventyConfig.addFilter("attendance", function(atts, member) {
         return atts.filter((att) => {
             current = getCurrent(member.constituencies, att.date)
@@ -119,8 +120,8 @@ module.exports = function(eleventyConfig) {
         })
     });
     eleventyConfig.addFilter("ratio", (a, b) => (a / b * 100).toFixed(1) + '%');
-    eleventyConfig.addLiquidFilter("startswith", function(str, value) { return str.startsWith(value) });
-    eleventyConfig.addLiquidFilter("where_exp", function(arr, key, cond) {
+    eleventyConfig.addFilter("startswith", function(str, value) { return str.startsWith(value) });
+    eleventyConfig.addFilter("where_exp", function(arr, key, cond) {
         return arr.filter((el) => eval(`const { ${key} } = el; ${cond}`))
     });
     eleventyConfig.addLiquidFilter("groupby_exp", function(arr, key, cond) {
@@ -157,6 +158,8 @@ module.exports = function(eleventyConfig) {
                 try {
                     return JSON.parse(value)
                 } catch {
+                    if (value == 'False') return false
+                    if (value == 'True') return true
                     return value
                 }
             },
