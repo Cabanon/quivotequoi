@@ -100,7 +100,7 @@ module.exports = function(eleventyConfig) {
     });
     eleventyConfig.addFilter("sort", function(arr, key) { return arr.sort((a, b) => { l = a[key]; r = b[key]; return l < r ? -1 : (l > r ? 1 : 0) }) });
     eleventyConfig.addFilter("find", function(arr, key, value) { return arr.find((obj) => value === undefined ? obj[key] : obj[key] == value) });
-    eleventyConfig.addFilter("where", function(arr, key, test, value) { return arr.filter((obj) => test ? (value ? obj[key][test].bind(obj[key])(value) : obj[key] == test) : obj[key] )});
+    eleventyConfig.addFilter("where", (arr, key, test, value) => arr.filter((obj) => test !== undefined ? (value !== undefined ? obj[key][test].bind(obj[key])(value) : obj[key] == test) : obj[key] ));
     eleventyConfig.addFilter("map", function(arr, key) { return Array.isArray(arr) ? arr.map((obj) => obj[key]) : arr[key] });
     eleventyConfig.addFilter("int", function(arr) { return Array.isArray(arr) ? arr.map(i => parseInt(i)) : parseInt(arr) });
     eleventyConfig.addFilter("where_in", function(arr1, key, arr2) { return arr1.filter((e) => arr2.includes(e[key])) });
@@ -149,6 +149,7 @@ module.exports = function(eleventyConfig) {
     });
 
     eleventyConfig.addPassthroughCopy("bundle.css");
+    eleventyConfig.addPassthroughCopy("bundle.js");
 
     eleventyConfig.addDataExtension("csv", (contents) => {
         const records = parse(contents, {

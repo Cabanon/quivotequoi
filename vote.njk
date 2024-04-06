@@ -24,8 +24,9 @@ permalink: "vote/{{ vote.id }}/index.html"
 {% endif %}
 {% set active_members = members | current(vote.date) %}
 <h4>🇫🇷 Résultat global</h4>
+<section>{{ c.fullbar(vote.positions, active_members) }}</section>
 <details>
-  <summary>📊 Légende</summary>
+  <summary>📊 Voir la légende</summary>
   <ul>
     <li>🟢 Pour</li>
     <li>🔴 Contre</li>
@@ -33,7 +34,6 @@ permalink: "vote/{{ vote.id }}/index.html"
     <li>⚪ Absence</li>
   </ul>
 </details>
-<section>{{ c.fullbar(vote.positions, active_members) }}</section>
 <h4>👪 Résultat par parti</h4>
 {% set parties = active_members | groupby('party') %}
 {% for party, members in parties %}

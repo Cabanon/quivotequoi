@@ -55,10 +55,19 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
 {% for vote in procedure_votes | sort('amendment') %}
     {% set amendment = docs | find('ref', vote.doc) | map('amendments') | find('nr', vote.amendment) %}
     {% if amendment %}
-        <h4>📝 Amendement n°{{ vote.amendment }} | {{ c.adopted(vote.result) }}</h4>
-        {{ c.amendment(amendment) }}
+        <h4>📝 Amendement n°{{ vote.amendment }}{% if vote.split %} | Partie {{ vote.split }}{% endif %} | {{ c.adopted(vote.result) }}</h4>
+        {% if vote.split %}
+            <p>🔜 Aperçu bientôt disponible</p>
+        {% else %}
+            {{ c.amendment(amendment) }}
+        {% endif %}
         {% if vote.votes %}
-            {% set voting = votings | where('procedure_ref', procedure.reference ) | find('amendment', vote.amendment) %}
+            {% set voting = votings | where('doc', vote.doc ) | where('amendment', vote.amendment) %}
+            {% if vote.split %}
+                {% set voting = voting | find('split', vote.split) %}
+            {% else %}
+                {% set voting = voting | first %}
+            {% endif %}
             <a href="/vote/{{ voting.id }}">🗳 Voir le détail du vote</a>
         {% else %}
             🔬 Détails du vote indisponibles
@@ -71,7 +80,7 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
   {% for doc in docs %}
     <li><a href="{{ doc.url }}">📜 Texte et amendements</a></li>
   {% endfor %}
-  {% for url in procedure_votes | map('url') | unique %}
+  {% for url in procedure_votes | map('url') | uniq %}
     <li><a href="{{ url | replace('.xml', '.html') }}">🗳 Détails des votes </a></li>
   {% endfor %}
 </ul>

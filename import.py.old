@@ -23,47 +23,6 @@ def result_from_str(s: str) -> Vote.Result:
     match s:
         case '+': return Vote.Result.ADOPTED
         case '-': return Vote.Result.REJECTED
-        
-
-def type_from_amendment(amendment: str) -> Vote.Type:
-    match amendment:
-        case '§': return Vote.Type.SEPARATE
-        case None: return Vote.Type.FINAL
-        case _: return Vote.Type.AMENDMENT
-
-
-def process_table(table):
-    rows = []
-    rowspans = {}
-    col_nb = None
-    for tr in table.findall('TBODY/TR'):
-        row = []
-        col_nb = col_nb or len(tr)
-        while len(row) < col_nb:
-            i = len(row)
-            td = tr.find(f"TD[@COLNAME='C{i+1}']")
-            if td is not None:
-                row.append(', '.join(td.itertext()))
-                if 'COLSPAN' in td.keys() and len(rows) > 0: #skip colspan in header
-                    cols_to_add = int(td.get('COLSPAN'))-1
-                    row.extend(cols_to_add*[None])
-                if 'ROWSPAN' in td.keys():
-                    rowspans[i] = int(td.get('ROWSPAN'))-1
-            elif i in rowspans:
-                rowspan = rowspans[i]
-                row.append(rows[-1][i])
-                if rowspan == 1:
-                    del rowspans[i]
-                else:
-                    rowspans[i] = rowspan-1 
-            else:
-                row.append(None)
-        rows.append(row)
-    if len(rows) == 0:
-        return []
-    header = rows[0]
-    print(header)
-    return [{col_name.replace('\t', ''): row[i] for i, col_name in enumerate(header)} for row in rows[1:]]
 
 
 def extract_reference(title: str):

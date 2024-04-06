@@ -18,9 +18,15 @@
 {% set ag_positions = positions | where('position', '-') %}
 {% set ab_positions = positions | where('position', '0') %}
 <div class="votes">
+  {% if for_positions.length %}
     <div class="+" style="width: calc({{ for_positions | length }}/{{ positions | length }} * 100%)">{{ for_positions | length }}</div>
+  {% endif %}
+  {% if ag_positions.length %}
     <div class="-" style="width: calc({{ ag_positions | length }}/{{ positions | length }} * 100%)">{{ ag_positions | length }}</div>
+  {% endif %}
+  {% if ab_positions.length %}
     <div class="0" style="width: calc({{ ab_positions | length }}/{{ positions | length }} * 100%)">{{ ab_positions | length }}</div>
+  {% endif %}
 </div>
 {% if members %}
   <small>Parmi {{ members | length }} députés, {{ positions | length }} ont votés.</small>
@@ -30,9 +36,15 @@
 {% macro simplebar(votes) %}
 {% set total = votes | sum %}
 <div class="votes">
-  <div class="+" style="width: calc({{ votes[0] }}/{{ total }} * 100%)">{{ votes[0] }}</div>
-  <div class="-" style="width: calc({{ votes[1] }}/{{ total }} * 100%)">{{ votes[1] }}</div>
-  <div class="0" style="width: calc({{ votes[2] }}/{{ total }} * 100%)">{{ votes[2] }}</div>
+  {% if votes[0] %}
+    <div class="+" style="width: calc({{ votes[0] }}/{{ total }} * 100%)">{{ votes[0] }}</div>
+  {% endif %}
+  {% if votes[1] %}
+    <div class="-" style="width: calc({{ votes[1] }}/{{ total }} * 100%)">{{ votes[1] }}</div>
+  {% endif %}
+  {% if votes[2] %}
+    <div class="0" style="width: calc({{ votes[2] }}/{{ total }} * 100%)">{{ votes[2] }}</div>
+  {% endif %}
 </div>
 {% endmacro %}
 

@@ -2,34 +2,17 @@
 {% extends "parent.njk" %}
 
 {% block head %}
-<script>
-function filter() {
-  query = document.getElementById('input').value.toLowerCase();
-  lis = document.getElementById("list").getElementsByTagName('article');
-  tokens = query.split(/\s+/).map((token) => token).filter(Boolean)
-
-  for (const li of lis) {
-    string = li.getElementsByTagName("a")[0].innerText.toLowerCase();
-    if (tokens.length == 0 || tokens.every((token) => string.includes(token))) {
-      li.style.display = "";
-    } else {
-      li.style.display = "none";
-    }
-  }
-}
-</script>
+<script defer src='/bundle.js'/>
 {% endblock %}
 
 {% block main %}
-<details>
-  <summary>💡 Thèmes</summary>
-  <ul>
-    {% for theme in subjects | where('theme') | map('theme') | uniq %}
-      <li>{{ theme }}</li>
-    {% endfor %}
-  </ul>
-</details>
-<input id="input" oninput="filter()" type="search" placeholder="Cherchez une procédure"/>
+<input id="search" oninput="filter()" type="search" placeholder="Cherchez une procédure"/>
+<select id="theme" onchange="filter()" aria-label="Filtrer par sujet">
+  <option selected value="">🚫 Pas de filtre</option>
+  {% for theme in subjects | where('theme') | map('theme') | uniq %}
+    <option>{{ theme }}</option>
+  {% endfor %}
+</select>
 <div id="list">
   {% set sorted = procedures | where('status', 'Procédure terminée') | sort('date') | reverse %}
   {% for procedure in sorted %}

@@ -243,7 +243,7 @@ def parse_result(result):
     match result:
         case '+':
             return 'ADOPTED'
-        case '-':
+        case '-' | '—':
             return 'REJECTED'
         case '↓':
             return 'LAPSED'
@@ -455,7 +455,7 @@ def main(data: Data):
                 mepids = list(mep['id'] for mep in reader)
 
             with open('_data/votings.csv', 'w') as csvfile:
-                writer = csv.DictWriter(csvfile, fieldnames=['id', 'date', 'procedure_ref', 'doc', 'amendment', 'positions', 'url'])
+                writer = csv.DictWriter(csvfile, fieldnames=['id', 'date', 'procedure_ref', 'doc', 'amendment', 'split', 'positions', 'url'])
                 writer.writeheader()
 
                 for pv in read_json("ep_votes.json"):
@@ -471,15 +471,18 @@ def main(data: Data):
                         except:
                             print('Numéro de procédure introuvable dans:', title)
                             continue
-                        match = re.search(r'am\s+(\w+)', title)
-                        try:
-                            amendment = int(match[1])
-                        except:
-                            amendment = None
+                        match = re.search(r'am\s+([\d//]+)', title)
+                        if match:
+                            splits = match[1].split('/')
+                            amendment = int(splits[0])
+                            split = int(splits[1]) if len(splits) > 1 and splits[1] else None
+                        else:
+                            amendment, split = None, None
                         vote = dict(
                             id=pv["voteid"],
                             date=vote_date,
                             amendment=amendment,
+                            split=split,
                             procedure_ref=pv["epref"][0],
                             doc=doc,
                             url=pv['url'],
