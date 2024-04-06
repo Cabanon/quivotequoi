@@ -25,7 +25,7 @@ class Data(StrEnum):
     MEMBERS = auto()
     PROCEDURES = auto()
     SUBJECTS = auto()
-    AMENDMENTS = auto()
+    DOCS = auto()
     VOTES = auto()
     RCV = auto()
     ATTENDANCES = auto()
@@ -53,8 +53,13 @@ def parse_subjects(subjects):
             codes.append(code)
     return codes
 
+def parse_committees(players):
+    players = [com.get('europeanParliamentPlayer') for com in players]
+    codes = [player.get('committeeCode') for player in players if player is not None]
+    return [code for code in codes if code is not None]
+
 def fetch_proc(ref):
-    sess = requests.Session()
+    sess = CachedSession()
     sess.cookies.update({ 'oeilLanguage': 'fr'})
     url = f'https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.json?reference={ref}&l=fr'
     try:
@@ -66,8 +71,10 @@ def fetch_proc(ref):
             date=proc['events'][0]['date'],
             title=proc['titles'][0]['text'].replace('&nbsp;', ' '),
             type=fiche['identifier']['typeProcedure'],
-            subjects=json.dumps(parse_subjects(proc['subjects'])),
-            status=proc['stageReached'],
+            subjects=json.dumps([sub['text'].split(' ')[0] for sub in proc['subjects']]),
+            committees=json.dumps(parse_committees(proc['players'])),
+            docs=json.dumps([doc['reference'] for doc in proc['documentReferences']]),
+            status=proc.get('stageReached'),
             url=url
         )
     except Exception as error:
@@ -134,7 +141,7 @@ def extract_amendments(table):
             if nr and (old or new):
                 yield dict(nr=nr, old=old.strip(), new=new.strip())
             try:
-                nr = re.findall(r'\d+', row[0])[0]
+                nr = int(re.search(r'\d+', row[0])[0])
             except:
                 continue
             start = False
@@ -156,7 +163,7 @@ def extract_amendments(table):
 EP_URL = 'https://www.europarl.europa.eu'
 
 
-def fetch_amendments(doc):
+def fetch_doc(doc):
     parts = doc.split('-')
     nr, year = parts[-1].split('/')
     if len(parts) == 3:
@@ -164,17 +171,93 @@ def fetch_amendments(doc):
     else:
         url = f'https://www.europarl.europa.eu/doceo/document/{parts[0][0]}-9-{year}-{nr}_FR.html'
     session = CachedSession()
-    html = bs4.BeautifulSoup(session.get(url).content)
+    try:
+        request = session.get(url)
+        request.raise_for_status()
+    except requests.HTTPError:
+        return {}
+    html = bs4.BeautifulSoup(request.content)
     amendments = []
+    try:
+        procedure = html.find(string=re.compile(r'[0-9]{4}/[0-9]{4}\([A-Z]{3}\)'))
+    except:
+        print(url)
+        return None
     if amd_data := html.find(id='amdData'):
         for a in amd_data.find_all('a', attrs={'aria-label': 'pdf'}):
             pdf_url = EP_URL + a.attrs['href']
-            tmp = io.BytesIO(requests.get(pdf_url).content)
+            tmp = io.BytesIO(session.get(pdf_url).content)
             pdf = pp.open(tmp)
             for amd in extract_amendments([row for table in map(extract_table, pdf.pages) for row in table]):
-                amd.update(dict(doc=doc, url=pdf_url))
                 amendments.append(amd)
-    return amendments
+    return dict(ref=doc, procedure=procedure, amendments=json.dumps(amendments), url=url)
+
+
+def process_table(table):
+    rows = []
+    rowspans = {}
+    col_nb = int(table.find('COLGROUP').get('COLNB'))
+    for tr in table.findall('TBODY/TR'):
+        row = []
+        i = 0
+        while i < col_nb:
+            td = tr.find(f"TD[@COLNAME='C{i+1}']")
+            if td is not None:
+                row.append(', '.join(td.itertext()))
+                if 'COLSPAN' in td.keys() and len(rows) > 0: #skip colspan in header
+                    cols_to_add = int(td.get('COLSPAN'))-1
+                    row.extend(cols_to_add*[None])
+                if 'ROWSPAN' in td.keys():
+                    rowspans[i] = int(td.get('ROWSPAN'))-1
+            elif i in rowspans:
+                rowspan = rowspans[i]
+                row.append(rows[-1][i])
+                if rowspan == 1:
+                    del rowspans[i]
+                else:
+                    rowspans[i] = rowspan-1 
+            else:
+                row.append(None)
+            i+=1
+        rows.append(row)
+    if len(rows) == 0:
+        return []
+    header = rows[0]
+    try:
+        return [{col_name.replace('\t', ''): row[i] for i, col_name in enumerate(header) if col_name} for row in rows[1:]]
+    except:
+        for row in rows:
+            print(row)
+
+
+def parse_amendment(amd):
+    if amd == '§':
+        return 'SEPARATE', None
+    elif amd is not None:
+        return 'AMENDMENT', amd
+    else:
+        return 'PRIMARY', None
+
+
+def parse_result(result):
+    match result:
+        case '+':
+            return 'ADOPTED'
+        case '-':
+            return 'REJECTED'
+        case '↓':
+            return 'LAPSED'
+    return result
+
+    
+def extract_split(text):
+    match = re.search(r'(\d+)', text or '')
+    return match[1] if match else None
+
+DOC_RE = r'(RC-)?(A|B|C)[0-9]-[0-9]{4}\/[0-9]{4}'
+def extract_doc(text):
+    match = re.search(DOC_RE, text.upper())
+    return match[0] if match else None
 
 
 def main(data: Data):
@@ -260,27 +343,119 @@ def main(data: Data):
                 json.dump(subject_tree, f, indent=2)
 
         case Data.PROCEDURES:
-            with open('_data/votes.csv') as csvfile:
-                reader = csv.DictReader(csvfile)
-                refs = set(vote['procedure_ref'] for vote in reader)
+            sess = CachedSession()
+            sess.get('https://oeil.secure.europarl.europa.eu/oeil/search/search.do')
+            sess.cookies.update({ 'oeilLanguage': 'fr' })
+            urltemplate = 'https://oeil.secure.europarl.europa.eu/oeil/search/result.do?page={}&sort=d&rows=99&:parliamentaryTerm=9ème+législature+2019+-+2024'
+            page = 1
+            request = sess.get(urltemplate.format(page))
+            html = bs4.BeautifulSoup(request.content)
 
+            PROC_RE = r'reference=(.*)&'
+            refs = [re.search(PROC_RE, a['href'])[1] for a in html.select('a.reference')]
             from tqdm.contrib.concurrent import thread_map
-
-            procs = thread_map(fetch_proc, refs, max_workers=4)
+            procs = []
+            while refs:
+                procs.extend(thread_map(fetch_proc, refs, max_workers=8))
+                page += 1
+                request = sess.get(urltemplate.format(page))
+                html = bs4.BeautifulSoup(request.content)
+                refs = [re.search(PROC_RE, a['href'])[1] for a in html.select('a.reference')]
 
             with open('_data/procedures.csv', 'w') as csvfile:
                 fieldnames = procs[0].keys()
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
                 writer.writeheader()
-                writer.writerows(filter(None, procs))       
+                writer.writerows(filter(None, procs)) 
 
         case Data.VOTES:
+            session = CachedSession()
+            response = session.get('https://www.europarl.europa.eu/plenary/fr/ajax/getSessionCalendar.html?family=PV&termId=9').json()
+            start_date = dt.strptime(response['startDate'], '%d/%m/%Y').date()
+            end_date = dt.strptime(response['endDate'], '%d/%m/%Y').date()
+
+            with open('_data/votes.csv', 'w') as csvfile:
+                writer = csv.DictWriter(csvfile, fieldnames=['doc', 'author', 'type', 'amendment', 'split', 'result', 'votes', 'remarks', 'url'])
+                writer.writeheader()
+                for sess in response['sessionCalendar']:
+                    sess_date = date(*map(int, (sess['year'], sess['month'], sess['day'])))
+                    if start_date < sess_date:
+                        url = sess['url'].replace('TOC', 'VOT')
+                        if not url: continue
+                        request = session.get(url.replace('.html', '.xml'))
+                        try:
+                            request.raise_for_status()
+                        except requests.HTTPError:
+                            continue
+                        xml = ET.fromstring(request.content)
+                        if sess_date < date(2024, 1, 16):
+                            for vote in xml[0].find('Vote.Results'):
+                                description = vote.find('Vote.Result.Description.Text')
+                                table = vote.find('Vote.Result.Table.Results/TABLE')
+                                if description and table:
+                                    doc = extract_doc(''.join(description.itertext()))
+                                    rows = process_table(table)
+                                for row in rows:
+                                    doc = extract_doc(row['Objet'] or '') or doc
+                                    result = parse_result(row['Vote'])
+                                    if doc and result not in ['LAPSED', None] and row['AN, etc.'] != 'div':
+                                        type, amendment = parse_amendment(row.get('Am n°'))
+                                        remarks = row.get('Votes par AN/VE - observations')
+                                        try:
+                                            splits = remarks.split(', ', 4)
+                                            votes = list(map(int, splits[:3]))
+                                            remarks = ''.join(splits[3:])
+                                        except:
+                                            votes = None
+                                        writer.writerow(
+                                            dict(
+                                                doc=doc,
+                                                author=row.get('Auteur'),
+                                                type=type,
+                                                split=extract_split(row['AN, etc.']),
+                                                amendment=amendment,
+                                                result=result,
+                                                votes=json.dumps(votes) if votes else None,
+                                                remarks=remarks,
+                                                url=url,
+                                            )
+                                        )
+                        else: # New XML format on PE website
+                            for vote in xml.find('.//votes').findall('vote'):
+                                label = vote.find('label').text
+                                if label:
+                                    doc = extract_doc(label)
+                                for voting in vote.findall('.//voting'):
+                                    type = voting.get('type')
+                                    if type == "TITLE_BLOCK":
+                                        title = voting.find('title').text
+                                        if title:
+                                            doc = extract_doc(title)
+                                    else:
+                                        result = parse_result(voting.get('result'))
+                                        if doc and result not in ['LAPSED', None]:
+                                            type, amendment = parse_amendment(voting.find('amendmentNumber').text)
+                                            votes = voting.find('observations').text
+                                            writer.writerow(
+                                                dict(
+                                                    doc=doc,
+                                                    author=voting.find('amendmentAuthor').text,
+                                                    type=type,
+                                                    split=extract_split(row['AN, etc.']),
+                                                    amendment=amendment,
+                                                    result=result,
+                                                    votes=json.dumps(list(map(int, votes.split(', ')))) if votes else None,
+                                                    url=url,
+                                                )
+                                            )
+                    
+        case Data.RCV:
             with open('_data/members.csv') as csvfile:
                 reader = csv.DictReader(csvfile)
                 mepids = list(mep['id'] for mep in reader)
 
-            with open('_data/votes.csv', 'w') as csvfile:
-                writer = csv.DictWriter(csvfile, fieldnames=['id', 'date', 'procedure_ref', 'doc', 'amendment', 'positions'])
+            with open('_data/votings.csv', 'w') as csvfile:
+                writer = csv.DictWriter(csvfile, fieldnames=['id', 'date', 'procedure_ref', 'doc', 'amendment', 'positions', 'url'])
                 writer.writeheader()
 
                 for pv in read_json("ep_votes.json"):
@@ -291,30 +466,23 @@ def main(data: Data):
                         and len(pv["epref"]) == 1
                     ):  
                         title = pv['title'].lower()
-                        parts = re.split(r'\s+-\s+', title)
                         try:
-                            doc = re.search(r'(RC-)?(A|B|C)[0-9]-[0-9]{4}\/[0-9]{4}', title.upper())[0]
+                            doc = extract_doc(title)
                         except:
                             print('Numéro de procédure introuvable dans:', title)
                             continue
-                        if match := re.search(r'am\s+(\w+)', title):
-                            try:
-                                amendment = int(match[1])
-                            except:
-                                continue
-                        elif any(re.search(pattern, title) for pattern in ('résolution', 'décision', 'vote unique', 'vote final', r'proposition de( la)? commissi?on')):
+                        match = re.search(r'am\s+(\w+)', title)
+                        try:
+                            amendment = int(match[1])
+                        except:
                             amendment = None
-                        elif '§' in title or 'considérant' in title:
-                            continue
-                        else:
-                            continue
-
                         vote = dict(
                             id=pv["voteid"],
                             date=vote_date,
                             amendment=amendment,
                             procedure_ref=pv["epref"][0],
                             doc=doc,
+                            url=pv['url'],
                         )
                         positions = []
                         for position, votes in pv["votes"].items():
@@ -330,20 +498,20 @@ def main(data: Data):
                         vote['positions'] = json.dumps(positions)
                         writer.writerow(vote)
 
-        case Data.AMENDMENTS:
+        case Data.DOCS:
             from tqdm.contrib.concurrent import thread_map
 
             with open('_data/votes.csv') as csvfile:
                 reader = csv.DictReader(csvfile)
                 docs = set(vote['doc'] for vote in reader)
 
-            with open('_data/amendments.csv', 'w') as csvfile:
-                writer = csv.DictWriter(csvfile, fieldnames=['doc', 'nr', 'old', 'new', 'url'])
+            with open('_data/docs.csv', 'w') as csvfile:
+                writer = csv.DictWriter(csvfile, fieldnames=['ref', 'procedure', 'amendments', 'url'])
                 writer.writeheader()
                 
                 for batch in batched(docs, 200):
-                    amendments = [amd for amendments in thread_map(fetch_amendments, batch, max_workers=4) for amd in amendments]
-                    writer.writerows(amendments)
+                    rows = thread_map(fetch_doc, batch)
+                    writer.writerows(row for row in rows if row)
 
 if __name__ == "__main__":
     typer.run(main)

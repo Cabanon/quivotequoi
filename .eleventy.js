@@ -32,7 +32,7 @@ DiffMatchPatch.prototype.diff_linesToWords_ = function(text1, text2) {
       // Keeping our own length variable is faster than looking it up.
       var lineArrayLength = lineArray.length;
       while (lineEnd < text.length - 1) {
-        lineEnd = regexIndexOf(text, /(?!^)\b/, lineStart);
+        lineEnd = regexIndexOf(text, /\W/, lineStart);
         if (lineEnd == -1) {
           lineEnd = text.length - 1;
         }
@@ -85,6 +85,8 @@ function getCurrent(arr, date) {
 }
 
 module.exports = function(eleventyConfig) {
+    eleventyConfig.addFilter("log", (e) => console.log(e))
+    eleventyConfig.addFilter("uniq", (e) => [...new Set(e)])
     eleventyConfig.addFilter("date", (dateString) => new Date(dateString).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' }));
     eleventyConfig.addFilter("diff", function(text1, text2) {
         var a = dmp.diff_linesToWords_(text1 || '', text2 || '');
@@ -92,13 +94,15 @@ module.exports = function(eleventyConfig) {
         var lineText2 = a.chars2;
         var lineArray = a.lineArray;
         let diffs = dmp.diff_main(lineText1, lineText2, false);
-        dmp.diff_charsToLines_(diffs, lineArray);
         dmp.diff_cleanupSemantic(diffs);
+        dmp.diff_charsToLines_(diffs, lineArray);
         return diffs;
     });
+    eleventyConfig.addFilter("sort", function(arr, key) { return arr.sort((a, b) => { l = a[key]; r = b[key]; return l < r ? -1 : (l > r ? 1 : 0) }) });
     eleventyConfig.addFilter("find", function(arr, key, value) { return arr.find((obj) => value === undefined ? obj[key] : obj[key] == value) });
-    eleventyConfig.addFilter("where", function(arr, key, test, value) { return arr.filter((obj) => value ? obj[key][test].bind(obj[key])(value) : obj[key] == test )});
+    eleventyConfig.addFilter("where", function(arr, key, test, value) { return arr.filter((obj) => test ? (value ? obj[key][test].bind(obj[key])(value) : obj[key] == test) : obj[key] )});
     eleventyConfig.addFilter("map", function(arr, key) { return Array.isArray(arr) ? arr.map((obj) => obj[key]) : arr[key] });
+    eleventyConfig.addFilter("int", function(arr) { return Array.isArray(arr) ? arr.map(i => parseInt(i)) : parseInt(arr) });
     eleventyConfig.addFilter("where_in", function(arr1, key, arr2) { return arr1.filter((e) => arr2.includes(e[key])) });
     eleventyConfig.addFilter("current", function(arr, date) {
         return arr.map((member) => {
@@ -115,9 +119,7 @@ module.exports = function(eleventyConfig) {
         })
     });
     eleventyConfig.addFilter("ratio", (a, b) => (a / b * 100).toFixed(1) + '%');
-
     eleventyConfig.addLiquidFilter("startswith", function(str, value) { return str.startsWith(value) });
-    
     eleventyConfig.addLiquidFilter("where_exp", function(arr, key, cond) {
         return arr.filter((el) => eval(`const { ${key} } = el; ${cond}`))
     });
@@ -146,20 +148,18 @@ module.exports = function(eleventyConfig) {
         )
     });
 
+    eleventyConfig.addPassthroughCopy("bundle.css");
+
     eleventyConfig.addDataExtension("csv", (contents) => {
         const records = parse(contents, {
             cast: function(value) {
                 try {
                     return JSON.parse(value)
                 } catch {
-                    if (value == 'NULL') return null
-                    if (value.toLowerCase() == 'true') return true
-                    if (value.toLowerCase() == 'false') return false
                     return value
                 }
             },
             columns: true,
-            relax_quotes: true,
             skip_empty_lines: true,
         });
         return records;
