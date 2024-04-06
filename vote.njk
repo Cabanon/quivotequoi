@@ -1,0 +1,60 @@
+---
+pagination:
+  data: votings
+  size: 1
+  alias: vote
+permalink: "vote/{{ vote.id }}/index.html"
+---
+{% import "components.njk" as c %}
+{% extends "parent.njk" %}
+{% block main %}
+{% set procedure = procedures | find('reference', vote.procedure_ref) %}
+{% set doc = docs | find('ref', vote.doc) %}
+<a href="/procedure/{{ vote.procedure_ref }}">◀️ Retourner à la procédure</a>
+<h2>{{ procedure.title }} ({% if vote.amendment %}Amendement n°{{ vote.amendment }}{% else %}Vote final{% endif %})</h2>
+<h3>{{ vote.title }}</h3>
+{% if vote.amendment %}
+  <h4>📝 Amendement</h4>
+  {% if doc %}
+    {% set amendment = doc | map('amendments') | find('nr', vote.amendment) %}
+    {{ c.amendment(amendment) }}
+  {% else %}
+    🔜 Aperçu bientôt disponible
+  {% endif %}
+{% endif %}
+{% set active_members = members | current(vote.date) %}
+<h4>🇫🇷 Résultat global</h4>
+<section>{{ c.fullbar(vote.positions, active_members) }}</section>
+<details>
+  <summary>📊 Voir la légende</summary>
+  <ul>
+    <li>🟢 Pour</li>
+    <li>🔴 Contre</li>
+    <li>🟡 Abstention</li>
+    <li>⚪ Absence</li>
+  </ul>
+</details>
+<h4>👪 Résultat par parti</h4>
+{% set parties = active_members | groupby('party') %}
+{% for party, members in parties %}
+  <h5>{{ party }} ({{ members | length }} députés)</h5>
+  {% set member_ids = members | map('id') %}
+  {% set p_positions = vote.positions | where_in('member_id', member_ids) %}
+  <section>{{ c.fullbar(p_positions, members) }}</section>
+  <details>
+    <summary>🗳 Voir le détail des votes</summary>
+    <p>
+      {% for member in members %}
+          {% set position = p_positions | find('member_id', member.id) %}
+          <span class="{{ position.position or 'novote' }}">{{ member.full_name }}</span>
+      {% endfor %}
+    </p>
+  </details>
+{% endfor %}
+<h4>Sources</h4>
+<ul>
+  <li><a href="{{ procedure.url | replace('.json', '.do') }}">ℹ️ Procédure</a></li>
+  <li><a href="{{ doc.url }}">📜 Texte et amendements</a></li>
+  <li><a href="{{ vote.url | replace('.xml', '.html') }}">🗳 Détails des votes </a></li>
+</ul>
+{% endblock %}
