@@ -1,0 +1,18 @@
+name: Eleventy Build
+on: [push]
+
+jobs:
+  build_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Build
+        uses: TartanLlama/actions-eleventy@master
+        with:
+          install_dependencies: true
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.9.3
+        with:
+          publish_dir: _site
+          cname: quivotequoi.eu
+          github_token: ${{ secrets.GITHUB_TOKEN }}
