@@ -23,8 +23,8 @@
   {% set sorted = procedures | sort(true, true, 'date') %}
   {% for procedure in sorted %}
     {% set doc_refs = docs | where('procedure', procedure.reference ) | map('ref') %}
-    {% set has_votes = votes | where_in('doc', doc_refs) | where_in('type', ['AMENDMENT', 'PRIMARY']) | map('votes') | where('length') | length %}
-    {% if has_votes %}
+    {% set proc_votes = votes | where_in('doc', doc_refs) | where_in('type', ['AMENDMENT', 'PRIMARY']) %}
+    {% if proc_votes | map('votes') | where('length') | length %}
       <article>
         <header>
         {% set themes = subjects | where_in('code', procedure.subjects) | map('theme') | uniq %}
@@ -33,7 +33,8 @@
         {% if flags.length %} | {% for flag in flags %}{{ flag.flag }} {{ flag.name }} {% endfor %}{% endif %}
         </header>
         <a href="/procedure/{{ procedure.reference }}">{{ procedure.title }}</a>
-        <footer><small>{{ procedure.date | date }} | {{ procedure.status }}</small></footer>
+        {% set last_vote = proc_votes | sort(true, true, 'date') | first %}
+        <footer><small>Dernier vote: {{ last_vote.date | date }} | {{ procedure.status }}</small></footer>
       </article>
     {% endif %}
   {% endfor %}

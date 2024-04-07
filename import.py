@@ -254,11 +254,7 @@ def process_table(table):
     if len(rows) == 0:
         return []
     header = rows[0]
-    try:
-        return [{col_name.replace('\t', ''): row[i] for i, col_name in enumerate(header) if col_name} for row in rows[1:]]
-    except:
-        for row in rows:
-            print(row)
+    return [{col_name.replace('\t', ''): row[i] for i, col_name in enumerate(header) if col_name} for row in rows[1:]]
 
 
 def parse_amendment(amd):
@@ -454,7 +450,7 @@ def main(data: Data):
             end_date = dt.strptime(response['endDate'], '%d/%m/%Y').date()
 
             with open('_data/votes.csv', 'w') as csvfile:
-                writer = csv.DictWriter(csvfile, fieldnames=['doc', 'author', 'type', 'amendment', 'split', 'result', 'votes', 'remarks', 'url'])
+                writer = csv.DictWriter(csvfile, fieldnames=['date', 'doc', 'author', 'type', 'amendment', 'split', 'result', 'votes', 'remarks', 'url'])
                 writer.writeheader()
                 for sess in response['sessionCalendar']:
                     sess_date = date(*map(int, (sess['year'], sess['month'], sess['day'])))
@@ -469,11 +465,14 @@ def main(data: Data):
                         xml = ET.fromstring(request.content)
                         if sess_date < date(2024, 1, 16):
                             for vote in xml[0].find('Vote.Results'):
+                                doc = rows = None
                                 description = vote.find('Vote.Result.Description.Text')
                                 table = vote.find('Vote.Result.Table.Results/TABLE')
                                 if description and table:
                                     doc = extract_doc(''.join(description.itertext()))
                                     rows = process_table(table)
+                                else:
+                                    continue
                                 for row in rows:
                                     doc = extract_doc(row['Objet'] or '') or doc
                                     result = parse_result(row['Vote'])
@@ -489,6 +488,7 @@ def main(data: Data):
                                         writer.writerow(
                                             dict(
                                                 doc=doc,
+                                                date=sess_date,
                                                 author=row.get('Auteur'),
                                                 type=type,
                                                 split=extract_split(row['AN, etc.']),
@@ -501,6 +501,7 @@ def main(data: Data):
                                         )
                         else: # New XML format on PE website
                             for vote in xml.find('.//votes').findall('vote'):
+                                doc = None
                                 label = vote.find('label').text
                                 if label:
                                     doc = extract_doc(label)
@@ -509,7 +510,7 @@ def main(data: Data):
                                     if type == "TITLE_BLOCK":
                                         title = voting.find('title').text
                                         if title:
-                                            doc = extract_doc(title)
+                                            doc = extract_doc(title) or doc
                                     else:
                                         rcv = voting.find('rcv/value')
                                         split = extract_split(rcv.text) if (rcv is not None) else None
@@ -519,6 +520,7 @@ def main(data: Data):
                                             votes = voting.find('observations').text
                                             writer.writerow(
                                                 dict(
+                                                    date=sess_date,
                                                     doc=doc,
                                                     author=voting.find('amendmentAuthor').text,
                                                     type=type,

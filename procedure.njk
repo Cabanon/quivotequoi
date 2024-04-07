@@ -20,9 +20,18 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
     {% set final = finals[0] %}
     <h4>{{ c.adopted(final.result) }}</h4>
     {% if final.votes %}
-        <h4>Votes de tous les députés européens</h4>
+        <h4>🇪🇺 Votes de tous les députés européens</h4>
         <section>{{ c.simplebar(final.votes) }}</section>
-        <h4>Votes des députés français</h4>
+        <details>
+        <summary>📊 Voir la légende</summary>
+        <ul>
+            <li>🟢 Pour</li>
+            <li>🔴 Contre</li>
+            <li>🟡 Abstention</li>
+            <li>⚪ Absence</li>
+        </ul>
+        </details>
+        <h4>🇫🇷 Votes des députés français</h4>
         {% set finals = votings | where('procedure_ref', procedure.reference ) | where('type', 'PRIMARY') %}
         {% if finals.length == 1 %}
             <section>
@@ -33,10 +42,10 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
             🔎 Vote introuvable
         {% endif %}
     {% else %}
-        <h4>🔬 Détails du vote indisponibles</h4>
+        <h4>✋ Vote à main levée</h4>
     {% endif %}
 {% else %}
-    🔎 Vote introuvable
+    ❗ Erreur lors de la récupération du vote
 {% endif %}
 </section>
 <h3>🏷 Sujets</h3>
@@ -70,7 +79,7 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
             {% endif %}
             <a href="/vote/{{ voting.id }}">🗳 Voir le détail du vote</a>
         {% else %}
-            🔬 Détails du vote indisponibles
+            ✋ Vote à main levée
         {% endif %}
     {% endif %}
 {% endfor %}
