@@ -23,7 +23,7 @@
   {% set sorted = procedures | sort(true, true, 'date') %}
   {% for procedure in sorted %}
     {% set doc_refs = docs | where('procedure', procedure.reference ) | map('ref') %}
-    {% set proc_votes = votes | where_in('doc', doc_refs) | where_in('type', ['AMENDMENT', 'PRIMARY']) %}
+    {% set proc_votes = votes | where_in('doc', doc_refs) | where_in('type', ['AMENDMENT', 'ADOPTION', 'REJECTION']) %}
     {% if proc_votes | map('votes') | where('length') | length %}
       <article>
         <header>

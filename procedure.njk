@@ -13,26 +13,25 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
 {% set docs = docs | where('procedure', procedure.reference) %}
 {% set doc_refs = docs | map('ref') %}
 {% set procedure_votes = votes | where_in('doc', doc_refs) %}
-{% set finals = procedure_votes | where('type', 'PRIMARY') %}
-<h3>🎯 Résultat</h3>
-<section>
-{% if finals.length == 1 %}
-    {% set final = finals[0] %}
-    <h4>{{ c.adopted(final.result) }}</h4>
-    {% if final.votes %}
-        <h4>🇪🇺 Votes de tous les députés européens</h4>
-        <section>{{ c.simplebar(final.votes) }}</section>
+{% set primary_votes = procedure_votes | where_in('type', ['ADOPTION', 'REJECTION']) %}
+<h3>🎯 Votes principaux</h3>
+{% for primary in primary_votes | reverse %}
+    <h4>{% if primary.type == 'ADOPTION' %}👍 Adoption du texte{% else %}👎 Rejet du texte{% endif %} | {{ c.adopted(primary.result) }}</h4>
+    <section>
+    {% if primary.votes %}
+        <h5>🇪🇺 Votes de tous les députés européens</h5>
+        <p>{{ c.simplebar(primary.votes) }}</p>
         <details>
         <summary>📊 Voir la légende</summary>
         <ul>
             <li>🟢 Pour</li>
             <li>🔴 Contre</li>
             <li>🟡 Abstention</li>
-            <li>⚪ Absence</li>
+            {# <li>⚪ Absence</li> #}
         </ul>
         </details>
-        <h4>🇫🇷 Votes des députés français</h4>
-        {% set finals = votings | where('procedure_ref', procedure.reference ) | where('type', 'PRIMARY') %}
+        <h5>🇫🇷 Votes des députés français</h5>
+        {% set finals = votings | where('procedure_ref', procedure.reference ) | where('type', primary.type) %}
         {% if finals.length == 1 %}
             <section>
                 {{ c.fullbar(finals[0].positions) }}
@@ -42,12 +41,10 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
             🔎 Vote introuvable
         {% endif %}
     {% else %}
-        <h4>✋ Vote à main levée</h4>
+        <h5>🖐 Vote à main levée</h5>
     {% endif %}
-{% else %}
-    ❗ Erreur lors de la récupération du vote
-{% endif %}
-</section>
+    </section>
+{% endfor %}
 <h3>🏷 Sujets</h3>
 <ul>
     {{ procedure.subject }}
@@ -61,7 +58,7 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
     {% endfor %}
 </ul>
 <h3>📓 Amendements</h3>
-{% for vote in procedure_votes | intsort('amendment') %}
+{% for vote in procedure_votes | where ('type', 'AMENDMENT') | intsort('amendment') %}
     {% set amendment = docs | find('ref', vote.doc) | map('amendments') | find('nr', vote.amendment) %}
     {% if amendment %}
         <h4>📝 Amendement n°{{ vote.amendment }}{% if vote.split %} | Partie {{ vote.split }}{% endif %} | {{ c.adopted(vote.result) }}</h4>
@@ -71,15 +68,15 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
             {{ c.amendment(amendment) }}
         {% endif %}
         {% if vote.votes %}
-            {% set voting = votings | where('doc', vote.doc ) | where('amendment', vote.amendment) %}
+            {% set vote_votings = votings | where('doc', vote.doc ) | where('amendment', vote.amendment) %}
             {% if vote.split %}
-                {% set voting = voting | find('split', vote.split) %}
+                {% set voting = vote_votings | where('split', vote.split) | first %}
             {% else %}
-                {% set voting = voting | first %}
+                {% set voting = vote_votings | first %}
             {% endif %}
             <a href="/vote/{{ voting.id }}">🗳 Voir le détail du vote</a>
         {% else %}
-            ✋ Vote à main levée
+            🖐 Vote à main levée
         {% endif %}
     {% endif %}
 {% endfor %}

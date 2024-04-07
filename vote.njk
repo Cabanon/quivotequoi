@@ -11,7 +11,10 @@ permalink: "vote/{{ vote.id }}/index.html"
 {% set procedure = procedures | find('reference', vote.procedure_ref) %}
 {% set doc = docs | find('ref', vote.doc) %}
 <a href="/procedure/{{ vote.procedure_ref }}">◀️ Retourner à la procédure</a>
-<h2>{{ procedure.title }} ({% if vote.amendment %}Amendement n°{{ vote.amendment }}{% else %}Vote final{% endif %})</h2>
+<h2>{{ procedure.title }} ({% if vote.type == 'AMENDMENT' %}Amendement n°{{ vote.amendment }}{% elif vote.type == 'ADOPTION' %}Adoption du texte{% else %}Rejet du texte{% endif %})</h2>
+{% if vote.split %}
+  <p>⚠️ Il s'agit d'un vote par division, cela signifie que seule une partie de l'amendement ci-dessus a été voté. Pour en savoir plus, veuillez consulter la source des votes en bas de page</p>
+{% endif %}
 <h3>{{ vote.title }}</h3>
 {% if vote.amendment %}
   <h4>📝 Amendement</h4>
@@ -21,9 +24,21 @@ permalink: "vote/{{ vote.id }}/index.html"
   {% else %}
     🔜 Aperçu bientôt disponible
   {% endif %}
-  {% if vote.split %}
-    <p>⚠️ Il s'agit d'un vote par division, cela signifie que seule une partie de l'amendement ci-dessus a été voté. Pour en savoir plus, veuillez consulter la source des votes en bas de page</p>
-  {% endif %}
+{% endif %}
+{% if vote.votes %}
+<h4>🇪🇺 Votes de tous les députés européens</h5>
+<section>
+  <p>{{ c.simplebar(vote.votes) }}</p>
+  <details>
+  <summary>📊 Voir la légende</summary>
+  <ul>
+      <li>🟢 Pour</li>
+      <li>🔴 Contre</li>
+      <li>🟡 Abstention</li>
+      {# <li>⚪ Absence</li> #}
+  </ul>
+  </details>
+</section>
 {% endif %}
 {% set active_members = members | current(vote.date) %}
 <h4>🇫🇷 Votes des députés français</h4>

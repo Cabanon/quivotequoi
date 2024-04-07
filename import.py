@@ -257,10 +257,15 @@ def process_table(table):
     return [{col_name.replace('\t', ''): row[i] for i, col_name in enumerate(header) if col_name} for row in rows[1:]]
 
 
-def parse_amendment(amd):
-    if amd == '§':
+def parse_amendment(subject, amd):
+    subject = subject.lower()
+    if 'rejet' in subject:
+        return 'REJECTION', None
+    elif any(word in subject for word in ('résolution', 'décision', 'vote unique', 'vote final', 'proposition')):
+        return 'ADOPTION', None
+    elif amd == '§':
         return 'SEPARATE', None
-    elif amd is not None:
+    elif amd:
         return 'AMENDMENT', amd
     else:
         return 'PRIMARY', None
@@ -474,10 +479,11 @@ def main(data: Data):
                                 else:
                                     continue
                                 for row in rows:
-                                    doc = extract_doc(row['Objet'] or '') or doc
+                                    subject = row['Objet'] or ''
+                                    doc = extract_doc(subject) or doc
                                     result = parse_result(row['Vote'])
                                     if doc and result not in ['LAPSED', None] and row['AN, etc.'] != 'div':
-                                        type, amendment = parse_amendment(row.get('Am n°'))
+                                        type, amendment = parse_amendment(subject, row.get('Am n°'))
                                         remarks = row.get('Votes par AN/VE - observations')
                                         try:
                                             splits = remarks.split(', ', 4)
@@ -501,22 +507,18 @@ def main(data: Data):
                                         )
                         else: # New XML format on PE website
                             for vote in xml.find('.//votes').findall('vote'):
-                                doc = None
-                                label = vote.find('label').text
-                                if label:
-                                    doc = extract_doc(label)
+                                doc = extract_doc(vote.find('label').text or '')
                                 for voting in vote.findall('.//voting'):
-                                    type = voting.get('type')
-                                    if type == "TITLE_BLOCK":
-                                        title = voting.find('title').text
-                                        if title:
-                                            doc = extract_doc(title) or doc
+                                    if voting.get('type') == "TITLE_BLOCK":
+                                        doc = extract_doc(voting.find('title').text) or doc
                                     else:
+                                        subject = voting.find('label').text
                                         rcv = voting.find('rcv/value')
                                         split = extract_split(rcv.text) if (rcv is not None) else None
                                         result = parse_result(voting.get('result'))
                                         if doc and result not in ['LAPSED', None]:
-                                            type, amendment = parse_amendment(voting.find('amendmentNumber').text)
+                                            type, amendment = parse_amendment(subject or '', voting.find('amendmentNumber').text)
+                                            #if doc == 'A9-0014/2024': print(subject, type)
                                             votes = voting.find('observations').text
                                             writer.writerow(
                                                 dict(
@@ -556,7 +558,6 @@ def main(data: Data):
                             continue
                         match = re.search(r'am\s+(.*)', title)
                         if match:
-                            type = 'AMENDMENT'
                             splits = match[1].split('/')
 
                             try:
@@ -568,12 +569,9 @@ def main(data: Data):
                                 split = int(splits[1])
                             except:
                                 split = None
-                        elif '§' in title or 'recital' in title:
-                            type = 'SEPARATE'
-                            amendment, split = None, None
                         else:
-                            type = 'PRIMARY'
                             amendment, split = None, None
+                        type, amendment = parse_amendment(title, amendment)
                         vote = dict(
                             id=pv["voteid"],
                             date=vote_date,
@@ -604,13 +602,13 @@ def main(data: Data):
             with open('_data/votes.csv') as csvfile:
                 reader = csv.DictReader(csvfile)
                 docs = set(vote['doc'] for vote in reader)
-
+            
             with open('_data/docs.csv', 'w') as csvfile:
                 writer = csv.DictWriter(csvfile, fieldnames=['ref', 'procedure', 'amendments', 'url'])
                 writer.writeheader()
                 
                 for batch in batched(docs, 200):
-                    rows = thread_map(fetch_doc, batch)
+                    rows = thread_map(fetch_doc, batch, max_workers=4)
                     writer.writerows(row for row in rows if row)
 
 if __name__ == "__main__":
