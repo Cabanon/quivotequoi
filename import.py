@@ -453,6 +453,10 @@ def main(data: Data):
             response = session.get('https://www.europarl.europa.eu/plenary/fr/ajax/getSessionCalendar.html?family=PV&termId=9').json()
             start_date = dt.strptime(response['startDate'], '%d/%m/%Y').date()
             end_date = dt.strptime(response['endDate'], '%d/%m/%Y').date()
+            IGNORE_URLS = [
+                'https://www.europarl.europa.eu/doceo/document/PV-9-2022-03-09-VOT_FR.html',
+                'https://www.europarl.europa.eu/doceo/document/PV-9-2022-03-10-VOT_FR.html',
+            ]
 
             with open('_data/votes.csv', 'w') as csvfile:
                 writer = csv.DictWriter(csvfile, fieldnames=['date', 'doc', 'author', 'type', 'amendment', 'split', 'result', 'votes', 'remarks', 'url'])
@@ -461,7 +465,8 @@ def main(data: Data):
                     sess_date = date(*map(int, (sess['year'], sess['month'], sess['day'])))
                     if start_date < sess_date:
                         url = sess['url'].replace('TOC', 'VOT')
-                        if not url: continue
+                        if not url or url in IGNORE_URLS:
+                            continue
                         request = session.get(url.replace('.html', '.xml'))
                         try:
                             request.raise_for_status()
@@ -572,7 +577,6 @@ def main(data: Data):
                         else:
                             amendment, split = None, None
                         type, amendment = parse_amendment(title, amendment)
-                        # if pv["epref"][0] == '2023/2124(INI)': print(title, type)
                         vote = dict(
                             id=pv["voteid"],
                             date=vote_date,
