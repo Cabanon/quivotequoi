@@ -270,7 +270,6 @@ def parse_amendment(subject, amd):
     else:
         return 'PRIMARY', None
 
-
 def parse_result(result):
     match result:
         case '+':
@@ -459,7 +458,7 @@ def main(data: Data):
             ]
 
             with open('_data/votes.csv', 'w') as csvfile:
-                writer = csv.DictWriter(csvfile, fieldnames=['date', 'doc', 'author', 'type', 'amendment', 'split', 'result', 'votes', 'remarks', 'url'])
+                writer = csv.DictWriter(csvfile, fieldnames=['date', 'doc', 'author', 'type', 'rcv', 'amendment', 'split', 'result', 'votes', 'remarks', 'url'])
                 writer.writeheader()
                 for sess in response['sessionCalendar']:
                     sess_date = date(*map(int, (sess['year'], sess['month'], sess['day'])))
@@ -487,7 +486,8 @@ def main(data: Data):
                                     subject = row['Objet'] or ''
                                     doc = extract_doc(subject) or doc
                                     result = parse_result(row['Vote'])
-                                    if doc and result not in ['LAPSED', None] and row['AN, etc.'] != 'div':
+                                    rcv = row['AN, etc.']
+                                    if doc and result not in ['LAPSED', None] and rcv != 'div':
                                         type, amendment = parse_amendment(subject, row.get('Am n°'))
                                         remarks = row.get('Votes par AN/VE - observations')
                                         try:
@@ -502,6 +502,7 @@ def main(data: Data):
                                                 date=sess_date,
                                                 author=row.get('Auteur'),
                                                 type=type,
+                                                rcv=rcv and 'AN' in rcv,
                                                 split=extract_split(row['AN, etc.']),
                                                 amendment=amendment,
                                                 result=result,
@@ -533,6 +534,7 @@ def main(data: Data):
                                                     type=type,
                                                     split=split,
                                                     amendment=amendment,
+                                                    rcv=rcv and 'AN' in rcv,
                                                     result=result,
                                                     votes=json.dumps(list(map(int, votes.split(', ')))) if votes else None,
                                                     url=url,

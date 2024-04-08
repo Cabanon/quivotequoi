@@ -68,19 +68,24 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
             {{ c.amendment(amendment) }}
         {% endif %}
         {% if vote.votes %}
-            {% set vote_votings = votings | where('doc', vote.doc ) | where('amendment', vote.amendment) %}
-            {% if vote.split %}
-                {% set voting = vote_votings | where('split', vote.split) | first %}
+            {{ c.simplebar(vote.votes, true) }}
+            {% if vote.rcv %}
+                {% set vote_votings = votings | where('doc', vote.doc ) | where('amendment', vote.amendment) %}
+                {% if vote.split %}
+                    {% set voting = vote_votings | where('split', vote.split) | first %}
+                {% else %}
+                    {% set voting = vote_votings | first %}
+                {% endif %}
+                <a href="/vote/{{ voting.id }}">📣 Vote nominal : voir le détail</a>
             {% else %}
-                {% set voting = vote_votings | first %}
+                <p>🤖 Vote électronique</p>
             {% endif %}
-            <a href="/vote/{{ voting.id }}">🗳 Voir le détail du vote</a>
         {% else %}
-            🖐 Vote à main levée
+            <p>🖐 Vote à main levée</p>
         {% endif %}
     {% endif %}
 {% endfor %}
-<h4>Sources</h4>
+<h3>Sources</h3>
 <ul>
   <li><a href="{{ procedure.url | replace('.json', '.do') }}" target="_blank">ℹ️ Procédure</a></li>
   {% for doc in docs %}

@@ -33,9 +33,9 @@
 {% endif %} 
 {% endmacro %}
 
-{% macro simplebar(votes) %}
+{% macro simplebar(votes, small=false) %}
 {% set total = votes | sum %}
-<div class="votes">
+<div class="votes {% if small %}small{% endif %}">
   {% if votes[0] %}
     <div class="+" style="width: calc({{ votes[0] }}/{{ total }} * 100%)">{{ votes[0] }}</div>
   {% endif %}
