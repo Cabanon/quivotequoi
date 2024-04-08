@@ -261,7 +261,7 @@ def parse_amendment(subject, amd):
     subject = subject.lower()
     if 'rejet' in subject:
         return 'REJECTION', None
-    elif any(word in subject for word in ('résolution', 'décision', 'vote unique', 'vote final', 'proposition')):
+    elif any(word in subject for word in ('résolution', 'décision', 'vote unique', 'vote final', 'proposition', 'motion', 'resolution')):
         return 'ADOPTION', None
     elif amd == '§':
         return 'SEPARATE', None
@@ -572,6 +572,7 @@ def main(data: Data):
                         else:
                             amendment, split = None, None
                         type, amendment = parse_amendment(title, amendment)
+                        # if pv["epref"][0] == '2023/2124(INI)': print(title, type)
                         vote = dict(
                             id=pv["voteid"],
                             date=vote_date,
