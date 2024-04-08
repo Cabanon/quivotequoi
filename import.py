@@ -512,7 +512,7 @@ def main(data: Data):
                                     if voting.get('type') == "TITLE_BLOCK":
                                         doc = extract_doc(voting.find('title').text) or doc
                                     else:
-                                        subject = voting.find('label').text
+                                        subject = (voting.find('title').text or '') + (voting.find('label').text or '')
                                         rcv = voting.find('rcv/value')
                                         split = extract_split(rcv.text) if (rcv is not None) else None
                                         result = parse_result(voting.get('result'))
