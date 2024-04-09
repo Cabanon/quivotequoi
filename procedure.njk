@@ -50,7 +50,7 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
     {% for code in procedure.subjects %}
         {% set subject = subjects | find('code', code) %}
         {% if subject %}
-            <li><a href="/subject/{{ subject.code }}">{{ subject.name }}</a></li>
+            <li>{{ subject.name }}</li>
         {% else %}
             <li>{{ code }}</li>
         {% endif %}
