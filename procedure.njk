@@ -35,7 +35,7 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
         {% set finals = votings | where('procedure_ref', procedure.reference ) | where('type', primary.type) %}
         {% if finals.length == 1 %}
             <section>{{ c.fullbar(finals[0].positions) }}</section>
-            <a href="/vote/{{ finals[0].id }}">🗳 Voir le détail du vote</a>
+            <a href="/voting/{{ finals[0].id }}">🗳 Voir le détail du vote</a>
         {% else %}
             🔎 Vote introuvable
         {% endif %}
@@ -78,7 +78,7 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
                 {% else %}
                     {% set voting = vote_votings | first %}
                 {% endif %}
-                <a href="/vote/{{ voting.id }}">📣 Vote nominal : voir le détail</a>
+                <a href="/voting/{{ voting.id }}">📣 Vote nominal : voir le détail</a>
             {% else %}
                 🤖 Vote électronique
             {% endif %}
