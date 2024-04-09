@@ -7,7 +7,7 @@
 {% block main %}
   {% for member in members | current %}
   <article>
-    <header><a href="/member/{{ member.id }}"><b>{{ member.full_name }}</b> | {{ member.party }}</a></header>
+    <header><b>{{ member.full_name }}</b> | {{ member.party }}</header>
     {% set atts = attendances | attendance(member) %}
     {% set attended = atts | where('attend', true) | length %}
     {% set total = atts | length %}
