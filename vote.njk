@@ -2,33 +2,33 @@
 pagination:
   data: votings
   size: 1
-  alias: vote
-permalink: "vote/{{ vote.id }}/index.html"
+  alias: voting
+permalink: "voting/{{ voting.id }}/index.html"
 ---
 {% import "components.njk" as c %}
 {% extends "parent.njk" %}
 {% block main %}
-{% set procedure = procedures | find('reference', vote.procedure_ref) %}
-{% set doc = docs | find('ref', vote.doc) %}
-<a href="/procedure/{{ vote.procedure_ref }}">◀️ Retourner à la procédure</a>
-<h2>{{ procedure.title }} ({% if vote.type == 'AMENDMENT' %}Amendement n°{{ vote.amendment }}{% elif vote.type == 'ADOPTION' %}Adoption du texte{% else %}Rejet du texte{% endif %})</h2>
-{% if vote.split %}
+{% set procedure = procedures | find('reference', voting.procedure_ref) %}
+{% set doc = docs | find('ref', voting.doc) %}
+<a href="/procedure/{{ voting.procedure_ref }}">◀️ Retourner à la procédure</a>
+<h2>{{ procedure.title }} ({% if voting.type == 'AMENDMENT' %}Amendement n°{{ voting.amendment }}{% elif voting.type == 'ADOPTION' %}Adoption du texte{% else %}Rejet du texte{% endif %})</h2>
+{% if voting.split %}
   <p>⚠️ Il s'agit d'un vote par division, cela signifie que seule une partie de l'amendement ci-dessous a été voté. Pour en savoir plus, veuillez consulter la source des votes en bas de page</p>
 {% endif %}
-<h3>{{ vote.title }}</h3>
-{% if vote.amendment %}
+<h3>{{ voting.title }}</h3>
+{% if voting.amendment %}
   <h4>📝 Amendement</h4>
   {% if doc %}
-    {% set amendment = doc | map('amendments') | find('nr', vote.amendment) %}
+    {% set amendment = doc | map('amendments') | find('nr', voting.amendment) %}
     {{ c.amendment(amendment) }}
   {% else %}
     🔜 Aperçu bientôt disponible
   {% endif %}
 {% endif %}
-{% if vote.votes %}
+{% if voting.votes %}
 <h4>🇪🇺 Votes de tous les députés européens</h5>
 <section>
-  <p>{{ c.simplebar(vote.votes) }}</p>
+  <p>{{ c.simplebar(voting.votes) }}</p>
   <details>
   <summary>📊 Voir la légende</summary>
   <ul>
@@ -40,9 +40,9 @@ permalink: "vote/{{ vote.id }}/index.html"
   </details>
 </section>
 {% endif %}
-{% set active_members = members | current(vote.date) %}
+{% set active_members = members | current(voting.date) %}
 <h4>🇫🇷 Votes des députés français</h4>
-<section>{{ c.fullbar(vote.positions, active_members) }}</section>
+<section>{{ c.fullbar(voting.positions, active_members) }}</section>
 <details>
   <summary>📊 Voir la légende</summary>
   <ul>
@@ -57,7 +57,7 @@ permalink: "vote/{{ vote.id }}/index.html"
 {% for party, members in parties %}
   <h5>{{ party }} ({{ members | length }} députés)</h5>
   {% set member_ids = members | map('id') %}
-  {% set p_positions = vote.positions | where_in('member_id', member_ids) %}
+  {% set p_positions = voting.positions | where_in('member_id', member_ids) %}
   <section>{{ c.fullbar(p_positions, members) }}</section>
   <details>
     <summary>🗳 Voir le détail des votes</summary>
@@ -73,6 +73,7 @@ permalink: "vote/{{ vote.id }}/index.html"
 <ul>
   <li><a href="{{ procedure.url | replace('.json', '.do') }}">ℹ️ Procédure</a></li>
   <li><a href="{{ doc.url }}">📜 Texte et amendements</a></li>
-  <li><a href="{{ vote.url | replace('.xml', '.html') }}">🗳 Détails des votes </a></li>
+  {% set vote = votes | find('doc', voting.doc) %}
+  <li><a href="{{ vote.url }}">🗳 Détails des votes</a></li>
 </ul>
 {% endblock %}

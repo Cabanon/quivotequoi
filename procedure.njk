@@ -16,34 +16,33 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
 {% set primary_votes = procedure_votes | where_in('type', ['ADOPTION', 'REJECTION']) %}
 <h3>🎯 Votes principaux</h3>
 {% for primary in primary_votes | reverse %}
-    <h4>{% if primary.type == 'ADOPTION' %}👍 Adoption du texte{% else %}👎 Rejet du texte{% endif %} | {{ c.adopted(primary.result) }}</h4>
-    <section>
+    <article>
+    <header>{% if primary.type == 'ADOPTION' %}👍 Adoption du texte{% else %}👎 Rejet du texte{% endif %} | {{ c.adopted(primary.result) }}</header>
     {% if primary.votes %}
-        <h5>🇪🇺 Votes de tous les députés européens</h5>
-        <p>{{ c.simplebar(primary.votes) }}</p>
+        <h6>🇪🇺 Votes de tous les députés européens</h6>
+        <section>{{ c.simplebar(primary.votes) }}</section>
         <details>
-        <summary>📊 Voir la légende</summary>
-        <ul>
-            <li>🟢 Pour</li>
-            <li>🔴 Contre</li>
-            <li>🟡 Abstention</li>
-            {# <li>⚪ Absence</li> #}
-        </ul>
+            <summary>📊 Voir la légende</summary>
+            <ul>
+                <li>🟢 Pour</li>
+                <li>🔴 Contre</li>
+                <li>🟡 Abstention</li>
+                {# <li>⚪ Absence</li> #}
+            </ul>
         </details>
-        <h5>🇫🇷 Votes des députés français</h5>
+        <hr>
+        <h6>🇫🇷 Votes des députés français</h6>
         {% set finals = votings | where('procedure_ref', procedure.reference ) | where('type', primary.type) %}
         {% if finals.length == 1 %}
-            <section>
-                {{ c.fullbar(finals[0].positions) }}
-                <a href="/vote/{{ finals[0].id }}">🗳 Voir le détail du vote</a>
-            </section>
+            <section>{{ c.fullbar(finals[0].positions) }}</section>
+            <a href="/vote/{{ finals[0].id }}">🗳 Voir le détail du vote</a>
         {% else %}
             🔎 Vote introuvable
         {% endif %}
     {% else %}
-        <h5>🖐 Vote à main levée</h5>
+        🖐 Vote à main levée
     {% endif %}
-    </section>
+    </article>
 {% endfor %}
 <h3>🏷 Sujets</h3>
 <ul>
@@ -57,16 +56,19 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
         {% endif %}
     {% endfor %}
 </ul>
+{% set amd_votes = procedure_votes | where ('type', 'AMENDMENT') | intsort('amendment') %}
 <h3>📓 Amendements</h3>
-{% for vote in procedure_votes | where ('type', 'AMENDMENT') | intsort('amendment') %}
+{% for vote in amd_votes %}
     {% set amendment = docs | find('ref', vote.doc) | map('amendments') | find('nr', vote.amendment) %}
     {% if amendment %}
-        <h4>📝 Amendement n°{{ vote.amendment }}{% if vote.split %} | Partie {{ vote.split }}{% endif %} | {{ c.adopted(vote.result) }}</h4>
-        {% if vote.split %}
-            <p>🔜 Aperçu bientôt disponible</p>
-        {% else %}
-            {{ c.amendment(amendment) }}
-        {% endif %}
+    <article>
+    <header>📝 Amendement n°{{ vote.amendment }}{% if vote.split %} | Partie {{ vote.split }}{% endif %} | {{ c.adopted(vote.result) }}</header>
+    {% if vote.split %}
+        <p>🔜 Vote par division : aperçu bientôt disponible</p>
+    {% else %}
+        {{ c.amendment(amendment) }}
+    {% endif %}
+    <footer>
         {% if vote.votes %}
             {{ c.simplebar(vote.votes, true) }}
             {% if vote.rcv %}
@@ -78,12 +80,16 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
                 {% endif %}
                 <a href="/vote/{{ voting.id }}">📣 Vote nominal : voir le détail</a>
             {% else %}
-                <p>🤖 Vote électronique</p>
+                🤖 Vote électronique
             {% endif %}
         {% else %}
-            <p>🖐 Vote à main levée</p>
+            🖐 Vote à main levée
         {% endif %}
+    </footer>
+    </article>
     {% endif %}
+{% else %}
+    Aucun amendement
 {% endfor %}
 <h3>Sources</h3>
 <ul>

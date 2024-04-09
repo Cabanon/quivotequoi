@@ -224,7 +224,7 @@ def fetch_doc(doc):
     return dict(ref=doc, procedure=procedure, amendments=json.dumps(amendments), url=url)
 
 
-def process_table(table):
+def process_table(table, header=True):
     rows = []
     rowspans = {}
     col_nb = int(table.find('COLGROUP').get('COLNB'))
@@ -253,15 +253,17 @@ def process_table(table):
         rows.append(row)
     if len(rows) == 0:
         return []
-    header = rows[0]
-    return [{col_name.replace('\t', ''): row[i] for i, col_name in enumerate(header) if col_name} for row in rows[1:]]
+    if header:
+        header = rows[0]
+        return [{col_name.replace('\t', ''): row[i] for i, col_name in enumerate(header) if col_name} for row in rows[1:]]
+    return rows
 
 
 def parse_amendment(subject, amd):
     subject = subject.lower()
-    if 'rejet' in subject:
+    if any(word in subject for word in ('rejet', 'reject')):
         return 'REJECTION', None
-    elif any(word in subject for word in ('résolution', 'décision', 'vote unique', 'vote final', 'proposition', 'motion', 'resolution')):
+    elif any(word in subject for word in ('résolution', 'décision', 'vote unique', 'vote final', 'proposition', 'motion', 'resolution', 'proposal', 'decision')):
         return 'ADOPTION', None
     elif amd == '§':
         return 'SEPARATE', None
@@ -452,10 +454,7 @@ def main(data: Data):
             response = session.get('https://www.europarl.europa.eu/plenary/fr/ajax/getSessionCalendar.html?family=PV&termId=9').json()
             start_date = dt.strptime(response['startDate'], '%d/%m/%Y').date()
             end_date = dt.strptime(response['endDate'], '%d/%m/%Y').date()
-            IGNORE_URLS = [
-                'https://www.europarl.europa.eu/doceo/document/PV-9-2022-03-09-VOT_FR.html',
-                'https://www.europarl.europa.eu/doceo/document/PV-9-2022-03-10-VOT_FR.html',
-            ]
+            titles = []
 
             with open('_data/votes.csv', 'w') as csvfile:
                 writer = csv.DictWriter(csvfile, fieldnames=['date', 'doc', 'author', 'type', 'rcv', 'amendment', 'split', 'result', 'votes', 'remarks', 'url'])
@@ -464,7 +463,7 @@ def main(data: Data):
                     sess_date = date(*map(int, (sess['year'], sess['month'], sess['day'])))
                     if start_date < sess_date:
                         url = sess['url'].replace('TOC', 'VOT')
-                        if not url or url in IGNORE_URLS:
+                        if not url:
                             continue
                         request = session.get(url.replace('.html', '.xml'))
                         try:
@@ -475,9 +474,14 @@ def main(data: Data):
                         if sess_date < date(2024, 1, 16):
                             for vote in xml[0].find('Vote.Results'):
                                 doc = rows = None
+                                title = vote.find('Vote.Result.Text.Title').text
                                 description = vote.find('Vote.Result.Description.Text')
                                 table = vote.find('Vote.Result.Table.Results/TABLE')
-                                if description and table:
+                                if title in titles:
+                                    continue
+                                else:
+                                    titles.append(title)
+                                if description is not None and table is not None:
                                     doc = extract_doc(''.join(description.itertext()))
                                     rows = process_table(table)
                                 else:
@@ -502,7 +506,7 @@ def main(data: Data):
                                                 date=sess_date,
                                                 author=row.get('Auteur'),
                                                 type=type,
-                                                rcv=rcv and 'AN' in rcv,
+                                                rcv=rcv is not None and 'AN' in rcv,
                                                 split=extract_split(row['AN, etc.']),
                                                 amendment=amendment,
                                                 result=result,
@@ -511,6 +515,28 @@ def main(data: Data):
                                                 url=url,
                                             )
                                         )
+                                table = vote.find('Vote.Result.Table.Requests/TABLE')
+                                if table:
+                                    rows = process_table(table, header=False)
+                                    div = None
+                                    amd = None
+                                    split = None
+                                    for row in rows:
+                                        if div:
+                                            if amd:
+                                                try:
+                                                    split = int(re.search(r'(\d+).*partie', row[0])[1])
+                                                    #print(amd, row[1])
+                                                except:
+                                                    pass
+                                            else:
+                                                try:
+                                                    amd = int(re.search(r'amendement\s+(\d+)', row[0])[1])
+                                                except:
+                                                    pass
+                                        else:
+                                            div = 'division' in row[0].lower()
+                                        
                         else: # New XML format on PE website
                             for vote in xml.find('.//votes').findall('vote'):
                                 doc = extract_doc(vote.find('label').text or '')
@@ -519,8 +545,8 @@ def main(data: Data):
                                         doc = extract_doc(voting.find('title').text) or doc
                                     else:
                                         subject = (voting.find('title').text or '') + (voting.find('label').text or '')
-                                        rcv = voting.find('rcv/value')
-                                        split = extract_split(rcv.text) if (rcv is not None) else None
+                                        rcv = getattr(voting.find('rcv/value'), 'text', None)
+                                        split = extract_split(rcv or '')
                                         result = parse_result(voting.get('result'))
                                         if doc and result not in ['LAPSED', None]:
                                             type, amendment = parse_amendment(subject or '', voting.find('amendmentNumber').text)
@@ -534,7 +560,7 @@ def main(data: Data):
                                                     type=type,
                                                     split=split,
                                                     amendment=amendment,
-                                                    rcv=rcv and 'AN' in rcv,
+                                                    rcv=rcv is not None and 'AN' in rcv,
                                                     result=result,
                                                     votes=json.dumps(list(map(int, votes.split(', ')))) if votes else None,
                                                     url=url,
