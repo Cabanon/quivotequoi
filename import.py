@@ -263,7 +263,7 @@ def parse_amendment(subject, amd):
     subject = subject.lower()
     if any(word in subject for word in ('rejet', 'reject')):
         return 'REJECTION', None
-    elif any(word in subject for word in ('résolution', 'décision', 'vote unique', 'vote final', 'proposition', 'motion', 'resolution', 'proposal', 'decision')):
+    elif any(re.search(fr'\b{word}\b', subject) for word in ('résolution', 'décision', 'vote unique', 'vote final', 'proposition', 'motion', 'resolution', 'proposal', 'decision')):
         return 'ADOPTION', None
     elif amd == '§':
         return 'SEPARATE', None
