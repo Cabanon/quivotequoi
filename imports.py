@@ -103,7 +103,7 @@ def fetch_proc(ref):
             subjects.add('.'.join(parts[:i+1]))
     return dict(
         reference=proc['reference'],
-        date=proc['events'][0]['date'],
+        date=proc['events'][-1]['date'],
         title=proc['titles'][0]['text'].replace('&nbsp;', ' '),
         type=fiche['identifier']['typeProcedure'],
         subjects=json.dumps(list(subjects)),
