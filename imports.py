@@ -374,15 +374,11 @@ def parse_amendment(subject, amd):
         re.search(fr'\b{word}\b', subject) for word in (
             'r(é|e)solution',
             'vote unique',
-            'ensemble du texte', 'text as a whole',
-            "ensemble de l'article", 'whole article',
-            'accord provisoire', 'provisional agreement',
             # 'proposition', 'proposal',
             'recomm(a|e)ndation',
-            'motion',
             # 'projet de décision du conseil', 'draft council decision'
         )
-    ):
+    ):  
         return 'ADOPTION', None
     else:
         return 'PRIMARY', None
