@@ -5,71 +5,86 @@ pagination:
   alias: voting
 permalink: "voting/{{ voting.id }}/index.html"
 ---
-{% import "components.njk" as c %}
+{% import "components.njk" as c with context %}
 {% extends "parent.njk" %}
+
+{% block head %}
+<script defer src="/vote.js"></script>
+{% endblock %}
+
+{% block title %}
+{{ procedure.title }}
+{% endblock %}
+
 {% block main %}
 {% set procedure = procedures | find('reference', voting.procedure_ref) %}
+{% set vote = votes | where('doc', voting.doc) | where('type', voting.type) | find('amendment', voting.amendment) %}
 {% set doc = docs | find('ref', voting.doc) %}
 <a href="/procedure/{{ voting.procedure_ref }}">◀️ Retourner à la procédure</a>
-<h2>{{ procedure.title }} ({% if voting.type == 'AMENDMENT' %}Amendement n°{{ voting.amendment }}{% elif voting.type == 'ADOPTION' %}Adoption du texte{% else %}Rejet du texte{% endif %})</h2>
+<hgroup>
+  <h2>{{ procedure.title }}</h2>
+  <subtitle>{% if voting.type == 'AMENDMENT' %}Amendement n°{{ voting.amendment }}{% elif voting.type == 'ADOPTION' %}Adoption du texte{% else %}Rejet du texte{% endif %}</subtitle>
+</hgroup>
 {% if voting.split %}
   <p>⚠️ Il s'agit d'un vote par division, cela signifie que seule une partie de l'amendement ci-dessous a été voté. Pour en savoir plus, veuillez consulter la source des votes en bas de page</p>
 {% endif %}
-<h3>{{ voting.title }}</h3>
 {% if voting.amendment %}
-  <h4>📝 Amendement</h4>
-  {% if doc %}
-    {% set amendment = doc | map('amendments') | find('nr', voting.amendment) %}
+  <h3>📝 Amendement</h3>
+  {% set amendment = amendments | where('doc', doc.ref) | find('nr', voting.amendment) %}
+  {% if amendment %}
     {{ c.amendment(amendment) }}
   {% else %}
-    🔜 Aperçu bientôt disponible
+    🚫 Aperçu non disponible
   {% endif %}
 {% endif %}
-{% if voting.votes %}
-<h4>🇪🇺 Votes de tous les députés européens</h5>
-<section>
-  <p>{{ c.simplebar(voting.votes) }}</p>
-  <details>
-  <summary>📊 Voir la légende</summary>
-  <ul>
-      <li>🟢 Pour</li>
-      <li>🔴 Contre</li>
-      <li>🟡 Abstention</li>
-      {# <li>⚪ Absence</li> #}
-  </ul>
-  </details>
-</section>
+{% if vote.votes %}
+<h3>🎯 Résultats des votes</h3>
+<h4>🇪🇺 Députés européens</h4>
+<section>{{ c.simplebar(vote.votes) }}</section>
 {% endif %}
 {% set active_members = members | current(voting.date) %}
-<h4>🇫🇷 Votes des députés français</h4>
+<h4>🇫🇷 Députés français</h4>
 <section>{{ c.fullbar(voting.positions, active_members) }}</section>
-<details>
-  <summary>📊 Voir la légende</summary>
-  <ul>
-    <li>🟢 Pour</li>
-    <li>🔴 Contre</li>
-    <li>🟡 Abstention</li>
-    <li>⚪ Absence</li>
-  </ul>
-</details>
-<h4>👪 Résultat par parti</h4>
-{% set parties = active_members | groupby('party') %}
-{% for party, members in parties %}
-  <h5>{{ party }} ({{ members | length }} députés)</h5>
-  {% set member_ids = members | map('id') %}
-  {% set p_positions = voting.positions | where_in('member_id', member_ids) %}
-  <section>{{ c.fullbar(p_positions, members) }}</section>
-  <details>
-    <summary>🗳 Voir le détail des votes</summary>
-    <p>
-      {% for member in members %}
-          {% set position = p_positions | find('member_id', member.id) %}
-          <span class="{{ position.position or 'novote' }}">{{ member.full_name }}</span>
-      {% endfor %}
-    </p>
-  </details>
-{% endfor %}
-<h4>Sources</h4>
+<h3>📊 Détails des votes</h3>
+<section class="tabs">
+  {{ c.tabs(['👥 Par parti', '👤 Par député']) }}
+  
+  <section id="groups">
+    {% for groupid, g_members in active_members | groupby('group') %}
+      {% set member_ids = g_members | map('id') %}
+      {% set g_positions = voting.positions | where_in('member_id', member_ids) %}
+      <div class="grid">
+        <div>
+          {% set group = groups | find('code', groupid) %}
+          <div><b>🇪🇺 {{ group.name }}</b></div>
+          <div>🇫🇷 {{ g_members | map('party') | uniq | join(', ') }}</div>
+        </div>
+        <div>
+          {{ c.fullbar(g_positions) }}
+          <div><small>{{ g_positions | length }} députés parmi {{ g_members | length }} ont votés.</small></div>
+        </div>
+      </div>
+      {% if not loop.last %}<hr>{% endif %}
+    {% endfor %}
+  </section>
+
+  <section id="members">
+    <input id="search" oninput="filter()" type="search" placeholder="Cherchez un membre"/>
+    {% for member in active_members | sort(false, false, 'last_name') %}
+      {% set position = voting.positions | find('member_id', member.id) %}
+      <div>
+        {{ c.chip(position.position) }}
+        <a href="/member/{{ member.id }}"><span class="nowrap"><b>{{ member.full_name }}</b></span></a>
+        {% set group = groups | find('code', member.group) %}
+        <span class="nowrap">🇪🇺 {{ group.name }}</span>
+        <span class="nowrap">🇫🇷 {{ member.party }}</span>
+        {% if not loop.last %}<hr>{% endif %}
+      </div>
+    {% endfor %}
+  </section>
+</section>
+
+<h3>📚 Sources</h3>
 <ul>
   <li><a href="{{ procedure.url | replace('.json', '.do') }}">ℹ️ Procédure</a></li>
   <li><a href="{{ doc.url }}">📜 Texte et amendements</a></li>

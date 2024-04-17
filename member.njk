@@ -5,9 +5,71 @@ pagination:
     alias: member
 permalink: "member/{{ member.id }}/index.html"
 ---
-{% import "components.njk" as c %}
+{% import "components.njk" as c with context %}
 {% extends "parent.njk" %}
+
+{% block title %}
+{{ member.full_name }}
+{% endblock %}
+
 {% block main %}
-<h2>{{ member.full_name }}</h2>
-{% set member_votes = votings | where('doc', doc_refs) %}
+{% set current = member | current %}
+<a href="/members">◀️ Retourner à la liste des députés</a>
+<hgroup>
+    <h2>{{ member.full_name }}</h2>
+    <subtitle>
+        <span class="nowrap">🇪🇺 {{ groups | find('code', current.group) | map('name') }}</span>
+        <span class="nowrap">🇫🇷 {{ current.party }}</span>
+    </subtitle>
+</hgroup>
+<h3>🗃️ Données</h3>
+<section class="tabs">
+    {{ c.tabs(['📓 Amendements', '🧩 Explications', '🗣️ Interventions']) }}
+    
+    <section>
+    {% set member_amds = amendments | where_includes('authors', member.id) | sort(true, true, 'date') %}
+    {% for amendment in member_amds %}
+        {% set doc = docs | find('ref', amendment.doc) %}
+        {% set proc = procedures | find('reference', doc.procedure) %}
+        {% set vote = votes | where('doc', doc.ref) | find('amendment', amendment.nr) %}
+        <article>
+            <header>
+               <div><a href="/procedure/{{ proc.reference }}">{{ proc.title }}</a></div>
+               <div>Amendement n°{{ amendment.nr }} | {{ c.adopted(vote.result) }}</div>
+            </header>
+            {{ c.amendment(amendment) }}
+            <footer>{{ c.vote(vote) }}</footer>
+        </article>
+    {% endfor %}
+    <span class="empty">🚫 Aucun amendement</span>
+    </section>
+
+    <section>
+    {% set member_exps = explanations | where('member_id', member.id) | sort(true, true, 'date') %}
+    {% for exp in member_exps %}
+        {% set doc = docs | find('ref', exp.doc) %}
+        {% set proc = procedures | find('reference', doc.procedure) %}
+        <article>
+            <header><a href="/procedure/{{ proc.reference }}">{{ proc.title }}</a></header>
+            {{ exp.content }}
+        </article>
+    {% endfor %}
+    <span class="empty">🚫 Aucune explication de vote</span>
+    </section>
+
+
+    <section>
+    {% set member_speeches = speeches | where('member_id', member.id) | sort(true, true, 'date') %}
+    {% for speech in member_speeches %}
+        {% set proc = procedures | find('reference', speech.procedure) %}
+        <article>
+            <header>{% if proc %}<a href="/procedure/{{ proc.reference }}">{{ proc.title }}</a>{% else %}{{ speech.title }}{% endif %}</header>
+            {% for p in speech.content %}
+                <p>{{ p }}</p>
+            {% endfor %}
+        </article>
+    {% endfor %}
+    <span class="empty">🚫 Aucune intervention en plénière</span>
+    </section>
+</section>
 {% endblock %}

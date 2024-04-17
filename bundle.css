@@ -1,20 +1,67 @@
-ins {
-  text-decoration: underline;
+ins { text-decoration: underline }
+
+body { overflow-x: hidden }
+
+.article.footer { overflow: auto }
+
+.stats { text-align: center }
+.nowrap { white-space: nowrap }
+.hidden { display: none }
+
+.empty {
+  display: block;
+  text-align: center;
+  height: 50vh;
+  line-height: 50vh;
+}
+article:not([style="display: none;"]):last-of-type + .empty {
+  display: none;
+}
+
+.grid input, .grid select, article p:last-child { margin-bottom: unset !important }
+
+body > header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+nav {
+  padding: var(--pico-spacing);
+  margin: calc(-1 * var(--pico-spacing));
+  background-color: var(--pico-background-color);
+}
+
+.tabs > input {
+  opacity: 0;
+  position: absolute
+}
+.tabs > section { display: none }
+.tabs > input:nth-of-type(1):checked ~ section:nth-of-type(1),
+.tabs > input:nth-of-type(2):checked ~ section:nth-of-type(2),
+.tabs > input:nth-of-type(3):checked ~ section:nth-of-type(3) {
+  display: block;
+}
+.tabs > input:checked + label {
+  color: var(--primary);
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .votes {
-  height: 3rem;
   display: flex;
+  height: 3rem;
   overflow: hidden;
-  background-color: lightslategrey;
+  background-color: grey;
   border-radius: 1.5rem;
 }
-
-.votes.small {
+.votes.inline {
+  display: inline-flex;
+}
+.votes.inline, .votes.small {
   height: 1.5rem;
   border-radius: .75rem;
 }
-
+footer > .votes { float: right }
 .votes div {
   display: flex;
   align-items: center;
@@ -25,23 +72,25 @@ ins {
   color: white;
 }
 
-.\+ {
+.chip {
+  border-radius: 1rem;
+  padding: 0 .5rem;
+  float: right;
+}
+
+.for {
   background-color: green;
-  color: white;
 }
-
-.\- {
+.against {
   background-color: red;
-  color: white;
 }
-
-.\30 {
+.abstention {
   background-color: orange;
-  color: white;
 }
-
 .novote {
-  height: 100%;
-  background-color: lightgrey;;
-  color: white
+  background-color: grey;;
+}
+.for, .against, .abstention, .novote {
+  color: white;
+  font-weight: bolder;
 }

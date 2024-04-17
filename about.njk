@@ -1,0 +1,21 @@
+{% extends "parent.njk" %}
+
+{% block main %}
+<h1>À propos</h1>
+<p>QuiVoteQuoi.eu est une initiative visant à démocratiser et faciliter l'accès aux données des votes des députés français au Parlement Européen. Ce site s'adresse autant au citoyen curieux qu'au militant engagé, en passant par le journaliste passionné.</p>
+<p>Initialement créé dans le cadre d'un groupe de veille parlementaire au sein de Place Publique, ce site a finalement évolué en un outil complet d'accès aux données de votes des députés français au sein du Parlement Européen</p>
+<h2>Statistiques</h2>
+<div class="grid stats">
+    <div><h3>{{ members | length }}</h3><div>députés</div></div>
+    <div><h3>{{ procedures | length }}</h3><div>textes</div></div>
+    <div><h3>{{ votes | length }}</h3><div>votes</div></div>
+</div>
+<h2>Questions fréquentes</h2>
+<details>
+    <summary>D'où viennent les données affichées ?</summary>
+    <section>
+    <p>Toutes les données de ce site sont issues directement du site du Parlement Européen, ou bien par l'intermédiaire d'une autre initiative de mise à disposition des données du Parlement Européen, qui s'appelle Parltrack, que je tiens à remercier pour leur travail qui a grandement aidé la conception de ce site.</p>
+    <p>De plus vous trouverez en bas de page de chaque fiche de vote les liens vers les pages sources. Vous pouvez également accéder librement au code source de ce site sur le lien en pied de page</p>
+    </section>
+</details>
+{% endblock %}

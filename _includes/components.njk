@@ -1,6 +1,6 @@
 {% macro amendment(amendment) %}
 {% set changes = amendment.old | diff(amendment.new) %}
-<section>
+<p>
 {% for change in changes %}
   {% if change[0] == 1 %}
       <ins>{{ change[1] }}</ins>
@@ -10,22 +10,50 @@
       {{ change[1] }}
   {% endif %}
 {% endfor %} 
-</section>
+</p>
 {% endmacro %}
 
-{% macro fullbar(positions, members) %}
+{% macro procedure(procedure) %}
+{% set doc_refs = docs | where('procedure', procedure.reference ) | map('ref') %}
+{% set final_vote = votes | where_in('doc', doc_refs) | where_in('type', ['ADOPTION', 'REJECTION']) | last %}
+{% if final_vote %}
+  {% set themes = subjects | where_in('code', procedure.subjects) | map('theme') | uniq %}
+  {% set flags = countries | where_in('code', procedure.countries) %}
+  <article>
+    <header>
+    {% for theme in themes %}{{theme}} {% endfor %}{% for flag in flags %}{{ flag.flag }} {{ flag.name }} {% endfor %}
+    </header>
+    <a href="/procedure/{{ procedure.reference }}">{{ procedure.title }}</a>
+    <footer>
+      {% if procedure.status == 'Procédure terminée' %}
+        {% if final_vote.type == 'ADOPTION' %}
+          {% if final_vote.result == 'ADOPTED' %}✅️ Texte adopté{% else %}❌️ Texte rejeté {% endif %}
+          {% if final_vote.votes %}{{ inlinebar(final_vote.votes) }}{% endif %}
+        {% else %}
+          {% if final_vote.result == 'ADOPTED' %}❌️ Texte rejeté{% else %}✅️ Texte adopté{% endif %}
+          {% if final_vote.votes %}{{ inlinebar(final_vote.votes, invert=true) }}{% endif %}
+        {% endif %}
+      {% else %}
+        {{ procedure.status }}
+      {% endif %}
+    </footer>
+  </article>
+{% endif %}
+{% endmacro %}
+
+{% macro fullbar(positions, members, small=false) %}
 {% set for_positions = positions | where('position', '+') %}
 {% set ag_positions = positions | where('position', '-') %}
 {% set ab_positions = positions | where('position', '0') %}
-<div class="votes">
+<div class="votes{% if small %} small{% endif %}">
   {% if for_positions.length %}
-    <div class="+" style="width: calc({{ for_positions | length }}/{{ positions | length }} * 100%)">{{ for_positions | length }}</div>
+    <div class="for" style="width: calc({{ for_positions | length }}/{{ positions | length }} * 100%)">{{ for_positions | length }}</div>
   {% endif %}
   {% if ag_positions.length %}
-    <div class="-" style="width: calc({{ ag_positions | length }}/{{ positions | length }} * 100%)">{{ ag_positions | length }}</div>
+    <div class="against" style="width: calc({{ ag_positions | length }}/{{ positions | length }} * 100%)">{{ ag_positions | length }}</div>
   {% endif %}
   {% if ab_positions.length %}
-    <div class="0" style="width: calc({{ ab_positions | length }}/{{ positions | length }} * 100%)">{{ ab_positions | length }}</div>
+    <div class="abstention" style="width: calc({{ ab_positions | length }}/{{ positions | length }} * 100%)">{{ ab_positions | length }}</div>
   {% endif %}
 </div>
 {% if members %}
@@ -35,17 +63,25 @@
 
 {% macro simplebar(votes, small=false) %}
 {% set total = votes | sum %}
-<div class="votes {% if small %}small{% endif %}">
+<div class="votes{% if small %} small{% endif %}">
   {% if votes[0] %}
-    <div class="+" style="width: calc({{ votes[0] }}/{{ total }} * 100%)">{{ votes[0] }}</div>
+    <div class="for" style="width: calc({{ votes[0] }}/{{ total }} * 100%)">{{ votes[0] }}</div>
   {% endif %}
   {% if votes[1] %}
-    <div class="-" style="width: calc({{ votes[1] }}/{{ total }} * 100%)">{{ votes[1] }}</div>
+    <div class="against" style="width: calc({{ votes[1] }}/{{ total }} * 100%)">{{ votes[1] }}</div>
   {% endif %}
   {% if votes[2] %}
-    <div class="0" style="width: calc({{ votes[2] }}/{{ total }} * 100%)">{{ votes[2] }}</div>
+    <div class="abstention" style="width: calc({{ votes[2] }}/{{ total }} * 100%)">{{ votes[2] }}</div>
   {% endif %}
 </div>
+{% endmacro %}
+
+{% macro inlinebar(votes, invert=false) %}
+<span class="votes inline">
+  <div class="for">{{ votes[1] if invert else votes[0] }}</div>
+  <div class="against">{{ votes[0] if invert else votes[1] }}</div>
+  <div class="abstention">{{ votes[2] }}</div>
+</span>
 {% endmacro %}
 
 {% macro adopted(string) %}
@@ -53,16 +89,86 @@
 ✅️ Adopté
 {% elif string == 'REJECTED' %}
 ❌️ Rejeté
+{% elif string == 'LAPSED' %}
+🚫 Annulé
 {% else %}
-Erreur
+🔍 Résultat introuvable
 {% endif %}
 {% endmacro %}
 
-{% macro result(procedure) %}
-<article>
-    {% set themes = committees | where_in('code', procedure.committees) | map('theme') | uniq | log %}
-    <header>{% for theme in themes %}{{ theme }}{% endfor %}</header>
-    <a href="/procedure/{{ procedure.reference }}">{{ procedure.title }}</a>
-    <footer><small>{{ procedure.date | date }} | {{ procedure.status }}</small></footer>
-</article>
+{% macro stats(member) %}
+  {% set atts = attendances | attendance(member) %}
+  {% set attended = atts | where('attend') | length %}
+  {% set total = atts | length %}
+  {% set activity = activities | find('member_id', member.id) %}
+  <div class="grid stats">
+    <div><h3>{{ attended | ratio(total) }}</h3>Taux de présence</div>
+    <div><h3>{{ activity.speeches }}</h3>Interventions en plénière</div>
+    <div><h3>{{ activity.reports }}</h3>Rapports</div>
+    <div><h3>{{ activity.imotions }}</h3>Résolutions individuelles</div>
+  </div>
 {% endmacro %}
+
+{% macro chip(pos) %}
+{% if pos == '+' %}
+<div class="chip for">POUR</div>
+{% elif pos == '-' %}
+<div class="chip against">CONTRE</div>
+{% elif pos == '0' %}
+<div class="chip abstention">ABSTENTION</div>
+{% else %}
+<div class="chip novote">PAS DE VOTE</div>
+{% endif %}
+{% endmacro %}
+
+{% macro tabs(names) %}
+{% for name in names %}
+{% set id = 'tab-' + loop.index %}
+<input name="tabs" type="radio" id="{{ id }}" {% if loop.first %}checked{% endif %}>
+<label for="{{ id }}">{{ name }}</label>
+{% endfor %}
+<hr>
+{% endmacro %}
+
+{% macro vote(vote) %}
+{% if vote.votes %}
+  {{ inlinebar(vote.votes) }}
+  {% if vote.rcv %}
+    {% set voting = votings | where('doc', vote.doc) | where('amendment', vote.amendment) | find('split', vote.split) %}
+    <a href="/voting/{{ voting.id }}">📣 Vote nominal : voir le détail</a>
+  {% else %}
+    🤖 Vote électronique
+  {% endif %}
+{% else %}
+  🖐 Vote à main levée
+{% endif %}
+{% endmacro %}
+
+{% macro authors(vote, amendment) %}
+{% set author = vote.author %}
+{% if author[0] == 'DEPUTEES' %}
+  des députés
+  {% if amendment %}
+    dont 
+    {% for member in members | where_in('id', amendment.authors) | current(vote.date) %}
+      {{ member.full_name }} ({{ member.partyid }}){% if loop.revindex > 2 %}, {% elif loop.revindex == 2 %} et {% endif %}
+    {% else %}
+      aucun français
+    {% endfor %}
+  {% endif %}
+{% elif author[0] == 'COMMISSION' %}
+  la commission {{ author[1] | default('compétente') }}
+{% elif author[0] == 'GROUP' %}
+  {% for group in author[1] %}
+    {% set parties = members | current(vote.date) | where('group', group) | map('party') | uniq %}
+    {{ group }}
+    {% if parties.length %}(🇫🇷 : {{ parties | join(', ') }}){% endif %}
+    {% if loop.revindex > 2 %}, {% elif loop.revindex == 2 %} et {% endif %}
+  {% endfor %}
+{% endif %}
+{% endmacro %} 
+
+{% macro parties(groupid) %}
+  {% set group = groups | find('code', groupid) %}
+  {{ groupid }} {% if group %}({{ group.parties | join(', ') }}){% endif %}
+{% endmacro %} 

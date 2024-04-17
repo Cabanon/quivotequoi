@@ -1,4 +1,4 @@
-{% import "components.njk" as c %}
+{% import "components.njk" as c with context %}
 {% extends "parent.njk" %}
 
 {% block head %}
@@ -6,37 +6,24 @@
 {% endblock %}
 
 {% block main %}
-<input id="search" oninput="filter()" type="search" placeholder="Cherchez une procédure"/>
-<select id="theme" onchange="filter()" aria-label="Filtrer par sujet">
-  <option selected value="">🚫 Pas de thème sélectionné</option>
-  {% for theme in subjects | where('theme') | map('theme') | uniq %}
-    <option>{{ theme }}</option>
-  {% endfor %}
-</select>
-<select id="area" onchange="filter()" aria-label="Filtrer par zone géographique">
-  <option selected value="">⛔ Pas de zone géographique sélectionnée</option>
-  {% for country in countries %}
-    <option>{{ country.flag }} {{ country.name }}</option>
-  {% endfor %}
-</select>
+<fieldset class="grid">
+  <input id="search" oninput="filter()" type="search" placeholder="Cherchez une procédure"/>
+  <select id="theme" onchange="filter()" aria-label="Filtrer par sujet">
+    <option selected value="">🚫 Pas de thème sélectionné</option>
+    {% for theme in subjects | where('theme') | map('theme') | uniq %}
+      <option>{{ theme }}</option>
+    {% endfor %}
+  </select>
+  <select id="area" onchange="filter()" aria-label="Filtrer par zone géographique">
+    <option selected value="">⛔ Pas de zone géographique sélectionnée</option>
+    {% for country in countries | sort() %}
+      <option>{{ country.flag }} {{ country.name }}</option>
+    {% endfor %}
+  </select>
+</fieldset>
 <div id="list">
-  {% set sorted = procedures | sort(true, true, 'date') %}
-  {% for procedure in sorted %}
-    {% set doc_refs = docs | where('procedure', procedure.reference ) | map('ref') %}
-    {% set proc_votes = votes | where_in('doc', doc_refs) | where_in('type', ['AMENDMENT', 'ADOPTION', 'REJECTION']) %}
-    {% if proc_votes | map('votes') | where('length') | length %}
-      <article>
-        <header>
-        {% set themes = subjects | where_in('code', procedure.subjects) | map('theme') | uniq %}
-        {% set flags = countries | where_in('code', procedure.countries) %}
-        {% for theme in themes %}{{theme}} {% endfor %}
-        {% if flags.length %} | {% for flag in flags %}{{ flag.flag }} {{ flag.name }} {% endfor %}{% endif %}
-        </header>
-        <a href="/procedure/{{ procedure.reference }}">{{ procedure.title }}</a>
-        {% set last_vote = proc_votes | sort(true, true, 'date') | first %}
-        <footer><small>Dernier vote: {{ last_vote.date | date }} | {{ procedure.status }}</small></footer>
-      </article>
-    {% endif %}
+  {% for procedure in procedures | where_in('type', ['COD', 'RSP', 'INI']) | sort(true, true, 'date') %}
+    {{ c.procedure(procedure) }}
   {% endfor %}
 </div>
 {% endblock %}

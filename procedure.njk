@@ -5,37 +5,36 @@ pagination:
     alias: procedure
 permalink: "procedure/{{ procedure.reference }}/index.html"
 ---
-{% import "components.njk" as c %}
+{% import "components.njk" as c with context %}
 {% extends "parent.njk" %}
+{% block title %}{{ procedure.title }}{% endblock %}
+
+{% block head %}
+<script defer src="/procedure.js"></script>
+{% endblock %}
+
 {% block main %}
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>{{ procedure.title }}</h2>
-{% set docs = docs | where('procedure', procedure.reference) %}
-{% set doc_refs = docs | map('ref') %}
-{% set procedure_votes = votes | where_in('doc', doc_refs) %}
+{% set doc = docs | find('procedure', procedure.reference) %}
+{% set procedure_votes = votes | where('doc', doc.ref) %}
 {% set primary_votes = procedure_votes | where_in('type', ['ADOPTION', 'REJECTION']) %}
 <h3>🎯 Votes principaux</h3>
-{% for primary in primary_votes | reverse %}
+{% for primary in primary_votes %}
     <article>
     <header>{% if primary.type == 'ADOPTION' %}👍 Adoption du texte{% else %}👎 Rejet du texte{% endif %} | {{ c.adopted(primary.result) }}</header>
-    {% if primary.votes %}
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
-        <section>{{ c.simplebar(primary.votes) }}</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                {# <li>⚪ Absence</li> #}
-            </ul>
-        </details>
+    {% if primary.author %}
+        <i>Demandé par {{ c.authors(primary.author) }}</i>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+    {% endif %}
+    {% if primary.votes %}
+        <b>🇪🇺 Votes de tous les députés européens</b>
+        <section>{{ c.simplebar(primary.votes) }}</section>
+        <hr>
+        <b>🇫🇷 Votes des députés français</b>
         {% set finals = votings | where('procedure_ref', procedure.reference ) | where('type', primary.type) %}
         {% if finals.length == 1 %}
             <section>{{ c.fullbar(finals[0].positions) }}</section>
-            <a href="/voting/{{ finals[0].id }}">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/{{ finals[0].id }}">🗳 Voir le détail du vote</a>
         {% else %}
             🔎 Vote introuvable
         {% endif %}
@@ -44,6 +43,7 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
     {% endif %}
     </article>
 {% endfor %}
+
 <h3>🏷 Sujets</h3>
 <ul>
     {{ procedure.subject }}
@@ -56,49 +56,85 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
         {% endif %}
     {% endfor %}
 </ul>
-{% set amd_votes = procedure_votes | where ('type', 'AMENDMENT') | intsort('amendment') %}
-<h3>📓 Amendements</h3>
-{% for vote in amd_votes %}
-    {% set amendment = docs | find('ref', vote.doc) | map('amendments') | find('nr', vote.amendment) %}
-    {% if amendment %}
-    <article>
-    <header>📝 Amendement n°{{ vote.amendment }}{% if vote.split %} | Partie {{ vote.split }}{% endif %} | {{ c.adopted(vote.result) }}</header>
-    {% if vote.split %}
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    {% else %}
-        {{ c.amendment(amendment) }}
-    {% endif %}
-    <footer>
-        {% if vote.votes %}
-            {{ c.simplebar(vote.votes, true) }}
-            {% if vote.rcv %}
-                {% set vote_votings = votings | where('doc', vote.doc ) | where('amendment', vote.amendment) %}
-                {% if vote.split %}
-                    {% set voting = vote_votings | where('split', vote.split) | first %}
-                {% else %}
-                    {% set voting = vote_votings | first %}
-                {% endif %}
-                <a href="/voting/{{ voting.id }}">📣 Vote nominal : voir le détail</a>
-            {% else %}
-                🤖 Vote électronique
-            {% endif %}
-        {% else %}
-            🖐 Vote à main levée
-        {% endif %}
-    </footer>
-    </article>
-    {% endif %}
-{% else %}
-    Aucun amendement
-{% endfor %}
-<h3>Sources</h3>
+
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="{{ procedure.url | replace('.json', '.do') }}" target="_blank">ℹ️ Procédure</a></li>
-  {% for doc in docs %}
+    <li><a href="{{ procedure.url | replace('.json', '.do') }}" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="{{ doc.url }}" target="_blank">📜 Texte et amendements</a></li>
-  {% endfor %}
-  {% for url in procedure_votes | map('url') | uniq %}
-    <li><a href="{{ url | replace('.xml', '.html') }}" target="_blank">🗳 Détails des votes </a></li>
-  {% endfor %}
+    {% for url in procedure_votes | map('url') | uniq %}
+        <li><a href="{{ url | replace('.xml', '.html') }}" target="_blank">🗳 Détails des votes </a></li>
+    {% endfor %}
 </ul>
+
+<h3>🗃️ Données</h3>
+{% set active_members = members | current(procedure.date)%}
+<section class="tabs">
+    {{ c.tabs(['📓 Amendements', '🧩 Explications', '🗣️ Interventions']) }}
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                {% for group in groups %}
+                    {% set g_members = active_members | where('group', group.code) %}
+                    <optgroup label="{{ group.name }} ({{ group.code }})">
+                        <option value="{{ group.code }},{{ g_members | map('id') | join(',') }}">🇪🇺 Tout le groupe {{ group.name }}</option> 
+                        {% for party, p_members in g_members | groupby('party') %}
+                            <option value="{{ group.code }},{{ p_members | map('id') | join(',') }}">🇫🇷 {{ party }}</option> 
+                        {% endfor %}
+                    </optgroup>
+                {% endfor %}
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    {% set amd_votes = procedure_votes | where ('type', 'AMENDMENT') | intsort('amendment') %}
+    {% for vote in amd_votes %}
+        {% set amendment = amendments | where('doc', doc.ref) | find('nr', vote.amendment) %}
+        {% if amendment %}
+            <article id="{{ vote.amendment }}">
+            <header>📝 Amendement n°{{ vote.amendment }}{% if vote.split %} | Partie {{ vote.split }}{% endif %} | {{ c.adopted(vote.result) }}</header>
+            {% if vote.split %}
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            {% else %}
+                <div class="hidden">{% if vote.author[0] == 'DEPUTEES' %}{{ amendment.authors }}{% elif vote.author[0] == 'GROUP' %}{{ vote.author[1] }}{% endif %}</div>
+                {{ c.amendment(amendment) }}
+                <i>Déposé par {{ c.authors(vote, amendment) }}</i>
+                <footer>{{ c.vote(vote) }}</footer>
+            {% endif %}
+            </article>
+        {% endif %}
+    {% endfor %}
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    {% set proc_exps = explanations | where('doc', doc.ref) %}
+    {% for exp in proc_exps %}
+        <article>
+            <div class="hidden">{{ exp.member_id }}</div>
+            {% set member = active_members | find('id', exp.member_id) %}
+            <header><b>{{ member.full_name }}</b> | {{ member.party }}</header>
+            {{ exp.content }}
+        </article>
+    {% endfor %}
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    {% set proc_speeches = speeches | where ('procedure', procedure.reference) %}
+    {% for speech in proc_speeches %}
+        <article>
+            <div class="hidden">{{ speech.member_id }}</div>
+            {% set member = active_members | find('id', speech.member_id) %}
+            <header><b>{{ member.full_name }}</b> | {{ member.party }}</header>
+            {% for p in speech.content %}
+                <p>{{ p }}</p>
+            {% endfor %}
+        </article>
+    {% endfor %}
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 {% endblock %}

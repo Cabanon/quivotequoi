@@ -2,7 +2,7 @@ const { parse } = require("csv-parse/sync");
 const DiffMatchPatch = require('diff-match-patch');
 
 function regexIndexOf(string, regex, startpos) {
-    var indexOf = string.substring(startpos || 0).search(regex);
+    var indexOf = string.substring(startpos || 0).normalize('NFD').replace(/[\u0300-\u036f]/g, '').search(regex);
     return (indexOf >= 0) ? (indexOf + (startpos || 0)) : indexOf;
 }
 
@@ -32,7 +32,7 @@ DiffMatchPatch.prototype.diff_linesToWords_ = function(text1, text2) {
       // Keeping our own length variable is faster than looking it up.
       var lineArrayLength = lineArray.length;
       while (lineEnd < text.length - 1) {
-        lineEnd = regexIndexOf(text, /\W/, lineStart);
+        lineEnd = regexIndexOf(text, /.\b/, lineStart);
         if (lineEnd == -1) {
           lineEnd = text.length - 1;
         }
@@ -66,27 +66,18 @@ DiffMatchPatch.prototype.diff_linesToWords_ = function(text1, text2) {
 
 const dmp = new DiffMatchPatch();
 
-function party_from_str(s) {
-    switch (s) {
-        case "Agir - La Droite constructive":
-        case "Liste Renaissance":
-        case "La République en marche":
-        case "Liste L'Europe Ensemble":
-            return "Renaissance"
-        case 'Mouvement Radical Social-Libéral':
-            return "Parti Radical"
-        default:
-            return s
-    }
-}
-
 function getCurrent(arr, date) {
     return arr.find((c) => c.start < date && date < c.end)
 }
 
 module.exports = function(eleventyConfig) {
+    // General filters
     eleventyConfig.addFilter("log", (e) => console.log(e))
     eleventyConfig.addFilter("uniq", (e) => [...new Set(e)])
+    eleventyConfig.addFilter("startswith", function(str, value) { return str.startsWith(value) });
+    eleventyConfig.addFilter("where_exp", function(arr, key, cond) {
+        return arr.filter((el) => eval(`const { ${key} } = el; ${cond}`))
+    });
     eleventyConfig.addFilter("date", (dateString) => new Date(dateString).toLocaleDateString('fr-FR', { year: 'numeric', month: 'long', day: 'numeric' }));
     eleventyConfig.addFilter("diff", function(text1, text2) {
         var a = dmp.diff_linesToWords_(text1 || '', text2 || '');
@@ -96,6 +87,7 @@ module.exports = function(eleventyConfig) {
         let diffs = dmp.diff_main(lineText1, lineText2, false);
         dmp.diff_cleanupSemantic(diffs);
         dmp.diff_charsToLines_(diffs, lineArray);
+        dmp.diff_cleanupSemanticLossless(diffs);
         return diffs;
     });
     eleventyConfig.addFilter("intsort", (arr, key) => arr.sort((a, b) => isNaN(a[key]) ? 1 : (isNaN(b[key]) ? -1 : a[key] - b[key])));
@@ -104,14 +96,22 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("map", function(arr, key) { return Array.isArray(arr) ? arr.map((obj) => obj[key]) : arr[key] });
     eleventyConfig.addFilter("int", function(arr) { return Array.isArray(arr) ? arr.map(i => parseInt(i)) : parseInt(arr) });
     eleventyConfig.addFilter("where_in", (arr1, key, arr2) => arr1.filter((e) => arr2.includes(e[key])));
-    eleventyConfig.addFilter("current", function(arr, date) {
-        return arr.map((member) => {
-            current = getCurrent(member.constituencies, date || new Date().toISOString())
-            if (!current) return false
-            return { ...member, ...current, party: party_from_str(current.party) }
-        }).filter(Boolean)
-    });
+    eleventyConfig.addFilter("where_includes", (arr1, key, value) => arr1.filter((e) => e[key].includes(value)));
 
+    // Data specific filters
+    eleventyConfig.addFilter("current", function(arr, date = new Date().toISOString()) {
+        func = (member) => {
+            const { party, partyid } = getCurrent(member.constituencies, date) || {}
+            const { groupid } = getCurrent(member.groups, date) || {}
+            if (!(party && groupid)) return false
+            return { ...member, group: groupid, party, partyid }
+        }
+        if (Array.isArray(arr)) {
+            return arr.map(func).filter(Boolean)
+        }
+        return func(arr)
+    });
+    eleventyConfig.addFilter("position", (position) => {switch (position) { case '+': 'for'; case '-': 'against'; case '0': 'abstention'; default: 'novote' }})
     eleventyConfig.addFilter("attendance", function(atts, member) {
         return atts.filter((att) => {
             current = getCurrent(member.constituencies, att.date)
@@ -120,23 +120,8 @@ module.exports = function(eleventyConfig) {
         })
     });
     eleventyConfig.addFilter("ratio", (a, b) => (a / b * 100).toFixed(1) + '%');
-    eleventyConfig.addFilter("startswith", function(str, value) { return str.startsWith(value) });
-    eleventyConfig.addFilter("where_exp", function(arr, key, cond) {
-        return arr.filter((el) => eval(`const { ${key} } = el; ${cond}`))
-    });
-    eleventyConfig.addLiquidFilter("groupby_exp", function(arr, key, cond) {
-        return arr.reduce(
-            (groups, obj) => {
-                const res = eval(`const { ${key} } = obj; ${cond}`)
-                const group = groups.find((g) => g.name == res)
-                if (group) group.items.push(obj)
-                else groups.push({ name: res, items: [obj] })
-                return groups
-            },
-            []
-        )
-    });
-    eleventyConfig.addLiquidFilter("dot", function(obj, path) { return path.split('.').reduce((a, b) => a[b], obj);});
+
+
     eleventyConfig.addLiquidFilter("group_by", function(array, key) {
         return array.reduce(
             (groups, obj) => {
@@ -150,9 +135,10 @@ module.exports = function(eleventyConfig) {
     });
 
     eleventyConfig.addPassthroughCopy("bundle.css");
-    eleventyConfig.addPassthroughCopy("bundle.js");
+    eleventyConfig.addPassthroughCopy("favicon.ico");
+    eleventyConfig.addPassthroughCopy("*.js");
 
-    eleventyConfig.addDataExtension("csv", (contents) => {
+    eleventyConfig.addDataExtension("csv", (contents, filePath) => {
         const records = parse(contents, {
             cast: function(value) {
                 try {

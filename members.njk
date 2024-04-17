@@ -1,17 +1,33 @@
 {% extends "parent.njk" %}
+{% import "components.njk" as c with context %}
 
 {% block links %}
 <li><a href="/">Procédures</a></li>
 {% endblock %}
 
+{% block title %}
+Députés
+{% endblock %}
+
+{% block head %}
+<script defer src="/members.js"></script>
+{% endblock %}
+
 {% block main %}
-  {% for member in members | current %}
+  <h2>👤 Députés</h2>
+  <input id="search" oninput="filter()" type="search" placeholder="Cherchez un membre"/>
+  {% for member in members | current | sort(false, false, 'last_name') %}
   <article>
-    <header><b>{{ member.full_name }}</b> | {{ member.party }}</header>
-    {% set atts = attendances | attendance(member) %}
-    {% set attended = atts | where('attend', true) | length %}
-    {% set total = atts | length %}
-    Taux de présence: <b>{{ attended | ratio(total) }}</b> ({{ attended }} plénières sur {{ total }})
+    <header>
+      <hgroup>
+        <h4><a href="/member/{{ member.id }}">🪪 {{ member.full_name }}</a></h4>
+        <subtitle>
+          <span class="nowrap">🇪🇺 {{ groups | find('code', member.group) | map('name') }}</span>
+          <span class="nowrap">🇫🇷 {{ member.party }}</span>
+        </subtitle>
+      </hgroup>
+    </header>
+    {{ c.stats(member) }}
   </article>
   {% endfor %}
 {% endblock %}
