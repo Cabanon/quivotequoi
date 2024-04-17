@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Rapport sur les rapports 2019-2020 de la Commission sur la Bosnie-Herzégovine</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Rapport sur les rapports 2019-2020 de la Commission sur la Bosnie-Herzégovine</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(483/689 * 100%)">483</div>
-  
-  
-    <div class="-" style="width: calc(73/689 * 100%)">73</div>
+    <div class="for" style="width: calc(483/689 * 100%)">483</div>
   
   
-    <div class="0" style="width: calc(133/689 * 100%)">133</div>
+    <div class="against" style="width: calc(73/689 * 100%)">73</div>
+  
+  
+    <div class="abstention" style="width: calc(133/689 * 100%)">133</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(41/77 * 100%)">41</div>
+    <div class="for" style="width: calc(41/77 * 100%)">41</div>
   
   
-    <div class="-" style="width: calc(22/77 * 100%)">22</div>
+    <div class="against" style="width: calc(22/77 * 100%)">22</div>
   
   
-    <div class="0" style="width: calc(14/77 * 100%)">14</div>
+    <div class="abstention" style="width: calc(14/77 * 100%)">14</div>
   
 </div>
  
 </section>
-            <a href="/voting/134351">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/134351">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -106,7 +111,7 @@
     
         
         
-            <li>Pays candidats</li>
+            <li>Elargissement de l&#39;Union</li>
         
     
         
@@ -116,284 +121,208 @@
     
         
         
-            <li>Elargissement de l&#39;Union</li>
+            <li>Pays candidats</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2171(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0185_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-06-23-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>6 bis. condamne fermement les violations continues de l’intégrité territoriale et de la souveraineté de la Bosnie-Herzégovine commises par ses voisins par le biais de projets n’ayant pas été approuvés par les autorités compétentes de Bosnie-Herzégovine, tels que la construction de la centrale hydroélectrique de Buk Bijela sur la rivière Drina, financée par la Serbie, et le gazoduc sous la rivière Sava, installé par des entreprises croates;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">167</div>
+  <div class="against">444</div>
+  <div class="abstention">85</div>
+</span>
+
+  
+    
+    <a href="/voting/134360">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(167/696 * 100%)">167</div>
-  
-  
-    <div class="-" style="width: calc(444/696 * 100%)">444</div>
-  
-  
-    <div class="0" style="width: calc(85/696 * 100%)">85</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134360">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
-
-<section>
-
-  
-      21. rappelle qu’en adhérant au Conseil de l’Europe en 2002, la Bosnie- Herzégovine s’est engagée à remédier aux lacunes de son cadre constitutionnel, notamment en harmonisant la législation aux niveaux fédéral et cantonal, ainsi qu’à progresser dans les réformes qui feront de ce pays un État pleinement fonctionnel et inclusif qui protège intégralement les droits de tous ses citoyens; souligne que les réformes institutionnelles dépendent de la volonté et de l’engagement des autorités, des institutions, des titulaires de fonctions et des dirigeants politiques du pays en vue de l’accomplissement de progrès réels et attendus depuis longtemps en matière de changement constitutionnel, lequel s’inscrit dans les 14 grandes priorités, de préférence avant les élections législatives de 2022; exhorte la communauté internationale à créer les conditions propices à un dialogue sur le changement constitutionnel et à soutenir activement un tel dialogue, notamment au sein des institutions de la Bosnie-Herzégovine et entre les représentants élus en Bosnie-Herzégovine, sous l’égide de l’Union européenne, et en particulier du Parlement, en veillant à ce que la société civile et les citoyens participent activement au processus; 
-  
-
-  
-      <ins>exhorte la Commission à plaider fermement pour que les partis ethniques    au pouvoir en Bosnie-Herzégovine autorisent la commission électorale centrale de Bosnie-Herzégovine à participer au groupe de travail interinstitutions sur la réforme électorale; </ins>
-  
-
-  
-      insiste sur le fait que ce dialogue doit se dérouler parallèlement à la mise en œuvre d’autres 
-  
-
-  
-      <del>   </del>
-  
-
-  
-      réformes;
-  
- 
-</section>
-
-    
-    <footer>
-        
             
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(288/694 * 100%)">288</div>
-  
-  
-    <div class="-" style="width: calc(398/694 * 100%)">398</div>
-  
-  
-    <div class="0" style="width: calc(8/694 * 100%)">8</div>
-  
-</div>
-
-            
+                <div class="hidden">Verts/ALE</div>
                 
-                
-                    
-                
-                <a href="/voting/134364">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
-    
 
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
-
-❌️ Rejeté
-
-</header>
-    
-        
-
-<section>
+<p>
 
   
-      46. déplore le fait que la Bosnie- Herzégovine continue d’enfreindre la convention européenne des droits de l’homme, en n’exécutant pas les arrêts rendus par la Cour européenne des droits de l’homme (CEDH) en matière de lutte contre les discriminations dans les affaires Sejdić-Finci, Zornić, Pilav et Šlaku en ce qui concerne la garantie de l’égalité démocratique des citoyens dans le processus électoral du pays, qui est une condition préalable à l’ouverture des négociations d’adhésion; appelle de ses vœux la mise en œuvre sans délai des arrêts de la CEDH et 
+      21. rappelle qu’en adhérant au Conseil de l’Europe en 2002, la Bosnie- Herzégovine s’est engagée à remédier aux lacunes de son cadre constitutionnel, notamment en harmonisant la législation aux niveaux fédéral et cantonal, ainsi qu’à progresser dans les réformes qui feront de ce pays un État pleinement fonctionnel et inclusif qui protège intégralement les droits de tous ses citoyens; souligne que les réformes institutionnelles dépendent de la volonté et de l’engagement des autorités, des institutions, des titulaires de fonctions et des dirigeants politiques du pays en vue de l’accomplissement de progrès réels et attendus depuis longtemps en matière de changement constitutionnel, lequel s’inscrit dans les 14 grandes priorités, de préférence avant les élections législatives de 2022; exhorte la communauté internationale à créer les conditions propices à un dialogue sur le changement constitutionnel et à soutenir activement un tel dialogue, notamment au sein des institutions de la Bosnie-Herzégovine et entre les représentants élus en Bosnie-Herzégovine, sous l’égide de l’Union européenne, et en particulier du Parlement, en veillant à ce que la société civile et les citoyens participent activement au processus;
   
 
   
-      <del>de la Cour constitutionnelle de Bosnie-Herzégovine;</del>
+      <ins> exhorte la Commission à plaider fermement pour que les partis ethniques    au pouvoir en Bosnie-Herzégovine autorisent la commission électorale centrale de Bosnie-Herzégovine à participer au groupe de travail interinstitutions sur la réforme électorale;</ins>
   
 
   
-      <ins>relève que les arrêts pertinents de la Cour constitutionnelle de Bosnie-Herzégovine devraient également être pris en compte;</ins>
+       insiste sur le fait que ce dialogue doit se dérouler parallèlement à la mise en œuvre d’autres
   
 
   
-       prend acte des lacunes persistantes du processus électoral et réaffirme la nécessité de s’attaquer sans tarder, par des changements constitutionnels appropriés, aux restrictions discriminatoires fondées sur l’appartenance ethnique et la résidence en ce qui concerne le droit de se présenter aux élections;
-  
- 
-</section>
-
-    
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(233/695 * 100%)">233</div>
-  
-  
-    <div class="-" style="width: calc(404/695 * 100%)">404</div>
-  
-  
-    <div class="0" style="width: calc(58/695 * 100%)">58</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134375">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
-
-❌️ Rejeté
-
-</header>
-    
-        
-
-<section>
-
-  
-      56. exprime sa préoccupation face à l’augmentation de la pression migratoire sur le pays 
-  
-
-  
-      <ins>en raison des refoulements illégaux pratiqués par les États membres de l’Union dans la région, </ins>
-  
-
-  
-      et aux conditions d’accueil inappropriées, qui ont conduit à une situation humanitaire dramatique; demande aux autorités de Bosnie-Herzégovine de s’employer à trouver des solutions constructives, durables, immédiates et à long terme à ce problème, à travers une réponse coordonnée et stratégique à l’échelle du pays, une coordination interinstitutionnelle efficace, une meilleure gestion des frontières et une capacité d’accueil renforcée, afin que les migrants aient accès à l’aide humanitaire et à des conditions de vie décentes, y compris des garanties spéciales pour les mineurs non accompagnés, l’accès à un logement approprié et la protection des enfants; demande un partage équitable des responsabilités dans l’ensemble du territoire de la Bosnie-Herzégovine, en évitant toute politisation et en garantissant un soutien approprié aux collectivités locales qui accueillent des centres d’accueil temporaires; exhorte la Bosnie- Herzégovine à conclure un accord avec le Bureau européen d’appui en matière d’asile 
-  
-
-  
-      <ins>   </ins>
-  
-
-  
-      (EASO) afin d’accroître la capacité de traitement des demandes d’asile et d’améliorer la coopération avec l’Union, 
-  
-
-  
-      <del>   </del>
-  
-
-  
-      notamment en ce qui concerne la réinstallation en tant que voie sûre et légale pour les personnes en quête d’une protection internationale;
-  
- 
-</section>
-
-    
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(177/694 * 100%)">177</div>
-  
-  
-    <div class="-" style="width: calc(513/694 * 100%)">513</div>
-  
-  
-    <div class="0" style="width: calc(4/694 * 100%)">4</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134381">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
-
-❌️ Rejeté
-
-</header>
-    
-        
-
-<section>
-
-  
-      57. invite la Bosnie-Herzégovine et l’Union à renforcer encore leur coopération en matière de protection internationale des personnes dans le besoin, à œuvrer en faveur de solutions fondées sur la solidarité et à prévenir de nouvelles violations du droit international et des droits fondamentaux, comme les cas signalés de refoulement aux frontières de la Bosnie- Herzé
-  
-
-  
-      <del>govine; demande à la Commission de mettre en œuvre un mécanisme de suivi indépendant;</del>
-  
-
-  
-      <ins>govine, ou encore les opérations menées par les gardes-frontières croates sur le territoire de la Bosnie-Herzégovine; demande à la Commission de mettre en œuvre un mécanisme de suivi indépendant et d’imposer des mesures au gouvernement croate afin de mettre un terme aux violations des droits de l’homme à la frontière;</ins>
-  
-
-  
-       demande à la Commission, aux agences de l’Union et aux organisations internationales de coopérer activement avec les autorités bosniennes afin de mettre en place un système d’asile et de migration efficace et durable; demande à la Commission européenne, aux agences de l’Union et aux organisations internationales de fournir une assistance opérationnelle, technique, logistique et financière accrue à la Bosnie-
+      <del>    </del>
   
 
   
@@ -401,68 +330,300 @@
   
 
   
-      Herzégovine afin de garantir que le pays dans son ensemble dispose d’une capacité d’accueil suffisante et d’installations 
+      réformes;
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">288</div>
+  <div class="against">398</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/134364">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
+
+❌️ Rejeté
+
+</header>
+            
+                <div class="hidden">Verts/ALE</div>
+                
+
+<p>
+
+  
+      46. déplore le fait que la Bosnie- Herzégovine continue d’enfreindre la convention européenne des droits de l’homme, en n’exécutant pas les arrêts rendus par la Cour européenne des droits de l’homme (CEDH) en matière de lutte contre les discriminations dans les affaires Sejdić-Finci, Zornić, Pilav et Šlaku en ce qui concerne la garantie de l’égalité démocratique des citoyens dans le processus électoral du pays, qui est une condition préalable à l’ouverture des négociations d’adhésion; appelle de ses vœux la mise en œuvre sans délai des arrêts de la CEDH et 
   
 
   
-      <ins>   </ins>
+      <ins>relève que les arrêts pertinents </ins>
   
 
   
-      d’accueil de bonne qualité, de préférence aux points d’entrée des migrants, d’offrir une procédure d’asile efficace, de renforcer les capacités de traitement des migrants entrants et des demandes d’asile et, le cas échéant, de mener à bien les procédures de 
+      de la Cour constitutionnelle de Bosnie-Herzégovine
   
 
   
-      <del>   </del>
+      <ins> devraient également être pris en compte</ins>
+  
+
+  
+      ; prend acte des lacunes persistantes du processus électoral et réaffirme la nécessité de s’attaquer sans tarder, par des changements constitutionnels appropriés, aux restrictions discriminatoires fondées sur l’appartenance ethnique et la résidence en ce qui concerne le droit de se présenter aux élections;
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">233</div>
+  <div class="against">404</div>
+  <div class="abstention">58</div>
+</span>
+
+  
+    
+    <a href="/voting/134375">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
+
+❌️ Rejeté
+
+</header>
+            
+                <div class="hidden">Verts/ALE</div>
+                
+
+<p>
+
+  
+      56. exprime sa préoccupation face à l’augmentation de la pression migratoire sur le pays
+  
+
+  
+      <ins> en raison des refoulements illégaux pratiqués par les États membres de l’Union dans la région,</ins>
+  
+
+  
+       et aux conditions d’accueil inappropriées, qui ont conduit à une situation humanitaire dramatique; demande aux autorités de Bosnie-Herzégovine de s’employer à trouver des solutions constructives, durables, immédiates et à long terme à ce problème, à travers une réponse coordonnée et stratégique à l’échelle du pays, une coordination interinstitutionnelle efficace, une meilleure gestion des frontières et une capacité d’accueil renforcée, afin que les migrants aient accès à l’aide humanitaire et à des conditions de vie décentes, y compris des garanties spéciales pour les mineurs non accompagnés, l’accès à un logement approprié et la protection des enfants; demande un partage équitable des responsabilités dans l’ensemble du territoire de la Bosnie-Herzégovine, en évitant toute politisation et en garantissant un soutien approprié aux collectivités locales qui accueillent des centres d’accueil temporaires; exhorte la Bosnie- Herzégovine à conclure un accord avec le Bureau européen d’appui en matière d’asile
+  
+
+  
+      <del> (</del>
+  
+
+  
+      <ins>    (</ins>
+  
+
+  
+      EASO) afin d’accroître la capacité de traitement des demandes d’asile et d’améliorer la coopération avec l’Union
+  
+
+  
+      <del>,    </del>
+  
+
+  
+      <ins>, </ins>
+  
+
+  
+      notamment en ce qui concerne la réinstallation en tant que voie sûre et légale pour les personnes en quête d’une protection internationale;
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">177</div>
+  <div class="against">513</div>
+  <div class="abstention">4</div>
+</span>
+
+  
+    
+    <a href="/voting/134381">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
+
+❌️ Rejeté
+
+</header>
+            
+                <div class="hidden">Verts/ALE</div>
+                
+
+<p>
+
+  
+      57. invite la Bosnie-Herzégovine et l’Union à renforcer encore leur coopération en matière de protection internationale des personnes dans le besoin, à œuvrer en faveur de solutions fondées sur la solidarité et à prévenir de nouvelles violations du droit international et des droits fondamentaux, comme les cas signalés de refoulement aux frontières de la Bosnie- Herzégovine
+  
+
+  
+      <del>; demande à la Commission de mettre en œuvre un mécanisme de suivi indépendant</del>
+  
+
+  
+      <ins>, ou encore les opérations menées par les gardes-frontières croates sur le territoire de la Bosnie-Herzégovine; demande à la Commission de mettre en œuvre un mécanisme de suivi indépendant et d’imposer des mesures au gouvernement croate afin de mettre un terme aux violations des droits de l’homme à la frontière</ins>
+  
+
+  
+      ; demande à la Commission, aux agences de l’Union et aux organisations internationales de coopérer activement avec les autorités bosniennes afin de mettre en place un système d’asile et de migration efficace et durable; demande à la Commission européenne, aux agences de l’Union et aux organisations internationales de fournir une assistance opérationnelle, technique, logistique et financière accrue à la Bosnie
+  
+
+  
+      <del>-</del>
+  
+
+  
+      <ins>- </ins>
+  
+
+  
+      Herzégovine afin de garantir que le pays dans son ensemble dispose d’une capacité d’accueil suffisante et d’installations
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
+  
+
+  
+      d’accueil de bonne qualité, de préférence aux points d’entrée des migrants, d’offrir une procédure d’asile efficace, de renforcer les capacités de traitement des migrants entrants et des demandes d’asile et, le cas échéant, de mener à bien les procédures de
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
       retour conformément aux normes internationales et européennes; appelle à un réexamen des financements concernés afin de garantir que l’aide transparente, conditionnelle et crédible apportée par l’Union pour répondre aux besoins en matière de migration soit adaptée à son objectif et atteigne les bénéficiaires visés;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">182</div>
+  <div class="against">504</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    
+    <a href="/voting/134383">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(182/695 * 100%)">182</div>
-  
-  
-    <div class="-" style="width: calc(504/695 * 100%)">504</div>
-  
-  
-    <div class="0" style="width: calc(9/695 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134383">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       37. se félicite des efforts consentis en vue de promouvoir la liberté religieuse, le respect mutuel et le dialogue interconfessionnel, notamment par l’intermédiaire du conseil interreligieux de Bosnie-Herzégovine; invite instamment les autorités compétentes à enquêter rapidement sur tous les crimes fondés sur des motifs religieux et à engager des poursuites en la matière;
@@ -472,176 +633,206 @@
       <ins> souligne que les chrétiens souffrent de plus en plus de la montée du fondamentalisme islamiste en Bosnie-Herzégovine, instrumentalisée par des pays étrangers, en conséquence de quoi de plus en plus de catholiques quittent la Bosnie-Herzégovine, les chiffres s’élevant à près de le cardinal Vinko Puljić, archevêque de Vrhbosna, Sarajevo;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">167</div>
+  <div class="against">515</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/134370">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(167/693 * 100%)">167</div>
-  
-  
-    <div class="-" style="width: calc(515/693 * 100%)">515</div>
-  
-  
-    <div class="0" style="width: calc(11/693 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134370">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      90. est fermement convaincu qu’une meilleure communication sur l’engagement de l’Union en faveur de la région est primordiale pour lutter contre les influences étrangères néfastes;
-  
+<p>
 
   
-      <ins> fait part à cet égard de ses préoccupations au sujet des divers liens entre la Bosnie- Herzégovine et la Turquie, comme l’accord de coopération militaire financière1 bis; dénonce le récent discours de la ministre des affaires étrangères de la Bosnie-Herzégovine, Bisera Turković, lors duquel elle a déclaré que la Turquie jouait un rôle stabilisateur et très constructif dans la région1 ter;  _________________  1 bis «Turkey, Bosnia sign military financial cooperation deal», Hürriyet Daily News, 4 mars 2021.  1 ter «Bosnian-Turkish relations “rich”, says foreign minister», Yeni Şafak, 5 mai 2021.</ins>
+      90. est fermement convaincu qu’une meilleure communication sur l’engagement de l’Union en faveur de la région est primordiale pour lutter contre les influences étrangères néfastes
+  
+
+  
+      <del>;</del>
+  
+
+  
+      <ins>; fait part à cet égard de ses préoccupations au sujet des divers liens entre la Bosnie- Herzégovine et la Turquie, comme l’accord de coopération militaire financière1 bis; dénonce le récent discours de la ministre des affaires étrangères de la Bosnie-Herzégovine, Bisera Turković, lors duquel elle a déclaré que la Turquie jouait un rôle stabilisateur et très constructif dans la région1 ter;  _________________  1 bis «Turkey, Bosnia sign military financial cooperation deal», Hürriyet Daily News, 4 mars 2021.  1 ter «Bosnian-Turkish relations “rich”, says foreign minister», Yeni Şafak, 5 mai 2021.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">108</div>
+  <div class="against">520</div>
+  <div class="abstention">64</div>
+</span>
+
+  
+    
+    <a href="/voting/134397">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(108/692 * 100%)">108</div>
-  
-  
-    <div class="-" style="width: calc(520/692 * 100%)">520</div>
-  
-  
-    <div class="0" style="width: calc(64/692 * 100%)">64</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134397">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°12 | 
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       18. souligne que la mise sur pied effective, le fonctionnement indépendant et la responsabilité des institutions démocratiques sont des éléments essentiels d’une démocratie viable et une condition préalable à la progression du processus d’intégration européenne, et notamment à l’obtention du statut de candidat; 
   
 
   
-      <del>avertit que la rhétorique ethnonationaliste et anticonstitutionnelle clivante et séparatiste ainsi que les tentatives de blocage des institutions nuisent à la coordination nationale et à la prise de décisions sur les principales politiques et réformes, ainsi qu’à l’unité et à la stabilité à long terme;</del>
+      <del>avertit que la rhétorique ethnonationaliste et anticonstitutionnelle clivante et séparatiste ainsi que les tentatives de blocage des institutions nuisent à la coordination nationale et à la prise de décisions sur les principales politiques et réformes, ainsi qu’à l’unité et à la stabilité à long terme</del>
   
 
   
-      <ins>reconnaît qu’il s’agit d’un processus endogène qui doit tenir compte du fait que l’État de Bosnie-Herzégovine est partagé par trois peuples constitutifs;</ins>
+      <ins>reconnaît qu’il s’agit d’un processus endogène qui doit tenir compte du fait que l’État de Bosnie-Herzégovine est partagé par trois peuples constitutifs</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">132</div>
+  <div class="against">554</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/134362">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(132/696 * 100%)">132</div>
-  
-  
-    <div class="-" style="width: calc(554/696 * 100%)">554</div>
-  
-  
-    <div class="0" style="width: calc(10/696 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134362">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°13 | 
+        
+            <article id="13">
+            <header>📝 Amendement n°13 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
-
-  
-      21. rappelle qu’en adhérant au Conseil de l’Europe en 2002, la Bosnie- Herzégovine s’est engagée à remédier aux lacunes de son cadre constitutionnel, notamment en harmonisant la législation aux niveaux fédéral et cantonal, ainsi qu’à progresser dans les réformes qui feront de ce pays un État pleinement fonctionnel et inclusif qui protège intégralement les droits de tous ses citoyens; souligne que les réformes institutionnelles dépendent de 
-  
+<p>
 
   
-      <ins>l’appropriation locale et, par conséquent, de </ins>
+      21. rappelle qu’en adhérant au Conseil de l’Europe en 2002, la Bosnie- Herzégovine s’est engagée à remédier aux lacunes de son cadre constitutionnel, notamment en harmonisant la législation aux niveaux fédéral et cantonal, ainsi qu’à progresser dans les réformes qui feront de ce pays un État pleinement fonctionnel et inclusif qui protège intégralement les droits de tous ses citoyens; souligne que les réformes institutionnelles dépendent
   
 
   
-      la volonté et de l’engagement des autorités, des institutions, des titulaires de fonctions et des dirigeants politiques du pays en vue de l’accomplissement de progrès réels et attendus depuis longtemps en matière de changement constitutionnel, lequel s’inscrit dans les 14 grandes priorités, et ce de préférence avant les élections législatives de 2022; exhorte la communauté internationale à créer les conditions propices à un dialogue sur le changement constitutionnel et à soutenir activement un tel dialogue, notamment au sein des institutions de la Bosnie-
+      <ins> de l’appropriation locale et, par conséquent,</ins>
   
 
   
-      <ins> </ins>
+       de la volonté et de l’engagement des autorités, des institutions, des titulaires de fonctions et des dirigeants politiques du pays en vue de l’accomplissement de progrès réels et attendus depuis longtemps en matière de changement constitutionnel, lequel s’inscrit dans les 14 grandes priorités, et ce de préférence avant les élections législatives de 2022; exhorte la communauté internationale à créer les conditions propices à un dialogue sur le changement constitutionnel et à soutenir activement un tel dialogue, notamment au sein des institutions de la Bosnie
   
 
   
-      Herzégovine et parmi les représentants élus en Bosnie-
+      <del>-</del>
+  
+
+  
+      <ins>- </ins>
+  
+
+  
+      Herzégovine et parmi les représentants élus en Bosnie
+  
+
+  
+      <del>- </del>
+  
+
+  
+      <ins>-</ins>
+  
+
+  
+      Herzégovine, sous l’égide de l’Union européenne, et en particulier du Parlement, en veillant à ce que la société civile et les citoyens participent activement au processus; insiste sur le fait que ce
   
 
   
@@ -649,406 +840,370 @@
   
 
   
-      Herzégovine, sous l’égide de l’Union européenne, et en particulier du Parlement, en veillant à ce que la société civile et les citoyens participent activement au processus; insiste sur le fait que ce 
+      <ins>    </ins>
   
 
   
-      <ins>   </ins>
+      dialogue doit se dérouler parallèlement à la
   
 
   
-      dialogue doit se dérouler parallèlement à la 
+      <del>    </del>
   
 
   
-      <del>   </del>
+      <ins> </ins>
   
 
   
       mise en œuvre d’autres réformes;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">170</div>
+  <div class="against">507</div>
+  <div class="abstention">19</div>
+</span>
+
+  
+    
+    <a href="/voting/134365">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(170/696 * 100%)">170</div>
-  
-  
-    <div class="-" style="width: calc(507/696 * 100%)">507</div>
-  
-  
-    <div class="0" style="width: calc(19/696 * 100%)">19</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134365">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°14 | 
+        
+            <article id="14">
+            <header>📝 Amendement n°14 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
-
-  
-      56. exprime sa préoccupation face à l’augmentation de la pression migratoire sur le pays et aux conditions d’accueil inappropriées, qui ont donné lieu à une situation humanitaire dramatique; demande aux autorités de Bosnie-Herzégovine de s’employer à trouver des solutions constructives, durables, immédiates et à long terme à ce problème, à travers une réponse coordonnée et stratégique à l’échelle du pays, une coordination interinstitutionnelle efficace, une meilleure gestion des frontières et une capacité d’accueil renforcée, afin que les migrants aient accès à l’aide humanitaire et à des conditions de vie décentes, y compris des garanties spéciales pour les mineurs non accompagnés, l’accès à un logement approprié et la protection des enfants; demande un partage équitable des responsabilités dans l’ensemble du territoire de la Bosnie-Herzégovine, en évitant toute politisation et en garantissant un soutien approprié aux collectivités locales qui accueillent des centres d’accueil temporaires; exhorte la Bosnie- Herzégovine à conclure un accord avec le Bureau européen d’appui en matière d’asile (EASO) afin d’accroître la capacité de traitement des demandes d’asile et d’améliorer la coopération avec l’Union, notamment en ce qui concerne la ré
-  
+<p>
 
   
-      <del>installation en tant que voie sûre et    légale </del>
+      56. exprime sa préoccupation face à l’augmentation de la pression migratoire sur le pays et aux conditions d’accueil inappropriées, qui ont donné lieu à une situation humanitaire dramatique; demande aux autorités de Bosnie-Herzégovine de s’employer à trouver des solutions constructives, durables, immédiates et à long terme à ce problème, à travers une réponse coordonnée et stratégique à l’échelle du pays, une coordination interinstitutionnelle efficace, une meilleure gestion des frontières et une capacité d’accueil renforcée, afin que les migrants aient accès à l’aide humanitaire et à des conditions de vie décentes, y compris des garanties spéciales pour les mineurs non accompagnés, l’accès à un logement approprié et la protection des enfants; demande un partage équitable des responsabilités dans l’ensemble du territoire de la Bosnie-Herzégovine, en évitant toute politisation et en garantissant un soutien approprié aux collectivités locales qui accueillent des centres d’accueil temporaires; exhorte la Bosnie- Herzégovine à conclure un accord avec le Bureau européen d’appui en matière d’asile (EASO) afin d’accroître la capacité de traitement des demandes d’asile et d’améliorer la coopération avec l’Union, notamment en ce qui concerne la réinstallation
   
 
   
-      <ins>installation; demande à l’Union de    mettre en place des voies d’accès légales et sûres </ins>
+      <del> en tant que voie sûre et    légale</del>
   
 
   
-      pour les personnes en quête d’une protection internationale;
+      <ins>; demande à l’Union de    mettre en place des voies d’accès légales et sûres</ins>
+  
+
+  
+       pour les personnes en quête d’une protection internationale;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">278</div>
+  <div class="against">410</div>
+  <div class="abstention">6</div>
+</span>
+
+  
+    
+    <a href="/voting/134382">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(278/694 * 100%)">278</div>
-  
-  
-    <div class="-" style="width: calc(410/694 * 100%)">410</div>
-  
-  
-    <div class="0" style="width: calc(6/694 * 100%)">6</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134382">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°15 | Partie 1 | 
+        
+            <article id="15">
+            <header>📝 Amendement n°15 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(559/694 * 100%)">559</div>
-  
-  
-    <div class="-" style="width: calc(130/694 * 100%)">130</div>
-  
-  
-    <div class="0" style="width: calc(5/694 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134385">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°15 | Partie 2 | 
+        
+            <article id="15">
+            <header>📝 Amendement n°15 | Partie 2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(290/694 * 100%)">290</div>
-  
-  
-    <div class="-" style="width: calc(398/694 * 100%)">398</div>
-  
-  
-    <div class="0" style="width: calc(6/694 * 100%)">6</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134386">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°16 | 
+        
+            <article id="16">
+            <header>📝 Amendement n°16 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       58. prie instamment la Bosnie- Herzégovine d’intensifier sa coopération avec les pays voisins et les agences l’Union (Europol, Eurojust et Frontex) pour lutter contre la criminalité transfrontalière, en particulier la traite des êtres humains, le trafic d’armes et le trafic de drogues; demande au pays de veiller à la signature et à la ratification rapides de l’accord sur le statut avec l’Agence européenne de garde- frontières et de garde-côtes (Frontex) convenu le 5 février 2019, qui faciliterait une meilleure 
   
 
   
-      <del>protection </del>
+      <del>protection</del>
   
 
   
-      <ins>gestion </ins>
+      <ins>gestion</ins>
   
 
   
-      des frontières dans le plein respect des droits fondamentaux, tout en contribuant à lutter contre la criminalité transfrontalière, y compris les réseaux criminels de 
+       des frontières dans le plein respect des droits fondamentaux, tout en contribuant à lutter contre la criminalité transfrontalière, y compris les réseaux criminels de passeurs
   
 
   
-      <del>passeurs, et à la prévention de la migration irrégulière;</del>
+      <del>, et à la prévention de la migration irrégulière</del>
   
 
   
-      <ins>passeurs;</ins>
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">270</div>
+  <div class="against">418</div>
+  <div class="abstention">7</div>
+</span>
+
+  
+    
+    <a href="/voting/134391">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(270/695 * 100%)">270</div>
-  
-  
-    <div class="-" style="width: calc(418/695 * 100%)">418</div>
-  
-  
-    <div class="0" style="width: calc(7/695 * 100%)">7</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134391">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°17 | 
+        
+            <article id="17">
+            <header>📝 Amendement n°17 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
-
-  
-      18. souligne que la mise sur pied effective, le fonctionnement indépendant et la responsabilité des institutions démocratiques sont des éléments essentiels d’une démocratie viable et une condition préalable à la progression du processus d’intégration européenne, et notamment à l’obtention du statut de candidat; avertit que la rhétorique ethnonationaliste et anticonstitutionnelle clivante et séparatiste ainsi que les tentatives de blocage des institutions nuisent à la coordination nationale et à la prise de décisions sur les principales politiques et réformes, ainsi qu’à l’unité et à la stabilité à long 
-  
+<p>
 
   
-      <del>terme;</del>
+      18. souligne que la mise sur pied effective, le fonctionnement indépendant et la responsabilité des institutions démocratiques sont des éléments essentiels d’une démocratie viable et une condition préalable à la progression du processus d’intégration européenne, et notamment à l’obtention du statut de candidat; avertit que la rhétorique ethnonationaliste et anticonstitutionnelle clivante et séparatiste ainsi que les tentatives de blocage des institutions nuisent à la coordination nationale et à la prise de décisions sur les principales politiques et réformes, ainsi qu’à l’unité et à la stabilité à long terme
   
 
   
-      <ins>terme, et approfondissent les divisions entre les peuples constitutifs;</ins>
+      <ins>, et approfondissent les divisions entre les peuples constitutifs</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">220</div>
+  <div class="against">405</div>
+  <div class="abstention">71</div>
+</span>
+
+  
+    
+    <a href="/voting/134363">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(220/696 * 100%)">220</div>
-  
-  
-    <div class="-" style="width: calc(405/696 * 100%)">405</div>
-  
-  
-    <div class="0" style="width: calc(71/696 * 100%)">71</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134363">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°18 | 
+        
+            <article id="18">
+            <header>📝 Amendement n°18 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
-
-  
-      21. rappelle qu’en adhérant au Conseil de l’Europe en 2002, la Bosnie- Herzégovine s’est engagée à remédier aux lacunes de son cadre constitutionnel, notamment en harmonisant la législation aux niveaux fédéral et cantonal, ainsi qu’à progresser dans les réformes qui feront de ce pays un État pleinement fonctionnel et inclusif qui protège intégralement les droits de tous ses 
-  
+<p>
 
   
-      <del>citoyens;</del>
+      21. rappelle qu’en adhérant au Conseil de l’Europe en 2002, la Bosnie- Herzégovine s’est engagée à remédier aux lacunes de son cadre constitutionnel, notamment en harmonisant la législation aux niveaux fédéral et cantonal, ainsi qu’à progresser dans les réformes qui feront de ce pays un État pleinement fonctionnel et inclusif qui protège intégralement les droits de tous ses citoyens
   
 
   
-      <ins>citoyens et de ses peuples constitutifs;</ins>
+      <ins> et de ses peuples constitutifs</ins>
   
 
   
-       souligne que les réformes institutionnelles dépendent de la volonté et de l’engagement des autorités, des institutions, des titulaires de fonctions et des dirigeants politiques du pays en vue de l’accomplissement de progrès réels et attendus depuis longtemps en matière de changement constitutionnel, lequel s’inscrit dans les 14 grandes priorités, et ce de préférence avant les élections législatives de 2022; exhorte la communauté internationale à créer les conditions propices à un dialogue sur le changement constitutionnel et à soutenir activement un tel dialogue, notamment au sein des institutions de la Bosnie-Herzégovine et parmi les représentants élus en Bosnie- Herzégovine, sous l’égide de l’Union européenne, et en particulier du Parlement, en veillant à ce que la société civile et les citoyens participent activement au processus; insiste sur le fait que ce 
+      ; souligne que les réformes institutionnelles dépendent de la volonté et de l’engagement des autorités, des institutions, des titulaires de fonctions et des dirigeants politiques du pays en vue de l’accomplissement de progrès réels et attendus depuis longtemps en matière de changement constitutionnel, lequel s’inscrit dans les 14 grandes priorités, et ce de préférence avant les élections législatives de 2022; exhorte la communauté internationale à créer les conditions propices à un dialogue sur le changement constitutionnel et à soutenir activement un tel dialogue, notamment au sein des institutions de la Bosnie-Herzégovine et parmi les représentants élus en Bosnie- Herzégovine, sous l’égide de l’Union européenne, et en particulier du Parlement, en veillant à ce que la société civile et les citoyens participent activement au processus; insiste sur le fait que ce
   
 
   
-      <ins>   </ins>
+      <del> </del>
   
 
   
-      dialogue doit se dérouler parallèlement à la 
+      <ins>    </ins>
   
 
   
-      <del>   </del>
+      dialogue doit se dérouler parallèlement à la
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
       mise en œuvre d’autres réformes;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">290</div>
+  <div class="against">379</div>
+  <div class="abstention">27</div>
+</span>
+
+  
+    
+    <a href="/voting/134366">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(290/696 * 100%)">290</div>
-  
-  
-    <div class="-" style="width: calc(379/696 * 100%)">379</div>
-  
-  
-    <div class="0" style="width: calc(27/696 * 100%)">27</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134366">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°19 | 
+        
+            <article id="19">
+            <header>📝 Amendement n°19 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       47. demande aux autorités, aux institutions, aux titulaires de mandats et aux dirigeants politiques de reprendre des négociations sans exclusive sur la réforme électorale et regrette leur réticence à exécuter ces arrêts en éliminant toutes les formes d’inégalité et de discrimination dans le processus électoral; souligne qu’un accord a été conclu sur les élections à Mostar, ce qui démontre la volonté politique de parvenir à un compromis, et insiste sur le fait qu’un accord sur les questions électorales ne devrait pas être détourné à des fins autres que celles stipulées par la CEDH; souligne la nécessité de mettre en œuvre ces changements de préférence avant les élections générales de 2022, afin de garantir une représentation politique suffisamment diversifiée à tous les niveaux de pouvoir et de veiller à ce que les élections soient organisées conformément aux normes européennes et en application des recommandations de l’OSCE/BIDDH et de la Commission de Venise à cet égard;
@@ -1058,49 +1213,51 @@
       <ins> se félicite de la création d’un groupe de travail interinstitutions chargé d’entamer les négociations sur la mise en œuvre de ces arrêts et de convenir des modifications nécessaires de la Constitution et de la loi électorale, et espère que la question de la représentation démocratique de tous les    citoyens et des peuples constitutifs sera définitivement résolue;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">281</div>
+  <div class="against">360</div>
+  <div class="abstention">54</div>
+</span>
+
+  
+    
+    <a href="/voting/134376">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(281/695 * 100%)">281</div>
-  
-  
-    <div class="-" style="width: calc(360/695 * 100%)">360</div>
-  
-  
-    <div class="0" style="width: calc(54/695 * 100%)">54</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134376">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°20 | 
+        
+            <article id="20">
+            <header>📝 Amendement n°20 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       6. exprime à nouveau son attachement à l’indépendance, la souveraineté, l’intégrité territoriale et l’indépendance de la Bosnie-Herzégovine; condamne les déclarations et propositions visant à saper l’État et les valeurs constitutionnelles de la Bosnie-Herzégovine, et réaffirme la nécessité, pour toutes les autorités, institutions, fonctionnaires et dirigeants politiques de mettre la Constitution en conformité avec la convention européenne des droits de l&#39;homme;
@@ -1110,116 +1267,270 @@
       <ins> rappelle que, conformément à l&#39;article 4, paragraphe 2, du traité UE, l&#39;Union européenne respecte les identités nationales des États membres qui sont inhérentes à leurs structures fondamentales politiques et constitutionnelles, y compris en ce qui concerne l&#39;autonomie régionale et locale;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">142</div>
+  <div class="against">519</div>
+  <div class="abstention">34</div>
+</span>
+
+  
+    
+    <a href="/voting/134359">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(142/695 * 100%)">142</div>
-  
-  
-    <div class="-" style="width: calc(519/695 * 100%)">519</div>
-  
-  
-    <div class="0" style="width: calc(34/695 * 100%)">34</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134359">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°21 | 
+        
+            <article id="21">
+            <header>📝 Amendement n°21 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       11. 
   
 
   
-      <del>insiste sur la nécessité de faire cesser de toute urgence toute ségrégation dans l’éducation, incarnée notamment par la pratique discriminatoire existante des «deux écoles sous un même toit», laquelle institutionnalise les divisions ethniques, perpétue les stéréotypes et les préjugés et alimente la défiance en empêchant les contacts entre étudiants issus de milieux différents; souligne que cette pratique est non seulement totalement contraire à la notion même de réconciliation, mais constitue également une menace à long terme pour la stabilité et la prospérité du pays;</del>
+      <del>insiste sur la nécessité de faire cesser de toute urgence toute ségrégation dans l’éducation, incarnée notamment par la pratique discriminatoire existante des «deux écoles sous un même toit», laquelle institutionnalise les divisions ethniques, perpétue les stéréotypes et les préjugés et alimente la défiance en empêchant les contacts entre étudiants issus de milieux différents; souligne que cette pratique est non seulement totalement contraire à la notion même de réconciliation, mais constitue également une menace à long terme pour la stabilité et la prospérité du pays</del>
   
 
   
-      <ins>rappelle que, conformément à l’article 165, paragraphe 1, du traité FUE, l’Union européenne respecte pleinement la responsabilité des États membres pour le contenu de l’enseignement et l’organisation du système éducatif ainsi que leur diversité culturelle et linguistique; rappelle que, conformément à l’article 165, paragraphe 4, du traité FUE, toute harmonisation des dispositions législatives et réglementaires des États membres est exclue des actions d’encouragement de l’Union dans le domaine de l’éducation;</ins>
+      <ins>rappelle que, conformément à l’article 165, paragraphe 1, du traité FUE, l’Union européenne respecte pleinement la responsabilité des États membres pour le contenu de l’enseignement et l’organisation du système éducatif ainsi que leur diversité culturelle et linguistique; rappelle que, conformément à l’article 165, paragraphe 4, du traité FUE, toute harmonisation des dispositions législatives et réglementaires des États membres est exclue des actions d’encouragement de l’Union dans le domaine de l’éducation</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">137</div>
+  <div class="against">526</div>
+  <div class="abstention">32</div>
+</span>
+
+  
+    
+    <a href="/voting/134361">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(137/695 * 100%)">137</div>
-  
-  
-    <div class="-" style="width: calc(526/695 * 100%)">526</div>
-  
-  
-    <div class="0" style="width: calc(32/695 * 100%)">32</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134361">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
+        
     
+        
+        
+    
+        
+        
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Ce texte met en avant une possible intégration de la Bosnie-Herzégovine à l’UE, passant sous silence de nombreux points comme le processus spécifique d’adhésion du pays ou encore la faiblesse du gouvernement dans un État au fonctionnement largement mafieux. J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce rapport, qui est naturellement favorable au processus d&#39;élargissement aux Balkans occidentaux auquel je suis opposée.La Bosnie-Herzégovine reste en proie à des tensions multiples, fruits de son caractère multiconfessionnel et de son organisation politique complexe. Elle est actuellement balayée par une vague migratoire importante. À ce sujet, j&#39;ai dénoncé la volonté de l&#39;Union européenne d&#39;imposer à la République serbe de Bosnie l&#39;accueil de migrants.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce rapport d&#39;initiative porte sur les rapports de 2019 et 2020 sur la Bosnie-Herzégovine. Ce pays est officiellement candidat à l’entrée dans l’Union depuis 2016. Il évalue le fonctionnement des institutions démocratiques, l’état de droit et les droits fondamentaux dans le pays. L’élargissement de l’Union étant contraire à mes convictions, je me suis abstenu sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            Je me suis abstenu sur le rapport concernant la Bosnie-Herzégovine, qui, je le rappelle, n’est pas formellement candidate à l’adhésion à l’Union européenne.En effet, le rapport réaffirme son soutien à l’élargissement, ce qui me semble prématuré alors que la priorité européenne devrait être de consolider son socle de politiques communautaires, de renforcer sa légitimité et crédibilité auprès des citoyens européens et d’honorer ses priorités comme la lutte contre le changement climatique, garantir un haut niveau d’emploi et de santé, renforcer la sécurité, la protection des frontières et la lutte contre la migration illégale et préserver sa souveraineté industrielle.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Je refuse que les pays des Balkans occidentaux adhèrent tôt ou tard à l’Union européenne.Certains d’entre eux, comme la Bosnie-Herzégovine, posent de très nombreux problèmes (islamisme, défaut d’unité nationale, corruption endémique, passivité et complaisance à l’égard des vagues de migrants, etc.) que l’UE refuse de solutionner. J’ai donc voté contre ce dossier.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il marque clairement une volonté d’intégration de la Bosnie-Herzégovine dans l’Union européenne. Les autorités bosniaques, en plus de problèmes sérieux de corruption, font preuve de grande complaisance à l’égard des migrants, faisant du pays un point de passage majeur vers l’UE.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Rapport annuel sur les pays en voie d’adhésion à l’Union européenne qui concerne, cette fois-ci, la Bosnie-Herzégovine.On y retrouve les mêmes points positifs que dans les autres rapports annuels, à savoir la mise en avant des droits fondamentaux (égalité entre les sexes, promotion des droits pour les personnes LGBT, etc.), la lutte contre la corruption ainsi que des éléments pour la transparence et la liberté des médias.On y retrouve également les mêmes points négatifs, à savoir la volonté de voir s’aligner la Bosnie-Herzégovine à la PESC, la mise en avant du rôle de l’OTAN et la défense d’une coopération entre l’Union et les États-Unis sur les Balkans occidentaux.Pour toutes ces raisons, je me suis abstenu.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            Je me suis abstenue sur ce rapport relatif aux rapports 2019 et 2020 concernant la Bosnie-Herzégovine. Le texte contenait des dispositions intéressantes. Il saluait, par exemple, les progrès accomplis par cet État tiers dans différents domaines en vue de faciliter son processus d’intégration à l’Union. Mais il présentait aussi des passages incompatibles avec mon engagement pris devant les électeurs avec l’ensemble de la délégation LR du PPE de ne soutenir aucun nouvel élargissement pendant mon mandat. En effet, le texte réaffirmait son soutien à l’intégration européenne de la Bosnie-Herzégovine et invitait le Conseil européen à octroyer au pays le statut de candidat. J’ai toutefois voté en faveur d&#39;amendements visant à soutenir les chrétiens qui souffrent de plus en plus de la montée du fondamentalisme islamiste en Bosnie-Herzégovine, ou encore qui dénoncent certains liens de ce pays avec la Turquie.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter la position du Parlement sur l’évolution de la situation politique, économique et sociale de la Bosnie-Herzégovine dans le cadre de sa procédure d’accession à l’adhésion à l’Union européenne. Il alerte à raison sur les violations constatées en matière de droits fondamentaux, la nécessité de renforcer les droits des personnes LGBTI, de garantir l’égalité entre les femmes et les hommes ou encore de lutter plus activement contre la corruption.Il appelle en revanche la Bosnie-Herzégovine à continuer de s’aligner sur la politique étrangère et de sécurité commune, à prendre part aux missions de la politique de sécurité et de défense commune, à participer au plan d’action pour l’adhésion à l’OTAN et à renforcer ses coopérations avec les États-Unis. Je me suis donc abstenue sur ce texte, qui présente des éléments positifs mais s’inscrit dans une vision atlantiste, militariste et sécuritaire de la construction européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce rapport étudie l’évolution de la situation de la Bosnie-Herzégovine dans le cadre du processus d’adhésion à l’Union européenne. Le texte demande à la Bosnie-Herzégovine d’accorder la priorité aux réformes dans les domaines du fonctionnement démocratique, de l’État de droit, des droits fondamentaux et de l’administration publique. Le Parlement demande également l’adoption de mesures de lutte contre la corruption et l’impunité généralisées dans la sphère publique. Enfin, le rapport rappelle l’importance de préserver l’indépendance, la souveraineté et l’intégrité territoriale de la Bosnie-Herzégovine et condamne les tentatives visant à saper l’État et les valeurs constitutionnelles.Malheureusement, le rapport fait l’impasse sur un point crucial: il ne saurait y avoir une nouvelle vague d’adhésions à l’Union européenne sans une harmonisation vers le haut préalable de nos normes sociales, environnementales et fiscales. Sinon, nous ne ferons que perpétuer indéfiniment le cercle du dumping et la mise en concurrence généralisée des peuples européens. Je m’abstiens donc sur ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Ce texte est en faveur de l’élargissement et méprise les réalités locales.Contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport car il milite notamment pour l’élargissement de l’Union européenne à la Bosnie-Herzégovine.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce texte, qui se pose en défenseur de l&#39;élargissement et méprise totalement les réalités locales.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Ce rapport va dans le sens d’une intégration de la Bosnie-Herzégovine dans l’Union européenne, projet auquel je suis opposée. Ce pays, qui a déjà montré sa passivité face à l’immigration illégale, deviendrait une porte d’entrée dans l’Union pour tous les migrants. Je me suis opposée à ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Le lundi 15 février 2016, la Bosnie-Herzégovine a officiellement déposé sa candidature à l’entrée dans l’Union européenne. La Bosnie-Herzégovine avait été qualifiée de “candidat potentiel” dès 2003. En 2008, la Bosnie-Herzégovine a signé un accord de stabilisation et d’association avec l’Union européenne, qui est entré en vigueur le 1er juin 2015. En 2010, les citoyens de Bosnie-Herzégovine ont obtenu le droit de se rendre dans l’espace Schengen sans visa.Il s’agit d’un rapport, comme pour tous ceux concernant les pays des Balkans occidentaux, marquant clairement sa volonté d’intégration du pays dans l’Union européenne. Il élude cependant le processus spécifique d’adhésion propre à la Bosnie-Herzégovine, qui fait que la décision doit emporter l’accord de l’ensemble des parties constitutives du pays. Or, la République serbe y est viscéralement opposée. Le rapport prône un renforcement des pouvoirs fédéraux. La faiblesse notoire tant des infrastructures que des moyens du pays dans la lutte contre l’immigration illégale n’est jamais soulevée par le rapport. La Bosnie-Herzégovine constitue en effet le maillon faible de la route des Balkans. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Il s’agit d’un rapport, comme pour tous ceux concernant les pays des Balkans occidentaux, marquant clairement sa volonté d’intégration du pays dans l’Union européenne. Il élude cependant le processus spécifique d’adhésion propre à la Bosnie-Herzégovine, qui fait que la décision doit emporter l’accord de l’ensemble des parties constitutives du pays. Or, la République serbe y est viscéralement opposée.Le rapport prône un renforcement des pouvoirs fédéraux.La faiblesse notoire tant des infrastructures que des moyens du pays dans la lutte contre l’immigration illégale n’est jamais soulevée par le rapport. La Bosnie-Herzégovine constitue en effet le maillon faible de la route des Balkans. On peut même dire que les autorités bosniaques font véritablement preuve de passivité et de complaisance à l’égard des vagues de migrants. L’Union européenne arrive ici avec un messianisme assez délirant, et se présente comme la solution à tous les problèmes du pays.J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            En février 2016, la Bosnie-Herzégovine a officiellement déposé sa candidature à l’entrée dans l’Union européenne. La Commission a publié son avis en mai 2019, présentant une liste de 14 priorités clés essentielles à satisfaire dans les domaines relatifs à la démocratie et au fonctionnement de l’État, à l’état de droit, aux droits fondamentaux et à la réforme de l’administration publique. En décembre 2019, le Conseil a conclu que la Bosnie-Herzégovine ne dispose pas d’un niveau d’avancement politique suffisant dans aucun des domaines concernés et lui demande de travailler sur les 14 priorités mises en avant par la Commission.Ce rapport, marquant clairement sa volonté d’intégration du pays dans l’Union, élude fâcheusement le fait que la décision doit emporter l’accord de l’ensemble des parties constitutives du pays. Or, la République serbe y est viscéralement opposée. En outre, la faiblesse notoire tant des infrastructures que des moyens du pays dans la lutte contre l’immigration illégale n’est jamais évoquée dans ce texte. Il s’agit pourtant du maillon faible sur la route migratoire des Balkans ; on peut même dire que les autorités bosniaques font véritablement preuve de passivité et de complaisance à l’égard des vagues de « migrants ». J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport, qui comme pour tous ceux concernant les pays des Balkans occidentaux, marque clairement sa volonté d’intégration du pays dans l’Union européenne.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-    
-    
 
+    <section>
     
     
-
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            
+                <p>Mais le plus inacceptable est le risque sécuritaire qu’implique, d’une part, le rapatriement des djihadistes, dont les Balkans recelaient la plus haute concentration d’Europe et, d’autre part, la crise migratoire en provenance notamment du Pakistan, avec pour corollaire l’infiltration de l’islam radical.</p>
+            
+                <p>Si l’Union européenne s’enferre dans l’élargissement aux Balkans, en Bosnie-Herzégovine comme ailleurs le manque d’enthousiasme est patent. Qu’on en juge par l’attitude du membre bosniaque de la présidence tripartite du pays, qui condamnait la France dans l’affaire Charlie Hebdo et vantait la contribution d’Erdoğan à la stabilité de la région.</p>
+            
+                <p>L’Union européenne, qui aura, pour la seule Bosnie-Herzégovine, fourni 1,19 milliard d’euros en fonds de pré-adhésion, ne retire donc rien de son investissement dans la région et d’un processus d’élargissement qui n’a plus lieu d’être.</p>
+            
+        </article>
     
-    
-
-    
-    
-
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2171(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0185_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-06-23-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

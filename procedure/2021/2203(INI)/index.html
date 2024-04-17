@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Activités financières de la Banque européenne d&#39;investissement - rapport annuel 2021</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Activités financières de la Banque européenne d&#39;investissement - rapport annuel 2021</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(484/577 * 100%)">484</div>
-  
-  
-    <div class="-" style="width: calc(52/577 * 100%)">52</div>
+    <div class="for" style="width: calc(484/577 * 100%)">484</div>
   
   
-    <div class="0" style="width: calc(41/577 * 100%)">41</div>
+    <div class="against" style="width: calc(52/577 * 100%)">52</div>
+  
+  
+    <div class="abstention" style="width: calc(41/577 * 100%)">41</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,30 +88,26 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(41/63 * 100%)">41</div>
+    <div class="for" style="width: calc(41/63 * 100%)">41</div>
   
   
-    <div class="-" style="width: calc(12/63 * 100%)">12</div>
+    <div class="against" style="width: calc(12/63 * 100%)">12</div>
   
   
-    <div class="0" style="width: calc(10/63 * 100%)">10</div>
+    <div class="abstention" style="width: calc(10/63 * 100%)">10</div>
   
 </div>
  
 </section>
-            <a href="/voting/146707">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/146707">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Banque européenne d&#39;investissement (BEI)</li>
-        
     
         
         
@@ -119,153 +119,437 @@
             <li>Institutions de l&#39;Union</li>
         
     
+        
+        
+            <li>Banque européenne d&#39;investissement (BEI)</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2203(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0165_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-07-07-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>29 bis. regrette qu’à la fin de l’année 2020, les expositions décaissées en Turquie, pays qui viole plusieurs principes fondamentaux de la liberté et de la démocratie, se soient élevées à 10,4 milliards d’EUR au total et que 500 millions d’EUR supplémentaires aient été engagés dans le cadre d’opérations signées, mais pas encore décaissées, dont 100 millions d’EUR qui devraient l’être par la BEI à ses propres risques;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">88</div>
+  <div class="against">441</div>
+  <div class="abstention">45</div>
+</span>
+
+  
+    
+    <a href="/voting/147048">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(88/574 * 100%)">88</div>
-  
-  
-    <div class="-" style="width: calc(441/574 * 100%)">441</div>
-  
-  
-    <div class="0" style="width: calc(45/574 * 100%)">45</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/147048">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>33 bis. demande la publication en temps utile des procès-verbaux du conseil d’administration de la BEI;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°3 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>39 bis. observe avec inquiétude l’augmentation continue des frais généraux administratifs, qui est principalement due à la hausse des coûts liés au personnel; invite la BEI à faire preuve de discipline en matière de coûts et à préserver la souplesse et l’efficacité de sa structure d’encadrement;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°4 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>41 bis. demande à la BEI de publier chaque année le taux de recouvrement des fonds prêtés en cas de fraude avérée;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2203(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0165_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
   
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-07-07-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Je me suis abstenu sur ce rapport car si la Banque européenne d’investissement permet le financement d’initiatives, de projets et d’entreprises utiles aux Européens, je trouve contestable une partie de son action extérieure qui finance largement, sans contrepartie et sans se soucier de la diplomatie des États membres, des pays tiers - y compris la Turquie du Sultan Erdogan - alors qu’il y a tant à faire au sein de l’UE.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            Ce rapport a pour but d’exprimer les attentes du parlement européen relative aux activités de la BEI. Les compatriotes français souhaiteraient que leurs impôts soient utilisés à bon escient. La Banque Européenne d’Investissement n’est apparemment pas de cet avis. En effet, bien que ses résultats financiers soient sains, la BEI a accordé pour un montant de 14% de son investissement de prêt dans des pays qui ne sont pas dans l’union européenne, soit le même pourcentage que pour la France. Ce qui paraît faible au regard du poids de l’économie française dans l’union européenne. De plus, le rapport demande que la grande partie des investissements se concentre sur l’accord de Paris portant sur le climat afin de subvenir au green deal et répondre aux attentes européennes en délaissant bien que mentionné dans le rapport un financement pour la transition écologique et le secteur agricole pour soutenir les jeunes mais ce qui est encore trop faible. Pour ces raisons, j’ai voté contre ce rapport de 2021 qui ne parait pas équilibré et deux ans après nous en voyons la répercussion macroéconomique sur la conjoncture actuelle.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            . – Ce texte est un rapport présenté chaque année pour faire état du contrôle des activités financières de la Banque européenne d’investissement. Il s’agit du rapport établi pour l’année 2021. Un des amendements que j’ai soutenu par mon vote invite la BEI à définir une stratégie spécifique aux droits de l’homme ainsi qu’un plan d’action pour sa mise en œuvre, en tenant compte du travail des enfants et du travail forcé, afin d’éviter de connaître à nouveau une situation dans laquelle un financement a été accordé à des projets menés dans des pays recourant à ce type de main-d’œuvre. Il est également demandé à la BEI d’aligner sa stratégie de financement sur les niveaux d’ambition et d’attachement aux valeurs et aux objectifs communs démontrés par les pays partenaires de l’Union. Partageant les orientations et ambitions de ce texte, je me suis prononcé en sa faveur.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car la Banque européenne d’investissements prévoir d’augmenter ses investissements dans les pays tiers, poursuivant ainsi la politique diplomatique de l’Union européenne, contraire aux intérêts des États membres.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport sur les activités financières de la Banque européenne d&#39;investissement (BEI). Le texte souligne que la BEI a permis de financer 95 milliards EUR d’investissements en 2021, en faveur de plus de 430 000 PME employant 4,5 millions de salariés. Il invite les États membres, en leur qualité d’actionnaires, à augmenter la capitalisation de la BEI afin que les prêts à long terme et les instruments innovants financent davantage de projets à fort potentiel de gains dans le domaine de la durabilité, de l’innovation et du social dans des domaines stratégiques clés de l’Union tels que la transformation numérique et la transformation écologique.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            Le Parlement européen publie chaque année un rapport d’initiative sur les activités financières de la Banque européenne d’investissement (BEI) dans le but d’examiner les activités actuelles et futures de la BEI, sur la base du rapport d’investissement 2021/2022. Le rapport de cette année insiste sur rôle de la BEI dans le soutien à la réponse de l’UE à la crise de la COVID-19 ainsi que pendant la guerre en Ukraine, sur le soutien financier important de la BEI aux PME, les investissements dans l’innovation et la numérisation, qui contribuent à la compétitivité mondiale de l’Union et à l’emploi. Néanmoins, j’ai décidé de m’abstenir sur le vote final le rapport multipliant les exigences visant à alourdir les procédures en créant une bureaucratie plus importante non seulement pour la BEI mais aussi pour les intermédiaires financiers et les entreprises.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations et les recommandations du Parlement européen sur l’activité de la banque européenne d’investissement. Il souligne le rôle essentiel de la BEI dans le soutien à la reprise sociale et économique, salue les efforts en matière d’évaluation de la durabilité des entreprises financées, invite à développer l’évaluation de la dimension de genre dans les projets soutenus, et appelle à renforcer encore la lutte contre la fraude et l’évasion fiscale. J’ai donc voté pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté en faveur de ce rapport annuel des activités de la Banque européenne d’investissement. Ce rapport présente l’évaluation et les recommandations du Parlement concernant les futurs investissements de la BEI. Le rapport demande notamment de cesser les investissements jugés incompatibles avec les objectifs du Green deal et de se concentrer sur les investissements dans des projets qui augmentent la sécurité de l&#39;approvisionnement énergétique en diversifiant les sources et les fournisseurs d&#39;énergie. Enfin, il est demandé de veiller à ce que les investissements de la BEI dans les logements sociaux et abordables contribuent également à améliorer l&#39;efficacité énergétique.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Si certains points du rapport sont intéressants, nous nous opposons aux investissements dans les pays tiers via la BEI. Nous sommes également contre le fait de transformer la BEI en banque de climat et de pousser l’agenda écologiste irréaliste présentée dans l&#39;accord de Paris. J’ai donc voté contre ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            La BEI se vante d’être un acteur agissant « en faveur du climat » et pratique donc une taxonomie de plus en plus en vogue sur la labellisation des investissements et leur impact écologique réel ou supposé.En plus, le principe d’investissement dans des pays tiers est réaffirmé, et le rapporteur demande l’augmentation des fonds pour ces pays. Pourtant, le développement international devrait rester une compétence des États Membres, car il est lié à la politique diplomatique (en effet la BEI fait doublon à l’Agence Française de Développement). Finalement, via la BEI, les contribuables français financent le développement de pays tiers, sans que ces pays n’en sachent rien.Si certains points du rapport sont intéressants, notamment la partie sur le soutien des PME, je m’oppose aux investissements dans les pays tiers via la BEI ainsi qu’au fait de transformer la BEI en banque de climat et de pousser l’agenda écologiste irréaliste présentée dans l&#39;accord de Paris.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            . – Pour le moins, une partie des investissements réalisés par la Banque européenne d&#39;investissement sont discutables, notamment la transition verte et le financement des pays tiers. Ces investissements ne servent ni l&#39;économie européenne ni les européens. Il faut également ajouter qu&#39;en 2021, le total des prêts non performants s&#39;est élevé à 60 millions d&#39;euros. Rappelons une nouvelle fois que le développement international est et doit rester une compétence des États membres car il est étroitement lié à la diplomatie. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport annuel 2021 de la Banque Européenne d’Investissement. Une partie des investissements réalisés par cette banque sont discutables, notamment les financements en faveur de pays tiers. Il faut également ajouter qu&#39;en 2021, le total des prêts non performants s&#39;est élevé à 60 millions d&#39;euros.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197503</div>
+            
+            <header><b>David CORMAND</b> | Les Écologistes</header>
+            
+                <p>À Lugano, lors de la première conférence internationale sur la reconstruction de l’Ukraine, la BEI s’est engagée à participer à cette reconstruction. C’est l’occasion pour moi d’appeler à ce que cette reconstruction se fasse avec des critères qui, eux aussi, soient exigeants par rapport au monde d’après que nous voulons bâtir, en Ukraine bien sûr, mais également partout en Europe.</p>
+            
+                <p>C’est l’occasion aussi d’attirer l’attention sur les transports, puisqu’un document de travail sera présenté le 13 juillet et que ce document, en l’état, permettra encore des investissements sur les routes et les autoroutes. Donc, il y a encore des travaux et des évolutions à faire.</p>
+            
+                <p>Depuis 2019, notre objectif est de transformer la Banque européenne d’investissement en banque du climat. Des avancées ont été faites depuis lors, avec des changements importants dans les politiques de la BEI avec le </p>
+            
+                <p>Une attention particulière – et c’est une des nouveautés du rapport de cette année – a été portée à la question agricole, pour que nous accompagnions spécifiquement des projets agricoles qui soient compatibles avec les enjeux climatiques, mais aussi spécifiquement en ce qui concerne la condition du bien-être animal. C’est aussi quelque chose que mes collègues et moi avons souhaité inclure dans le rapport de cette année afin de ne pas financer des élevages intensifs.</p>
+            
+                <p>Une autre question importante qui a fait l’actualité à Lisbonne il y a quelques jours: le non-financement de l’activité minière dans les fonds des océans. C’est quelque chose qui est extrêmement explosif mais qu’on doit vraiment surveiller, puisqu’il y a une tentation de continuer la conquête minière, y compris dans les fonds océaniques, alors que les océans sont déjà soumis à beaucoup de pression avec le changement climatique, qui altère leur capacité à accueillir la vie. Donc, bien sûr, les activités minières dans ces milieux fragiles seraient une catastrophe.</p>
+            
+                <p>Enfin, je voulais finir sur de petits progrès qu’on pourrait faire sur la question de la transparence et des droits humains. Là encore, la BEI a évolué, mais il y a de nouveaux standards environnementaux et sociaux qu’on doit continuer à développer, de nouvelles politiques de transparence. Je sais notamment qu’en 2010 encore, quasiment 100 % des rapports qui étaient soumis au conseil d’administration de la BEI était publics trois semaines avant ce conseil d’administration. Depuis, le pourcentage a chuté et il se situe aujourd’hui à 60 %. Or, c’est très important d’avoir connaissance de ces rapports avant qu’ils soient soumis aussi au conseil d’administration de la BEI, afin de pouvoir vérifier en amont les impacts, notamment environnementaux et sociaux, que les engagements financiers de la BEI peuvent avoir. Donc, bravo pour les efforts qui ont été entrepris depuis 2019. Pour avoir une véritable banque du climat qui soit robuste, il y a encore du travail à faire, et c’est normal que ça ne se fasse pas en quelques jours ou en quelques mois. Mais nous avons des pistes et de nombreuses idées pour vous aider et vous accompagner dans cette évolution.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197503</div>
+            
+            <header><b>David CORMAND</b> | Les Écologistes</header>
+            
+                <p>La cohérence, la Banque européenne d’investissement en fait preuve avec la question des investissements sur les problèmes écologiques. La cohérence, c’est de le faire jusqu’au bout et de ne pas, en même temps, financer des projets qui seraient encore de l’ordre du carbone. Mais nous allons sur le chemin de la cohérence.</p>
+            
+                <p>La constance, c’est de persister dans l’effort, y compris quand il y a des situations d’urgence – j’y faisais allusion tout à l’heure par rapport à l’Ukraine. Même quand les choses sont à reconstruire après un drame comme celui que vit l’Ukraine, il faudra faire preuve de constance dans le fait de continuer à respecter ces critères qui nous sont chers.</p>
+            
+                <p>Et puis le courage – vous en avez parlé à la fin –, c’est celui de faire des choix difficiles. C’est aussi de faire en sorte de toujours aller dans le sens de plus de transparence, de se </p>
+            
+                <p>Donc, de la cohérence, de la constance, du courage, c’est ce que je vous souhaite et ce que je nous souhaite pour continuer à évoluer positivement avec la Banque européenne d’investissement.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

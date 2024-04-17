@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Une nouvelle stratégie européenne en faveur des PME européennes</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Une nouvelle stratégie européenne en faveur des PME européennes</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(533/673 * 100%)">533</div>
-  
-  
-    <div class="-" style="width: calc(58/673 * 100%)">58</div>
+    <div class="for" style="width: calc(533/673 * 100%)">533</div>
   
   
-    <div class="0" style="width: calc(82/673 * 100%)">82</div>
+    <div class="against" style="width: calc(58/673 * 100%)">58</div>
+  
+  
+    <div class="abstention" style="width: calc(82/673 * 100%)">82</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(30/73 * 100%)">30</div>
+    <div class="for" style="width: calc(30/73 * 100%)">30</div>
   
   
-    <div class="-" style="width: calc(29/73 * 100%)">29</div>
+    <div class="against" style="width: calc(29/73 * 100%)">29</div>
   
   
-    <div class="0" style="width: calc(14/73 * 100%)">14</div>
+    <div class="abstention" style="width: calc(14/73 * 100%)">14</div>
   
 </div>
  
 </section>
-            <a href="/voting/125521">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/125521">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -121,21 +126,307 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2131(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2131(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0237_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-12-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-12-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté pour ce texte qui favorise les PME, notamment françaises.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            24 millions de PME existent aujourd’hui en Europe. Elles représentent plus de la moitié du PIB de l’Union et emploient environ 100 millions de travailleurs européens. Ce texte abonde dans le sens de la stratégie PME de la Commission européenne présentée en mars dernier et milite notamment pour une réduction de leurs charges administratives, notion que je défends, car bien souvent les tracasseries administratives freinent leurs gains de productivité. J’ai soutenu ce texte, car les PME constituent aujourd’hui en Europe le tissu entrepreneurial le plus solide et le plus prometteur pour l’avenir de notre économie.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J&#39;ai voté pour ce rapport, car il demande à l&#39;UE de soutenir les PME, suite à la crise du coronavirus qui les a frappées. L&#39;objectif est de les aider à franchir ce cap difficile tout en les accompagnant à plus long terme dans la transition vers une économie numérique et plus respectueuse de l&#39;environnement. Le rapport a notamment le mérite d&#39;insister sur la nécessité de réduire leurs charges administratives et de mettre en œuvre un « Small Business Act ».
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Si ce texte a le mérite de cocher toutes les cases des problématiques auxquelles nos PME font face et devront faire face à l’avenir (transformation numérique, intelligence artificielle, transition écologique, formation professionnelle etc), il donne l’impression visuelle, tant les mots sont répétés, de ne se préoccuper que des « charges », de la « règlementation » et de la « bureaucratie ». Cette obsession rend la lecture pénible et interroge sur le fond, car de nombreuses « règlementations » et « bureaucraties » chargées de les faire appliquer permettent de protéger les consommateurs, d’édicter des normes relatives à la qualité des produits et toutes sortes d’éléments structurant la véritable compétitivité européenne : la qualité. Sans ces « règlementations », l’Europe perdrait ainsi son avantage compétitif et rapprocherait sa stratégie de celle du... Royaume-Uni, contre lequel nous n’avons pourtant pas de mots assez durs concernant sa désinvolture au sujet des normes. Les quelques passages du texte se préoccupant de l’accès des PME aux financements bancaires et donc à la possibilité d’investir et muscler leur appareil productif sont bien trop faibles pour parvenir à rééquilibrer ce texte qui est une caricature de manuel d’économie de l’offre. J’ai voté CONTRE.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport pour une nouvelle stratégie en faveur des PME européennes. On recense 25 millions de PME en Europe, menacées par la crise sanitaire, mais qui constituent aussi un puissant levier en faveur de la relance. Le texte préconise de prendre urgemment des mesures d’allègement des contraintes réglementaires qui pèsent sur ces entreprises. Il suggère de faciliter leur accès aux financements, davantage sous forme de subventions que sous forme de prêts. Enfin, il appelle à la mise en place d’un système d’ajustement carbone aux frontières de l’UE pour protéger nos PME du dumping environnemental.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            La pandémie de Covid-19 a mis nos systèmes à rude épreuve et plus particulièrement nos PME et TPE qui sont pourtant au cœur de notre économie européenne. Par leur dynamisme, elles sont porteuses de richesses et créatrices de nombreux emplois.Faisant suite à la publication de la stratégie de la Commission en faveur des PME européennes, le Parlement insiste à travers ce rapport sur la nécessité de créer un environnement favorable aux PME, en particulier face aux nouveaux défis créés par la pandémie, mais aussi face aux défis liés au numérique et à la transition verte. La nécessité de réduire la charge administrative, de permettre à nos entreprises un meilleur accès au marché unique et aux marchés internationaux et de les accompagner notamment dans la numérisation figurent dans le texte final.En tant que négociatrice pour le PPE sur l’avis adopté en commission de l’emploi et des affaires sociales sur ce texte, j’ai eu à cœur de mettre en avant des pistes qui favoriseront à l’avenir le développement et la pérennité de nos PME et TPE européennes.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter la position du Parlement européen sur la stratégie pour les PME élaborée par la Commission. Il met notamment l’accent sur les charges administratives qui pèseraient sur le développement des petites et moyennes entreprises, appelle à renforcer la concurrence et la compétitivité et loue les bienfaits des accords commerciaux de libre-échange. J’ai donc voté contre ce texte qui ne tire pas les leçons de la crise économique et sociale que nous traversons et des échecs des politiques fondées sur la logique de libre-marché dérégulé.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce rapport prend position sur la Stratégie pour les PME de la Commission. Ce texte est typique de la novlangue macroniste par ses appels incessants à libérer les énergies des prétendues « charges administratives » qui pèseraient sur les PME, une focale monomaniaque sur les start-ups agissant dans le domaine des technologies disruptives, et une absence presque totale de toute mention des travailleurs, de leurs droits et des organisations syndicales. Je rejette ce rapport caricatural sans aucune forme d’hésitation.
+        </article>
+    
+        <article>
+            <div class="hidden">197589</div>
+            
+            <header><b>Laurence FARRENG</b> | Mouvement Démocrate</header>
+            J&#39;ai voté contre ce rapport d&#39;initiative, ma ligne politique étant de voter contre tout rapport non-législatif porté par le groupe ID, ne souhaitant pas être liée avec ce groupe politique et les positions qu&#39;il défend. Je reste bien évidemment attentive à la situation et aux demandes des PME européennes, particulièrement en cette période de crise sanitaire, et voterai bien évidemment en faveur de tout texte ayant une portée législative directe permettant d&#39;améliorer leurs perspectives.
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            Les PME jouent un rôle essentiel dans le tissu industriel européen, puisqu’elles pourvoient 2 emplois sur 3. Ce rapport d’initiative vise à soutenir les PME dans leur transition vers la durabilité et la numérisation. Il prévoit également un allègement du fardeau administratif ainsi qu’un accès facilité aux financements. La future stratégie PME devra être alignée sur la stratégie industrielle européenne, ainsi que sur les objectifs du pacte vert, tout en prenant en compte l’incidence de la pandémie de COVID 19 sur les PME.Cependant, malgré la qualité des compromis obtenus par nos groupes politiques respectifs, le rapporteur de ce texte émane du groupe d’extrême droite Identité et Démocratie, aussi je n’ai pas pu voter en faveur de ce rapport. Ce groupe politique dont est issu le Rassemblement National français s’oppose à l’idée même d’Union européenne, et je ne souhaite pas donner du crédit à un tel groupe, qui va à l’encontre de nos valeurs et principes européens, ainsi que des intérêts des PME, qui ont véritablement besoin de l’Union européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">197585</div>
+            
+            <header><b>Pierre KARLESKIND</b> | Renaissance</header>
+            En accord avec le principe de cordon sanitaire établi au début de mon mandat, je me suis opposé à ce rapport d’initiative, puisqu’il a été porté par le député italien d’extrême droite Paolo Borchia. Il n’est pas envisageable pour moi de soutenir des rapports portés par des députés d’extrême droite, qui se sont fait élire sur un discours profondément anti-européen. Au quotidien, je travaille pour approfondir le projet européen, et je le fais en collaboration avec de nombreux collègues ne venant pas nécessairement de la même famille politique que moi, mais avec qui je partage néanmoins les mêmes idéaux démocratiques. Ce n’est pas le cas de mes collègues d’extrême droite, je ne peux donc pas soutenir ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Bien qu&#39;il semble conforter la Commission dans un rôle qu&#39;elle ne devrait pas avoir, ce rapport vise à protéger les plus faibles face aux géants commerciaux, aussi bien sur le marché européen interne qu&#39;externe. Il favorise donc les PME, notamment françaises.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            J’ai voté pour ce rapport, car bien qu’il semble conforter la Commission dans un rôle qu’elle ne devrait pas avoir, ce rapport vise à protéger « les plus faibles » face aux géants commerciaux, aussi bien sur le marché européen interne qu’externe. Il favorise donc les PME, notamment françaises.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            Il y a un besoin immédiat de rétablir la liquidité des PME pour assurer leur fonctionnement de base. En effet, la survie des PME à la sortie de la crise sanitaire dépendra d’une prise de décision rapide, d’un financement adéquat et d’une disponibilité rapide des liquidités. Il est également nécessaire de réduire les charges réglementaires pour améliorer l’accès au financement national des PME.Ce rapport souligne l’importance des modèles bancaires traditionnels, y compris les petites banques régionales et les coopératives d’épargne. Le texte invite la BEI à collaborer plus étroitement avec les intermédiaires financiers des États membres afin de diffuser les informations pertinentes aux PME et ainsi améliorer leur accès au financement. De plus, ce rapport veut garantir un accès non discriminatoire aux prêts bancaires pour les PME. J&#39;ai donc voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            J&#39;ai voté en faveur de ce rapport qui vise à protéger les PME face aux géants commerciaux, aussi bien sur le marché européen que sur les marchés extérieurs.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Les PME européennes semblent les oubliées de la crise actuelle, alors qu’elles sont environ 25 millions. La compétitivité des PME européennes est fortement impactée par une concurrence déloyale de producteurs non européens qui ne sont pas soumis au même droit du travail et aux mêmes normes environnementales. En France en 2020, il y a environ 50 000 faillites et il risque d’y en avoir 20 000 juste pour le premier trimestre de l’année 2021.Il devenait urgent pour l’Union européenne de développer une stratégie viable de soutien des PME, apte à surmonter sur du long terme les défis mentionnés ainsi que les difficultés propres à la pandémie. Ce rapport souligne l’importance des modèles bancaires traditionnels, y compris les petites banques régionales et les coopératives d’épargne. Le texte invite la BEI à collaborer plus étroitement avec les intermédiaires financiers des États membres afin de diffuser les informations pertinentes aux PME et ainsi améliorer leur accès au financement. De plus, ce rapport veut garantir un accès non discriminatoire aux prêts bancaires pour les PME.J’ai voté pour ce rapport qui vise à protéger « les plus faibles » face aux géants commerciaux.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Alors que la pandémie de Covid-19 continue de sévir, nous sommes confrontés à une crise où l’économie est fortement ébranlée. Les PME européennes semblent oubliées dans cette crise, alors qu’elles sont environ 25 millions. Les PME sont essentielles dans la vie économique des pays membres. Pour 2021, les études montrent que plus de 62.000 PME seront en défaillance. Il devenait urgent pour l’Union européenne de développer une stratégie viable de soutien des PME, apte à surmonter sur du long terme les défis mentionnés ainsi que les difficultés propres à la pandémie. Ce rapport souligne l’importance des modèles bancaires traditionnels, y compris les petites banques régionales et les coopératives d’épargne. J’ai voté pour ce rapport, car il vise à protéger « les plus faibles » face aux géants commerciaux, aussi bien sur le marché européen interne qu’externe. Il favorise donc les PME, notamment françaises.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Bien avant le déclenchement de la Covid-19, la croissance des 25 millions PME européennes était inférieure à celle des concurrentes non européennes, notamment du fait d’un accès plus difficile à des financements et à des crédits. Pour notre pays, en 2020, il y a eu environ 50 000 faillites et pour 2021, les études montrent que plus de 62 000 PME seront en défaillance.Il y d’abord le besoin de rétablir la liquidité des PME ; leur survie dépendra d’une prise de décision rapide, d’un financement adéquat. Il est également nécessaire de réduire les charges réglementaires pour améliorer leur accès au financement national. Ce rapport souligne l’importance des modèles bancaires traditionnels comme les banques régionales et les coopératives d’épargne. Le texte veut garantir un accès non discriminatoire aux prêts bancaires pour les PME et invite la BEI à collaborer plus étroitement avec les intermédiaires financiers des États membres afin de diffuser les informations pertinentes aux PME.Même si ce rapport donne malheureusement un rôle trop important à la Commission, il vise à protéger « les plus faibles » face aux géants commerciaux, aussi bien sur le marché européen interne qu’externe. Il favorise donc les PME,notamment françaises. J’ai donc voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté en faveur de ce rapport qui favorise les PME, françaises notamment. Il était urgent de développer une stratégie viable de soutien à nos PME, durement frappées par la pandémie mais aussi par la concurrence déloyale.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            
+                <p>Ce patrimoine constitué par nos PME doit être conservé et protégé et nous devons en faire la promotion. Malheureusement, ces trésors d’expérience et de créativité se heurtent à la politique de la Commission: soutien incessant aux grands groupes, création permanente de normes administratives et techniques toujours plus contraignantes, contraintes juridiques absurdes, comme l’interdiction faite aux États d’avoir une politique volontariste, sous peine de contredire la sacro-sainte règle de la concurrence libre et non faussée au sein du marché européen. Voici quelques-uns des innombrables obstacles auxquels doivent faire face ces forces vives européennes. Les résultats de cette politique sont catastrophiques. </p>
+            
+                <p>Ainsi l’exemple de Photonis, PME française spécialisée dans le matériel militaire de pointe, innovante aussi en matière de tests contre l’épidémie de COVID à laquelle nous faisons face, déjà vendue aux Américains, sans que la France ait pu mettre en place une politique protectionniste et nationale sur ces savoir-faire pourtant essentiels à notre souveraineté. Un </p>
+            
+                <p>Cette crise, entraînée par des restrictions souvent incompréhensibles de nos gouvernants, affecte durement ces entreprises. En France, on estime à 10 % le risque de défaillance des PME. L’Europe se vide de ses forces vives, préférant la mobilité constante à la solidité enracinée, un monde hors-sol à des savoir-faire nationaux. Sans protection à ses frontières, elle a livré les pays membres à une concurrence déloyale. Il nous faut urgemment retrouver, sur ce terrain aussi, notre souveraineté. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">204420</div>
+            
+            <header><b>Claude GRUFFAT</b> | Les Écologistes</header>
+            
+                <p> – Monsieur le Président, Madame la Commissaire, chers collègues, le commissaire Thierry Breton a raison: pour tirer les enseignements de la crise et viser enfin l’autonomie stratégique, il faut aider les entreprises championnes européennes.</p>
+            
+                <p>Mais nous n’avons pas la même définition de ce que sont ces fameuses championnes européennes, et nous ne partageons pas les mêmes priorités en termes d’autonomie stratégique. Quand la Commission pense aux grosses entreprises de l’industrie, de la défense, de l’aérien, de l’automobile carbonée, moi je pense aux PME, qui assurent un lien social, les circuits courts, la revitalisation écologique et l’emploi sur nos territoires.</p>
+            
+                <p>Le véritable tissu stratégique pour l’Europe n’est pas constitué des quelque 40 000 multinationales et grosses entreprises sans ancrage territorial et capitalisant sur la crise. Ce sont les 24 millions de PME qui nous nourrissent et créent de l’emploi. Malheureusement, ce sont celles-là qui ont le plus souffert de la crise.</p>
+            
+                <p>Je ne veux pas opposer ici PME et multinationales, mais je veux montrer les inégalités de traitement via les aides d’État en Europe. À ce jour, moins de 10 % des 3 000 milliards d’aides d’État vont aux TPE et PME. Les 90 % restants sont captés par les grandes entreprises. Cette disproportion n’est pas acceptable.</p>
+            
+                <p>Alors, oui: investissons dans notre autonomie stratégique, soutenons nos championnes européennes, mais faisons-le de façon plus juste, plus équilibrée, plus proportionnée. </p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
+
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

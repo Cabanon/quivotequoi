@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Création de la facilité pour l&#39;Ukraine</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,82 +22,39 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Création de la facilité pour l&#39;Ukraine</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
-    <article>
-    <header>👍 Adoption du texte | 
-
-✅️ Adopté
-
-</header>
-    
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
-        <section>
-
-<div class="votes ">
-  
-    <div class="+" style="width: calc(512/620 * 100%)">512</div>
-  
-  
-    <div class="-" style="width: calc(45/620 * 100%)">45</div>
-  
-  
-    <div class="0" style="width: calc(63/620 * 100%)">63</div>
-  
-</div>
-</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
-        <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
-        
-        
-            <section>
-
-
-
-<div class="votes">
-  
-    <div class="+" style="width: calc(52/70 * 100%)">52</div>
-  
-  
-  
-    <div class="0" style="width: calc(18/70 * 100%)">18</div>
-  
-</div>
- 
-</section>
-            <a href="/voting/159025">🗳 Voir le détail du vote</a>
-        
-    
-    </article>
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -104,12 +62,12 @@
     
         
         
-            <li>Relations extérieures de l&#39;Union</li>
+            <li>Fonds structurels, fonds d&#39;investissement en général, programmes</li>
         
     
         
         
-            <li>Aide d&#39;urgence, alimentaire, humanitaire, aux réfugiés, Réserve d&#39;aide d&#39;urgence</li>
+            <li>Relations extérieures de l&#39;Union</li>
         
     
         
@@ -124,7 +82,7 @@
     
         
         
-            <li>Politique commerciale commune en général</li>
+            <li>Aide d&#39;urgence, alimentaire, humanitaire, aux réfugiés, Réserve d&#39;aide d&#39;urgence</li>
         
     
         
@@ -134,273 +92,540 @@
     
         
         
-            <li>Fonds structurels, fonds d&#39;investissement en général, programmes</li>
+            <li>Politique commerciale commune en général</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/0200(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0286_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-10-17-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,124693,197694,197697,197698,204418,245018">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,204418,245018">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,124693">🇫🇷 Renaissance</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197626,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197626,197629,197615">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>(14 bis) Tant que la guerre continuera, l’Ukraine subira de nouvelles destructions et davantage de bouleversements. Si ce scénario se poursuit, l’efficacité et la logique à long terme de la facilité seront compromises. Les États membres de l’Union doivent tout mettre en œuvre pour renforcer la diplomatie et mettre fin à la guerre afin que l’assistance que nous apportons par l’intermédiaire de la facilité puisse produire des résultats durables et aider l’Ukraine à se redresser, à se reconstruire et à se moderniser durablement.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">66</div>
+  <div class="against">495</div>
+  <div class="abstention">63</div>
+</span>
+
+  
+    
+    <a href="/voting/159071">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(66/624 * 100%)">66</div>
-  
-  
-    <div class="-" style="width: calc(495/624 * 100%)">495</div>
-  
-  
-    <div class="0" style="width: calc(63/624 * 100%)">63</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/159071">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>(16 bis) En mars 2023, le FMI a estimé que la dette de l’Ukraine était insoutenable en l’absence de traitement de la dette de la part des créanciers publics et privés. L’Ukraine est contrainte d’effectuer des paiements substantiels et onéreux au titre du service de la dette au FMI et à d’autres bailleurs de fonds internationaux dans les années à venir. Compte tenu de la gravité de la situation économique en Ukraine, le fait de continuer à rembourser la dette d’avant- guerre et la dette accumulée pendant la guerre limitera considérablement l’accès de l’Ukraine aux fonds publics pour la reconstruction ainsi que la fourniture de biens et de services publics dans l’intérêt des droits de l’homme de la population ukrainienne. Par conséquent, l’Union demandera aux institutions internationales d’emprunt telles que le Fonds monétaire international, la Banque mondiale, la Banque européenne d’investissement et les prêteurs privés d’annuler la dette extérieure de l’Ukraine.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">49</div>
+  <div class="against">570</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/159072">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(49/627 * 100%)">49</div>
-  
-  
-    <div class="-" style="width: calc(570/627 * 100%)">570</div>
-  
-  
-    <div class="0" style="width: calc(8/627 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/159072">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>(33 bis) La facilité et la reconstruction de l’Ukraine ne seront pas utilisées par des fonds d’investissement en vue de faire fructifier leurs portefeuilles d’actifs et leurs bilans en s’appropriant les biens publics, les avoirs publics, les terres ou encore les principales industries et infrastructures de l’Ukraine et en facilitant la privatisation et la financiarisation à grande échelle des entreprises sociales ukrainiennes par des capitaux internationaux.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">101</div>
+  <div class="against">496</div>
+  <div class="abstention">29</div>
+</span>
+
+  
+    
+    <a href="/voting/159073">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(101/626 * 100%)">101</div>
-  
-  
-    <div class="-" style="width: calc(496/626 * 100%)">496</div>
-  
-  
-    <div class="0" style="width: calc(29/626 * 100%)">29</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/159073">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>(46 bis) Compte tenu du poids déjà considérable de la dette de l’Ukraine, au moins 50 % de l’aide apportée par l’Union dans le cadre de la facilité devrait prendre la forme de subventions.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">45</div>
+  <div class="against">521</div>
+  <div class="abstention">57</div>
+</span>
+
+  
+    
+    <a href="/voting/159074">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(45/623 * 100%)">45</div>
-  
-  
-    <div class="-" style="width: calc(521/623 * 100%)">521</div>
-  
-  
-    <div class="0" style="width: calc(57/623 * 100%)">57</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/159074">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>(46 ter) La Russie et ses alliés doivent payer pour les dégâts causés à l’Ukraine. L’Union et ses États membres devraient, en étroite collaboration avec d’autres institutions et pays, confisquer, dans les limites du droit coutumier international, des avoirs publics russes afin de financer la reconstruction de l’Ukraine et d’indemniser les victimes de l’agression russe, en réponse à la violation par la Russie de la règle fondamentale interdisant les guerres d’agression ou en tant qu’acte de légitime défense collective en vertu de l’article 51 de la Charte des Nations unies.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">28</div>
+  <div class="against">533</div>
+  <div class="abstention">56</div>
+</span>
+
+  
+    
+    <a href="/voting/159075">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(28/617 * 100%)">28</div>
-  
-  
-    <div class="-" style="width: calc(533/617 * 100%)">533</div>
-  
-  
-    <div class="0" style="width: calc(56/617 * 100%)">56</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/159075">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
+        
     
+        
+        
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            Je me suis abstenue sur la proposition de la Commission.La facilité pour l’Ukraine doit être dotée de cinquante milliards d’euros pour 2024-2027. Elle se décline en trois composantes: un soutien financier significatif aux fins de la reconstruction, un dispositif visant à attirer les investissements privés et, enfin, certaines assistances non financières comme des conseils techniques ou la mobilisation d’experts.Il est notable que depuis le début du conflit, l’Union européenne a fourni plus de 82 milliards d’euros à l’Ukraine, dont 21 milliards d’euros de soutien militaire.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Il s’agit d’une facilité spécifique visant à soutenir le redressement, la reconstruction et la modernisation de l’Ukraine et à assurer la stabilité macrofinancière du pays. Cet instrument serait doté de 50 milliards d’euros pour la période 2024-2027: 33 milliards en prêts et 17 milliards en subventions. Pour bénéficier de ces fonds, le gouvernement ukrainien devra élaborer un plan de relance, mais aussi détailler les réformes et les investissements qu&#39;il compte mener. Plusieurs modifications importantes ont été apportées pour éviter toute irrégularité dans l’utilisation des fonds européens, qui seront assortis de conditions relatives aux réformes en matière de lutte contre la fraude et la corruption. Particulièrement engagé dans le soutien de l’Union européenne à l’Ukraine, j’ai voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Depuis le début du conflit, l’UE a fourni plus de 82 milliards d’euros à l’Ukraine, dont 21 milliards de soutien militaire. Là, il s’agit de donner à Kiev, en quatre ans, l’équivalent de ce que l’UE aura donné sur la période 2022-2023 en aides macrofinancières. Il s’agit d’encourager de facto la poursuite de la guerre, la corruption endémique, dénoncée par la Cour des comptes européenne (Rapport spécial du 23 septembre 2021), et l’adhésion de ce pays à l’UE. Je me suis abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">22858</div>
+            
+            <header><b>Fabienne KELLER</b> | Renaissance</header>
+            Je me félicite de l’adoption, par le Parlement européen, du rapport sur la création de la facilité pour l’Ukraine.Il s’agit d’un instrument financier qui permet de garantir un soutien stable et flexible à l’Ukraine, en remplacement des plans d’assistance financière, octroyés à l’Ukraine depuis le début de l’année 2022.Nous demandons, avec mon groupe Renew Europe, que les avoirs de la Russie, ou des entités impliquées dans l’agression russe, qui ont été gelés par les autorités européennes financent la reconstruction de l’Ukraine via cette facilité.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            Je me suis abstenu sur ce rapport. Certes, l’Ukraine doit être aidée financièrement pour faire face à la guerre. Mais l’UE refuse de tenir compte de l’avis de la Cour des comptes européennes, qui estime que nous accordons trop d’argent à l’Ukraine sans avoir aucune garantie que ces crédits seront remboursés et sans même pouvoir contrôler leur utilisation.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            Je me suis abstenue sur ce rapport relatif à la création de la facilité pour l’Ukraine. Si j’ai, jusqu’à présent, voté les aides financières apportés à l’Ukraine pour lui permettre de faire face à l’agression russe, le texte prévoyait que les fonds apportés par ce nouvel instrument serviraient en partie à soutenir le processus d’intégration de l’Ukraine à l’UE. Fidèle à mon engagement de ne soutenir aucun élargissement pendant mon mandat, je ne pouvais soutenir ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter la position du Parlement européen sur la création de la “facilité pour l’Ukraine”. Il soutient l’établissement d’un nouveau programme d’aides à destination du peuple ukrainien, prévoit une transparence accrue sur l’utilisation des fonds et insiste sur la nécessité d’intégrer en son cœur les dimensions sociale, environnementale et sanitaire. J’ai donc voté pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            Alors que la guerre en Ukraine se poursuit, le mandat autorisant l’aide fournie par l’Union européenne arrivait à son terme fin 2023. C’est pourquoi il était urgent d’adopter une solution stable et pérenne pour soutenir les besoins de financement considérables de l’Ukraine.Dans le cadre de la révision en cours du budget de l’Union européenne, le Parlement a approuvé ce nouveau soutien financier de 50 milliards d’euros à l’Ukraine. J’ai voté pour ce texte qui réaffirme notre soutien concret au redressement, à la reconstruction et à la modernisation de l’Ukraine. C’est un outil précieux pour les Ukrainiens, en première ligne pour défendre nos valeurs et assurer notre sécurité.Avec mes collègues de Renew Europe, nous avons permis que cette facilité puisse simplifier l’aide européenne et éviter les chantages de la part des dirigeants pro-russes, tout en s’assurant que les actifs russes soient utilisés pour financer la reconstruction de l’Ukraine.
+        </article>
+    
+        <article>
+            <div class="hidden">197551</div>
+            
+            <header><b>Stéphane BIJOUX</b> | Renaissance</header>
+            J’ai voté en faveur de la création de la Facilité européenne pour l’Ukraine : un instrument financier européen qui vise à soutenir la relance, la reconstruction et la modernisation de l’Ukraine à hauteur de 50 milliards d’euros d’ici 2027. Cet outil va répondre à la fois aux besoins urgents à court terme et à la reconstruction et à la modernisation du pays à moyen terme. Nous avons également souhaité attacher à cette aide des mesures de transparence et de responsabilité démocratique sur les financements apportés. Par ce nouveau soutien, nous confirmons la solidarité de l’Union européenne avec l’Ukraine face à l’agression violente de la Russie. Nous continuerons de soutenir les Ukrainiens aussi longtemps qu’il le faudra.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Si nous sommes favorables au fait d’aider financièrement l’Ukraine, je me suis abstenu sur cette proposition, qui a été critiquée par la Cour des comptes européenne au sujet de l’opacité de ses mécanismes de dépense, de remboursement et de suivi, et qui promeut ouvertement l’adhésion de l’Ukraine à l’UE.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Le 20 juin 2023, Ursula von der Leyen annonçait la création de la Facilité pour l’Ukraine. En effet, après 20 mois de guerre et d’aides financières exceptionnelles, l’Union Européenne veut structurer dans la durée son aide civile à Kiev. La Facilité pour l’Ukraine sera dotée de 50 milliards d’euros pour la période 2024- 2027 et se décline en trois composantes. En réalité, la Facilité pour l’Ukraine entérine la diminution du soutien civil de l’Union Européenne à l&#39;Ukraine. Ces 50 milliards sur la période 2024-2027 permettront à Kiev d’assurer ses dépenses courantes et de maintenir le fonctionnement des services de l’État. Ce mécanisme a fait l’objet de critiques par la Cour des comptes européenne sur l’opacité de ses mécanismes de dépense, de remboursement et de suivi et fait la promotion de l’adhésion de l’Ukraine à l’Union européenne. Si je suis favorable au fait d’aider financièrement l’Ukraine je me suis abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Depuis le début du conflit en Ukraine, l’UE a fourni plus de 82 milliards d’euros à l’Ukraine, dont 21 milliards de soutien militaire. La Facilité pour l’Ukraine et ses 50 milliards peuvent sembler importants, mais, en réalité, il s’agit de donner à l’Ukraine en 4 ans, l’équivalent de ce que l’UE aura donné sur la période 2022-2023 en aides macro-financières. De plus, la Facilité pour l’Ukraine ne pourra pas couvrir les besoins de Kiev en termes de reconstruction. Dans les faits, la Facilité pour l’Ukraine entérine la diminution du soutien civil de l’UE à l&#39;Ukraine. Ces 50 milliards sur la période 2024-2027 permettront à Kiev d’assurer ses dépenses courantes et de maintenir le fonctionnement des services de l’État. Cette proposition a été critiquée par la Cour des comptes européenne sur l’opacité de ses mécanismes de dépense, de remboursement et de suivi, et qui promeut ouvertement l’adhésion de l’Ukraine à l’UE. Je me suis abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">234344</div>
+            
+            <header><b>Max ORVILLE</b> | Mouvement Démocrate</header>
+            J’ai soutenu la nouvelle architecture de soutien financier à l’Ukraine pour la période 2024-2027. Cette facilité fournira un soutien financier stable et flexible et accordera une visibilité aux autorités ukrainiennes pour organiser leurs finances publiques en temps de guerre. Nous souhaitons d’abord apporter un soutien financier à la reconstruction et la modernisation de l’Ukraine, fondé sur un «Plan pour l’Ukraine» composé d’objectifs de réformes et d’investissements. Nous souhaitons également faciliter les investissements publics et privés en Ukraine pour renforcer sa résilience et l’accès aux services publics. Enfin, une assistance technique sera fournie pour mettre en œuvre les réformes visant à aligner l’Ukraine sur la législation européenne. La facilité pour l’Ukraine permettra de mobiliser jusqu’à 50 milliards d’euros, dont 17 milliards d’euros de subventions et 33 milliards d’euros de prêts. En plus de cette enveloppe financière, il est nécessaire d’utiliser les actifs russes gelés depuis le début de la guerre pour financer la reconstruction du pays. Pour préserver les intérêts financiers de l’Union, le Plan pour l’Ukraine accordera une importance particulière à la réforme de l’administration publique, à la préservation de l’État de droit ainsi qu’aux mesures de lutte contre la corruption, la fraude et les conflits d’intérêts.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b>Marina MESURE</b> | La France Insoumise</header>
+            Ce rapport a pour objet de créer un programme d’aide financière à destination de l’Ukraine. Le texte mis au vote améliore considérablement la proposition de la Commission en y renforçant les volets sociaux et environnementaux. Ce programme d’aide civile est une initiative bienvenue à destination de l’État ukrainien qui ne parvient pas à financer les services publics de base du fait de la guerre imposée par le gouvernement russe. Autre point positif, cet instrument financier est constitué en grande partie de subventions et pas seulement de prêts. Bien que le texte renforce les dispositions visant à lutter contre une possible corruption au sein de l’appareil d’État ukrainien, je resterai attentive à ce que ces fonds ne soient aucunement détournés. Pour aider l’Ukraine à assurer les services publics essentiels au bénéfice des citoyens ukrainiens et à se reconstruire, j’ai voté pour ce texte.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-    
-    
 
+    <section>
     
     
-
+        <article>
+            <div class="hidden">197623</div>
+            
+            <header><b>Thierry MARIANI</b> | Rassemblement national</header>
+            
+                <p>Ces 70 milliards viennent s’ajouter aux 77 milliards qui ont déjà été financés par l’Union européenne et les États membres depuis 2022. Vous avez même dit, Monsieur le Commissaire, plus de 80 milliards. Et je ne parle même pas des 400 milliards évoqués pour la future reconstruction de l’Ukraine.</p>
+            
+                <p>De tels montants donnent le tournis à nos compatriotes, écrasés par l’inflation et par l’élévation des taux d’intérêt. Mais ces sommes, nous les donnons, et – vous le savez – sans contrepartie et sans sécurités suffisantes, comme le souligne le rapport de la Cour des comptes de l’Union européenne du 5 octobre dernier. Cette même Cour des comptes, qui indique que le pouvoir d’achat du budget de l’Union européenne pourrait fondre de près de 10 % en 2023 en raison de l’inflation, et que la poursuite de l’aide financière de l’Union européenne à l’Ukraine aura pour effet de fragiliser les futurs budgets européens.</p>
+            
+                <p>Ces sommes, nous les donnons à une classe politique impliquée dans de multiples affaires de corruption, y compris au plus haut niveau, avec le président. C’est la paix que les peuples européens rêvent de financer en Ukraine. Rien de plus, rien de moins.</p>
+            
+        </article>
     
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            
+                <p> – Monsieur le Président, Monsieur le Commissaire, chers collègues, alors que tous les regards sont légitimement tournés vers le Moyen-Orient, Vladimir Poutine se frotte les mains. Voilà qu’il accélère son offensive en continuant à commettre lui aussi des crimes odieux.</p>
+            
+                <p>L’aide de 50 milliards que nous nous apprêtons à verser à l’Ukraine est urgente, au moment où les États-Unis ne sont plus en mesure de fournir des garanties de financement. Elle est aussi une piqûre de rappel. Elle prouve une nouvelle fois le camp auquel nous appartenons: celui des démocraties. Celui des valeurs fortes que sont la paix, la liberté, l’état de droit, le pluralisme. Bref, tout ce que Vladimir Poutine et certains de ses affidés d’extrême droite et d’extrême gauche ont pu mépriser au travers de leurs votes passés dans cet hémicycle.</p>
+            
+                <p>Cette aide européenne ne sera donc pas seulement un soutien financier au long cours pour assurer aux Ukrainiens la reconstruction de leur nation, des hôpitaux fonctionnels et des écoles où continue à se transmettre le savoir aux enfants marqués par les bombardements.</p>
+            
+                <p>Cette aide européenne sera aussi et surtout un grand plan pour protéger 450 millions d’Européens des affres du nationalisme guerrier.</p>
+            
+        </article>
     
-
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/0200(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0286_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-10-17-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

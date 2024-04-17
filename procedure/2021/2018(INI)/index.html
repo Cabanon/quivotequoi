@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Partis politiques européens - rapport 2021</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Partis politiques européens - rapport 2021</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(428/569 * 100%)">428</div>
-  
-  
-    <div class="-" style="width: calc(92/569 * 100%)">92</div>
+    <div class="for" style="width: calc(428/569 * 100%)">428</div>
   
   
-    <div class="0" style="width: calc(49/569 * 100%)">49</div>
+    <div class="against" style="width: calc(92/569 * 100%)">92</div>
+  
+  
+    <div class="abstention" style="width: calc(49/569 * 100%)">49</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(50/69 * 100%)">50</div>
+    <div class="for" style="width: calc(50/69 * 100%)">50</div>
   
   
-    <div class="-" style="width: calc(18/69 * 100%)">18</div>
+    <div class="against" style="width: calc(18/69 * 100%)">18</div>
   
   
-    <div class="0" style="width: calc(1/69 * 100%)">1</div>
+    <div class="abstention" style="width: calc(1/69 * 100%)">1</div>
   
 </div>
  
 </section>
-            <a href="/voting/136968">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/136968">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -106,12 +111,12 @@
     
         
         
-            <li>Etat et évolution de l&#39;Union</li>
+            <li>Parlement européen</li>
         
     
         
         
-            <li>Parlement européen</li>
+            <li>Etat et évolution de l&#39;Union</li>
         
     
         
@@ -126,172 +131,318 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2018(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0294_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-11-11-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>47 bis. est favorable à l’introduction d’une interdiction des dons provenant de personnes morales;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">175</div>
+  <div class="against">375</div>
+  <div class="abstention">24</div>
+</span>
+
+  
+    
+    <a href="/voting/136975">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(175/574 * 100%)">175</div>
-  
-  
-    <div class="-" style="width: calc(375/574 * 100%)">375</div>
-  
-  
-    <div class="0" style="width: calc(24/574 * 100%)">24</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/136975">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>54 bis. demande, outre les exigences actuelles prévues à l’article 11, paragraphe 1, du règlement (UE, disposition en vertu de laquelle les membres du comité de personnalités éminentes indépendantes ne pourraient ni appartenir à un parti national ou régional dans l’Union européenne, ni être d&#39;anciens membres du Parlement européen, du Conseil ou de la Commission;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">176</div>
+  <div class="against">381</div>
+  <div class="abstention">13</div>
+</span>
+
+  
+    
+    <a href="/voting/136977">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(176/570 * 100%)">176</div>
-  
-  
-    <div class="-" style="width: calc(381/570 * 100%)">381</div>
-  
-  
-    <div class="0" style="width: calc(13/570 * 100%)">13</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/136977">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>10 bis. estime que la question des valeurs fondamentales de l’Union ne doit pas servir à exclure ou à interdire des partis politiques qui respectent les conditions fixées par les constitutions nationales et qui respectent leurs alliances au niveau européen; rappelle qu’en l’absence de demos européen, la question des valeurs communes doit tout d’abord tenir compte des sensibilités et des différences d’interprétation qui peuvent exister dans les États membres;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°4 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>14 bis. souligne que les règles applicables aux partis politiques européens et aux fondations politiques européennes ne doivent pas empiéter sur leur liberté de mener leurs travaux et de fixer leurs priorités; s’oppose à toute règle qui les empêcherait de contribuer librement et honnêtement au débat politique;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°5 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       54. insiste sur le fait que les partis politiques européens et leurs membres doivent avoir une structure démocratique et respecter les valeurs fondatrices de l’Union, doivent respecter les procédures démocratiques et la transparence dans la sélection des dirigeants de parti et des candidats aux élections, et doivent procéder à un vote démocratique pour l’adoption de leurs règles internes et de leur programme politique;
@@ -301,95 +452,281 @@
       <ins> souligne que la démocratie interne est définie par les partis, les membres des partis et les citoyens en fonction de la législation nationale et de l’histoire politique du pays;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
     
-    <article>
-    <header>📝 Amendement n°6 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       49. 
   
 
   
-      <del>demande à la Commission d’évaluer ou d’examiner s’il est possible de recourir à des systèmes de financement par voix pour les partis politiques européens; fait observer que la  modification du système de financement en faveur d’un système fondé sur les voix émises est susceptible d’améliorer le taux de participation et de favoriser davantage de pluralisme dans la situation politique au niveau de l’Union;</del>
+      <del>demande à la Commission d’évaluer ou d’examiner s’il est possible de recourir à des systèmes de financement par voix pour les partis politiques européens; fait observer que la  modification du système de financement en faveur d’un système fondé sur les voix émises est susceptible d’améliorer le taux de participation et de favoriser davantage de pluralisme dans la situation politique au niveau de l’Union</del>
   
 
   
-      <ins>préconise un système de financement fondé sur les votes émis en faveur de chaque parti national affilié à un parti politique européen participant aux élections européennes, composé de:  a) un montant attribué par vote, déterminé par une clé de répartition qui soit étroitement fondée sur le dernier montant global du système de financement actuel et qui devrait être  indexée annuellement à l’avenir;  b) un montant supplémentaire de 10 % du montant global susmentionné destiné à couvrir l’organisation de chaque parti politique européen en fonction du nombre de partis nationaux affiliés ayant participé aux dernières élections européennes;  c) un facteur de lissage tenant compte de la moyenne du résultat de l’année en question et des quatre années précédentes;</ins>
+      <ins>préconise un système de financement fondé sur les votes émis en faveur de chaque parti national affilié à un parti politique européen participant aux élections européennes, composé de:  a) un montant attribué par vote, déterminé par une clé de répartition qui soit étroitement fondée sur le dernier montant global du système de financement actuel et qui devrait être  indexée annuellement à l’avenir;  b) un montant supplémentaire de 10 % du montant global susmentionné destiné à couvrir l’organisation de chaque parti politique européen en fonction du nombre de partis nationaux affiliés ayant participé aux dernières élections européennes;  c) un facteur de lissage tenant compte de la moyenne du résultat de l’année en question et des quatre années précédentes</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
-    <article>
-    <header>📝 Amendement n°7 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>49 bis. fait observer que la modification du système de financement en faveur d’un système fondé sur les voix émises est susceptible d’améliorer le taux de participation et de favoriser davantage de pluralisme dans la situation politique au niveau de l’Union;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
+        
     
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce texte.Le règlement sur les partis européens date de 2014, a été mis en œuvre en 2017 et a été modifié en 2018 et 2019. Cette fois, il s&#39;agit de simplifier le financement, mais aussi d&#39;imposer des conditions politiques relatives au respect des &quot;valeurs européennes&quot;. Il serait regrettable que ce nouveau critère restreigne la liberté de parole de ces formations politiques.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce rapport d’évaluation vise à indiquer les modifications à apporter au statut et aux systèmes de financement des partis politiques européens. Il propose des évolutions positives pour le fonctionnement du financement des partis politiques européens, notamment en créant de nouvelles catégories de ressources propres ou l’abaissement du seuil obligatoire de ressources propres pour les partis politiques européens à 5 % contre 10 % jusqu’alors. Il propose également une meilleure coopération avec les partis nationaux tout en renforçant sa transparence. J’ai donc voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Ce rapport d’évaluation impose la nécessité d’une conformité avec les « valeurs européennes » comme moyen de pression sur les formations politiques dont on jugerait qu’elles s’en écartent.Si nous avons toujours soutenu la transparence en matière de financement lors des précédentes modifications du règlement, nous entendons en revanche lutter contre toute modification des règles concernant les « valeurs européennes » qui ne constituent qu’un moyen de censure politique. Le groupe ID a proposé deux amendements visant à ce que ces « valeurs européennes » ne soient pas un outil de sanction contre les formations politiques nationales et européennes et que celles-ci conservent une totale liberté dans la définition de leurs programmes et priorités politiques. Ces amendements n’ont pas été retenus, j’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il impose à tous les partis politiques européens de s’inscrire dans un cadre de « valeurs européennes », sous peine de sanctions.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport sur l&#39;application du règlement n° 1141/2014 relatif au statut et au financement des partis politiques européens et des fondations politiques européennes. Le texte formule des recommandations intéressantes, en proposant par exemple la réintroduction de la possibilité de percevoir des cotisations des partis non membres de l&#39;Union. Ces mesures révisées contribuent à produire des évolutions positives pour accroître les financements des partis politiques européens.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            Ce rapport concerne l’application du règlement (UE, Euratom) nº 1141/2014 relatif au statut et au financement des partis politiques européens et des fondations politiques européennes. Les partis et fondations politiques européens contribuent à former, dynamiser et enrichir le débat public à l’échelle européenne. Ce rapport propose des évolutions positives pour accroître les financements des partis politiques européens, comme par exemple par le biais de la création de nouvelles catégories de ressources propres, ou encore l’abaissement du seuil obligatoire de ressources propres pour les partis politiques européens à 5 %, contre 10 % auparavant. C’est pourquoi j’ai décidé de voter en faveur de ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197494</div>
+            
+            <header><b>Nathalie LOISEAU</b> | Renaissance</header>
+            J&#39;ai voté en faveur de ce rapport qui implique plus de transparence dans le financement des partis européens. En revanche, je suis réservée sur la demande visant à autoriser l&#39;affiliation de membres d&#39;États membres du Conseil de l’Europe et d’autres pays européens à ces partis. Je considère en effet que se concentrer sur les partis des États membres de l&#39;Union européenne est un défi déjà suffisamment important.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les propositions du Parlement européen pour réviser le cadre de fonctionnement des partis et fondations politiques européens. Il prévoit notamment de garantir la transparence sur leur financement, d’autoriser les partis européens à financer des campagnes référendaires nationales sur des thématiques européennes et de faciliter les adhésions individuelles aux partis européens. J’ai donc voté pour ce texte qui va dans le sens d’un renforcement des acteurs politiques transnationaux au niveau européen.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Les partis et mouvements politiques européens sont relativement peu connus et pourtant ils jouent un rôle essentiel pour faire vivre la solidarité entre membres d’une même famille politique. La France insoumise est ainsi très attentive aux actions et mobilisations qui se déroulent au sein du parti européen qui réunit l’essentiel de forces politiques exigeant une rupture écologique et sociale avec le libéralisme. Ce rapport propose plusieurs pistes pour renforcer le rôle des partis et mouvements politiques européens, notamment en augmentant leur dotation financière et leur participation aux différentes campagnes électorales d’intérêt européen. Je soutiens cet objectif.
+        </article>
+    
+        <article>
+            <div class="hidden">197576</div>
+            
+            <header><b>Sylvie BRUNET</b> | Mouvement Démocrate</header>
+            J’ai soutenu notre rapport visant à orienter la réforme du statut et des financements des partis politiques européens. Pour donner un véritable sens à ces partis, nous souhaitons leur permettre de financer toute activité qui contribue à former une conscience politique européenne et à exprimer la volonté des citoyens de l&#39;Union. Nous demandons un ensemble clair de règles et de conditions pour définir la capacité des partis politiques européens à organiser et cofinancer des activités avec les partis membres nationaux concernant les questions européennes.Nous souhaitons également augmenter la transparence dans le financement des partis politiques et fondations européens en créant une obligation pour le Parlement européen de publier les états financiers annuels qu&#39;il reçoit. Rendre compte publiquement de tout don reçu, quelle que soit sa valeur, rendrait plus transparente toute influence externe sur les partis politiques européens.Enfin, nous demandons l’introduction d’un véritable statut juridique européen pour les partis politiques et fondations européens en fixant des conditions minimales pour leur structure et leur fonctionnement, afin de les rendre plus indépendants du droit national. La Commission européenne devrait présenter une réforme dans les mois à venir et le Parlement européen restera attentif pour défendre ses priorités.
+        </article>
+    
+        <article>
+            <div class="hidden">197536</div>
+            
+            <header><b>Nathalie COLIN-OESTERLÉ</b> | Les centristes</header>
+            J’ai voté en faveur du rapport sur les partis politiques européens. Ce rapport a tout d&#39;abord vocation à faire le bilan de l’application du règlement 1141/2014 relatif au financement et au statut des partis et fondations politiques européens. Les améliorations proposées en ce qui concerne les capacités de financement des partis politiques européens et fondations politiques européennes, notamment via la création de nouvelles catégories de ressources propres ainsi qu’un allègement des contraintes comptables excessives pesant sur les partis sont intéressantes. J’ai également voté en faveur d’un amendement visant à supprimer la possibilité pour les personnes morales de financer les partis politiques européens. Ce système existant par exemple en France permet de lutter efficacement contre les conflits d’intérêts.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai voté en faveur du rapport sur l’application du règlement relatif au statut et au financement des partis politiques européens et des fondations politiques européennes. Ce rapport évalue l’application du règlement, dresse un état des lieux des problèmes rencontrés et propose des améliorations qui visent à alimenter la proposition législative visant à modifier le règlement que la Commission européenne doit présenter d&#39;ici la fin de l&#39;année.Je soutiens notamment les propositions appelant à une meilleure coopération avec les partis membres nationaux et à une levée de l&#39;interdiction de financer les campagnes référendaires liées à la mise en œuvre du traité sur l’Union européenne (TUE) ou du traité sur le fonctionnement de l’Union européenne (TFUE). En revanche, je me suis opposée aux dispositions du rapport mentionnant une circonscription unique européenne pour les élections européennes.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            Le règlement sur les partis et fondations européens date de 2014, a été mis en œuvre en 2017 et a été modifié en 2018 et 2019 à chaque fois à l’instigation des partis majoritaires. Le rapport d’évaluation présenté ici propose donc une énième modification visant essentiellement à simplifier une fois de plus le financement, à renforcer le rôle des partis dans la vie politique des États membres mais aussi à utiliser les « valeurs européennes » comme moyen de pression sur les formations politiques dont on jugerait qu’elles s’en écartent.Si le groupe ID (et la délégation RN avec lui) a toujours soutenu la transparence en matière de financement lors des modifications du règlement, il entend en revanche lutter contre toute modification des règles concernant les « valeurs européennes » qui ne constituent qu’un moyen de censure politique. Par deux amendement, le groupe ID appelle donc à ce que ces « valeurs européennes » ne soient pas un outil de sanction contre les formations politiques nationales et européennes et que celles-ci conservent une totale liberté dans la définition de leurs programmes et priorités politiques. Ceux-ci ayant été refusés, j’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Le règlement sur les statuts et financement des partis politiques et fondations européens prévoit un rapport d’évaluation de sa mise en œuvre afin de déterminer si le cadre juridique mis en place et les règles de financement sont adéquats. Il émet donc une série de propositions de modifications du règlement pour rendre plus simple le financement des partis et fondations ainsi que leur comptabilité, et clarifier les règles d’adhésion. Ces propositions visent aussi à leur permettre de s’impliquer plus encore dans la vie politique européenne et des États membres, ainsi qu’à renforcer la visibilité des partis européens durant les élections et leur participation aux campagnes référendaires.Il s’agit donc d’une énième modification visant essentiellement à simplifier une fois de plus le financement mais aussi à utiliser les « valeurs européennes » comme moyen de pression sur les formations politiques dont on jugerait qu’elles s’en écartent. Si notre groupe a toujours soutenu la transparence en matière de financement lors des modifications du règlement, il entend en revanche lutter contre toute modification des règles concernant les « valeurs européennes » qui ne constituent qu’un moyen de censure politique. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Le règlement sur les partis et fondations européens a été mis en œuvre en 2017 et a été modifié en 2018 et 2019 à chaque fois à l’instigation des partis majoritaires. Ce rapport propose une énième modification visant essentiellement à simplifier une fois de plus le financement, à renforcer le rôle des partis dans la vie politique des États membres mais aussi à utiliser les « valeurs européennes » comme moyen de pression sur les formations politiques dont on jugerait qu’elles s’en écartent. Si le groupe ID a toujours soutenu la transparence en matière de financement lors des modifications du règlement, il entend en revanche lutter contre toute modification des règles concernant les « valeurs européennes » qui ne constituent qu’un moyen de censure politique.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-    
-    
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2018(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0294_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-11-11-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+    <section>
+    
+    
+        <article>
+            <div class="hidden">96750</div>
+            
+            <header><b>François ALFONSI</b> | Régions et Peuples Solidaires</header>
+            
+                <p>Le rapport sur lequel nous allons nous prononcer fait le point sur l’application de ce règlement et formule des propositions pour l’améliorer. Plusieurs points sont soutenus par tous.</p>
+            
+                <p>D’abord, la prise en compte par les partis politiques européens des membres issus d’anciens membres de l’UE, de futurs membres de l’UE et des partis de pays tiers de l’espace européen. Cette prise en compte est essentielle, surtout après le Brexit.</p>
+            
+                <p>Ensuite, l’allégement des normes excessives qui pénalisent ceux des partis les plus petits qui ne peuvent en supporter la charge de travail et de financement.</p>
+            
+                <p>Enfin, la simplification de la prise en compte des revenus des partis qui sont liés à leurs activités militantes telles que les ventes de documents, et l’élargissement de leur champ d’action leur permettant de s’impliquer davantage dans les campagnes politiques en Europe.</p>
+            
+                <p>Un point a débouché sur un désaccord important: jusqu’à présent, le montant du financement de chaque parti politique est basé sur l’affiliation des députés. Notre rapporteur propose de le rattacher au nombre de voix exprimées lors des élections européennes. Cette proposition est inefficace et potentiellement dangereuse.</p>
+            
+                <p>Elle est inefficace. Imaginer que le trésorier d’un parti politique puisse mobiliser des abstentionnistes en lançant un appel à renflouer les caisses de son parti est clairement plus qu’illusoire. C’est exactement une fausse idée.</p>
+            
+                <p>Et ensuite, elle est dangereuse. Chaque élection génère des coalitions et c’est la liberté des partis de pouvoir passer des accords électoraux. Avec la proposition de M. Wieland, des composantes de ces coalitions – les composantes minoritaires – seraient clairement exposées à perdre leurs ressources si un désaccord surgit avec la représentation majoritaire de la coalition. Aussi, le risque d’une telle situation ne peut être pris. Ce serait attentatoire à la démocratie européenne.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">204421</div>
+            
+            <header><b>Jean-Lin LACAPELLE</b> | Rassemblement national</header>
+            
+                <p>Sur le plan administratif, d’abord, ce rapport contredit des années de pratiques absurdes du Parlement européen, qui affirmait que les partis politiques ne devaient pas mener d’activités politiques, mais seulement travailler à l’édification du super État euro-mondialiste. Vous avez d’ailleurs persécuté nos élus sur cette logique démente. Aujourd’hui, vous admettez enfin cette évidence: nous sommes des représentants nationaux au Parlement européen qui devons mettre nos moyens parlementaires au service d’activités politiques.</p>
+            
+                <p>Sur le plan démocratique, vous reconnaissez enfin le caractère essentiel de la diversité des idées. Mais dans cette Europe carcérale que vous avez construite, la seule voix divergente est la nôtre, celle des peuples et des nations opposées à votre vision mondialiste et libérale. Cette voix que vous combattez avec tant d’acharnement.</p>
+            
+                <p>Le 2 juillet dernier, seize partis politiques à travers toute l’Europe ont signé une déclaration commune sur l’avenir de l’Europe qui nous met en équivalence avec les frères siamois que sont la pseudo-droite et les socialistes. Cette déclaration commune, dont les signataires sont au pouvoir ou sont sur le point d’y accéder, mettra un point d’arrêt à votre cauchemar fédéraliste pour ouvrir la voie à l’Europe des nations que nous appelons de nos vœux et que, demain, Marine Le Pen incarnera en France.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

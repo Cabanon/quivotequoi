@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Rapport d&#39;exécution sur la directive sur le retour</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Rapport d&#39;exécution sur la directive sur le retour</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(512/695 * 100%)">512</div>
-  
-  
-    <div class="-" style="width: calc(134/695 * 100%)">134</div>
+    <div class="for" style="width: calc(512/695 * 100%)">512</div>
   
   
-    <div class="0" style="width: calc(49/695 * 100%)">49</div>
+    <div class="against" style="width: calc(134/695 * 100%)">134</div>
+  
+  
+    <div class="abstention" style="width: calc(49/695 * 100%)">49</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,30 +88,26 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(42/78 * 100%)">42</div>
+    <div class="for" style="width: calc(42/78 * 100%)">42</div>
   
   
-    <div class="-" style="width: calc(31/78 * 100%)">31</div>
+    <div class="against" style="width: calc(31/78 * 100%)">31</div>
   
   
-    <div class="0" style="width: calc(5/78 * 100%)">5</div>
+    <div class="abstention" style="width: calc(5/78 * 100%)">5</div>
   
 </div>
  
 </section>
-            <a href="/voting/126137">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/126137">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Libre circulation et intégration des ressortissants des pays-tiers</li>
-        
     
         
         
@@ -116,7 +116,7 @@
     
         
         
-            <li>Franchissement et contrôles aux frontières extérieures, visas</li>
+            <li>Libre circulation et intégration des ressortissants des pays-tiers</li>
         
     
         
@@ -124,85 +124,206 @@
             <li>Politique d&#39;immigration</li>
         
     
+        
+        
+            <li>Franchissement et contrôles aux frontières extérieures, visas</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2208(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0238_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-12-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>– vu sa résolution du 25 novembre 2020 intitulée «Rendre le développement plus efficace et l’aide plus efficiente»1, et notamment le fait de conditionner l’octroi de l’aide au développement à la bonne mise en œuvre par les pays bénéficiaires de contrôles en matière d’immigration, en garantissant par exemple le retour des ressortissants de pays tiers dans leur pays d’origine,  _______________________  1 Textes adoptés de cette date,</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">131</div>
+  <div class="against">522</div>
+  <div class="abstention">41</div>
+</span>
+
+  
+    
+    <a href="/voting/125587">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(131/694 * 100%)">131</div>
-  
-  
-    <div class="-" style="width: calc(522/694 * 100%)">522</div>
-  
-  
-    <div class="0" style="width: calc(41/694 * 100%)">41</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125587">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      3. se dit préoccupé par la baisse, depuis 2015, du nombre de décisions de retour ayant été exécuté
-  
+<p>
 
   
-      <del>es et souligne que ce chiffre ne correspond pas nécessairement à une hausse ou à une baisse du nombre d’entrées irrégulières;</del>
+      3. se dit préoccupé par la baisse, depuis 2015, du nombre de décisions de retour ayant été exécutées
   
 
   
-      <ins>es;</ins>
+      <del> et souligne que ce chiffre ne correspond pas nécessairement à une hausse ou à une baisse du nombre d’entrées irrégulières</del>
   
 
   
-       souligne qu’une politique efficace en matière de retour constitue un des éléments clés du bon fonctionnement de la politique de l’Union européenne en matière d’asile et de migration; souligne 
+      ; souligne qu’une politique efficace en matière de retour constitue un des éléments clés du bon fonctionnement de la politique de l’Union européenne en matière d’asile et de migration; souligne 
   
 
   
@@ -210,451 +331,603 @@
   
 
   
-      que, selon la déclaration de la Commission, le taux de retour est passé de 46 % en 2016 à 37 % en 
+      que, selon la déclaration de la Commission, le taux de retour est passé de 46 % en 2016 à 37 % en 2017
   
 
   
-      <del>2017, ce qui ne donne peut-être pas une image précise de la situation en raison de la marge discrétionnaire inhérente dont disposent les États membres pour la mise en œuvre de la directive, notamment les difficultés de coopération avec les pays tiers, du fait que certains États membres prennent plus d’une décision de retour à l’égard d’une même personne, du fait que les décisions ne sont pas retirées si le retour n’a pas lieu pour des raisons humanitaires, du fait que certaines personnes ne peuvent pas être renvoyées car leur retour violerait le principe de non-refoulement ou du fait que certaines personnes retournent de leur plein gré dans leur pays sans que leur retour soit enregistré; souligne que toutes les décisions de retour ne sont pas    suivies de procédures de retour et de réadmission rapides du fait d’obstacles pratiques et juridiques, et constate avec inquiétude que cela peut entraîner des difficultés considérables, non seulement pour les infrastructures locales, mais aussi pour les personnes concernées;</del>
+      <del>, ce qui ne donne peut-être pas une image précise de la situation en raison de la marge discrétionnaire inhérente dont disposent les États membres pour la mise en œuvre de la directive, notamment les difficultés de coopération avec les pays tiers, du fait que certains États membres prennent plus d’une décision de retour à l’égard d’une même personne, du fait que les décisions ne sont pas retirées si le retour n’a pas lieu pour des raisons humanitaires, du fait que certaines personnes ne peuvent pas être renvoyées car leur retour violerait le principe de non-refoulement ou du fait que certaines personnes retournent de leur plein gré dans leur pays sans que leur retour soit enregistré; souligne que toutes les décisions de retour ne sont pas    suivies de procédures de retour et de réadmission rapides du fait d’obstacles pratiques et juridiques, et constate avec inquiétude que cela peut entraîner des difficultés considérables, non seulement pour les infrastructures locales, mais aussi pour les personnes concernées</del>
   
 
   
-      <ins>2017; note toutefois que la plupart des pays ne tentent d’imposer un retour qu’en cas de menace immédiate pour l’ordre public; constate que la procédure est souvent épuisée ou répétée indéfiniment de manière à finalement obtenir un titre de séjour;</ins>
+      <ins>; note toutefois que la plupart des pays ne tentent d’imposer un retour qu’en cas de menace immédiate pour l’ordre public; constate que la procédure est souvent épuisée ou répétée indéfiniment de manière à finalement obtenir un titre de séjour</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">148</div>
+  <div class="against">535</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    
+    <a href="/voting/125578">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(148/692 * 100%)">148</div>
-  
-  
-    <div class="-" style="width: calc(535/692 * 100%)">535</div>
-  
-  
-    <div class="0" style="width: calc(9/692 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125578">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>9 bis. demande à la Commission de mettre plutôt l’accent sur l’exécution des décisions de retour, la dissuasion et la protection des frontières européennes, en suivant l’exemple de la politique «No Way» mise en œuvre avec succès par l’Australie;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">108</div>
+  <div class="against">542</div>
+  <div class="abstention">44</div>
+</span>
+
+  
+    
+    <a href="/voting/125579">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(108/694 * 100%)">108</div>
-  
-  
-    <div class="-" style="width: calc(542/694 * 100%)">542</div>
-  
-  
-    <div class="0" style="width: calc(44/694 * 100%)">44</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125579">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>11 bis. insiste sur le fait qu’après leur retour, les personnes concernées ne relèvent plus de la responsabilité de l’Union, mais de celle de leur pays d’origine; estime que les partenariats, l’aide au développement et les accords commerciaux ne devraient pas être accordés aux pays qui refusent d’assumer la responsabilité de leurs citoyens et devraient être subordonnés à la coopération en matière de migration;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">103</div>
+  <div class="against">570</div>
+  <div class="abstention">21</div>
+</span>
+
+  
+    
+    <a href="/voting/125580">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(103/694 * 100%)">103</div>
-  
-  
-    <div class="-" style="width: calc(570/694 * 100%)">570</div>
-  
-  
-    <div class="0" style="width: calc(21/694 * 100%)">21</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125580">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>11 ter. fait observer qu’un taux de retour plus élevé réduirait le facteur d’attraction actuel, qui encourage des migrants ne remplissant pas les conditions à entreprendre un dangereux voyage et à tenter d’entrer illégalement dans l’Union;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">168</div>
+  <div class="against">502</div>
+  <div class="abstention">24</div>
+</span>
+
+  
+    
+    <a href="/voting/125581">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(168/694 * 100%)">168</div>
-  
-  
-    <div class="-" style="width: calc(502/694 * 100%)">502</div>
-  
-  
-    <div class="0" style="width: calc(24/694 * 100%)">24</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125581">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>11 quater. encourage les États membres, en accroissant leur taux de retour effectif, à débloquer les mécanismes de la procédure d’asile destinés aux véritables réfugiés, à limiter les dépenses liées au logement, à la nourriture et aux soins médicaux des migrants, d’autant plus dans le cas des personnes entrées illégalement, et à réduire le taux de criminalité;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">145</div>
+  <div class="against">539</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/125582">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(145/694 * 100%)">145</div>
-  
-  
-    <div class="-" style="width: calc(539/694 * 100%)">539</div>
-  
-  
-    <div class="0" style="width: calc(10/694 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125582">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>14 bis. est conscient que l’adoption d’interdictions d’entrée est indispensable pour éviter le défilé des demandes, des refus et des injonctions de quitter le territoire dans les différents États membres; relève que cela entraîne une lourde charge administrative pour les États membres concernés et prolonge l’incertitude juridique des personnes concernées; estime que l’absence d’interdiction d’entrée dissuade ces personnes de se construire un avenir dans leur pays d’origine;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">152</div>
+  <div class="against">537</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    
+    <a href="/voting/125583">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(152/694 * 100%)">152</div>
-  
-  
-    <div class="-" style="width: calc(537/694 * 100%)">537</div>
-  
-  
-    <div class="0" style="width: calc(5/694 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125583">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       15. 
   
 
   
-      <del>demande aux États membres et à Frontex de partager leurs informations et bonnes pratiques en matière de retours volontaires réussis et dignes et d’assurer, sur demande, une assistance opérationnelle mutuelle entre États membres pour accroître et améliorer l’efficacité opérationnelle des retours volontaires;</del>
+      <del>demande aux États membres et à Frontex de partager leurs informations et bonnes pratiques en matière de retours volontaires réussis et dignes et d’assurer, sur demande, une assistance opérationnelle mutuelle entre États membres pour accroître et améliorer l’efficacité opérationnelle des retours volontaires</del>
   
 
   
-      <ins>estime qu’il est de la responsabilité des États membres et de Frontex de faire respecter la loi et de veiller à ce que les personnes tenues de quitter le territoire retournent effectivement dans leur pays d’origine;</ins>
+      <ins>estime qu’il est de la responsabilité des États membres et de Frontex de faire respecter la loi et de veiller à ce que les personnes tenues de quitter le territoire retournent effectivement dans leur pays d’origine</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">139</div>
+  <div class="against">547</div>
+  <div class="abstention">6</div>
+</span>
+
+  
+    
+    <a href="/voting/125584">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(139/692 * 100%)">139</div>
-  
-  
-    <div class="-" style="width: calc(547/692 * 100%)">547</div>
-  
-  
-    <div class="0" style="width: calc(6/692 * 100%)">6</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125584">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>30 bis. souligne que la rétention est une mesure de dernier recours prescrite par la loi lorsqu’elle est nécessaire, raisonnable et proportionnée aux objectifs visés et que le non-respect des procédures d’asile est un motif de recours à des mesures de rétention visant à empêcher la fuite des migrants irréguliers ne remplissant pas les conditions;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">159</div>
+  <div class="against">519</div>
+  <div class="abstention">16</div>
+</span>
+
+  
+    
+    <a href="/voting/125585">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(159/694 * 100%)">159</div>
-  
-  
-    <div class="-" style="width: calc(519/694 * 100%)">519</div>
-  
-  
-    <div class="0" style="width: calc(16/694 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125585">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>34 bis. souligne que des procédures efficaces devraient être mises en place pour contrôler les principales caractéristiques d’identification des adultes afin d’évaluer leur statut et de pouvoir mettre davantage l’accent sur l’intérêt supérieur réel de l’enfant;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(106/694 * 100%)">106</div>
-  
-  
-    <div class="-" style="width: calc(549/694 * 100%)">549</div>
-  
-  
-    <div class="0" style="width: calc(39/694 * 100%)">39</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125586">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    ID
+    (🇫🇷 : Rassemblement national)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2208(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0238_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">106</div>
+  <div class="against">549</div>
+  <div class="abstention">39</div>
+</span>
+
   
+    
+    <a href="/voting/125586">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-12-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre cette résolution portant sur une directive qui devrait, en principe, favoriser les rapatriements, mais en réalité ce texte préconise l&#39;exact inverse.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            Le rapport dressant un bilan de la mise en œuvre de la directive sur le retour des migrants illégaux a été rédigé par une députée écologiste. Cela en dit long sur son contenu. Tout en explicitant les failles de ce système qui, j’en conviens, ne fonctionne pas, le rapport préconise des solutions qui reviendraient au final à empêcher beaucoup de retours.Ainsi, sous prétexte de vouloir apporter des garanties procédurales et de respecter le principe du non-refoulement, le rapport rejette le retour de tous les mineurs non accompagnés sauf si cela est dans leur intérêt supérieur (sic), condamne la pratique des interdictions d’entrées et appelle à ne jamais placer des mineurs en rétention.Cela en revient à dénaturer la politique des retours dont l’objectif est de dissuader, en premier lieu, les migrants de se rendre illégalement sur le territoire de l’Union européenne.Le rapport oublie que les migrants qui font l’objet d’une décision de retour sont souvent des migrants économiques. Par conséquent, l’engorgement des centres d’accueil et la suractivité des services qui ont la charge de l’examen des demandes d’asile sont au détriment des autres demandeurs d’asile et réfugiés qui ont respecté les règles et mériteraient toute notre attention.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce rapport immigrationniste car il entreprend, hélas avec l&#39;assentiment de la majorité du Parlement européen, de paralyser la directive retour qui voulait faciliter l&#39;expulsion des migrants illégaux.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            L’afflux continu de migrants a mis le système d’asile de l’UE à rude épreuve: entre pression massive sur les pays d’arrivée, mouvements secondaires incontrôlés, expulsions rendues aussi difficiles par Bruxelles que par les pays de départ, coût financier exorbitant ou encore insécurité physique et culturelle, l’asile européen semble à bout de souffle. Ce rapport se concentre sur l’évaluation de la directive retour, adoptée en 2008, qui détermine le cadre dans lequel les migrants clandestins et déboutés du droit d’asile peuvent être expulsés, incluant par exemple les procédures, l’identification, les recours possibles ou encore les possibilités de rétention. Le présent rapport est rédigé pour favoriser systématiquement les migrants et leur permettre de rester en Europe quel que soit leur statut légal.J’ai bien évidemment voté contre ce texte: la directive retour devrait avoir pour objectif de faciliter les expulsions afin d’en maximiser le nombre plutôt que de les restreindre. Ce texte d’un gauchisme pathologique prône l’exact inverse.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté contre ce rapport relatif à la mise en œuvre de la directive sur le retour. Le texte dressait un bilan orienté de la mise en œuvre de la directive retour qui régit le renvoi des étrangers en situation irrégulière. S’il tentait de faire croire à la volonté d&#39;accroître l&#39;efficience et le taux des retours, il formulait en réalité de nombreuses propositions qui aboutiraient à les empêcher: interdiction du renvoi des mineurs non accompagnés (MNA), condamnation des interdictions d’entrée, refus du placement des mineurs en rétention administrative. Je l’ai donc rejeté.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter l’opinion du Parlement européen sur l’application de la directive sur le retour qui définit le cadre des procédures applicables à l’expulsion des étrangers en situation irrégulière. Il rappelle à juste titre qu’un enfant ne doit pouvoir être retenu ou détenu, que les procédures d’expulsion doivent respecter les droits fondamentaux et que les centres de détention et rétention doivent pouvoir être inspectés par des organes de contrôle nationaux et internationaux. Il préconise en revanche une coopération accrue entre États membres pour accélérer les expulsions. Je me suis donc abstenue sur ce texte qui présente des constats pertinents mais ne va pas assez loin face à un système actuel à la fois inefficace et inhumain.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce rapport tend à garantir le respect par les États membres des droits des personnes en situation irrégulière. Pour cela, le rapport contient une série de recommandations concrètes. Par exemple il est indiqué que la détention n’est jamais dans l’intérêt supérieur de l’enfant et que les enfants ne devraient jamais être détenus, quel que soit leur statut. Néanmoins, ce rapport s’inscrit dans le cadre de la directive Retour qui organise une politique extrêmement répressive et profondément absurde envers les personnes en situation irrégulière, au mépris du devoir d’humanité qui devrait être le nôtre. Je ne souhaite pas cautionner ce cadre et préfère donc m’abstenir.
+        </article>
+    
+        <article>
+            <div class="hidden">197585</div>
+            
+            <header><b>Pierre KARLESKIND</b> | Renaissance</header>
+            J’ai voté en faveur de ce rapport d’initiative, qui établit un état des lieux de la mise en œuvre de la directive de 2008 sur les retours de personnes en situation irrégulière sur le territoire de l’Union européenne. Ce texte souligne particulièrement le faible taux d’exécution des retours et le manque de moyens financiers et humains dans les procédures. Il prévoit donc des procédures pour le retour de ces personnes dans leur pays d’origine, en particulier pour celles ayant reçu une décision négative suite à une demande d’asile.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            La directive retour devrait avoir pour objectif de faciliter les expulsions afin d&#39;en maximiser le nombre plutôt que de les restreindre. Ce texte d&#39;un gauchisme pathologique prône l&#39;exact inverse.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            J’ai voté contre cette résolution selon laquelle la directive retour devrait avoir pour objectif de restreindre les expulsions. Il faut au contraire les multiplier.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            La directive retour devrait avoir pour objectif de faciliter les expulsions afin d’en maximiser le nombre plutôt que de les restreindre. Ce texte prône l’exact inverse. J&#39;ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            La directive retour devrait avoir pour objectif de faciliter les expulsions plutôt que de les restreindre. Ce texte prône l’exact inverse: je m&#39;y suis donc logiquement opposé.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Ce texte attaque la directive retour, qui était déjà très timide avec des résultats très faibles, pour promouvoir une immigration incontrôlée. Nous avons ici un rapport qui ressemble plus à un tract d’extrême gauche qu’à autre chose, faisant passer les pactes immigrationnistes en vigueur pour timorés. J’ai naturellement voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Ce rapport se concentre sur l’évaluation d’un pan du système d’asile de l’UE, la directive retour. Cette directive, adoptée en 2008, détermine le cadre dans lequel les migrants clandestins et déboutés du droit d’asile peuvent être expulsés, incluant par exemple les procédures, l’identification, les recours possibles ou encore les possibilités de rétention. Le présent texte, évaluant l’application de la directive retour actuellement en vigueur, est rédigé dans un esprit qui consiste à favoriser systématiquement les migrants et à leur permettre de rester en Europe quel que soit leur statut légal.L’afflux continu de migrants, qui s’apparente à une véritable submersion avec environ 5 300 000 demandeurs d’asile entre 2013 et 2019, pour la plupart faux réfugiés et vrais migrants économiques, a mis le système d’asile de l’UE à rude épreuve. J’ai voté contre ce rapport qui devrait avoir pour objectif de faciliter les expulsions afin d’en maximiser le nombre plutôt que de les restreindre.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            L’afflux continu de migrants, qui s’apparente à une véritable submersion avec environ 5 300 000 demandeurs d’asile entre 2013 et 2019, pour la plupart faux réfugiés et vrais migrants économiques, a mis le système d’asile de l’UE à rude épreuve. Entre pression massive sur les pays d’arrivée, mouvements secondaires incontrôlés, expulsions rendues aussi difficiles par Bruxelles que par les pays de départ, coût financier exorbitant ou encore insécurité physique et culturelle, l’asile européen semble à bout de souffle.Ce rapport se concentre sur l’évaluation d’un pan du système d’asile de l’UE, la directive retour. Cette directive, adoptée en 2008, détermine le cadre dans lequel les migrants clandestins et déboutés du droit d’asile peuvent être expulsés, incluant par exemple les procédures, l’identification, les recours possibles ou encore les possibilités de rétention.La directive retour devrait avoir pour objectif de faciliter les expulsions afin d’en maximiser le nombre plutôt que de les restreindre. Ce texte d’un gauchisme pathologique prône l’exact inverse.C’est pourquoi j’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Ce rapport de Mme Tineke Strik, élue écolo-gauchiste néerlandaise, est un exemple emblématique de la pire idéologie immigrationniste. Il se penche sur l’évaluation d’une partie du système d’asile de l’UE, la directive retour. Adoptée en 2008, celle-ci détermine le cadre dans lequel les migrants clandestins et déboutés du droit d’asile (5 300 000 demandeurs d’asile entre 2013 et 2019), principalement de faux réfugiés et de vrais migrants économiques, peuvent être expulsés. Le présent texte accumule tous les poncifs visant à favoriser systématiquement l’accueil des migrants et à leur permettre de rester en Europe quel que soit leur statut légal. Pour ce faire, elle attaque la directive retour et ses résultats pourtant déjà discutables, sachant que celle-ci devrait avoir pour objectif de faciliter les expulsions afin d’en maximiser le nombre plutôt que de les restreindre. J’ai voté résolument contre ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport qui préconise, contrairement à l’objectif de la directive, de laisser entrer toujours plus de migrants, au lieu de faciliter les expulsions.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

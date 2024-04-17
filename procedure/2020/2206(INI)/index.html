@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Mise en œuvre de la politique étrangère et de sécurité commune - rapport annuel 2020</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Mise en œuvre de la politique étrangère et de sécurité commune - rapport annuel 2020</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(340/685 * 100%)">340</div>
-  
-  
-    <div class="-" style="width: calc(100/685 * 100%)">100</div>
+    <div class="for" style="width: calc(340/685 * 100%)">340</div>
   
   
-    <div class="0" style="width: calc(245/685 * 100%)">245</div>
+    <div class="against" style="width: calc(100/685 * 100%)">100</div>
+  
+  
+    <div class="abstention" style="width: calc(245/685 * 100%)">245</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(1/78 * 100%)">1</div>
+    <div class="for" style="width: calc(1/78 * 100%)">1</div>
   
   
-    <div class="-" style="width: calc(28/78 * 100%)">28</div>
+    <div class="against" style="width: calc(28/78 * 100%)">28</div>
   
   
-    <div class="0" style="width: calc(49/78 * 100%)">49</div>
+    <div class="abstention" style="width: calc(49/78 * 100%)">49</div>
   
 </div>
  
 </section>
-            <a href="/voting/127028">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/127028">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -106,30 +111,148 @@
     
         
         
-            <li>Relations extérieures de l&#39;Union</li>
+            <li>Politique étrangère et de sécurité commune (PESC)</li>
         
     
         
         
-            <li>Politique étrangère et de sécurité commune (PESC)</li>
+            <li>Relations extérieures de l&#39;Union</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2206(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0266_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-01-19-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       17. souligne que l’Union s’est engagée à renforcer le rôle des Nations unies sur la scène internationale et, à cette fin, insiste sur la nécessité de réformer le système des Nations unies, de manière à renforcer la cohérence des actions de l’ensemble de ses agences, organisations et programmes afin de garantir la réalisation des objectifs de développement durable du programme 2030; appelle de nouveau les États membres à soutenir les réformes concernant la composition et le fonctionnement du Conseil de sécurité, afin de le rendre plus efficace et plus opérationnel, ce qui est indispensable pour assurer la paix dans le monde, et de le doter d’un programme qui va bien au-delà de la sécurité militaire, afin de couvrir le flux des personnes réfugiées et déplacées, la sécurité alimentaire, le changement climatique et la lutte contre les pandémies;
@@ -139,216 +262,250 @@
       <ins> salue l’entrée en vigueur prochaine du traité des Nations unies sur l’interdiction des armes nucléaires (TPNW) le 22 janvier 2021 et demande aux États membres de suivre l’exemple de l’Autriche, de Malte, de l’Irlande et de 83 autres États et de le signer;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">210</div>
+  <div class="against">390</div>
+  <div class="abstention">80</div>
+</span>
+
+  
+    
+    <a href="/voting/126470">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(210/680 * 100%)">210</div>
-  
-  
-    <div class="-" style="width: calc(390/680 * 100%)">390</div>
-  
-  
-    <div class="0" style="width: calc(80/680 * 100%)">80</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126470">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      20. renouvelle son engagement en faveur de l’élargissement en tant que politique de transformation clé de l’Union et salue la procédure révisée présentée par la Commission et l’accent davantage porté sur le caractère politique du processus d’élargissement; soutient la perspective européenne des Balkans occidentaux et se réjouit de la réaffirmation du soutien sans équivoque des États membres en faveur de cette perspective, tel qu’exprimé dans la déclaration de Zagreb du 6 mai 2020, ainsi que de la décision d’entamer les pourparlers d’adhésion avec l’Albanie et la Macédoine de Nord; invite le Conseil et la Commission à lancer sans délai les conférences intergouvernementales avec ces deux pays et, de manière plus générale, à accélérer le processus d’adhésion, étant donné que les pays des Balkans occidentaux font partie de l’Europe, à la fois sur le plan géographique, historique et culturel; 
-  
+<p>
 
   
-      <ins>demande instamment à la Bulgarie, notamment, de ne plus s’opposer à l’ouverture de la conférence intergouvernementale avec la Macédoine du Nord; </ins>
+      20. renouvelle son engagement en faveur de l’élargissement en tant que politique de transformation clé de l’Union et salue la procédure révisée présentée par la Commission et l’accent davantage porté sur le caractère politique du processus d’élargissement; soutient la perspective européenne des Balkans occidentaux et se réjouit de la réaffirmation du soutien sans équivoque des États membres en faveur de cette perspective, tel qu’exprimé dans la déclaration de Zagreb du 6 mai 2020, ainsi que de la décision d’entamer les pourparlers d’adhésion avec l’Albanie et la Macédoine de Nord; invite le Conseil et la Commission à lancer sans délai les conférences intergouvernementales avec ces deux pays et, de manière plus générale, à accélérer le processus d’adhésion, étant donné que les pays des Balkans occidentaux font partie de l’Europe, à la fois sur le plan géographique, historique et culturel;
   
 
   
-      souligne que l’intégration de ces pays dans l’Union est essentielle pour la stabilité et la sécurité du continent dans son ensemble, ainsi que pour l’influence de l’Union dans la région et au-delà; souligne que le processus d’adhésion devrait mener 
+      <ins> demande instamment à la Bulgarie, notamment, de ne plus s’opposer à l’ouverture de la conférence intergouvernementale avec la Macédoine du Nord;</ins>
   
 
   
-      <ins>   </ins>
+       souligne que l’intégration de ces pays dans l’Union est essentielle pour la stabilité et la sécurité du continent dans son ensemble, ainsi que pour l’influence de l’Union dans la région et au-delà; souligne que le processus d’adhésion devrait mener
   
 
   
-      à une transformation démocratique, économique et écologique ainsi qu’à une convergence sociale durables, et garantir des relations de bon voisinage et une 
+      <del> </del>
   
 
   
-      <del>   </del>
+      <ins>    </ins>
+  
+
+  
+      à une transformation démocratique, économique et écologique ainsi qu’à une convergence sociale durables, et garantir des relations de bon voisinage et une
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
       coopération régionale efficace; rappelle que le processus d’élargissement repose sur le mérite et est ancré dans une conditionnalité stricte et équitable, conformément aux critères de Copenhague; rappelle que l’adoption de réformes doit être tangible sur le terrain et souligne la nécessité de fixer des critères d’adhésion clairs, transparents et cohérents, de continuer à offrir un soutien politique, financier (IPA III) et technique tout au long du processus, avec une mesure claire des avancées; souligne qu’il convient que les pays candidats et candidats potentiels s’alignent sur les déclarations pertinentes en matière de PESC du VP/HR au nom de l’Union ainsi que sur les décisions du Conseil;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">377</div>
+  <div class="against">254</div>
+  <div class="abstention">50</div>
+</span>
+
+  
+    
+    <a href="/voting/126472">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(377/681 * 100%)">377</div>
-  
-  
-    <div class="-" style="width: calc(254/681 * 100%)">254</div>
-  
-  
-    <div class="0" style="width: calc(50/681 * 100%)">50</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126472">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      47. appelle, à cet égard, à un engagement ciblé et multidimensionnel avec la région, soutenu par un texte commun de l’Union, qui favorise des stratégies permettant de relever conjointement des défis communs, tels que la promotion de la paix, de la sécurité et de la prospérité, tout en assurant un front commun face aux menaces que pose le changement climatique; souligne la place importante qu’occupe l’Amérique latine pour l’Union européenne, et demande de continuer à la considérer comme une région présentant un grand intérêt géostratégique pour la PESC, en participant à la promotion de la démocratie et des droits de l’homme dans la région, tout en contribuant à son développement économique; souligne que le respect de l’état de droit et d’un cadre politique et juridique stable, y compris la lutte contre l’impunité en matière de corruption, ainsi que des progrès vers la démocratie et le respect des droits de l’homme et la promotion des libertés fondamentales constituent la pierre angulaire d’une intégration et d’une coopération plus approfondies avec les pays d’Amérique latine et des Caraïbes; 
-  
+<p>
 
   
-      <del>souligne l’importance de promouvoir et d’achever le renouvellement des accords globaux avec le Chili et le Mexique, ainsi que de    l’accord d’association entre l’Union et le Mercosur, et insiste sur le fait que ces pays sont des alliés et des partenaires stratégiques de l’Union; </del>
+      47. appelle, à cet égard, à un engagement ciblé et multidimensionnel avec la région, soutenu par un texte commun de l’Union, qui favorise des stratégies permettant de relever conjointement des défis communs, tels que la promotion de la paix, de la sécurité et de la prospérité, tout en assurant un front commun face aux menaces que pose le changement climatique; souligne la place importante qu’occupe l’Amérique latine pour l’Union européenne, et demande de continuer à la considérer comme une région présentant un grand intérêt géostratégique pour la PESC, en participant à la promotion de la démocratie et des droits de l’homme dans la région, tout en contribuant à son développement économique; souligne que le respect de l’état de droit et d’un cadre politique et juridique stable, y compris la lutte contre l’impunité en matière de corruption, ainsi que des progrès vers la démocratie et le respect des droits de l’homme et la promotion des libertés fondamentales constituent la pierre angulaire d’une intégration et d’une coopération plus approfondies avec les pays d’Amérique latine et des Caraïbes;
   
 
   
-      exprime sa profonde inquiétude face au manque de respect de la démocratie et de l’état de droit, ainsi qu’aux attaques à l’encontre des dirigeants 
+      <del> souligne l’importance de promouvoir et d’achever le renouvellement des accords globaux avec le Chili et le Mexique, ainsi que de    l’accord d’association entre l’Union et le Mercosur, et insiste sur le fait que ces pays sont des alliés et des partenaires stratégiques de l’Union;</del>
   
 
   
-      <ins>   </ins>
+       exprime sa profonde inquiétude face au manque de respect de la démocratie et de l’état de droit, ainsi qu’aux attaques à l’encontre des dirigeants
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
   
 
   
       de l’opposition démocratiquement élus, des journalistes, des étudiants et des défenseurs des droits de l’homme, en particulier ceux traitant des questions environnementales, ainsi que leurs avocats;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">297</div>
+  <div class="against">303</div>
+  <div class="abstention">80</div>
+</span>
+
+  
+    
+    <a href="/voting/126482">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(297/680 * 100%)">297</div>
-  
-  
-    <div class="-" style="width: calc(303/680 * 100%)">303</div>
-  
-  
-    <div class="0" style="width: calc(80/680 * 100%)">80</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126482">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       57. souligne son soutien à la définition progressive et à la promotion d’une politique de défense commune visant à renforcer la politique de sécurité et de défense commune ainsi que ses objectifs et ses tâches tels que fixés dans le traité, en vue de la mise en place d’une 
   
 
   
-      <del>union de la défense à part entière </del>
+      <del>union de la défense à part entière</del>
   
 
   
-      <ins>coopération approfondie fiable dans le domaine de la défense </ins>
+      <ins>coopération approfondie fiable dans le domaine de la défense</ins>
   
 
   
-      qui reconnaît la situation constitutionnelle spécifique des pays neutres, fondée sur des objectifs stratégiques évidents et axés sur la sécurité des personnes et la paix durable; se félicite, à cet égard, de l’initiative visant à adopter des orientations stratégiques en 2022; insiste sur la nécessité de renforcer les relations entre l’Union et l’OTAN, en soulignant leur compatibilité et l’importance stratégique qu’elles revêtent l’une pour l’autre; invite les États membres à investir davantage dans leurs capacités de défense, à rééquilibrer les responsabilités au sein de l’OTAN ainsi qu’à devenir un partenaire plus égal aux États-Unis; reconnaît la contribution des missions et opérations de la PSDC à la paix, à la sécurité et à la stabilité internationale; salue les progrès accomplis en vue de la mise en place de la facilité européenne pour la paix; insiste sur la nécessité de passer des déclarations à l’action, en particulier en équipant l’Union d’une 
+       qui reconnaît la situation constitutionnelle spécifique des pays neutres, fondée sur des objectifs stratégiques évidents et axés sur la sécurité des personnes et la paix durable; se félicite, à cet égard, de l’initiative visant à adopter des orientations stratégiques en 2022; insiste sur la nécessité de renforcer les relations entre l’Union et l’OTAN, en soulignant leur compatibilité et l’importance stratégique qu’elles revêtent l’une pour l’autre; invite les États membres à investir davantage dans leurs capacités de défense, à rééquilibrer les responsabilités au sein de l’OTAN ainsi qu’à devenir un partenaire plus égal aux États-Unis; reconnaît la contribution des missions et opérations de la PSDC à la paix, à la sécurité et à la stabilité internationale; salue les progrès accomplis en vue de la mise en place de la facilité européenne pour la paix; insiste sur la nécessité de passer des déclarations à l’action, en particulier en équipant l’Union d’une
   
 
   
-      <ins>   </ins>
+      <del> </del>
   
 
   
-      véritable base industrielle de défense au 
+      <ins>    </ins>
   
 
   
-      <del>   moyen d’un fonds européen de la défense doté du budget nécessaire </del>
+      véritable base industrielle de défense au
   
 
   
-      <ins>moyen de projets européens multiples de collaboration en matière de recherche, de développement, d’acquisition et de maintenance dans le domaine de la défense comportant des accords pour la sécurité de l’approvisionnement, </ins>
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
+  
+
+  
+      moyen 
+  
+
+  
+      <del>d’un fonds européen de la défense doté du budget nécessaire </del>
+  
+
+  
+      <ins>de projets européens multiples de collaboration en matière de recherche, de développement, d’acquisition et de maintenance dans le domaine de la défense comportant des accords pour la sécurité de l’approvisionnement, </ins>
   
 
   
@@ -356,15 +513,15 @@
   
 
   
-      <del>de l’autonomie stratégique de l’Union,</del>
+      <del>de l’autonomie stratégique de l’Union</del>
   
 
   
-      <ins>d’une PSDC pleinement opérationnelle et hautement fiable,</ins>
+      <ins>d’une PSDC pleinement opérationnelle et hautement fiable</ins>
   
 
   
-       ce qui permettrait 
+      , ce qui permettrait 
   
 
   
@@ -375,469 +532,637 @@
       à l’Union de promouvoir un marché intérieur mieux intégré pour les équipements de défense; souligne qu’il convient de procéder à des consultations multipartites inclusives en vue de promouvoir une culture stratégique commune en matière de sécurité et de défense;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">187</div>
+  <div class="against">433</div>
+  <div class="abstention">61</div>
+</span>
+
+  
+    
+    <a href="/voting/126486">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(187/681 * 100%)">187</div>
-  
-  
-    <div class="-" style="width: calc(433/681 * 100%)">433</div>
-  
-  
-    <div class="0" style="width: calc(61/681 * 100%)">61</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126486">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       63. attire l’attention sur les menaces à moyen et long terme auxquelles la PESC devra répondre à l’avenir, y compris les risques pour la sécurité posés par les régimes autoritaires, les acteurs non étatiques, le changement climatique, les cybermenaces, les attaques NRBC, les menaces hybrides, y compris l’utilisation plus massive de l’intelligence artificielle, les campagnes de désinformation, la course à l’espace et sa militarisation, les technologies émergentes, le 
   
 
   
-      <del>terrorisme et les flux migratoires non maîtrisés,</del>
+      <del>terrorisme</del>
   
 
   
-      <ins>populisme et le terrorisme,</ins>
+      <ins>populisme</ins>
   
 
   
-       parallèlement aux défis géopolitiques déjà établis; souligne la nécessité pour l’Union de progresser dans la définition et la reconnaissance des menaces hybrides; invite l’Union à améliorer la sensibilisation à ces menaces et à construire une capacité de résilience commune; souligne que ces menaces peuvent uniquement être contrées grâce à des actions coordonnées ainsi qu’à des investissements opportuns et adéquats dans la recherche et l’innovation européennes; se félicite de la création par le Parlement de la commission spéciale sur l’intelligence artificielle à l’ère du numérique, qui constitue un forum permettant d’aborder les questions stratégiques relatives à l’intelligence artificielle; estime qu’il convient de garantir un meilleur lien entre les aspects 
+       et 
   
 
   
-      <del>   </del>
+      <del>les flux migratoires non maîtrisés</del>
   
 
   
-      internes et externes des 
+      <ins>le terrorisme</ins>
   
 
   
-      <ins>   </ins>
+      , parallèlement aux défis géopolitiques déjà établis; souligne la nécessité pour l’Union de progresser dans la définition et la reconnaissance des menaces hybrides; invite l’Union à améliorer la sensibilisation à ces menaces et à construire une capacité de résilience commune; souligne que ces menaces peuvent uniquement être contrées grâce à des actions coordonnées ainsi qu’à des investissements opportuns et adéquats dans la recherche et l’innovation européennes; se félicite de la création par le Parlement de la commission spéciale sur l’intelligence artificielle à l’ère du numérique, qui constitue un forum permettant d’aborder les questions stratégiques relatives à l’intelligence artificielle; estime qu’il convient de garantir un meilleur lien entre les aspects
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
+  
+
+  
+      internes et externes des
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
   
 
   
       politiques de l’Union, en vue de garantir que les politiques de l’Union tendent vers les objectifs de la PESC, y compris la politique énergétique de l’Union;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">223</div>
+  <div class="against">414</div>
+  <div class="abstention">44</div>
+</span>
+
+  
+    
+    <a href="/voting/126488">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(223/681 * 100%)">223</div>
-  
-  
-    <div class="-" style="width: calc(414/681 * 100%)">414</div>
-  
-  
-    <div class="0" style="width: calc(44/681 * 100%)">44</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126488">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>59 bis. souligne qu’il est urgent d’accélérer le désarmement tant au niveau régional que mondial; se déclare fortement préoccupé par le risque d’une reprise de la course aux armements nucléaires en Europe; rejette fermement tout plan de déploiement de nouvelles armes nucléaires en Europe et appelle au retrait immédiat de toute arme nucléaire américaine d’Allemagne, d’Italie, de Belgique et des Pays-Bas; invite tous les États membres à signer le traité sur l’interdiction des armes nucléaires adopté par 122 États au sein des Nations unies le 7 juillet 2017;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">75</div>
+  <div class="against">562</div>
+  <div class="abstention">44</div>
+</span>
+
+  
+    
+    <a href="/voting/126487">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(75/681 * 100%)">75</div>
-  
-  
-    <div class="-" style="width: calc(562/681 * 100%)">562</div>
-  
-  
-    <div class="0" style="width: calc(44/681 * 100%)">44</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126487">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
-
-✅️ Adopté
+🚫 Annulé
 
 </header>
-    
-        
-
-<section>
-
-  
-      <ins>41 bis. condamne avec la plus grande fermeté l’attaque du Congrès des États- Unis par un groupe d’assaillants galvanisés par les théories du complot du président Donald Trump et persuadés, sans aucun fondement, que l’élection présidentielle du 3 novembre 2020 était truquée; se dit certain que les États-Unis procèderont à une passation pacifique du pouvoir au président élu Joseph Biden et à la vice-président élue Kamala Harris; s’inquiète de la montée du populisme et de l’extrémisme de part et d’autre de l’Atlantique et souligne qu&#39;il est urgent de défendre la démocratie, les droits de l’homme et l’état de droit dans le monde;</ins>
-  
- 
-</section>
-
-    
-    <footer>
-        
             
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(523/678 * 100%)">523</div>
-  
-  
-    <div class="-" style="width: calc(90/678 * 100%)">90</div>
-  
-  
-    <div class="0" style="width: calc(65/678 * 100%)">65</div>
-  
-</div>
-
-            
+                <div class="hidden">S&amp;D</div>
                 
-                
-                    
-                
-                <a href="/voting/126481">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
-    
 
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
-
-✅️ Adopté
-
-</header>
-    
-        
-
-<section>
-
-  
-      52. invite la Commission, le Conseil et le VP/HR à continuer de faire savoir à la Chine que l’Union ne tolérera pas la poursuite des violations des droits de l’homme à Hong Kong, au Tibet et au Xinjiang, pas plus que le traitement qu’elle réserve aux personnes appartenant à des minorités, et à jouer un rôle de premier plan à l’échelle internationale afin de garantir l’autonomie de Hong Kong; condamne la violation du modèle «un pays, deux systèmes» par l’adoption de la loi sur la sécurité nationale en Chine, laquelle entrave sérieusement le haut degré d’autonomie de Hong Kong et a une incidence néfaste sur l’indépendance du pouvoir judiciaire ainsi que sur la liberté d’expression à Hong Kong; exprime sa préoccupation concernant l’incidence de l’imposition de la loi sur la sécurité nationale à Hong Kong sur la relation entre la Chine et Taïwan; souligne que le fait que Beijing sape continuellement l’autonomie de Hong Kong est non seulement en contradiction avec les obligations de la Chine dans le cadre des traités bilatéraux et du droit international, mais remet également en question le rôle de Beijing en tant que partenaire crédible; relève que le Parlement européen prendra en considération les violations des droits de l’homme en Chine continentale et à Hong    Kong lorsqu’il sera invité à approuver un accord global sur les investissements et tout futur accord commercial avec la Chine; encourage les États membres à mettre en œuvre le train de mesures approuvé par le Conseil des affaires étrangères le 28 juillet 2020, ainsi que la demande à la Commission et aux États membres de lutter activement contre la persécution brutale des Ouïghours au Xinjiang, ainsi que d’autres groupes minoritaires ethniques et religieux, en particulier les chrétiens et les Tibétains; 
-  
-
-  
-      <del>     </del>
-  
-
-  
-      <ins>invite les États membres et le VP-HR, dans le cadre du régime mondial de sanctions de l’Union européenne en matière de droits de l’homme, à adopter des sanctions à l’encontre des responsables chinois et des entités dirigées par l’État responsables de l’organisation de la politique de détention massive des Ouïgours et du travail forcé en Chine;</ins>
-  
-
-  
-          _______________________
-  
- 
-</section>
-
-    
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(591/678 * 100%)">591</div>
-  
-  
-    <div class="-" style="width: calc(54/678 * 100%)">54</div>
-  
-  
-    <div class="0" style="width: calc(33/678 * 100%)">33</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126484">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
-
-✅️ Adopté
-
-</header>
-    
-        
-
-<section>
+<p>
 
   
       14. 
   
 
   
-      <del>insiste sur la nécessité d’une adoption et d’une mise en œuvre rapides d’un mécanisme robuste de l’Union permettant de sanctionner de manière ciblée les violations des droits de l’homme (disposition législative européenne de type loi Magnitsky), par des interdictions de visas et le gel des avoirs; souligne qu’un tel mécanisme de sanctions devrait également cibler les actes de corruption, de même que la traite des êtres humains et les violences sexuelles et basées sur le genre; souligne que le régime de sanctions doit inclure un mécanisme efficace de mise en œuvre qui garantisse son respect par tous les États membres;</del>
+      <del>insiste sur la nécessité d’une adoption et d’une mise en œuvre rapides d’un mécanisme robuste de l’Union permettant de sanctionner de manière ciblée les violations des droits de l’homme (disposition législative européenne de type loi Magnitsky), par des interdictions de visas et le gel des avoirs</del>
   
 
   
-      <ins>salue l&#39;adoption d’un nouveau régime mondial de sanctions de l’Union européenne en matière de droits de l’homme (disposition législative européenne de type loi Magnitsky), qui permet à l’Union d’imposer des sanctions ciblées aux responsables de graves violations des droits de l’homme et d’atteintes à ces droits dans le monde; recommande qu’à l’avenir, le champ d’application du régime de sanctions soit élargi aux actes de corruption;</ins>
+      <ins>salue l&#39;adoption du régime mondial de sanctions de l’Union européenne en matière de droits de l’homme, qui comporte des interdictions de visas et le gel des avoirs, et insiste sur la nécessité d’une mise en œuvre rapide</ins>
+  
+
+  
+      ; souligne qu’un tel mécanisme de sanctions devrait également cibler les actes de corruption, de même que la traite des êtres humains et les violences sexuelles et basées sur le genre; souligne que le régime de sanctions doit inclure un mécanisme efficace de mise en œuvre qui garantisse son respect par tous les États membres;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(337/680 * 100%)">337</div>
-  
-  
-    <div class="-" style="width: calc(298/680 * 100%)">298</div>
-  
-  
-    <div class="0" style="width: calc(45/680 * 100%)">45</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126467">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">S&amp;D</div>
+                
+
+<p>
+
+  
+      38. souligne qu’il est essentiel et dans l’intérêt mutuel de l’Union et du Royaume- Uni, en particulier en raison de leurs principes et valeurs communs ainsi que de leur proximité géographique et de leur coopération stratégique commune de longue date, de se mettre d’accord sur des réponses communes à apporter aux défis en matière de politique étrangère, de sécurité et de défense fondées sur les principes de multilatéralisme, sur la résolution de conflits au moyen du dialogue et de la diplomatie ainsi que sur le droit international, en gardant à l’esprit que la plupart des menaces internationales touchent les deux parties dans la même mesure;
+  
+
+  
+      <del> souligne l’importance de parvenir à un bon accord sur les relations futures entre l’Union et le Royaume-Uni, qui protège les intérêts de l’Union;</del>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°12 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
-
-  
-      25. 
-  
+<p>
 
   
-      <ins>salue la communication conjointe prochaine de la Commission et du haut représentant sur un partenariat renouvelé avec le voisinage méridional; </ins>
-  
-
-  
-      invite l’Union à reconnaître les spécificités de chacun des pays du sud de la Méditerranée dans ses politiques à l’égard de la région; demande à l’Union de renforcer la coopération avec les acteurs régionaux, tels que la ligue arabe, l’union africaine et l’union pour la Méditerranée, ainsi que de soutenir activement la coopération intrarégionale au sein des pays du voisinage méridional en tant qu’outil indispensable pour la sécurité et le développement économique durable; souligne la nécessité de renforcer les relations de l’Union avec les pays du nord de l’Afrique; déplore que 25 ans après le lancement dudit processus de Barcelone, la construction d’un espace commun de prospérité, de stabilité et de liberté avec les pays du voisinage sud-méditerranéen ne soit toujours pas achevée; soutient sans réserve le processus de Berlin et se réjouit de toutes les initiatives engagées par les Nations unies en vue de trouver une solution politique globale à la crise libyenne;
+      <ins>41 bis. condamne avec la plus grande fermeté l’attaque du Congrès des États- Unis par un groupe d’assaillants galvanisés par les théories du complot du président Donald Trump et persuadés, sans aucun fondement, que l’élection présidentielle du 3 novembre 2020 était truquée; se dit certain que les États-Unis procèderont à une passation pacifique du pouvoir au président élu Joseph Biden et à la vice-président élue Kamala Harris; s’inquiète de la montée du populisme et de l’extrémisme de part et d’autre de l’Atlantique et souligne qu&#39;il est urgent de défendre la démocratie, les droits de l’homme et l’état de droit dans le monde;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">523</div>
+  <div class="against">90</div>
+  <div class="abstention">65</div>
+</span>
+
+  
+    
+    <a href="/voting/126481">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(512/681 * 100%)">512</div>
-  
-  
-    <div class="-" style="width: calc(154/681 * 100%)">154</div>
-  
-  
-    <div class="0" style="width: calc(15/681 * 100%)">15</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126474">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°13 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ✅️ Adopté
 
 </header>
+            
+                <div class="hidden">S&amp;D</div>
+                
+
+<p>
+
+  
+      52. invite la Commission, le Conseil et le VP/HR à continuer de faire savoir à la Chine que l’Union ne tolérera pas la poursuite des violations des droits de l’homme à Hong Kong, au Tibet et au Xinjiang, pas plus que le traitement qu’elle réserve aux personnes appartenant à des minorités, et à jouer un rôle de premier plan à l’échelle internationale afin de garantir l’autonomie de Hong Kong; condamne la violation du modèle «un pays, deux systèmes» par l’adoption de la loi sur la sécurité nationale en Chine, laquelle entrave sérieusement le haut degré d’autonomie de Hong Kong et a une incidence néfaste sur l’indépendance du pouvoir judiciaire ainsi que sur la liberté d’expression à Hong Kong; exprime sa préoccupation concernant l’incidence de l’imposition de la loi sur la sécurité nationale à Hong Kong sur la relation entre la Chine et Taïwan; souligne que le fait que Beijing sape continuellement l’autonomie de Hong Kong est non seulement en contradiction avec les obligations de la Chine dans le cadre des traités bilatéraux et du droit international, mais remet également en question le rôle de Beijing en tant que partenaire crédible; relève que le Parlement européen prendra en considération les violations des droits de l’homme en Chine continentale et à Hong    Kong lorsqu’il sera invité à approuver un accord global sur les investissements et tout futur accord commercial avec la Chine; encourage les États membres à mettre en œuvre le train de mesures approuvé par le Conseil des affaires étrangères le 28 juillet 2020, ainsi que la demande à la Commission et aux États membres de lutter activement contre la persécution brutale des Ouïghours au Xinjiang, ainsi que d’autres groupes minoritaires ethniques et religieux, en particulier les chrétiens et les Tibétains
+  
+
+  
+      <del>;          </del>
+  
+
+  
+      <ins>; invite les États membres et le VP-HR, dans le cadre du régime mondial de sanctions de l’Union européenne en matière de droits de l’homme, à adopter des sanctions à l’encontre des responsables chinois et des entités dirigées par l’État responsables de l’organisation de la politique de détention massive des Ouïgours et du travail forcé en Chine;    </ins>
+  
+
+  
+      _______________________
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">591</div>
+  <div class="against">54</div>
+  <div class="abstention">33</div>
+</span>
+
+  
+    
+    <a href="/voting/126484">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
+        
     
         
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
-<section>
+✅️ Adopté
+
+</header>
+            
+                <div class="hidden">PPE</div>
+                
+
+<p>
+
+  
+      14. 
+  
+
+  
+      <del>insiste sur la nécessité d’une adoption et d’une mise en œuvre rapides d’un mécanisme robuste de l’Union permettant de sanctionner de manière ciblée les violations des droits de l’homme (disposition législative européenne de type loi Magnitsky), par des interdictions de visas et le gel des avoirs; souligne qu’un tel mécanisme de sanctions devrait également cibler les actes de corruption, de même que la traite des êtres humains et les violences sexuelles et basées sur le genre; souligne que le régime de sanctions doit inclure un mécanisme efficace de mise en œuvre qui garantisse son respect par tous les États membres</del>
+  
+
+  
+      <ins>salue l&#39;adoption d’un nouveau régime mondial de sanctions de l’Union européenne en matière de droits de l’homme (disposition législative européenne de type loi Magnitsky), qui permet à l’Union d’imposer des sanctions ciblées aux responsables de graves violations des droits de l’homme et d’atteintes à ces droits dans le monde; recommande qu’à l’avenir, le champ d’application du régime de sanctions soit élargi aux actes de corruption</ins>
+  
+
+  
+      ;
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">337</div>
+  <div class="against">298</div>
+  <div class="abstention">45</div>
+</span>
+
+  
+    
+    <a href="/voting/126467">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
+
+✅️ Adopté
+
+</header>
+            
+                <div class="hidden">PPE</div>
+                
+
+<p>
+
+  
+      25.
+  
+
+  
+      <ins> salue la communication conjointe prochaine de la Commission et du haut représentant sur un partenariat renouvelé avec le voisinage méridional;</ins>
+  
+
+  
+       invite l’Union à reconnaître les spécificités de chacun des pays du sud de la Méditerranée dans ses politiques à l’égard de la région; demande à l’Union de renforcer la coopération avec les acteurs régionaux, tels que la ligue arabe, l’union africaine et l’union pour la Méditerranée, ainsi que de soutenir activement la coopération intrarégionale au sein des pays du voisinage méridional en tant qu’outil indispensable pour la sécurité et le développement économique durable; souligne la nécessité de renforcer les relations de l’Union avec les pays du nord de l’Afrique; déplore que 25 ans après le lancement dudit processus de Barcelone, la construction d’un espace commun de prospérité, de stabilité et de liberté avec les pays du voisinage sud-méditerranéen ne soit toujours pas achevée; soutient sans réserve le processus de Berlin et se réjouit de toutes les initiatives engagées par les Nations unies en vue de trouver une solution politique globale à la crise libyenne;
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">512</div>
+  <div class="against">154</div>
+  <div class="abstention">15</div>
+</span>
+
+  
+    
+    <a href="/voting/126474">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="13">
+            <header>📝 Amendement n°13 | 
+
+✅️ Adopté
+
+</header>
+            
+                <div class="hidden">PPE</div>
+                
+
+<p>
 
   
       38. souligne qu’il est essentiel et dans l’intérêt mutuel de l’Union et du Royaume- Uni, en particulier en raison de leurs principes et valeurs communs ainsi que de leur proximité géographique et de leur coopération stratégique commune de longue date, de se mettre d’accord sur des réponses communes à apporter aux défis en matière de politique étrangère, de sécurité et de défense fondées sur les principes de multilatéralisme, sur la résolution de conflits au moyen du dialogue et de la diplomatie ainsi que sur le droit international, en gardant à l’esprit que la plupart des menaces internationales touchent les deux parties dans la même mesure; 
   
 
   
-      <del>souligne l’importance de parvenir à un bon accord sur les relations futures </del>
+      <del>souligne</del>
   
 
   
-      <ins>salue la conclusion de l’accord de commerce et de coopération </ins>
+      <ins>salue la conclusion de</ins>
   
 
   
-      entre l’Union 
+       l’
   
 
   
-      <ins>européenne </ins>
+      <del>importance</del>
   
 
   
-      et le Royaume-Uni, qui 
+      <ins>accord</ins>
   
 
   
-      <del>protège les intérêts de l’Union;</del>
+       de 
   
 
   
-      <ins>garantit clarté et sécurité aux citoyens et aux entreprises de l’Union et du Royaume-Uni; souligne qu’il examine actuellement l’accord et qu’il entend surveiller de près la mise en œuvre de l’accord entre l’Union européenne et le Royaume-Uni dans tous ses détails;</ins>
+      <del>parvenir à un bon accord sur les relations futures entre</del>
+  
+
+  
+      <ins>commerce et de coopération entre l’Union européenne et le Royaume-Uni, qui garantit clarté et sécurité aux citoyens et aux entreprises de</ins>
+  
+
+  
+       l’Union et 
+  
+
+  
+      <del>le</del>
+  
+
+  
+      <ins>du</ins>
+  
+
+  
+       Royaume-Uni
+  
+
+  
+      <del>, qui protège les intérêts de l’Union</del>
+  
+
+  
+      <ins>; souligne qu’il examine actuellement l’accord et qu’il entend surveiller de près la mise en œuvre de l’accord entre l’Union européenne et le Royaume-Uni dans tous ses détails</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">510</div>
+  <div class="against">34</div>
+  <div class="abstention">135</div>
+</span>
+
+  
+    
+    <a href="/voting/126479">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(510/679 * 100%)">510</div>
-  
-  
-    <div class="-" style="width: calc(34/679 * 100%)">34</div>
-  
-  
-    <div class="0" style="width: calc(135/679 * 100%)">135</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126479">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°14 | 
+        
+            <article id="14">
+            <header>📝 Amendement n°14 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       47. appelle, à cet égard, à un engagement ciblé et multidimensionnel avec la région, soutenu par un texte commun de l’Union, qui favorise des stratégies permettant de relever conjointement des défis communs, tels que la promotion de la paix, de la sécurité et de la prospérité, tout en assurant un front commun face aux menaces que pose le changement climatique; souligne la place importante qu’occupe l’Amérique latine pour l’Union européenne, et demande de continuer à la considérer comme une région présentant un grand intérêt géostratégique pour la PESC, en participant à la promotion de la démocratie et des droits de l’homme dans la région, tout en contribuant à son développement économique; souligne que le respect de l’état de droit et d’un cadre politique et juridique stable, y compris la lutte contre l’impunité en matière de corruption, ainsi que des progrès vers la démocratie et le respect des droits de l’homme et la promotion des libertés fondamentales constituent la pierre angulaire d’une intégration et d’une coopération plus approfondies avec les pays d’Amérique latine et des Caraïbes; souligne l’importance de promouvoir et d’achever le renouvellement 
@@ -848,280 +1173,324 @@
   
 
   
-      des accords globaux avec le Chili et le 
+      des accords globaux avec le Chili et le
   
 
   
-      <ins>   </ins>
+      <del> </del>
   
 
   
-      Mexique, ainsi que de 
+      <ins>    </ins>
   
 
   
-      <del>   </del>
+      Mexique, ainsi que de
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
       l’accord d’association entre l’Union et le Mercosur, et insiste sur le fait que ces pays sont des alliés et des partenaires stratégiques de l’Union; exprime sa profonde inquiétude face au manque de respect de la démocratie et de l’état de droit, ainsi qu’aux attaques à l’encontre des dirigeants de l’opposition démocratiquement élus, des journalistes, des étudiants et des défenseurs des droits de l’homme, en particulier ceux traitant des questions environnementales, ainsi que leurs avocats;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">260</div>
+  <div class="against">367</div>
+  <div class="abstention">54</div>
+</span>
+
+  
+    
+    <a href="/voting/126483">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(260/681 * 100%)">260</div>
-  
-  
-    <div class="-" style="width: calc(367/681 * 100%)">367</div>
-  
-  
-    <div class="0" style="width: calc(54/681 * 100%)">54</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126483">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°15 | 
+        
+            <article id="15">
+            <header>📝 Amendement n°15 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       56. 
   
 
   
-      <del>regrette que la Commission n’ait pas inclus </del>
+      <del>regrette que la Commission n’ait pas inclus</del>
   
 
   
-      <ins>salue l’inscription d’une communication conjointe sur </ins>
+      <ins>salue l’inscription d’une communication conjointe sur</ins>
   
 
   
-      l’Arctique dans 
+       l’Arctique dans 
   
 
   
-      <del>son </del>
+      <del>son</del>
   
 
   
-      <ins>le </ins>
+      <ins>le</ins>
   
 
   
-      programme de travail 
+       programme de travail 
   
 
   
-      <del>2020; reconnaît toutefois qu’elle a ouvert une consultation publique, visant à obtenir des informations sur les forces et les faiblesses de la politique existante, en vue d’éventuellement préparer une approche mise à jour;</del>
+      <del>2020; reconnaît toutefois qu’elle a ouvert une consultation publique, visant à obtenir des informations sur les forces et les faiblesses de la politique existante, en vue d’éventuellement préparer une approche mise à jour</del>
   
 
   
-      <ins>de la Commission pour 2021;</ins>
+      <ins>de la Commission pour 2021</ins>
   
 
   
-       estime qu’il convient que l’Union dispose d’une stratégie pour l’Arctique;
+      ; estime qu’il convient que l’Union dispose d’une stratégie pour l’Arctique;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">517</div>
+  <div class="against">125</div>
+  <div class="abstention">38</div>
+</span>
+
+  
+    
+    <a href="/voting/126485">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(517/680 * 100%)">517</div>
-  
-  
-    <div class="-" style="width: calc(125/680 * 100%)">125</div>
-  
-  
-    <div class="0" style="width: calc(38/680 * 100%)">38</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126485">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°16 | 
+        
+            <article id="16">
+            <header>📝 Amendement n°16 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       9. demande une nouvelle fois la révision de la stratégie globale de l’Union afin de tirer les leçons de la nouvelle dynamique géopolitique, des menaces actuelles, y compris de la pandémie de COVID-19, et des défis attendus à l’avenir ainsi que de réévaluer les objectifs et les moyens de la PESC; souligne que, tout en approfondissant sa coopération avec ses partenaires et ses alliés internationaux, l’Union doit accélérer la prise de décisions en matière d’affaires étrangères et sa capacité à travailler avec des partenaires partageant les mêmes valeurs, tout en consolidant le multilatéralisme, de même que renforcer ses capacités d’action stratégiques, également de manière autonome, si nécessaire; souligne que l’Union 
   
 
   
-      <del>a la responsabilité de construire son autonomie stratégique en matière </del>
+      <del>a la responsabilité de construire son autonomie stratégique en matière</del>
   
 
   
-      <ins>et ses États membres devraient se concentrer sur les questions </ins>
+      <ins>et ses États membres devraient se concentrer sur les questions</ins>
   
 
   
-      de diplomatie, de sécurité et de défense communes, et 
+       de diplomatie, de sécurité et de défense communes, et 
   
 
   
-      <del>de </del>
+      <del>de</del>
   
 
   
-      <ins>sur </ins>
+      <ins>sur</ins>
   
 
   
-      ce qui relève des questions économiques, sanitaires et commerciales, afin de faire face à la multiplication des défis communs qui pèsent sur la défense de ses intérêts, de ses normes et de ses valeurs dans le monde de l’après-pandémie; insiste en conséquence sur la nécessité pour les pays européens de conserver leur capacité à décider et à agir seuls; invite instamment les États membres à mettre en œuvre et à appliquer rapidement le nouveau règlement afin de    mettre en place des mécanismes d’examen des investissements étrangers dans des secteurs critiques; encourage les États membres à créer un nouveau forum de coopération multilatérale, en s’appuyant sur l’héritage du Comité de coordination pour le contrôle multilatéral des exportations stratégiques, afin de surveiller et de contrôler l’exportation de technologies, les flux commerciaux et les investissements sensibles dans les pays suscitant des préoccupations;
+       ce qui relève des questions économiques, sanitaires et commerciales, afin de faire face à la multiplication des défis communs qui pèsent sur la défense de ses intérêts, de ses normes et de ses valeurs dans le monde de l’après-pandémie; insiste en conséquence sur la nécessité pour les pays européens de conserver leur capacité à décider et à agir seuls; invite instamment les États membres à mettre en œuvre et à appliquer rapidement le nouveau règlement afin de    mettre en place des mécanismes d’examen des investissements étrangers dans des secteurs critiques; encourage les États membres à créer un nouveau forum de coopération multilatérale, en s’appuyant sur l’héritage du Comité de coordination pour le contrôle multilatéral des exportations stratégiques, afin de surveiller et de contrôler l’exportation de technologies, les flux commerciaux et les investissements sensibles dans les pays suscitant des préoccupations;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">166</div>
+  <div class="against">503</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/126464">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(166/680 * 100%)">166</div>
-  
-  
-    <div class="-" style="width: calc(503/680 * 100%)">503</div>
-  
-  
-    <div class="0" style="width: calc(11/680 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126464">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°17 | 
+        
+            <article id="17">
+            <header>📝 Amendement n°17 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       13. regrette le manque de progrès en ce qui concerne l’amélioration du processus décisionnel en matière de PESC, ce qui a une incidence sur l’efficacité, la rapidité et la crédibilité de l’action et de la prise de décisions de l’Union sur la scène internationale; 
   
 
   
-      <del>invite les États membres à ouvrir de toute urgence un débat sur la possibilité de passer du vote à l’unanimité au vote à la majorité qualifiée au moins dans certains domaines de la PESC, notamment les décisions relatives aux droits de l’homme et aux sanctions, en tant que moyen concret de renforcer l’influence de l’Union sur la scène internationale;</del>
+      <del>invite les États membres à ouvrir de toute urgence un débat sur la possibilité de passer du vote à l’unanimité au vote à la majorité qualifiée au moins dans certains domaines de la PESC, notamment les décisions relatives aux droits</del>
   
 
   
-      <ins>souligne que l’unanimité dans le cadre de la PESC renforce la solidarité au sein de l’Union et confère à l’Union un mandat plus solide pour ses actions au niveau mondial;</ins>
+      <ins>souligne que l’unanimité dans le cadre de la PESC renforce la solidarité au sein</ins>
+  
+
+  
+       de l’
+  
+
+  
+      <del>homme</del>
+  
+
+  
+      <ins>Union</ins>
+  
+
+  
+       et 
+  
+
+  
+      <del>aux sanctions, en tant que moyen concret de renforcer l’influence de l’Union sur la scène internationale</del>
+  
+
+  
+      <ins>confère à l’Union un mandat plus solide pour ses actions au niveau mondial</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">135</div>
+  <div class="against">470</div>
+  <div class="abstention">74</div>
+</span>
+
+  
+    
+    <a href="/voting/126466">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(135/679 * 100%)">135</div>
-  
-  
-    <div class="-" style="width: calc(470/679 * 100%)">470</div>
-  
-  
-    <div class="0" style="width: calc(74/679 * 100%)">74</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126466">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°18 | 
+        
+            <article id="18">
+            <header>📝 Amendement n°18 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       23. souligne l’importance de l’engagement de l’Union à soutenir la souveraineté, l’indépendance et l’intégrité territoriale de ses partenaires au sein des frontières internationalement reconnues; s’inquiète de la prolifération des zones de conflits dévastateurs dans le proche voisinage de l’Union, ainsi que des conflits gelés et de la poursuite de l’occupation de facto des territoires d’États souverains par la Fédération de Russie; renouvelle sa condamnation des politiques agressives de la Russie à l’égard de l’Ukraine, son rôle négatif dans plusieurs conflits gelés ainsi que la pression qu’elle exerce sur certains de ses voisins directs de l’Union, de même que les violations des droits des Tatars de Crimée, le blocage de la mer d’Azov, la poursuite de la confiscation des gisements de gaz de l’Ukraine en mer Noire et la violation de l’intégrité territoriale de la Géorgie et de la Moldavie; reste pleinement engagé vis-à-vis de la politique de non-reconnaissance de l’annexion illégale de la Crimée; demande à la Russie d’endosser ses responsabilités, d’user de son influence sur les séparatistes qu’elle soutient et de respecter pleinement ses engagements au titre des accords de Minsk; souligne la nécessité pour l’Union d’intensifier son action en faveur de la    résolution pacifique desdits conflits gelés, ainsi que le dialogue avec les pays tiers concernés, de promouvoir activement l’adoption de solutions qui s’appuient sur les normes et principes du droit international, sur la charte des Nations unies et sur l’acte final de Helsinki de l’OSCE de 1975, et de renforcer son soutien aux civils affectés par les conflits, aux personnes déplacées à l’intérieur de leur propre pays (PDI) et aux réfugiés;
@@ -1131,97 +1500,101 @@
       <ins> exige également que la Fédération de Russie renonce à son occupation des territoires géorgiens d’Abkhazie et de la région de Tskhinvali/Ossétie du Sud, et qu’elle cesse l’intégration de fait de ces deux régions dans l’administration russe;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">526</div>
+  <div class="against">66</div>
+  <div class="abstention">85</div>
+</span>
+
+  
+    
+    <a href="/voting/126473">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(526/677 * 100%)">526</div>
-  
-  
-    <div class="-" style="width: calc(66/677 * 100%)">66</div>
-  
-  
-    <div class="0" style="width: calc(85/677 * 100%)">85</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126473">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°19 | 
+        
+            <article id="19">
+            <header>📝 Amendement n°19 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>25 bis. souligne que l’Union doit accorder davantage d’attention au conflit en cours en Syrie et faire en sorte que les membres du régime syrien et de ses alliés, notamment de Russie et d’Iran, qui sont responsables de nombreux crimes de guerre commis depuis 2011, soient traduits en justice;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">541</div>
+  <div class="against">87</div>
+  <div class="abstention">49</div>
+</span>
+
+  
+    
+    <a href="/voting/126475">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(541/677 * 100%)">541</div>
-  
-  
-    <div class="-" style="width: calc(87/677 * 100%)">87</div>
-  
-  
-    <div class="0" style="width: calc(49/677 * 100%)">49</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126475">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°20 | 
+        
+            <article id="20">
+            <header>📝 Amendement n°20 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       32. estime que l’Union doit définir d’urgence une meilleure stratégie géopolitique pour ses relations à court, moyen et long terme avec la Turquie, compte tenu notamment du recul démocratique continu et de l’affirmation croissante de la politique étrangère de la Turquie, qui contribue 
@@ -1232,11 +1605,15 @@
   
 
   
-      à l’escalade des tensions et a une incidence déstabilisatrice qui menace la paix et la stabilité régionales en Méditerranée orientale, au Proche-
+      à l’escalade des tensions et a une incidence déstabilisatrice qui menace la paix et la stabilité régionales en Méditerranée orientale, au Proche
   
 
   
-      <del> </del>
+      <del>- </del>
+  
+
+  
+      <ins>-</ins>
   
 
   
@@ -1244,68 +1621,70 @@
   
 
   
-      <del>de son rôle </del>
+      <del>de son rôle</del>
   
 
   
-      <ins>du rôle de la Turquie </ins>
+      <ins>du rôle de la Turquie</ins>
   
 
   
-      dans les conflits en Syrie, en Iraq, en Libye et au Haut-
+       dans les conflits en Syrie, en Iraq, en Libye et au Haut-Karabakh
   
 
   
-      <del>Karabakh;</del>
+      <ins> compte tenu du rôle qu’elle joue en tant que partenaire régional important et allié de l’OTAN et de la rivalité croissante entre la Turquie et la Russie dans la région</ins>
   
 
   
-      <ins>Karabakh compte tenu du rôle qu’elle joue en tant que partenaire régional important et allié de l’OTAN et de la rivalité croissante entre la Turquie et la Russie dans la région;</ins>
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">48</div>
+  <div class="against">576</div>
+  <div class="abstention">57</div>
+</span>
+
+  
+    
+    <a href="/voting/126478">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(48/681 * 100%)">48</div>
-  
-  
-    <div class="-" style="width: calc(576/681 * 100%)">576</div>
-  
-  
-    <div class="0" style="width: calc(57/681 * 100%)">57</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126478">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°21 | 
+        
+            <article id="21">
+            <header>📝 Amendement n°21 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       30. invite la France, l’Allemagne et le Royaume-Uni, en tant que signataires du plan d’action global commun, ainsi que l’Union et ses États membres, à renforcer leur unité, leur force de dissuasion et leur résilience aux sanctions secondaires imposées par les pays tiers, et à mettre en œuvre des mesures visant à protéger les intérêts légitimes de l’Union, y compris en rendant l’instrument d’appui aux échanges commerciaux (INSTEX) pleinement opérationnel; rejette la réimposition unilatérale et extraterritoriale de sanctions par les États-Unis à la suite de leur retrait du plan d’action global commun, car elle porte atteinte aux intérêts économiques et de politique étrangère légitimes de l’Union, notamment en entravant le commerce humanitaire avec l’Iran en période de COVID-19; appelle les États-Unis à réintégrer sans condition le plan d’action global commun, ce qui devrait aller de pair avec le retour de l’Iran au respect intégral de ses engagements au titre de l’accord;
@@ -1315,120 +1694,224 @@
       <ins> condamne, à cet égard, la décision de l’Iran d’entamer l’enrichissement d’uranium à 20 %, ce qui constitue une violation directe grave de l’accord nucléaire;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">376</div>
+  <div class="against">242</div>
+  <div class="abstention">62</div>
+</span>
+
+  
+    
+    <a href="/voting/126476">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(376/680 * 100%)">376</div>
-  
-  
-    <div class="-" style="width: calc(242/680 * 100%)">242</div>
-  
-  
-    <div class="0" style="width: calc(62/680 * 100%)">62</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126476">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°22 | 
+        
+            <article id="22">
+            <header>📝 Amendement n°22 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       2. 
   
 
   
-      <del>soutient et défend le rôle de l’Union en tant que partenaire fiable dans le monde entier, «partenaire de choix» privilégié pour les tiers, intermédiaire impartial et guidé par des principes sans être dogmatique, acteur de référence œuvrant à la médiation et à la résolution des conflits, qui place la diplomatie et le dialogue au premier rang des priorités pour jouer un rôle constructif dans les conflits mondiaux, grand défenseur du développement durable et principal contributeur au cadre multilatéral, mais également acteur mondial prêt à agir de manière autonome et décisive le cas échéant pour défendre les propres valeurs et intérêts de l’Union, qui assume ses responsabilités en assurant sa propre sécurité et en promouvant la paix et la stabilité internationales, sur la base des principes et des valeurs de la charte des Nations unies, également inscrits dans le droit international, ainsi que dans le respect de l’ordre international fondé sur des règles; estime qu’il est nécessaire de faire preuve de créativité, d’une attitude plus proactive ainsi que d’une unité et d’une solidarité plus grandes au sein des États membres, et de s’appuyer sur l’engagement et les ressources des États membres pour accroître l’influence de l’Union à l’échelle mondiale et promouvoir    son modèle de puissance positive et son rôle responsable dans la gouvernance mondiale, ainsi que pour lui permettre d’endosser sa responsabilité stratégique dans son voisinage immédiat;</del>
+      <del>soutient et défend le rôle de l’Union en tant que partenaire fiable dans le monde entier, «partenaire de choix» privilégié pour les tiers, intermédiaire impartial et guidé par des principes sans être dogmatique, acteur de référence œuvrant à</del>
   
 
   
-      <ins>rappelle qu’il n’incombe pas l’Union de garantir la paix et la stabilité internationales, ce mandat ayant plutôt été confié par les pays aux Nations unies conformément à la charte des Nations unies; estime qu’il n’existe aucune base juridique permettant d’accroître l’influence de l’Union à l’échelle mondiale ou de promouvoir son modèle de puissance «positive»;</ins>
+      <ins>rappelle qu’il n’incombe pas l’Union de garantir</ins>
+  
+
+  
+       la 
+  
+
+  
+      <del>médiation</del>
+  
+
+  
+      <ins>paix</ins>
+  
+
+  
+       et
+  
+
+  
+      <del> à</del>
+  
+
+  
+       la 
+  
+
+  
+      <del>résolution des conflits, qui place la diplomatie et le dialogue au premier rang des priorités pour jouer un rôle constructif dans les conflits mondiaux, grand défenseur du développement durable et principal contributeur au cadre multilatéral, mais également acteur mondial prêt à agir de manière autonome et décisive le cas échéant pour défendre les propres valeurs et intérêts de l’Union, qui assume ses responsabilités en assurant sa propre sécurité et en promouvant la paix et la stabilité internationales, sur la base des principes et des valeurs de la charte des Nations unies, également inscrits dans le droit international, ainsi que dans le respect de l’ordre international fondé sur des règles; estime qu’il est nécessaire de faire preuve de créativité, d’une attitude plus proactive ainsi que d’une unité et d’une solidarité plus grandes au sein des États membres, et de s’appuyer sur l’engagement et les ressources des États membres pour </del>
+  
+
+  
+      <ins>stabilité internationales, ce mandat ayant plutôt été confié par les pays aux Nations unies conformément à la charte des Nations unies; estime qu’il n’existe aucune base juridique permettant d’</ins>
+  
+
+  
+      accroître l’influence de l’Union à l’échelle mondiale 
+  
+
+  
+      <del>et</del>
+  
+
+  
+      <ins>ou de</ins>
+  
+
+  
+       promouvoir
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
+  
+
+  
+      son modèle de puissance
+  
+
+  
+      <del> positive et son rôle responsable dans la gouvernance mondiale, ainsi que pour lui permettre d’endosser sa responsabilité stratégique dans son voisinage immédiat;</del>
+  
+
+  
+      <ins> «positive»;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">61</div>
+  <div class="against">577</div>
+  <div class="abstention">39</div>
+</span>
+
+  
+    
+    <a href="/voting/126461">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(61/677 * 100%)">61</div>
-  
-  
-    <div class="-" style="width: calc(577/677 * 100%)">577</div>
-  
-  
-    <div class="0" style="width: calc(39/677 * 100%)">39</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126461">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°23 | 
+        
+            <article id="23">
+            <header>📝 Amendement n°23 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      3. souligne que l’instabilité croissante dans le 
-  
+<p>
 
   
-      <del>monde, l’environnement de plus en plus conflictuel, l’érosion du multilatéralisme et la hausse de l’autoritarisme, ainsi que les défis mondiaux multidimensionnels, en particulier le climat de conflit croissant qui se traduit par la poursuite et, parfois, par la reprise des conflits armés, y compris aux frontières orientales et méridionales du continent européen, le terrorisme, le changement climatique et les menaces croissantes sur les ressources naturelles, les flux migratoires non maîtrisés, les risques liés à la santé, les menaces hybrides telles que les campagnes de désinformation, les mesures actives et les cyberattaques, entre autres, devraient amener l’Union à accroître son autonomie stratégique tout en renforçant la coopération avec ses alliés; souligne à cet égard l’importance pour l’Union d’établir une coopération plus stratégique avec des pays tiers, fondée sur la confiance et les avantages mutuels, de nouer des alliances avec des démocraties partageant les mêmes valeurs, notamment dans l’hémisphère sud, et de mettre en place </del>
+      3. souligne que l’instabilité croissante dans le monde
   
 
   
-      <ins>monde et l’émergence de défis mondiaux sans précédent, y compris les conflits armés alimentés par des pays tels que la Turquie, le terrorisme, les flux migratoires non maîtrisés, les risques liés à la santé, les menaces hybrides et les cyberattaques, ne devraient pas amener l’Union à accroître son autonomie stratégique, mais amener les États membres à nouer plus d’alliances stratégiques avec des démocraties partageant les mêmes valeurs et à établir </ins>
+      <del>, l’environnement de plus en plus conflictuel, l’érosion du multilatéralisme et la hausse de l’autoritarisme, ainsi que les défis mondiaux multidimensionnels, en particulier le climat de conflit croissant qui se traduit par la poursuite et, parfois, par la reprise des conflits armés, y compris aux frontières orientales et méridionales du continent européen, le terrorisme, le changement climatique et les menaces croissantes sur les ressources naturelles</del>
   
 
   
-      des coalitions ad hoc avec d’autres partenaires 
+      <ins> et l’émergence de défis mondiaux sans précédent, y compris les conflits armés alimentés par des pays tels que la Turquie, le terrorisme</ins>
+  
+
+  
+      , les flux migratoires non maîtrisés, les risques liés à la santé, les menaces hybrides 
+  
+
+  
+      <del>telles que les campagnes de désinformation, les mesures actives </del>
+  
+
+  
+      et les cyberattaques, 
+  
+
+  
+      <del>entre autres, devraient</del>
+  
+
+  
+      <ins>ne devraient pas</ins>
+  
+
+  
+       amener l’Union à accroître son autonomie stratégique
+  
+
+  
+      <del> tout en renforçant la coopération avec ses alliés; souligne à cet égard l’importance pour l’Union d’établir une coopération plus stratégique avec des pays tiers, fondée sur la confiance et les avantages mutuels, de nouer des alliances avec des démocraties partageant les mêmes valeurs, notamment dans l’hémisphère sud, et de mettre en place</del>
+  
+
+  
+      <ins>, mais amener les États membres à nouer plus d’alliances stratégiques avec des démocraties partageant les mêmes valeurs et à établir</ins>
+  
+
+  
+       des coalitions ad hoc avec d’autres partenaires 
   
 
   
@@ -1439,49 +1922,51 @@
       le cas échéant;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">96</div>
+  <div class="against">574</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    
+    <a href="/voting/126462">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(96/679 * 100%)">96</div>
-  
-  
-    <div class="-" style="width: calc(574/679 * 100%)">574</div>
-  
-  
-    <div class="0" style="width: calc(9/679 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126462">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°24 | 
+        
+            <article id="24">
+            <header>📝 Amendement n°24 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       5. exprime son inquiétude face à l’
@@ -1495,105 +1980,113 @@
       <ins>approche adoptée pour lutter contre l’ingérence étrangère et la désinformation présumées; estime qu’il convient de respecter la liberté d’expression et déconseille à l’Union, dans sa lutte contre la désinformation présumée, de se transformer en machine de contre- propagande ou en ministère de la Vérité autoproclamé;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">88</div>
+  <div class="against">581</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    
+    <a href="/voting/126463">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(88/678 * 100%)">88</div>
-  
-  
-    <div class="-" style="width: calc(581/678 * 100%)">581</div>
-  
-  
-    <div class="0" style="width: calc(9/678 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126463">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°25 | 
+        
+            <article id="25">
+            <header>📝 Amendement n°25 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       13. 
   
 
   
-      <del>regrette le manque de progrès en ce qui concerne l’amélioration du processus décisionnel en matière de PESC, ce qui a une incidence sur l’efficacité, la rapidité et la crédibilité de l’action et de la prise de décisions de l’Union sur la scène internationale; invite les États membres à ouvrir de toute urgence un débat sur la possibilité de passer du vote à l’unanimité au vote à la majorité qualifiée au moins dans certains domaines de la PESC, notamment les décisions relatives aux droits de l’homme et aux sanctions, en tant que moyen concret de renforcer l’influence de l’Union sur la scène internationale;</del>
+      <del>regrette le manque de progrès en ce qui concerne l’amélioration du processus décisionnel en matière de PESC, ce qui a une incidence sur l’efficacité, la rapidité et la crédibilité de l’action et de la prise de décisions de l’Union sur la scène internationale; invite les États membres à ouvrir de toute urgence un débat sur la possibilité de passer du vote à l’unanimité au vote à la majorité qualifiée au moins dans certains domaines de la PESC, notamment les décisions relatives aux droits de l’homme et aux sanctions, en tant que moyen concret de renforcer l’influence de l’Union sur la scène internationale</del>
   
 
   
-      <ins>demande instamment aux États membres de s’opposer à tout passage du vote à l’unanimité au vote à la majorité qualifiée dans quelque domaine que ce soit de la PESC car cela détruirait la souveraineté des États membres de manière irréparable et irréversible;</ins>
+      <ins>demande instamment aux États membres de s’opposer à tout passage du vote à l’unanimité au vote à la majorité qualifiée dans quelque domaine que ce soit de la PESC car cela détruirait la souveraineté des États membres de manière irréparable et irréversible</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">154</div>
+  <div class="against">497</div>
+  <div class="abstention">28</div>
+</span>
+
+  
+    
+    <a href="/voting/126465">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(154/679 * 100%)">154</div>
-  
-  
-    <div class="-" style="width: calc(497/679 * 100%)">497</div>
-  
-  
-    <div class="0" style="width: calc(28/679 * 100%)">28</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126465">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°27 | 
+        
+            <article id="27">
+            <header>📝 Amendement n°27 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       17. souligne que 
@@ -1616,129 +2109,321 @@
   
 
   
-      <del>afin de le rendre plus efficace et plus opérationnel, ce qui est indispensable pour assurer la paix dans le monde, et de le doter d’un programme qui va bien au- delà de la sécurité militaire, afin de couvrir le flux des personnes réfugiées et déplacées, la sécurité alimentaire, le changement climatique et la lutte contre les pandémies;</del>
+      <del>afin de le rendre plus efficace et plus opérationnel, ce qui est indispensable pour assurer la paix dans le monde, et de le doter d’un programme qui va bien au- delà de la sécurité militaire, afin de couvrir le flux des personnes réfugiées et déplacées, la sécurité alimentaire, le changement climatique et la lutte contre les pandémies</del>
   
 
   
-      <ins>notamment ses membres permanents, constituent la meilleure garantie de stabilité et d’équilibre au sein de cette organisation internationale; s’oppose à l’attribution d’un siège au Conseil de sécurité à l’Union européenne;</ins>
+      <ins>notamment ses membres permanents, constituent la meilleure garantie de stabilité et d’équilibre au sein de cette organisation internationale; s’oppose à l’attribution d’un siège au Conseil de sécurité à l’Union européenne</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">90</div>
+  <div class="against">572</div>
+  <div class="abstention">16</div>
+</span>
+
+  
+    
+    <a href="/voting/126471">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(90/678 * 100%)">90</div>
-  
-  
-    <div class="-" style="width: calc(572/678 * 100%)">572</div>
-  
-  
-    <div class="0" style="width: calc(16/678 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126471">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°28 | 
+        
+            <article id="28">
+            <header>📝 Amendement n°28 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       32. estime que l’Union doit 
   
 
   
-      <del>définir d’urgence une meilleure stratégie géopolitique pour ses relations à court, moyen et long terme avec la Turquie,</del>
+      <del>définir</del>
   
 
   
-      <ins>cesser d’urgence et de façon permanente toute négociation d’adhésion avec la Turquie et devrait mettre immédiatement fin à tout financement accordé à la Turquie car ce pays n’est pas un pays européen et a bafoué de manière répétée les principes et les valeurs européen,</ins>
+      <ins>cesser</ins>
   
 
   
-       compte tenu notamment du recul démocratique continu et de l’affirmation croissante de la politique étrangère de la Turquie, qui contribue à l’escalade des tensions et a une incidence déstabilisatrice qui menace la paix et la stabilité régionales en Méditerranée orientale, au Proche-
+       d’urgence 
   
 
   
-      <del> </del>
+      <del>une meilleure stratégie géopolitique pour ses relations à court, moyen et long terme avec la Turquie</del>
+  
+
+  
+      <ins>et de façon permanente toute négociation d’adhésion avec la Turquie et devrait mettre immédiatement fin à tout financement accordé à la Turquie car ce pays n’est pas un pays européen et a bafoué de manière répétée les principes et les valeurs européen</ins>
+  
+
+  
+      , compte tenu notamment du recul démocratique continu et de l’affirmation croissante de la politique étrangère de la Turquie, qui contribue à l’escalade des tensions et a une incidence déstabilisatrice qui menace la paix et la stabilité régionales en Méditerranée orientale, au Proche
+  
+
+  
+      <del>- </del>
+  
+
+  
+      <ins>-</ins>
   
 
   
       Orient et dans le Caucase du Sud, ainsi que de son rôle dans les conflits en Syrie, en Iraq, en Libye et au Haut-Karabakh;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">106</div>
+  <div class="against">549</div>
+  <div class="abstention">23</div>
+</span>
+
+  
+    
+    <a href="/voting/126477">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(106/678 * 100%)">106</div>
-  
-  
-    <div class="-" style="width: calc(549/678 * 100%)">549</div>
-  
-  
-    <div class="0" style="width: calc(23/678 * 100%)">23</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/126477">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
+        
     
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Le contenu de ce rapport est chaque année plus extravagant: demande d’unification des diplomaties européennes, de sanctions contre la Russie, de soumission à l’OTAN, ingérence étrangère, COVID-19, changement climatique … J’ai voté contre ce fourre-tout qui n’a qu’une seule logique, celle du fédéralisme européen aligné sur les intérêts atlantistes.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce rapport.Je suis, par principe, plutôt opposée à la PESC, qui tend à empiéter sur les compétences des États membres. Par ailleurs, cette résolution est de tendance très atlantiste.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce rapport d&#39;initiative est un rapport annuel sur la politique étrangère et de sécurité commune. Il regroupe notamment des points sur la pandémie de COVID-19 et la nécessité d’une politique étrangère et de sécurité plus forte. Bien que ce soit un rapport plutôt équilibré, une partie du texte favorable à l’élargissement de l’Union m’a contraint à ne pas voter en faveur de ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            La PESC, pensée comme outil d’intégration fédéraliste et soumise à un atlantisme béat, est nocive pour les nations européennes, et spécialement pour la France. J’ai naturellement voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport sur la Politique étrangère et de sécurité commune car c’est une politique nocive pour la France et pour toutes les nations européennes. Elle est un outil d’intégration fédéraliste aux mains des dirigeants bruxellois.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Ce rapport analyse la mise en œuvre de la politique étrangère et de sécurité commune. Si l’on peut partager l’idée que, pour devenir «chef de file sur la scène internationale», l’Union doit être «plus forte, plus autonome, plus unie et plus affirmée», la propension de ce texte à vouloir encore plus lier l’Union européenne à l’OTAN est inacceptable.J’ai voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            Comme chaque année, le président de la commission des affaires étrangères (AFET) présente un rapport d’évaluation des effets de la politique étrangère et de sécurité commune (PESC). Ancien deuxième pilier du traité de Maastricht, la PESC regroupe l’action diplomatique de l’Union européenne envers les pays tiers. Elle est notamment représentée par le haut représentant de l’Union, Josep BorrellElle est constitutivement critiquable pour nous: elle vise bien sûr à attribuer à l’Union des fonctions régaliennes mais participe surtout d’une vision du monde atlantiste, dépendante de l’OTAN et particulièrement caricaturale depuis l’élargissement de l’Union, qui a renforcé la présence des États dont la diplomatie est satellisée par les USA au cœur de l’Europe.Par ailleurs, la PESC part du principe que l’Union européenne est le fait d’États aux intérêts géopolitiques convergents, ce qui ne manque pas d’amuser quand on constate les écarts diplomatiques entre la France et l’Allemagne par exemple.La PESC, pensée comme outil d’intégration fédéraliste et soumise à un atlantisme béat, est nocive pour les nations européennes, et spécialement pour la France. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            . – Je me suis abstenue sur ce rapport annuel relatif à la mise en œuvre de la politique étrangère et de sécurité commune (PESC). J’ai soutenu plusieurs amendements, notamment l’un demandant la fin des négociations avec la Turquie, ou un autre recommandant le maintien du vote à l’unanimité dans le domaine de la PESC. Ces amendements n’ont pas été adoptés. Par ailleurs, le texte original affirmait son engagement «en faveur de l’élargissement en tant que politique de transformation clé de l’Union». Pour ces raisons, je ne pouvais soutenir ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197494</div>
+            
+            <header><b>Nathalie LOISEAU</b> | Renaissance</header>
+            Le rapport sur la mise en œuvre de la PESC de l’Union européenne dresse un bilan de l’année écoulée. La pandémie et ses conséquences ont favorisé une prise de conscience pour l’Union, celle de la nécessité de construire une politique étrangère plus unie, affirmée et autonome. Ce rapport invite l’Union à assumer un rôle de premier plan pour défendre le multilatéralisme, la démocratie et les droits de l&#39;homme, ainsi qu’à passer à la majorité qualifiée en matière de politique étrangère, et affirme que notre priorité doit être la construction de notre autonomie stratégique.Un paragraphe du rapport souligne toutefois l’importance de l’accord de libre-échange conclu avec les pays du Mercosur. Or notre position est claire: nous ne pouvons ratifier cet accord en l’état. Dans sa forme actuelle, il ne permet pas d&#39;assurer une mise en œuvre effective de l&#39;Accord de Paris, de lutter efficacement contre la déforestation et laisse les mains libres au président brésilien pour mener sa politique destructrice de l’Amazonie.Ainsi, bien qu’il reprenne de nombreuses priorités de notre délégation, la mention positive de l’accord UE-Mercosur nous a contraints à nous abstenir sur ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter la position du Parlement européen sur la mise en œuvre de la politique étrangère et de sécurité commune. Il appelle notamment à renforcer les relations entre l’Union et l’OTAN et à finaliser l’accord de libre-échange entre l’Union et le Mercosur. J’ai donc voté contre ce texte qui s’inscrit dans une logique à la fois d’alignement diplomatique et militaire sur les États-Unis et de promotion du libre-échange dérégulé.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce rapport porte sur la politique étrangère et de sécurité commune (PESC). Ce texte contient tous les poncifs habituels sur la nécessité d’un élargissement sans aucune forme d’harmonisation sociale et écologique, l’importance primordiale du partenariat transatlantique et des relations avec l’OTAN, l’impératif de conclure l’accord commercial avec le Mercosur etc. Bien évidemment, le rapport énumère la liste consacrée de l’Axe du mal: Russie, Chine et Venezuela. Bien évidemment, pas un mot sur le régime barbare de l’Arabie Saoudite ou sur la tentative de coup d’État aux États-Unis d’Amérique par des groupes d’extrême-droite. Pour compléter, le rapport comporte une demande de réforme du Conseil de sécurité de l’ONU qui envisage l’abandon du droit de veto de ses membres, dont évidemment la France. Je n’ai donc aucune hésitation quant à mon vote sur ce texte: contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197589</div>
+            
+            <header><b>Laurence FARRENG</b> | Mouvement Démocrate</header>
+            Le mercredi 20 janvier 2021, je me suis abstenue sur le vote final de ce rapport sur la mise en oeuvre de la Politique Etrangère et de Sécurité Commune (PESC). Ce rapport dresse un bilan de l&#39;année écoulée, et démontre la nécessité, en particulier face à la pandémie de COVID-19, de construire une politique étrangère européenne plus forte, unie et autonome, pour défendre le multilatéralisme sur la scène internationale. Toutefois, un des paragraphes de ce rapport soulignant l&#39;importance de l&#39;accord de libre-échange conclu avec les pays du Mercosur, ma délégation et moi-même n&#39;avons pu le soutenir: en effet, nous ne pouvons ratifier cet accord dans l&#39;état, car il ne permet pas, dans sa forme actuelle, d&#39;assurer la mise en oeuvre de l&#39;Accord de Paris et de lutter efficacement contre la déforestation.Cette formulation, positive, nous a donc contraints à l&#39;abstention.
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            Le rapport sur la mise en oeuvre de la PESC de l’Union européenne dresse un bilan de l’année écoulée. La pandémie et ses conséquences ont favorisé une prise de conscience pour l’Union, celle de la nécessité de construire une politique étrangère plus unie, affirmée et autonome. Ce rapport invite l’Union à assumer un rôle de premier plan pour défendre le multilatéralisme, la démocratie et les droits de l&#39;homme, ainsi qu’à passer à la majorité qualifiée en matière de politique étrangère, et affirme que notre priorité doit être la construction de notre autonomie stratégique.Un paragraphe du rapport souligne toutefois l’importance de l’accord de libre-échange conclu avec les pays du Mercosur. Or notre position est claire: nous ne pouvons ratifier cet accord en l’état. Dans sa forme actuelle, il ne permet pas d&#39;assurer une mise en oeuvre effective de l&#39;Accord de Paris, de lutter efficacement contre la déforestation et laisse les mains libres au président brésilien pour mener sa politique destructrice de l’Amazonie. Ainsi, bien qu’il reprenne de nombreuses priorités de notre délégation, la mention positive de l’accord UE-Mercosur nous a contraints à nous abstenir sur ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197585</div>
+            
+            <header><b>Pierre KARLESKIND</b> | Renaissance</header>
+            Le rapport sur la mise en œuvre de la PESC de l’Union européenne dresse un bilan de l’année écoulée. La pandémie et ses conséquences ont favorisé une prise de conscience pour l’Union, celle de la nécessité de construire une politique étrangère plus unie, affirmée et autonome. Ce rapport invite l’Union à assumer un rôle de premier plan pour défendre le multilatéralisme, la démocratie et les droits de l&#39;homme, ainsi qu’à passer à la majorité qualifiée en matière de politique étrangère, et affirme que notre priorité doit être la construction de notre autonomie stratégique.Un paragraphe du rapport souligne toutefois l’importance de l’accord de libre-échange conclu avec les pays du Mercosur. Or notre position est claire: nous ne pouvons ratifier cet accord en l’état. Dans sa forme actuelle, il ne permet pas d&#39;assurer une mise en œuvre effective de l&#39;Accord de Paris, de lutter efficacement contre la déforestation et laisse les mains libres au président brésilien pour mener sa politique destructrice de l’Amazonie.Ainsi, bien qu’il reprenne de nombreuses priorités de notre délégation, la mention positive de l’accord UE-Mercosur nous a contraints à nous abstenir sur ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Opposés par principe à la PESC, qui accroit la domination de l&#39;UE sur les Nations, nous continuons à voir dans cette résolution une inclinaison atlantiste, favorable à un régime accru de sanctions et par ailleurs très peu en phase avec l&#39;émergence d&#39;un monde multipolaire.Contre
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            Publié annuellement, le rapport sur la mise en oeuvre de la politique étrangère et de sécurité commune de 2020 souligne l’importance pour l’Europe de renforcer son autonomie et sa souveraineté pour défendre ses intérêts et ses valeurs après la pandémie de la COVID-19. Le texte rappelle le rôle diplomatique que joue l’Union européenne dans la résolution des conflits et la promotion de structures multilatérales, et propose de passer de l’unanimité à la majorité qualifiée au Conseil de l’Union en matière d’affaires étrangères. Il rappelle également le besoin de renforcer la lutte contre la désinformation et la nécessité de construire une Europe de la défense, priorité portée par la France et notre groupe Renew Europe.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport car je vois dans cette résolution une inclinaison atlantiste, favorable à un régime accru de sanctions vis-à-vis de pays tiers et par ailleurs très peu en phase avec l’émergence d’un monde multipolaire.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            Après le fiasco de la guerre en Iraq, il paraît difficile de concevoir une politique militaire qui serait décidée à Bruxelles à la majorité. Avec ce système majoritaire, la France aurait dû bombarder les Iraquiens lors de la deuxième guerre du Golfe. Quant à l’aide de nos partenaires européens, la situation au Mali montre ce que l’on peut en attendre. Enfin, la plupart des députés approuvant ce rapport soutiennent aussi l’entrée de la Turquie et de l’Albanie dans l’Union européenne. J’ai donc voté contre ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            Cette résolution prône une politique étrangère unifiée à l’échelle européenne, sur une ligne atlantiste, hostile à la Russie et à la Chine. Nouvel outil pour promouvoir l’unification de la politique étrangère, la mise en place de politiques régionales spécifiques n’est jamais présentée dans ses échecs – le plus emblématique étant le Partenariat oriental, que j’ai dénoncé en session plénière en décembre 2020 – mais systématiquement déguisée derrière la promesse de faire avancer les droits de l’homme et la démocratie. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Comme chaque année, le président de la commission des affaires étrangères (AFET) présente un rapport d’évaluation des effets de la politique étrangère et de sécurité commune (PESC). Ancien deuxième pilier du traité de Maastricht, la PESC regroupe l’action diplomatique de l’Union européenne envers les pays tiers. Elle est constitutivement critiquable: elle vise bien sûr à attribuer à l’Union des fonctions régaliennes, mais participe surtout d’une vision du monde atlantiste, dépendante de l’OTAN et particulièrement caricaturale depuis l’élargissement de l’Union, qui a renforcé la présence des États dont la diplomatie est satellisée par les USA au cœur de l’Europe. Plusieurs dangers sont liés à la PESC mais le plus grave demeure certainement la volonté répétée d’un passage de la règle de l’unanimité à celle de la majorité dans les décisions de politique extérieure. La résolution prône sans surprise une politique étrangère unifiée, luttant contre l’autoritarisme et le populisme. Elle est marquée par une peur panique de la Russie, de la Chine, et globalement de tout ce qui n’est pas allié de Washington. J’ai voté contre ce texte car cet outil d’intégration fédéraliste est soumis à un atlantisme béat et est nocif pour les nations européennes, et spécialement pour la France.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Comme chaque année, le président de la commission des affaires étrangères (AFET) présente un rapport d’évaluation des effets de la politique étrangère et de sécurité commune (PESC). Ancien deuxième pilier du traité de Maastricht, la PESC regroupe l’action diplomatique de l’Union européenne envers les pays tiers. Elle est notamment représentée par la haut représentant de l’Union, Josep Borrell. La résolution prône sans surprise une politique étrangère unifiée, luttant contre l’autoritarisme et le populisme. Elle est marquée par une peur panique de la Russie, de la Chine, et globalement de tout ce qui n’est pas allié de Washington. La question de la désinformation est abordée, notamment dans les Balkans. Nouvel outil pour promouvoir l’unification de la politique étrangère, la mise en place de politiques régionales spécifiques n’est jamais présentée dans ses échecs – le cas le plus risible étant le Partenariat oriental – mais systématiquement déguisée derrière la promesse de faire avancer les droits de l’homme et la démocratie.La PESC, pensée comme outil d’intégration fédéraliste et soumise à un atlantisme béat, est nocive pour les nations européennes, et spécialement pour la France. J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Chaque année, le président de la commission des affaires étrangères (AFET) présente un rapport d’évaluation des effets de la politique étrangère et de sécurité commune (PESC). Celle-ci regroupe l’action diplomatique de l’Union européenne envers les pays tiers, que nous jugeons éminemment critiquable en ce qu’elle vise à attribuer à l’Union des fonctions régaliennes dans une optique fédéraliste et participe d’une vision du monde dépendante de l’OTAN, particulièrement depuis l’élargissement de l’Union. La résolution, sans grande originalité, se prononce pour une politique étrangère unifiée, luttant contre l’autoritarisme et le populisme, désigne, comme il est d’usage, la Russie et la Chine comme les grands méchants, fait l’impasse sur les échecs de la mise en place de la politique régionale dédiée (voir le cas pathétique du Partenariat oriental) le tout agrémenté des mensonges habituels sur la Biélorussie et de considérants dans l’air du temps sur la COVID-19 et le changement climatique... J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport sur la mise en œuvre de la politique étrangère et de sécurité commune en 2020. Cette politique est résolument atlantiste, punitive et laisse peu de place à l’émergence d’un monde multipolaire.La politique étrangère menée par l’Union européenne manque singulièrement de diplomatie et de finesse, au point d’en devenir caricatural, et s’est montrée incapable d’affronter les évolutions du monde contemporain telles que l’islamisme politique, l’explosion démographique de l’Afrique ou des relations apaisées avec la Russie.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-    
-    
 
+    <section>
     
     
-
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2206(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0266_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-01-19-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

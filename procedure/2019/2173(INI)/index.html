@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Rapport sur les rapports 2019-2020 de la Commission sur le Monténégro</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Rapport sur les rapports 2019-2020 de la Commission sur le Monténégro</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(595/695 * 100%)">595</div>
-  
-  
-    <div class="-" style="width: calc(66/695 * 100%)">66</div>
+    <div class="for" style="width: calc(595/695 * 100%)">595</div>
   
   
-    <div class="0" style="width: calc(34/695 * 100%)">34</div>
+    <div class="against" style="width: calc(66/695 * 100%)">66</div>
+  
+  
+    <div class="abstention" style="width: calc(34/695 * 100%)">34</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(42/79 * 100%)">42</div>
+    <div class="for" style="width: calc(42/79 * 100%)">42</div>
   
   
-    <div class="-" style="width: calc(31/79 * 100%)">31</div>
+    <div class="against" style="width: calc(31/79 * 100%)">31</div>
   
   
-    <div class="0" style="width: calc(6/79 * 100%)">6</div>
+    <div class="abstention" style="width: calc(6/79 * 100%)">6</div>
   
 </div>
  
 </section>
-            <a href="/voting/131714">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/131714">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -111,78 +116,262 @@
     
         
         
-            <li>Etat et évolution de l&#39;Union</li>
+            <li>Elargissement de l&#39;Union</li>
         
     
         
         
-            <li>Elargissement de l&#39;Union</li>
+            <li>Etat et évolution de l&#39;Union</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2173(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0131_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-05-17-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>22 bis. salue le succès récent du vice- premier ministre lié à l’arrestation de personnalités de premier plan impliquées dans la criminalité organisée; condamne fermement les menaces de mort proférées à son encontre; préconise de soutenir et de protéger tous les fonctionnaires qui luttent contre la corruption et la criminalité organisée, parfois au prix de leur propre vie, et exprime sa solidarité à leur égard;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">418</div>
+  <div class="against">264</div>
+  <div class="abstention">7</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(418/689 * 100%)">418</div>
-  
-  
-    <div class="-" style="width: calc(264/689 * 100%)">264</div>
-  
-  
-    <div class="0" style="width: calc(7/689 * 100%)">7</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">Verts/ALE</div>
+                
+
+<p>
+
+  
+      31. invite les autorités monténégrines à accorder une attention particulière au blanchiment 
+  
+
+  
+      <del>de capitaux</del>
+  
+
+  
+      <ins>d’argent</ins>
+  
+
+  
+      , à la fraude fiscale et à toute autre activité criminelle dans le cadre du programme de citoyenneté par investissement
+  
+
+  
+      <del> tout en envisageant sa suppression progressive</del>
+  
+
+  
+      <ins>; se félicite que le gouvernement ait annoncé qu’il ne renouvellerait pas ce programme une fois celui-ci arrivé à expiration à la fin de l’année</ins>
+  
+
+  
+      ;
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°3 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       34. préconise de renforcer la coopération européenne avec le Monténégro dans la lutte contre la désinformation, les cybermenaces et les menaces hybrides qui visent à compromettre la perspective européenne de la région; est préoccupé par la vulnérabilité croissante du Monténégro du fait de l’augmentation de sa dette publique, notamment envers la Chine;
@@ -192,97 +381,101 @@
       <ins> invite, dans ce contexte, la Commission et le gouvernement monténégrin à coopérer pour trouver une solution par rapport au prêt contracté par le gouvernement précédent pour le projet chinois très controversé d’autoroute Bar-Boljare, afin d’éviter que le Monténégro ne se retrouve endetté par rapport à la Chine et ne doive céder des garanties aux créanciers chinois; insiste sur le fait que, parallèlement à cela, les autorités monténégrines doivent mener une enquête approfondie et transparente sur ce prêt et ses dépenses et demander des comptes aux responsables politiques;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">408</div>
+  <div class="against">226</div>
+  <div class="abstention">57</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(408/691 * 100%)">408</div>
-  
-  
-    <div class="-" style="width: calc(226/691 * 100%)">226</div>
-  
-  
-    <div class="0" style="width: calc(57/691 * 100%)">57</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>47 bis. condamne fermement le déni du génocide de Srebrenica et les doutes exprimés par le ministre de la justice, des droits de l’homme et des droits des minorités à propos des décisions et de la légitimité du Tribunal pénal international pour l’ex-Yougoslavie (TPIY); se félicite que d’autres membres du gouvernement aient rapidement réfuté ces allégations et que le limogeage du ministre en question ait été proposé;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">622</div>
+  <div class="against">19</div>
+  <div class="abstention">43</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(622/684 * 100%)">622</div>
-  
-  
-    <div class="-" style="width: calc(19/684 * 100%)">19</div>
-  
-  
-    <div class="0" style="width: calc(43/684 * 100%)">43</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       71. salue les progrès réalisés par le Monténégro en vue de diversifier sa production d’électricité pour y inclure des sources d’énergie renouvelables et le fait que le pays a dépassé son objectif total en matière d’énergie renouvelable pour 2020 et ses objectifs sectoriels pour l’électricité, le chauffage et le refroidissement, ainsi que sa participation active au programme de connectivité des Balkans occidentaux; invite le Monténégro à mettre en place des règles rationalisées et simplifiées pour faciliter le développement de nouveaux projets d’énergie renouvelable; souligne l’importance du soutien de l’Union pour la transition vers une énergie plus propre et durable;
@@ -292,49 +485,51 @@
       <ins> est préoccupé par les projets de forage pétrolier et gazier au large des côtes monténégrines, qui pourraient nuire à l’environnement, à la nature et au tourisme, principal secteur économique du pays;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">509</div>
+  <div class="against">62</div>
+  <div class="abstention">118</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(509/689 * 100%)">509</div>
-  
-  
-    <div class="-" style="width: calc(62/689 * 100%)">62</div>
-  
-  
-    <div class="0" style="width: calc(118/689 * 100%)">118</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D,PPE</div>
+                
 
-<section>
+<p>
 
   
       3. se félicite de l’ouverture du chapitre 8 (politique de la concurrence) et de la décision du Monténégro d’accepter 
@@ -348,49 +543,56 @@
       la méthodologie révisée en matière d’élargissement; invite en particulier le Monténégro à respecter les critères provisoires pour les chapitres 23 et 24, qui constitueront la prochaine étape, et se dit nettement favorable à la clôture des chapitres relatifs à l’adhésion car le Monténégro réalise et met en place des réformes sur les critères requis; rappelle que trois chapitres ont été provisoirement clôturés depuis l’ouverture du premier chapitre en décembre 2012 et engage le Monténégro à mettre clairement l’accent sur les travaux visant à satisfaire aux critères de clôture de tous les autres chapitres;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">565</div>
+  <div class="against">39</div>
+  <div class="abstention">86</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(565/690 * 100%)">565</div>
-  
-  
-    <div class="-" style="width: calc(39/690 * 100%)">39</div>
-  
-  
-    <div class="0" style="width: calc(86/690 * 100%)">86</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D,PPE</div>
+                
 
-<section>
+<p>
 
   
       9. salue les progrès réalisés par le Monténégro dans plusieurs domaines des négociations d’adhésion, dont la coopération policière internationale et la lutte contre la criminalité organisée (y compris 
@@ -405,116 +607,130 @@
   
 
   
-      <del>le </del>
+      <del>le</del>
   
 
   
-      <ins>du </ins>
+      <ins>du</ins>
   
 
   
-      trafic de drogue); invite les autorités à accélérer les réformes politiques et économiques, notamment en ce qui concerne l’état de droit et les droits fondamentaux, le pouvoir judiciaire, la liberté des médias et la lutte contre la corruption, domaines dans lesquels des progrès substantiels sont nécessaires;
+       trafic de drogue); invite les autorités à accélérer les réformes politiques et économiques, notamment en ce qui concerne l’état de droit et les droits fondamentaux, le pouvoir judiciaire, la liberté des médias et la lutte contre la corruption, domaines dans lesquels des progrès substantiels sont nécessaires;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">657</div>
+  <div class="against">2</div>
+  <div class="abstention">32</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(657/691 * 100%)">657</div>
-  
-  
-    <div class="-" style="width: calc(2/691 * 100%)">2</div>
-  
-  
-    <div class="0" style="width: calc(32/691 * 100%)">32</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D,PPE</div>
+                
 
-<section>
-
-  
-      16. se félicite des nominations récentes à la délégation monténégrine à la commission parlementaire de stabilisation et d’association UE-Monténégro (CPSA), dont les membres sont désormais tous nommés; demande la reprise, dans les meilleurs délais, des travaux de la 
-  
+<p>
 
   
-      <del>CPSA;</del>
+      16. se félicite des nominations récentes à la délégation monténégrine à la commission parlementaire de stabilisation et d’association UE-Monténégro (CPSA), dont les membres sont désormais tous nommés; demande la reprise, dans les meilleurs délais, des travaux de la CPSA
   
 
   
-      <ins>CPSA et se félicite de la réunion à distance prévue en juin 2021; souligne l’importance des échanges parlementaires et de la reprise des réunions semestrielles;</ins>
+      <ins> et se félicite de la réunion à distance prévue en juin 2021; souligne l’importance des échanges parlementaires et de la reprise des réunions semestrielles</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">633</div>
+  <div class="against">30</div>
+  <div class="abstention">28</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(633/691 * 100%)">633</div>
-  
-  
-    <div class="-" style="width: calc(30/691 * 100%)">30</div>
-  
-  
-    <div class="0" style="width: calc(28/691 * 100%)">28</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D,PPE</div>
+                
 
-<section>
+<p>
 
   
       22. se félicite des progrès accomplis dans la lutte contre la criminalité organisée, en particulier en ce qui concerne le renforcement des capacités et le professionnalisme de la police; encourage le Monténégro à poursuivre ses efforts dans ce domaine, en particulier en combattant les réseaux criminels actifs au niveau international, en accordant une attention particulière à la lutte contre le blanchiment de capitaux, à la traite des êtres humains, au trafic de drogues et d’armes, aux paris illégaux et à la contrebande de cigarettes, et en recherchant leurs 
@@ -529,124 +745,146 @@
   
 
   
-      <del>les </del>
+      <del>les</del>
   
 
   
-      <ins>des </ins>
+      <ins>des</ins>
   
 
   
-      responsables politiques et 
+       responsables politiques et 
   
 
   
-      <del>les policiers à l’échelon local;</del>
+      <del>les policiers à l’échelon local</del>
   
 
   
-      <ins>des représentants des institutions de l’État;</ins>
+      <ins>des représentants des institutions de l’État</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">648</div>
+  <div class="against">4</div>
+  <div class="abstention">39</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(648/691 * 100%)">648</div>
-  
-  
-    <div class="-" style="width: calc(4/691 * 100%)">4</div>
-  
-  
-    <div class="0" style="width: calc(39/691 * 100%)">39</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D,PPE</div>
+                
 
-<section>
-
-  
-      31. invite les autorités monténégrines à accorder une attention particulière au blanchiment de capitaux, à la fraude fiscale et à toute autre activité criminelle dans le cadre du programme de citoyenneté par 
-  
+<p>
 
   
-      <del>investissement tout en envisageant sa suppression progressive;</del>
+      31. invite les autorités monténégrines à accorder une attention particulière au blanchiment de capitaux, à la fraude fiscale et à toute autre activité criminelle dans le cadre du programme de citoyenneté par investissement
   
 
   
-      <ins>investissement, qui arrive à échéance en 2021; se félicite de la décision prise récemment par le gouvernement monténégrin de le supprimer progressivement d’ici la fin de l’année;</ins>
+      <del> tout en envisageant sa suppression progressive</del>
+  
+
+  
+      <ins>, qui arrive à échéance en 2021; se félicite de la décision prise récemment par le gouvernement monténégrin de le supprimer progressivement d’ici la fin de l’année</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">625</div>
+  <div class="against">28</div>
+  <div class="abstention">38</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(625/691 * 100%)">625</div>
-  
-  
-    <div class="-" style="width: calc(28/691 * 100%)">28</div>
-  
-  
-    <div class="0" style="width: calc(38/691 * 100%)">38</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°12 | 
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D,PPE</div>
+                
 
-<section>
+<p>
 
   
       34. préconise de renforcer la coopération européenne avec le Monténégro dans la lutte contre la désinformation, les cybermenaces et les menaces hybrides qui visent à compromettre la perspective européenne de la région; est préoccupé par la vulnérabilité croissante du Monténégro du fait de l’augmentation de sa dette publique, notamment envers la Chine;
@@ -656,292 +894,456 @@
       <ins> invite la Commission à trouver, en collaboration avec les institutions financières internationales, une solution raisonnable pour soutenir la viabilité budgétaire et les réformes du Monténégro, conformément à la perspective européenne du pays;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">543</div>
+  <div class="against">87</div>
+  <div class="abstention">61</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(543/691 * 100%)">543</div>
-  
-  
-    <div class="-" style="width: calc(87/691 * 100%)">87</div>
-  
-  
-    <div class="0" style="width: calc(61/691 * 100%)">61</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°13 | 
+        
+            <article id="13">
+            <header>📝 Amendement n°13 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D,PPE</div>
+                
 
-<section>
-
-  
-      38. souligne la nécessité de protéger tous les droits des minorités nationales, notamment parce que certaines d’entre elles ne disposent plus de représentants politiques au sein de la Skupština; presse les autorités monténégrines d’accorder une attention particulière aux problèmes liés à l’affiliation nationale et ethnique des citoyens monténégrins; 
-  
+<p>
 
   
-      <ins>prend acte, à cet égard, de la récente proposition du gouvernement monténégrin visant à modifier la loi monténégrine sur la citoyenneté; souligne que toute modification de lois aussi sensibles doit faire l’objet d’un vaste processus de consultation et ne devrait être adoptée que conformément aux normes démocratiques et à la pratique établie au niveau européen, et dans l’optique de faire progresser la perspective européenne du Monténégro; </ins>
+      38. souligne la nécessité de protéger tous les droits des minorités nationales, notamment parce que certaines d’entre elles ne disposent plus de représentants politiques au sein de la Skupština; presse les autorités monténégrines d’accorder une attention particulière aux problèmes liés à l’affiliation nationale et ethnique des citoyens monténégrins;
   
 
   
-      appelle au respect de l’identité multiethnique du pays, et notamment des langues qui y sont parlées, du patrimoine culturel et des traditions des communautés locales; souligne que des progrès doivent encore être accomplis en ce qui concerne l’intégration de Roms et des Égyptiens sur le marché du travail et dans le système éducatif et la vie publique au Monténégro, et invite les autorités à 
+      <ins> prend acte, à cet égard, de la récente proposition du gouvernement monténégrin visant à modifier la loi monténégrine sur la citoyenneté; souligne que toute modification de lois aussi sensibles doit faire l’objet d’un vaste processus de consultation et ne devrait être adoptée que conformément aux normes démocratiques et à la pratique établie au niveau européen, et dans l’optique de faire progresser la perspective européenne du Monténégro;</ins>
   
 
   
-      <ins>   </ins>
+       appelle au respect de l’identité multiethnique du pays, et notamment des langues qui y sont parlées, du patrimoine culturel et des traditions des communautés locales; souligne que des progrès doivent encore être accomplis en ce qui concerne l’intégration de Roms et des Égyptiens sur le marché du travail et dans le système éducatif et la vie publique au Monténégro, et invite les autorités à
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
   
 
   
       veiller à ce que ceux-ci aient accès à des documents personnels afin de garantir leur statut juridique, ainsi qu’à prendre des mesures efficaces contre les discours haineux;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">547</div>
+  <div class="against">54</div>
+  <div class="abstention">89</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(547/690 * 100%)">547</div>
-  
-  
-    <div class="-" style="width: calc(54/690 * 100%)">54</div>
-  
-  
-    <div class="0" style="width: calc(89/690 * 100%)">89</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°14 | 
+        
+            <article id="14">
+            <header>📝 Amendement n°14 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D,PPE</div>
+                
 
-<section>
+<p>
 
   
       39. prend acte de la loi sur la protection contre les violences domestiques ainsi que des modifications 
   
 
   
-      <del>qui y sont apportées actuellement,</del>
+      <del>qui y sont apportées actuellement</del>
   
 
   
-      <ins>prévues,</ins>
+      <ins>prévues</ins>
   
 
   
-       et demande instamment aux autorités du Monténégro de veiller à sa mise en œuvre effective, y compris en y affectant des ressources suffisantes, car les violences domestiques, les violences sexistes et les violences à l’égard des enfants restent très préoccupantes; appelle à plus de vigilance et à la mise en place de systèmes d’assistance aux victimes de violences domestiques dans le contexte de la pandémie de COVID-19;
+      , et demande instamment aux autorités du Monténégro de veiller à sa mise en œuvre effective, y compris en y affectant des ressources suffisantes, car les violences domestiques, les violences sexistes et les violences à l’égard des enfants restent très préoccupantes; appelle à plus de vigilance et à la mise en place de systèmes d’assistance aux victimes de violences domestiques dans le contexte de la pandémie de COVID-19;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">636</div>
+  <div class="against">21</div>
+  <div class="abstention">34</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(636/691 * 100%)">636</div>
-  
-  
-    <div class="-" style="width: calc(21/691 * 100%)">21</div>
-  
-  
-    <div class="0" style="width: calc(34/691 * 100%)">34</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°15 | 
+        
+            <article id="15">
+            <header>📝 Amendement n°15 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D,PPE</div>
+                
 
-<section>
-
-  
-      47. se félicite de la signature du protocole sur la détermination du point frontalier entre la Bosnie-Herzégovine, le Monténégro et la République de Serbie en mai 2019 et encourage le Monténégro à poursuivre, dans un esprit constructif et aussi tôt que possible dans le processus d’adhésion, la résolution des problèmes bilatéraux qui l’opposent encore à ses voisins, y compris en ce qui concerne la question non résolue de ligne de démarcation entre la Serbie et la Croatie; 
-  
+<p>
 
   
-      <ins>rappelle que les accords frontaliers bilatéraux en vigueur doivent être respectés; réaffirme que les différends frontaliers devraient être traités dans un esprit de relations de bon voisinage, au niveau bilatéral, et dans le cadre des mécanismes internationaux existants; </ins>
+      47. se félicite de la signature du protocole sur la détermination du point frontalier entre la Bosnie-Herzégovine, le Monténégro et la République de Serbie en mai 2019 et encourage le Monténégro à poursuivre, dans un esprit constructif et aussi tôt que possible dans le processus d’adhésion, la résolution des problèmes bilatéraux qui l’opposent encore à ses voisins, y compris en ce qui concerne la question non résolue de ligne de démarcation entre la Serbie et la Croatie;
   
 
   
-      note que les relations bilatérales avec la Serbie ont été marquées par des tensions et insiste sur le fait que tout différend bilatéral doit être résolu par un dialogue inclusif et non conflictuel, tout en évitant toute forme d’ingérence étrangère dans les affaires intérieures;
+      <ins> rappelle que les accords frontaliers bilatéraux en vigueur doivent être respectés; réaffirme que les différends frontaliers devraient être traités dans un esprit de relations de bon voisinage, au niveau bilatéral, et dans le cadre des mécanismes internationaux existants;</ins>
+  
+
+  
+       note que les relations bilatérales avec la Serbie ont été marquées par des tensions et insiste sur le fait que tout différend bilatéral doit être résolu par un dialogue inclusif et non conflictuel, tout en évitant toute forme d’ingérence étrangère dans les affaires intérieures;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">649</div>
+  <div class="against">24</div>
+  <div class="abstention">18</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(649/691 * 100%)">649</div>
-  
-  
-    <div class="-" style="width: calc(24/691 * 100%)">24</div>
-  
-  
-    <div class="0" style="width: calc(18/691 * 100%)">18</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°16 | 
+        
+            <article id="16">
+            <header>📝 Amendement n°16 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D,PPE</div>
+                
 
-<section>
-
-  
-      49. 
-  
+<p>
 
   
-      <ins>condamne fermement toute tentative de la part de responsables politiques au Monténégro et ailleurs dans la région de nier le génocide de Srebrenica ou tout autre crime de guerre commis en ex-Yougoslavie; </ins>
+      49.
   
 
   
-      salue la signature d’un protocole de coopération pour la recherche de personnes disparues entre les gouvernements de la Bosnie-
+      <ins> condamne fermement toute tentative de la part de responsables politiques au Monténégro et ailleurs dans la région de nier le génocide de Srebrenica ou tout autre crime de guerre commis en ex-Yougoslavie;</ins>
   
 
   
-      <ins> </ins>
+       salue la signature d’un protocole de coopération pour la recherche de personnes disparues entre les gouvernements de la Bosnie
+  
+
+  
+      <del>-</del>
+  
+
+  
+      <ins>- </ins>
   
 
   
       Herzégovine et du Monténégro, qu’il considère comme un bon exemple de coopération dans le cadre d’affaires de personnes disparues; est préoccupé par le manque de progrès dans le traitement des crimes de guerre commis au Monténégro et demande aux autorités de redoubler d’efforts pour punir les auteurs de ces crimes et élucider ce qu’il est advenu des personnes disparues, ainsi que de soutenir et de développer le centre de documentation et d’information;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
   
-    <div class="+" style="width: calc(651/686 * 100%)">651</div>
-  
-  
-    <div class="-" style="width: calc(5/686 * 100%)">5</div>
-  
-  
-    <div class="0" style="width: calc(30/686 * 100%)">30</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2173(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0131_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">651</div>
+  <div class="against">5</div>
+  <div class="abstention">30</div>
+</span>
+
   
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-05-17-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté contre cette résolution, qui passe sous silence les principaux enjeux qui affectent ce pays, notamment la loi récente sur les religions.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce rapport d’initiative est une évaluation des rapports de la Commission de 2019 et 2020 sur le Monténégro. Le pays est devenu officiellement candidat en 2010. Les négociations d’adhésion ont débuté en juin 2012. Considérant que l’élargissement de l’Union européenne n’a pas lieu d’être, j’ai voté contre ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            J’ai voté contre le rapport sur le Monténégro qui se prononce clairement en faveur de l’élargissement et se félicite de l’ouverture de nouveaux chapitres de négociation.Nous sommes dans une situation où les Européens ne comprennent plus ce qu’est la vocation de l’Europe, ce que sont ses objectifs et ce qu’elle apporte aux citoyens. Les institutions sont perçues à juste titre comme déconnectées des réalités et leur fonctionnement est bien trop complexe.Le message est clair: nous devons consolider nos bases, notre socle de valeurs communes, clarifier nos objectifs et priorités avant de poursuivre cette course à l’élargissement qui ne fait plus sens dans la période actuelle.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Le rapport continue à réclamer l’adhésion du Monténégro à l’UE. Miné par les mafias et la corruption, le pays ne possède pas les standards de l’Europe occidentale en termes de mode de vie ou d’organisation de l’activité économique et demeure particulièrement menacé par l’instabilité ethnico-religieuse.Le rapport ne comporte qu’un passage très elliptique concernant les graves atteintes à la liberté religieuse dans le pays.Enfin, il est démesurément atlantiste, estimant qu’il faut renforcer la coordination de l’UE et de l’OTAN dans les Balkans, et que le Monténégro doit intégrer l’OTAN de toute urgence. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il continue à faire miroiter une intégration européenne au Monténégro alors que ce pays est miné par les mafias et la corruption.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Il s’agit d’un rapport annuel étudiant la situation au Monténégro dans le cadre du processus d’adhésion. Ce texte fait un rappel des principes fondamentaux nécessaires au bon fonctionnement des institutions démocratiques et invite le Monténégro à les suivre. Il souligne que le Monténégro est l’État le plus avancé dans le processus d’adhésion à l’Union européenne, notamment grâce à ses efforts en matière d’intégration régionale, d’amélioration des pratiques démocratiques, de transition énergétique et de protection des droits fondamentaux. Il reste néanmoins de nombreuses problématiques à améliorer, comme la défense des droits principalement des femmes et des enfants, la liberté de la presse, l’amélioration de l’état de droit ainsi que la lutte contre la corruption. Mais le texte en appelle à un renforcement des relations de l’Union et du Monténégro avec... les États-Unis pour faire «face à l’ingérence étrangère» et en matière «de cybersécurité», et encourage «les autorités du Monténégro à coopérer à la fois avec l’Union européenne et l’OTAN». Ces critères atlantistes ne font pas partie des obligations à respecter en vue d’une adhésion à l’Union. Je me suis donc abstenu.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté contre ce rapport concernant le Monténégro. Le texte était clairement en faveur de l’élargissement de l’Union. Il appelait à l’accélération du processus de négociation et à l’ouverture de chapitres avec le Monténégro. Fidèle à mes convictions et à mon engagement pris devant les électeurs de refuser tout nouvel élargissement de l’UE dans le contexte de crise que traverse l’Europe, je ne pouvais cautionner ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations du Parlement sur les rapports entre l’Union européenne et le Monténégro dans le cadre du processus d’adhésion. Il souligne les progrès réalisés en matière de transparence et d’ouverture aux citoyens, demande le renforcement des mesures de lutte contre la corruption et la criminalité organisée, et insiste sur les progrès qui restent à accomplir en matière de liberté de la presse et de défense des droits des minorités. Il appelle en revanche le Monténégro à s’impliquer plus fortement dans l’OTAN et à renforcer son partenariat avec les États-Unis. Je me suis donc abstenue sur ce texte qui présente des constats pertinents en matière d’état de droit, mais s’inscrit dans la logique atlantiste de la politique étrangère européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce rapport étudie l’évolution de la situation du Monténégro dans le cadre du processus d’adhésion à l’Union européenne. Il invite les autorités monténégrines à accélérer les réformes politiques et économiques, notamment sur l’état de droit et les droits fondamentaux, le pouvoir judiciaire, la liberté des médias et la lutte contre la corruption, domaines dans lesquels des progrès substantiels restent à faire. Malheureusement, le rapport fait l’impasse sur un point crucial: il ne saurait y avoir une nouvelle vague d’adhésions à l’Union européenne sans une harmonisation vers le haut préalable de nos normes sociales, environnementales et fiscales. Sinon nous ne ferons que perpétuer indéfiniment le cercle du dumping et la mise en concurrence généralisée des peuples européens. Je m’abstiens donc sur ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce texte qui est en faveur de l&#39;élargissement de l&#39;UE et de l&#39;adhésion du Monténégro, en passant sous silence les problèmes propres à ce pays que sont l&#39;emprise de la mafia ou les atteintes à la liberté religieuse.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport car il est favorable à l’intégration du Monténégro à l’UE et passe sous silence de grands débats propres au pays: emprise de la mafia, atteintes à la liberté religieuse, ...
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            J’ai voté contre ce texte, par le biais duquel le Parlement européen réclame une nouvelle fois l’adhésion du Monténégro à l’Union. Pourtant, ce pays ne possède pas les standards de l’Europe occidentale en termes de mode de vie, d’organisation de l’activité économique et demeure particulièrement menacé par les tensions ethnico-religieuses.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Le Monténégro est un pays candidat depuis 2010 et les négociations d’adhésion durent depuis 2012.Le Monténégro est représentatif de l’échec des projets de l’Union européenne pour les pays des Balkans occidentaux. Le rapport continue à réclamer l’adhésion du Monténégro à l’UE. Miné par les mafias et la corruption, le pays ne possède pas les standards de l’Europe occidentale en termes de mode de vie ou d’organisation de l’activité économique, et demeure particulièrement menacé par l’instabilité ethnico-religieuse. Le rapport ne comporte qu’un passage très elliptique concernant les graves atteintes à la liberté religieuse dans le pays. Enfin, il est démesurément atlantiste, estimant qu’il faut renforcer la coordination de l’UE et de l’OTAN dans les Balkans, et que le Monténégro doit intégrer l’OTAN de toute urgence. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Le Monténégro est actuellement le pays le plus avancé dans l’ouverture des chapitres de négociation préalables à l’adhésion à l’Union européenne. Il est pays candidat depuis 2010 et les négociations d’adhésion durent depuis 2012.Le rapport continue de réclamer l’adhésion du Monténégro à l’Union européenne. Miné par les mafias et la corruption, le pays ne possède pas les standards de l’Europe occidentale en termes de mode de vie, d’organisation de l’activité économique et demeure particulièrement menacé par l’instabilité ethnico-religieuse. Il n’y a qu’un passage très court concernant les graves atteintes à la liberté religieuse dans le pays.J’ai évidemment voté contre ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport favorable à l’adhésion du Monténégro à l’Union européenne malgré les dérives inquiétantes de ce pays: influence de la mafia, atteintes à la liberté religieuse, etc.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            
+                <p>Plus avant, la requête du gouvernement monténégrin en faveur d’une aide européenne face à des difficultés financières largement prévisibles annihile la crédibilité du pays dans des négociations d’adhésion, qui n’ont hélas plus lieu d’être.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

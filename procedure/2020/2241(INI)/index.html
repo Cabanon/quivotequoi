@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Une stratégie européenne pour l&#39;intégration du système énergétique</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Une stratégie européenne pour l&#39;intégration du système énergétique</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(542/695 * 100%)">542</div>
-  
-  
-    <div class="-" style="width: calc(111/695 * 100%)">111</div>
+    <div class="for" style="width: calc(542/695 * 100%)">542</div>
   
   
-    <div class="0" style="width: calc(42/695 * 100%)">42</div>
+    <div class="against" style="width: calc(111/695 * 100%)">111</div>
+  
+  
+    <div class="abstention" style="width: calc(42/695 * 100%)">42</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,19 +88,20 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(56/79 * 100%)">56</div>
+    <div class="for" style="width: calc(56/79 * 100%)">56</div>
   
   
-    <div class="-" style="width: calc(23/79 * 100%)">23</div>
+    <div class="against" style="width: calc(23/79 * 100%)">23</div>
   
   
 </div>
  
 </section>
-            <a href="/voting/131710">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/131710">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -114,127 +119,255 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2241(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0062_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-05-17-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       13. rappelle que la transition énergétique nécessitera entre 520 et 575 milliards d’euros d’investissements annuels dans les infrastructures et le déploiement proportionné et efficace des énergies renouvelables; invite la Commission à élaborer un scénario de planification inclusif, intégré et réaliste, qui prenne davantage en compte l’efficacité énergétique et l’intégration des systèmes énergétiques, conformément au plan d’investissement pour une Europe durable; relève qu’il est nécessaire de respecter les critères d’investissement durable énoncés Parlement européen et du Conseil du 18 juin 2020 sur l’établissement d’un cadre visant à favoriser les investissements durables27 et qu’il est nécessaire de disposer d’instruments financiers qui soient pleinement compatibles avec les objectifs en matière de climat et d’énergie à l’horizon 2030 et à la neutralité climatique d’ici 2050 au plus tard, afin d’éviter des actifs échoués; souligne que divers programmes et instruments de financement européens jouent un rôle majeur dans la transition énergétique; souligne la nécessité 
   
 
   
-      <del>de veiller à ce que l’utilisation de sources d’énergie telles que le gaz naturel ne soit que de nature transitoire,</del>
+      <del>de veiller à ce que l’utilisation de sources d’énergie telles que le gaz naturel ne soit que de nature transitoire</del>
   
 
   
-      <ins>d’éliminer progressivement les combustibles fossiles,</ins>
+      <ins>d’éliminer progressivement les combustibles fossiles</ins>
   
 
   
-       compte tenu de l’objectif de neutralité climatique; souligne que l’intégration des systèmes devrait 
+      , compte tenu de l’objectif de neutralité climatique; souligne que l’intégration des systèmes devrait
   
 
   
-      <del>   </del>
+      <del>    </del>
   
 
   
-      utiliser au maximum les infrastructures 
+      <ins> </ins>
   
 
   
-      <ins>   </ins>
+      utiliser au maximum les infrastructures
   
 
   
-      énergétiques existantes qui peuvent contribuer à assurer une transition rentable dans de nombreux secteurs;
+      <del> </del>
   
 
   
-      <ins>   __________________</ins>
+      <ins>    </ins>
+  
+
+  
+      énergétiques existantes qui peuvent contribuer à assurer une transition rentable dans de nombreux secteurs
+  
+
+  
+      <del>;</del>
+  
+
+  
+      <ins>;   __________________</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">151</div>
+  <div class="against">525</div>
+  <div class="abstention">20</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(151/696 * 100%)">151</div>
-  
-  
-    <div class="-" style="width: calc(525/696 * 100%)">525</div>
-  
-  
-    <div class="0" style="width: calc(20/696 * 100%)">20</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       20. salue l’adoption de la stratégie européenne pour l’hydrogène; souligne qu’il conviendrait d’accorder la priorité à la mise en place d’une chaîne d’approvisionnement en hydrogène renouvelable en Europe 
   
 
   
-      <del>afin de favoriser les avantages du «premier arrivant», la compétitivité industrielle et la sécurité de l’approvisionnement énergétique; est convaincu que l’hydrogène renouvelable et bas carbone peut aider à réduire les émissions persistantes, telles que celles provenant de processus industriels et des transports lourds, où l’électrification peut être limitée à cause d’une faible rentabilité ou de raisons techniques, sociales ou environnementales;</del>
+      <del>afin de favoriser les avantages du «premier arrivant», la compétitivité industrielle et la sécurité de l’approvisionnement énergétique; est convaincu que l’hydrogène renouvelable et bas carbone peut aider à réduire les émissions persistantes, telles que celles provenant de processus industriels et des transports lourds, où l’électrification peut être limitée à cause d’une faible rentabilité ou de raisons techniques, sociales ou environnementales</del>
   
 
   
-      <ins>et demande donc que les rares fonds publics disponibles en Europe soient investis dans l’hydrogène renouvelable, qui est la seule source d’énergie capable de contribuer de manière durable à la la neutralité climatique à long terme en évitant les effets de verrouillage et les actifs délaissés;</ins>
+      <ins>et demande donc que les rares fonds publics disponibles en Europe soient investis dans l’hydrogène renouvelable, qui est la seule source d’énergie capable de contribuer de manière durable à la la neutralité climatique à long terme en évitant les effets de verrouillage et les actifs délaissés</ins>
   
 
   
-       rappelle la nécessité d’accélérer la décarbonation de la production actuelle d’hydrogène; soutient le lancement de projets importants d’intérêt européen commun sur l’hydrogè
+      ; rappelle la nécessité d’accélérer la décarbonation de la production actuelle d’hydrogène; soutient le lancement de projets importants d’intérêt européen commun sur l’hydrogène
   
 
   
-      <del>ne;</del>
+      <ins> renouvelable</ins>
   
 
   
-      <ins>ne renouvelable;</ins>
-  
-
-  
-       invite la Commission à élaborer un cadre complet de classification et de certification des transporteurs de gaz, fondé sur des critères de durabilité et de réduction des émissions 
+      ; invite la Commission à élaborer un cadre complet de classification et de certification des transporteurs de gaz, fondé sur des critères de durabilité et de réduction des émissions 
   
 
   
@@ -246,15 +379,15 @@
   
 
   
-      <del>relative à la promotion de </del>
+      <del>relative à la promotion de</del>
   
 
   
-      <ins>définie dans la directive </ins>
+      <ins>définie dans la directive</ins>
   
 
   
-      l’utilisation de l’énergie produite à partir 
+       l’utilisation de l’énergie produite à partir 
   
 
   
@@ -262,268 +395,286 @@
   
 
   
-      telle classification est de la plus haute 
+      telle classification est de la plus haute
   
 
   
-      <del>   </del>
+      <del>    </del>
   
 
   
-      importance pour les acteurs du marché, les autorités et les consommateurs; insiste sur la nécessité de mettre en place un cadre 
+      <ins> </ins>
   
 
   
-      <ins>   </ins>
+      importance pour les acteurs du marché, les autorités et les consommateurs; insiste sur la nécessité de mettre en place un cadre
   
 
   
-      solide et une base de référence appropriée pour garantir la mise en place de capacités supplémentaires suffisantes de production d’énergie renouvelable, en proportion des besoins en hydrogène renouvelable; invite la Commission à 
+      <del> </del>
   
 
   
-      <del>prendre en considération cette diversité de besoins dans ses propositions législatives à venir; invite la Commission à </del>
+      <ins>    </ins>
   
 
   
-      garantir une concurrence loyale et efficace entre l’hydrogène importé et acheté à des partenaires internationaux et l’hydrogène produit dans l’Union;
+      solide et une base de référence appropriée pour garantir la mise en place de capacités supplémentaires suffisantes de production d’énergie renouvelable, en proportion des besoins en hydrogène renouvelable; invite la Commission à
+  
+
+  
+      <del> prendre en considération cette diversité de besoins dans ses propositions législatives à venir; invite la Commission à</del>
+  
+
+  
+       garantir une concurrence loyale et efficace entre l’hydrogène importé et acheté à des partenaires internationaux et l’hydrogène produit dans l’Union;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">147</div>
+  <div class="against">533</div>
+  <div class="abstention">15</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(147/695 * 100%)">147</div>
-  
-  
-    <div class="-" style="width: calc(533/695 * 100%)">533</div>
-  
-  
-    <div class="0" style="width: calc(15/695 * 100%)">15</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>– vu le rapport de l’AIE et de l’OCDE1bis de mai 2019 intitulé «Nuclear Power in a Clean Energy System» (L’énergie nucléaire dans un système énergétique propre),  ________________  1bis https://www.iea.org/reports/nuclear- power-in-a-clean-energy-system</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">260</div>
+  <div class="against">401</div>
+  <div class="abstention">34</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(260/695 * 100%)">260</div>
-  
-  
-    <div class="-" style="width: calc(401/695 * 100%)">401</div>
-  
-  
-    <div class="0" style="width: calc(34/695 * 100%)">34</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>D bis. considérant que l’énergie nucléaire et hydroélectrique constitue l’essence de la génération d’électricité bas carbone et génère les trois quarts de la production mondiale bas carbone et que d’autre part, au cours des 50 dernières années, l’utilisation de l’énergie nucléaire a permis de réduire les émissions de dioxyde de carbone (CO2) de plus de 60 gigatonnes, ce qui équivaut à près de deux ans d’émissions mondiales en matière d’énergie selon le rapport de l’AIE et de l’OCDE;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">257</div>
+  <div class="against">405</div>
+  <div class="abstention">31</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(257/693 * 100%)">257</div>
-  
-  
-    <div class="-" style="width: calc(405/693 * 100%)">405</div>
-  
-  
-    <div class="0" style="width: calc(31/693 * 100%)">31</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>D ter. considérant que le rapport de l’AIE et de l’OCDE recommande l’adoption de plusieurs mesures gouvernementales destinées à garantir le fonctionnement des centrales nucléaires existantes tant qu’elles sont sûres, à soutenir la construction de nouvelles centrales nucléaires ainsi qu’à promouvoir le développement de nouvelles technologies nucléaires;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">254</div>
+  <div class="against">405</div>
+  <div class="abstention">35</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(254/694 * 100%)">254</div>
-  
-  
-    <div class="-" style="width: calc(405/694 * 100%)">405</div>
-  
-  
-    <div class="0" style="width: calc(35/694 * 100%)">35</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>2 bis. indique que l’intégration du système énergétique, bien qu’elle vise à réduire les coûts de la transition énergétique en Europe à long terme, supposerait des investissements immédiats importants qui seraient en fin de compte répercutés sur les utilisateurs finaux; demande donc à la Commission de présenter une analyse des coûts des modifications proposées par secteur concerné et par État membre;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">340</div>
+  <div class="against">348</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(340/696 * 100%)">340</div>
-  
-  
-    <div class="-" style="width: calc(348/696 * 100%)">348</div>
-  
-  
-    <div class="0" style="width: calc(8/696 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       24. observe que le maintien de l’équilibre des réseaux électriques et la gestion des pics de demande et de production seront plus complexes avec un mix de génération de plus en plus décentralisé et renouvelable, et souligne à cet égard le rôle de la modulation de la consommation, du stockage et d’une gestion intelligente de l’énergie; souligne que la transition vers une production d’énergie décentralisée présente de nombreux avantages: elle peut favoriser l’utilisation de sources d’énergie locales, ce qui permet de renforcer la sécurité de l’approvisionnement au niveau local, de favoriser le développement et la cohésion des communautés grâce à de nouvelles sources de revenus et de créer de nouveaux emplois; rappelle que les États membres restent libres de déterminer leur bouquet énergétique, dont la diversité est fondamentale pour assurer la sécurité de l’approvisionnement;
@@ -533,200 +684,375 @@
       <ins> souligne que l’énergie nucléaire et l’hydroélectricité peuvent faire partie de ce bouquet;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">271</div>
+  <div class="against">384</div>
+  <div class="abstention">40</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(271/695 * 100%)">271</div>
-  
-  
-    <div class="-" style="width: calc(384/695 * 100%)">384</div>
-  
-  
-    <div class="0" style="width: calc(40/695 * 100%)">40</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>24 bis. souligne que la mise en place d’un système énergétique fondé sur les énergies renouvelables qui soit équilibré constitue un défi considérable et que toutes les innovations nécessaires pour parvenir à un système pleinement équilibré n’ont pas encore été développées jusqu’au bout; souligne que, conformément aux scénarios du groupe d’experts intergouvernemental sur l’évolution du climat (GIEC), l’énergie nucléaire peut être nécessaire pour atteindre les objectifs fixés dans la loi sur le climat; souligne que le recours à l’énergie nucléaire combiné à la production d’hydrogène nucléaire peut contribuer à assurer l’équilibre des systèmes énergétiques; souligne qu’il est dès lors essentiel de conserver les connaissances en matière de construction, d’exploitation et de protection des centrales nucléaires au sein de l’Union européenne;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">274</div>
+  <div class="against">375</div>
+  <div class="abstention">42</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(274/691 * 100%)">274</div>
-  
-  
-    <div class="-" style="width: calc(375/691 * 100%)">375</div>
-  
-  
-    <div class="0" style="width: calc(42/691 * 100%)">42</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
-
-  
-      Assurer l’accessibilité 
-  
+<p>
 
   
-      <ins>et le caractère abordable </ins>
+      Assurer l’accessibilité
   
 
   
-      de l’énergie pour tous les citoyens et les entreprises
+      <ins> et le caractère abordable</ins>
+  
+
+  
+       de l’énergie pour tous les citoyens et les entreprises
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">370</div>
+  <div class="against">248</div>
+  <div class="abstention">78</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(370/696 * 100%)">370</div>
-  
-  
-    <div class="-" style="width: calc(248/696 * 100%)">248</div>
-  
-  
-    <div class="0" style="width: calc(78/696 * 100%)">78</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>41 bis. rappelle la promesse du pacte vert, à savoir le fait que personne ne soit laissé pour compte, et invite la Commission et les États membres à continuer de contrôler la proportion de citoyens en situation de précarité énergétique; souligne qu’il faut à tout prix éviter que cette proportion augmente; attend de la Commission et des États membres qu’ils interviennent si cela se produit pour quelque raison que ce soit;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(323/696 * 100%)">323</div>
-  
-  
-    <div class="-" style="width: calc(352/696 * 100%)">352</div>
-  
-  
-    <div class="0" style="width: calc(21/696 * 100%)">21</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    ECR
     
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2241(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0062_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">323</div>
+  <div class="against">352</div>
+  <div class="abstention">21</div>
+</span>
+
   
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-05-17-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce texte déséquilibré, qui donne la priorité aux énergies renouvelables de façon excessive, ce qui risque au contraire d&#39;exacerber les déséquilibres de ce système.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce rapport d&#39;initiative propose une stratégie européenne pour l’intégration des systèmes énergétiques, notamment par l’accroissement de la compétitivité des technologies européennes pour favoriser l’autonomie de l’Union dans ce secteur. Il est important d’orienter les consommateurs vers des solutions durables pour l’environnement et rentables économiquement. J’ai voté en faveur de ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Je me suis opposée à ce texte qui défend une approche fédéraliste de l’intégration des systèmes énergétiques nationaux. En outre, le rapporteur «macronien» a refusé toute modification visant à inclure l’énergie nucléaire dans le texte.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il défend une approche fédéraliste de l’intégration des systèmes énergétiques nationaux. En outre, le rapporteur «macronien» a refusé toute modification visant à inclure l’énergie nucléaire dans le texte.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Le 8 juillet 2020, la Commission européenne a présenté sa stratégie pour l’intégration des systèmes énergétiques européens. Cette stratégie vise à établir des liens plus étroits entre les multiples vecteurs, infrastructures et secteurs de consommation énergétiques afin de mettre l’Union sur la voie d’un système énergétique intégré permettant d’atteindre l’objectif de neutralité climatique d’ici 2050. La stratégie présentée par la Commission repose ainsi sur trois piliers: le développement d’un système énergétique plus circulaire; l’accélération de l’électrification du système énergétique grâce au développement des énergies renouvelables; le remplacement progressif du gaz naturel par des carburants renouvelables et à faible teneur en carbone tels que l’hydrogène, les biocarburants et le biogaz afin de décarboner les secteurs pour lesquels l’électrification est impossible ou trop coûteuse.En phase avec la nécessité de rendre l’Union européenne actrice et initiatrice de mesures environnementales, j’ai voté pour l’adoption de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport pour une stratégie européenne d’intégration des systèmes énergétiques. Le texte formule des recommandations en vue d’optimiser et de décarboner les systèmes énergétiques de l’Union: principe de primauté de l’efficacité énergétique, réduction de la dépendance aux importations, intégration des eaux résiduaires traitées, etc.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations du Parlement sur la stratégie pour l’intégration des systèmes énergétiques européens présentée par la Commission en juillet 2020. Il insiste notamment sur l’urgence d’optimiser l’utilisation de l’énergie tout au long de son cycle de vie, la nécessité de renforcer l’électrification pour sortir des fossiles et l’importance du développement de l’hydrogène renouvelable dans les processus industriels. J’ai donc voté pour ce texte, qui va dans le sens de l’indispensable bifurcation écologique de nos systèmes de consommation et de production.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            La bifurcation vers un système de production énergétique basé sur le 100 % renouvelable, comme demandé par la France insoumise dans son programme, nécessitera une intégration des systèmes énergétiques particulièrement efficace afin d’assurer la stabilité du réseau. Le rapport insiste ainsi particulièrement sur la pleine mise en œuvre du principe d’efficacité énergétique, notamment en optimisant l’utilisation de l’énergie tout au long de son cycle de vie, de la génération à la récupération et la réutilisation (en récupérant, par exemple, la chaleur résiduelle provenant des centres de données). Il souligne également la nécessité de l’électrification pour sortir des énergies fossiles et le rôle de l’hydrogène renouvelable et à faible teneur en carbone pour réduire les émissions de certains secteurs difficiles à décarboner, tels que certains processus industriels, en mettant l’accent sur l’hydrogène renouvelable. Il s’agit dans l’ensemble d’un bon rapport que je soutiens sans aucune difficulté.
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            Cette semaine, j’ai eu l’honneur de présenter en plénière mon premier rapport d’initiative en tant que rapporteur pour le Parlement européen sur la stratégie européenne d’intégration des systèmes énergétiques (ESI).Ce rapport a pour objectif de présenter des lignes de développement concrètes pour nos réseaux énergétiques européens afin d’améliorer leur résilience et leur capacité à fournir à chaque Européen une énergie abordable, durable et fiable. En clair, l’objectif est de parvenir à l’optimisation et à la décarbonation des systèmes énergétiques. Ce rapport s’engage aussi clairement sur la voie des énergies du futur puisqu’il propose par exemple des pistes concrètes pour l’hydrogène.Enfin, ce rapport insiste notamment sur la nécessité pour l’Union européenne de développer son autonomie stratégique dans le secteur énergétique. En effet, l’Europe est encore trop dépendante de pays tiers pour son approvisionnement en énergie, en particulier à cause des importations d’énergies fossiles.En séance plénière du Parlement européen, mon rapport a été largement adopté par 542 voix pour, 111 contre et 42 abstentions. Je me réjouis de ce franc succès vers une nouvelle vision de l’énergie en Europe.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            J’ai voté contre ce texte, qui ne donne la priorité qu’à certaines formes d’énergies renouvelables, risquant ainsi de stimuler les déséquilibres énergétiques, alors que c’est l’objet contraire du rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai voté en faveur du rapport sur la stratégie européenne d’intégration des systèmes énergétiques. Moderniser et réorganiser le fonctionnement de nos infrastructures énergétiques transeuropéennes est une condition sine qua non du succès de notre transition climatique. Ce rapport encourage un plus large développement et déploiement des énergies renouvelables au sein des États membres de l’Union européenne. La richesse et la diversité du territoire européen fait de l’Europe une zone particulièrement compétitive dans sa transition vers des énergies renouvelables (hydrogène, biomasse, éolien).Les États membres doivent à présent faire preuve d’ambition dans la présentation et la réalisation de leurs objectifs énergétiques. J’accueille également favorablement les efforts de l’industrie de la recherche sur les technologies de captage, de stockage et de réutilisation du CO2.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport car il est déséquilibré et ne donne la priorité qu’à certaines formes d’énergie uniquement renouvelables, et risque ainsi de stimuler des déséquilibres du système, c’est-à-dire le contraire des objectifs de ce rapport. Le rôle majeur du gaz naturel, du nucléaire et de l’énergie hydroélectrique est trop peu souligné.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Le 8 juillet 2020, la Commission européenne a présenté, avec la stratégie sur l’hydrogène, la stratégie sur l’intégration du système énergétique. La communication définit une vision sur la manière d&#39;accélérer la transition vers un système énergétique plus intégré, à l&#39;appui de l&#39;énergie propre et d&#39;une économie neutre pour le climat, tout en renforçant la sécurité énergétique, en protégeant la santé et l&#39;environnement et en promouvant la croissance et la primauté industrielle au niveau mondial. La stratégie définit 38 actions destinées à mettre en œuvre les réformes nécessaires. Il s’agit notamment de la révision de la législation existante en matière d’énergie, du soutien financier ou de la recherche et du déploiement de nouvelles technologies et d’outils numériques, d’orientations adressées aux États membres sur les mesures fiscales et la suppression progressive des subventions aux combustibles fossiles. Le texte est déséquilibré et ne donne la priorité qu’à certaines formes d’énergie uniquement renouvelables, et risque ainsi de stipuler des déséquilibres du système, c’est-à-dire le contraire des objectifs de ce rapport. Le rôle du gaz naturel, du nucléaire et de l’énergie hydroélectrique sont trop marginaux. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Le 8 juillet 2020, la Commission européenne a présenté, avec la stratégie sur l’hydrogène, la stratégie sur l’intégration du système énergétique. La communication définit une vision sur la manière d&#39;accélérer la transition vers un système énergétique plus intégré, à l&#39;appui de l&#39;énergie propre et d&#39;une économie neutre pour le climat, tout en renforçant la sécurité énergétique, en protégeant la santé et l&#39;environnement. Notre délégation compte poursuivre une ligne d’opposition à ce texte qui défend une approche trop fédéraliste sur les systèmes énergétiques nationaux. En outre, le rapporteur macroniste a refusé toute modification visant à inclure l’énergie nucléaire dans le texte.J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport sur la stratégie européenne d’intégration des systèmes énergétiques. Ce texte déséquilibré ne donne la priorité qu’à certaines énergies renouvelables dont les effets sur l’environnement sont contestables et mésestime le rôle du nucléaire, de l’hydroélectrique et même du gaz, énergie nécessaire à titre transitoire.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            
+                <p>Ce vecteur énergétique peut être utilisé, par exemple, dans la sidérurgie ou pour assurer la stabilité d’un réseau électrique fondé sur le 100 % renouvelable. Mais l’hydrogène n’est pas une solution miracle: s’il est laissé entre de mauvaises mains, sa généralisation peut être une grande entreprise de verdissage de l’industrie gazière. Soyons conscients qu’une stratégie compatible avec nos objectifs climatiques ne peut s’appuyer que sur le développement de l’hydrogène vert, c’est-à-dire obtenu par électrolyse de l’eau à partir d’électricité renouvelable. Tout soutien financier à un autre type d’hydrogène nous enfermerait dans une dépendance mortifère.</p>
+            
+                <p>Or, les énergies renouvelables et l’eau ne sont pas des ressources infinies. L’hydrogène vert demeurera donc une ressource limitée dont il faut strictement prioriser les usages par une planification publique et démocratique. Sa production doit se faire sans aggraver la pression sur les écosystèmes et notamment sur les ressources en eau; elle ne doit pas conduire à des projets fous comme le barrage Inga III en République démocratique du Congo.</p>
+            
+                <p>Bien développée, la production d’hydrogène vert peut offrir un avenir à des sites industriels abandonnés. Mettons à profit cette possibilité, mais prenons garde aux apprentis sorciers qui veulent faire de l’hydrogène le nouvel eldorado du capitalisme vert.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197574</div>
+            
+            <header><b>Damien CARÊME</b> | Les Écologistes</header>
+            
+                <p>Un autre chiffre parlant: l’industrie de l’hydrogène a rencontré les commissaires européens Timmermans, Simson, Breton, leurs cabinets et leurs directeurs généraux à 163 reprises entre décembre 2019 et septembre 2020, contre 37 réunions avec des ONG sur la même période.</p>
+            
+                <p>C’est très déséquilibré et cela se reflète malheureusement dans la stratégie proposée par la Commission. Cela se reflète aussi ici, dans ce Parlement européen. Alors que la stratégie hydrogène devrait plutôt encourager le développement massif et coordonné de l’hydrogène intégralement issu des énergies renouvelables, et donc développer massivement et très rapidement dans un premier temps les énergies renouvelables, ce Parlement s’apprête à adopter une résolution qui fait la part belle à l’hydrogène produit à partir de gaz fossile et de nucléaire. C’est un vote à rebours de l’histoire.</p>
+            
+                <p>Il y a des enjeux climatiques et des choix forts que nous devrions faire dès aujourd’hui. Les spécialistes nous annoncent que nous atteindrions les 1,5 °C d’augmentation dès 2034. Qui souhaite-t-on écouter? Les lobbies, qui défendent les intérêts privés, ou bien les jeunes, qui se mobilisent pour le climat? Les représentants des énergies fossiles ou bien les scientifiques, qui s’accordent à nous dire que l’on fonce droit dans le mur? Comment croire ou faire croire que continuer à soutenir et à financer les gaz fossiles, grands émetteurs de gaz à effet de serre, ou le nucléaire, dont nous ne maîtrisons ni la complète sécurité ni les déchets, nous permettra d’atteindre nos engagements climatiques et environnementaux? Comment penser que cela nous permettra de protéger la biodiversité, protection pourtant indispensable si l’on veut éviter de nouvelles pandémies et lutter contre le changement climatique? La seule solution durable pour la décarbonation de notre industrie et pour la mise en place d’un bouquet énergétique 100 % vert, c’est l’hydrogène vert, celui produit à partir d’énergies 100 % renouvelables. Qui serions-nous pour hypothéquer l’avenir des générations futures en refusant de le faire?</p>
+            
+                <p>Courber l’échine devant l’influence et l’argent des lobbies gaziers et nucléaires ne nous permettra pas de regarder nos enfants droit dans les yeux, en leur assurant que nous avons fait tout ce que nous devions faire. Notre responsabilité face à la jeunesse pour la planète est immense, soyons à la hauteur.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            
+                <p>Ce rapport ne dresse pas un portrait imaginé ou imaginaire de notre système énergétique du futur; il présente des tendances qui sont déjà engagées partout en Europe et dans le monde. Il n’imagine pas non plus les défis d’un avenir lointain; il met en évidence les défis d’aujourd’hui, des défis bien réels. Alors que s’est-il passé depuis la communication de la Commission en juillet 2020?</p>
+            
+                <p>Tout d’abord, l’Union européenne a manqué de peu l’objectif des 20 % d’énergie renouvelable dans son mix énergétique et n’a pas réussi à atteindre son objectif d’efficacité énergétique. Ensuite, huit États membres n’ont pas atteint leur objectif d’interconnexion de 10 % d’ici 2020. De plus, les pénuries de matières premières critiques dues à la crise de la COVID-19 ont provoqué un ralentissement dans des secteurs clés comme les supraconducteurs, les batteries, les panneaux solaires ou les turbines pour éoliennes. Enfin, la menace des cyberattaques sur les infrastructures énergétiques est devenue bien réelle: elles ont récemment touché, par exemple, un des principaux oléoducs des États-Unis et paralysé l’approvisionnement de l’Est de ce pays.</p>
+            
+                <p>Dans le même temps, des changements remarquables et structurels ont été initiés dans notre production et notre consommation d’énergie. 2020 a confirmé la tendance de 2019: une nouvelle fois, les renouvelables ont surpassé les énergies fossiles dans la production d’électricité en Europe. L’énergie solaire est devenue la moins chère au monde et sa production a augmenté de 20 % en Europe en 2020. Le prix du carbone a entamé une hausse exponentielle depuis la fin 2020, et atteint aujourd’hui 56 euros la tonne de CO2. Les projets d’investissement dans l’hydrogène se sont multipliés en quelques mois et l’Europe est devenue le continent qui investit le plus dans ce secteur. 2020 a aussi vu une explosion des ventes de véhicules électriques et hybrides, les voitures à essence passant sous la barre symbolique des 50 % de part de marché.</p>
+            
+                <p>Tous ces chiffres montrent bien que la transition énergétique est en marche en Europe. Nous savons maintenant de quoi notre mix énergétique sera fait dans les prochaines années et nous devons nous poser des questions nouvelles. Comment pouvons-nous adapter notre infrastructure à la nouvelle énergie renouvelable, très largement variable et qui augmente la pression sur nos réseaux? Comment pouvons-nous garantir la sécurité d’approvisionnement et assurer un prix juste aux citoyens européens? Jusqu’où peut-on adapter notre demande énergétique en la rendant plus flexible? Quels bénéfices peut-on retirer de la mise en place d’une plus grande circularité de notre consommation énergétique? Enfin, peut-on lutter efficacement et rapidement contre le gaspillage énergétique et les émissions provenant de nos bâtiments et de nos transports, sans pour autant exclure les citoyens les plus vulnérables de la transition verte et numérique?</p>
+            
+                <p>Ce rapport complète la stratégie de la Commission, car il apporte des réponses plus concrètes à ces questions. Il montre aussi une véritable prise de conscience au sein du Parlement européen: si nous avons encore des différences d’opinion, nous avons tous la volonté de faire de la transition vers la neutralité climatique une réalité, et nous sommes conscients des défis qu’elle représente. Ces défis, nous savons qu’ils ne seront pas les mêmes d’un pays à l’autre; mais ce qui nous unit, c’est une vraie volonté de coopérer afin de les relever ensemble.</p>
+            
+                <p>Notre rapport reconnaît le rôle fondamental du marché intérieur de l’énergie et des interconnexions à tous les niveaux pour équilibrer nos réseaux, notamment les réseaux électriques. Il met en lumière les possibilités extraordinaires que nous offre notre continent pour produire davantage d’énergie renouvelable, et les solutions encore peu exploitées qui doivent permettre, dès aujourd’hui, de mieux intégrer ces énergies renouvelables.</p>
+            
+                <p>Enfin, il reconnaît que pour assurer notre approvisionnement et notre autonomie énergétiques, nous devons collaborer davantage afin d’innover plus rapidement et de faire émerger des technologies européennes qui nous placeront en première position sur les marchés, que ce soit pour le stockage, la conversion, le transport ou encore la réutilisation de l’énergie.</p>
+            
+                <p>Cette stratégie est plus qu’une stratégie: c’est un véritable changement de vision. C’est pour moi la pièce manquante dans l’établissement d’une véritable union de l’énergie, un manifeste, en somme, de ce que nous avons fait depuis les premières heures du marché commun de l’énergie et de ce vers quoi nous tendons désormais.</p>
+            
+                <p>Alors, en cette année européenne du rail, assurons-nous que l’Union ne prenne pas le train en marche, mais qu’elle soit en mesure de décider pleinement de la trajectoire, de la vitesse et des rails à construire.</p>
+            
+                <p>Un célèbre homme politique français, Georges Clemenceau, disait: il faut savoir ce que l’on veut, il faut ensuite avoir le courage de le dire et de l’écrire, il faut enfin avoir l’énergie de le faire. Alors, chers collègues, tous ensemble, nous ne manquerons pas d’énergie pour y arriver.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

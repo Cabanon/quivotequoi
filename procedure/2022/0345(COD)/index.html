@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Traitement des eaux urbaines résiduaires. Refonte</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,82 +22,39 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Traitement des eaux urbaines résiduaires. Refonte</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
-    <article>
-    <header>👍 Adoption du texte | 
-
-✅️ Adopté
-
-</header>
-    
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
-        <section>
-
-<div class="votes ">
-  
-    <div class="+" style="width: calc(420/566 * 100%)">420</div>
-  
-  
-    <div class="-" style="width: calc(62/566 * 100%)">62</div>
-  
-  
-    <div class="0" style="width: calc(84/566 * 100%)">84</div>
-  
-</div>
-</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
-        <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
-        
-        
-            <section>
-
-
-
-<div class="votes">
-  
-    <div class="+" style="width: calc(60/64 * 100%)">60</div>
-  
-  
-  
-    <div class="0" style="width: calc(4/64 * 100%)">4</div>
-  
-</div>
- 
-</section>
-            <a href="/voting/158621">🗳 Voir le détail du vote</a>
-        
-    
-    </article>
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -109,83 +67,193 @@
     
         
         
-            <li>Gestion des eaux, pollution de l&#39;eau, des cours d&#39;eau</li>
+            <li>Politique de l&#39;environnement</li>
         
     
         
         
-            <li>Politique de l&#39;environnement</li>
+            <li>Gestion des eaux, pollution de l&#39;eau, des cours d&#39;eau</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/0345(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0276_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-10-05-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197615">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197629">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°7 | Partie 1 | 
+        
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | Partie 2 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°14 | 
+        
+            <article id="14">
+            <header>📝 Amendement n°14 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      (11) Les connaissances scientifiques récentes qui sous-tendent plusieurs stratégies de la Commission43 soulignent la   nécessité de prendre des mesures pour remédier au problème des micropolluants, que l’on détecte à présent dans toutes les eaux de l’
-  
+<p>
 
   
-      <del>Union.</del>
+      (11) Les connaissances scientifiques récentes qui sous-tendent plusieurs stratégies de la Commission43 soulignent la   nécessité de prendre des mesures pour remédier au problème des micropolluants, que l’on détecte à présent dans toutes les eaux de l’Union
   
 
   
-      <ins>Union, et qui sont générés par l’apparition sur le marché de nouveaux produits domestiques ou industriels qui nécessitent de nouvelles méthodes d’identification et d’élimination des eaux usées.</ins>
+      <ins>, et qui sont générés par l’apparition sur le marché de nouveaux produits domestiques ou industriels qui nécessitent de nouvelles méthodes d’identification et d’élimination des eaux usées</ins>
   
 
   
-       Certains de ces micropolluants, même en petites quantités, sont dangereux pour la santé publique et l’environnement. Un traitement supplémentaire, c’est-à-dire un traitement quaternaire, devrait donc être prévu pour faire en sorte d’éliminer un large éventail de micropolluants des eaux urbaines résiduaires. Le traitement quaternaire devrait avant tout se concentrer sur les micropolluants organiques qui représentent une part importante de la pollution et pour lesquels des technologies d’élimination existent déjà. Le traitement devrait être 
+      . Certains de ces micropolluants, même en petites quantités, sont dangereux pour la santé publique et l’environnement. Un traitement supplémentaire, c’est-à-dire un traitement quaternaire, devrait donc être prévu pour faire en sorte d’éliminer un large éventail de micropolluants des eaux urbaines résiduaires. Le traitement quaternaire devrait avant tout se concentrer sur les micropolluants organiques qui représentent une part importante de la pollution et pour lesquels des technologies d’élimination existent déjà. Le traitement devrait être 
   
 
   
@@ -197,15 +265,15 @@
   
 
   
-      <del>de l’approche </del>
+      <del>de l’approche</del>
   
 
   
-      <ins>du principe </ins>
+      <ins>du principe</ins>
   
 
   
-      de précaution en combinaison avec une approche fondée sur les risques. Par conséquent, toutes les stations d’épuration des eaux urbaines résiduaires dont l’EH est procéder à un traitement quaternaire, étant 
+       de précaution en combinaison avec une approche fondée sur les risques. Par conséquent, toutes les stations d’épuration des eaux urbaines résiduaires dont l’EH est procéder à un traitement quaternaire, étant 
   
 
   
@@ -225,317 +293,216 @@
   
 
   
-      <del>zones devraient inclure les </del>
+      <del>zones devraient inclure les</del>
   
 
   
-      <ins>critères devraient tenir compte en particulier les risques associés   per- et polyfluoroalkylées. Ces zones devraient inclure les sites où les rejets d’eaux urbaines résiduaires traitées dans les masses d’eau </ins>
+      <ins>critères devraient tenir compte en particulier les risques associés   per- et polyfluoroalkylées. Ces zones devraient inclure les sites où les rejets d’eaux urbaines résiduaires traitées dans les masses d’eau</ins>
   
 
   
-      résultent en de faibles taux de dilution, ou ceux où les masses d’eau réceptrices sont utilisées pour la production d’eau potable ou comme eaux de baignade. Aux fins d’une dispense du traitement quaternaire pour les agglomérations dont l’EH est 
+       résultent en de faibles taux de dilution, ou ceux où les masses d’eau réceptrices sont utilisées pour la production d’eau potable ou comme eaux de baignade. Aux fins d’une dispense du traitement quaternaire pour les agglomérations dont l’EH est
   
 
   
-      <del>  membres </del>
+      <del>   membres</del>
   
 
   
-      <ins>compris entre </ins>
+      <ins> compris entre</ins>
   
 
   
-      devraient être tenus de démontrer l’absence de risques pour l’environnement ou pour la santé publique sur la base d’une évaluation normalisée des risques. Afin que les États membres disposent de suffisamment de temps pour la planification et la réalisation des infrastructures nécessaires, il convient que l’exigence d’un traitement quaternaire devienne progressivement applicable d’ici 
+       devraient être tenus de démontrer l’absence de risques pour l’environnement ou pour la santé publique sur la base d’une évaluation normalisée des risques. Afin que les États membres disposent de suffisamment de temps pour la planification et la réalisation des infrastructures nécessaires, il convient que l’exigence d’un traitement quaternaire devienne progressivement applicable d’ici 
   
 
   
-      <del>clairs.            </del>
+      <del>clairs.              </del>
   
 
   
-      <ins>à [insérer la date correspondant à quinze ans après la date d’entrée en vigueur de la présente directive], avec des objectifs intermédiaires clairs.</ins>
+      <ins>à [insérer la date correspondant à quinze ans après la date d’entrée en vigueur de la présente directive], avec des objectifs intermédiaires clairs.  </ins>
   
 
   
-        _________________  43 Communication de la Commission au Parlement européen, au Conseil, au Comité économique et social européen et au Comité des régions: «Une stratégie européenne sur les matières plastiques dans une économie circulaire» la Commission au Parlement européen, au Conseil, au Comité économique et social européen: «Approche stratégique de l’Union européenne concernant les produits pharmaceutiques dans l’environnement» [COM(2019) 128 final]; communication de la Commission au Parlement européen, au Conseil, au Comité économique et social européen et au Comité des régions: «Stratégie pour la durabilité dans le domaine des produits chimiques - Vers un environnement   exempt de substances toxiques» [COM(2020) 667 final]; communication de la Commission au Parlement européen, au Conseil, au Comité économique et social européen et au Comité des régions: «Cap sur une planète en bonne santé pour tous – Plan d’action de l’UE: “Vers une pollution zéro dans l’air, l’eau et les sols”» [COM(2021) 400 final].
+      _________________  43 Communication de la Commission au Parlement européen, au Conseil, au Comité économique et social européen et au Comité des régions: «Une stratégie européenne sur les matières plastiques dans une économie circulaire» la Commission au Parlement européen, au Conseil, au Comité économique et social européen: «Approche stratégique de l’Union européenne concernant les produits pharmaceutiques dans l’environnement» [COM(2019) 128 final]; communication de la Commission au Parlement européen, au Conseil, au Comité économique et social européen et au Comité des régions: «Stratégie pour la durabilité dans le domaine des produits chimiques - Vers un environnement   exempt de substances toxiques» [COM(2020) 667 final]; communication de la Commission au Parlement européen, au Conseil, au Comité économique et social européen et au Comité des régions: «Cap sur une planète en bonne santé pour tous – Plan d’action de l’UE: “Vers une pollution zéro dans l’air, l’eau et les sols”» [COM(2021) 400 final].
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°15 | Partie 1 | 
+        
+        
+            <article id="15">
+            <header>📝 Amendement n°15 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°15 | Partie 2 | 
+        
+            <article id="15">
+            <header>📝 Amendement n°15 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(423/560 * 100%)">423</div>
-  
-  
-    <div class="-" style="width: calc(129/560 * 100%)">129</div>
-  
-  
-    <div class="0" style="width: calc(8/560 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/158844">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°15 | Partie 3 | 
+        
+            <article id="15">
+            <header>📝 Amendement n°15 | Partie 3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(324/560 * 100%)">324</div>
-  
-  
-    <div class="-" style="width: calc(154/560 * 100%)">154</div>
-  
-  
-    <div class="0" style="width: calc(82/560 * 100%)">82</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/158845">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°19 | Partie 1 | 
+        
+            <article id="19">
+            <header>📝 Amendement n°19 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°19 | Partie 2 | 
+        
+            <article id="19">
+            <header>📝 Amendement n°19 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(330/566 * 100%)">330</div>
-  
-  
-    <div class="-" style="width: calc(135/566 * 100%)">135</div>
-  
-  
-    <div class="0" style="width: calc(101/566 * 100%)">101</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/158856">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°36 | Partie 1 | 
+        
+            <article id="36">
+            <header>📝 Amendement n°36 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°36 | Partie 2 | 
+        
+            <article id="36">
+            <header>📝 Amendement n°36 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(330/565 * 100%)">330</div>
-  
-  
-    <div class="-" style="width: calc(133/565 * 100%)">133</div>
-  
-  
-    <div class="0" style="width: calc(102/565 * 100%)">102</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/158859">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°51 | 
+        
+            <article id="51">
+            <header>📝 Amendement n°51 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       4) «agglomération»: une zone dans laquelle la charge polluante des eaux urbaines résiduaires est suffisamment concentrée (
   
 
   
-      <del>10 </del>
+      <del>10</del>
   
 
   
-      <ins>25 </ins>
+      <ins>25</ins>
   
 
   
-      EH par hectare au minimum) pour qu’il soit possible de collecter les eaux urbaines résiduaires pour les acheminer vers une station d’épuration des eaux urbaines résiduaires ou vers un point de rejet final;
+       EH par hectare au minimum) pour qu’il soit possible de collecter les eaux urbaines résiduaires pour les acheminer vers une station d’épuration des eaux urbaines résiduaires ou vers un point de rejet final;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°74 | 
+        
+        
+            <article id="74">
+            <header>📝 Amendement n°74 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       b) la surcharge due aux pluies d’orage représente 
@@ -549,316 +516,276 @@
       plus de 1 % de la charge annuelle des eaux urbaines résiduaires collectées, calculée par temps sec;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°82 | 
+        
+        
+            <article id="82">
+            <header>📝 Amendement n°82 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>Par dérogation, les rejets d’eaux urbaines résiduaires dans des eaux situées dans des régions à climat froid, où il est difficile d’appliquer un traitement biologique efficace en raison des basses températures, peuvent être soumis à un traitement (demande biochimique en oxygène, DBO5 telle que définie à l’annexe 1, tableau 1, ligne 2) moins rigoureux que celui prescrit au paragraphe 1, si la température moyenne annuelle de l’eau au niveau des entrées est inférieure à 6 °C, et à condition que des études détaillées indiquent que ces rejets n’ont pas d’effets néfastes sur l’environnement. Le traitement doit toutefois atteindre un pourcentage de réduction minimal de 40 %, mesuré au moins une fois par semaine. Les États membres qui font usage de cette dérogation en font rapport à la Commission.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
-    
-    
-    <article>
-    <header>📝 Amendement n°92 | Partie 1 | 
 
-✅️ Adopté
+  la commission 
 
-</header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+</i>
+                <footer>
 
-    
-    
-    <article>
-    <header>📝 Amendement n°92 | Partie 2 | 
+  🖐 Vote à main levée
 
-✅️ Adopté
-
-</header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
-        
+</footer>
             
+            </article>
+        
+    
+        
+        
+            <article id="92">
+            <header>📝 Amendement n°92 | Partie 1 | 
 
-<div class="votes small">
-  
-    <div class="+" style="width: calc(322/563 * 100%)">322</div>
-  
-  
-    <div class="-" style="width: calc(224/563 * 100%)">224</div>
-  
-  
-    <div class="0" style="width: calc(17/563 * 100%)">17</div>
-  
-</div>
+✅️ Adopté
 
+</header>
             
-                
-                
-                    
-                
-                <a href="/voting/158865">📣 Vote nominal : voir le détail</a>
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
             
+            </article>
         
-    </footer>
-    </article>
     
-
-    
-    
-    <article>
-    <header>📝 Amendement n°93 | Partie 1 | 
+        
+        
+            <article id="92">
+            <header>📝 Amendement n°92 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°93 | Partie 2 | 
+        
+            <article id="93">
+            <header>📝 Amendement n°93 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°95 | 
+        
+            <article id="93">
+            <header>📝 Amendement n°93 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
+        
     
         
+        
+            <article id="95">
+            <header>📝 Amendement n°95 | 
 
-<section>
+✅️ Adopté
 
-  
-      Au plus 
-  
+</header>
+            
+                <div class="hidden"></div>
+                
 
-  
-      <del>tard le 31 décembre 2030,</del>
-  
-
-  
-      <ins>tard... [cinq ans après l’entrée en vigueur de la présente directive],</ins>
-  
+<p>
 
   
-       les États membres veillent à ce que 50 % des rejets provenant des stations d’épuration des eaux 
+      Au plus tard
   
 
   
-      <del>urbaines résiduaires traitant une charge </del>
+      <del> le 31 décembre 2030, </del>
   
 
   
-      <ins>l’objet d’un traitement quaternaire </ins>
+      <ins>... [cinq ans après l’entrée en vigueur de la présente directive], </ins>
   
 
   
-      conformément au paragraphe 5.
+      les États membres veillent à ce que 50 % des rejets provenant des stations d’épuration des eaux 
+  
+
+  
+      <del>urbaines résiduaires traitant une charge</del>
+  
+
+  
+      <ins>l’objet d’un traitement quaternaire</ins>
+  
+
+  
+       conformément au paragraphe 5.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">396</div>
+  <div class="against">137</div>
+  <div class="abstention">12</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/158838">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(396/545 * 100%)">396</div>
-  
-  
-    <div class="-" style="width: calc(137/545 * 100%)">137</div>
-  
-  
-    <div class="0" style="width: calc(12/545 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/158838">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°96 | 
+        
+            <article id="96">
+            <header>📝 Amendement n°96 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      Au plus tard 
-  
+<p>
 
   
-      <del>le 31 décembre 2035,</del>
+      Au plus tard le
   
 
   
-      <ins>le... [dix ans après l’entrée en vigueur de la présente directive],</ins>
+      <del> 31 décembre 2035, </del>
   
 
   
-       les États membres veillent à ce que toutes les stations d’épuration des eaux urbaines 
+      <ins>... [dix ans après l’entrée en vigueur de la présente directive], </ins>
   
 
   
-      <del>résiduaires traitant une charge égale ou </del>
+      les États membres veillent à ce que toutes les stations d’épuration des eaux urbaines 
   
 
   
-      <ins>d’un traitement quaternaire conformément </ins>
+      <del>résiduaires traitant une charge égale ou</del>
   
 
   
-      au paragraphe 5.
+      <ins>d’un traitement quaternaire conformément</ins>
+  
+
+  
+       au paragraphe 5.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">421</div>
+  <div class="against">133</div>
+  <div class="abstention">11</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/158839">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(421/565 * 100%)">421</div>
-  
-  
-    <div class="-" style="width: calc(133/565 * 100%)">133</div>
-  
-  
-    <div class="0" style="width: calc(11/565 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/158839">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°97 | 
+        
+            <article id="97">
+            <header>📝 Amendement n°97 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      <del>Le 31 décembre 2030, les États membres ont dressé une liste des zones de leur territoire national dans lesquelles la concentration ou l’accumulation de </del>
-  
+<p>
 
   
-      <ins>Au plus tard le ... [deux ans après l’entrée en vigueur de la présente directive], les États membres doivent avoir dressé et publié une liste des agglomérations d’au national et le... [cinq ans après l’entrée en vigueur de la présente directive], une liste des agglomérations d’au moins   l’accumulation de micropolluants présente un risque pour la </ins>
+      <del>Le 31 décembre 2030, les États membres ont dressé une liste des zones de leur territoire national dans lesquelles la concentration ou l’accumulation de santé humaine</del>
   
 
   
-      santé 
+      <ins>Au plus tard le ... [deux ans après l’entrée en vigueur de la présente directive], les États membres doivent avoir dressé et publié une liste des agglomérations d’au national et le... [cinq ans après l’entrée en vigueur de la présente directive], une liste des agglomérations d’au moins   l’accumulation de micropolluants présente un risque pour la santé</ins>
   
 
   
-      <del>humaine </del>
-  
-
-  
-      ou l’environnement. Les États membres réexaminent ensuite cette liste 
+       ou l’environnement. Les États membres réexaminent ensuite cette liste 
   
 
   
@@ -881,72 +808,86 @@
       nécessaire.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°101 | 
+        
+        
+            <article id="101">
+            <header>📝 Amendement n°101 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>2 bis.Lorsqu’un État membre n’établit pas les listes visées au paragraphe 2 dans les délais qui y sont fixés, tous les rejets provenant des stations d’épuration des eaux urbaines résiduaires traitant une l’objet d’un traitement quaternaire conformément au paragraphe 5.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°103 | 
+        
+        
+            <article id="103">
+            <header>📝 Amendement n°103 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      Au plus tard le 
-  
+<p>
 
   
-      <del>31 décembre 2035, les États membres veillent à ce que, pour 50 % des agglomérations ayant un EH compris résiduaires qui entrent dans les systèmes de collecte </del>
+      Au plus tard le
   
 
   
-      <ins>... [dix ans après l’entrée en vigueur de la présente directive] et sans préjudice du paragraphe 1, les États au paragraphe 5, les eaux urbaines résiduaires collectées d’au moins 50 % des </ins>
+      <del> 31 décembre 2035, les États membres veillent à ce que, pour 50 % des agglomérations ayant un EH compris résiduaires qui entrent dans les systèmes de collecte</del>
   
 
   
-      fassent l’objet d’un traitement 
+      <ins> ... [dix ans après l’entrée en vigueur de la présente directive] et sans préjudice du paragraphe 1, les États au paragraphe 5, les eaux urbaines résiduaires collectées d’au moins 50 % des</ins>
+  
+
+  
+       fassent l’objet d’un traitement 
   
 
   
@@ -958,414 +899,843 @@
   
 
   
-      <del>la liste visé</del>
+      <del>la</del>
   
 
   
-      <ins>une liste, telle qu’indiqué</ins>
+      <ins>une</ins>
   
 
   
-      e au paragraphe 2.
+       liste
+  
+
+  
+      <del> visée</del>
+  
+
+  
+      <ins>, telle qu’indiquée</ins>
+  
+
+  
+       au paragraphe 2.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°104 | 
+        
+        
+            <article id="104">
+            <header>📝 Amendement n°104 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      Au plus tard le 
-  
+<p>
 
   
-      <del>31 décembre 2040,</del>
+      Au plus tard le
   
 
   
-      <ins>[15 ans après l’entrée en vigueur de la présente directive],</ins>
+      <del> 31 décembre 2040, </del>
   
 
   
-       les États membres veillent à ce que les eaux urbaines résiduaires qui entrent dans les 
+      <ins> [15 ans après l’entrée en vigueur de la présente directive], </ins>
   
 
   
-      <ins>  </ins>
+      les États membres veillent à ce que les eaux urbaines résiduaires qui entrent dans les
   
 
   
-      systèmes de collecte fassent l’objet d’un 
+      <del> </del>
   
 
   
-      <del>  </del>
+      <ins>   </ins>
   
 
   
-      traitement quaternaire conformément au paragraphe 5, avant d’être rejetées dans des zones figurant sur la liste visée au paragraphe 2 en ce qui concerne toutes 
+      systèmes de collecte fassent l’objet d’un
   
 
   
-      <del>les agglomérations ayant un EH compris entre</del>
+      <del>   </del>
   
 
   
-      <ins>les</ins>
+      <ins> </ins>
+  
+
+  
+      traitement quaternaire conformément au paragraphe 5, avant d’être rejetées dans des zones figurant sur la liste visée au paragraphe 2 en ce qui concerne toutes les
+  
+
+  
+      <del> agglomérations ayant un EH compris entre</del>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°105 | 
+        
+        
+            <article id="105">
+            <header>📝 Amendement n°105 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>4 bis.Les paragraphes 3 et 4 s’appliquent également aux rejets des stations d’épuration d’eaux urbaines résiduaires s’écoulent dans un bassin versant d’une zone inscrite sur une liste visée au paragraphe 2.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°108 | 
+        
+        
+            <article id="108">
+            <header>📝 Amendement n°108 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>Le financement assuré par la responsabilité élargie des producteurs est complété par un financement national mis en place pour moderniser les stations d’épuration des eaux urbaines résiduaires afin d’éviter tout effet non souhaité sur la disponibilité, le caractère abordable et l’accessibilité des produits vitaux, en particulier des médicaments, identifiés avec l’aide de l’EMA et de l’ECHA, et de veiller à ce que des fonds suffisants soient mis à la disposition des opérateurs. Le financement national ne dépasse pas 20 % et respecte le principe du pollueur- payeur.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">316</div>
+  <div class="against">225</div>
+  <div class="abstention">24</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/158840">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(316/565 * 100%)">316</div>
-  
-  
-    <div class="-" style="width: calc(225/565 * 100%)">225</div>
-  
-  
-    <div class="0" style="width: calc(24/565 * 100%)">24</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/158840">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°109 | 
+        
+            <article id="109">
+            <header>📝 Amendement n°109 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      <del>Ces mesures garantissent que ces   producteurs </del>
-  
+<p>
 
   
-      <ins>La responsabilité élargie des producteurs   et le financement national </ins>
+      <del>Ces mesures garantissent que ces   producteurs</del>
   
 
   
-      couvrent:
+      <ins>La responsabilité élargie des producteurs   et le financement national</ins>
+  
+
+  
+       couvrent:
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">247</div>
+  <div class="against">208</div>
+  <div class="abstention">105</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/158869">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(247/560 * 100%)">247</div>
-  
-  
-    <div class="-" style="width: calc(208/560 * 100%)">208</div>
-  
-  
-    <div class="0" style="width: calc(105/560 * 100%)">105</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/158869">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
+        
+            <article id="137">
+            <header>📝 Amendement n°137 | 
 
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden"></div>
+                
+
+<p>
+
+  
+      <ins>2 ter. Si, bien qu’il ait mis en œuvre toutes les mesures d’efficacité énergétique prévues dans les audits énergétiques visés au paragraphe 1, un État membre n’atteint pas 100 % de ses objectifs en matière de neutralité énergétique pour les stations d’épuration des eaux urbaines résiduaires traitant une charge d’au mesure d’accroître la production d’énergie des stations d’épuration des eaux usées sur site ou hors site conformément au paragraphe 2, cet État membre peut, par dérogation et à titre exceptionnel, autoriser l’achat d’énergie renouvelable provenant de sources externes dans le cadre d’accords d’achat d’électricité pour les pourcentages restants jusqu’à un maximum de 25 %, pour autant que toutes les conditions susmentionnées soient remplies.</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°230 | 
+        
+        
+            <article id="230">
+            <header>📝 Amendement n°230 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       Note 1: La rétention naturelle d’azote 
   
 
   
-      <del>n’est   pas </del>
+      <del>n’est   pas</del>
   
 
   
-      <ins>peut   être </ins>
+      <ins>peut   être</ins>
   
 
   
-      prise en compte dans le calcul du pourcentage minimal de ré
+       prise en compte dans le calcul du pourcentage minimal de réduction
   
 
   
-      <del>duction.</del>
+      <ins> s’il peut être prouvé que l’eau prend plus de deux ans pour atteindre le bassin versant sensible à l’azote et qu’elle contribuerait à l’eutrophisation de cette zone, et est signalée à la Commission. Les concentrations d’azote dans les zones visées au point b) de la condition 1) sont conformes aux états de référence fixés à écologique de ces zones</ins>
   
 
   
-      <ins>duction s’il peut être prouvé que l’eau prend plus de deux ans pour atteindre le bassin versant sensible à l’azote et qu’elle contribuerait à l’eutrophisation de cette zone, et est signalée à la Commission. Les concentrations d’azote dans les zones visées au point b) de la condition 1) sont conformes aux états de référence fixés à écologique de ces zones.</ins>
+      .
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
+        
     
-
+        
+        
     
-    
-
-    
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°240 | Partie 1 | 
+        
+        
+            <article id="240">
+            <header>📝 Amendement n°240 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°240 | Partie 2 | 
+        
+            <article id="240">
+            <header>📝 Amendement n°240 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°241 | 
+        
+            <article id="241">
+            <header>📝 Amendement n°241 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>Les États membres peuvent prévoir que l’atteinte de l’objectif visé au premier alinéa puisse également être démontrée à partir d’un certain nombre de surcharges dues aux pluies d’orage (dans la limite de 20 cas par an) ou d’un volume d’eaux de   ruissellement urbain rejetées (dans la limite de 15 % du volume annuel, sur la base d’une modélisation);</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°253 | Partie 1 | 
+        
+        
+            <article id="253">
+            <header>📝 Amendement n°253 | Partie 1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(256/556 * 100%)">256</div>
-  
-  
-    <div class="-" style="width: calc(298/556 * 100%)">298</div>
-  
-  
-    <div class="0" style="width: calc(2/556 * 100%)">2</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/158835">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
+        
+            <article id="253">
+            <header>📝 Amendement n°253 | Partie 2 | 
 
+🚫 Annulé
+
+</header>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
+        
     
+        
+        
+            <article id="253">
+            <header>📝 Amendement n°253 | Partie 3 | 
+
+🚫 Annulé
+
+</header>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
+        
     
-    <article>
-    <header>📝 Amendement n°259 | 
+        
+        
+            <article id="255">
+            <header>📝 Amendement n°255 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">GUE/NGL,Verts/ALE</div>
+                
+
+<p>
+
+  
+      (11) Les connaissances scientifiques récentes qui sous-tendent plusieurs stratégies de la Commission43 soulignent la nécessité de prendre des mesures pour remédier au problème des micropolluants, que l’on détecte à présent dans toutes les eaux de l’Union
+  
+
+  
+      <ins>, et qui sont générés par l’apparition sur le marché de nouveaux produits domestiques ou industriels qui nécessitent de nouvelles méthodes d’identification et d’élimination des eaux usées</ins>
+  
+
+  
+      . Certains de ces micropolluants, même en petites quantités, sont dangereux pour la santé publique et l’environnement. Un traitement supplémentaire, c’est-à-dire un traitement quaternaire, devrait donc être prévu pour faire en sorte d’éliminer un large éventail de micropolluants des eaux urbaines résiduaires. Le traitement quaternaire devrait avant tout se concentrer sur les micropolluants organiques qui représentent une part importante de la pollution et pour lesquels des technologies d’élimination existent déjà. Le traitement devrait être 
+  
+
+  
+      <ins>conforme à la directive-cadre Parlement européen et du Conseil) et être </ins>
+  
+
+  
+      rendu obligatoire sur la base de l’approche de précaution en combinaison avec une approche fondée sur les risques. Par conséquent, toutes les stations d’épuration
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
+  
+
+  
+      des eaux urbaines résiduaires dont l’EH est procéder à un traitement quaternaire, étant 
+  
+
+  
+      <del>donné que ces stations représentent une part importante des rejets de </del>
+  
+
+  
+      micropolluants dans l’environnement et que l’élimination des micropolluants par
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
+  
+
+  
+      les stations d’épuration des eaux urbaines 
+  
+
+  
+      <ins>résiduaires à cette échelle est efficace au </ins>
+  
+
+  
+      regard des coûts. Pour les agglomérations tenus d’appliquer un traitement quaternaire dans les zones identifiées comme sensibles à la pollution par les micropolluants, sur la base de critères clairs, qu’il convient de préciser. Ces 
+  
+
+  
+      <del>zones devraient inclure les</del>
+  
+
+  
+      <ins>critères devraient tenir compte en particulier les risques associés per- et polyfluoroalkylées. Ces zones devraient inclure les sites où les rejets d’eaux urbaines résiduaires traitées dans les masses d’eau</ins>
+  
+
+  
+       résultent en de faibles taux de dilution, ou ceux où les masses d’eau réceptrices sont utilisées pour la production d’eau potable ou comme eaux de baignade. Aux fins d’une dispense du traitement quaternaire pour les agglomérations dont l’EH est 
+  
+
+  
+      <del>membres</del>
+  
+
+  
+      <ins>compris entre</ins>
+  
+
+  
+       devraient être tenus de démontrer l’absence de risques pour l’environnement ou pour la santé publique sur la base d’une évaluation normalisée des risques. Afin que les États membres disposent de suffisamment de temps pour la planification et la réalisation des infrastructures nécessaires, il convient que l’exigence d’un traitement quaternaire devienne progressivement applicable d’ici 
+  
+
+  
+      <del>clairs.              </del>
+  
+
+  
+      <ins>à [insérer la date correspondant à quinze ans après l’entrée en vigueur de la présente directive], avec des objectifs intermédiaires clairs.  </ins>
+  
+
+  
+      _________________  43 Communication de la Commission au Parlement européen, au Conseil, au Comité économique et social européen et au Comité des régions: «Une stratégie    européenne sur les matières plastiques dans une économie circulaire» la Commission au Parlement européen, au Conseil, au Comité économique et social européen: «Approche stratégique de l’Union européenne concernant les produits pharmaceutiques dans l’environnement» [COM(2019) 128 final]; communication de la Commission au Parlement européen, au Conseil, au Comité économique et social européen et au Comité des régions: «Stratégie pour la durabilité dans le domaine des produits chimiques - Vers un environnement exempt de substances toxiques» [COM(2020) 667 final]; communication de la Commission au Parlement européen, au Conseil, au Comité économique et social européen et au Comité des régions: «Cap sur une planète en bonne santé pour tous – Plan d’action de l’UE: “Vers une pollution zéro dans l’air, l’eau et les sols”» [COM(2021) 400 final].
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+     et 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="256">
+            <header>📝 Amendement n°256 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">GUE/NGL,Verts/ALE</div>
+                
+
+<p>
+
+  
+      (13) Le traitement quaternaire nécessaire à l’élimination des micropolluants présents dans les eaux urbaines résiduaires entraînera des coûts supplémentaires, tels que les coûts liés à la surveillance et à l’installation de nouveaux équipements sophistiqués dans certaines stations d’épuration des eaux urbaines résiduaires. Afin de couvrir ces coûts supplémentaires et conformément au principe du pollueur- payeur énoncé à l’article 191, paragraphe 2, du traité sur le fonctionnement de l’Union européenne (TFUE), il est essentiel que les producteurs mettant sur le marché de l’Union des produits contenant des substances qui, en fin de vie, se retrouvent en tant que micropolluants dans les eaux urbaines résiduaires («substances micropolluantes») assument la responsabilité du traitement supplémentaire requis pour éliminer ces substances générées dans le cadre de leurs activités professionnelles. Un régime de responsabilité élargie des producteurs est le moyen le plus approprié de parvenir à ce résultat, car il permettrait de limiter l’incidence financière sur le contribuable et la tarification de l’eau, tout en constituant une incitation en faveur du développement de produits plus écologiques.
+  
+
+  
+      <ins> Le régime de responsabilité des producteurs devrait être    complété par des initiatives nationales visant à garantir la disponibilité, le prix et l’accessibilité des produits essentiels, compte tenu de la forte valeur sociétale des secteurs couverts par la responsabilité élargie des producteurs. Les régimes de responsabilité élargie des producteurs devraient être mis en œuvre conformément au délai prévu dans la transposition de la présente directive. En vertu de l’article 191 du TFUE, la politique de l’Union dans le domaine de l’environnement doit viser un niveau de protection élevé en tenant compte de la diversité des situations dans les différentes régions de l’Union. Elle est fondée sur les principes de précaution et d’action préventive, sur le principe de la correction, par priorité à la source, des atteintes à l’environnement et sur le principe du pollueur-payeur. Le principe du pollueur-payeur est le principe selon lequel les pollueurs supportent les coûts de leur pollution ou des dommages qu’ils ont causés à l’environnement, y compris le coût des mesures prises pour prévenir, contrôler et combattre la pollution ainsi que les coûts que les pollueurs imposent à la société.</ins>
+  
+
+  
+       Les résidus pharmaceutiques et cosmétiques
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
+  
+
+  
+      représentent actuellement les principales sources des micropolluants présents dans les eaux urbaines résiduaires pour lesquels un traitement supplémentaire (traitement quaternaire) est nécessaire. Par conséquent, la responsabilité élargie des producteurs devrait s’appliquer à ces deux groupes de produits.
+  
+
+  
+      <ins> En raison des variations nationales, les États membres devraient disposer d’une marge de manœuvre pour désigner les produits classés comme des produits essentiels, qui pourraient être, par exemple, des médicaments ayant une forte incidence sur la qualité de vie, des produits d’hygiène ou des produits de protection solaire. À l’avenir, il convient d’adapter la liste des groupes de produits, le cas échéant, en fonction des évolutions scientifiques et techniques, de l’évolution    de la gamme des produits mis sur le marché et des nouvelles données issues de la surveillance.</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+     et 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="257">
+            <header>📝 Amendement n°257 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">GUE/NGL,Verts/ALE</div>
+                
+
+<p>
+
+  
+      Au plus tard le
+  
+
+  
+      <del> 31 décembre 2030, les États membres veillent à ce que 50 % des rejets provenant des stations d’épuration des eaux urbaines résiduaires traitant une charge l’objet d’un traitement quaternaire</del>
+  
+
+  
+      <ins> … [insérer la date cinq ans après l’entrée en vigueur de la présente directive], les États membres veillent à ce que 50 % des rejets provenant des stations traitant une charge égale ou supérieure à quaternaire conformément au paragraphe 5.</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+     et 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="258">
+            <header>📝 Amendement n°258 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">GUE/NGL,Verts/ALE</div>
+                
+
+<p>
+
+  
+      Au plus tard le
+  
+
+  
+      <del> 31 décembre 2035, </del>
+  
+
+  
+      <ins>... [insérer la date dix ans après l’entrée en vigueur de la présente directive], </ins>
+  
+
+  
+      les États membres veillent à ce que toutes les stations d’épuration des eaux 
+  
+
+  
+      <del>urbaines résiduaires traitant une charge égale ou</del>
+  
+
+  
+      <ins>l’objet d’un traitement quaternaire conformément</ins>
+  
+
+  
+       au paragraphe 5.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+     et 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="259">
+            <header>📝 Amendement n°259 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL,Verts/ALE</div>
+                
 
-<section>
-
-  
-      <del>Le 31 décembre 2030, les États membres ont dressé une liste des zones de leur territoire national dans lesquelles la concentration ou l’accumulation de </del>
-  
+<p>
 
   
-      <ins>Au plus tard le ... [deux ans après la date d’entrée en vigueur de la présente directive], les États membres dressent et publient une liste des agglomérations de national, et au plus tard ... [cinq ans après la date d’entrée en vigueur de la présente directive] une liste des agglomérations de l’accumulation de micropolluants présente un risque pour la </ins>
+      <del>Le 31 décembre 2030, </del>
   
 
   
-      santé 
+      <ins>Au plus tard le ... [deux ans après la date d’entrée en vigueur de la présente directive], </ins>
   
 
   
-      <del>humaine </del>
+      les États membres 
   
 
   
-      ou l’environnement. Les États membres réexaminent ensuite cette liste 
+      <del>ont dressé</del>
+  
+
+  
+      <ins>dressent et publient</ins>
+  
+
+  
+       une liste des 
+  
+
+  
+      <del>zones</del>
+  
+
+  
+      <ins>agglomérations</ins>
+  
+
+  
+       de 
+  
+
+  
+      <del>leur territoire national dans lesquelles la concentration ou l’accumulation de santé humaine</del>
+  
+
+  
+      <ins>national, et au plus tard ... [cinq ans après la date d’entrée en vigueur de la présente directive] une liste des agglomérations de l’accumulation de micropolluants présente un risque pour la santé</ins>
+  
+
+  
+       ou l’environnement. Les États membres réexaminent ensuite cette liste 
   
 
   
@@ -1373,95 +1743,141 @@
   
 
   
-      tous les cinq ans 
+      tous les cinq ans et
   
 
   
-      <del>et la mettent à jour si</del>
+      <del> </del>
   
 
   
-      <ins>et, si nécessaire, la mettent à jour dans les plus brefs délais.</ins>
+      <ins>, si nécessaire, </ins>
+  
+
+  
+      la mettent à jour 
+  
+
+  
+      <del>si</del>
+  
+
+  
+      <ins>dans les plus brefs délais.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+     et 
+  
     
-    <article>
-    <header>📝 Amendement n°260 | 
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="260">
+            <header>📝 Amendement n°260 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL,Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>Lorsqu’un État membre n’établit pas les listes visées au premier alinéa dans les délais qui y sont fixés, tous les rejets provenant des stations d’épuration des eaux urbaines résiduaires traitant une l’objet d’un traitement quaternaire conformément au paragraphe 5.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+     et 
+  
     
-    <article>
-    <header>📝 Amendement n°261 | 
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="261">
+            <header>📝 Amendement n°261 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL,Verts/ALE</div>
+                
 
-<section>
-
-  
-      Au plus tard le 
-  
+<p>
 
   
-      <del>31 décembre 2035, les États membres veillent à </del>
+      Au plus tard le
   
 
   
-      <ins>... [insérer la date dix ans après l’entrée en vigueur de la présente directive] et sans préjudice du </ins>
+      <del> 31 décembre 2035, les États membres veillent à</del>
   
 
   
-      ce que, pour 50 % des agglomérations 
+      <ins> ... [insérer la date dix ans après l’entrée en vigueur de la présente directive] et sans préjudice du</ins>
   
 
   
-      <del>ayant un EH compris entre </del>
+       ce que, pour 50 % des agglomérations 
   
 
   
-      <ins>urbaines </ins>
+      <del>ayant un EH compris entre</del>
   
 
   
-      résiduaires qui entrent dans les systèmes de 
+      <ins>urbaines</ins>
+  
+
+  
+       résiduaires qui entrent dans les systèmes de 
   
 
   
@@ -1472,105 +1888,192 @@
       quaternaire conformément au paragraphe 5, avant d’être rejetées dans des zones figurant sur la liste visée au paragraphe 2.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+     et 
+  
     
-    <article>
-    <header>📝 Amendement n°262 | 
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="262">
+            <header>📝 Amendement n°262 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL,Verts/ALE</div>
+                
 
-<section>
-
-  
-      Au plus tard le 
-  
+<p>
 
   
-      <del>31 décembre 2040,</del>
+      Au plus tard le
   
 
   
-      <ins>[15 ans après l’entrée en vigueur de la présente directive],</ins>
+      <del> 31 décembre 2040, </del>
   
 
   
-       les États membres veillent à ce que les eaux urbaines résiduaires qui entrent dans les systèmes de collecte fassent l’objet d’un traitement quaternaire conformément au paragraphe 5, avant d’être rejetées dans des zones figurant sur la liste visée au paragraphe 2 en ce qui concerne toutes 
+      <ins> [15 ans après l’entrée en vigueur de la présente directive], </ins>
   
 
   
-      <del>les agglomérations ayant un EH compris entre</del>
+      les États membres veillent à ce que les eaux urbaines résiduaires qui entrent dans les systèmes de collecte fassent l’objet d’un traitement quaternaire conformément au paragraphe 5, avant d’être rejetées dans des zones figurant sur la liste visée au paragraphe 2 en ce qui concerne toutes les
   
 
   
-      <ins>les</ins>
+      <del> agglomérations ayant un EH compris entre</del>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+     et 
+  
     
-    <article>
-    <header>📝 Amendement n°263 | 
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="263">
+            <header>📝 Amendement n°263 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL,Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>Pour les rejets des stations d’épuration d’eaux urbaines résiduaires traitant une dans un bassin versant d’une zone figurant dans une liste visée au paragraphe 2, sont également applicables les paragraphes 3 et le présent paragraphe.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+     et 
+  
     
-    <article>
-    <header>📝 Amendement n°265 | 
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="264">
+            <header>📝 Amendement n°264 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">S&amp;D</div>
+                
+
+<p>
+
+  
+      <ins>Le financement assuré par la responsabilité élargie des producteurs peut être complété par un financement national mis en place pour moderniser les stations d’épuration des eaux urbaines résiduaires afin d’éviter toute conséquence imprévue sur la disponibilité, le caractère abordable et l’accessibilité des produits vitaux, en particulier des médicaments, identifiés avec l’aide de l’EMA et de l’ECHA, et de veiller à ce que des fonds suffisants soient mis à la disposition des opérateurs. Le financement national ne dépasse pas 20 % et respecte le principe du pollueur- payeur.</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="265">
+            <header>📝 Amendement n°265 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       c) la contribution de chaque producteur visée au point b) est déterminée sur la base des quantités et de la dangerosité dans les eaux usées des 
@@ -1584,110 +2087,282 @@
       produits mis sur le marché;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°266 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="266">
+            <header>📝 Amendement n°266 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>4 bis. Les régions ultrapériphériques peuvent déroger aux dispositions des articles 6, 7 et 8 pour les rejets dans les eaux côtières d’eaux urbaines résiduaires provenant d’agglomérations ayant un EH de traitement approprié, qui n’est toutefois pas moins rigoureux que le traitement primaire, si celui-ci n’est pas techniquement possible ou entraînerait des coûts excessifs au regard du rapport coûts-avantages, et à condition que des études scientifiques étayent ce traitement.  Aux fins du premier alinéa, les États membres auxquels appartient la région ultrapériphérique soumettent à la Commission les études visées au premier alinéa.  Les études scientifiques tiennent compte, en particulier, des caractéristiques des eaux usées rejetées dans les eaux côtières ainsi que de l’environnement récepteur.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
-    <article>
-    <header>📝 Amendement n°267 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="267">
+            <header>📝 Amendement n°267 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>2 bis. Si, bien qu’il ait mis en œuvre toutes les mesures d’efficacité énergétique prévues dans les audits énergétiques visés au paragraphe 1, un État membre n’atteint pas 100 % de ses objectifs en matière de neutralité énergétique pour les stations d’épuration des eaux urbaines résiduaires traitant une charge d’au mesure d’accroître la production d’énergie des stations d’épuration des eaux usées sur site ou hors site conformément au paragraphe 2, cet État membre peut, par dérogation et à titre exceptionnel, autoriser l’achat d’énergie renouvelable provenant de sources externes dans le cadre d’accords d’achat d’électricité pour les pourcentages restants jusqu’à un maximum de 40 %, pour autant que toutes les conditions susmentionnées soient remplies.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      aucun français
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">274</div>
+  <div class="against">273</div>
+  <div class="abstention">15</div>
+</span>
+
+  
+    
+    <a href="/voting/158841">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(274/562 * 100%)">274</div>
-  
-  
-    <div class="-" style="width: calc(273/562 * 100%)">273</div>
-  
-  
-    <div class="0" style="width: calc(15/562 * 100%)">15</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/158841">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
+        
     
+        
+        
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            . – J’ai voté favorablement ce texte qui concerne les eaux urbaines résiduaires. En effet, celles-ci constituent l&#39;une des principales sources de pollution de l&#39;eau si elles ne sont pas collectées et traitées correctement. La directive relative au traitement des eaux urbaines résiduaires actuellement en vigueur a été adoptée il y a plus de 30 ans déjà, et les nouveaux enjeux nous incitent à aller plus loin encore. Notons aussi que les acteurs en France saluent ce rapport qui permettra d’améliorer les choses à l’avenir.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            La directive sur le traitement des eaux urbaines résiduaires a été adoptée en 1991. Son objectif est de protéger l&#39;environnement des effets néfastes des rejets d&#39;eaux usées provenant de sources urbaines et d&#39;industries spécifiques. Les États membres sont tenus de veiller à ce que les eaux usées de toutes les agglomérations de plus de 2000 habitants soient collectées et traitées conformément aux normes minimales de l&#39;UE. La pollution demeure et doit être combattue pour parvenir à un environnement sans pollution d&#39;ici 2050. Celle-ci provient des petites villes situées en dehors du champ d&#39;application de la directive et de la pollution causée par les débordements d’eaux pluviales. Favorable aux propositions formulées dans ce texte visant à améliorer la situation, j’ai voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            J’ai voté en faveur de ce texte qui vise à améliorer la surveillance des polluants toxiques à l&#39;entrée et à la sortie des stations d&#39;épuration des eaux usées urbaines, y compris les microplastiques et mettre en place la surveillance de la présence de paramètres de santé publique dans les eaux usées (tels que les virus comme la grippe ainsi que tout autre pathogène en cas d&#39;urgence sanitaire).
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            . – J’ai voté pour le traitement des eaux résiduaires dans le secteur public, l&#39;un des principaux consommateurs d&#39;énergie. La directive révisée fixe par conséquent un objectif de neutralité énergétique pour ce secteur.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            . – J’ai voté pour ce rapport car la mise à jour de la directive sur le traitement des eaux permettra de traiter plus efficacement la pollution des eaux urbaines et de clarifier le cadre juridique afin de simplifier le travail des services municipaux de gestion des services d’assainissements.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            . – J’ai voté en faveur de ce rapport sur le traitement des eaux urbaines résiduaires. Le texte vise notamment à améliorer la surveillance des polluants toxiques à l&#39;entrée et à la sortie des stations d&#39;épuration des eaux usées urbaines, y compris les microplastiques, et à mettre en place la surveillance de la présence de paramètres de santé publique dans les eaux usées. J’ai soutenu un amendement visant à tenir compte des spécificités des régions ultrapériphériques (RUP), dont font partie nos Outre-mer.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            . – Ce rapport vise à présenter la position du Parlement européen sur la proposition de révision de la directive sur le traitement des eaux usées urbaines résiduaires. Il reconnaît que l’eau est un bien commun, alerte sur l’enjeu des microplastiques, souligne la nécessité de respecter les objectifs de biodiversité terrestre, marine et côtière, demande la mise en place de plans locaux d’adaptation aux conséquences du dérèglement climatique, et défend la priorité d’agir à la source en amont des pollutions plutôt qu’en traitement. J’ai donc voté pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Reconquête!</header>
+            . – Je me suis abstenu sur ce texte qui favorisera une meilleure qualité de l’eau. Néanmoins, je regrette l’objectif d’énergies renouvelables imposé aux installations et la possibilité donnée aux ONG d’attaquer les États en justice.
+        </article>
+    
+        <article>
+            <div class="hidden">197551</div>
+            
+            <header><b>Stéphane BIJOUX</b> | Renaissance</header>
+            . – J’ai voté en faveur de ce rapport qui ambitionne de sécuriser l’accès des Européens à une eau propre et potable. Alors que la multiplication des pénuries d’eau dans l’UE est un véritable sujet de préoccupation, le rapport prévoit notamment de développer le traitement et la réutilisation des eaux usées. Nous demandons également à ce que l’ensemble des polluants chimiques (y compris les produits chimiques dits «éternels»), les microplastiques, les agents pathogènes et résistants aux antimicrobiens soient davantage surveillés. Nous soutenons également la mise en place d’un système de responsabilité élargie des producteurs pour les produits pharmaceutiques et cosmétiques lorsqu’ils nécessitent un traitement supplémentaire vis-à-vis des micropolluants. Plus particulièrement, nous demandons également une adaptation de cette législation aux spécificités géographiques de Madère, une Région Ultrapériphérique portugaise, en cohérence avec le «Réflexe RUP» que je défends depuis le début du mandat. L’eau est un bien commun en danger ; et je reste très mobilisé dans notre combat collectif pour garantir à tous les citoyens, partout, l’accès à une eau potable de qualité.
+        </article>
+    
+        <article>
+            <div class="hidden">197536</div>
+            
+            <header><b>Nathalie COLIN-OESTERLÉ</b> | Les centristes</header>
+            . – J&#39;ai voté en faveur du rapport relatif au traitement des eaux usées. Ce texte vise à améliorer la surveillance des polluants toxiques à l&#39;entrée et à la sortie des stations d&#39;épuration des eaux usées urbaines, y compris les microplastiques, mettre en place la surveillance de la présence de paramètres de santé publique dans les eaux usées (tels que les virus comme la grippe ainsi que tout autre pathogène en cas d&#39;urgence sanitaire). Il permettra également de créer un système de responsabilité élargie des producteurs pour les produits qui ont été identifiés comme les principales sources de micropolluants dans les eaux usées urbaines (tels que les médicaments à usage humain), avec une aide de financement des États membres pour la modernisation des stations d&#39;épuration urbaines afin d&#39;éviter des conséquences imprévues sur la disponibilité, le prix et l&#39;accessibilité des produits vitaux, en particulier les médicaments.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Les eaux urbaines résiduaires constituent l&#39;une des principales sources de pollution de l&#39;eau si elles ne sont pas collectées et traitées correctement. La directive relative au traitement des eaux urbaines résiduaires actuellement en vigueur a été adoptée il y a plus de 30 ans. Enfin, l&#39;expérience récente a montré que les virus peuvent être surveillés avec une grande fiabilité dans les eaux résiduaires, ce qui constitue une source d&#39;information précieuse pour adopter des décisions en matière de santé publique. J’ai donc voté pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Cette proposition vise à une meilleure maîtrise de la pollution urbaine des milieux aquatiques, à améliorer la sécurité juridique des services d’assainissement municipaux et, répond à de nouveaux enjeux sociétaux (lutte contre les micropolluants par exemple). De plus, comme les entreprises françaises sont en avance dans le retraitement des eaux résiduaires, nous aurions à gagner à nous positionner en faveur. Avec mes collègues du RN, nous sommes en faveur du rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            . – Les eaux urbaines résiduaires constituent l&#39;une des principales sources de pollution de l&#39;eau si elles ne sont pas collectées et traitées correctement. La directive relative au traitement des eaux urbaines résiduaires actuellement en vigueur a été adoptée il y a plus de 30 ans. Depuis lors, la qualité des cours d&#39;eau, des lacs et des mers en Europe s&#39;est considérablement améliorée. Les pays de l&#39;Union européenne ont mis en place des systèmes de collecte et des stations d&#39;épuration des eaux résiduaires avec la contribution financière de l&#39;Union européenne. Toutefois, certaines formes de pollution ne sont toujours pas couvertes par les règles en vigueur et il est nécessaire d&#39;y remédier.Enfin, l&#39;expérience récente a montré que les virus peuvent être surveillés avec une grande fiabilité dans les eaux résiduaires, ce qui constitue une source d&#39;information précieuse pour adopter des décisions en matière de santé publique.A l’heure où le sujet de l’eau devient central dans l’ensemble des textes environnementaux, j’ai voté en faveur de ces mesures visant à améliorer la qualité de nos eaux.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté en faveur de ce texte car certaines formes de pollution ne sont toujours pas couvertes par les règles en vigueur et il est nécessaire d&#39;y remédier.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b>Marina MESURE</b> | La France Insoumise</header>
+            Ce rapport a pour objet la refonte de la directive relative au traitement des eaux usées urbaines résiduaires. Le but est d’augmenter significativement le niveau des traitements secondaires (c’est-à-dire l’élimination des substances organiques), des traitements tertiaires (l’élimination du phosphore et de l’azote) et, pour la première fois, de mettre en œuvre un traitement quaternaire qui permettrait d’éliminer les micropolluants, causés principalement par les résidus de produits pharmaceutiques et cosmétiques. La refonte permettrait également d’améliorer l’accès à la justice et à l’assainissement pour les citoyens. Cependant, un point problématique est à noter : les États membres devront financer 20% du coût de la mise en œuvre du traitement quaternaire, alors que les entreprises cosmétiques et pharmaceutiques sont responsables de 92% de ces résidus dans les eaux usées. Ainsi, le principe du pollueur-payeur, pourtant inscrit à l’article 191 du Traité sur le fonctionnement de l’Union, ne sera pas complètement respecté. Néanmoins, en raison des nombreux points positifs abordés et de l’amélioration sanitaire que représente cette refonte pour les citoyens, j’ai décidé de voter en faveur du rapport.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-    
-    
 
+    <section>
     
     
-
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/0345(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0276_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-10-05-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            
+                <p> – Monsieur le Président, la capacité de gérer les eaux usées est un des marqueurs d&#39;une société développée. À l&#39;inverse, dès lors que cette capacité se dégrade, c&#39;est tout notre environnement urbain, sanitaire et écologique qui est menacé. Les eaux usées contiennent des polluants, des produits chimiques toxiques et accentuent l&#39;antibiorésistance. </p>
+            
+                <p>Notre pouvoir de traitement doit donc se renforcer chaque année sans lésiner sur les budgets, proportionnellement à l&#39;augmentation de ces substances polluantes. C&#39;est pourquoi nous devons mettre en avant l&#39;ensemble de notre système technologique et le pouvoir politique doit renforcer la recherche sans aucun compromis. </p>
+            
+                <p>Grâce à la recherche, les pratiques de gestion modernes ont considérablement amélioré nos capacités de traitement des eaux usées. Des processus tels que la filtration, la décantation et l&#39;oxydation avancée permettent d&#39;éliminer efficacement les contaminants tout en récupérant de précieuses ressources telles que l&#39;énergie et les nutriments. </p>
+            
+                <p>Pendant la pandémie de COVID, nous avions demandé de mettre en place une surveillance des eaux usées afin d&#39;obtenir des données clés sur la présence de certains virus. Sans une connaissance parfaite de nos eaux usées, le pouvoir politique ne pourra pas mettre en place de mesures cohérentes. </p>
+            
+                <p>Pour conclure, je tiens à réaffirmer notre soutien aux habitants des territoires d&#39;outre-mer français qui souffrent d&#39;une gestion de l&#39;eau catastrophique de la part du gouvernement français d&#39;Emmanuel Macron. Je rappelle aussi que la majorité parlementaire ici présente a refusé, par pur sectarisme, d&#39;ajouter un débat sur la situation critique que traversent actuellement les départements d&#39;outre-mer. C&#39;est une véritable honte. Alors comptez sur nous pour que partout, dans chaque territoire métropolitain ou d&#39;outre-mer, les Français aient accès à une eau potable.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">234344</div>
+            
+            <header><b>Max ORVILLE</b> | Mouvement Démocrate</header>
+            
+                <p>Je souligne ici l’importance des nouvelles obligations d’accès à l’assainissement et aux installations sanitaires pour tous, mais en particulier pour les groupes vulnérables et marginalisés. C’est une avancée majeure pour nos concitoyens. L’eau est une ressource précieuse, nous devons l’économiser et j’encourage les États membres à lancer des campagnes sur la sobriété d’utilisation de l’eau.</p>
+            
+                <p>Les nouveaux plans de gestion des eaux urbaines doivent contribuer à notre objectif de réutilisation des eaux usées. Encourageons le recyclage des eaux résiduaires pour l’agriculture, l’industrie ou encore pour produire de l’hydrogène. Il est aussi crucial de mieux surveiller la présence de certains virus dans les eaux usées. Cela nous permettra d’anticiper les foyers de contamination et de prendre les mesures sanitaires adaptées.</p>
+            
+                <p>Je me réjouis enfin de l’inclusion de deux mesures de bon sens, le principe du pollueur-payeur, afin que les industries responsables de la pollution de l’eau contribuent à son traitement, et le droit à l’indemnisation des citoyens en cas d’impact sur la santé ou sur l’environnement. Voter pour ce texte, c’est voter pour plus de justice sociale et plus de justice environnementale. </p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

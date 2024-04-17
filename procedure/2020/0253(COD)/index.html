@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Élimination des droits de douane sur certains produits</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,98 +22,43 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Élimination des droits de douane sur certains produits</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
-    <article>
-    <header>👍 Adoption du texte | 
-
-✅️ Adopté
-
-</header>
-    
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
-        <section>
-
-<div class="votes ">
-  
-    <div class="+" style="width: calc(638/694 * 100%)">638</div>
-  
-  
-    <div class="-" style="width: calc(45/694 * 100%)">45</div>
-  
-  
-    <div class="0" style="width: calc(11/694 * 100%)">11</div>
-  
-</div>
-</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
-        <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
-        
-        
-            <section>
-
-
-
-<div class="votes">
-  
-    <div class="+" style="width: calc(71/78 * 100%)">71</div>
-  
-  
-    <div class="-" style="width: calc(6/78 * 100%)">6</div>
-  
-  
-    <div class="0" style="width: calc(1/78 * 100%)">1</div>
-  
-</div>
- 
-</section>
-            <a href="/voting/125480">🗳 Voir le détail du vote</a>
-        
-    
-    </article>
 
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Accords et relations commerciales et économiques bilatérales</li>
-        
-    
-        
-        
-            <li>Politique commerciale commune en général</li>
-        
     
         
         
@@ -121,36 +67,164 @@
     
         
         
+            <li>Accords et relations commerciales et économiques bilatérales</li>
+        
+    
+        
+        
             <li>Relations extérieures de l&#39;Union</li>
+        
+    
+        
+        
+            <li>Politique commerciale commune en général</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/0253(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0217_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-11-23-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
-
-  
-      <del>Les droits de douane à l’importation applicables du tarif douanier commun sont fixés à </del>
-  
+<p>
 
   
-      <ins>L’Union s’abstient d’octroyer aux États- Unis un droit de </ins>
+      <del>Les droits de douane à l’importation applicables du tarif douanier commun sont fixés à</del>
   
 
   
-      0 % (
+      <ins>L’Union s’abstient d’octroyer aux États- Unis un droit de</ins>
+  
+
+  
+       0 % (
   
 
   
@@ -161,48 +235,227 @@
       franchise de droits) pour les lignes tarifaires énumérées à la section I de l’annexe.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(71/697 * 100%)">71</div>
-  
-  
-    <div class="-" style="width: calc(613/697 * 100%)">613</div>
-  
-  
-    <div class="0" style="width: calc(13/697 * 100%)">13</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124921">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/0253(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0217_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">71</div>
+  <div class="against">613</div>
+  <div class="abstention">13</div>
+</span>
+
   
+    
+    <a href="/voting/124921">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-11-23-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – J’ai soutenu ce texte qui concerne la suppression des droits de douane sur les homards et les langoustes d’une part car ces produits américains ne risquent pas de concurrencer la pêche française étant donné que nous en consommons plus que nous n’en pêchons, d’autre part car il s’agit d’un signal envoyé dans le cadre de la guerre commerciale en cours entre les Etats-Unis et l’UE : il y a des sujets sur lesquels nous pouvons nous entendre car nous sommes mutuellement bénéficiaires.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté pour ce texte, qui prévoit la suppression des droits de douane sur certains produits comme le homard, ce qui ne présente aucune menace pour la production française et pourrait apaiser les tensions commerciales avec les Etats-Unis.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            L’Union européenne et les États-Unis entretiennent une relation étroite en matière de commerce et d’investissement. Les échanges bilatéraux de biens et de services entre eux s’élèvent à plus de 1000 milliards d&#39;euros par an, soit 3 milliards d&#39;euros par jour. Ce texte vise à supprimer les droits de douane sur certaines exportations vers l&#39;Union européenne, comme le homard et la langouste. Évidemment, en contrepartie, les États-Unis faciliteront notre accès au marché pour certaines exportations comme les plats préparés, le cristal, les briquets, etc. Précisons également qu’une concurrence déloyale en matière de pêche au homard est impossible car il ne s’agit en rien des mêmes calibres concernés. Considérant donc que ce texte est équilibré pour les deux parties, je me suis prononcé en faveur de son adoption.
+        </article>
+    
+        <article>
+            <div class="hidden">124770</div>
+            
+            <header><b>Jean-François JALKH</b> | Rassemblement national</header>
+            . – Un accord a été trouvé entre l&#39;Union européenne et les États-Unis concernant la suppression de droits de douane sur certains produits : ici l&#39;importation de homards et langoustes en provenance des États-Unis. Cet accord intervient après une période de tensions commerciales et politiques et est donc, sur le principe, bienvenu. L&#39;Union européenne a obtenu, en contrepartie, des réductions de droits de douane de la part des États-Unis sur certains produits européens.Par ailleurs, les produits concernés ne présentent pas une grande menace de concurrence vis à vis de la production française, eu égard à la structure de ces marchés. J&#39;ai donc voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté pour ce texte car il propose la suppression des droits de douane sur les homards et les langoustes américains, sous conditions. C’est un premier pas vers l’apaisement des tensions commerciales entre l’UE et les États-Unis, qui nous ont déjà coûté très cher et menacent certains de secteurs économiques en difficulté.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            L’espoir viendrait-il du homard ? C’est ce que pensent beaucoup de responsables politiques et technocratiques européens au sujet de la relation transatlantique, soumise à de fortes turbulences depuis l’élection de Trump. Les rapports UE-USA étaient en réalité déséquilibrés y compris sous l’administration précédente, instigatrice de nombreux coups fourrés contre l’économie européenne et notamment française. Mais l’animosité de Washington contre l’Europe a effectivement culminé depuis 2017, avec le retrait de l’Accord de Paris, l’imposition de droits de douane sur diverses importations alimentaires européennes et le chantage exercé contre les entreprises européennes impliquées dans le gazoduc marin NordStream II reliant la Russie et l’Allemagne. Plutôt que rendre coups pour coups, l’UE a préféré implorer les États-Unis de revenir au « business as usual » d’antan. L’UE voit dans cet accord d’élimination des droits de douane sur l’import-export de homard le signe de cette embellie. Elle se transporte d’enthousiasme à l’idée que le homard pavera la voie à de futures percées commerciales majeures, et mise tout sur la bonne volonté supposée de la future administration Biden. Elle a tort. Les Etats-Unis ne cesseront pas de sitôt de se comporter à notre égard comme le suzerain à l’égard de son vassal. Vote contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            Le 21 août 2020, dans une déclaration commune, le commissaire en poste, Phil Hogan et le représentant américain au commerce, M. Lighthizer, ont annoncé un ensemble de réductions tarifaires sur certains produits, dont le homard. Cet accord est très important du point de vue de la symbolique. Il s&#39;agit d&#39;un tout petit premier pas que les deux parties signataires pourraient faire afin d&#39;apaiser les tensions commerciales. Il semblerait judicieux d&#39;envoyer un signal positif aux US afin d&#39;affirmer que nous souhaitons avoir de bonnes relations commerciales et conclure des accords là où cela peut être utile et ne risquerait pas de créer des problématiques ou de distorsions sur le marché européen/français. Il est important de souligner que le homard US ne risque pas de concurrencer le homard français car la demande est supérieure à la quantité pêchée en France. Donc, nous avons besoin d&#39;importer ce type. J’ai bien entendu voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport sur l’élimination des droits de douane sur certains produits. Le texte vise à susciter une désescalade dans la guerre commerciale qui oppose les États-Unis à la l’Union européenne. Concrètement, il prévoit la suppression totale des droits de douane sur les homards américains, en contrepartie d’une suppression de la moitié des droits de douane pensant sur plusieurs produits européens (plats préparés, verreries en cristal, briquets...). En cas de nouvelles sanctions américaines imposées aux productions européennes, il est prévu que cet accord devienne caduc.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce texte vise à approuver une proposition de la Commission prévoyant d’éliminer des droits de douane sur les homards et langoustes du Maine. Il ne tient compte ni de l’absence de ratification de l’Accord de Paris par les Etats-Unis, ni des sanctions extraterritoriales et de la logique de guerre commerciale mises en œuvre par le Président américain en exercice. J’ai donc voté contre ce texte qui envoie un signal négatif de faiblesse de la part de l’Union européenne dans le cadre de ses relations avec les Etats-Unis.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Il s’agit là du premier accord commercial avec les États-Unis depuis 20 ans et pourrait se résumer autour de ce mot d’ordre : « Homards contre briquets ». La Commission propose d’éliminer un certain nombre de droits de douane sur les homards et langoustes du Maine. L’élimination de ces droits est soumise à deux conditions: a) la réduction effective, par les États-Unis, des lignes tarifaires pour un certain nombre de produits (certains plats préparés, certains objets en cristal, les enduits, les poudres propulsives, les briquets et les parties de briquets) et b) le fait que les États-Unis s’abstiennent d’introduire de nouvelles mesures à l’encontre de l’Union européenne qui compromettent les objectifs poursuivis par la déclaration commune. Cela alors même que les États-Unis sont sortis de l’Accord de Paris, maintiennent des sanctions extraterritoriales contre l’Europe et une guerre commerciale contre les produits européens. Un tel accord commercial est donc absolument incompréhensible. Je le rejette sans hésitation.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            L&#39;accord prévoit la suppression des droits de douanes sur certains produits, dont le homard. Cette suppression ne présente aucune menace pour la production française. L&#39;accord est plutôt perçu comme un premier pas pour apaiser les tensions commerciales avec les Etats-Unis.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté en faveur de ce rapport afin que l’UE engage de nouvelles relations plus apaisées avec les Etats-Unis sur le plan commercial. En effet, l’accord prévoit de supprimer des droits de douane sur certains produits pour environ 170 millions d’euros au total (homards américains contre des produits industriels européens). La politique commerciale entre l’UE et les Etats-Unis doit reprendre de nouvelles bases, ce qu’a confirmé le nouveau président élu aux Etats-Unis dans ses récentes prises de paroles. Néanmoins, l’Union européenne se réserve le droit de revenir en arrière si la première puissance mondiale devait prendre de nouvelles mesures tarifaires illégales à l’encontre de notre économie.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté pour cet accord prévoyant la suppression des droits de douanes sur certains produits dont le homard. Cette suppression ne présente aucune menace pour la production française.Il est judicieux d&#39;envoyer un signal positif aux États-Unis afin de montrer que nous souhaitons conclure des accords commerciaux positifs pour notre économie.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            L’accord prévoit la suppression des droits de douanes sur certains produits dont le homard. Cette suppression neprésente aucune menace pour la production française L’accord est plutôt perçu comme un premier pas pour apaiser les tensions commerciales avec les Etats-Unis Il semblerait judicieux d&#39;envoyer un signal positif aux US afin d&#39;affirmer que nous souhaitons avoir de bonnes relations commerciales et conclure des accords là où cela est utile et ne risque pas de créer des problématiques ou de distorsions sur le marché français et européen. J&#39;ai donc voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            J’ai voté en faveur de ce texte : l’accord prévoit la suppression des droits de douanes sur certains produits dont le homard. Cette suppression ne présente aucune menace pour la production française (la France est importatrice nette de ces produits), et envoie un signal important pour apaiser les tensions commerciales avec les Etats-Unis. Ce genre de signal est utile, lorsqu’il ne risque pas de créer des distorsions sur le marché français et européen.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – J’ai voté en faveur de ce texte qui est une première étape vers l’apaisement des tensions commerciales entre nous et les États-Unis. De plus, le homard américain ne présente aucune menace concurrentielle pour le homard français, la demande étant supérieure à la quantité pêchée. Il n’y aura donc aucune distorsion sur le marché européen et français à cause de cet accord.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Le 21 août 2020, dans une déclaration commune, le commissaire en poste, Phil Hogan et le représentant américain au commerce, M. Lighthizer, ont annoncé un ensemble de réductions tarifaires sur certains produits. Par ce texte, la CE propose d’éliminer d’enlever le droit de douane sur les homards &amp; les langoustes. Il y a deux conditions à cet accord: les Etats-Unis réduisent des lignes tarifaires sur certains plats préparés, certains objets en cristal, les enduits, les poudres propulsives, les briquets et les parties de briquets et qu’ils s’abstiennent d’introduire de nouvelles mesures à l’encontre de l’UE qui serait en mesure de compromettre les objectifs prévus par la déclaration commune. J’ai voté pour ce texte car le homard américain ne risque pas de concurrencer le homard français et que la demande des quantités pêchées est supérieure à la quantité réelle pêchée en France.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Ce texte propose simplement l’élimination des droits de douane sur les homards et les langoustes entre l’Union européenne et les États-Unis. Cet accord propose un échange de bons procédés : Washington réduit ses tarifs sur une partie de ses exportations et s’abstiennent de mettre en place de nouvelles mesures douanières contre l’Europe.Le homard américain ne risque pas de concurrencer le homard français. La demande des quantités pêchées est supérieure à la quantité réelle pêchée en France. Ainsi, nous avons besoin d&#39;importer ce type de produit en ayant en ligne de mire l’état de la demande. C’est un accord intéressant qui permet d’apaiser les relations douanières entre les deux continents sans mettre en péril les industries françaises. C’est pourquoi j’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Le 21 août dernier l’UE et les États-Unis ont annoncé un ensemble de réductions tarifaires sur certains produits. Il s’agit de supprimer le droit de douane sur les homards et les langoustes en provenance des États-Unis, en échange de quoi les Américains réduiraient des lignes tarifaires sur certains biens en provenance d’Europe et s’abstiendraient d’introduire de nouvelles mesures à l’encontre de l’UE qui pourraient compromettre les objectifs prévus par la déclaration commune. Il convient de noter que cet accord a valeur de symbole : c’est un petit pas, mais une avancée réelle pour apaiser les tensions commerciales entre les deux parties. Il n’est donc pas inutile d’envoyer un signal encourageant à Washington pour signifier que nous sommes désireux d’avoir de bonnes relations commerciales et de conclure des accords avantageux pour tous. Précisons encore que le homard made in USA ne concurrence pas le homard français dans la mesure où la demande des consommateurs est supérieure à la quantité pêchée en France. J’ai donc voté pour cette suppression des droits de douane sur les produits en question.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté en faveur de ce rapport qui prévoit une suppression de droits de douanes sur certains produits, dont le homard, sans présenter de menaces pour l’économie française. Cet accord permettra d’apaiser les tensions commerciales avec les Etats-Unis.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            
+                <p>Alors oui, c’est vrai, il s’agit du premier accord de concessions tarifaires avec les États-Unis depuis près de 20 ans. Et oui, en effet, notre débat intervient au moment où Joe Biden a gagné l’élection présidentielle et où certains d’entre nous nourrissent des espoirs, notamment parce que Biden a annoncé qu’il allait ratifier l’accord de Paris. Pour nous, c’est une bonne nouvelle.</p>
+            
+                <p>Mais en même temps, s’il y a bien un domaine, à mon avis, où la politique des États-Unis ne va pas changer, c’est la politique commerciale, parce que l’agressivité dans ce domaine n’a pas débuté avec M. Trump et, à mon avis, elle va survivre à l’administration Trump. Je rappelle à nos collègues enthousiastes que la signature de cet accord n’a pas empêché les États-Unis d’introduire de nouvelles restrictions à l’importation d’acier et d’aluminium dans le cadre du régime anti-dumping de l’OMC. Je rappelle également que les États-Unis continuent de recourir de manière agressive à des mesures extraterritoriales contre les entreprises européennes, d’où la nécessité de continuer à être vigilants, déterminés, pas naïfs. C’est d’ailleurs ce que font, par exemple, les Canadiens, qui eux ont compris que, pour faire reculer les Américains, il faut leur opposer des mesures de rétorsion rapides.</p>
+            
+                <p>Vous dites coopération et pas confrontation, mais encore faudrait-il que les Américains soient prêts à la coopération. Ce n’est pas le cas aujourd’hui. Donc, restons vigilants, restons mobilisés.</p>
+            
+                <p>Un mot, une pensée, parce qu’on parle beaucoup des pêcheurs du Maine, mais moi je pense aux pêcheurs bretons et irlandais au moment de la négociation sur le Brexit qui, eux aussi, pêchent du homard et qui, eux aussi, sont confrontés à des conditions économiques difficiles.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197502</div>
+            
+            <header><b>Marie-Pierre VEDRENNE</b> | Mouvement Démocrate</header>
+            
+                <p> – Madame la Présidente, Monsieur le Commissaire, je dois avouer que l’élection de Joe Biden et sa volonté de réintégrer l’accord de Paris change la donne, car aucun accord commercial, même limité, ne peut être signé avec un État non membre de l’accord de Paris. Compatibilité avec nos engagements à l’OMC, règles de la nation la plus favorisée intégrée: c’est une bonne chose. La clause de conditionnalité également.</p>
+            
+                <p>Car, soyons clairs, si les États-Unis introduisent de nouvelles mesures illégales, la Commission devra réagir. Ce mini-deal a son utilité, mais doit être l’exception. La politique commerciale ne se résume pas à la libéralisation tarifaire, mais doit aller de pair avec la promotion des droits de l’homme et la lutte contre le changement climatique.</p>
+            
+                <p>Alors, l’élection d’un démocrate à la Maison-Blanche laisse imaginer que le défenseur du multilatéralisme va revenir à la table des négociations. Toutefois, ce retour ne en présage rien de l’issue de nos échanges. Alors ne nous berçons pas d’illusions, nous ne pouvons pas tout attendre des États-Unis et devenir le terrain de jeu du conflit sino-américain.</p>
+            
+                <p>L’Union européenne doit défendre un commerce basé sur des règles, des règles adaptées et respectées par tous. De nombreux contentieux demeurent, comme l’extraterritorialité des lois américaines qui nuise aux intérêts des entreprises et des citoyens européens. Augmentons nos capacités de réaction face aux dérives de l’extraterritorialité. Nous ne voulons pas de guerre commerciale, nous voulons les conditions de la paix. Alors, nous soutiendrons ce premier accord comme base de coopération, mais, ne nous trompons pas, notre autonomie stratégique doit être notre horizon et priorité.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

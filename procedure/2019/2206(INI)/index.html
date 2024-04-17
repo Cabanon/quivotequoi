@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Mise en œuvre du règlement Dublin III</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Mise en œuvre du règlement Dublin III</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(448/695 * 100%)">448</div>
-  
-  
-    <div class="-" style="width: calc(98/695 * 100%)">98</div>
+    <div class="for" style="width: calc(448/695 * 100%)">448</div>
   
   
-    <div class="0" style="width: calc(149/695 * 100%)">149</div>
+    <div class="against" style="width: calc(98/695 * 100%)">98</div>
+  
+  
+    <div class="abstention" style="width: calc(149/695 * 100%)">149</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,25 +88,31 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(41/78 * 100%)">41</div>
+    <div class="for" style="width: calc(41/78 * 100%)">41</div>
   
   
-    <div class="-" style="width: calc(30/78 * 100%)">30</div>
+    <div class="against" style="width: calc(30/78 * 100%)">30</div>
   
   
-    <div class="0" style="width: calc(7/78 * 100%)">7</div>
+    <div class="abstention" style="width: calc(7/78 * 100%)">7</div>
   
 </div>
  
 </section>
-            <a href="/voting/126136">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/126136">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
+    
+        
+        
+            <li>Libre circulation et intégration des ressortissants des pays-tiers</li>
+        
     
         
         
@@ -114,379 +124,510 @@
             <li>Espace de liberté, de sécurité et de justice</li>
         
     
-        
-        
-            <li>Libre circulation et intégration des ressortissants des pays-tiers</li>
-        
+</ul>
+
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2206(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0245_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-12-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>🗃️ Données</h3>
 
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       5. réaffirme que le droit d’asile est un droit fondamental; souligne que la procédure d’asile 
   
 
   
-      <del>sert à examiner les demandes et à accorder une protection internationale aux demandeurs qui remplissent les conditions, tout en rendant une décision rapide et équitable pour ceux dont ce n’est pas le cas;</del>
+      <del>sert à examiner les demandes et à accorder une protection internationale aux demandeurs qui remplissent les conditions, tout en rendant une décision rapide et équitable pour ceux dont ce n’est pas le cas</del>
   
 
   
-      <ins>permet d’opérer une distinction entre les ressortissants de pays tiers pouvant bénéficier d’une protection internationale et ceux qui n’y ont pas droit, comme les migrants économiques; insiste sur le fait que le retour de ceux qui ne peuvent bénéficier de l’asile est une condition préalable à l’efficacité du règlement Dublin III;</ins>
+      <ins>permet d’opérer une distinction entre les ressortissants de pays tiers pouvant bénéficier d’une protection internationale et ceux qui n’y ont pas droit, comme les migrants économiques; insiste sur le fait que le retour de ceux qui ne peuvent bénéficier de l’asile est une condition préalable à l’efficacité du règlement Dublin III</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">143</div>
+  <div class="against">542</div>
+  <div class="abstention">7</div>
+</span>
+
+  
+    
+    <a href="/voting/125562">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(143/692 * 100%)">143</div>
-  
-  
-    <div class="-" style="width: calc(542/692 * 100%)">542</div>
-  
-  
-    <div class="0" style="width: calc(7/692 * 100%)">7</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125562">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>15 bis. souligne que les citoyens européens vivant aux frontières extérieures de l’Union européenne sont également durement touchés par les insuffisances de l’actuel règlement de Dublin; exprime, dans ce contexte, sa solidarité envers les populations résidentes de certaines des îles grecques et italiennes, comme Lampedusa ou Lesbos, qui font face à des afflux massifs de migrants depuis des années;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">196</div>
+  <div class="against">480</div>
+  <div class="abstention">14</div>
+</span>
+
+  
+    
+    <a href="/voting/125563">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(196/690 * 100%)">196</div>
-  
-  
-    <div class="-" style="width: calc(480/690 * 100%)">480</div>
-  
-  
-    <div class="0" style="width: calc(14/690 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125563">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>26 bis. constate que les régimes d’asile sont vulnérables à la fraude et que des mesures supplémentaires sont nécessaires pour garantir que les ressources humaines et financières sont allouées à la protection des ressortissants de pays tiers qui ont réellement besoin d’une protection internationale;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">135</div>
+  <div class="against">522</div>
+  <div class="abstention">37</div>
+</span>
+
+  
+    
+    <a href="/voting/125564">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(135/694 * 100%)">135</div>
-  
-  
-    <div class="-" style="width: calc(522/694 * 100%)">522</div>
-  
-  
-    <div class="0" style="width: calc(37/694 * 100%)">37</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125564">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>26 ter. exprime son inquiétude quant aux procédés malhonnêtes de fraude sur l’âge et de falsifications dont usent les demandeurs d’asile; demande que soient utilisées les procédures établies et efficaces pour vérifier les principales caractéristiques d’identification, telles que l’âge;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">160</div>
+  <div class="against">524</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/125565">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(160/694 * 100%)">160</div>
-  
-  
-    <div class="-" style="width: calc(524/694 * 100%)">524</div>
-  
-  
-    <div class="0" style="width: calc(10/694 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125565">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>26 quater. rappelle le nombre élevé de demandes manifestement infondées qui entraînent une charge financière et administrative préjudiciable, en particulier pour les États membres de première entrée;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">163</div>
+  <div class="against">511</div>
+  <div class="abstention">20</div>
+</span>
+
+  
+    
+    <a href="/voting/125566">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(163/694 * 100%)">163</div>
-  
-  
-    <div class="-" style="width: calc(511/694 * 100%)">511</div>
-  
-  
-    <div class="0" style="width: calc(20/694 * 100%)">20</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125566">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>26 quinquies. observe que l’offre de conseils juridiques gratuits aux demandeurs d’asile implique de coûts financiers et administratifs considérables dans les États membres de première entrée, ce qui limite la disponibilité de ces services pour les ressortissants de ces États qui peuvent en bénéficier;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">137</div>
+  <div class="against">551</div>
+  <div class="abstention">6</div>
+</span>
+
+  
+    
+    <a href="/voting/125567">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(137/694 * 100%)">137</div>
-  
-  
-    <div class="-" style="width: calc(551/694 * 100%)">551</div>
-  
-  
-    <div class="0" style="width: calc(6/694 * 100%)">6</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125567">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      39. invite la Commission à évaluer la mise en œuvre globale du RAEC, 
-  
+<p>
 
   
-      <ins>y compris en analysant les facteur d&#39;incitation au départ, </ins>
+      39. invite la Commission à évaluer la mise en œuvre globale du RAEC,
   
 
   
-      ainsi que les lacunes et défauts éventuels du règlement de Dublin III qui entraînent une charge disproportionnée de responsabilité pour les pays situés aux frontières extérieures de l’Union;
+      <ins> y compris en analysant les facteur d&#39;incitation au départ,</ins>
+  
+
+  
+       ainsi que les lacunes et défauts éventuels du règlement de Dublin III qui entraînent une charge disproportionnée de responsabilité pour les pays situés aux frontières extérieures de l’Union;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">142</div>
+  <div class="against">534</div>
+  <div class="abstention">16</div>
+</span>
+
+  
+    
+    <a href="/voting/125568">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(142/692 * 100%)">142</div>
-  
-  
-    <div class="-" style="width: calc(534/692 * 100%)">534</div>
-  
-  
-    <div class="0" style="width: calc(16/692 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125568">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       4. estime qu’il est essentiel de fournir davantage de ressources et de capacités aux États membres situés en première ligne, par exemple par l’intermédiaire de l’EASO, tant que le règlement de Dublin n’est pas réformé;
@@ -496,48 +637,206 @@
       <ins> encourage, à cet égard, les États membres à faire preuve de solidarité en transférant les demandeurs d’une protection internationale des États membres situés en première ligne vers d’autres États membres de l’Union;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(321/693 * 100%)">321</div>
-  
-  
-    <div class="-" style="width: calc(350/693 * 100%)">350</div>
-  
-  
-    <div class="0" style="width: calc(22/693 * 100%)">22</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125561">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2206(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0245_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">321</div>
+  <div class="against">350</div>
+  <div class="abstention">22</div>
+</span>
+
   
+    
+    <a href="/voting/125561">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-12-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre cette résolution qui vise à remplacer le règlement Dublin III par un nouveau système de répartition obligatoire des migrants, sur le fondement du pacte sur les migrations et l&#39;asile.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            Ce rapport évalue la mise en œuvre du règlement de Dublin III qui détermine l’État membre responsable de la demande d’asile. Ce règlement a vocation à être remplacé par les dispositions du nouveau pacte migratoire.Je partage le constat de l’échec de ce règlement car nous l’avons vu au cours de ces dernières années, les pays en première ligne sont les pays qui ont été les plus exposés à la pression migratoire. Néanmoins, ce que nous avons aussi constaté, c’est l’échec des politiques de relocalisation et la multiplication des mouvements secondaires.C’est pourquoi je ne souscris pas à l’analyse de ce rapport qui plaide pour le renforcement de la politique de relocalisation, encourage le regroupement familial, facteur d’incitation à la migration illégale, et passe sous silence le découragement et la lassitude des populations locales qui subissent de plein fouet les répercussions de l’échec de la politique migratoire européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">22858</div>
+            
+            <header><b>Fabienne KELLER</b> | Renaissance</header>
+            En tant que rapporteure pour le Parlement européen sur ce rapport, je me réjouis de son adoption à une large majorité. Le règlement Dublin III est l’un des piliers de la politique européenne d’asile: il fixe les critères pour déterminer l’État membre responsable de l’examen d’une demande d’asile en Europe. Selon la Convention internationale de Genève (1951), toute personne persécutée ou risquant d’être persécutée dans son pays a le droit à la protection internationale dans un autre pays. Dans ce rapport, nous dressons un bilan critique de la mise en œuvre de Dublin III. La crise migratoire de 2015-16 a mis en évidence les défaillances majeures du système d’asile européen. En particulier, la charge disproportionnée sur les pays dits de première entrée (Italie, Grèce, Malte, Chypre, Espagne). Les procédures d’asile génèrent une charge administrative excessive pour les services de l’asile et les délais des procédures souffrent de nombreux retards. En conséquence, on observe de nombreuses entraves aux droits des demandeurs d’asile. Nous appelons donc les États à accorder davantage d&#39;attention et de ressources à l&#39;application des règles actuelles, sans attendre la réforme du pacte Asile-Migration. Une politique de l’asile plus humaine et plus efficace est possible dès aujourd’hui.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il voudrait enterrer Dublin III et le remplacer par un nouveau système de répartition obligatoire des migrants tel que proposé pour Dublin IV ou le pacte de l’UE sur la migration et l’asile. Cette piste ne ferait pourtant qu’encourager toujours plus d’immigration. La seule solution est faite de fermeté, de dissuasion et de protection des frontières extérieures de l’Europe.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            L’afflux continu de migrants a mis le système d’asile de l’UE à rude épreuve: entre pression massive sur les pays d’arrivée, mouvements secondaires incontrôlés, expulsions rendues aussi difficiles par Bruxelles que par les pays de départ, coût financier exorbitant ou encore insécurité physique et culturelle, l’asile européen semble à bout de souffle. Ce rapport se concentre sur l’évaluation du le règlement Dublin III, qui détermine les pays responsables du traitement du dossier des demandeurs d’asile, à savoir le pays d’arrivée. Se préoccupant assez peu des difficultés des États, ce texte est en revanche catastrophé de la situation des migrants «traumatisés» par leur voyage. Les solutions proposées sont désormais classiques: répartition obligatoire des migrants, faire des droits fondamentaux l’alpha et l’oméga de toute la politique migratoire, accélérer les procédures, regroupement familial, harmoniser et centraliser la gestion de l’asile notamment par la création d’une agence européenne de l’asile qui serait basée sur l’EASO (Bureau européen d’appui en matière d’asile). Cette piste ne ferait pourtant qu’encourager toujours plus d’immigration. La seule solution est faite de fermeté, de dissuasion et de protection des frontières extérieures de l’Europe, j’ai donc voté contre ce texte sans hésitation.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté contre ce rapport sur la mise en œuvre du règlement Dublin III. Ce rapport d&#39;initiative dressait un bilan orienté de la mise en œuvre du règlement Dublin III, qui détermine l&#39;État membre responsable de l&#39;instruction de la demande d&#39;asile. Il contenait des dispositions inacceptables susceptibles de renforcer la vague d’immigration irrégulière que subissent la France et l’Europe: soutien au principe de répartition des migrants dans les États membres (relocalisation), appel à garantir l’effectivité du droit au regroupement familial, etc. Je l’ai donc rejeté.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter l’opinion du Parlement européen sur l’application du règlement Dublin III traitant de l’accueil des demandeurs d’asile au sein de l’Union européenne. Il intègre des éléments positifs comme le rappel de l’intérêt supérieur de l’enfant, la reconnaissance de l’échec de la politique migratoire actuelle de l’Union et un appel à une solidarité plus grande face aux urgences humanitaires. Il évacue en revanche la question de la relocalisation et des mécanismes de solidarité entre États membres, malgré notre proposition d’amendement dans ce sens. Je me suis donc abstenue sur ce texte qui présente des constats pertinents mais ne va pas assez loin dans la remise en cause d’un système à la fois inefficace et inhumain.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce rapport vise à donner la position du Parlement sur les discussions en cours concernant la révision du règlement Dublin III. Toutefois il ne vise pas à proposer ce à quoi ressemblerait un nouveau règlement. En effet, il se concentre uniquement sur la mise en œuvre du règlement actuel. Il dénonce la non application du regroupement familial dans le cadre de transferts, appelle à un meilleur usage de la clause discrétionnaire en sollicitant également l’intérêt supérieur de l’enfant. Malheureusement, le rapport n’appelle pas à la mise en œuvre d’une politique migratoire humaniste, solidaire, raisonnée, réaliste et concertée à l’échelle européenne par l’abandon des accords de Dublin. Je préfère donc m’abstenir sur ce rapport incomplet.
+        </article>
+    
+        <article>
+            <div class="hidden">197585</div>
+            
+            <header><b>Pierre KARLESKIND</b> | Renaissance</header>
+            J’ai soutenu ce rapport d’initiative établissant un état des lieux de la mise en œuvre du règlement de Dublin III régissant une partie de la politique d’asile européenne. Il met en avant les lacunes importantes du système actuel à savoir la pression disproportionnée sur quelques États de première entrée, l’absence de mécanisme de solidarité entre les États, la complexité du parcours administratif du demandeur d’asile, les nombreuses entraves aux droits des demandeurs d’asile. En pointant ces problèmes, ce rapport vise à travailler en amont avec la Commission européenne pour proposer une refonte plus humaine et efficace du système d’asile européen dans les années à venir. Je remercie ma collègue Fabienne Keller pour son travail.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Ce rapport voudrait enterrer Dublin III et le remplacer par un nouveau système de répartition obligatoire des migrants tel que proposé pour Dublin IV ou le pacte de l&#39;UE sur la migration et l&#39;asile. Cette piste ne ferait pourtant qu&#39;encourager plus d&#39;immigration. La seule solution est faite de fermeté, de dissuasion et de protection des frontières extérieures de l&#39;Europe.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté en faveur de ce rapport d’initiative. Pilier de la politique d’asile européenne, le règlement de Dublin III a été adopté en 2013. Le rapport actuel vise à évaluer la mise en œuvre de ce règlement et à pointer du doigt les faiblesses de cette mise en œuvre. Parmi les faiblesses soulevées par le rapport on retrouve la pression disproportionnée sur quelques États de première entrée et le manque de mécanismes de solidarité entre les États. Sur la période 2008-2017, 90 % des demandeurs d’asile ont ainsi été accueillis par seulement un tiers des États membres. Il apparaît tout à fait nécessaire de faire baisser la pression existant sur ces États en instaurant un mécanisme de solidarité efficace. Le rapport souligne également la complexité du parcours administratif auquel est confronté le demandeur d’asile ainsi que les nombreuses entraves aux droits des demandeurs. Ce rapport appelle donc à un respect plus strict des règles actuelles en attendant l’entrée en vigueur du pacte Asile-Migration.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport qui voudrait enterrer Dublin III et le remplacer par un nouveau système de répartition obligatoire des migrants tel que proposé pour Dublin IV ou le pacte de l’UE sur la migration et l’asile, ce qui ne ferait qu’encourager l’immigration en Europe. La seule solution est faite de fermeté, de dissuasion et de protection des frontières extérieures de l’Europe.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            Ce rapport voudrait enterrer Dublin III et le remplacer par un nouveau système de répartition obligatoire des migrants tel que proposé pour Dublin IV ou le pacte de l’UE sur la migration et l’asile. Cette piste ne ferait pourtant qu’encourager toujours plus d’immigration. La seule solution est faite de fermeté, de dissuasion et de protection des frontières extérieures de l’Europe. J&#39;ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce rapport, qui voudrait enterrer Dublin III et le remplacer par un nouveau système de répartition obligatoire des migrants, tel que proposé pour Dublin IV ou le pacte de l’UE sur la migration et l’asile. Cette piste ne ferait pourtant qu’encourager toujours plus d’immigration. La seule solution est faite de fermeté, de dissuasion et de protection des frontières extérieures de l’Europe.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Ce rapport se concentre sur l’évaluation d’un pan du système d’asile de l’UE, le règlement Dublin III. Ce règlement, adopté en 2013, détermine les pays responsables du traitement du dossier des demandeurs d’asile. Sous le régime Dublin III, il s’agit du pays d’arrivée. Des États comme l’Italie, la Grèce ou plus récemment l’Espagne sont donc soumis à une intense pression migratoire et administrative. Les solutions proposées sont désormais classiques: répartition obligatoire des migrants, faire des droits fondamentaux l’alpha et l’oméga de toute la politique migratoire, accélérer les procédures, regroupement familial, harmoniser et centraliser la gestion de l’asile notamment par la création d’une agence européenne de l’asile qui serait basée sur l’EASO (Bureau européen d’appui en matière d’asile). Ce rapport voudrait enterrer Dublin III et le remplacer par un nouveau système de répartition obligatoire des migrants tel que proposé pour Dublin IV ou le pacte de l’UE sur la migration et l’asile. J’ai voté contre ce rapport car la seule solution est faite de fermeté, de dissuasion et de protection des frontières extérieures de l’Europe.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Ce rapport se concentre sur l’évaluation d’un pan du système d’asile de l’UE, le règlement Dublin III. Ce règlement, adopté en 2013, détermine les pays responsables du traitement du dossier des demandeurs d’asile. Sous le régime Dublin III, il s’agit du pays d’arrivée. Un demandeur d’asile arrivé en France peut ainsi être expulsé vers le pays d’arrivée. Des États comme l’Italie, la Grèce ou plus récemment l’Espagne sont donc soumis à une intense pression migratoire et administrative.Ce rapport voudrait enterrer Dublin III et le remplacer par un nouveau système de répartition obligatoire des migrants tel que proposé pour Dublin IV ou le pacte de l’UE sur la migration et l’asile. Cette piste ne ferait pourtant qu’encourager toujours plus d’immigration. La seule solution est faite de fermeté, de dissuasion et de protection des frontières extérieures de l’Europe.C’est pourquoi j’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport concocté par l’ex-mairesse LR de Strasbourg ralliée au macronisme, Mme Fabienne Keller (groupe Renew). Il se concentre sur l’évaluation d’un autre pan du système d’asile de l’UE, à savoir le règlement Dublin III. Adopté en 2013, il détermine les pays responsables du traitement du dossier des demandeurs d’asile. Sous ce régime, il s’agit du pays d’arrivée. Des États comme l’Italie, la Grèce ou plus récemment l’Espagne sont donc soumis à une intense pression migratoire et administrative. Ce texte pourfend la situation du système d’asile européen pour mieux défendre implicitement l’accueil de tous les migrants dont les «droits fondamentaux» seraient violés quotidiennement. Si les difficultés des États sont mentionnées, ces derniers ne sont clairement pas au cœur des préoccupations, sans même parler des Européens victimes de cette immigration massive. Les solutions proposées, dans l’esprit du pacte de l’UE sur la migration et l’asile, réside notamment dans la répartition obligatoire des migrants, l’accélération du regroupement familial, la création d’une agence européenne de l’asile...Aberrant et atterrant!
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport qui préconise d’enterrer Dublin III pour le remplacer par un nouveau système de répartition obligatoire des migrants tel qu’il est proposé pour Dublin IV ou le pacte de l’UE sur la migration et l’asile. Il s’agit donc d’un nouvel appel d’air en faveur de l’immigration.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">22858</div>
+            
+            <header><b>Fabienne KELLER</b> | Renaissance</header>
+            
+                <p>En septembre 2019, la présidente Ursula von der Leyen a annoncé un nouveau pacte sur l’asile et la migration. C’est dans ce contexte que j’ai engagé un travail d’évaluation de la mise en œuvre de Dublin III pour dresser un état des lieux des forces et des faiblesses de ce règlement. </p>
+            
+                <p>Dublin est un pilier de la politique d’asile européenne. Il fixe les critères pour déterminer l’État responsable de l’examen d’une demande d’asile. Quelques mots sur la méthode: ce rapport s’appuie sur des données de terrain, des retours d’expérience des acteurs de l’asile aux niveaux local, national, européen. Des missions de terrain en Allemagne, aux Pays-Bas, en Roumanie, en France ont été réalisées. J’ai rencontré de nombreux acteurs dans les centres d’accueil et les administrations d’asile des États membres. Une audition en commission LIBE avec des experts, des représentants des États et des ONG, une étude du service de recherche du Parlement européen qui a fourni de nombreuses informations sur la mise en œuvre des différentes dispositions.</p>
+            
+                <p>Nous tirons une conclusion générale attendue: le règlement Dublin III est peu efficace et souffre de lacunes importantes de mise en œuvre au niveau des États membres. Nous dressons quatre constats. Le premier: Dublin fait peser une charge disproportionnelle sur les pays de première entrée. Ils sont sous forte pression, avec trop peu de solidarité. L’incendie à Moria fut le symbole de l’absence d’Europe et de réformes. Un tiers des États membres accueillent 90 % des demandeurs d’asile: l’Allemagne, la France, la Grèce, l’Italie, l’Espagne et les Pays-Bas.</p>
+            
+                <p>Deuxièmement, il existe de nombreux obstacles à la détermination de l’État responsable: les manquements dans l’enregistrement sur Eurodac, l’application biaisée de la hiérarchie des critères, le poids des procédures et leur complexité pour les demandeurs, mais aussi pour les acteurs de l’asile. Ainsi, les procédures génèrent des coûts humains, financiers et matériels considérables. Et pourtant, seuls 11 % des transferts sont réalisés. C’est inacceptable pour les milliers d’agents publics, pour des procédures qui n’aboutissent pas. C’est inacceptable surtout pour les demandeurs d’asile qui sont accueillis beaucoup trop longtemps – des mois, des années – avant qu’une décision soit prise. </p>
+            
+                <p>Troisièmement, le parcours des migrants est un déterminant sous-estimé. En particulier, les mouvements secondaires sont un ennemi du principe d’une demande d’asile unique en Europe. Ce phénomène est en forte augmentation. Il enraye la machine «Dublin» en augmentant drastiquement le nombre de procédures.</p>
+            
+                <p>Quatrièmement, l’échec de Dublin est avant tout un échec humain. L’inefficacité de Dublin pèse sur les migrants, qui ont déjà subi des traumatismes. L’intérêt supérieur de l’enfant est mal appliqué. Il en est de même du regroupement familial. L’accès au droit ne répond pas aux standards européens. À moyen terme, nous avons besoin d’une réforme de ces règles. Le système commun doit bien sûr être changé, avec la solidarité, avec la clarification des procédures. </p>
+            
+                <p>Mais surtout, nous devons agir dès maintenant. N’attendons pas une réforme qui n’interviendra pas avant un ou deux ans, peut-être plus. Améliorons dès aujourd’hui l’application des règles. Il y a une forte marge de progression de la part des États pour assurer plus d’attention aux moyens humains, matériels, financiers pour la politique d’asile. Il faut plus de dialogue entre les autorités d’asile des États membres. Il faut intensifier la gouvernance entre les États et avec l’Union européenne. </p>
+            
+                <p>Nous ne résoudrons pas tous en changeant les règles. Certaines sont défaillantes, d’autres sont mal appliquées. Nous ne sommes plus en situation de crise. Une politique européenne de l’asile plus humaine et plus efficace est possible à court terme. Nous comptons aussi sur la Commission pour agir dès maintenant.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

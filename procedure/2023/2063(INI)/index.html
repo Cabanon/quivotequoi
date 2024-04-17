@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Semestre européen pour la coordination des politiques économiques 2024</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Semestre européen pour la coordination des politiques économiques 2024</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(420/584 * 100%)">420</div>
-  
-  
-    <div class="-" style="width: calc(123/584 * 100%)">123</div>
+    <div class="for" style="width: calc(420/584 * 100%)">420</div>
   
   
-    <div class="0" style="width: calc(41/584 * 100%)">41</div>
+    <div class="against" style="width: calc(123/584 * 100%)">123</div>
+  
+  
+    <div class="abstention" style="width: calc(41/584 * 100%)">41</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,19 +88,20 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(46/71 * 100%)">46</div>
+    <div class="for" style="width: calc(46/71 * 100%)">46</div>
   
   
-    <div class="-" style="width: calc(25/71 * 100%)">25</div>
+    <div class="against" style="width: calc(25/71 * 100%)">25</div>
   
   
 </div>
  
 </section>
-            <a href="/voting/166019">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/166019">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -104,7 +109,7 @@
     
         
         
-            <li>Système économique et monétaire</li>
+            <li>Union économique</li>
         
     
         
@@ -114,801 +119,957 @@
     
         
         
-            <li>Union économique</li>
+            <li>Système économique et monétaire</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/2063(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2024-0063_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-03-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,124693,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,124693">🇫🇷 Renaissance</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197626,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197626,197629,197615">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>A bis. considérant que la Belgique, en tant que pays exerçant la présidence du Conseil, pouvait décider de ne pas ajouter à l’ordre du jour du Conseil l’approbation et l’adoption des règles révisées de gouvernance économique;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">74</div>
+  <div class="against">438</div>
+  <div class="abstention">67</div>
+</span>
+
+  
+    
+    <a href="/voting/166399">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(74/579 * 100%)">74</div>
-  
-  
-    <div class="-" style="width: calc(438/579 * 100%)">438</div>
-  
-  
-    <div class="0" style="width: calc(67/579 * 100%)">67</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/166399">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>H bis. considérant que le ratio déficit public/PIB de 3 % et le ratio dette publique/PIB de 60 % sont des chiffres arbitraires fixés sans justification économique et, par conséquent, ne constituent pas des références appropriées pour guider les politiques économiques des États membres;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">133</div>
+  <div class="against">406</div>
+  <div class="abstention">42</div>
+</span>
+
+  
+    
+    <a href="/voting/166400">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(133/581 * 100%)">133</div>
-  
-  
-    <div class="-" style="width: calc(406/581 * 100%)">406</div>
-  
-  
-    <div class="0" style="width: calc(42/581 * 100%)">42</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/166400">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>9 bis. invite le Conseil et tous les États membres à rejeter la proposition de révision des règles de gouvernance économique, car leur adoption imposerait des mesures d’austérité dévastatrices dans toute l’Union européenne;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">130</div>
+  <div class="against">426</div>
+  <div class="abstention">25</div>
+</span>
+
+  
+    
+    <a href="/voting/166389">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(130/581 * 100%)">130</div>
-  
-  
-    <div class="-" style="width: calc(426/581 * 100%)">426</div>
-  
-  
-    <div class="0" style="width: calc(25/581 * 100%)">25</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/166389">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>11 bis. demande à la Commission de retirer sa proposition de réforme des règles de gouvernance économique, car l’adoption des règles révisées imposerait des mesures d’austérité dévastatrices dans toute l’Union européenne;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">122</div>
+  <div class="against">432</div>
+  <div class="abstention">25</div>
+</span>
+
+  
+    
+    <a href="/voting/166390">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(122/579 * 100%)">122</div>
-  
-  
-    <div class="-" style="width: calc(432/579 * 100%)">432</div>
-  
-  
-    <div class="0" style="width: calc(25/579 * 100%)">25</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/166390">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>17 bis. regrette profondément le retour à l’austérité résultant des règles budgétaires convenues dans le cadre du réexamen de la gouvernance économique; met en garde contre ces nouvelles règles qui entraîneront un ajustement budgétaire majeur, irréaliste et intenable de la part de certains États membres pour respecter les critères imposés de réduction de la dette et du déficit; souligne que la France, par exemple, pourrait être tenue de procéder à un ajustement allant jusqu’à 24 milliards d’euros par an sur quatre ans ou à 16 milliards d’euros par an sur sept ans; met l’accent sur le fait qu’une réduction aussi considérable des dépenses publiques aura de graves conséquences sociales, car sa mise en œuvre se traduira par des coupes claires dans les services publics qui conduiront à leur détérioration, par l’adoption de réformes structurelles qui affaiblissent les droits des travailleurs et la protection sociale, et par un sous-investissement chronique dans les infrastructures publiques et collectives critiques, dans le droit-fil de l’orientation générale de la gouvernance économique de l’Union prise jusqu’à présent;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">123</div>
+  <div class="against">443</div>
+  <div class="abstention">18</div>
+</span>
+
+  
+    
+    <a href="/voting/166392">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(123/584 * 100%)">123</div>
-  
-  
-    <div class="-" style="width: calc(443/584 * 100%)">443</div>
-  
-  
-    <div class="0" style="width: calc(18/584 * 100%)">18</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/166392">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>17 ter. se déclare préoccupé par les mesures prises par les gouvernements de certains États membres pour réduire le ratio dette publique/PIB et le ratio déficit/PIB, avant même l’entrée en vigueur des règles budgétaires révisées; estime, par exemple, que les coupes budgétaires de 10 milliards d’euros effectuées par le gouvernement français à titre de correction financière pour 2024 sont inacceptables; souligne que cette correction implique, entre autres, une écoles, dans un système éducatif déjà appauvri, et un revers considérable pour les projets d’isolation thermique domestique, qui constituent pourtant un élément essentiel permettant de diminuer les factures énergétiques des ménages et une mesure clé pour réduire les émissions de gaz à effet de serre; est convaincu que ces exemples illustrent la régression sociale et environnementale qui se produira, dans une bien plus large mesure, une fois que les règles budgétaires révisées seront en place;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">123</div>
+  <div class="against">444</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/166393">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(123/577 * 100%)">123</div>
-  
-  
-    <div class="-" style="width: calc(444/577 * 100%)">444</div>
-  
-  
-    <div class="0" style="width: calc(10/577 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/166393">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>17 quater. s’inquiète du fait que le cadre de gouvernance économique révisé aura sans aucun doute pour effet d’entraver, de retarder ou de réduire le niveau d’ambition des investissements dans une transition écologique équitable, en plafonnant les investissements ou en les subordonnant à des objectifs budgétaires arbitraires et peu judicieux; affirme qu’orienter ainsi le cadre de coordination des politiques économiques de l’Union européenne est dangereux, totalement déconnecté de la réalité scientifique et complètement inapproprié pour relever les défis à venir;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">106</div>
+  <div class="against">453</div>
+  <div class="abstention">21</div>
+</span>
+
+  
+    
+    <a href="/voting/166394">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(106/580 * 100%)">106</div>
-  
-  
-    <div class="-" style="width: calc(453/580 * 100%)">453</div>
-  
-  
-    <div class="0" style="width: calc(21/580 * 100%)">21</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/166394">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>17 quinquies. propose, au lieu de promouvoir des coupes budgétaires et des réformes structurelles dommageables au nom de la réduction de la dette, que l’Union européenne établisse un cadre de gouvernance économique qui favorise et facilite la perception par l’Union européenne et les États membres de ressources supplémentaires grâce à une fiscalité équitable, en particulier en imposant les plus riches et les entreprises multinationales, notamment sur les bénéfices exceptionnels, et grâce à des taxes sur les produits et services préjudiciables à l’environnement, ainsi qu’en facilitant l’annulation des exonérations fiscales et sociales inefficaces et injustes et la lutte contre l’évitement fiscal et l’évasion fiscale réalisés par des personnes riches et des entreprises multinationales;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">118</div>
+  <div class="against">420</div>
+  <div class="abstention">41</div>
+</span>
+
+  
+    
+    <a href="/voting/166395">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(118/579 * 100%)">118</div>
-  
-  
-    <div class="-" style="width: calc(420/579 * 100%)">420</div>
-  
-  
-    <div class="0" style="width: calc(41/579 * 100%)">41</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/166395">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>17 sexies. regrette que la révision du cadre de gouvernance économique de l’Union européenne repose sur une stratégie de réduction des dépenses publiques au lieu de trouver de nouvelles sources de revenus, ce qui implique un retour à l’austérité; déplore que la révision n’ait pas permis de garantir une marge budgétaire suffisante pour promouvoir l’investissement public dans la transition écologique, les services publics et la convergence sociale ascendante; met en garde contre les nouvelles règles qui nécessiteront un ajustement budgétaire majeur, irréaliste et intenable de la part de certains États membres pour respecter les critères de réduction de la dette et du déficit; souligne que même le FMI a reconnu que, en moyenne, l’assainissement budgétaire ne réduit pas le ratio dette/PIB, ce qui signifie que l’austérité ne parvient pas à atteindre ses propres objectifs;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">128</div>
+  <div class="against">430</div>
+  <div class="abstention">21</div>
+</span>
+
+  
+    
+    <a href="/voting/166396">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(128/579 * 100%)">128</div>
-  
-  
-    <div class="-" style="width: calc(430/579 * 100%)">430</div>
-  
-  
-    <div class="0" style="width: calc(21/579 * 100%)">21</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/166396">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>17 septies. se déclare préoccupé par les mesures prises par les gouvernements de certains États membres pour réduire le ratio dette publique/PIB et le ratio déficit/PIB, avant même l’entrée en vigueur des règles budgétaires révisées;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">67</div>
+  <div class="against">461</div>
+  <div class="abstention">51</div>
+</span>
+
+  
+    
+    <a href="/voting/166397">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(67/579 * 100%)">67</div>
-  
-  
-    <div class="-" style="width: calc(461/579 * 100%)">461</div>
-  
-  
-    <div class="0" style="width: calc(51/579 * 100%)">51</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/166397">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>17 octies. regrette que le réexamen de la gouvernance économique ait débouché sur un ensemble de mesures transitoires superficielles qui perpétuent les lacunes du modèle actuel sans parvenir à relever les défis sociaux et écologiques à venir; réaffirme que la coordination des politiques économiques dans l’Union devrait viser à éradiquer la pauvreté et les inégalités, à assurer un niveau élevé de protection sociale et à améliorer les services publics de qualité, le bien-être individuel et collectif grâce à la satisfaction des besoins essentiels de tous les citoyens et à une planification écologique à long terme;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">107</div>
+  <div class="against">470</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/166398">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(107/585 * 100%)">107</div>
-  
-  
-    <div class="-" style="width: calc(470/585 * 100%)">470</div>
-  
-  
-    <div class="0" style="width: calc(8/585 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/166398">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°12 | 
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>-1. estime que, comme le montre la situation socio-économique actuelle, le pacte de stabilité et de croissance et la gouvernance économique de l’Union nuisent à la capacité des États membres de répondre de manière adéquate aux problèmes et aux besoins sociaux et économiques, qu’ils soient conjoncturels ou structurels;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">127</div>
+  <div class="against">416</div>
+  <div class="abstention">39</div>
+</span>
+
+  
+    
+    <a href="/voting/166386">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(127/582 * 100%)">127</div>
-  
-  
-    <div class="-" style="width: calc(416/582 * 100%)">416</div>
-  
-  
-    <div class="0" style="width: calc(39/582 * 100%)">39</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/166386">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°13 | 
+        
+            <article id="13">
+            <header>📝 Amendement n°13 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>-1 bis. demande l’abrogation du pacte de stabilité et de croissance, de la législation sur la gouvernance économique («six- pack» et «two-pack») et du Semestre européen, du traité budgétaire et de tous les mécanismes qui contraignent et limitent la marge de manœuvre qu’ont les États membres pour promouvoir les investissements publics, le financement des services publics et leurs fonctions sociales; demande instamment qu’ils soient remplacés par un pacte pour le progrès social et pour l’emploi qui poursuive notamment les objectifs suivants:  – respecter la souveraineté de chaque État, en permettant à chacun de bénéficier de conditions favorables à son développement économique et social, à la correction des déficits structurels et à l’amélioration de sa capacité de production;  – lutter contre le chômage et promouvoir le plein emploi, défendre et renforcer les droits du travail et d’autres droits sociaux, défendre et promouvoir les négociations collectives, et éradiquer la précarité;  – favoriser la défense et le renforcement des services publics et des fonctions sociales des États, notamment en ce qui concerne l’exercice des droits à la santé, à    l’éducation, à la sécurité sociale, au logement et à la culture;  – promouvoir effectivement l’application des principes de cohésion économique, sociale et territoriale ainsi que de durabilité environnementale;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">60</div>
+  <div class="against">449</div>
+  <div class="abstention">69</div>
+</span>
+
+  
+    
+    <a href="/voting/166387">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(60/578 * 100%)">60</div>
-  
-  
-    <div class="-" style="width: calc(449/578 * 100%)">449</div>
-  
-  
-    <div class="0" style="width: calc(69/578 * 100%)">69</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/166387">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°14 | 
+        
+            <article id="14">
+            <header>📝 Amendement n°14 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>– 1. se déclare préoccupé par la faiblesse économique de la zone euro compte tenu des risques évidents de récession; relève qu’une politique budgétaire restrictive a déjà été mise en œuvre dans les États membres en 2023 et 2024, qui devrait permettre un rééquilibrage budgétaire supplémentaire conformément aux règles budgétaires réformées;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">133</div>
+  <div class="against">403</div>
+  <div class="abstention">49</div>
+</span>
+
+  
+    
+    <a href="/voting/166388">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(133/585 * 100%)">133</div>
-  
-  
-    <div class="-" style="width: calc(403/585 * 100%)">403</div>
-  
-  
-    <div class="0" style="width: calc(49/585 * 100%)">49</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/166388">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°15 | 
+        
+            <article id="15">
+            <header>📝 Amendement n°15 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>12 bis. fait observer que, compte tenu des besoins d’investissement exceptionnellement élevés, les investissements publics devront être revus à la hausse pour compléter et accélérer les investissements privés; souligne que de nombreux États membres éprouveront des difficultés à accroître considérablement les investissements publics nationaux, compte tenu des exigences de réduction de la dette et du déficit prévues par les règles budgétaires de l’Union réformées; met l’accent sur les atouts que représente un financement conjoint au niveau de l’Union afin de réduire la pression sur les budgets nationaux et de veiller à ce que partout des fonds suffisants soient mobilisés pour répondre aux priorités stratégiques de l’Union;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">144</div>
+  <div class="against">414</div>
+  <div class="abstention">26</div>
+</span>
+
+  
+    
+    <a href="/voting/166391">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(144/584 * 100%)">144</div>
-  
-  
-    <div class="-" style="width: calc(414/584 * 100%)">414</div>
-  
-  
-    <div class="0" style="width: calc(26/584 * 100%)">26</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/166391">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°16 | 
+        
+            <article id="16">
+            <header>📝 Amendement n°16 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
-
-  
-      3. souligne que le manque d’investissements publics et privés dans certains États membres entrave le potentiel d’une croissance socialement équilibrée et durable; considère que des règles prévisibles, des conditions de concurrence équitables et des coûts de mise en conformité réduits constituent des facteurs essentiels pour attirer les investissements; souligne que ces investissements sont essentiels pour la capacité de l’Union à relever les défis existants, notamment la double transition verte et numérique, et qu’ils accroîtront la résilience et la compétitivité à long terme de l’Union face aux enjeux à venir; estime que ces investissements devraient s’accompagner de réformes propices à la croissance et à la résilience; attire l’attention sur les investissements dans 
-  
+<p>
 
   
-      <ins>l’énergie nucléaire, </ins>
+      3. souligne que le manque d’investissements publics et privés dans certains États membres entrave le potentiel d’une croissance socialement équilibrée et durable; considère que des règles prévisibles, des conditions de concurrence équitables et des coûts de mise en conformité réduits constituent des facteurs essentiels pour attirer les investissements; souligne que ces investissements sont essentiels pour la capacité de l’Union à relever les défis existants, notamment la double transition verte et numérique, et qu’ils accroîtront la résilience et la compétitivité à long terme de l’Union face aux enjeux à venir; estime que ces investissements devraient s’accompagner de réformes propices à la croissance et à la résilience; attire l’attention sur les investissements dans
   
 
   
-      les énergies renouvelables et l’efficacité énergétique, qui sont nécessaires, notamment, pour mettre un terme à la dépendance de l’Union aux combustibles fossiles importés et limiter l’inflation induite par les prix de l’énergie; prend acte de l’orientation budgétaire restrictive attendue en 2023 et 2024; précise qu’aucune restriction ne devrait intervenir au détriment des investissements, qui devraient être accrus dans l’ensemble de la zone euro;
+      <ins> l’énergie nucléaire,</ins>
+  
+
+  
+       les énergies renouvelables et l’efficacité énergétique, qui sont nécessaires, notamment, pour mettre un terme à la dépendance de l’Union aux combustibles fossiles importés et limiter l’inflation induite par les prix de l’énergie; prend acte de l’orientation budgétaire restrictive attendue en 2023 et 2024; précise qu’aucune restriction ne devrait intervenir au détriment des investissements, qui devraient être accrus dans l’ensemble de la zone euro;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    (🇫🇷 : Reconquête!)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">248</div>
+  <div class="against">316</div>
+  <div class="abstention">16</div>
+</span>
+
+  
+    
+    <a href="/voting/166504">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(248/580 * 100%)">248</div>
-  
-  
-    <div class="-" style="width: calc(316/580 * 100%)">316</div>
-  
-  
-    <div class="0" style="width: calc(16/580 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/166504">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°17 | 
+        
+            <article id="17">
+            <header>📝 Amendement n°17 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       12. souligne l’importance que revêtent les investissements privés et publics 
@@ -922,104 +1083,115 @@
       dans le contexte de la reprise économique et dans la gestion de la double transition; rappelle que la FRR ne remplace pas le rôle spécifique joué par les investissements publics nationaux; réaffirme qu’il est nécessaire de garantir la qualité, la transparence et la responsabilité des investissements publics et des stratégies nationales afin de s’aligner sur les objectifs de la double transition; souligne que ces stratégies nationales pour la double transition devraient compléter la FRR et d’autres instruments d’investissement européens;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    (🇫🇷 : Reconquête!)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">164</div>
+  <div class="against">409</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/166505">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(164/584 * 100%)">164</div>
-  
-  
-    <div class="-" style="width: calc(409/584 * 100%)">409</div>
-  
-  
-    <div class="0" style="width: calc(11/584 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/166505">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°18 | 
+        
+            <article id="18">
+            <header>📝 Amendement n°18 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
-
-  
-      15. prend acte de l’accord politique provisoire conclu entre les colégislateurs le 10 février 2024 sur la réforme du cadre de gouvernance économique de l’Union, qui vise 
-  
+<p>
 
   
-      <ins>à réduire la dette publique à des niveaux soutenables, tel qu’indiqué dans les traités, et </ins>
+      15. prend acte de l’accord politique provisoire conclu entre les colégislateurs le 10 février 2024 sur la réforme du cadre de gouvernance économique de l’Union, qui vise à
   
 
   
-      à garantir la coordination effective des politiques économiques et la convergence durable de la performance économique et sociale des États membres;
+      <ins> réduire la dette publique à des niveaux soutenables, tel qu’indiqué dans les traités, et à</ins>
+  
+
+  
+       garantir la coordination effective des politiques économiques et la convergence durable de la performance économique et sociale des États membres;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(126/586 * 100%)">126</div>
-  
-  
-    <div class="-" style="width: calc(444/586 * 100%)">444</div>
-  
-  
-    <div class="0" style="width: calc(16/586 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/166506">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    ECR
+    (🇫🇷 : Reconquête!)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/2063(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2024-0063_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">126</div>
+  <div class="against">444</div>
+  <div class="abstention">16</div>
+</span>
+
   
+    
+    <a href="/voting/166506">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-03-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

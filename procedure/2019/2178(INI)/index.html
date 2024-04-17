@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Reconstitution des stocks halieutiques en mer Méditerranée: évaluation et prochaines étapes</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Reconstitution des stocks halieutiques en mer Méditerranée: évaluation et prochaines étapes</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(582/687 * 100%)">582</div>
-  
-  
-    <div class="-" style="width: calc(5/687 * 100%)">5</div>
+    <div class="for" style="width: calc(582/687 * 100%)">582</div>
   
   
-    <div class="0" style="width: calc(100/687 * 100%)">100</div>
+    <div class="against" style="width: calc(5/687 * 100%)">5</div>
+  
+  
+    <div class="abstention" style="width: calc(100/687 * 100%)">100</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,28 +88,24 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(61/79 * 100%)">61</div>
+    <div class="for" style="width: calc(61/79 * 100%)">61</div>
   
   
   
-    <div class="0" style="width: calc(18/79 * 100%)">18</div>
+    <div class="abstention" style="width: calc(18/79 * 100%)">18</div>
   
 </div>
  
 </section>
-            <a href="/voting/135952">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/135952">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Politiques communautaires</li>
-        
     
         
         
@@ -117,280 +117,299 @@
             <li>Politique de la pêche</li>
         
     
+        
+        
+            <li>Politiques communautaires</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2178(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0225_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-10-05-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | Partie 1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(387/691 * 100%)">387</div>
-  
-  
-    <div class="-" style="width: calc(282/691 * 100%)">282</div>
-  
-  
-    <div class="0" style="width: calc(22/691 * 100%)">22</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135880">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°1 | Partie 2 | 
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | Partie 2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(214/691 * 100%)">214</div>
-  
-  
-    <div class="-" style="width: calc(469/691 * 100%)">469</div>
-  
-  
-    <div class="0" style="width: calc(8/691 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135881">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | Partie 1 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | Partie 1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(255/691 * 100%)">255</div>
-  
-  
-    <div class="-" style="width: calc(424/691 * 100%)">424</div>
-  
-  
-    <div class="0" style="width: calc(12/691 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135883">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | Partie 2 | 
 
+🚫 Annulé
+
+</header>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°3 | Partie 1 | 
+        
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(380/691 * 100%)">380</div>
-  
-  
-    <div class="-" style="width: calc(302/691 * 100%)">302</div>
-  
-  
-    <div class="0" style="width: calc(9/691 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135886">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | Partie 2 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | Partie 2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(207/691 * 100%)">207</div>
-  
-  
-    <div class="-" style="width: calc(455/691 * 100%)">455</div>
-  
-  
-    <div class="0" style="width: calc(29/691 * 100%)">29</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135887">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE,GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>38 bis. invite la Commission à continuer de soutenir les plans visant à améliorer la sélectivité dans la région méditerranéenne, compte tenu notamment de la différence entre les règles relatives au maillage minimal pour l’océan Atlantique;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+     et 
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">265</div>
+  <div class="against">417</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    
+    <a href="/voting/135813">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(265/691 * 100%)">265</div>
-  
-  
-    <div class="-" style="width: calc(417/691 * 100%)">417</div>
-  
-  
-    <div class="0" style="width: calc(9/691 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135813">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE,GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       59. invite la Commission, par l’intermédiaire de 
   
 
   
-      <del>ses agences,</del>
+      <del>ses agences</del>
   
 
   
-      <ins>l’Agence européenne de contrôle des pêches,</ins>
+      <ins>l’Agence européenne de contrôle des pêches</ins>
   
 
   
-       à redoubler d’efforts pour surveiller les eaux relevant de sa compétence afin d’identifier les navires de 
+      , à redoubler d’efforts pour surveiller les eaux relevant de sa compétence afin d’identifier les navires de 
   
 
   
@@ -402,147 +421,169 @@
   
 
   
-      <del>ces agences </del>
+      <del>ces agences</del>
   
 
   
-      <ins>l’Agence européenne de contrôle des pêches </ins>
+      <ins>l’Agence européenne de contrôle des pêches</ins>
   
 
   
-      d’un financement et de ressources humaines adéquats à cette fin;
+       d’un financement et de ressources humaines adéquats à cette fin;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+     et 
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">258</div>
+  <div class="against">324</div>
+  <div class="abstention">109</div>
+</span>
+
+  
+    
+    <a href="/voting/135814">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(258/691 * 100%)">258</div>
-  
-  
-    <div class="-" style="width: calc(324/691 * 100%)">324</div>
-  
-  
-    <div class="0" style="width: calc(109/691 * 100%)">109</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135814">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE,GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       E. considérant 
   
 
   
-      <del>l’adoption, en 2019, du </del>
+      <del>l’adoption, en 2019, du</del>
   
 
   
-      <ins>que le </ins>
+      <ins>que le</ins>
   
 
   
-      règlement établissant un plan pluriannuel pour les pêcheries exploitant des stocks démersaux en Méditerranée 
+       règlement établissant un plan pluriannuel pour les pêcheries exploitant des stocks démersaux en Méditerranée occidentale
   
 
   
-      <del>occidentale, ainsi que la nécessité d’attendre que les effets des mesures adoptées dans ce règlement se manifestent;</del>
+      <del>, ainsi que la nécessité d’attendre que les effets des mesures adoptées dans ce règlement se manifestent</del>
   
 
   
-      <ins>occidentale a été adopté en 2019, et que le CSTEP a recommandé de suivre attentivement l’évolution des captures lors de la mise en œuvre du régime de gestion de l’effort de pêche et d’adapter la réduction de l’effort en conséquence;</ins>
+      <ins> a été adopté en 2019, et que le CSTEP a recommandé de suivre attentivement l’évolution des captures lors de la mise en œuvre du régime de gestion de l’effort de pêche et d’adapter la réduction de l’effort en conséquence</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+     et 
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">183</div>
+  <div class="against">474</div>
+  <div class="abstention">34</div>
+</span>
+
+  
+    
+    <a href="/voting/135815">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(183/691 * 100%)">183</div>
-  
-  
-    <div class="-" style="width: calc(474/691 * 100%)">474</div>
-  
-  
-    <div class="0" style="width: calc(34/691 * 100%)">34</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135815">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE,GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       F. considérant 
   
 
   
-      <del>les </del>
+      <del>les</del>
   
 
   
-      <ins>que le déclin des populations de poissons, causé par la surpêche, et les restrictions qui en découlent, ont des </ins>
+      <ins>que le déclin des populations de poissons, causé par la surpêche, et les restrictions qui en découlent, ont des</ins>
   
 
   
-      incidences socio-
+       incidences socio
   
 
   
-      <del> </del>
+      <del>- </del>
+  
+
+  
+      <ins>-</ins>
   
 
   
@@ -558,59 +599,192 @@
   
 
   
-      <del>peut entraîner des répercussions dévastatrices </del>
+      <del>peut entraîner des répercussions dévastatrices</del>
   
 
   
-      <ins>risque d’avoir de graves répercussions </ins>
+      <ins>risque d’avoir de graves répercussions</ins>
   
 
   
-      sur l’emploi et la cohésion sociale dans les zones côtières;
+       sur l’emploi et la cohésion sociale dans les zones côtières;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+     et 
   
-    <div class="+" style="width: calc(175/691 * 100%)">175</div>
-  
-  
-    <div class="-" style="width: calc(499/691 * 100%)">499</div>
-  
-  
-    <div class="0" style="width: calc(17/691 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135816">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
     
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2178(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0225_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">175</div>
+  <div class="against">499</div>
+  <div class="abstention">17</div>
+</span>
+
   
+    
+    <a href="/voting/135816">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-10-05-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Cette proposition de résolution envisage des méthodes d’évaluation des plans de reconstitution de la ressource halieutique ainsi que des suggestions pour l’avenir. Ce rapport a le mérite de faire le compromis entre les nécessités écologiques et les intérêts des pêcheurs. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté pour cette résolution.Ce texte critique, à juste titre, la concurrence déloyale des pays tiers. Il est toutefois dommage de ne pas mentionner le plan «West Med», qui prévoit de réduire à 160 le nombre maximal de jours en mer pour les chalutiers de Méditerranée.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            La proportion des stocks de poissons surexploités en Méditerranée est passée de 88 % en 2014 à 75 % en 2018, ce qui démontre une amélioration progressive des résultats due à l’engagement des pêcheurs dans toute la région, bien que de nombreux progrès soient encore à réaliser, l&#39;état de nombreux stocks halieutiques demeurant critique. Ce texte propose de doter l’Europe des moyens d’atteindre un niveau de stocks acceptable par divers moyens, notamment en recensant les obstacles législatifs à la reconstitution des stocks, en réduisant l’incidence des autres activités économiques (notamment le mouillage ou l’amarrage des bateaux privés de grande taille), en renforçant la collecte des données et la recherche, en renforçant le rôle des opérateurs dans la prise de décision et la collecte des données et enfin en assurant le respect du droit en vigueur. Je me suis donc positionné en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Je regrette que ce dossier reste muet sur les conséquences du plan « West Med », qui prévoit de réduire à 160 le nombre maximal de jours de mer pour les chalutiers en Méditerranée, soit en dessous de leur seuil de rentabilité (177 jours). Néanmoins, l’appel à lutter contre la concurrence déloyale des pays tiers et contre l’insécurité physique que certains de leurs ressortissants font peser sur les pêcheurs européens m’ont incité à un vote favorable.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté pour cette résolution car elle soutient la pêche en Méditerranée en rappelant que le secteur n’est pas responsable de tous les problèmes environnementaux, et que la protection de l’environnement marin ne doit pas aboutir à la quasi-disparition des flottes européennes.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Ce rapport conclut à une situation très préoccupante concernant les stocks halieutiques (poissons, crustacés…) en Méditerranée. Il insiste sur la dimension multifactorielle de cet épuisement. Ce n’est pas seulement la pêche qui est en question, mais également la pollution, le changement climatique, le dragage ou encore le trafic maritime. Pourtant, beaucoup de personnes dépendent de la pêche non seulement pour leur alimentation, mais dans leur mode de vie même. Le rapport se confronte donc au problème de la durabilité et de ses trois composantes : économiques, sociales et environnementales. La solution proposée prend en compte l’intérêt des pêcheurs : harmoniser tous les règlements adoptés pour simplifier les activités, mener immédiatement des recherches scientifiques sur l’état des stocks, assurer une véritable réciprocité entre, d’une part, les pays de l’Union qui se soumettent aux dispositions et, d’autre part, les pays hors Union qui ne jouent pas le jeu et mettent en danger ce bien commun. J’ai donc voté pour le rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport relatif à la reconstitution des stocks halieutiques en Méditerranée. Dans un contexte où la consommation de poisson atteint un record et vise à répondre aux besoins d’une population mondiale en constante augmentation, le texte souligne que certaines espèces de Méditerranée sont exploitées à plus de 80% par la pêche. Il formule donc des préconisations afin de favoriser la reconstitution des stocks, en invitant par exemple les États membres méditerranéens à établir davantage de zones de pêche à accès réglementé établies par la CGPM avec effet immédiat.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations et les recommandations du Parlement européen sur l’enjeu de la reconstitution des stocks halieutiques en mer Méditerranée. Il rappelle que la Méditerranée est l’un des principaux berceaux de biodiversité au monde, défend une approche écosystémique et plurifactorielle pour la préserver, demande à la Commission de recenser les obstacles à la reconstitution des stocks halieutiques et d’identifier des outils pour les lever et prône un renforcement des zones marines protégées. J’ai donc voté pour ce texte qui va dans le sens d’une meilleure protection de l’environnement et de la biodiversité.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            La mer Méditerranée et ses écosystèmes sont confrontés à un ensemble de pressions environnementales qui menacent leur intégrité et les rapprochent de plus en plus d’un effondrement pur et simple. Rappelons tout d’abord que si la Méditerranée ne représente que 0,7 % de la surface des océans, elle comptabilise 7 à 10 % de la biodiversité marine totale avec près de 17 000 espèces. On y trouve notamment plus de vingt espèces de cétacés, dont la moitié sont des populations résidentes. Parmi ces espèces, dix-huit sont classées parmi les espèces en danger ou menacées. La surpêche est évidemment le premier facteur de pression sur les écosystèmes et la biodiversité méditerranéens. Dans une étude parue en 2017, des chercheurs de la revue Nature ont ainsi estimé qu’au cours des cinquante dernières années c’est le tiers des populations de poissons endémiques qui ont disparu, tandis que l’Ifremer estime que 75 % des communautés de poissons de Méditerranée et de mer Noire étaient en situation de surpêche en 2019. La mer Méditerranée est également particulièrement affectée par les effets du changement climatique ; en effet, la Méditerranée se réchauffe 20 % plus vite que la moyenne mondiale. Progressivement, notamment dans son bassin oriental, la Méditerranée se transforme en mer tropicale et devient ainsi autrement plus favorable à la colonisation par des espèces exotiques. Profitant de la liaison du canal de Suez, 986 espèces exotiques, dont 126 de poissons, ont migré de la mer rouge vers la Méditerranée. Or ces espèces invasives entrent en concurrence directe avec la flore et la faune locales et le plus souvent prolifèrent à leurs dépens. Cette situation est évidemment également lourde de conséquences pour le secteur de la pêche en mer Méditerranée, qui représente un tissu socio-économique important pour de nombreux États riverains. Face à cette situation, il est évident qu’il est nécessaire d’entreprendre une vaste bifurcation écologique et sociale du secteur de la pêche en mer Méditerranée. C’est ce que propose ce rapport, raison pour laquelle je fais le choix de le soutenir.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            J&#39;ai voté en faveur de ce rapport qui appelle à lutter contre la concurrence déloyale des pays tiers et contre l’insécurité physique que certains de leurs ressortissants font peser sur les pêcheurs européens.
+        </article>
+    
+        <article>
+            <div class="hidden">197576</div>
+            
+            <header><b>Sylvie BRUNET</b> | Mouvement Démocrate</header>
+            J’ai voté en faveur de notre résolution sur la reconstitution des stocks halieutiques en Méditerranée. Nous y dressons un état des lieux de la situation des stocks halieutiques et des écosystèmes marins et nous proposons différentes pistes pour améliorer la situation. La mer Méditerranée est un bassin maritime très riche en biodiversité mais fortement menacé par divers facteurs. De nombreux stocks ne sont pas exploités de manière soutenable et l’impact d’autres éléments que la pêche sur l’état des stocks comme la pollution ou le changement climatique est mal connu. Nous invitons donc à améliorer la collecte des données, à impliquer davantage les acteurs locaux ainsi qu’à déterminer les causes de la détérioration des ressources et des écosystèmes marins. Je souhaite toutefois préciser que mon adhésion à ce rapport, dont le rapporteur est issu du parti italien « Fratelli d’Italia », ne saurait en aucun cas être interprétée comme un quelconque lien avec les positions eurosceptiques que ce parti défend et auxquelles je suis fermement opposée.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté pour ce rapport car même s’il est muet sur les conséquences du plan « West Med » qui prévoit de réduire à 160 le nombre maximal de jours de mer pour les chalutiers en Méditerranée, soit en dessous de leur seuil de rentabilité (177 jours), il appelle à lutter contre la concurrence déloyale des pays tiers et contre l’insécurité physique que certains de leurs ressortissants font peser sur les pêcheurs européens.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            Si je regrette que le rapport soit muet sur les conséquences du plan « West Med », qui prévoit de réduire à 160 le nombre maximal de jours de mer pour les chalutiers en Méditerranée, soit en dessous de leur seuil de rentabilité (177 jours), je note néanmoins l’appel du rapporteur à lutter contre la concurrence déloyale des pays tiers et contre l’insécurité physique que certains de leurs ressortissants font peser sur les pêcheurs européens. J&#39;ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – J’ai voté pour cette résolution car elle soutient la pêche en Méditerranée en rappelant que le secteur n’est pas responsable de tous les problèmes environnementaux, et que la protection de l’environnement marin ne doit pas aboutir à la quasi-disparition des flottes européennes.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            La Méditerranée est l’une des mers les plus exploitées du monde. La fragilité de ce bassin subissant la pression de la pollution, de l’exploitation pétrolière, du dragage et de la navigation retient particulièrement l’attention des pouvoirs publics. En application du règlement européen « Méditerranée », la France a mis en place en 2019 un plan de gestion pluriannuel pour les pêcheries démersales en Méditerranée occidentale (dit « West Med »). Ce plan s’inscrit au sein de l’initiative MedFish4ever du commissaire Vella, visant à restaurer les stocks halieutiques de Méditerranée. Le texte est une proposition de résolution du Parlement européen proposant des méthodes d’évaluation de ces plans de reconstitution de la ressource halieutique ainsi que des suggestions pour l’avenir. On regrettera que le rapport soit muet sur les conséquences du plan « West Med », qui prévoit de réduire à 160 le nombre maximal de jours de mer pour les chalutiers en Méditerranée, soit en dessous de leur seuil de rentabilité (177 jours). Néanmoins, l’appel du rapporteur à lutter contre la concurrence déloyale des pays tiers et contre l’insécurité physique que certains de leurs ressortissants font peser sur les pêcheurs européens m’ont incité à voter en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            La Méditerranée étant l’une des mers les plus exploitées du monde, elle pâtit de la fragilité de son bassin, qui subit la pression de la pollution, de l’exploitation pétrolière, du dragage et de la navigation.La France a mis en place en 2019, en application du règlement européen « Méditerranée » (CE 1967/2006), un plan de gestion pluriannuel pour les pêcheries « démersales » en Méditerranée occidentale. Ce plan s’inscrit au sein de l’initiative MedFish4ever du commissaire Vella, visant à restaurer les stocks halieutiques de Méditerranée.Le texte est une proposition de résolution du Parlement européen proposant des méthodes d’évaluation de ces plans de reconstitution de la ressource halieutique ainsi que des suggestions pour l’avenir.On regrettera que le rapport soit muet sur les conséquences du plan « West Med », qui prévoit de réduire à 160 le nombre maximal de jours de mer pour les chalutiers en Méditerranée, soit en dessous de leur seuil de rentabilité (177 jours). Néanmoins, l’appel du rapporteur à lutter contre la concurrence déloyale des pays tiers et contre l’insécurité physique que certains de leurs ressortissants font peser sur les pêcheurs européens incitent à un vote favorable.J’ai donc voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            On regrettera que le rapport soit muet sur les conséquences du plan « West Med », qui prévoit de réduire à 160 le nombre maximal de jours de mer pour les chalutiers en Méditerranée, soit en dessous de leur seuil de rentabilité (177 jours). Néanmoins, l’appel du rapporteur à lutter contre la concurrence déloyale des pays tiers et contre l’insécurité physique que certains de leurs ressortissants font peser sur les pêcheurs européens fait que j’ai voté pour.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

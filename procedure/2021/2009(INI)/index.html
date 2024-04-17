@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Mise en œuvre de mesures d’inclusion dans le cadre d’Erasmus+ 2014-2020</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Mise en œuvre de mesures d’inclusion dans le cadre d’Erasmus+ 2014-2020</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(471/592 * 100%)">471</div>
-  
-  
-    <div class="-" style="width: calc(55/592 * 100%)">55</div>
+    <div class="for" style="width: calc(471/592 * 100%)">471</div>
   
   
-    <div class="0" style="width: calc(66/592 * 100%)">66</div>
+    <div class="against" style="width: calc(55/592 * 100%)">55</div>
+  
+  
+    <div class="abstention" style="width: calc(66/592 * 100%)">66</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(46/61 * 100%)">46</div>
+    <div class="for" style="width: calc(46/61 * 100%)">46</div>
   
   
-    <div class="-" style="width: calc(2/61 * 100%)">2</div>
+    <div class="against" style="width: calc(2/61 * 100%)">2</div>
   
   
-    <div class="0" style="width: calc(13/61 * 100%)">13</div>
+    <div class="abstention" style="width: calc(13/61 * 100%)">13</div>
   
 </div>
  
 </section>
-            <a href="/voting/146342">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/146342">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -126,21 +131,269 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2009(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2009(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0158_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-06-23-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-06-23-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            Je me suis abstenue sur ce texte.J&#39;ai toujours soutenu le programme Erasmus+ qui est évidemment positif en matière d&#39;échanges académiques.Toutefois, ce rapport de mise en œuvre contient certains points contestables, notamment en ce qui concerne l&#39;ouverture aux pays des Balkans.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            L’idéologie pro expansion européenne, et le manque de données quantitatives et qualitatives sur les retombées des mesures d’inclusion dans le cadre d’Erasmus+ m’ont incitée à m’abstenir sur ce dossier.
+        </article>
+    
+        <article>
+            <div class="hidden">22858</div>
+            
+            <header><b>Fabienne KELLER</b> | Renaissance</header>
+            Je salue l’adoption de ce texte sur les mesures d’ouverture et de démocratisation d’Erasmus +.Erasmus + est une chance pour l’ensemble des sociétés européennes, qui doit pouvoir bénéficier à tous les jeunes en Europe. Ce rapport souligne les obstacles qui limitent encore l’accès de certaines personnes à ce programme, notamment les problèmes liés aux aides financières, les obstacles administratifs et le dysfonctionnement des outils informatiques. Le texte appelle donc la Commission européenne à remédier à ces problèmes, afin que chaque jeune Européen puisse pleinement profiter de cette formidable opportunité.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            Je me suis abstenu sur ce rapport. Certes, je soutiens sa volonté de démocratiser le programme Erasmus+. Cependant, il véhicule une idéologie trop européiste et se félicite du succès du programme sans que cela ne soit étayé par des données objectives.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport présente les observations et les recommandations du Parlement européen sur la mise en œuvre du programme Erasmus +. Il insiste notamment sur l’importance de l’égalité des chances, l’inclusion des apprenants moins favorisés, l’augmentation des bourses, l’aide aux étudiants ukrainiens et le renforcement des moyens financiers et matériels des professeurs. J’ai donc voté pour ce texte qui va dans le sens d’un renforcement de la dimension sociale du programme Erasmus +.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            Le programme Erasmus, devenu Erasmus+ en 2014, s’est toujours attaché à développer des projets qui permettent de toucher les personnes moins favorisées. J’ai ainsi voté en faveur du rapport sur la mise en œuvre de mesures d’inclusion dans le cadre d’Erasmus+ qui formule certaines recommandations pour remédier à certains freins qui demeurent pour encourager la mobilité de ces personnes. Y remédier, c’est d’abord bien les connaître. Ils sont économiques, culturels, liés à la santé ou au handicap, à l’isolement géographique, à la barrière des langues, aux difficultés d’apprentissage, ou tout simplement à la méconnaissance du programme. J’ai principalement soutenu la nécessité de faire connaitre le programme et accompagner les futurs apprenants en insistant sur le rôle moteur des enseignants et des établissements ainsi que sur celui des anciens étudiants, notamment par le biais d’initiatives telles que les « ErasmusDays » qui permettent d’échanger sur les opportunités offertes par ce programme. Aussi, il est primordial d’accentuer le soutien financier et de garantir que les bourses correspondent au niveau de vie des pays d’accueil. Enfin, la simplification des démarches administratives doit se poursuivre, notamment grâce à des initiatives telles que « Erasmus sans papier » ou encore l’application mobile Erasmus+.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – La volonté de démocratiser Erasmus + en Europe est louable et doit être soutenue, et historiquement la délégation française a toujours voté en faveur des textes sur Erasmus. Cependant il s’agit ici d’un rapport de mise en œuvre qui reconnaît n’avoir presque pas de données d’analyses quantitatives et qualitatives sur les retombées des mesures d’inclusion dans le cadre d’Erasmus+ et qui prône plus d’ouverture envers les Balkans et les pays limitrophes. Pour ces raisons, j’ai préféré m’abstenir.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Le titre du rapport et ses intentions sont trompeuses.L’union européenne vente son mérite à travers le programme Erasmus+. La démocratisation de ce programme paraît louable. En effet, je soutiens le fait que puissent, les personnes en situation de handicap, les personnes issues de milieux modestes, les personnes atteintes d’une maladie chronique et au chômage et les étudiants ayant choisis des formations professionnelles, avoir accès à Erasmus et ainsi découvrir la richesse d’autres cultures et d’autres langues.Toutefois, le programme susnommé est dépeint d’une idéologie mortifère qui fait l’apologie de l’ouverture de l’Europe sur les Balkans, l’Afrique du Nord et la Biélorussie au travers du programme. Par la même occasion, Erasmus+ entend faire la publicité de la cause LGBT grâce aux fonds européens attribués par le programme. Pour finir, le manque de données quantitatives et qualitatives sur les retombées des mesures d’inclusion dans le cadre d’Erasmus+ ne nous permettent pas de soutenir un vote attestant du succès de la mise en œuvre de ces mesures.N’ayant aucune certitude sur l’efficience de ce programme, je ne peux pas voter en sa faveur. Toutefois, une partie de ce dernier est à encourager.C’est pourquoi je me suis abstenue en attendant davantage d’améliorations et de détails.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            La volonté de démocratiser Erasmus + en Europe est louable et doit être soutenue, et historiquement la délégation française a toujours voté en faveur des textes sur Erasmus. Cependant l’idéologie en faveur de l’expansion européenne, et le manque de données quantitatives et qualitatives sur les retombées des mesures d’inclusion dans le cadre d’Erasmus+ ne nous permettent pas de soutenir un vote attestant du succès de la mise en œuvre de ces mesures. Je me suis abstenue.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197589</div>
+            
+            <header><b>Laurence FARRENG</b> | Mouvement Démocrate</header>
+            
+                <p>Lors de la conférence pour l’avenir de l’Europe, les 800 citoyens nous l’ont dit, ils en ont fait une priorité: il faut encourager une culture de l’échange et promouvoir l’identité européenne et la diversité européenne. Et la première réponse identifiée, c’est Erasmus. Le programme a profondément évolué depuis 1987 et s’est ouvert aux apprentis, aux lycéens, aux collégiens, aux adultes en formation, aux enseignants, aux chercheurs d’emploi. Erasmus +, en 35 ans, s’est élargi, s’est démocratisé pour mieux coller aux évolutions de notre société.</p>
+            
+                <p>Pourtant, il remonte régulièrement du terrain des témoignages décourageants: un étudiant qui n’a pas pu partir en raison de son handicap, faute de structures d’accompagnement adaptées, un apprenti dont la famille n’a pas autorisé le projet de mobilité, un jeune qui n’a pas pu concrétiser son projet par manque de moyens financiers ou encore un adulte en formation pour qui la situation géographique reculée a été un frein trop important. Sans oublier tous ces jeunes qui, tout simplement, pensent qu’Erasmus, ce n’est pas pour eux, que c’est seulement pour les étudiants du supérieur ou pour ceux qui ont de l’argent, un soutien parental, pour ceux qui habitent des grandes villes; bref: pour les autres. Erasmus est encore trop souvent pensé comme le succès européen qui ne bénéficie qu’à quelques-uns. Nous devons changer cela. Chaque jeune doit pouvoir se dire: «Erasmus, c’est pour moi». </p>
+            
+                <p>C’est en partant de ce constat que le Parlement européen a négocié et obtenu, dans le nouveau programme Erasmus + 2021-2027, un chapitre entier consacré à l’inclusion de ce que nous nommons des personnes avec moins d’opportunités, c’est-à-dire rencontrant des obstacles géographiques, sociaux, culturels, de santé, un handicap ou encore des difficultés scolaires. Pour que cette volonté d’inclusion se traduise en faits pour Erasmus 2021-2027, il était donc indispensable de faire un retour en arrière et de voir ce qui avait été fait pour inclure ces publics en difficulté, que ce soit de manière isolée, par les porteurs de projets, ou plus concertée, à l’échelle des agences nationales Erasmus +, en l’absence de réelle stratégie européenne. C’est ce que j’ai fait avec mes collègues rapporteurs fictifs dans ce rapport de mise en œuvre. </p>
+            
+                <p>Nous sommes arrivés à un rapport complet, porteur de constats et de recommandations clairs pour l’actuel programme. L’analyse de la situation lors de la période de programmation 2014-2020 montre clairement plusieurs obstacles, que j’ai souhaité souligner dans ce rapport.</p>
+            
+                <p>En premier lieu, le besoin crucial d’adaptation des bourses et des aides financières à la situation des participants. Je pense notamment au préfinancement, qui permettrait aux participants de ne pas avoir à avancer d’argent. C’est un point qui revient vraiment régulièrement de la part des porteurs de projets.</p>
+            
+                <p>Un deuxième obstacle est le dysfonctionnement quasi structurel des outils informatiques de la Commission. Nous savons que c’est un problème récurrent qui existe encore dans l’actuel programme. Une association qui a peu de moyens, peu de personnel, a vraiment des difficultés et c’est quelque chose qu’il faut absolument corriger.</p>
+            
+                <p>Un troisième point crucial est celui du soutien apporté aux professeurs, aux accompagnateurs et aux équipes des associations porteuses de projets. Ils sont souvent bénévoles et ont besoin d’aide pour compléter les dossiers à fournir, un processus qui peut être complexe. Or, sans eux, la plupart des programmes ne peuvent pas se réaliser et se dérouler de manière optimale. Un meilleur accompagnement donnerait également plus de confiance aux familles, parfois réticentes, et aux participants, tout en assurant un déroulement optimal des projets.</p>
+            
+                <p>Enfin, il est apparu qu’il y avait, sur la participation des personnes avec moins d’opportunités, un manque de données précises et fiables qui nous permettraient de suivre la performance du programme sur ce sujet.</p>
+            
+                <p>Les recommandations dans ce rapport sont le résultat de plusieurs mois de travail, de concertation – avec les acteurs de terrain, des associations porteuses de projets, des chercheurs, auteurs de l’étude de l’EPRS – et de l’étroite collaboration avec mes collègues rapporteurs fictifs, que je souhaite remercier pour leur travail, leur collaboration en faveur d’un Erasmus + vraiment plus inclusif, facteur de cohésion et vecteur de citoyenneté européenne en ces temps de défiance et de repli sur soi. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197589</div>
+            
+            <header><b>Laurence FARRENG</b> | Mouvement Démocrate</header>
+            
+                <p>Nous avons donc appris du passé dans ce rapport et il faut maintenant saisir toutes les opportunités qu’offre le programme actuel pour renforcer encore – et on a vu combien c’était important – les possibilités d’inclusion. Je parle des opportunités d’inclusion des apprentis, le fait de pouvoir développer beaucoup d’initiatives pour les plus jeunes – parce que c’est dès le plus jeune âge que se prépare l’ouverture à l’Europe, aux habitudes à l’étranger, à cette expérience irremplaçable, parce qu’on s’adapte également. Il faut donc que toutes ces mesures soient suivies.</p>
+            
+                <p>Pour cela, il y a un nerf de la guerre qui est le budget. J’avoue que le budget que j’ai vu pour 2023 est une source d’inquiétude, parce qu’on a besoin de l’augmenter plus radicalement chaque année. Ce budget fait aussi partie des mesures d’inclusion d’Erasmus et nous attendons donc beaucoup, ma collègue l’a rappelé tout à l’heure. </p>
+            
+                <p>Ce rapport tire donc les enseignements du passé et nous projette dans l’avenir d’un Erasmus encore plus inclusif. J’espère, bien évidemment, que ce rapport qui sera soumis au vote remportera une très large unanimité dans notre Assemblée et sera un signal fort vers tous les Européens, jeunes et moins jeunes. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            
+                <p> – Madame la Présidente, Madame la Commissaire, alors que nous fêtons cette année les 35 ans du programme Erasmus, prenons ensemble un engagement: levons enfin les derniers freins qui empêchent les personnes moins favorisées de bénéficier de ces mobilités emblématiques.</p>
+            
+                <p>Depuis 35 ans, des efforts sont faits, bien sûr, mais des obstacles nombreux demeurent. Ils sont économiques, ils sont culturels, liés à la santé, au handicap, à l’isolement géographique, à la barrière des langues, aux difficultés d’apprentissage ou tout simplement à la méconnaissance du programme même ou à sa complexité administrative. Nous devons évidemment y remédier.</p>
+            
+                <p>D’abord, nul ne doit ignorer qu’il peut partir en Erasmus. Nous devons insister sur le rôle moteur des enseignants et des établissements pour faire connaître le programme et accompagner les futurs apprenants. Nous pouvons également soutenir davantage les activités des réseaux des anciens étudiants en les encourageant à agir comme des ambassadeurs, par exemple lors des «Erasmus Days». Le niveau des bourses aussi est souvent jugé insuffisant. Il est primordial d’accentuer le soutien financier, de garantir que les bourses correspondent au niveau de vie des pays d’accueil. Enfin, et j’en terminerai par là, la simplification des démarches administratives du programme doit se poursuivre, notamment grâce à des initiatives telles que la carte d’étudiant européenne. Continuons donc notre mobilisation.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            
+                <p> – Madame la Présidente, je veux revenir sur deux votes importants de ce jour. Erasmus, évidemment, je suis pour. Les jeunes se rencontrent et découvrent l’Europe, ses paysages, ses châteaux, ses peuples. Et parfois l’histoire se termine bien avec des couples qui se forment. Mais à l’heure actuelle, Bruxelles organise une caravane mondiale: depuis 2004, plus de 100 000 Turcs ont fait Erasmus en Europe et on envoie nos étudiants au Nigeria. Cela coûte 26 milliards d’euros, et c’est quoi, le projet? C’est la raison de mon abstention sur ce vote.</p>
+            
+                <p>Quant au deuxième vote sur le passe sanitaire, j’ai évidemment voté contre. Le QR code pour tous? Non merci. La Commission de Bruxelles a ignoré les 400 000 Européens qui s’étaient exprimés contre et ici, au Parlement européen, la majorité les a ignorés aujourd’hui. Mais le combat continue. Pourquoi cet acharnement à vouloir injecter à des bébés de six mois un vaccin COVID qui ne marche pas? Tant qu’il y aura 1,3 million d’effets secondaires répertoriés par l’EMA, ne mettons pas en danger nos enfants, nos adolescents, nos étudiants.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
+
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Composition du Parlement européen: projet de décision du Conseil européen</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,82 +22,39 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Composition du Parlement européen: projet de décision du Conseil européen</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
-    <article>
-    <header>👍 Adoption du texte | 
-
-✅️ Adopté
-
-</header>
-    
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
-        <section>
-
-<div class="votes ">
-  
-    <div class="+" style="width: calc(515/633 * 100%)">515</div>
-  
-  
-    <div class="-" style="width: calc(74/633 * 100%)">74</div>
-  
-  
-    <div class="0" style="width: calc(44/633 * 100%)">44</div>
-  
-</div>
-</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
-        <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
-        
-        
-            <section>
-
-
-
-<div class="votes">
-  
-    <div class="+" style="width: calc(65/73 * 100%)">65</div>
-  
-  
-  
-    <div class="0" style="width: calc(8/73 * 100%)">8</div>
-  
-</div>
- 
-</section>
-            <a href="/voting/158116">🗳 Voir le détail du vote</a>
-        
-    
-    </article>
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -104,12 +62,12 @@
     
         
         
-            <li>Parlement européen</li>
+            <li>Institutions de l&#39;Union</li>
         
     
         
         
-            <li>Institutions de l&#39;Union</li>
+            <li>Parlement européen</li>
         
     
         
@@ -119,21 +77,262 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/0900(NLE)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/0900(NLE)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0265_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-09-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-09-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,124693,197694,197697,197698,204418,245018">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,204418,245018">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,124693">🇫🇷 Renaissance</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197626,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197626,197629,197615">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Reconquête!</header>
+            . – J’ai voté pour ce texte qui a pour objectif la répartition des sièges pour la législature 2024-2029 et qui fait passer la France de 89 à 91 membres. Le Conseil a gagné son bras de fer avec le Parlement, en supprimant sa proposition qui visait à attribuer 28 sièges fédéralistes à une circonscription couvrant toute l’Union.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Je me réjouis de la décision du Conseil quant à la composition du Parlement européen pour le mandat 2024-2029, c’est à dire le nombre de députés qui siègeront au Parlement européen et leur provenance nationale. En effet, ce nouveau calcul rectifie un déséquilibre qui attribuait moins de sièges à la France que sa population ne demandait. À partir des prochaines élections, la France aura donc 81 députés au Parlement européen et pourra mieux représenter les intérêts des Français à l’Europe.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            Je me réjouis de la décision du Conseil quant à la composition du Parlement européen pour le mandat 2024-2029, c’est à dire le nombre de députés qui siègeront au Parlement européen et leur provenance nationale. En effet, ce nouveau calcul rectifie un déséquilibre qui attribuait moins de sièges à la France que sa population ne demandait. À partir des prochaines élections, la France aura donc 81 députés au Parlement européen et pourra mieux représenter les intérêts des Français à l’Europe.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            La composition proposée de 720 membres fait l’objet d’un consensus au Conseil et augmente donc les effectifs du Parlement de 15 membres supplémentaires.La France gagne 2 sièges, passant donc de 79 membres à 81. La Belgique en gagne 1, tout comme le Danemark, l’Irlande, la Lettonie, l’Autriche, la Pologne, la Slovénie, la Slovaquie et la Finlande. L’Espagne et les Pays-Bas en gagnent 2. J’ai naturellement voté en faveur de ce dossier.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté pour ce rapport car il accorde 2 sièges supplémentaires à la France au sein du Parlement européen, qui s’ajoutent aux 79 dont elle disposait déjà. Nous comptons sur les électeurs pour les attribuer à deux députés du RN lors des Européennes du 9 juin prochain !
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport sur la composition du Parlement européen. Pour tenir compte des évolutions démographiques, le Parlement européen comptera 720 sièges pour la législature 2024-2029, soit 15 sièges de plus qu’aujourd’hui (dont 2 pour la France).
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à approuver la proposition du Conseil fixant la nouvelle composition du Parlement européen après les élections de 2024. Il prévoit notamment d’ajouter deux sièges supplémentaires pour la France en raison de l’accroissement démographique du pays. J’ai donc voté pour ce texte tout en regrettant que la demande du parlement européen sur l’attribution de 28 sièges supplémentaires élus sur des listes transnationales n’ait pas été retenue.
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            Ce rapport consiste à adopter une décision du Conseil européen adoptée à l’unanimité le 4 aout dernier qui vise à augmenter le nombre de parlementaires européens lors de la prochaine législature. En effet, à la suite du Brexit, le parlement européen a proposé une résolution permettant d’augmenter le nombre de parlementaire européen car notre assemblée en avait perdu. Il a donc été décidé d’ajouter 15 députés en plus dont 2 pour la France.J’ai évidemment voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197576</div>
+            
+            <header><b>Sylvie BRUNET</b> | Mouvement Démocrate</header>
+            J’ai soutenu le projet de décision du Conseil européen fixant la nouvelle composition du Parlement européen. Mon groupe politique Renew Europe a toujours défendu le respect du principe dit de « proportionnalité dégressive » qui garantit une meilleure représentativité des citoyens de l&#39;UE au sein du Parlement européen, avec un nombre de sièges qui tienne compte des évolutions démographiques dans les 27 États membres. Or, la composition actuelle notre Parlement ne reflète pas de manière adéquate la démographie de certains pays. Pour cela, le vote d’aujourd’hui est important car il entérine la décision d’ajouter 15 sièges supplémentaires à la composition du Parlement, dont 2 sièges supplémentaires pour la France, dès juin 2024. Je me réjouis de ce résultat qui est le fruit de notre importante mobilisation au Parlement. Je regrette toutefois que notre appel en faveur de listes transnationales, avec l’attribution de 28 sièges à une circonscription paneuropéenne, ait été supprimé par le Conseil européen.
+        </article>
+    
+        <article>
+            <div class="hidden">197536</div>
+            
+            <header><b>Nathalie COLIN-OESTERLÉ</b> | Les centristes</header>
+            . – J&#39;ai voté en faveur du texte sur a composition du Parlement européen. Ce texte attribue deux sièges supplémentaires à la France, qui comptera non plus 79 mais 81 députés lors de la prochaine législature. Cette intervention était la bienvenue puisque la France était proportionnellement moins représentée que d&#39;autres États membres. Je salue également le fait que ce texte ne mentionne pas la mise en place de listes transnationales aux élections européennes, une proposition qui ne ferait que complexifier le vote et qui éloignerait encore plus les citoyens européens de leurs représentants.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            Je me suis prononcée en faveur de ce projet de décision du Conseil relatif à la composition du Parlement européen pour la prochaine mandature. Les évolutions démographiques constatées dans chaque État membre de l’UE devront s’accompagner d’une redistribution du nombre de sièges de parlementaires européens par pays. Avec cette décision, la France obtiendra deux sièges supplémentaires en 2024, portant à 81 le nombre d’eurodéputés français.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Les changements démographiques des pays membres ont des conséquences sur leur poids politique. De fait, le nombre de sièges attribués au sein du Parlement doit être actualisé. Le Conseil a demandé l’accord du Parlement pour établir les modifications suivantes : un nombre total de siège n’excédant pas 750 membres, une proportionnalité dégressive dans l’attribution des sièges, calculée par Eurostat à partir des nouvelles données démographiques des pays membres et une nouvelle composition proposée de 720 membres. Au final, la France gagnerait 2 sièges, passant donc de 79 membres à 81. La Belgique en gagne 1, tout comme le Danemark, l’Irlande, la Lettonie, l’Autriche, la Pologne, la Slovénie, la Slovaquie et la Finlande. L’Espagne et les Pays-Bas en gagnent 2. Cette évolution est intéressante, car la France peut gagner en poids politique, en lien logique avec son poids démographique. J’ai donc voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Les changements démographiques des pays membres ont des conséquences sur leur poids politique. De fait, le nombre de sièges attribués au sein du Parlement doit être actualisé. Le Conseil a demandé l’accord du Parlement pour établir les modifications suivantes : un nombre total de siège n’excédant pas 750 membres, une proportionnalité dégressive dans l’attribution des sièges, calculée par Eurostat à partir des nouvelles données démographiques des pays membres et une nouvelle composition proposée de 720 membres.Au final, la France gagnerait 2 sièges, passant donc de 79 membres à 81. La Belgique en gagne 1, tout comme le Danemark, l’Irlande, la Lettonie, l’Autriche, la Pologne, la Slovénie, la Slovaquie et la Finlande. L’Espagne et les Pays-Bas en gagnent 2.Cette évolution est intéressante, car la France peut gagner en poids politique, en lien logique avec son poids démographique.J’ai donc voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            . – Conformément aux décisions antérieures du Conseil sur la composition du Parlement européen, les changements démographiques des pays membres ont été pris en compte lors de l&#39;application du principe de proportionnalité dégressive à l&#39;attribution des sièges aux États membres. La France gagne 2 sièges, passant donc de 79 membres à 81. La Belgique en gagne 1, tout comme le Danemark, l’Irlande, la Lettonie, l’Autriche, la Pologne, la Slovénie, la Slovaquie et la Finlande. L’Espagne et les Pays-Bas en gagnent 2. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté en faveur de ce rapport qui prend en compte à juste titre les changements démographiques des pays membres pour l&#39;application du principe de proportionnalité dégressive à l&#39;attribution des sièges aux États membres.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b>Marina MESURE</b> | La France Insoumise</header>
+            Dans la perspective des élections européennes de 2024, le Parlement européen se prononce ici sur une proposition de décision du Conseil européen quant au changement du nombre de sièges de certains États. Cette modification du nombre de sièges consiste à refléter leurs évolutions démographiques. Ce rapport reprend la position du Parlement européen en termes d’augmentation de sièges par pays en défendant en plus une proposition d’augmentation de deux sièges pour la France, d’un pour la Belgique et d’un pour la Pologne. Le texte reprend aussi l’idée qu’il faudrait s’accorder sur une méthode permanente de répartition des sièges d’ici fin 2026. En revanche, contrairement à ce que proposait le Parlement, le Conseil ne propose pas qu’il y ait des listes transnationales. Bien que nous soutenions aussi ce dernier point, j’ai voté en faveur de ce rapport afin de soutenir cette proposition qui reflète mieux les évolutions de population des États membres.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
+
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

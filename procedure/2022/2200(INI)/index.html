@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Rapport 2022 de la Commission concernant la Bosnie-Herzégovine</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Rapport 2022 de la Commission concernant la Bosnie-Herzégovine</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(530/631 * 100%)">530</div>
-  
-  
-    <div class="-" style="width: calc(68/631 * 100%)">68</div>
+    <div class="for" style="width: calc(530/631 * 100%)">530</div>
   
   
-    <div class="0" style="width: calc(33/631 * 100%)">33</div>
+    <div class="against" style="width: calc(68/631 * 100%)">68</div>
+  
+  
+    <div class="abstention" style="width: calc(33/631 * 100%)">33</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(40/72 * 100%)">40</div>
+    <div class="for" style="width: calc(40/72 * 100%)">40</div>
   
   
-    <div class="-" style="width: calc(20/72 * 100%)">20</div>
+    <div class="against" style="width: calc(20/72 * 100%)">20</div>
   
   
-    <div class="0" style="width: calc(12/72 * 100%)">12</div>
+    <div class="abstention" style="width: calc(12/72 * 100%)">12</div>
   
 </div>
  
 </section>
-            <a href="/voting/156893">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/156893">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -106,30 +111,154 @@
     
         
         
-            <li>Etat et évolution de l&#39;Union</li>
+            <li>Elargissement de l&#39;Union</li>
         
     
         
         
-            <li>Elargissement de l&#39;Union</li>
+            <li>Etat et évolution de l&#39;Union</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2200(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0229_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-07-12-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,124693,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,124693">🇫🇷 Renaissance</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197626,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197615">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197626,197629">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       9. réaffirme son soutien aux mandats du Bureau du haut représentant en ce qui concerne les aspects civils, notamment le soutien à la stabilité et aux processus démocratiques en Bosnie-Herzégovine, et de l’opération de l’EUFOR Althea en ce qui concerne les aspects militaires, notamment la supervision de la mise en œuvre de l’accord de paix de Dayton jusqu’à ce que le pays ait respecté le «programme 5+2» et que sa supervision internationale prenne fin;
@@ -139,29 +268,41 @@
       <ins> demande que la participation à l’EUFOR Althea soit ouverte à tous les États membres intéressés;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
+    
+    ECR
     
     
-    <article>
-    <header>📝 Amendement n°2 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       15. soutient fermement l’aspiration constante de la Bosnie-Herzégovine à l’intégration euro-atlantique et à l’adhésion à l’OTAN; invite tous les acteurs politiques à y donner suite en agissant concrètement; se félicite de la participation du ministre de la défense de la Bosnie-Herzégovine au sommet de l’OTAN qui s’est tenu à Madrid en 2022; salue l’engagement pris par l’OTAN de renforcer le soutien sur mesure apporté à la Bosnie-Herzégovine pour lui permettre de renforcer son intégrité et sa résilience, de développer ses capacités et de préserver son indépendance politique; se réjouit de son programme d’aide à la Bosnie-Herzégovine; se félicite en outre de la décision du Conseil relative à une mesure d’assistance au titre de la facilité européenne pour la paix d’un montant de 10 millions d’euros au profit des forces armées de Bosnie-Herzégovine et à un contrat de coopération et de formation pour 2023 entre les forces armées de Bosnie-Herzégovine et l’EUFOR Althea;
@@ -171,29 +312,41 @@
       <del> invite la Bosnie-Herzégovine à œuvrer à la formation d’unités multiethniques au sein de ses forces armées;</del>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
+    
+    ECR
     
     
-    <article>
-    <header>📝 Amendement n°3 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       72. souligne l’importance d’une éducation non discriminatoire, inclusive et de qualité, notamment grâce à des programmes d’études plus inclusifs, qui tiennent compte de la diversité culturelle et linguistique, encouragent l’esprit critique et éliminent les contenus mensongers qui alimentent la division; demande une nouvelle fois qu’il soit mis immédiatement fin à la pratique discriminatoire actuelle des «deux écoles sous un même toit», conformément aux décisions de justice; recommande vivement d’intégrer la réconciliation dans le processus éducatif; invite la Bosnie-Herzégovine à réduire les obstacles administratifs pour les étudiants qui souhaitent poursuivre leurs études dans un autre canton ou une autre entité;
@@ -203,313 +356,456 @@
       <ins> rappelle que, conformément à l’article 165, paragraphe 1, du traité sur le fonctionnement de l’Union européenne (traité FUE), l’Union doit respecter pleinement la responsabilité des États membres pour le contenu de l’enseignement et l’organisation du système éducatif ainsi que leur diversité culturelle et linguistique; rappelle que, conformément à l’article 165, paragraphe 4, du traité FUE, toute harmonisation des dispositions législatives et réglementaires des États membres est exclue des actions d’encouragement de l’Union dans le domaine de l’éducation;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
+    
+    ECR
     
     
-    <article>
-    <header>📝 Amendement n°4 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       45. se réjouit des mesures prises pour que la législation sur les marchés publics soit plus conforme à l’acquis de l’Union, ainsi que de l’adoption d’un plan pour l’intégrité et la lutte contre la corruption par l’Agence des marchés publics; réaffirme la nécessité de garantir la transparence, la concurrence et l’égalité de traitement dans les procédures de passation de marchés publics, ainsi que de réduire l’utilisation abusive des ressources publiques; demeure préoccupé par les vulnérabilités du secteur face à la corruption et aux irrégularités; réclame une loi sur les marchés publics qui réponde de manière suffisante et appropriée à ces vulnérabilités; demande, par conséquent, des améliorations, notamment par le renforcement des capacités de suivi, de gestion et de soutien; appelle de ses vœux une législation plus solide et plus efficace sur l’utilisation des ressources naturelles ainsi qu’une amélioration de la transparence et de l’intégrité, notamment dans le domaine des concessions, en particulier en ce qui concerne plusieurs grands projets menés avec des entreprises 
   
 
   
-      <del>chinoises et hongroises;</del>
+      <del>chinoises et hongroises</del>
   
 
   
-      <ins>et des entités (co)détenues ou influencées par des États autoritaires, notamment la Russie et la Chine;</ins>
+      <ins>et des entités (co)détenues ou influencées par des États autoritaires, notamment la Russie et la Chine</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
+    
+    ECR
     
     
-    <article>
-    <header>📝 Amendement n°5 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE,S&amp;D,RE</div>
+                
 
-<section>
+<p>
 
   
       <ins>49 bis. se déclare horrifié par les déclarations de Dario Kordić, condamné pour crimes de guerre, qui n’a exprimé aucun remords et a affirmé qu’il «referait tout cela», en faisant référence aux crimes pour lesquels il a été condamné, y compris le nettoyage ethnique perpétré dans la vallée de Lašva; prie l’ensemble des forces politiques, et notamment les membres du gouvernement de la Bosnie-Herzégovine, de condamner de telles déclarations et de prendre explicitement leurs distances avec celles-ci; invite les autorités judiciaires de Bosnie-Herzégovine à prendre les mesures judiciaires nécessaires;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    , 
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">526</div>
+  <div class="against">43</div>
+  <div class="abstention">62</div>
+</span>
+
+  
+    
+    <a href="/voting/156875">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(526/631 * 100%)">526</div>
-  
-  
-    <div class="-" style="width: calc(43/631 * 100%)">43</div>
-  
-  
-    <div class="0" style="width: calc(62/631 * 100%)">62</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/156875">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D,Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       75. réaffirme la nécessité d’une gestion solidaire des migrations et de l’asile qui respecte les droits de l’homme et le droit international, y compris dans les centres de détention, ainsi que d’une répartition appropriée, digne et équitable des capacités d’accueil dans tout le pays, qui donne un rôle de surveillance effectif aux acteurs de la société civile dans le processus d’accueil; observe qu’il est nécessaire de coopérer et de se coordonner avec les États membres de l’Union voisins de la Bosnie-Herzégovine; souligne le principe de non-refoulement et l’interdiction des traitements inhumains lors des retours; reconnaît la poursuite des efforts visant à améliorer la coordination aux niveaux local et international; 
   
 
   
-      <del>se félicite </del>
+      <del>se félicite</del>
   
 
   
-      <ins>prend acte </ins>
+      <ins>prend acte</ins>
   
 
   
-      de l’ouverture de négociations sur l’accord relatif au statut renforcé de la Bosnie-Herzégovine avec l’Agence européenne de garde-frontières et de garde-côtes (Frontex); 
+       de l’ouverture de négociations sur l’accord relatif au statut renforcé de la Bosnie-Herzégovine avec l’Agence européenne de garde-frontières et de garde-côtes (Frontex); 
   
 
   
-      <del>appelle à la conclusion de cet accord dans les meilleurs délais, afin d’améliorer la protection et la gestion de ses frontières, dans le respect des </del>
+      <del>appelle à la conclusion de cet accord dans les meilleurs délais, afin d’améliorer la protection et la gestion de ses frontières, dans le respect des</del>
   
 
   
-      <ins>demande que l’accord éventuel respecte les </ins>
+      <ins>demande que l’accord éventuel respecte les</ins>
   
 
   
-      droits fondamentaux et 
+       droits fondamentaux et 
   
 
   
-      <del>des </del>
+      <del>des</del>
   
 
   
-      <ins>les </ins>
+      <ins>les</ins>
   
 
   
-      normes internationales; déplore les lacunes persistantes en matière de gestion de la migration et des frontières, malgré un soutien financier important de l’Union en 
+       normes internationales; déplore les lacunes persistantes en matière de gestion de la migration et des frontières, malgré un soutien financier important de l’Union en
   
 
   
-      <del>   </del>
+      <del>    </del>
   
 
   
-      faveur de la Bosnie-Herzégovine; souhaite un renforcement de la capacité de réaction aux crises; se déclare vivement préoccupé 
+      <ins> </ins>
   
 
   
-      <ins>   </ins>
+      faveur de la Bosnie-Herzégovine; souhaite un renforcement de la capacité de réaction aux crises; se déclare vivement préoccupé
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
   
 
   
       par les allégations de refoulements violents en Bosnie-Herzégovine; insiste sur la nécessité d’accroître la transparence et le contrôle démocratique dans l’allocation et la mise en œuvre des fonds de l’Union dans ce domaine, notamment ceux mis en œuvre par l’Organisation internationale pour les migrations; est préoccupé par les rapports faisant état de conditions d’accueil inadéquates dans le centre financé par l’Union à Lipa;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">245</div>
+  <div class="against">299</div>
+  <div class="abstention">78</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(245/622 * 100%)">245</div>
-  
-  
-    <div class="-" style="width: calc(299/622 * 100%)">299</div>
-  
-  
-    <div class="0" style="width: calc(78/622 * 100%)">78</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE,S&amp;D,RE,Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>H bis. considérant que, le 18 mars 2022, le Conseil a adopté la prolongeant le cadre de sanctions existant pour les personnes dont les activités porteraient atteinte à la souveraineté, à l’intégrité territoriale et à l’ordre constitutionnel de la Bosnie-Herzégovine ou nuiraient à l’application de l’accord de paix de Dayton;  ______  du 18 mars 2022 modifiant la mesures restrictives en raison de la situation en Bosnie-Herzégovine (JO L 91</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    , 
+  
     
-    <article>
-    <header>📝 Amendement n°8 | 
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
+    , 
+  
+    
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+     et 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE,S&amp;D,RE,Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>I bis. considérant que l’Assemblée nationale de la Republika Srpska a adopté, le 21 juin 2023, une loi sur les amendements à la loi sur la publication des lois et autres textes réglementaires de la Republika Srpska, ainsi que, le 27 juin 2023, une loi sur la non-application des décisions de la Cour constitutionnelle de Bosnie-Herzégovine, et a ainsi porté atteinte à l’intégrité de la Cour constitutionnelle et de la Constitution de la Bosnie-Herzégovine;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    , 
+  
     
-    <article>
-    <header>📝 Amendement n°9 | 
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
+    , 
+  
+    
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+     et 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE,S&amp;D,RE,Verts/ALE</div>
+                
 
-<section>
-
-  
-      11. se félicite de la prolongation du mandat de l’EUFOR Althea jusqu’en novembre 2023; rappelle que cette mission continue de jouer un rôle central pour la sécurité et la stabilité de la Bosnie- Herzégovine, en particulier en aidant à déminer certaines zones; se félicite, dans ce contexte, que l’EUFOR Althea surveille et contrôle la destruction des munitions et des armes excédentaires; prie l’Union et ses partenaires internationaux de garantir la présence continue de l’EUFOR Althea, le renouvellement de son mandat et le renforcement de ses capacités, afin qu’elle soit plus adaptée aux besoins opérationnels, y compris si une menace apparaît subitement et qu’elle doive y réagir 
-  
+<p>
 
   
-      <del>rapidement; suggère </del>
+      11. se félicite de la prolongation du mandat de l’EUFOR Althea jusqu’en novembre 2023; rappelle que cette mission continue de jouer un rôle central pour la sécurité et la stabilité de la Bosnie- Herzégovine, en particulier en aidant à déminer certaines zones; se félicite, dans ce contexte, que l’EUFOR Althea surveille et contrôle la destruction des munitions et des armes excédentaires; prie l’Union et ses partenaires internationaux de garantir la présence continue de l’EUFOR Althea, le renouvellement de son mandat et le renforcement de ses capacités, afin qu’elle soit plus adaptée aux besoins opérationnels, y compris si une menace apparaît subitement et qu’elle doive y réagir rapidement
   
 
   
-      <ins>rapidement, tout particulièrement au regard de la récente escalade rhétorique et politique vers le sécessionnisme à laquelle se livrent les dirigeants de la Republika Srpska; suggère, dans ce contexte, d’évaluer finement la situation en matière de sécurité et les capacités sur le terrain et </ins>
+      <del>; suggère</del>
   
 
   
-      d’envisager le déploiement de personnel et de capacités supplémentaires pour 
+      <ins>, tout particulièrement au regard de la récente escalade rhétorique et politique vers le sécessionnisme à laquelle se livrent les dirigeants de la Republika Srpska; suggère, dans ce contexte, d’évaluer finement la situation en matière de sécurité et les capacités sur le terrain et</ins>
   
 
   
-      <ins>   </ins>
+       d’envisager le déploiement de personnel et de capacités supplémentaires pour
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
   
 
   
       l’EUFOR Althea dans le district de Brčko;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    , 
+  
     
-    <article>
-    <header>📝 Amendement n°10 | 
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
+    , 
+  
+    
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+     et 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE,S&amp;D,RE,Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       18. condamne fermement la déclaration commune de la majorité au pouvoir au sein de l’entité de Republika Srpska sur la protection des biens de l’État et le statut constitutionnel de l’entité de Republika Srpska, qui a demandé la création d’une unité spéciale pour surveiller la ligne de démarcation entre les entités;
@@ -519,124 +815,222 @@
       <ins> condamne, en outre, l’adoption par l’Assemblée nationale de la Republika Srpska, le 27 juin 2023, de la loi sur la non-application des décisions de la Cour constitutionnelle de Bosnie-Herzégovine, ainsi que, le 21 juin 2023, de la loi sur les amendements à la loi sur la publication des lois et autres textes réglementaires de la Republika Srpska; insiste sur le fait que ces lois portent directement atteinte à l’intégrité de la Cour constitutionnelle et de la Constitution de la Bosnie-Herzégovine; salue donc les décisions du haut représentant qui annulent ces deux lois afin de préserver l’accord de paix de Dayton, la Constitution de la Bosnie-Herzégovine et l’état de droit en Bosnie-Herzégovine;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    , 
+  
     
-    <article>
-    <header>📝 Amendement n°11 | 
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
+    , 
+  
+    
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+     et 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE,S&amp;D,RE,Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       19. réitère son appel en faveur de sanctions ciblées à l’encontre des acteurs politiques qui déstabilisent la Bosnie- Herzégovine, y compris ceux qui menacent sa souveraineté
   
 
   
-      <ins>,</ins>
+      <del> et son intégrité territoriale</del>
   
 
   
-       
+      <ins>, son intégrité territoriale et son ordre constitutionnel, et y portent atteinte</ins>
   
 
   
-      <del>et </del>
+      , notamment Milorad Dodik, ainsi que d’autres représentants de haut rang de la Republika Srpska et de pays tiers qui apportent un soutien politique et matériel aux politiques sécessionnistes; 
   
 
   
-      son intégrité 
+      <del>invite tous les États membres à veiller à ce que le Conseil puisse adopter de telles sanctions</del>
   
 
   
-      <del>territoriale,</del>
+      <ins>rappelle que des mesures restrictives peuvent également être imposées à l’encontre de ceux qui compromettent gravement la situation en matière de sécurité dans le pays ou nuisent à l’application de l’accord de paix de Dayton; invite tous les États membres à veiller à ce que le Conseil puisse adopter de telles sanctions, ainsi qu’à les imposer de manière bilatérale ou en coopération avec d’autres États membres si une telle adoption n’est pas possible</ins>
   
 
   
-      <ins>territoriale et son ordre constitutionnel, et y portent atteinte,</ins>
-  
-
-  
-       notamment Milorad Dodik, ainsi que d’autres représentants de haut rang de la Republika Srpska et de pays tiers qui apportent un soutien politique et matériel aux politiques sécessionnistes; 
-  
-
-  
-      <del>invite tous les États membres à veiller à ce que le Conseil puisse adopter de telles sanctions;</del>
-  
-
-  
-      <ins>rappelle que des mesures restrictives peuvent également être imposées à l’encontre de ceux qui compromettent gravement la situation en matière de sécurité dans le pays ou nuisent à l’application de l’accord de paix de Dayton; invite tous les États membres à veiller à ce que le Conseil puisse adopter de telles sanctions, ainsi qu’à les imposer de manière bilatérale ou en coopération avec d’autres États membres si une telle adoption n’est pas possible;</ins>
-  
-
-  
-       rappelle que le cadre de mesures restrictives de l’Union en raison de la situation en Bosnie-Herzégovine est en place jusqu’au 31 mars 2024;
+      ; rappelle que le cadre de mesures restrictives de l’Union en raison de la situation en Bosnie-Herzégovine est en place jusqu’au 31 mars 2024;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    , 
+  
     
-    <article>
-    <header>📝 Amendement n°12 | 
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
+    , 
+  
+    
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+     et 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>19 bis. réaffirme que les arrêts de la Cour constitutionnelle de Bosnie-Herzégovine doivent être respectés afin de garantir pleinement la stabilité et l’ordre constitutionnel dans le pays; invite les autorités à mettre rapidement en œuvre l’ensemble des arrêts de la Cour constitutionnelle;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2200(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0229_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
   
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-07-12-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Reconquête!</header>
+            . – Je vote contre cet énième rapport qui vise à élargir l’UE, tout en constituant une ingérence dans la politique interne d’un pays souverain. Le rapport souligne tous les aspects que selon l’UE la Bosnie-Herzégovine devrait corriger pour faire partie de la famille européenne : en outre, les difficultés internes sont, selon le rapport, aggravées par le fait que la Bosnie-Herzégovine n’a pas encore rejoint l’OTAN.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            . – La Bosnie-Herzégovine a officiellement déposé sa candidature à l’entrée dans l’Union européenne en 2016. En 2019, la Commission a publié son avis, présentant une liste de 14 priorités clés essentielles à satisfaire dans les domaines relatifs à la démocratie et au fonctionnement de l’État, à l’État de droit, aux droits fondamentaux et à la réforme de l’administration publique. La Bosnie-Herzégovine ne disposant toujours pas d’un niveau d’avancement politique suffisant en matière d’état de droit, de droits fondamentaux et de lutte contre la corruption et conformément à mes engagements, je me suis abstenu sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            Je me suis abstenue sur cette résolution relative à la Bosnie-Herzégovine. Le texte dressait les avancées réalisées sur la voie de l’adhésion à l’Union européenne par cet État qui dispose du statut de candidat depuis 2022. Il recommande à la Bosnie-Herzégovine de mener d’importantes réformes pour renforcer l’état de droit, la lutte contre la corruption et la criminalité organisée, la gestion des migrations et les droits fondamentaux. Il invite l’UE à accélérer le processus d’adhésion de la Bosnie-Herzégovine. Fidèle à mon engagement pris devant les électeurs de ne soutenir aucun nouvel élargissement de l’Union pendant mon mandat, je n’ai pas approuvé ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les recommandations du Parlement européen sur le processus d’adhésion de la Bosnie-Herzégovine à l’Union européenne. Elle regrette à raison l’absence de progrès dans la lutte contre la corruption et invite le gouvernement bosniaque à garantir les droits et libertés des minorités. Elle demande en revanche un rapprochement de la Bosnie Herzégovine avec l’OTAN et refuse d’évoquer la nécessaire harmonisation sociale qui doit être un préalable à tout élargissement de l’Union européenne. Je me suis donc abstenue sur ce texte.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">204421</div>
+            
+            <header><b>Jean-Lin LACAPELLE</b> | Rassemblement national</header>
+            
+                <p>Vous, majorité de ce Parlement européen, chantez les louanges d’un multiculturalisme qui fait essentiellement les affaires de l’islam radical. Loin de voir le nombre croissant de Bosniaques musulmans engagés dans les rangs djihadistes, vous n’avez qu’une cible obsessionnelle: la République serbe de Bosnie. En Bosnie comme au Kosovo, vous ne cherchez en fait qu’à humilier les populations serbes et à détruire leurs droits – en l’occurrence, dans un ensemble fédéral bosniaque qui n’a pourtant aucune légitimité historique.</p>
+            
+                <p>Dans beaucoup de domaines, nous savons désormais que les eurocrates sont plus royalistes que le roi qui trône à Washington. Ainsi, concernant la Bosnie-Herzégovine, vous entendez piétiner les accords de Dayton qui, malgré leurs défauts, consacrent tout de même l’existence de la République serbe de Bosnie alors que vous voulez, vous, la dissoudre. Et on croit rêver quand on lit dans le rapport que la Bosnie doit opérer, je cite, une transition progressive de Dayton à Bruxelles.</p>
+            
+                <p>Nous demandons à l’Union européenne d’arrêter sa fuite en avant et de mettre fin à ses attaques contre la République serbe de Bosnie, comme d’ailleurs contre les peuples européens qui, de plus en plus nombreux, ont le courage de s’exprimer démocratiquement contre elle. </p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

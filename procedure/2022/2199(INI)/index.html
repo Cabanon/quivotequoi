@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Rapport 2022 de la Commission concernant l&#39;Albanie</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Rapport 2022 de la Commission concernant l&#39;Albanie</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(536/622 * 100%)">536</div>
-  
-  
-    <div class="-" style="width: calc(54/622 * 100%)">54</div>
+    <div class="for" style="width: calc(536/622 * 100%)">536</div>
   
   
-    <div class="0" style="width: calc(32/622 * 100%)">32</div>
+    <div class="against" style="width: calc(54/622 * 100%)">54</div>
+  
+  
+    <div class="abstention" style="width: calc(32/622 * 100%)">32</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(41/73 * 100%)">41</div>
+    <div class="for" style="width: calc(41/73 * 100%)">41</div>
   
   
-    <div class="-" style="width: calc(19/73 * 100%)">19</div>
+    <div class="against" style="width: calc(19/73 * 100%)">19</div>
   
   
-    <div class="0" style="width: calc(13/73 * 100%)">13</div>
+    <div class="abstention" style="width: calc(13/73 * 100%)">13</div>
   
 </div>
  
 </section>
-            <a href="/voting/156864">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/156864">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -121,76 +126,205 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2199(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0204_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-07-12-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,124693,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,124693">🇫🇷 Renaissance</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197626,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197615">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197626,197629">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       8. invite instamment les décideurs à œuvrer ensemble pour satisfaire aux critères d’adhésion 
   
 
   
-      <del>d’ici à 2030 au plus tard;</del>
+      <del>d’ici à 2030 au plus tard</del>
   
 
   
-      <ins>dès que possible;</ins>
+      <ins>dès que possible</ins>
   
 
   
-       rappelle que, pendant les négociations d’adhésion, les pays candidats doivent opérer des transformations considérables pour remplir les critères d’adhésion;
+      ; rappelle que, pendant les négociations d’adhésion, les pays candidats doivent opérer des transformations considérables pour remplir les critères d’adhésion;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">263</div>
+  <div class="against">266</div>
+  <div class="abstention">39</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(263/568 * 100%)">263</div>
-  
-  
-    <div class="-" style="width: calc(266/568 * 100%)">266</div>
-  
-  
-    <div class="0" style="width: calc(39/568 * 100%)">39</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       9. se dit préoccupé par les retards injustifiés 
@@ -204,151 +338,319 @@
       dans le processus d’adhésion, lesquels compromettent la crédibilité de l’Union, l’engagement des pays des Balkans occidentaux et le soutien de la population à l’adhésion à l’Union;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
-    <article>
-    <header>📝 Amendement n°5 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
-
-  
-      17. regrette que les principaux partis politiques ne soient pas parvenus à un accord sur la réforme électorale; invite les autorités albanaises à mettre en œuvre d’urgence les modifications en suspens du cadre de financement des élections et des partis bien avant les élections législatives de 2025, conformément aux recommandations de l’OSCE/BIDDH et de la Commission de Venise; invite les autorités à garantir la liberté d’association, y compris au sein des partis politiques, et la liberté de se présenter aux é
-  
+<p>
 
   
-      <del>lections </del>
+      17. regrette que les principaux partis politiques ne soient pas parvenus à un accord sur la réforme électorale; invite les autorités albanaises à mettre en œuvre d’urgence les modifications en suspens du cadre de financement des élections et des partis bien avant les élections législatives de 2025, conformément aux recommandations de l’OSCE/BIDDH et de la Commission de Venise; invite les autorités à garantir la liberté d’association, y compris au sein des partis politiques, et la liberté de se présenter aux élections
   
 
   
-      <ins>lections, y compris pour toutes les minorités et pour toutes les composantes de l’opposition, </ins>
+      <del> </del>
+  
+
+  
+      <ins>, y compris pour toutes les minorités et pour toutes les composantes de l’opposition, </ins>
   
 
   
       sans ingérence indue de l’État ou tout autre type d’ingérence, en améliorant encore l’accessibilité et l’intégrité des élections et en empêchant l’achat de voix et l’utilisation abusive des ressources administratives, notamment par le biais de la numérisation, de la protection des données et d’un accès équitable aux médias, afin de garantir un processus électoral juste, ouvert et transparent;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
-    <article>
-    <header>📝 Amendement n°6 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       35. prend acte des mesures juridiques prises en vue d’éliminer la discrimination à l’égard des minorités et demande la mise en place de mesures concrètes afin de garantir 
   
 
   
-      <del>l’inclusion </del>
+      <del>l’inclusion</del>
   
 
   
-      <ins>la protection </ins>
+      <ins>la protection</ins>
   
 
   
-      des minorités 
+       des minorités 
   
 
   
-      <del>LGBTIQ+,</del>
+      <del>LGBTIQ+, </del>
   
 
   
-      <ins>grecque,</ins>
+      <ins>grecque, </ins>
   
 
   
-       rom, é
+      rom, égyptienne
   
 
   
-      <del>gyptienne </del>
+      <del> </del>
   
 
   
-      <ins>gyptienne, LGBTIQ+ </ins>
+      <ins>, LGBTIQ+ </ins>
   
 
   
       et de toutes les autres minorités ethniques et culturelles; demande instamment aux autorités de lutter contre la discrimination intersectionnelle à laquelle ces groupes sont confrontés par une approche institutionnelle systémique dans toutes les sphères de la vie sociale, économique et politique et de veiller à ce qu’une enquête soit rapidement menée concernant les violations de leurs droits;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">254</div>
+  <div class="against">309</div>
+  <div class="abstention">44</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(254/607 * 100%)">254</div>
-  
-  
-    <div class="-" style="width: calc(309/607 * 100%)">309</div>
-  
-  
-    <div class="0" style="width: calc(44/607 * 100%)">44</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
-    
-    
+🚫 Annulé
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2199(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</header>
+            
+                <div class="hidden">ECR</div>
+                
+
+<p>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0204_FR.html" target="_blank">📜 Texte et amendements</a></li>
+      <ins>35 bis. est préoccupé par le cas de Fredi Beleri, maire élu d’Himara, issu de l’ethnie grecque, seule personne à avoir été arrêtée sur un total de 31 personnes supposées avoir «enfreint le règlement électoral»;</ins>
   
+ 
+</p>
+
+                <i>Déposé par 
+
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-07-12-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+    ECR
+    
+    
   
-</ul>
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Reconquête!</header>
+            . – Je vote, comme chaque fois, contre cette résolution annuelle qui soutient une adhésion rapide de l’Albanie à l’UE. La résolution énumère aussi les carences qui nous poussent à refuser cette adhésion. Je refuse toutes demandes d’élargissement des frontières de l’Union, élargissement qui vise à combler l’alignement géostratégique des pays candidats à la sphère euro-atlantique et qui ne tient plus compte des critères d’adhésion.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            . – Ce rapport invite l’Albanie à faire des efforts dans la mise en place et le respect des valeurs européennes, avec des progès nécessaire en matière de fonctionnement des institutions démocratiques, d’état de droit, de droits fondamentaux, et de réformes économiques et sociales. Le texte salue l’alignement rapide de l’Albanie sur l&#39;Union en politique étrangère en sanctionnant la Russie et ses dirigeants politiques pour leur agression contre l&#39;Ukraine. Toutefois, regrettant que ce texte fasse de la politique d’élargissement, je me suis abstenu sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Comme chaque année, le Parlement européen soutient fermement une adhésion rapide de l’Albanie à l’UE, après avoir énuméré la liste des carences qui justifieraient son refus. En outre, je ne peux pas soutenir l’intégration de ce pays en raison de son partenariat stratégique avec la Turquie, de son rôle de plaque tournante du trafic de drogue et d’armes mais aussi parce qu’il participe de facto au transit de « migrants » en direction de l’UE : j’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il soutient l’intégration de l’Albanie à l’UE, alors que ce pays connaît de graves problèmes de criminalité organisée et qu’il sert de pays de transit pour les migrants en Europe.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            Je me suis abstenue sur cette résolution relative à l’Albanie. Le texte dressait les avancées réalisées sur la voie de l’adhésion à l’Union européenne par cet État pour lequel les négociations d’adhésion ont été ouvertes en 2022. Le texte appelle l’Albanie à réaliser davantage de progrès dans un certain nombre de domaines (fonctionnement des institutions démocratiques, état de droit, droits fondamentaux, droits des minorités, réformes économiques et sociales, secteur de l’environnement de l’énergie et des transports, coopération régionale). Il invite l’UE à accélérer le processus d’adhésion de l’Albanie. Fidèle à mon engagement pris devant les électeurs de ne soutenir aucun nouvel élargissement de l’Union pendant mon mandat, je n’ai pas approuvé ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les recommandations du Parlement européen sur le processus d’adhésion de l’Albanie à l’Union européenne. Elle appelle à raison le gouvernement albanais à garantir le respect de l’Etat de droit, renforcer la lutte contre la corruption et lutter contre la discrimination des populations roms. Elle demande en revanche un rapprochement de l’Albanie avec l’OTAN et refuse d’évoquer la nécessaire harmonisation sociale qui doit être un préalable à tout élargissement de l’Union européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            Je me suis opposé à ce texte. Ayant comme priorité la sécurité des Français, je ne souhaite pas qu’un pays tel que l’Albanie actuelle, en partenariat stratégique avec la Turquie, plaque tournante du trafic de drogue et d’armes en Europe, route de transit pour l’immigration clandestine, puisse intégrer demain l’Union européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – En l’espèce, le rapport motive l’adhésion rapide de l’Albanie à l’Union Européenne par son alignement géostratégique à la sphère euro-atlantique mais aucunement pour les progrès de cet État; les carences qui justifieraient du refus de la demande de l’Albanie y sont pourtant clairement mentionnées. Ma position constante de refuser tout élargissement de nos frontières ne peut être que réitérée. Par ailleurs, le partenariat de l’Albanie avec la Turquie, les flux de trafics de drogues, d’armes et de migrants qui y circulent sont autant d’éléments qui mettraient en péril la sécurité des français. Il était donc nécessaire de s’opposer à ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Ce rapport appelle de nouveau à une procédure d’adhésion plus rapide pour l’Albanie, et ce après avoir énoncé les raisons qui justifieraient déjà un refus total. La position du Rassemblement National est claire, élargir via des ingérences étrangères une union déjà dysfonctionnelle et autoritaire n’arrangera en rien la situation.Il est en effet impossible de soutenir une adhésion de l’Albanie à l’Union européenne tant que le pays reste une plaque tournante du trafic d’armes et de drogue, et qu’il est lié politiquement avec une force hostile qu’est la Turquie d’Erdogan. Sans oublier bien sûr que son adhésion faciliterait l’arrivée de migrants sur le territoire européen, l’Albanie étant un pays emprunté par les convois de migrants cherchant à traverser les Balkans pour entrer en Europe.J’ai donc bien évidemment voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car le Parlement européen soutient fermement une adhésion rapide de l’Albanie à l’Union européenne, et cela tout juste après avoir énuméré la liste des carences qui justifieraient le refus de cette adhésion. Je ne peux pas soutenir l’intégration de l’Albanie en raison de son partenariat stratégique avec la Turquie, de son rôle comme plaque tournante du trafic de drogue et d’armes mais aussi de son rôle comme route de transit pour les migrants.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b>Marina MESURE</b> | La France Insoumise</header>
+            Ce rapport annuel étudie la situation politique en Albanie dans le cadre de son processus d’adhésion à l’Union européenne, candidate depuis 2014. Si le rapport comporte quelques éléments positifs sur les droits fondamentaux, le fonctionnement des institutions démocratiques et la société civile, un élargissement de l’Union Européenne doit rester conditionné à une stricte harmonisation sociale, fiscale et environnementale préalable : à défaut, cela revient à un élargissement de la guerre économique et du dumping. Ces conditions ne sont ici pas suffisamment assurées, et le texte plaide de surcroit pour une plus grande coopération de l’Albanie avec l’OTAN. J’ai donc décidé de m’abstenir sur ce rapport.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            
+                <p> – Madame la Présidente, Monsieur le Commissaire, ce rapport sur l’Albanie est d’une incohérence évidente. Ce pays frappe donc aux portes de l’Union européenne contre espèces sonnantes et trébuchantes, puisque 758 millions d’euros lui ont été alloués entre 2014 et 2020 au seul titre de l’instrument d’aide à la préadhésion.</p>
+            
+                <p>Pourtant, entre 2010 et 2019, plus de 193 000 Albanais ont demandé l’asile dans l’Union européenne pour des motifs qui faisaient particulièrement froid dans le dos – de la vendetta au trafic humain – afin d’être considérés comme réfugiés. L’année dernière, les mêmes Albanais grossissaient les rangs des embarcations de fortune traversant la Manche avant que Rishi Sunak n’y mette bon ordre. Est-ce là le niveau d’un futur État membre?</p>
+            
+                <p>J’ajoute qu’avec un salaire minimum tournant autour de 360 euros, l’Albanie représente une concurrence féroce, par exemple dans le secteur de l’habillement, et ce à l’heure où la Commission prétend dérouler pour cette filière une stratégie de durabilité et qu’une production locale renaît timidement de ses cendres dans ma région lorraine, en France.</p>
+            
+                <p>Je suis donc farouchement opposée à tout élargissement qui serait une aberration économique et civilisationnelle. </p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

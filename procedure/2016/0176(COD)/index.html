@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Directive relative à la carte bleue européenne</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,27 +22,92 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Directive relative à la carte bleue européenne</h2>
 
 
 
-
 <h3>🎯 Votes principaux</h3>
+
+    <article>
+    <header>👎 Rejet du texte | 
+
+❌️ Rejeté
+
+</header>
+    
+        <i>Demandé par 
+
+
+</i>
+        <hr>
+    
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
+        <section>
+
+<div class="votes">
+  
+    <div class="for" style="width: calc(104/690 * 100%)">104</div>
+  
+  
+    <div class="against" style="width: calc(572/690 * 100%)">572</div>
+  
+  
+    <div class="abstention" style="width: calc(14/690 * 100%)">14</div>
+  
+</div>
+</section>
+        <hr>
+        <b>🇫🇷 Votes des députés français</b>
+        
+        
+            <section>
+
+
+
+<div class="votes">
+  
+    <div class="for" style="width: calc(23/79 * 100%)">23</div>
+  
+  
+    <div class="against" style="width: calc(56/79 * 100%)">56</div>
+  
+  
+</div>
+ 
+</section>
+            <a role="button" href="/voting/135152">🗳 Voir le détail du vote</a>
+        
+    
+    </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -49,22 +115,7 @@
     
         
         
-            <li>Main-d&#39;oeuvre, mobilité et conversion professionnelles, conditions de travail </li>
-        
-    
-        
-        
             <li>Cohésion économique, sociale et territoriale</li>
-        
-    
-        
-        
-            <li>Libre circulation et intégration des ressortissants des pays-tiers</li>
-        
-    
-        
-        
-            <li>Espace de liberté, de sécurité et de justice</li>
         
     
         
@@ -74,7 +125,22 @@
     
         
         
+            <li>Espace de liberté, de sécurité et de justice</li>
+        
+    
+        
+        
             <li>Politique de l&#39;emploi, lutte contre le chomage</li>
+        
+    
+        
+        
+            <li>Libre circulation et intégration des ressortissants des pays-tiers</li>
+        
+    
+        
+        
+            <li>Main-d&#39;oeuvre, mobilité et conversion professionnelles, conditions de travail </li>
         
     
         
@@ -84,17 +150,267 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2016/0176(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2016/0176(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-8-2017-0240_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-09-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b></b> | </header>
+            . – Sous couvert de faire venir une main d’œuvre hautement qualifiée, cette révision de la directive ouvre en fait la voie à une immigration de travailleurs peu qualifiés et participera davantage à la submersion migratoire de l’Europe. La Commission européenne ne s’en cache d’ailleurs pas puisque, pour sa commissaire aux affaires intérieures, Ylva Johansson, cette directive est «une composante clef du nouveau pacte Asile et migration qui nous permettra de normaliser la politique de migration». J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b></b> | </header>
+            J&#39;ai voté pour la proposition de rejet déposée par le groupe Identité et Démocratie et contre l&#39;accord provisoire. En effet, ce texte abaisse les critères d&#39;admission de la directive &quot;carte bleue&quot;, initiée en 2009, et étend les droits des bénéficiaires: en particulier, la mobilité à l&#39;intérieur de l&#39;Union européenne est simplifiée et les procédures de regroupement familial sont facilitées.
+        </article>
+    
+        <article>
+            <div class="hidden">96952</div>
+            
+            <header><b></b> | </header>
+            J’ai voté en faveur de la révision proposée de la directive dite «Blue card», qui vise à faciliter l’emploi des ressortissants extra-européens hautement qualifiés au sein de l’Union. Cette révision met en effet en place de manière bienvenue des critères plus flexibles pour les demandeurs qui souhaitent bénéficier de cette «Blue Card» et veut faciliter la mobilité intra-européenne et le regroupement familial.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b></b> | </header>
+            J’ai soutenu les nouvelles règles relatives à la carte bleue européenne, un titre de séjour accordé aux ressortissants de pays tiers qui ont un haut niveau de qualification. Il faut savoir qu’en France, moins de 10 000 «passeports talent» sont délivrés chaque année du fait des critères hautement sélectifs (niveau de qualification, durée du contrat de travail conclu avant l&#39;arrivée en Europe, niveau de salaire).Nous ne parlons donc pas d’une menace ou d’une vague migratoire mais de visas permettant d’attirer les personnes les plus talentueuses qui ne menacent pas mais servent le marché de l’emploi.La nouvelle réglementation sur la carte bleue européenne assouplit les critères car ceux-ci étaient trop restrictifs et échouaient à attirer les profils de haut niveau. Le seuil salarial sera fixé entre 1 et 1,4 fois le salaire moyen, la mobilité intra-européenne sera facilitée et naturellement, l’État membre pourra refuser cette carte bleue pour les secteurs non soumis à une pénurie, en cas de menace pour la sécurité et l’ordre public.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b></b> | </header>
+            Sous couvert de faire venir une main d’œuvre hautement qualifiée, cette révision de la directive ouvre en fait la voie à une immigration de travailleurs peu qualifiés et participera davantage à la submersion migratoire de l’Europe. J’ai voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">22858</div>
+            
+            <header><b></b> | </header>
+            Je me félicite de l’adoption de la révision de la directive « Carte bleue européenne ». Cette directive définit les règles d’entrée, de résidence et de travail dans l’Union européenne pour les personnes hautement qualifiées et leur famille.Cette nouvelle Carte bleue européenne permettra de pallier les lacunes du dispositif actuel qui date de 2009 et d’attirer les travailleurs hautement qualifiés dans l’Union.Le texte prévoit une procédure simplifiée et moins bureaucratique, à la fois pour les candidats et pour les employeurs. Il facilite aussi l’accès des travailleurs saisonniers, des réfugiés et des contrats courts sur le marché du travail européen.Les bénéficiaires de la Carte bleue pourront également se déplacer plus facilement d’un État membre à un autre. Aussi, en cas de perte d’emploi, ils resteront détendeurs de la Carte pendant six mois, le temps de trouver un nouvel emploi.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b></b> | </header>
+            J’ai voté contre ce rapport car, sous couvert de faire venir en Europe une main d’œuvre hautement qualifiée, il appelle à une immigration plus importante au sein de l’Union européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b></b> | </header>
+            J’ai voté en faveur de ce rapport relatif à la Directive « carte bleue européenne ». Cet accord de trilogue assouplit plusieurs critères en vue de délivrer davantage de titres de séjour de type « passeport talent », ce qui correspond à une demande des acteurs économiques et s&#39;avère de nature à renforcer l&#39;attractivité du territoire européen pour les hauts potentiels. Mais il préserve le caractère sélectif et précaire du titre, qui s’adresse par exemple à des chercheurs ou des salariés de haut niveau, en conformité avec ma conception de l’immigration choisie : nécessité pour le demandeur d’avoir signé préalablement un contrat de travail avec un salaire d’au moins 38 000 euros bruts annuels (pour la France), possibilité de refuser de délivrer un titre de séjour dans le cas d’un chômage trop élevé dans le secteur considéré ou d’une menace pour la sécurité nationale, droit de retirer le titre de séjour après 6 mois de chômage.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b></b> | </header>
+            J’ai décidé de voter en faveur de cet accord de trilogue qui finalise la révision de la directive dite « carte bleue européenne ». Cette directive organise l&#39;entrée et le séjour dans l&#39;Union des ressortissants de pays tiers titulaires d&#39;un emploi hautement qualifié. La première version de cette directive était l&#39;une de nos priorités politiques lors de la présidence française de l’Union européenne de 2008. Achevée en 2009, elle a été transposée sous le mandat de Nicolas SARKOZY et se traduit dans notre droit sous la forme du &quot;passeport talent&quot;, un titre de séjour particulièrement sélectif (niveau de qualification, durée du contrat de travail conclu avant l&#39;arrivée en Europe, niveau de salaire), difficile à obtenir et facile à perdre, en conformité avec notre conception de l&#39;immigration choisie.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b></b> | </header>
+            Ce rapport vise à réformer le système de “carte bleue” qui réglemente les conditions d’entrée et de séjour des travailleurs immigrés hautement qualifiés. Elle prévoit notamment d’inclure dans son champ d’application les personnes relevant de l’asile ou de la protection internationale, de renforcer l’implication des partenaires sociaux, de faciliter la procédure pour les regroupements familiaux et d’abaisser les seuils de rémunération nécessaires afin de toucher un plus grand nombre de bénéficiaires potentiels. J’ai donc voté pour ce texte qui va dans le sens d’une amélioration du dispositif “carte bleue” à la fois en termes d’éligibilité et de droits pour les travailleurs concernés.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b></b> | </header>
+            Ce texte détermine les nouvelles règles régissant l’entrée et le séjour des ressortissants d’États tiers hautement qualifiés venant travailler sur le territoire européen, notamment concernant l’octroi de la carte de séjour temporaire européenne. Ces nouvelles règles prévoient des critères d’admission moins drastiques, l’abaissement du seuil du salaire minimum que les demandeurs doivent gagner pour être éligibles à ladite carte et la facilitation des déplacements entre pays de l’Union et du regroupement familial pour les titulaires de la carte. Dans l’ensemble, cela va dans le sens d’une meilleure protection et prise en compte de la situation spécifique des travailleurs extra-européens.
+        </article>
+    
+        <article>
+            <div class="hidden">197536</div>
+            
+            <header><b></b> | </header>
+            J’ai voté en faveur de la révision de la directive carte bleue européenne qui organise l’entrée et le séjour dans l’Union des ressortissants de pays tiers titulaires d’un emploi hautement qualifié. En France, moins de 10 000 «cartes bleues» sont délivrées chaque année en raison de critères particulièrement sélectifs (niveau de qualification, durée du contrat de travail conclu avant l’arrivée en Europe, niveau de salaire).Ce type de visa permet d’accueillir dans l’Union européenne des personnes hautement qualifiées dans des secteurs souvent en tension. La révision intervient notamment à la demande des acteurs économiques qui considéraient les critères trop stricts pour attirer suffisamment de talents sur le sol européen dans des domaines en pénurie de main d’œuvre.Les nouveaux critères sont plus souples mais restent de nature à n’attirer que des hauts potentiels. Par exemple, le salaire du détenteur de la «carte bleue» devrait être compris dans une fourchette de salaire égal à supérieur de 40 % au salaire moyen de l’État membre, soit pour la France entre 38 000 et 53 000 euros bruts annuels.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b></b> | </header>
+            . – Contrairement à ce qu’elle tente de faire croire avec sa nouvelle directive «carte bleue européenne» dont le but est de donner des permis de travail à des «immigrants hautement qualifiés» venant de pays tiers, l’Europe de Bruxelles favorise en réalité la venue de travailleurs peu qualifiés et accentue la submersion migratoire de l’UE.En effet, remplaçant la règlementation initiale de 2009 qui «n&#39;a pas attiré suffisamment ces travailleurs dont l’Union a tant besoin», ce texte élargit son champ d’application en abaissant les critères d’admission pour en bénéficier (diminution du seuil minimal du salaire que les demandeurs doivent gagner; obtention d’un contrat de travail valide ou d’une offre d’emploi ferme de six mois au lieu de deux ans auparavant; preuve d’une expérience professionnelle au lieu d’un diplôme) et étend les droits de ses bénéficiaires (simplification des déplacements dans l’UE; procédures de regroupement familial plus rapides avec accès des conjoints au marché du travail).Cette autorisation de travail sera même ouverte aux bénéficiaires d’une protection internationale, tels que les réfugiés.«Composante clef du nouveau pacte Asile et migration qui nous permettra de normaliser la politique de migration» selon la Commission européenne, cette directive, à laquelle les élus du Rassemblement National se sont opposés contrairement à tous les autres partis français présents au Parlement européen, constitue également une concurrence déloyale pour les salariés européens.Pour Bruxelles, tous les moyens sont bons pour transformer l’immigration illégale en immigration légale et ainsi donner l’apparence d’un contrôle. La politique immigrationniste de l’Union européenne, cautionnée et encouragée par le Président Macron, constitue un danger mortel pour notre civilisation.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b></b> | </header>
+            Sous couvert de faire venir une main d’œuvre hautement qualifiée, cette révision de la directive ouvre en fait la voie à une immigration de travailleurs peu qualifiés et participera davantage à la submersion migratoire de l’Europe. La Commission européenne ne s’en cache d’ailleurs pas puisque pour sa commissaire aux Affaires intérieures, Ylva Johansson, cette directive est « une composante clef du nouveau Pacte Asile et migration qui nous permettra de normaliser la politique de migration ».J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b></b> | </header>
+            . – Ce texte ne suscite aucun débat, il ouvre une nouvelle voie à une immigration de travailleurs peu qualifiés et accélère la submersion migratoire de l’Europe. Je milite pour l’inversion des flux migratoires, j’ai donc voté contre ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b></b> | </header>
+            La proposition de directive, qui remplacerait la directive &quot;carte bleue&quot; de 2009, vise à accroître l&#39;attrait du « régime migratoire hautement qualifié de l&#39;UE ». Les négociations interinstitutionnelles sur ce dossier étaient bloquées sous l’ancienne législature mais le &quot;nouveau pacte sur les migrations et l&#39;asile&quot; de la Commission européenne a souligné la nécessité de les finaliser. Cette directive vise à harmoniser davantage les règles en matière de migration légale de travail dans l&#39;UE afin d’attirer des travailleurs soi-disant hautement qualifiés en élargissant son champ d&#39;application, en abaissant les critères d&#39;admission ou en étendant les droits des bénéficiaires. En vertu des nouvelles règles, les demandeurs de la carte bleue - qui pourront également faire leur demande depuis le territoire de l&#39;UE - devront présenter un contrat de travail ou une offre d&#39;emploi ferme d&#39;une durée minimale de six mois. Sous couvert de faire venir une main d’œuvre hautement qualifiée, cette révision de la directive ouvre en fait la voie à une immigration de travailleurs peu qualifiés et participera davantage à la submersion migratoire de l’Europe. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b></b> | </header>
+            La proposition de directive, qui remplacerait la directive &quot;carte bleue&quot; de 2009, vise à accroître l’attrait du «régime migratoire hautement qualifié de l’UE».Cette directive vise à harmoniser davantage les règles en matière de migration légale de travail dans l’UE afin d’attirer des travailleurs soi-disant hautement qualifiés en élargissant son champ d’application, en abaissant les critères d’admission ou en étendant les droits des bénéficiaires.En vertu des nouvelles règles, les demandeurs de la carte bleue – qui pourront également faire leur demande depuis le territoire de l’UE – devront présenter un contrat de travail ou une offre d’emploi ferme d’une durée minimale de six mois.Sous couvert de faire venir une main d’œuvre hautement qualifiée, cette révision de la directive ouvre en fait la voie à une immigration de travailleurs peu qualifiés et participera davantage à la submersion migratoire de l’Europe.J’ai évidemment voté contre ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b></b> | </header>
+            La proposition de directive, qui remplacerait la directive «carte bleue» de 2009, vise à accroître l4attrait du «régime migratoire hautement qualifié de l4UE». Mais au prétexte de faire venir une main d’œuvre hautement qualifiée, cette révision de la directive ouvre en fait la voie à une immigration de travailleurs peu qualifiés et participera davantage à la submersion migratoire de l’Europe. J’ai voté contre.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">96952</div>
+            
+            <header><b></b> | </header>
+            
+                <p>Mais cette étape est bienvenue dans la construction d’une politique européenne respectueuse des droits individuels et ouverte aux défis du présent en matière de migrations de travail, vous l’avez rappelé, Madame la Commissaire. Car la migration, bien que combattue violemment, caricaturée et manipulée dans certaines formations politiques, est une réalité démographique, économique et humaine incontestable.</p>
+            
+                <p>Nous devons garder également à l’esprit qu’avoir plus de voies légales, c’est casser le </p>
+            
+                <p>Chers collègues, j’en appelle à vous pour montrer le même soutien aujourd’hui à cette directive dont les débats ont été conclus avec talent par Javier Moreno Sánchez. C’est une question de bon sens et d’humanité. C’est aussi une question économique et sociale pour protéger tous les travailleurs, européens ou non, moins bien rémunérés et plus exposés aux risques d’exploitation.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b></b> | </header>
+            
+                <p> – Monsieur le Président, chers collègues, d’après les projections officielles, la population active de l’Union européenne devrait perdre 40 millions de travailleurs d’ici 2070. Pour résoudre cette crise démographique, l’Union commet l’erreur de vouloir recourir à l’émigration alors que l’incitation à des politiques natalistes serait bien préférable. La carte bleue européenne est le fer de lance de cette immigration de travail. Créée dès 2009, elle consiste officiellement à faire venir en Europe les travailleurs qualifiés qui nous manquent. Les États européens ont heureusement été réticents à l’utiliser jusqu’ici.</p>
+            
+                <p>Plutôt que de prendre acte de son échec, l’actuel projet de révision tente de lui redonner un second souffle en abaissant les conditions de qualification pour l’obtenir et en facilitant le regroupement familial des travailleurs concernés. La Commission reconnaît que ce projet a pour but, je cite, de normaliser la politique de migration dans le cadre du nouveau pacte migratoire européen. C’est pourquoi je m’y oppose fermement.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
+
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

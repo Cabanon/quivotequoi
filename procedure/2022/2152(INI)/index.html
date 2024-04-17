@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Résolution sur la protection des intérêts financiers de l’Union européenne – lutte contre la fraude – rapport annuel 2021</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Résolution sur la protection des intérêts financiers de l’Union européenne – lutte contre la fraude – rapport annuel 2021</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(459/548 * 100%)">459</div>
-  
-  
-    <div class="-" style="width: calc(33/548 * 100%)">33</div>
+    <div class="for" style="width: calc(459/548 * 100%)">459</div>
   
   
-    <div class="0" style="width: calc(56/548 * 100%)">56</div>
+    <div class="against" style="width: calc(33/548 * 100%)">33</div>
+  
+  
+    <div class="abstention" style="width: calc(56/548 * 100%)">56</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,30 +88,26 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(39/55 * 100%)">39</div>
+    <div class="for" style="width: calc(39/55 * 100%)">39</div>
   
   
-    <div class="-" style="width: calc(15/55 * 100%)">15</div>
+    <div class="against" style="width: calc(15/55 * 100%)">15</div>
   
   
-    <div class="0" style="width: calc(1/55 * 100%)">1</div>
+    <div class="abstention" style="width: calc(1/55 * 100%)">1</div>
   
 </div>
  
 </section>
-            <a href="/voting/151811">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/151811">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Etat et évolution de l&#39;Union</li>
-        
     
         
         
@@ -119,304 +119,575 @@
             <li>Protection des intérêts financiers de l&#39;UE contre la fraude</li>
         
     
+        
+        
+            <li>Etat et évolution de l&#39;Union</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2152(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0299_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-01-19-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197615">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197629">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>F bis. considérant que la Commission devrait appliquer les mêmes critères, fondés sur le respect de l’état de droit, en ce qui concerne les fonds octroyés à des pays tiers dans le cadre du budget de l’Union, et adopter une position intransigeante afin de mettre un terme à toute transaction financière en cours vers ces pays dans les cas où ces derniers exercent une influence injustifiée sur les institutions ou sur les législateurs de l’Union;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°2 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>23 bis. est consterné par le fait qu’au moins deux pays tiers ont été en mesure de commettre des actes de corruption de haut niveau et d’exercer une influence indue sur les députés, ce qui a donné lieu à des enquêtes pénales menées par les autorités belges en décembre 2022; souligne que de telles relations menacent le principe de la représentation démocratique des citoyens dans le processus décisionnel de l’Union et sapent la confiance des citoyens dans les institutions de l’Union; demande à cet égard à la Commission de présenter dès que possible un projet d’accord interinstitutionnel en vue de la création d’un organisme européen chargé des questions d’éthique doté de l’indépendance nécessaire et du droit de mener ses propres enquêtes, comme le demande le Parlement depuis septembre 2021, afin de remédier aux faiblesses du système actuel;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">347</div>
+  <div class="against">180</div>
+  <div class="abstention">19</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(347/546 * 100%)">347</div>
-  
-  
-    <div class="-" style="width: calc(180/546 * 100%)">180</div>
-  
-  
-    <div class="0" style="width: calc(19/546 * 100%)">19</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
+<p>
 
   
       <ins>– considérant sa résolution du 15 décembre 2022 sur les soupçons de corruption de la part du Qatar et nécessité, plus largement, de transparence et de responsabilité au sein des institutions européennes1bis,  ______________  1bis Textes adoptés de cette date,</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
     
-    <article>
-    <header>📝 Amendement n°5 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">RE</div>
+                
+
+<p>
+
+  
+      <ins>23 bis. demande une nouvelle fois à la Commission de présenter dès que possible une proposition visant à mettre en place l’organisme européen indépendant chargé des questions d’éthique, conformément à la résolution du Parlement  _______________  1arésolution du Parlement du 16 septembre 2021 sur le renforcement de la transparence et de l’intégrité des institutions de l’Union par la création d’un organisme européen indépendant chargé des questions d’éthique. JO C 117</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
+<p>
 
   
       <ins>23 ter. estime qu’une révision du statut des fonctionnaires, et en particulier de son article 22, point c), est nécessaire afin de l’aligner sur la directive sur les lanceurs d’alerte; invite le Bureau, dans l’intervalle, à réviser immédiatement les règles internes du Parlement relatives à la mise en œuvre de l’article 22, point c), du statut des fonctionnaires afin de les aligner sur les protections prévues par la directive sur les lanceurs d’alerte;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">384</div>
+  <div class="against">146</div>
+  <div class="abstention">2</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(384/532 * 100%)">384</div>
-  
-  
-    <div class="-" style="width: calc(146/532 * 100%)">146</div>
-  
-  
-    <div class="0" style="width: calc(2/532 * 100%)">2</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
+<p>
 
   
       <ins>24 bis. insiste sur le rôle du Parquet européen, de l’Agence de l’Union européenne pour la coopération judiciaire en matière pénale (Eurojust), d’Europol et de l’Office européen de lutte antifraude (OLAF) dans la lutte contre la corruption; préconise de renforcer encore les moyens et la coopération de l’OLAF et du Parquet européen; plaide pour des règles communes de lutte contre la corruption applicables aux députés et au personnel des organes de l’Union;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
     
-    <article>
-    <header>📝 Amendement n°7 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
+<p>
 
   
       <ins>B bis. considérant que la confiance dans l’intégrité du Parlement et l’état de droit est primordiale pour le fonctionnement de la démocratie européenne; qu’il est essentiel de veiller à ce que les processus démocratiques ne soient pas subordonnés à des intérêts privés et externes et à ce que les droits des citoyens soient pleinement respectés;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
     
-    <article>
-    <header>📝 Amendement n°8 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
-
-  
-      23. souligne que la corruption, en particulier la corruption de haut niveau, 
-  
+<p>
 
   
-      <ins>y compris dans les institutions de l’Union, </ins>
+      23. souligne que la corruption, en particulier la corruption de haut niveau,
   
 
   
-      est une activité criminelle particulièrement grave, susceptible de s’étendre au-
+      <ins> y compris dans les institutions de l’Union,</ins>
   
 
   
-      <ins> </ins>
+       est une activité criminelle particulièrement grave, susceptible de s’étendre au
+  
+
+  
+      <del>-</del>
+  
+
+  
+      <ins>- </ins>
   
 
   
       delà des frontières, dont l’impact porte atteinte aux intérêts financiers de l’Union et à l’économie de l’Union dans son ensemble, et qu’elle constitue une menace grave pour la démocratie, les droits fondamentaux et l’état de droit dans toute l’Europe tout en ébranlant la confiance des citoyens à l’égard des institutions démocratiques de l’Union et des États membres;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°9 | Partie 1 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | Partie 2 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
     
+        
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">S&amp;D</div>
+                
+
+<p>
+
+  
+      <ins>25 bis. demande à cet égard une nouvelle fois à la Commission de présenter dès que possible une proposition visant à mettre en place l’organisme européen indépendant chargé des questions d’éthique, conformément à ses résolutions du 16 septembre 2021 et du 15 décembre 2022;</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°11 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       59. souligne la valeur ajoutée que les organismes de l’Union apportent à la protection des intérêts financiers de l’Union et à la lutte contre la fraude, en surmontant les limitations des systèmes nationaux, en particulier en ce qui concerne la criminalité transfrontière, comme en témoignent les résultats opérationnels obtenus par le Parquet européen et l’OLAF;
@@ -426,160 +697,286 @@
       <ins> met l’accent sur le rôle du Parquet européen, d’Eurojust, d’Europol et de l’OLAF dans la lutte contre la corruption;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°12 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
-
-  
-      111. rappelle que pour protéger efficacement les intérêts financiers de l’Union, il convient de mettre en place des règles plus cohérentes et plus systématiques en matière de transparence, d’incompatibilités, de conflits d’intérêts, de lobbying illégal et de pantouflage; 
-  
+<p>
 
   
-      <ins>souligne la nécessité de renforcer le registre de transparence de l’Union; </ins>
+      111. rappelle que pour protéger efficacement les intérêts financiers de l’Union, il convient de mettre en place des règles plus cohérentes et plus systématiques en matière de transparence, d’incompatibilités, de conflits d’intérêts, de lobbying illégal et de pantouflage;
   
 
   
-      invite la Commission à renforcer ses mécanismes de contrôle interne, notamment par la mise en place d’un mécanisme interne de lutte contre la corruption pour les institutions de l’Union;
+      <ins> souligne la nécessité de renforcer le registre de transparence de l’Union;</ins>
+  
+
+  
+       invite la Commission à renforcer ses mécanismes de contrôle interne, notamment par la mise en place d’un mécanisme interne de lutte contre la corruption pour les institutions de l’Union;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°13 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="13">
+            <header>📝 Amendement n°13 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      31. fait observer que la Chine reste le pays d’origine de la plupart des marchandises concernées par des irrégularités; souligne qu’un certain nombre de cas examinés, qui concernaient des produits expédiés de Chine, sont emblématiques des défis posés par l’initiative «Une ceinture, une route» de la Chine; se dit préoccupé par la récurrence des cas de prise en charge et de contournement des mesures de défense commerciale ainsi que par la difficulté de les détecter; invite la Commission à adopter des contre-mesures et à les déployer massivement pour lutter contre les pratiques commerciales dé
-  
+<p>
 
   
-      <del>loyales;</del>
+      31. fait observer que la Chine reste le pays d’origine de la plupart des marchandises concernées par des irrégularités; souligne qu’un certain nombre de cas examinés, qui concernaient des produits expédiés de Chine, sont emblématiques des défis posés par l’initiative «Une ceinture, une route» de la Chine; se dit préoccupé par la récurrence des cas de prise en charge et de contournement des mesures de défense commerciale ainsi que par la difficulté de les détecter; invite la Commission à adopter des contre-mesures et à les déployer massivement pour lutter contre les pratiques commerciales déloyales
   
 
   
-      <ins>loyales et réduire encore la dépendance de l’Europe à l’égard de la production de pays extérieurs à l’Union;</ins>
+      <ins> et réduire encore la dépendance de l’Europe à l’égard de la production de pays extérieurs à l’Union</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°14 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="14">
+            <header>📝 Amendement n°14 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       56. 
   
 
   
-      <del>salue </del>
+      <del>salue</del>
   
 
   
-      <ins>prend acte de </ins>
+      <ins>prend acte de</ins>
   
 
   
-      la décision adoptée par le Comité consultatif pour la coordination de la lutte contre la fraude (COCOLAF) en vue de la constitution d’un groupe d’experts spécialisé dans l’utilisation d’outils 
+       la décision adoptée par le Comité consultatif pour la coordination de la lutte contre la fraude (COCOLAF) en vue de la constitution d’un groupe d’experts spécialisé dans l’utilisation d’outils 
   
 
   
-      <del>informatiques </del>
+      <del>informatiques</del>
   
 
   
-      <ins>informsatiques </ins>
+      <ins>informsatiques</ins>
   
 
   
-      pour la protection des ressources provenant de la 
+       pour la protection des ressources provenant de la FRR
   
 
   
-      <del>FRR;</del>
+      <ins>, et demande la plus grande vigilance pour détecter et combattre la fraude liée à la FRR tant que les projets financés se poursuivent</ins>
   
 
   
-      <ins>FRR, et demande la plus grande vigilance pour détecter et combattre la fraude liée à la FRR tant que les projets financés se poursuivent;</ins>
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2152(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0299_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
   
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-01-19-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport, car la réponse de l’Union européenne à la fraude implique des prérogatives renforcées à la Commission, à l’OLAF et au Parquet européen, ce que je ne souhaite pas.Pour autant, j’ai soutenu certains amendements visant, entre autres choses, à éviter le « pantouflage » des anciens députés et fonctionnaires européens en généralisant une pratique de période de carence minimale, ou encore relativement à la protection des lanceurs d’alerte.D’une manière générale, le nombre de cas de fraude et d’irrégularités signalés par l’Union européenne et les autorités nationales est resté stable par rapport en 2020, mais leur valeur a fortement augmenté.Des dérogations ont été accordées pendant la période de COVID-19, ce qui a, il est vrai, élargi la marge de manœuvre des fraudeurs.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Comme je refuse de donner à la Commission, à l&#39;OLAF et au Parquet européen plus de pouvoirs et de compétences, et que je refuse tout autant d’obliger les États membres à être plus transparents en les sanctionnant, je me suis opposée à ce texte qui entend établir un super pouvoir d&#39;autoritaire en appliquant plus largement le mécanisme de conditionnalité et en sanctionnant les Etats membres afin qu&#39;ils se plient à la volonté de la Commission européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car sous prétexte de lutter contre la fraude au niveau européen, il souhaite donner à la Commission, au parquet européen et à l’OLAF plus de compétences en matière de justice. Or, avec le Qatargate, nous avons vu que ces organes n’ont pas su (ou voulu) voir ce qui était pourtant évident : l’existence de corruptions massives au sein même des institutions européennes.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Ce rapport d’initiative annuel a pour objectif d’évaluer l’état d’avancement de la protection des intérêts financiers de l’Union en 2021, en mettant particulièrement l’accent sur la lutte contre la fraude. Ce texte comporte de très bons éléments, notamment sur la transparence et les conditionnalités sociales. J’ai voté en faveur.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            . – Je me suis abstenue sur cette résolution relative à la lutte contre la fraude. Le texte contenait des préconisations intéressantes, notamment dans le domaine de la numérisation pour mieux détecter les fraudes. Il estimait toutefois insuffisants les efforts déployés par la Hongrie dans le cadre du mécanisme de conditionnalité, alors que les États membres ont pourtant approuvé le plan de relance hongrois. Pour ma part, je considère qu’il est irresponsable de continuer de priver le peuple hongrois des fonds européens du plan de relance en pleine guerre en Ukraine, ce à quoi il faut ajouer une inflation nationale de plus de 22 %.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre ce texte car l’extension des compétences de la Commission européenne, de l&#39;OLAF et du Parquet européen pose un gros problème, surtout pour les minorités politiques comme la nôtre. Comme d&#39;habitude et exprimé dans de multiples rapports précédents, la réponse du Parlement à la lutte contre la fraude est toujours : d&#39;une part, donner à la Commission, à l&#39;OLAF et au Parquet européen plus de pouvoirs et de compétences, et d&#39;autre part, obliger les États membres à être plus transparents en les sanctionnant.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b>Marina MESURE</b> | La France Insoumise</header>
+            Ce texte consiste à évaluer l’état d’avancement de la protection des intérêts financiers de l’Union en 2021, en mettant particulièrement l’accent sur la lutte contre la fraude. Du fait des investissements sans précédent effectués par l’Union dans le cadre des budgets des années passées et à plus forte raison depuis son plan de relance lié à la crise, le texte insiste sur l’importance d’effectuer des contrôles plus exigeants de ces dépenses. Grâce à nous, ce texte met aussi davantage l’accent sur la transparence, sur le pantouflage (passage pour une personne d’un poste de législateur/régulateur à un poste dans le privé, qui est affecté par les normes qu’elle a participé à construire dans sa fonction précédente) ainsi que sur les lobbys et les conflits d’intérêt. De plus, parmi les principaux délits identifiés, le rapport mentionne en particulier le crime organisé et la corruption, et il demande l’alignement du droit pénal des États membres en la matière. La lutte contre la corruption et le bon usage de l’argent des contribuables européens sont des principes essentiels pour moi, si bien que j’ai voté en faveur de ce texte.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            
+                <p> – Madame la Présidente, chers collègues, le rapport 2021 sur la lutte contre la fraude repose sur un constat inquiétant: le montant des irrégularités dépasse 3 milliards d’euros, contre 1 milliard et demi en 2020. Il propose donc plusieurs mesures pour tâcher de remédier à cette situation. Certaines sont intéressantes, comme la suggestion d’obliger la Commission à produire un rapport annuel sur la corruption. Compte tenu du Qatar Gate, c’est une proposition bienvenue. D’autres, en revanche, tentent de profiter de la situation pour accélérer la fédéralisation de l’Union. J’y suis totalement hostile.</p>
+            
+                <p>Je suis contre la proposition d’augmenter les pouvoirs de l’OLAF et du Parquet européen, qui viennent d’administrer la preuve de leur cécité. Contre la stigmatisation des cinq États membres qui ont refusé d’adhérer au Parquet européen, ce qui est leur droit. Et contre l’extension du mécanisme de conditionnalité en vue de priver de subventions les États qui ne coopéraient pas assez avec l’OLAF et le Parquet européen. Ce n’est pas en transformant l’Union en une Europe à la schlague qu’on restaurera sa crédibilité. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197577</div>
+            
+            <header><b>Gilles BOYER</b> | Horizons</header>
+            
+                <p> – Madame la Présidente, les risques qui pèsent aujourd’hui sur les intérêts financiers de l’Union européenne sont immenses, d’ailleurs à la hauteur des sommes colossales qui sont engagées dans les plans de relance nationaux. Notre Union s’est engagée fortement ces dernières années dans la consolidation de son architecture antifraude avec la mise en place du Parquet européen. Le rapport que nous voterons demain illustre clairement cette dynamique positive.</p>
+            
+                <p>Nous devons poursuivre nos efforts en donnant à cette architecture antifraude les moyens de fonctionner pleinement à l’aide de moyens humains, financiers et technologiques accrus pour l’OLAF et pour le Parquet européen, mais aussi en nous attaquant sous tous les angles possibles à la criminalité organisée et à la corruption à tous les niveaux. Le travail est engagé en ce sens avec le développement de règles et d’outils efficaces pour lutter contre le blanchiment et l’évasion fiscale. C’est ainsi que nous renforcerons la confiance dans l’Europe que nous souhaitons, car les intérêts financiers de l’Union, ce sont avant tout, ne l’oublions pas, les intérêts des contribuables et des citoyens européens. </p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Rapport de mise en œuvre de la stratégie de l’Union en faveur de l’égalité de traitement à l’égard des personnes LGBTIQ pour la période 2020-2025</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Rapport de mise en œuvre de la stratégie de l’Union en faveur de l’égalité de traitement à l’égard des personnes LGBTIQ pour la période 2020-2025</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(392/543 * 100%)">392</div>
-  
-  
-    <div class="-" style="width: calc(119/543 * 100%)">119</div>
+    <div class="for" style="width: calc(392/543 * 100%)">392</div>
   
   
-    <div class="0" style="width: calc(32/543 * 100%)">32</div>
+    <div class="against" style="width: calc(119/543 * 100%)">119</div>
+  
+  
+    <div class="abstention" style="width: calc(32/543 * 100%)">32</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(37/62 * 100%)">37</div>
+    <div class="for" style="width: calc(37/62 * 100%)">37</div>
   
   
-    <div class="-" style="width: calc(19/62 * 100%)">19</div>
+    <div class="against" style="width: calc(19/62 * 100%)">19</div>
   
   
-    <div class="0" style="width: calc(6/62 * 100%)">6</div>
+    <div class="abstention" style="width: calc(6/62 * 100%)">6</div>
   
 </div>
  
 </section>
-            <a href="/voting/164215">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/164215">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -111,463 +116,622 @@
     
         
         
-            <li>Politique sociale, charte et protocole social</li>
+            <li>Cohésion économique, sociale et territoriale</li>
         
     
         
         
-            <li>Cohésion économique, sociale et territoriale</li>
+            <li>Politique sociale, charte et protocole social</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/2082(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2024-0030_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-02-08-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,124693,197694,197697,197698,204418,245018">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,204418,245018">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,124693">🇫🇷 Renaissance</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197626,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197626,197629,197615">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       1. 
   
 
   
-      <del>se félicite </del>
+      <del>se félicite</del>
   
 
   
-      <ins>prend acte </ins>
+      <ins>prend acte</ins>
   
 
   
-      de la stratégie en faveur de l’égalité des personnes LGBTIQ pour la Commission le 12 novembre 2020 l’état d’avancement de la mise en place de cette stratégie; 
+       de la stratégie en faveur de l’égalité des personnes LGBTIQ pour la Commission le 12 novembre 2020 l’état d’avancement de la mise en place de cette stratégie; 
   
 
   
-      <del>prend acte de la détermination de la Commission à accompagner les États membres dans la mise en place de la stratégie; se dit profondément préoccupé par les disparités d’ouverture à la stratégie d’un État membre à l’autre; se félicite des efforts déployés par la Commission européenne pour favoriser l’égalité des personnes LGBTIQ+ dans tous les domaines inclus dans la stratégie; déplore que certaines actions clés envisagées au départ par la Commission n’aient pas encore été mises en place;</del>
+      <del>prend acte de la détermination de la Commission à accompagner les États membres dans la mise en place de la stratégie; se dit profondément préoccupé par les disparités d’ouverture à la stratégie d’un État membre à l’autre; se félicite des efforts déployés par la Commission européenne pour favoriser l’égalité des personnes LGBTIQ+ dans tous les domaines inclus dans la stratégie; déplore que certaines actions clés envisagées au départ par la Commission n’aient pas encore été mises en place</del>
   
 
   
-      <ins>condamne toute forme de violence ou de discrimination contre les personnes fondée sur la race, la couleur de peau, l’origine ethnique ou sociale, les caractéristiques génétiques, la langue, la religion ou les convictions, les opinions politiques ou autres, l’appartenance à une minorité nationale, l’orientation sexuelle, la fortune, la naissance, le handicap, l’âge ou le sexe; souligne que les politiques et la législation relatives au mariage et à la parentalité relèvent de la compétence exclusive des États membres, et invite donc instamment l’Union à respecter rigoureusement les compétences nationales dans les domaines de la santé et du droit de la famille; invite l’Union et les États membres à protéger les familles et à garantir le respect de la dignité humaine, des choix démocratiques, de l’égalité devant la loi et des droits de l’homme;</ins>
+      <ins>condamne toute forme de violence ou de discrimination contre les personnes fondée sur la race, la couleur de peau, l’origine ethnique ou sociale, les caractéristiques génétiques, la langue, la religion ou les convictions, les opinions politiques ou autres, l’appartenance à une minorité nationale, l’orientation sexuelle, la fortune, la naissance, le handicap, l’âge ou le sexe; souligne que les politiques et la législation relatives au mariage et à la parentalité relèvent de la compétence exclusive des États membres, et invite donc instamment l’Union à respecter rigoureusement les compétences nationales dans les domaines de la santé et du droit de la famille; invite l’Union et les États membres à protéger les familles et à garantir le respect de la dignité humaine, des choix démocratiques, de l’égalité devant la loi et des droits de l’homme</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    (🇫🇷 : Reconquête!)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">139</div>
+  <div class="against">403</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    
+    <a href="/voting/164377">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(139/551 * 100%)">139</div>
-  
-  
-    <div class="-" style="width: calc(403/551 * 100%)">403</div>
-  
-  
-    <div class="0" style="width: calc(9/551 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/164377">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | Partie 1 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(420/552 * 100%)">420</div>
-  
-  
-    <div class="-" style="width: calc(112/552 * 100%)">112</div>
-  
-  
-    <div class="0" style="width: calc(20/552 * 100%)">20</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/164367">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | Partie 2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | Partie 2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(255/550 * 100%)">255</div>
-  
-  
-    <div class="-" style="width: calc(274/550 * 100%)">274</div>
-  
-  
-    <div class="0" style="width: calc(21/550 * 100%)">21</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/164368">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE,S&amp;D,RE,Verts/ALE,GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>20 bis. vu la décision d’exécution 24 janvier 2024 relative à la demande d’enregistrement, en application du européen et du Conseil, de l’initiative citoyenne européenne intitulée Interdiction des pratiques de conversion dans l’Union européenne1 bis,  ______________  42/oj.   ____________________________</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    , 
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
+    , 
+  
+    
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    , 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+     et 
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">448</div>
+  <div class="against">46</div>
+  <div class="abstention">51</div>
+</span>
+
+  
+    
+    <a href="/voting/164375">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(448/545 * 100%)">448</div>
-  
-  
-    <div class="-" style="width: calc(46/545 * 100%)">46</div>
-  
-  
-    <div class="0" style="width: calc(51/545 * 100%)">51</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/164375">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE,S&amp;D,RE,Verts/ALE,GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>S bis. considérant que l’initiative citoyenne européenne (ICE) intitulée «Interdiction des pratiques de conversion dans l’Union européenne» a été présentée à la Commission le 27 novembre 2023; qu’elle invite l’Union à prendre des mesures pour proposer une interdiction juridique contraignante des pratiques de conversion ciblant les citoyens LGBTIQ+ dans l’Union européenne; que la Commission a officiellement enregistré cette ICE le 21 janvier 2024;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    , 
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
+    , 
+  
+    
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    , 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+     et 
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">452</div>
+  <div class="against">48</div>
+  <div class="abstention">48</div>
+</span>
+
+  
+    
+    <a href="/voting/164376">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(452/548 * 100%)">452</div>
-  
-  
-    <div class="-" style="width: calc(48/548 * 100%)">48</div>
-  
-  
-    <div class="0" style="width: calc(48/548 * 100%)">48</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/164376">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE,S&amp;D,RE,Verts/ALE,GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>44 bis. se félicite, dans un premier temps, de l’enregistrement officiel par la Commission de l’ICE intitulée «Interdiction des pratiques de conversion dans l’Union européenne», qui reconnaît qu&#39;il existe des fondements juridiques au niveau européen pour agir en la matière; exprime son soutien à cette initiative; engage la Commission à y donner suite et à proposer des instruments juridiques reposant sur les traités et le règlement relatif à l’ICE1 bis;  ______________  Parlement européen et du Conseil du 17 avril 2019 relatif à l’initiative citoyenne 55).</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    , 
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
+    , 
+  
+    
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    , 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+     et 
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">448</div>
+  <div class="against">84</div>
+  <div class="abstention">19</div>
+</span>
+
+  
+    
+    <a href="/voting/164374">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(448/551 * 100%)">448</div>
-  
-  
-    <div class="-" style="width: calc(84/551 * 100%)">84</div>
-  
-  
-    <div class="0" style="width: calc(19/551 * 100%)">19</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/164374">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>4 bis. note que la communication de la Commission promeut le foulard islamique à l’occasion de la «Journée internationale contre l’homophobie, la transphobie et la biphobie»1; demande une nouvelle fois à la Commission de cesser toute communication visant à promouvoir le foulard islamique;  ___________  1</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">96</div>
+  <div class="against">393</div>
+  <div class="abstention">59</div>
+</span>
+
+  
+    
+    <a href="/voting/164362">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(96/548 * 100%)">96</div>
-  
-  
-    <div class="-" style="width: calc(393/548 * 100%)">393</div>
-  
-  
-    <div class="0" style="width: calc(59/548 * 100%)">59</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/164362">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>13 bis. exprime sa profonde inquiétude devant la montée de l’islam radical en Europe et dans le monde, qui a de graves conséquences pour les droits et libertés des minorités sexuelles; affirme que l’immigration de masse sans intégration est susceptible d’importer un discours et une attitude discriminatoires en Europe, qui ont des effets délétères sur les conditions de vie des minorités sexuelles;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">140</div>
+  <div class="against">398</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/164372">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(140/549 * 100%)">140</div>
-  
-  
-    <div class="-" style="width: calc(398/549 * 100%)">398</div>
-  
-  
-    <div class="0" style="width: calc(11/549 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/164372">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>19 bis. rappelle que les politiques et la législation sur le mariage et la parentalité relèvent de la compétence exclusive des États membres et demande dès lors instamment à la Commission et aux États membres de respecter rigoureusement les compétences nationales dans les domaines de la santé et du droit de la famille;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(140/551 * 100%)">140</div>
-  
-  
-    <div class="-" style="width: calc(402/551 * 100%)">402</div>
-  
-  
-    <div class="0" style="width: calc(9/551 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/164373">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    ID
+    (🇫🇷 : Rassemblement national)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/2082(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2024-0030_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">140</div>
+  <div class="against">402</div>
+  <div class="abstention">9</div>
+</span>
+
   
+    
+    <a href="/voting/164373">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-02-08-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

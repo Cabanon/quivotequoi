@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Résolution sur l’état de droit et les conséquences de l’arrêt de la Cour de justice de l’Union européenne</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Résolution sur l’état de droit et les conséquences de l’arrêt de la Cour de justice de l’Union européenne</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(478/662 * 100%)">478</div>
-  
-  
-    <div class="-" style="width: calc(155/662 * 100%)">155</div>
+    <div class="for" style="width: calc(478/662 * 100%)">478</div>
   
   
-    <div class="0" style="width: calc(29/662 * 100%)">29</div>
+    <div class="against" style="width: calc(155/662 * 100%)">155</div>
+  
+  
+    <div class="abstention" style="width: calc(29/662 * 100%)">29</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(52/79 * 100%)">52</div>
+    <div class="for" style="width: calc(52/79 * 100%)">52</div>
   
   
-    <div class="-" style="width: calc(23/79 * 100%)">23</div>
+    <div class="against" style="width: calc(23/79 * 100%)">23</div>
   
   
-    <div class="0" style="width: calc(4/79 * 100%)">4</div>
+    <div class="abstention" style="width: calc(4/79 * 100%)">4</div>
   
 </div>
  
 </section>
-            <a href="/voting/140788">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/140788">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -106,12 +111,12 @@
     
         
         
-            <li>Etat et évolution de l&#39;Union</li>
+            <li>Traités en général</li>
         
     
         
         
-            <li>Traités en général</li>
+            <li>Etat et évolution de l&#39;Union</li>
         
     
         
@@ -121,47 +126,189 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2535(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/B-9-2022-0134_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-03-08-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,197683,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,197683,197629,197615">🇫🇷 Reconquête!</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       11. souligne que 
   
 
   
-      <del>le mécanisme de conditionnalité liée à l’état de droit devrait s’appliquer tant au budget de l’Union qu’à l’instrument de l’Union européenne pour la relance;</del>
+      <del>le mécanisme de conditionnalité liée à l’état de droit devrait s’appliquer tant au budget de l’Union qu’</del>
   
 
   
-      <ins>la situation en lien avec l’Ukraine et la pandémie de COVID- 19 est telle que le mécanisme de conditionnalité liée à l’état de droit ne devrait pas être appliqué;</ins>
+      <ins>la situation en lien avec l’Ukraine et la pandémie de COVID- 19 est telle que le mécanisme de conditionnalité liée </ins>
   
 
   
-       souligne en outre que 
+      à l’
   
 
   
-      <del>l’approbation des </del>
+      <del>instrument</del>
   
 
   
-      <ins>tous les </ins>
+      <ins>état</ins>
   
 
   
-      plans nationaux 
+       de 
+  
+
+  
+      <del>l’Union européenne pour la relance</del>
+  
+
+  
+      <ins>droit ne devrait pas être appliqué</ins>
+  
+
+  
+      ; souligne en outre que 
+  
+
+  
+      <del>l’approbation des</del>
+  
+
+  
+      <ins>tous les</ins>
+  
+
+  
+       plans nationaux 
   
 
   
@@ -173,179 +320,189 @@
   
 
   
-      <del>devrait </del>
+      <del>devrait</del>
   
 
   
-      <ins>devraient </ins>
+      <ins>devraient</ins>
   
 
   
-      être 
+       être 
   
 
   
-      <del>subordonnée au respect de l’ensemble des 11 critères énoncés à l’article 19 et à l’annexe V du règlement établissant une facilité pour la reprise et la résilience; attend de la Commission qu’elle écarte tous les risques de voir des programmes relevant de la politique de cohésion contribuer à l’utilisation abusive des fonds de l’Union ou à des violations de l’état de droit avant d’approuver les accords de partenariat et les programmes de la politique de cohésion; invite la Commission à appliquer le règlement portant dispositions communes et le règlement financier de manière plus rigoureuse afin de lutter contre l’utilisation discriminatoire de fonds de l’Union, notamment toute utilisation à caractère politique;</del>
+      <del>subordonnée au respect de l’ensemble des 11 critères énoncés à l’article 19 et à l’annexe V du règlement établissant une facilité pour la reprise et la résilience; attend de la Commission qu’elle écarte tous les risques de voir des programmes relevant de la politique de cohésion contribuer à l’utilisation abusive des fonds de l’Union ou à des violations de l’état de droit avant d’approuver les accords de partenariat et les programmes de la politique de cohésion; invite la Commission à appliquer le règlement portant dispositions communes et le règlement financier de manière plus rigoureuse afin de lutter contre l’utilisation discriminatoire de fonds de l’Union, notamment toute utilisation à caractère politique</del>
   
 
   
-      <ins>approuvés d’urgence;</ins>
+      <ins>approuvés d’urgence</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">127</div>
+  <div class="against">531</div>
+  <div class="abstention">36</div>
+</span>
+
+  
+    
+    <a href="/voting/140605">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(127/694 * 100%)">127</div>
-  
-  
-    <div class="-" style="width: calc(531/694 * 100%)">531</div>
-  
-  
-    <div class="0" style="width: calc(36/694 * 100%)">36</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140605">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>D bis. considérant que l’article 5, paragraphe 3, du traité UE dispose qu’«en vertu du principe de subsidiarité, dans les domaines qui ne relèvent pas de sa compétence exclusive, l’Union intervient seulement si, et dans la mesure où, les objectifs de l’action envisagée ne peuvent pas être atteints de manière suffisante par les États membres»; considérant qu’il n’existe pas de définition juridique à l’échelle de l’Union de ce que recouvre la notion d’«état de droit»; considérant que la Commission cherche, d’une part, à lier les États membres au droit de l’Union, en plaçant l’Union dans une position hiérarchiquement supérieure aux États membres, et, d’autre part, à remplacer le contenu traditionnel de l’état de droit par la construction d’un ensemble subjectif de valeurs et de principes; considérant que par le passé, l’Union a déjà dénoncé des violations de l’état de droit à des fins politiques;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">147</div>
+  <div class="against">538</div>
+  <div class="abstention">7</div>
+</span>
+
+  
+    
+    <a href="/voting/140607">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(147/692 * 100%)">147</div>
-  
-  
-    <div class="-" style="width: calc(538/692 * 100%)">538</div>
-  
-  
-    <div class="0" style="width: calc(7/692 * 100%)">7</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140607">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>N bis. considérant qu’il existe un risque réel que la Commission instrumentalise le règlement relatif à la conditionnalité liée à l’état de droit à l’encontre de la Pologne, de la Hongrie ainsi que d’autres États qui insistent sur la suprématie de leurs valeurs traditionnelles et de leur propre interprétation juridique, tout aussi légitime, de l’état de droit; considérant que ce règlement est un puissant outil de coercition politique qui menace potentiellement tous les États membres; considérant que la Commission fait montre d’approches différentes à l’égard d’autres États membres, tels que Malte;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">151</div>
+  <div class="against">535</div>
+  <div class="abstention">6</div>
+</span>
+
+  
+    
+    <a href="/voting/140608">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(151/692 * 100%)">151</div>
-  
-  
-    <div class="-" style="width: calc(535/692 * 100%)">535</div>
-  
-  
-    <div class="0" style="width: calc(6/692 * 100%)">6</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140608">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       1. 
   
 
   
-      <del>se félicite des </del>
+      <del>se félicite des</del>
   
 
   
-      <ins>déplore les </ins>
+      <ins>déplore les</ins>
   
 
   
-      arrêts de la Cour de justice du 16 février 2022 et 
+       arrêts de la Cour de justice du 16 février 2022 et 
   
 
   
@@ -364,192 +521,347 @@
       la conclusion selon laquelle les recours introduits par la Hongrie et la Pologne contre le règlement sur la conditionnalité liée à l’état de droit devraient être rejetés;  ___________________  mentionnées ci-dessus.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">145</div>
+  <div class="against">538</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/140602">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(145/691 * 100%)">145</div>
-  
-  
-    <div class="-" style="width: calc(538/691 * 100%)">538</div>
-  
-  
-    <div class="0" style="width: calc(8/691 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140602">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. s’inquiète de l’activisme judiciaire et de la gymnastique juridique de la CJUE visant à conclure que le règlement sur la conditionnalité liée à l’état de droit n’est pas destiné à sanctionner les États membres; se déclare en outre préoccupé par l’approche fédéraliste de la CJUE, qui entraînera inévitablement une nouvelle érosion de la souveraineté nationale des États membres; invite la CJUE à respecter les articles 31 et 32 de la convention de Vienne sur le droit des traités;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">147</div>
+  <div class="against">540</div>
+  <div class="abstention">3</div>
+</span>
+
+  
+    
+    <a href="/voting/140603">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(147/690 * 100%)">147</div>
-  
-  
-    <div class="-" style="width: calc(540/690 * 100%)">540</div>
-  
-  
-    <div class="0" style="width: calc(3/690 * 100%)">3</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140603">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>2 bis. souligne que l’accord sur le budget ne peut être utilisé à des fins de pression politique sur des États membres et de chantage à leur égard; est d’avis que toute suspension des paiements du budget de l’Union à un État membre, telle que prévue par le règlement sur la conditionnalité liée à l’état de droit, équivaudrait à un enrichissement sans cause, étant donné que les États membres contribuent au budget de l’Union dans l’idée qu’ils recevront des paiements de l’Union en contrepartie; estime en outre que toute suspension des paiements par l’Union devrait donner lieu à une action en justice pour enrichissement indu;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">142</div>
+  <div class="against">540</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    
+    <a href="/voting/140604">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(142/691 * 100%)">142</div>
-  
-  
-    <div class="-" style="width: calc(540/691 * 100%)">540</div>
-  
-  
-    <div class="0" style="width: calc(9/691 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140604">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>11 bis. se déclare vivement préoccupé par le fait que, comme pour les procédures au titre de l’article 7 du traité UE, des mesures au titre du règlement sur la conditionnalité liée à l’état de droit seront prises pour servir des idéaux politiques et délégitimer certains États membres; note que l’Union cible les gouvernements souverains de la Pologne et de la Hongrie, notamment en raison de leur opposition à la politique migratoire de l’Union et aux politiques de promotion du libéralisme sociétal; rappelle que les États membres sont et restent les maîtres des traités; appelle de ses vœux une réforme de l’Union en faveur d’une Europe respectueuse de la souveraineté et de l’identité des nations et des peuples européens;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(148/693 * 100%)">148</div>
-  
-  
-    <div class="-" style="width: calc(535/693 * 100%)">535</div>
-  
-  
-    <div class="0" style="width: calc(10/693 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140606">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    ID
+    (🇫🇷 : Rassemblement national)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2535(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/B-9-2022-0134_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">148</div>
+  <div class="against">535</div>
+  <div class="abstention">10</div>
+</span>
+
   
+    
+    <a href="/voting/140606">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-03-08-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre cette résolution.Ce texte se félicite de l&#39;instrumentalisation politique de la notion d&#39;état de droit par la jurisprudence de la CJUE. Je n&#39;y suis naturellement pas favorable.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            Cette résolution fait suite à la décision de la Cour de justice qui a confirmé que la conditionnalité de l&#39;état de droit avait été adopté sur une base juridique appropriée. La résolution demande à la Commission d&#39;agir de toute urgence et d&#39;appliquer immédiatement et rétrospectivement le mécanisme de conditionnalité de l&#39;état de droit.Malgré les éléments factuels de cette résolution, il me semble totalement incohérent de condamner ces deux États membres au moment-même où ils sont en première ligne de la crise de réfugiés issus de la guerre en Ukraine. Les autorités polonaises et hongroises se mobilisent massivement pour accueillir les personnes déplacées par ce conflit. À ce moment critique, l’Europe doit apporter son soutien aux pays frontaliers de l’Ukraine et non pas bloquer des pistes de financement européen. C’est pourquoi je me suis abstenu sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Par cet arrêt politique, la CJUE valide l’instrumentalisation par la Commission européenne de la notion floue d’«état de droit» pour contourner la procédure de l’article 7 TUE et exercer un chantage financier envers les gouvernements souverains de Pologne et de Hongrie en raison de leur opposition aux politiques migratoire et sociétale de l’UE. J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            Je me suis abstenue sur cette résolution relative à l’état de droit et aux conséquences de l’arrêt de la CJUE qui a débouté la Hongrie et la Pologne de leur recours contre l&#39;applicabilité du mécanisme de conditionnalité, qui vise à protéger les fonds européens, notamment les crédits du plan de relance, contre les atteintes à l&#39;état de droit. Le texte, qui préconise de prendre immédiatement des sanctions financières contre ces États membres, intervient à un moment particulièrement inopportun, dans un contexte où la Hongrie et la Pologne sont en première ligne face à la guerre en Ukraine et accueillent des millions de réfugiés ukrainiens. Je considère que la priorité de la Commission européenne ne doit pas être de sanctionner ces États mais au contraire de leur apporter un soutien budgétaire massif afin de les aider à gérer efficacement l&#39;afflux de réfugiés.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            La résolution commune sur l&#39;État de droit et les conséquences de l&#39;arrêt de la CJUE a été adoptée à une large majorité, sans aucune modification, conformément à la position du PPE. Cette résolution visait à accueillir l’arrêt rendu par la Cour de Justice de l’Union européenne sur la comptabilité du règlement visant à établir des sanctions en cas de non-respect de l’État de droit par l’un des États membres et donc à conditionner le versement de subsides européens au respect de ce principe. La Cour a rendu son arrêt le 16 février 2022 et assurer que le mécanisme était bien compatible avec le droit de l’Union européenne. La résolution souligne également que la Commission n’a pas encore pris les mesures permettant de garantir l’application concrète des dispositions du règlement et que celle-ci s’était engagée à mettre en œuvre le règlement une fois l’arrêt de la Cour rendu. Pour sa nature équilibrée et factuelle, j’ai voté en faveur de cette résolution.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Cette résolution vise à présenter la réaction du Parlement européen suite à l’arrêt de la Cour de justice de l’Union rejetant les recours de la Pologne et la Hongrie contre le mécanisme de respect de l’Etat de droit. Elle appelle la Commission à mettre en œuvre sans délai ce dispositif, appelle la Présidence française de l’Union à agir pour accélérer le processus et alerte sur l’urgence de mettre un terme aux violations des droits fondamentaux des femmes et des personnes LGBTI et aux remises en cause de l’indépendance de la presse et de la justice. J’ai donc voté pour ce texte qui marque une position ferme du Parlement face aux remises en cause de l’état de droit dans les pays européens gouvernés par l’extrême-droite.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Décision attendue depuis fort longtemps, la Cour de justice de l’Union européenne a rejeté le recours des gouvernements d’extrême-droite de Pologne et de Hongrie contre le règlement permettant de suspendre les fonds européens en cas de violation de l’état de droit. Dès lors, plus rien ne fait obstacle à son activation par la Commission. Il est incompréhensible que cela ne soit pas encore fait. Par cette résolution, le Parlement enjoint la Commission à enfin remplir ses obligations, ce que je soutiens.
+        </article>
+    
+        <article>
+            <div class="hidden">197585</div>
+            
+            <header><b>Pierre KARLESKIND</b> | Renaissance</header>
+            Voilà maintenant plusieurs mois que le règlement «conditionnalité état de droit» est bloqué. Alors que la Cour de justice a confirmé la légalité de cet instrument, le mécanisme n’a toujours pas été activé par la Commission européenne, qui n’a pourtant plus aucune excuse pour retarder son application. Cette résolution vient donc rappeler la Commission européenne à ses obligations. La situation de l’état de droit en Europe se dégrade de jour en jour. Il faut agir avant qu’il ne soit trop tard. J’ai donc soutenu sans réserves cette résolution.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Reconquête!</header>
+            L’arrêt de la CJUE permet l’activation du mécanisme de conditionnalité, qui n’est qu’un nouvel instrument pour faire pression sur des États souverains et démocratiques afin de leur imposer toujours plus de diktats bruxellois concernant l’immigration ou l’idéologie LGBT. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197551</div>
+            
+            <header><b>Stéphane BIJOUX</b> | Renaissance</header>
+            J’ai soutenu cette résolution qui appelle la Commission à appliquer sans délai le nouveau mécanisme de conditionnalité sur l’état de droit. Ce dispositif a été adopté il y a plus d’un an mais n’a encore jamais été activé en dépit de violations graves de l’état de droit commises dans certains États membres et qui portent atteinte aux intérêts financiers de l’UE. Ce mécanisme est essentiel pour assurer une distribution équitable et impartiale des financements européens, en particulier ceux qui font l’objet d’une gestion partagée à l’image des fonds de la politique de cohésion.
+        </article>
+    
+        <article>
+            <div class="hidden">197536</div>
+            
+            <header><b>Nathalie COLIN-OESTERLÉ</b> | Les centristes</header>
+            . – J&#39;ai voté en faveur de la résolution sur l’état de droit et les conséquences de l’arrêt de la Cour de justice de l’Union européenne, suite à la validation, par la juridiction européenne, du mécanisme de conditionnalité. Pour rappel, ce mécanisme vise à suspendre l&#39;octroi de fonds européens s&#39;ils sont utilisés de manière abusive par les États membres, en violation de l&#39;état de droit. S’il est évident que le mécanisme devra à l’avenir s’appliquer et que le respect de l&#39;état de droit est primordial pour nos institutions, j’en appelle au bon sens de la Commission. Dans un contexte de guerre, l’heure est à l’unité européenne. Il faut saluer les efforts remarquables que font aujourd’hui la Pologne et la Hongrie dans l’accueil des réfugiés ukrainiens.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté avec mes collègues du groupe Renew en faveur de cette résolution, qui fait suite à l&#39;arrêt de la Cour de Justice de l&#39;UE (CJUE) au sujet du mécanisme de protection du budget en cas d’atteinte à l’état de droit. Il s&#39;agit d&#39;une nouvelle étape décisive dans notre combat pour le respect des valeurs fondamentales en Europe!Pour rappel, un arrêt de la CJUE a confirmé, le 16 février 2022, la parfaite légalité du mécanisme et ainsi rejeté les recours adressés par la Hongrie et la Pologne suite au vote de ce mécanisme. Cette décision de la CJUE avait été fixée par la Commission comme condition pour le déclenchement du mécanisme négocié par les eurodéputés, il y a maintenant plus d’un an. Cette nouvelle résolution appelle donc la Commission européenne à respecter son engagement et à jouer son rôle de garante des traités en appliquant immédiatement ce mécanisme qui constitue un outil de pression important.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre cette résolution se félicitant de l’arrêt politique de la CJUE, lequel valide l’instrumentalisation par la Commission de la notion floue d’«état de droit» pour contourner la procédure de l’article 7 du TUE, actuellement au point mort, et pour exercer un chantage financier envers les gouvernements souverains de Pologne et de Hongrie en raison de leur opposition aux politiques migratoire et sociétale de l’UE. Ces mêmes pays qui font face, en première ligne, aux conséquences humanitaires de la crise russo-ukrainienne. Pendant ce temps-là, la Commission européenne finance sans problème des associations islamistes.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            J&#39;ai voté contre cette résolution qui se félicite de l’arrêt politique de la CJUE, lequel valide l’instrumentalisation par la Commission de la notion d’État de droit pour contourner la procédure de l’article 7 du TUE, actuellement au point mort, et pour exercer un chantage financier envers les gouvernements souverains de Pologne et de Hongrie en raison de leur opposition aux politiques migratoire et sociétale de l’UE.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – J’ai voté contre cette instrumentalisation de la notion floue d’ «état de droit» par la Commission européenne pour exercer, en contournant la procédure de l’article 7 TUE, un chantage financier à l’encontre de la Pologne et de la Hongrie. Pendant que ces pays font face aux conséquences humanitaires de la crise russo-ukrainienne, l’UE finance des associations islamistes.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Cet arrêt s’inscrit dans une longue série de tensions entre la Commission, la Pologne et la Hongrie. Ces deux pays sont en effet visés, respectivement depuis 2017 et 2018, par la procédure de l’article 7 TUE qui donne la possibilité à l’UE de sanctionner un État membre qui ne respecterait pas ses valeurs fondatrices. Or cette procédure qui peut conduire à la suspension des droits de vote de l’État membre concerné au Conseil de l’Union européenne est au point mort en raison de l’unanimité requise pour la mettre en œuvre. Par cet arrêt politique, la CJUE valide l’instrumentalisation par la Commission européenne de la notion floue d’ «état de droit» pour contourner la procédure de l’article 7 TUE et exercer un chantage financier envers les gouvernements souverains de Pologne et de Hongrie en raison de leur opposition aux politiques migratoire et sociétale de l’UE. Ces mêmes pays qui font face, en première ligne, aux conséquences humanitaires de la crise russo-ukrainienne. Pendant ce temps-là, l’Union européenne finance sans problème des associations islamistes ou des campagnes de promotion de vêtements islamistes. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Dans son arrêt du 16 février dernier sur les recours formés par la Hongrie et la Pologne contre le mécanisme dit de conditionnalité, la CJUE a jugé que ledit mécanisme a été adopté sur une base juridique adéquate, est compatible avec la procédure prévue à l’article 7 TUE et respecte les limites des compétences attribuées à l’Union. Les recours sont donc rejetés. La Cour estime ainsi que la procédure prévue ne peut être engagée que dans le cas où il existe des motifs raisonnables de considérer non seulement que des violations des principes de l’État de droit ont lieu dans un État membre, mais surtout qu’elles portent atteinte ou présentent un risque sérieux de porter atteinte à la bonne gestion financière du budget de l’Union. Elle considère ensuite que la procédure instituée par le règlement sur la conditionnalité ne contourne pas la procédure prévue à l’article 7 TUE, chacune poursuivant des buts et ayant un objet distinct. Elle souligne enfin que les principes figurant dans le règlement, en tant qu’éléments constitutifs de la notion d’état de droit, ont amplement été développés dans sa jurisprudence, que ces principes trouvent leur source dans des valeurs communes reconnues, partagées et appliquées également par les États membres dans leurs ordres juridiques, ces États étant alors à même de déterminer le contenu essentiel ainsi que les exigences découlant de chacun de ces principes.La Commission européenne doit adopter dans les prochaines semaines des lignes directrices pour clarifier les modalités d’application du mécanisme.Par cet arrêt politique, la CJUE valide l’instrumentalisation par la Commission européenne de la notion floue d’« État de droit » pour contourner la procédure de l’article 7 TUE et exercer un chantage financier envers les gouvernements souverains de Pologne et de Hongrie en raison de leur opposition aux politiques migratoire et sociétale de l’UE. Ces mêmes pays qui font face, en première ligne, aux conséquences humanitaires de la crise russo-ukrainienne. Pendant ce temps-là, l’Union européenne finance sans problème des associations islamistes ou des campagnes de promotion de vêtements islamistes.J’ai donc voté contre ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            . – Cet arrêt s’inscrit dans une longue série de tensions entre la Commission et la Pologne et la Hongrie. Par cet arrêt politique, la CJUE valide l’instrumentalisation par la Commission européenne de la notion floue d’«état de droit» pour contourner la procédure de l’article 7 TUE et exercer un chantage financier envers les gouvernements souverains de Pologne et de Hongrie en raison de leur opposition aux politiques migratoire et sociétale de l’UE. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre cette résolution qui se félicite de la jurisprudence de la Cour de justice de l’Union européenne sur l’état de droit. Cette notion floue laisse la place à l’arbitraire et au chantage financier contre les gouvernements souverains de Pologne et de Hongrie en raison de leur opposition aux politiques migratoires et sociétales de l’Union.
+        </article>
+    
+        <article>
+            <div class="hidden">204421</div>
+            
+            <header><b>Jean-Lin LACAPELLE</b> | Rassemblement national</header>
+            Par cet arrêt politique, la CJUE valide l’instrumentalisation par la Commission européenne de la notion floue d’«état de droit» pour contourner la procédure de l’article 7 TUE et exercer un chantage financier envers les gouvernements souverains de Pologne et de Hongrie en raison de leur opposition aux politiques migratoire et sociétale de l’UE. Ces mêmes pays qui font face, en première ligne, aux conséquences humanitaires de la crise russo-ukrainienne. Pendant ce temps-là, l’Union européenne finance sans problème des associations islamistes ou des campagnes de promotion de vêtements islamistes.J’ai donc voté contre ce rapport.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

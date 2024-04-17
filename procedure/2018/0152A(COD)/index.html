@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Système d&#39;information sur les visas (VIS): traitement des visas</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,31 +22,86 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Système d&#39;information sur les visas (VIS): traitement des visas</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
+    <article>
+    <header>👎 Rejet du texte | 
+
+❌️ Rejeté
+
+</header>
+    
+        <i>Demandé par 
+
+
+</i>
+        <hr>
+    
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
+        <section>
+
+<div class="votes">
+  
+    <div class="for" style="width: calc(114/696 * 100%)">114</div>
+  
+  
+    <div class="against" style="width: calc(578/696 * 100%)">578</div>
+  
+  
+    <div class="abstention" style="width: calc(4/696 * 100%)">4</div>
+  
+</div>
+</section>
+        <hr>
+        <b>🇫🇷 Votes des députés français</b>
+        
+        
+            🔎 Vote introuvable
+        
+    
+    </article>
+
+
 <h3>🏷 Sujets</h3>
 <ul>
     
+    
+        
+        
+            <li>Franchissement et contrôles aux frontières extérieures, visas</li>
+        
     
         
         
@@ -57,24 +113,193 @@
             <li>Espace de liberté, de sécurité et de justice</li>
         
     
-        
-        
-            <li>Franchissement et contrôles aux frontières extérieures, visas</li>
-        
+</ul>
+
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2018/0152A(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0207_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-07-06-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>🗃️ Données</h3>
 
-    Aucun amendement
+<section class="tabs">
+    
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2018/0152A(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-  
-</ul>
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b></b> | </header>
+            . – Le VIS permet un contrôle renforcé des passages aux frontières extérieures de l’UE, via une aide apportée aux autorités compétentes en matière de visas, de frontières, d&#39;asile et de migration, pour contrôler les ressortissants de pays tiers qui doivent être en possession d&#39;un visa de court séjour pour se rendre dans l&#39;espace Schengen; il permet également de lutter contre les activités frauduleuses et les activités criminelles. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b></b> | </header>
+            J&#39;ai voté pour cette recommandation relative au système d&#39;information sur les visas. L&#39;objectif est de soutenir les autorités nationales compétentes pour le contrôle des ressortissants de pays tiers qui doivent avoir un visa de court séjour pour se rendre dans l&#39;espace Schengen.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b></b> | </header>
+            J’ai voté pour ce texte car le système d’information sur les visas permet un contrôle accru des passages aux frontières extérieures de l’UE par une aide apportée aux autorités nationales concernées. Il permet ainsi de lutter contre l’immigration illégale, les activités frauduleuses et criminelles.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b></b> | </header>
+            Le système d’information sur les visas (VIS), en service depuis 2011, est un système d’échange de données sur les visas entre les États membres de l’espace Schengen. Le Conseil européen a adopté un règlement pour mettre à jour le VIS en mai 2021 : les principaux objectifs sont de simplifier les procédures de demande de visa, de faciliter les contrôles aux frontières extérieures et de renforcer la sécurité. Cela passe par la facilitation de l’échange de données sur les demandes de visa afin de simplifier les procédures, d’empêcher le « visa shopping » et d’aider à lutter contre la fraude.La mise en œuvre du VIS implique la mise en réseau de postes consulaires et des points de passage des frontières extérieures des États Schengen, connectés à la base de données centrale du VIS. Cette base de données devrait contenir à terme 80 millions de demandes de visas. À compter de la fin de l’année 2022, le VIS sera également inclus dans la procédure ETIAS.J’ai donc voté pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b></b> | </header>
+            J’ai voté en faveur de ce texte relatif au traitement des visas dans le cadre du système d’information sur les visas (VIS). Cet accord de trilogue a pour objectif de renforcer le VIS, en y ajoutant les visas de long séjour et les titres de séjour. Cela représente davantage de sécurité pour le continent et les citoyens européens.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b></b> | </header>
+            Ce rapport vise à valider une modification du règlement encadrant le système d’information sur les visas (VIS) qui permet aux États membres de l’UE ou associés à Schengen d’échanger des données relatives aux demandes de visas. Il prévoit notamment de permettre l’identification des personnes concernées, de créer un registre central pour les données concernent les étrangers, de renforcer l’accès de Frontex au système, d’intégrer des indicateurs de risques appuyés sur un algorithme de profilage ou d’abaisser l’âge limite de relevé des empreintes digitales à 6 ans. J’ai donc voté contre ce texte qui s’inscrit dans une logique de criminalisation des migrations et pose de sérieux problèmes en matière de protection des libertés fondamentales.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b></b> | </header>
+            Le VIS permet un contrôle accru des passages aux frontières extérieures de l’UE par une aide apportée aux autorités compétentes en matière de visas, de frontières, d&#39;asile et de migration à contrôler les ressortissants de pays tiers qui doivent être en possession d&#39;un visa de court séjour pour se rendre dans l&#39;espace Schengen; il permet également de lutter contre les activités frauduleuses et les activités criminelles.Contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b></b> | </header>
+            J’ai voté en faveur du rapport sur le système d’information sur les visas (VIS) et le traitement des visas au sein de l’Union européenne qui vise à moderniser et à adapter le processus actuel. Les modifications du système d’information sur les visas permettront d’accroître la sécurité de la procédure de délivrance de visas de court séjour pour entrer dans l&#39;espace Schengen, d’inclure les visas de long séjour et les titres de séjour dans la base de données du système d’information sur les visas et de garantir l&#39;interopérabilité entre le VIS et les autres systèmes et bases de données concernés de l&#39;Union européenne. Grâce ce processus, l’Union européenne sera à même de vérifier plus efficacement les informations des individus souhaitant obtenir un visa et ainsi de mieux protéger et sécuriser son territoire.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b></b> | </header>
+            Le VIS permet un contrôle accru des passages aux frontières extérieures de l’UE par une aide portée aux autorités compétentes en matière de visas, de frontières, d&#39;asile et de migration à contrôler les ressortissants de pays tiers qui doivent être en possession d&#39;un visa de court séjour pour se rendre dans l&#39;espace Schengen ; il permet également de lutter contre les activités frauduleuses et les activités criminelles. J&#39;ai donc logiquement voté pour le texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b></b> | </header>
+            Le système d’information sur les visas (VIS), en service depuis 2011, est un système d’échange de données sur les visas entre les États membres de l’espace Schengen. Le Conseil européen a adopté un règlement pour mettre à jour le VIS en mai 2021 : les principaux objectifs sont de simplifier les procédures de demande de visa, de faciliter les contrôles aux frontières extérieures et de renforcer la sécurité. Cela passe par la facilitation de l’échange de données sur les demandes de visa afin de simplifier les procédures, d’empêcher le « visa shopping » et d’aider à lutter contre la fraude. Le VIS est un outil de coopération et de coordination des États membres au sein de l’UE en matière de sécurité intérieure. Le VIS permet un contrôle accru des passages aux frontières extérieures de l’UE par une aide portée aux autorités compétentes en matière de visas, de frontières, d&#39;asile et de migration à contrôler les ressortissants de pays tiers qui doivent être en possession d&#39;un visa de court séjour pour se rendre dans l&#39;espace Schengen. Pour l’ensemble de ces raisons, j’ai voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b></b> | </header>
+            Le VIS est un outil de coopération et de coordination des États membres au sein de l’UE en matière de sécurité intérieure, car les services de police nationaux et Europol peuvent y avoir accès, à des fins de prévention, de détection et d’enquête sur le terrorisme et autre infraction pénales qui nuisent gravement à la sécurité des citoyens européens.Cela permet l’interconnexion des bases de données pour faciliter le travail des forces de l’ordre. Les États membres sont en mesure d’établir un contrôle renforcé des frontières extérieures à des fins de vérification de l’identité du titulaire du visa ou de l’authenticité du visa, ce qui permet l’identification des migrants illégaux et leur retour dans leurs pays d’origine.Le VIS permet un contrôle accru des passages aux frontières extérieures de l’UE. Il aide les autorités compétentes en matière de visas, de frontières, d&#39;asile et de migration à contrôler les ressortissants de pays tiers qui doivent être en possession d&#39;un visa de court séjour pour se rendre dans l&#39;espace Schengen. Il permet également de lutter contre les activités frauduleuses et les activités criminelles.J’ai donc voté pour.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

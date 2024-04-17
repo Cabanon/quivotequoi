@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Une stratégie en matière de normalisation pour le marché unique</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Une stratégie en matière de normalisation pour le marché unique</h2>
-
 
 
 
@@ -50,55 +62,31 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
-
-<div class="votes ">
-  
-    <div class="+" style="width: calc(501/560 * 100%)">501</div>
-  
-  
-    <div class="-" style="width: calc(18/560 * 100%)">18</div>
-  
-  
-    <div class="0" style="width: calc(41/560 * 100%)">41</div>
-  
-</div>
-</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
-        <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
-        
-        
-            <section>
-
-
 
 <div class="votes">
   
-    <div class="+" style="width: calc(59/66 * 100%)">59</div>
+    <div class="for" style="width: calc(501/560 * 100%)">501</div>
   
   
-    <div class="-" style="width: calc(1/66 * 100%)">1</div>
+    <div class="against" style="width: calc(18/560 * 100%)">18</div>
   
   
-    <div class="0" style="width: calc(6/66 * 100%)">6</div>
+    <div class="abstention" style="width: calc(41/560 * 100%)">41</div>
   
 </div>
- 
 </section>
-            <a href="/voting/154629">🗳 Voir le détail du vote</a>
+        <hr>
+        <b>🇫🇷 Votes des députés français</b>
+        
+        
+            🔎 Vote introuvable
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -111,21 +99,202 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2058(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2058(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0136_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-05-09-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-05-09-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                            <option value="RE,197511">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197683,197629,197615">🇫🇷 Reconquête!</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            . – Ce texte examine la mise en œuvre du «règlement sur la normalisation» et son éventuelle révision, suite au lancement d’une consultation publique par la Commission européenne. À cet égard, il formule des recommandations pour rendre les processus de normalisation plus efficaces. Ainsi, il suggère la création d’un forum de haut niveau sur la normalisation européenne, un groupe d’experts prévoyant les futures activités des organismes de normalisation et garantissant la transparence de ses activités. Il appelle à prendre davantage en compte les parties prenantes, en particulier les PME, dans les processus de normalisation. Le texte recommande aussi à la Commission d’établir des indicateurs clés de performance, en particulier pour les normes liées aux objectifs du Pacte vert pour l’Europe et de la décennie numérique de l’Europe. Il insiste encore sur le besoin d’harmoniser les travaux des organismes de normalisation afin d’éviter les contradictions de normes entre États membres. Enfin, le texte encourage une coopération étroite au niveau européen ainsi qu’entre l’UE et l’OTAN en matière d’harmonisation des normes dans le domaine de la défense, afin d’accroître l’interopérabilité. Favorable à ce texte, j’ai voté en sa faveur.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution sur la stratégie en matière de normalisation pour le marché unique. Le texte évalue la mise en œuvre du «règlement sur la normalisation», et émet plusieurs suggestions en vue de son éventuelle révision. Il propose par exemple la création d’un forum de haut niveau sur la normalisation européenne, ou encore l’établissement d’indicateurs clés de performance, en particulier pour les normes liées aux objectifs du Pacte vert pour l’Europe et de la décennie numérique de l’Europe.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations et les recommandations du Parlement suite à la publication de la stratégie européenne de normalisation pour le marché unique présentée par la Commission. Il rappelle à raison que les normes doivent être au service de l’intérêt général et des consommateurs et demande une meilleure implication de la société civile (ONG, partenaires sociaux et associations de consommateurs) et des PME dans leur élaboration. Il s’inscrit en revanche dans une logique de marché où les normes sont considérées avant tout comme un argument de compétitivité au service des grands industriels. Je me suis donc abstenue sur ce texte, qui contient des améliorations intéressantes mais reste dans une vision économique néolibérale totalement dépassée.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Ce texte émet toute une série de recommandations, plutôt acceptables, sur l’adoption des normes techniques européennes (éviter des exigences trop prescriptives, laisser les experts proposer «des solutions appropriées», laisser des délais suffisants aux parties prenantes pour s’adapter, notamment les PME, etc.). J’ai donc voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Le 2 février 2022, la Commission européenne a publié sa stratégie de l’UE en matière de normalisation. Cette stratégie fait le constat que l’Union européenne, en dépit de l’efficacité de sa production normative, perd la main à l’égard des technologies émergentes, qui nécessitent une normalisation très rapide, et, surtout, vis-à-vis des autorités de normalisation concurrentes des pays tiers, privées et plus légères, qui dament le pion aux organismes européens et bénéficient d’un avantage dans l’accès à leur marché national.Face à cela, la Commission préconise cinq modes d’action:- l’intensification des activités de normalisation dans six domaines prioritaires;- la création de plusieurs organes de gouvernance en matière de normalisation;- le renforcement par le soutien des États membres et de leurs autorités nationales;- la mise à profit des projets et programmes européens de recherche et d’innovation;- et le développement de l’enseignement et de la formation pour garantir la compétence des générations montantes en matière d’expertise normative.Le vote sur ce texte vaut engagement, non seulement sur la position du Parlement, mais aussi sur la proposition de la Commission, à laquelle il répond, et qui est en effet pertinente. J’ai donc voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            . – Le 2 février 2022, la Commission européenne a publié sa stratégie de l’UE en matière de normalisation – Définir des normes mondiales à l’appui d’un marché unique européen résilient, vert et numérique. Les grands axes suivis – associer le plus d’acteurs possibles à la normalisation sans compromettre le rôle directeur des États, accroître le rôle moteur des normes européennes dans l’industrie mondiale, accélérer les procédures de normalisation au sein de l’UE tout en maintenant des délais suffisants pour permettre aux parties prenantes de s’adapter, éviter de recourir à des exigences trop normatives et laisser suffisamment de latitude aux experts pour proposer «des solutions appropriées et opportunes» – recueillent notre assentiment, au-delà des quelques inconvénients qui y sont contenus. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté en faveur de ce rapport car je m’associe aux grands axes suivis: associer le plus d’acteurs possibles à la normalisation sans compromettre le rôle directeur des États, accroître le rôle moteur des normes européennes dans l’industrie mondiale, accélérer les procédures de normalisation au sein de l’UE tout en maintenant des délais suffisants pour permettre aux parties prenantes de s’adapter, éviter de recourir à des exigences trop normatives et laisser suffisamment de latitude aux experts pour proposer des solutions appropriées et opportunes.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b></b> | </header>
+            Ce rapport porte sur la stratégie européenne de normalisation du marché unique. La normalisation consiste à édicter des normes juridiques au niveau européen, remplaçant parfois les normes nationales et visant ainsi à effectuer une harmonisation entre les États membres. Certaines dispositions de ce texte sont positives, comme le fait que le Parlement européen et la société civile doivent voir leur rôle renforcé dans les processus de normalisation ou que ces normes doivent aussi bénéficier à l’intérêt général. Néanmoins le texte reste fortement tourné vers le marché, avec notamment l’encouragement à passer des accords de libre-échange. Il est aussi fait mention d’une coopération à opérer en matière de normalisation dans le domaine de la défense avec l’OTAN. Je me suis donc abstenue sur ce texte.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
+
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

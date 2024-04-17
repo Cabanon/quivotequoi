@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Révision de la directive relative au comité d&#39;entreprise européen</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Révision de la directive relative au comité d&#39;entreprise européen</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(385/602 * 100%)">385</div>
-  
-  
-    <div class="-" style="width: calc(118/602 * 100%)">118</div>
+    <div class="for" style="width: calc(385/602 * 100%)">385</div>
   
   
-    <div class="0" style="width: calc(99/602 * 100%)">99</div>
+    <div class="against" style="width: calc(118/602 * 100%)">118</div>
+  
+  
+    <div class="abstention" style="width: calc(99/602 * 100%)">99</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,23 +88,29 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(51/70 * 100%)">51</div>
+    <div class="for" style="width: calc(51/70 * 100%)">51</div>
   
   
-    <div class="-" style="width: calc(19/70 * 100%)">19</div>
+    <div class="against" style="width: calc(19/70 * 100%)">19</div>
   
   
 </div>
  
 </section>
-            <a href="/voting/151591">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/151591">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
+    
+        
+        
+            <li>Cohésion économique, sociale et territoriale</li>
+        
     
         
         
@@ -112,515 +122,789 @@
             <li>Information, participation des travailleurs, syndicats, comités d&#39;entreprise </li>
         
     
-        
-        
-            <li>Cohésion économique, sociale et territoriale</li>
-        
+</ul>
+
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2183(INL)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0295_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-02-02-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>🗃️ Données</h3>
 
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
+<p>
 
   
       Y. considérant qu’il convient d’accompagner les perturbations qu’entraînent pour l’économie et le marché du travail les transformations actuelles, telles que le développement technologique, le passage au numérique, la transition vers une économie à faibles émissions de carbone, les mesures de prévention contre la pandémie de COVID-19 ainsi que le redressement économique et social à la suite de celle-ci, de même que les nouvelles formes d’emploi, parmi lesquelles les plateformes et le télétravail, 
   
 
   
-      <del>d’une révision en profondeur des instruments législatifs et des pratiques de l’Union </del>
+      <del>d’une révision en profondeur des instruments législatifs et des pratiques de l’Union</del>
   
 
   
-      <ins>de nouvelles initiatives de l’Union et, le cas échéants, de nouveaux instruments législatifs </ins>
+      <ins>de nouvelles initiatives de l’Union et, le cas échéants, de nouveaux instruments législatifs</ins>
   
 
   
-      afin de répondre aux défis en présence tout en mettant à profit les possibilités offertes par ces transformations;
+       afin de répondre aux défis en présence tout en mettant à profit les possibilités offertes par ces transformations;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">164</div>
+  <div class="against">419</div>
+  <div class="abstention">22</div>
+</span>
+
+  
+    
+    <a href="/voting/152104">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(164/605 * 100%)">164</div>
-  
-  
-    <div class="-" style="width: calc(419/605 * 100%)">419</div>
-  
-  
-    <div class="0" style="width: calc(22/605 * 100%)">22</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/152104">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
+<p>
 
   
       4. invite la Commission à soutenir les organisations syndicales européennes et les États membres à soutenir 
   
 
   
-      <del>la plupart des organisations représentatives </del>
+      <del>la plupart des organisations représentatives</del>
   
 
   
-      <ins>les représentants </ins>
+      <ins>les représentants</ins>
   
 
   
-      des travailleurs pré
+       des travailleurs 
   
 
   
-      <del>vues </del>
+      <del>prévues</del>
   
 
   
-      <ins>vus </ins>
+      <ins>prévus</ins>
   
 
   
-      par la législation ou les pratiques nationales afin qu’
+       par la législation ou les pratiques nationales afin qu’
   
 
   
-      <del>elles </del>
+      <del>elles</del>
   
 
   
-      <ins>ils </ins>
+      <ins>ils</ins>
   
 
   
-      organisent des formations spécialisées sur les droits des CEE pour informer dûment leurs membres sur les fonctions remplies par les CEE, ainsi qu’à allouer des ressources à des campagnes de sensibilisation;
+       organisent des formations spécialisées sur les droits des CEE pour informer dûment leurs membres sur les fonctions remplies par les CEE, ainsi qu’à allouer des ressources à des campagnes de sensibilisation;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">153</div>
+  <div class="against">369</div>
+  <div class="abstention">79</div>
+</span>
+
+  
+    
+    <a href="/voting/152051">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(153/601 * 100%)">153</div>
-  
-  
-    <div class="-" style="width: calc(369/601 * 100%)">369</div>
-  
-  
-    <div class="0" style="width: calc(79/601 * 100%)">79</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/152051">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
-
-  
-      13. souligne la nécessité pour les membres du CEE d’avoir en temps utile à des informations valables et actualisées concernant tout projet de décision à caractère 
-  
+<p>
 
   
-      <del>transnational </del>
+      13. souligne la nécessité pour les membres du CEE d’avoir en temps utile à des informations valables et actualisées concernant tout projet de décision à caractère transnational
   
 
   
-      <ins>transnational, à conditions que ces informations ne soient pas confidentielles, </ins>
+      <del> </del>
+  
+
+  
+      <ins>, à conditions que ces informations ne soient pas confidentielles, </ins>
   
 
   
       et insiste sur le fait qu’ils doivent disposer de suffisamment de temps et de ressources pour évaluer, apprécier et examiner les informations reçues avec le concours des experts disponibles; souligne qu’il importe d’assurer une bonne communication et une bonne coopération entre la direction centrale et le CEE, y compris la représentation des travailleurs au sein des conseils d’administration, afin de garantir que les droits des travailleurs à l’information, à la consultation et à la participation soient dûment respectés;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">207</div>
+  <div class="against">364</div>
+  <div class="abstention">32</div>
+</span>
+
+  
+    
+    <a href="/voting/152058">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(207/603 * 100%)">207</div>
-  
-  
-    <div class="-" style="width: calc(364/603 * 100%)">364</div>
-  
-  
-    <div class="0" style="width: calc(32/603 * 100%)">32</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/152058">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
+<p>
 
   
       19. regrette qu’au sein de nombreux États membres, les sanctions en cas de non-conformité ne soient pas efficaces, dissuasives ou proportionnées, comme que les dispositions régissant les sanctions des États membres doivent être renforcées afin d’améliorer le respect de la qu’elles n’occasionnent pas de charge pour les entreprises; réitère son appel à la Commission pour qu’elle révise la des sanctions efficaces, dissuasives et proportionnées afin d’assurer le respect des règles;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">181</div>
+  <div class="against">393</div>
+  <div class="abstention">28</div>
+</span>
+
+  
+    
+    <a href="/voting/152063">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(181/602 * 100%)">181</div>
-  
-  
-    <div class="-" style="width: calc(393/602 * 100%)">393</div>
-  
-  
-    <div class="0" style="width: calc(28/602 * 100%)">28</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/152063">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
-
-  
-      4 bis. Afin de déterminer le caractère transnational d’une question, l’étendue de ses effets potentiels et le niveau de direction et de représentation concerné sont pris en compte. Cela inclut les questions qui, indépendamment du nombre d’États membres impliqués, préoccupent les travailleurs quant à l’étendue de leur incidence 
-  
+<p>
 
   
-      <del>potentielle,</del>
+      4 bis. Afin de déterminer le caractère transnational d’une question, l’étendue de ses effets potentiels et le niveau de direction et de représentation concerné sont pris en compte. Cela inclut les questions qui, indépendamment du nombre d’États membres impliqués, préoccupent les travailleurs quant à l’étendue de leur incidence potentielle
   
 
   
-      <ins>potentielle sur des entreprises ou des établissements situés dans au moins deux États membres,</ins>
+      <ins> sur des entreprises ou des établissements situés dans au moins deux États membres</ins>
   
 
   
-       tout comme les questions qui impliquent un transfert d’activités entre deux États membres ou plus. Des entreprises ou des établissements situés dans des États membres différents sont réputés concernés lorsqu’on peut raisonnablement s’attendre à ce qu’une question touchant une entreprise ou un établissement entraîne ou puisse, dans un avenir prévisible, entraîner des effets sur des entreprises ou des établissements situés dans d’autres États membres, y compris lorsque des décisions qu’une entreprise ou un groupe d’entreprises envisage de prendre sont prises dans un État membre autre que celui dans lequel ces effets sont produits.
+      , tout comme les questions qui impliquent un transfert d’activités entre deux États membres ou plus. Des entreprises ou des établissements situés dans des États membres différents sont réputés concernés lorsqu’on peut raisonnablement s’attendre à ce qu’une question touchant une entreprise ou un établissement entraîne ou puisse, dans un avenir prévisible, entraîner des effets sur des entreprises ou des établissements situés dans d’autres États membres, y compris lorsque des décisions qu’une entreprise ou un groupe d’entreprises envisage de prendre sont prises dans un État membre autre que celui dans lequel ces effets sont produits.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">208</div>
+  <div class="against">382</div>
+  <div class="abstention">12</div>
+</span>
+
+  
+    
+    <a href="/voting/152071">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(208/602 * 100%)">208</div>
-  
-  
-    <div class="-" style="width: calc(382/602 * 100%)">382</div>
-  
-  
-    <div class="0" style="width: calc(12/602 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/152071">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
+<p>
 
   
       L’État membre concerné 
   
 
   
-      <del>subordonne </del>
+      <del>subordonne</del>
   
 
   
-      <ins>peut subordonner </ins>
+      <ins>peut subordonner</ins>
   
 
   
-      cette dispense à une autorisation administrative ou judiciaire préalable.
+       cette dispense à une autorisation administrative ou judiciaire préalable.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">229</div>
+  <div class="against">369</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/152085">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(229/606 * 100%)">229</div>
-  
-  
-    <div class="-" style="width: calc(369/606 * 100%)">369</div>
-  
-  
-    <div class="0" style="width: calc(8/606 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/152085">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
+<p>
 
   
       Dans la mesure où cela est nécessaire pour l’exercice de ses fonctions, le comité d’entreprise européen ou le comité restreint peut demander l’assistance d’experts de son choix. Ces experts peuvent comprendre des représentants des organisations syndicales compétentes reconnues au niveau de l’Union. À la demande du comité d’entreprise européen, ces experts 
   
 
   
-      <del>assistent </del>
+      <del>assistent</del>
   
 
   
-      <ins>peuvent assister </ins>
+      <ins>peuvent assister</ins>
   
 
   
-      aux réunions du comité d’entreprise européen et aux réunions avec la direction centrale avec voix consultative
+       aux réunions du comité d’entreprise européen et aux réunions avec la direction centrale avec voix consultative
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">171</div>
+  <div class="against">368</div>
+  <div class="abstention">66</div>
+</span>
+
+  
+    
+    <a href="/voting/152089">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(171/605 * 100%)">171</div>
-  
-  
-    <div class="-" style="width: calc(368/605 * 100%)">368</div>
-  
-  
-    <div class="0" style="width: calc(66/605 * 100%)">66</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/152089">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
+<p>
 
   
       <ins>2 bis. Les sanctions visées au paragraphe 1 sont proportionnées à la nature, à la gravité et à la durée de l’infraction commise par l’entreprise et leur montant augmente en fonction du nombre de travailleurs concernés.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">198</div>
+  <div class="against">377</div>
+  <div class="abstention">28</div>
+</span>
+
+  
+    
+    <a href="/voting/152097">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(198/603 * 100%)">198</div>
-  
-  
-    <div class="-" style="width: calc(377/603 * 100%)">377</div>
-  
-  
-    <div class="0" style="width: calc(28/603 * 100%)">28</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/152097">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
+        
     
+        
+        
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté contre ce texte.Il s’agit d’une directive de 2009 sur l’institution d’un comité d’entreprise européen (« CEE ») dans les entreprises dites « de dimension communautaire », c’est-à-dire ayant plus de 1 000 travailleurs dans les États membres et, dans au moins deux États membres différents, au moins 150 travailleurs dans chacun d’eux.Le texte de 2009, qui portait sur les règles de consultation des travailleurs dans lesdites entreprises et régissait la confidentialité de certaines informations, était généralement considéré comme suffisant par les professionnels concernés.La révision proposée portait, notamment, sur un élargissement des prérogatives des CEE et certaines dispositions en matière de parité. Les États membres sont également sommés de définir des pénalités en cas d’infraction aux dispositions de la directive.Cette révision semble superflue et excessive, notamment au regard de ses exigences en matière de pénalités. Les États disposant, par ailleurs, de leurs propres législations en la matière, elle semble d’autant moins pertinente.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            . – Ce texte vise à livrer les recommandations du Parlement européen à la Commission européenne sur la révision de la directive de 2009 portant sur les comités d’entreprise européens. Seuls les comités des entreprises de plus de 1000 salariés répartis sur plusieurs États membres sont concernés. Parmi ces recommandations, on peut citer l’introduction de quotas basés sur le genre dans la composition de ces comités d’entreprises, mesure déjà en vigueur en France. Favorable à l’esprit de ce rapport ainsi qu’à cette proposition en particulier, j’ai voté pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            Les comités d’entreprise européens doivent être soumis à des règles claires pour assurer un accès efficace à la consultation, à la justice, et à la résolution des litiges. Il est également important de clarifier le champ de confidentialité et de mettre en place des sanctions conséquentes qui sauront encourager un environnement juste et équitable, sans créer de fardeau supplémentaire pour nos entreprises. J’ai donc choisi de voter en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            La révision de ce texte ne se justifiait pas et la nécessité d’un tel texte m’a semblé fort douteuse : des règles nationales existent déjà dans les États membres, qui s’appliquent à toute entreprise établie sur leurs sols, aussi un tel texte européen n’avait aucun sens. D’autant plus que celui-ci s’ingère fortement dans nos façons de faire nationales : j’ai donc voté contre ce dossier.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car des règles nationales existent déjà en matière de comités d’entreprises. Ce texte ne fait que s’ingérer dans notre système national en élargissant les compétences européennes
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            J’ai soutenu ce rapport d’initiative législative appelant la Commission à réviser la directive relative aux comités d’entreprise européens (CEE) car il propose une série de modifications concrètes. Ces modifications sont d’autant plus nécessaires que la dernière révision de la directive remonte à 2009 et protège insuffisamment les salariés. A l’heure actuelle, seuls quatre Etats membres (Autriche, France, Roumanie et Suède) reconnaissent aux CEE la pleine personnalité juridique, permettant aux membres du CEE d’engager des procédures judiciaires au nom du CEE.Ce rapport d’initiative porte notamment les avancées suivantes : garantie qu’il soit tenu compte de l’avis du CEE dans les décisions des entreprises, clarification du champ de compétences des CEE, prévention des abus et des règles de confidentialité comme moyen de limiter l’accès à l’information et à la participation, meilleure parité dans les CEE (avec un minimum de 40% de femmes) et enfin des sanctions efficaces et dissuasives pour les entreprises en cas de manquement à ces règles.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            Au travers de ce rapport d’initiative législative, le Parlement européen appelle à la révision de la directive relative au comité d’entreprise européen (CEE). Cette directive CEE contient des dispositions sur le droit à l&#39;information et à la consultation des travailleurs sur les questions à caractère transnational dans les entreprises à l&#39;échelle de l&#39;Union ou les groupes d&#39;entreprises comptant au moins 1 000 travailleurs. Le Parlement a demandé à plusieurs reprises une révision pour remédier aux lacunes dans l&#39;application du texte actuellement en vigueur. Une révision devrait ainsi permettre de préciser les définitions peu claires des droits de consultation et d&#39;information, l&#39;absence de mécanismes d&#39;application efficaces et l&#39;abus des règles de confidentialité. L&#39;objectif principal du texte est donc d&#39;améliorer la mise en œuvre et le respect de la directive et c&#39;est pourquoi j&#39;ai voté en faveur de ce rapport. Toutefois il faudra veiller à ce que le texte qui sera proposé ensuite par la Commission soit équilibré et ne vienne pas faire peser de trop lourdes charges sur les entreprises.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les propositions du Parlement pour réviser la directive relative aux comités d’entreprise européens. Il appelle notamment à renforcer le pouvoir de ces instances, garantir leur accès à l’information et à prévoir des sanctions pour les employeurs qui ne respecteraient pas leurs obligations. J’ai donc voté pour ce texte qui va dans le sens d’un renforcement des droits des travailleurs et de leurs représentants.
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            Cette réforme des comités d’entreprise européens insuffle plus de démocratie dans la gouvernance des firmes multinationales. Pour protéger les droits des travailleurs et renforcer le dialogue social dans nos entreprises, je soutiens fermement ce texte avec ma délégation l’Europe Ensemble. La culture démocratique a aussi son importance hors de la vie politique.
+        </article>
+    
+        <article>
+            <div class="hidden">197576</div>
+            
+            <header><b>Sylvie BRUNET</b> | Mouvement Démocrate</header>
+            J’ai soutenu le rapport demandant la révision de la directive sur les comités d’entreprise européens. Instaurés en 1994, ces comités représentent les employés européens dans les entreprises multinationales. Ils permettent d&#39;établir un dialogue entre les travailleurs et la direction des entreprises sur les affaires transnationales, notamment au sujet de l’évolution des activités de l’entreprises et des grandes décisions qui peuvent avoir un impact sur les conditions de travail et d’emploi, telles que les restructurations. Ce sont des outils précieux de la démocratie au travail.Toutefois, dans son évaluation datant de 2018, la Commission a identifié des faiblesses dans le fonctionnement de ces comités. En ce sens, notre rapport demande à la Commission de réviser la directive qui encadre les comités d’entreprise européens, afin de renforcer le droit des travailleurs à l&#39;information et à la consultation. Plus précisément, notre rapport demande de meilleurs processus de consultation lors des restructurations, des sanctions davantage dissuasives et un accès à la justice garanti. Je suis convaincue que le dialogue social doit être au cœur de la réponse apportée par l’UE aux processus qui affectent profondément le monde du travail.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai voté en faveur du rapport sur la révision de la directive sur les comités d’entreprise européens qui jouent un rôle important dans l’intégration économique et politique européenne, ainsi que pour assurer la représentation des travailleurs des entreprises multinationales européennes. Ce rapport fait des recommandations à la Commission européenne afin de remédier aux lacunes présentes dans la directive en vigueur depuis 2009, en proposant notamment des définitions plus précises sur les droits de consultation et d’information de ces travailleurs sur les questions de caractère transnational. Le texte suggère également d’apporter des orientations claires sur la résolution des litiges et de mettre en place de nouvelles sanctions plus sévères comme l&#39;exclusion du financement public (y compris des fonds de l&#39;Union européenne), ainsi que l&#39;exclusion des marchés publics pour une période pouvant aller jusqu&#39;à 3 ans en cas de violation des droits par ces entreprises.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Sur la forme, ce texte ne se justifiait pas, le texte de 2009 étant déjà suffisant. Cette révision n’est rien de plus qu’une occasion de rajouter des pénalités et des définitions européennes. Sur le fond, il s’ingère fortement dans nos façons de faire nationales, ce que nous rejetons fermement. Je m’y suis donc opposé.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Ce texte est une révision d’une Directive de 2009 sur l’institution d’un comité d’entreprise européen (CEE) ou d’une procédure dans les entreprises de « dimension communautaire ». On entend par là une entreprise ayant plus de 1 000 travailleurs dans les États membres et, dans au moins deux États membres différents, au moins 150 travailleurs dans chacun d’eux. L’objectif est ici d’assurer le droit à l’information et à la consultation des travailleurs dans ces très grandes entreprises. La révision de ce texte ne se justifiait pas et nous doutons également de sa nécessité: des règles nationales existent déjà dans les États membres, qui s’appliquent à toute entreprise établie sur leurs sols… J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            Le texte est une révision d’une Directive de 2009 sur l’institution d’un comité d’entreprise européen (CEE) ou d’une procédure dans les entreprises de « dimension communautaire ». L’objectif est ici d’assurer le droit à l’information et à la consultation des travailleurs dans ces très grandes entreprises. Des règles nationales existent déjà dans les États membres, qui s’appliquent à toute entreprise établie sur leurs sols, donc un texte européen ne se justifie pas. Nous parlons ici d’entreprises de grandes tailles, qui disposent donc des ressources humaines nécessaires pour vérifier les règles en vigueur et les appliquer. J’ai voté contre ce texte car il s’ingère fortement dans les politiques nationales des Etats membres, en imposant par exemple de nouvelles définitions supranationales, ou en exigeant la mise en place de pénalités.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b></b> | </header>
+            Ce texte consiste à faire des recommandations à la Commission européenne, dans le cadre d’une révision de la directive sur les comités d’entreprise européens. Il s’agit d’organismes chargés de représenter les salariés européens d’une entreprise, par le biais de représentants syndicaux. Ils sont informés et consultés quant à l’évolution de l’activité de leur entreprise et quant à toute décision significative à l’échelle européenne, susceptible d’affecter leurs conditions de travail et d’emploi. Ce rapport reconnaît que les membres des CEE ont peu d’influence dans le processus décisionnel de leurs entreprises et que les sanctions contre les employeurs sont peu dissuasives. Le rapport dénonce aussi l’utilisation abusive des clauses de confidentialité permises par la directive actuelle, et la rétention de ressources par les directions afin d’empêcher les CEE d’accomplir leurs tâches. Ce texte appelle la Commission à remédier à ces problèmes au travers d’un certain nombre de nouvelles obligations et sanctions, et ainsi renforcer le poids des syndicats au niveau européen. J’ai ainsi voté pour ce texte.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-    
-    
 
+    <section>
     
     
-
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            
+                <p>Bref, alors que l’Europe, d’une part, s’enfonce dans la crise économique et, d’autre part, est assaillie par une immigration qui se masse à nos frontières et qui n’hésite pas à fracasser la porte en y entrant illégalement, voilà qu’on se paie le luxe de peaufiner des directives européennes. Nous n’acceptons pas que Bruxelles s’autorise tous ses caprices, car ce sont bien des caprices. En effet, les retours sur le terrain sont très clairs puisque les parties prenantes ne voient aucun intérêt à cette révision. Pire, alors que nos entreprises ont besoin d’oxygène pour se développer, nous refusons d’ajouter encore davantage de bureaucratie inutile. Obliger les entreprises à organiser des réunions d’information et à monter des comités… Mais on marche sur la tête!</p>
+            
+                <p>Pour nous, c’est très clair: le droit du travail national prime sur tout le reste. Dès lors qu’un travailleur français est couvert en France, il est soumis au droit français. C’est très simple, très, très simple. Pourtant, l’Union européenne complique tout alors que la situation va de soi. Nous refusons de perdre un temps précieux alors qu’il y a des priorités. Nous devons faire nos emplois, nos entreprises, notre savoir-faire. C’est tout cela qu’il faut faire. Les Français attendent de nous – moi, je parle pour les Français puisque c’est mon pays – que nous les défendions, pas que nous fassions semblant de jouer aux fonctionnaires européens qui changeons des virgules dans des rapports et mettons les directives à l’heure wokiste. Que les choses soient claires. Nous nous battons pour nos pays, moi, la France, et rien que pour elle. C’est aussi pour cela que c’est simple à comprendre. </p>
+            
+        </article>
     
+        <article>
+            <div class="hidden">197529</div>
+            
+            <header><b>Leila CHAIBI</b> | La France Insoumise</header>
+            
+                <p> – Monsieur le Président, Monsieur le Commissaire, chers collègues, Monsieur le rapporteur, un Français qui s’appelait Jean Jaurès disait à propos de démocratie: la grande Révolution a rendu les Français rois dans la cité et les a laissés serviles dans l’entreprise. Le rapport de Dennis Radtke ne propose pas malheureusement de faire la révolution dans l’entreprise. Pour autant, il est très important car il propose d’insuffler dans l’entreprise la démocratie en renforçant le pouvoir des comités d’entreprise européens.</p>
+            
+                <p>La démocratie politique est pour nous tous, nous toutes, une évidence. La démocratie sociale sur les lieux de travail doit, elle, devenir une réalité. Il n’y a pas de raison que, le matin, en arrivant au travail, on fourre notre citoyenneté au fond de la poche. Il existe donc des comités d’entreprise, des comités d’entreprise européens, qui sont essentiels pour consulter les travailleurs quand des décisions importantes sont prises au sein de l’entreprise. Il ne faut pas être dupe pour autant. Au travail, les travailleurs sont soumis à un lien de subordination et n’auront jamais totalement le pouvoir. La démocratie ne sera jamais totalement parfaite dans l’entreprise. Et soyons conscients que, souvent, les comités d’entreprise européens et de manière générale les instances de démocratie sociale dans l’entreprise sont utilisés en guise de vernis démocratique sur des décisions prises unilatéralement par les directions.</p>
+            
+                <p>N’oublions pas non plus que l’objectif in fine d’une entreprise, ce n’est pas de permettre la réalisation de la souveraineté des salariés, mais c’est de faire des profits. Ces profits, qui les crée? Qui crée la richesse? Sans les travailleurs, l’entreprise n’est rien, ne crée rien. Alors pourquoi les investisseurs seraient-ils consultés dans le cadre des assemblées générales pour valider les décisions stratégiques d’orientation des entreprises et pourquoi les salariés ne seraient-ils pas consultés, eux qui créent la richesse?</p>
+            
+                <p>Les entreprises – et c’est selon moi l’intérêt majeur des comités d’entreprise – s’organisent désormais à l’échelle européenne, pour aller là où la législation les arrange le plus. Et les comités d’entreprise européens sont essentiels dans le sens qu’il s’agit de contre-pouvoirs. Parce que bien souvent, le crédo des entreprises, et je pense notamment à Amazon, c’est diviser pour mieux régner, jouer sur l’atomisation des salariés, leur dispersion, leur cloisonnement. Partout, partout où les travailleurs des multinationales ont mis en place des espaces de discussion, des espaces d’échanges, ils sont parvenus à renverser le rapport de force. C’est là, selon moi, que réside l’intérêt majeur des comités d’entreprise européens en tant qu’outil d’action transnationale au service de la mobilisation des travailleurs. </p>
+            
+        </article>
     
-
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2183(INL)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0295_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-02-02-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+        <article>
+            <div class="hidden">197500</div>
+            
+            <header><b>Mounir SATOURI</b> | Les Écologistes</header>
+            
+                <p>Je voudrais remercier Dennis, notre rapporteur, d’avoir veillé à ce que cette signature soit claire, soit effective dans l’intérêt du dialogue social au sein des comités d’entreprise européens. Et ces comités d’entreprise, quand ils fonctionnent, sont un atout incontestable pour le bien-être des employés, mais aussi pour la transition écologique et les résultats économiques des entreprises. Ils sont essentiels à la démocratie au travail qui participe à la vitalité des entreprises européennes. Les renforcer en leur permettant d’exercer effectivement leurs prérogatives devrait s’imposer comme une évidence. C’est en tout cas le sens des propositions que nous faisons à la Commission. Nous plaidons pour que les comités d’entreprise européens créés par la directive de 1994 aient enfin les moyens d’exercer les droits qui leur sont reconnus. Rien de très original en fait, juste l’état de droit. Et en effet, il est plus que temps que les employeurs ne puissent plus retarder ou simplement bloquer la création de ces comités d’entreprise. Que ces comités d’entreprise soient informés avant toute décision. Qu’un équilibre hommes-femmes soit assuré dans la composition de ces comités d’entreprise. Que les clauses de confidentialité ne soient plus utilisées à mauvais escient et que ces comités d’entreprise bénéficient de la capacité juridique et des moyens financiers à agir en justice dans tous les États membres.</p>
+            
+                <p>En voulant affaiblir l’opposabilité des droits de ces comités d’entreprise européens, les amendements du groupe Renew entravent les employés dans l’exercice de leurs droits et privent les entreprises d’un atout important pour leur réussite. Je vous invite, chers collègues, à ne pas suivre cette voie et je demande à la Commission de se saisir de cet excellent projet de rapport pour consolider les droits sociaux partout en Europe. </p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

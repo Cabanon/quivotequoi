@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Résolution sur la création d’un tribunal pour le crime d’agression contre l’Ukraine</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Résolution sur la création d’un tribunal pour le crime d’agression contre l’Ukraine</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(472/524 * 100%)">472</div>
-  
-  
-    <div class="-" style="width: calc(19/524 * 100%)">19</div>
+    <div class="for" style="width: calc(472/524 * 100%)">472</div>
   
   
-    <div class="0" style="width: calc(33/524 * 100%)">33</div>
+    <div class="against" style="width: calc(19/524 * 100%)">19</div>
+  
+  
+    <div class="abstention" style="width: calc(33/524 * 100%)">33</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(39/54 * 100%)">39</div>
+    <div class="for" style="width: calc(39/54 * 100%)">39</div>
   
   
-    <div class="-" style="width: calc(1/54 * 100%)">1</div>
+    <div class="against" style="width: calc(1/54 * 100%)">1</div>
   
   
-    <div class="0" style="width: calc(14/54 * 100%)">14</div>
+    <div class="abstention" style="width: calc(14/54 * 100%)">14</div>
   
 </div>
  
 </section>
-            <a href="/voting/152245">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/152245">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -111,222 +116,407 @@
     
         
         
-            <li>Relations extérieures de l&#39;Union</li>
+            <li>Politique étrangère et de sécurité commune (PESC)</li>
         
     
         
         
-            <li>Politique étrangère et de sécurité commune (PESC)</li>
+            <li>Relations extérieures de l&#39;Union</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/3017(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/RC-9-2023-0063_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-01-19-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,124693,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,124693">🇫🇷 Renaissance</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197626,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197615">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197626,197629">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>11 bis. déplore que d’autres crimes d’agression flagrants, tels que l’invasion de l’Iraq par la coalition menée par les États-Unis en 2003, restent impunis; demande que l’Union apporte son soutien et sa coopération au procureur de la CPI pour mener des enquêtes et des poursuites à l’égard de tous les dirigeants politiques et militaires impliqués dans cette guerre, y compris l’ancien président américain George W. Bush et l’ancien premier ministre britannique Tony Blair;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
     
-    <article>
-    <header>📝 Amendement n°2 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>13 bis. est d’avis que le déclenchement d’une procédure exceptionnelle relative à l’agression commise en Ukraine en l’absence d’une modification structurelle du statut de Rome permettant de juger des actes d’agression similaires discréditerait l’initiative et la priverait de la légitimité indispensable; demande par conséquent que l’Union propose une modification du statut de Rome afin d’élargir sa compétence en ce qui concerne le crime d’agression;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
     
-    <article>
-    <header>📝 Amendement n°3 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       – vu 
   
 
   
-      <del>la résolution </del>
+      <del>la résolution</del>
   
 
   
-      <ins>les résolutions </ins>
+      <ins>les résolutions</ins>
   
 
   
-      de l’Assemblée générale des Nations unies du 2 mars 2022 intitulée «Agression contre l’Ukraine»
+       de l’Assemblée générale des Nations unies du 2 mars 2022 intitulée «Agression contre l’Ukraine
   
 
   
-      <del>,</del>
+      <del>»,</del>
   
 
   
-      <ins> et du 12 octobre 2022 intitulée «L’intégrité territoriale de l’Ukraine: défense des principes consacrés par la Charte des Nations unies»;</ins>
+      <ins>» et du 12 octobre 2022 intitulée «L’intégrité territoriale de l’Ukraine: défense des principes consacrés par la Charte des Nations unies»;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
+    
+    ECR
     
     
-    <article>
-    <header>📝 Amendement n°4 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       L. considérant que, depuis le 2 mars 2022, le procureur de la CPI mène une enquête sur la situation en Ukraine portant sur les allégations passées et actuelles de crimes commis par la Fédération de Russie depuis le 21 novembre 2013, y compris de génocide, de crimes de guerre et de crimes contre l’humanité; que, bien que l’Ukraine ne soit pas un État partie à la CPI, elle a 
   
 
   
-      <del>consenti à cette enquête;</del>
+      <del>consenti à cette enquête</del>
   
 
   
-      <ins>reconnu la compétence de la CPI et coopère avec elle;</ins>
+      <ins>reconnu la compétence de la CPI et coopère avec elle</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">345</div>
+  <div class="against">167</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(345/522 * 100%)">345</div>
-  
-  
-    <div class="-" style="width: calc(167/522 * 100%)">167</div>
-  
-  
-    <div class="0" style="width: calc(10/522 * 100%)">10</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
-
-  
-      R. considérant que, le 30 novembre 2022, la Commission a proposé d’autres possibilités sur les moyens d’établir un mécanisme de responsabilité pour le crime d’agression contre l’
-  
+<p>
 
   
-      <del>Ukraine, à savoir par l’intermédiaire d’un tribunal international spécial indépendant fondé sur un traité multilatéral ou d’un tribunal spécialisé intégré dans un système judiciaire national et composé de juges internationaux, ces deux solutions nécessitant le soutien résolu des Nations unies;</del>
+      R. considérant que, le 30 novembre 2022, la Commission a proposé d’autres possibilités sur les moyens d’établir un mécanisme de responsabilité pour le crime d’agression contre l’Ukraine
   
 
   
-      <ins>Ukraine; que toute décision relative à un tel mécanisme doit être prise en étroite coopération avec l’Ukraine;</ins>
+      <del>, à savoir par l’intermédiaire d’un tribunal international spécial indépendant fondé sur un traité multilatéral ou d’un tribunal spécialisé intégré dans un système judiciaire national et composé de juges internationaux, ces deux solutions nécessitant le soutien résolu des Nations unies</del>
+  
+
+  
+      <ins>; que toute décision relative à un tel mécanisme doit être prise en étroite coopération avec l’Ukraine</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
+    
+    ECR
     
     
-    <article>
-    <header>📝 Amendement n°6 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       1. condamne une nouvelle fois, dans les termes les plus sévères, la guerre d’agression menée par la Russie contre l’Ukraine, apporte son soutien indéfectible à l’indépendance, à la souveraineté et à l’intégrité territoriale de l’Ukraine à l’intérieur de ses frontières internationalement reconnues et demande à la Russie de mettre immédiatement un terme à toutes les activités militaires menées en Ukraine et de retirer sans condition toutes les forces et tous les équipements militaires de l’ensemble du territoire ukrainien internationalement reconnu;
@@ -336,29 +526,41 @@
       <ins> réaffirme sa conviction que seule la victoire finale sur l’agresseur peut constituer le préalable à la sauvegarde de la justice et à la fin de l’impunité;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
+    
+    ECR
     
     
-    <article>
-    <header>📝 Amendement n°7 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       13. est fermement convaincu que la création de ce tribunal spécial pour le crime d’agression indiquerait très clairement à la société russe et à la communauté internationale que Poutine et les dirigeants politiques et militaires russes peuvent être condamnés pour le crimes d’agression contre l’Ukraine; souligne que la création de ce tribunal signalerait aussi clairement aux élites politiques et économiques russes et aux alliés de la Russie qu’il n’est plus possible qu’avec Poutine à sa tête, la Fédération de Russie renoue des relations normales avec l’occident;
@@ -368,64 +570,151 @@
       <ins> rappelle que l’impunité après les atrocités brutales commises par le passé par Vladimir Poutine, Sergueï Sourovikine, Valeri Guerassimov et d’autres en Tchétchénie et en Syrie, ainsi que les crimes commis lors de l’invasion de la Géorgie, a encouragé les décideurs politiques et militaires de la Fédération de Russie à commettre des atrocités similaires à une échelle beaucoup plus grave en Ukraine;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
+    
+    ECR
     
     
-    <article>
-    <header>📝 Amendement n°8 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
-
-  
-      16. charge sa Présidente de transmettre la présente résolution au vice-président de la Commission / haut représentant de l’Union pour les affaires étrangères et la politique de sécurité, au Conseil, à la Commission, aux gouvernements et aux parlements des États membres, au secrétaire général de l’Organisation des Nations unies, au Conseil de l’Europe, à l’Organisation pour la sécurité et la coopération en Europe, au Haut- Commissariat des Nations unies aux droits de l’homme, au Haut-Commissariat des Nations unies pour les réfugiés, au Comité international de la Croix-Rouge, à la Cour pénale internationale, aux pays du G7, 
-  
+<p>
 
   
-      <ins>à l’Union africaine, à la Communauté économique des États de l&#39;Afrique de l&#39;Ouest, au Forum des îles du Pacifique, à l’Organisation des États américains, à la Communauté des Caraïbes, </ins>
+      16. charge sa Présidente de transmettre la présente résolution au vice-président de la Commission / haut représentant de l’Union pour les affaires étrangères et la politique de sécurité, au Conseil, à la Commission, aux gouvernements et aux parlements des États membres, au secrétaire général de l’Organisation des Nations unies, au Conseil de l’Europe, à l’Organisation pour la sécurité et la coopération en Europe, au Haut- Commissariat des Nations unies aux droits de l’homme, au Haut-Commissariat des Nations unies pour les réfugiés, au Comité international de la Croix-Rouge, à la Cour pénale internationale, aux pays du G7,
   
 
   
-      aux autorités biélorusses, au Président, au gouvernement et au Parlement de la Fédération de Russie et au Président, au gouvernement et au Parlement de l’Ukraine.
+      <ins> à l’Union africaine, à la Communauté économique des États de l&#39;Afrique de l&#39;Ouest, au Forum des îles du Pacifique, à l’Organisation des États américains, à la Communauté des Caraïbes,</ins>
+  
+
+  
+       aux autorités biélorusses, au Président, au gouvernement et au Parlement de la Fédération de Russie et au Président, au gouvernement et au Parlement de l’Ukraine.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/3017(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/RC-9-2023-0063_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+    ECR
+    
+    
   
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-01-19-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            Je me suis abstenue sur ce texte, qui contrevient au principe selon lequel l’Organisation des Nations unies doit d’abord statuer, avant qu’une agression d’un pays tiers soit renvoyée vers un tribunal.C’est un principe auquel la France s’est toujours tenue.Il faut, en outre, être mesuré sur une éventuelle instrumentalisation de la justice internationale dans ce conflit.En effet, la précipitation de l’Union européenne pourrait accréditer l’interprétation selon laquelle cette proposition ne serait qu’un volet de plus du soutien de Bruxelles à Kiev.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Ce texte très idéologique est l’inverse d’un bon signal diplomatique destiné à chercher la paix. De plus, il engendrerait une recrudescence des poursuites contre des pays au nom d’un crime d’agression mal défini. D’ailleurs, la France n’a pas signé et ratifié le compromis dit de Kampala, sur le crime d’agression, pour éviter cette inflation dangereuse. D’où mon abstention.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            Je me suis abstenu sur cette résolution. Certes les crimes commis par la Russie en Ukraine devront être jugés. Mais, conformément à la position historique de la France dans les cas similaires, je refuse d’accorder à un tribunal ad-hoc le droit de poursuivre un crime sans en référer au préalable au Conseil de sécurité de l’ONU.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            Depuis un an maintenant, la Russie mène une guerre d&#39;agression contre l&#39;Ukraine. Des exactions sont commises aux portes de l&#39;Europe et nécessitent une réponse juridique appropriée à l’échelle internationale. C&#39;est pourquoi, au travers de cette résolution, le Parlement européen condamne une nouvelle fois la guerre d’agression menée par la Russie. Il appelle aujourd’hui à la création d&#39;un tribunal international spécial qui sera en charge de juger et de condamner ce crime d&#39;agression commis par les dirigeants politiques et militaires russes, et ce afin que ces actions ne restent pas impunies. Pour toutes ces raisons, j&#39;ai voté en faveur de la résolution.
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            Les responsables politiques et militaires de la Fédération de Russie doivent être effectivement inculpés devant un tribunal sous peine d’affaiblir le droit international, notamment la charte des Nations unies. Puisque la Russie ne peut pas être amenée devant la Cour pénale internationale (CPI), cette résolution propose de créer un tribunal spécial relatif au crime d’agression contre l’Ukraine. Je me suis donc exprimé en faveur de ce texte avec mon groupe Renew Europe.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté en faveur de cette résolution demandant l’établissement d’un tribunal sur les crimes d’agression contre l’Ukraine, réitérant l’appel lancé par le Parlement européen dès le mois de mai 2022. Depuis le déclenchement de l’invasion russe de l’Ukraine en février 2022, l’armée russe s’est rendue coupable de nombreux actes d’extrême violence à l’encontre des populations civiles et militaires, en violation des principes élémentaires du droit de la guerre. À la violence doit désormais répondre l’établissement d’une autorité judiciaire compétente pour juger et condamner ces crimes d’agression, crimes de guerre et crimes contre l’humanité.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Cette résolution contrevient à la tradition française de refuser d’accorder à un tribunal le droit de poursuivre le crime dit d’agression d’un pays sans en référer au préalable au conseil de sécurité de l’ONU. Par ailleurs, en instrumentalisant la justice internationale au profit de la stratégie de Bruxelles en Ukraine, elle risque de renforcer paradoxalement les arguments de la Russie.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b>Marina MESURE</b> | La France Insoumise</header>
+            Cette résolution appelle à la création d’un tribunal spécial pour juger les personnes responsables du crime d’agression commis contre l’Ukraine. Au-delà du crime d’agression, ce tribunal enquêterait et jugerait les autres catégories de crimes internationalement reconnus tels que les crimes de guerre et les crimes contre l’Humanité. Il est incontestable que l’invasion de l’Ukraine par l’armée russe constitue une agression, au sens du droit international tel que fixé par le Statut de Rome qui fonde la compétence de la Cour Pénale Internationale. Il est essentiel de recenser des preuves des exactions commises en Ukraine afin de condamner les responsables dans le cadre du droit international et d’établir, en faits et en droit, la réalité des crimes qui sont commis, sans quoi une paix durable ne pourra être construite à la suite du conflit.La Cour Pénale Internationale bénéficie d’une légitimité et d’une présomption d’impartialité dont ne jouit aucune autre juridiction internationale. Il serait donc préférable que la CPI soit compétente en la matière afin d’éviter toute contestation du jugement qui sera rendu. Malgré cette réserve, j’ai voté pour cette résolution qui appelle sans ambiguïté à rendre justice aux victimes des crimes commis en Ukraine.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

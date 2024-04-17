@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Résolution sur le droit à la réparation</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Résolution sur le droit à la réparation</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(509/525 * 100%)">509</div>
-  
-  
-    <div class="-" style="width: calc(3/525 * 100%)">3</div>
+    <div class="for" style="width: calc(509/525 * 100%)">509</div>
   
   
-    <div class="0" style="width: calc(13/525 * 100%)">13</div>
+    <div class="against" style="width: calc(3/525 * 100%)">3</div>
+  
+  
+    <div class="abstention" style="width: calc(13/525 * 100%)">13</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,17 +88,18 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(47/47 * 100%)">47</div>
+    <div class="for" style="width: calc(47/47 * 100%)">47</div>
   
   
   
 </div>
  
 </section>
-            <a href="/voting/141590">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/141590">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -102,7 +107,17 @@
     
         
         
-            <li>Politiques communautaires</li>
+            <li>Cohésion économique, sociale et territoriale</li>
+        
+    
+        
+        
+            <li>Protection des consommateurs, généralités</li>
+        
+    
+        
+        
+            <li>Intérêts économiques et juridiques du consommateur</li>
         
     
         
@@ -117,83 +132,195 @@
     
         
         
-            <li>Protection des consommateurs, généralités</li>
-        
-    
-        
-        
-            <li>Cohésion économique, sociale et territoriale</li>
-        
-    
-        
-        
-            <li>Intérêts économiques et juridiques du consommateur</li>
+            <li>Politiques communautaires</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2515(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/B-9-2022-0175_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-04-07-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                            <option value="RE,197511">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197683,197629,197615">🇫🇷 Reconquête!</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>3 bis. souligne que les mesures qui encouragent la réparation doivent être accompagnées d’initiatives facilitant l’accès aux professionnels capables de fournir des services de réparation et devraient en favoriser l’accès équitable au sein des populations urbaines et rurales et des différents États membres, notamment par des mesures propres à stimuler un commerce transfrontalier performant de ces services afin que le potentiel du marché unique soit pleinement exploité et que les consommateurs bénéficient de prix compétitifs;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">232</div>
+  <div class="against">265</div>
+  <div class="abstention">26</div>
+</span>
+
+  
+    
+    <a href="/voting/141578">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(232/523 * 100%)">232</div>
-  
-  
-    <div class="-" style="width: calc(265/523 * 100%)">265</div>
-  
-  
-    <div class="0" style="width: calc(26/523 * 100%)">26</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/141578">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       20. souligne que les consommateurs européens peuvent faire réparer leurs biens ou mettre en conformité les contenus et services numériques en vertu de la directive relative à la vente de biens et de la directive relative au contenu numérique; souligne que si les consommateurs ont le droit de choisir entre la réparation et le remplacement des biens défectueux en vertu de la directive relative à la vente de biens, la réparation pourrait dans de nombreux cas être un choix plus efficace du point de vue des ressources et plus neutre du point de vue climatique; note que, dans la pratique, les consommateurs choisissent généralement le remplacement plutôt que la réparation, peut-être parce que le coût de la réparation est trop élevé; souligne que le remplacement du produit doit rester une option 
@@ -208,55 +335,167 @@
   
 
   
-      <del>et le vendeur en conviennent, les fois où la réparation pourrait prendre trop de temps;</del>
+      <del>et </del>
   
 
   
-      <ins>le souhaite;</ins>
+      le 
+  
+
+  
+      <del>vendeur en conviennent, les fois où la réparation pourrait prendre trop de temps</del>
+  
+
+  
+      <ins>souhaite</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(210/522 * 100%)">210</div>
-  
-  
-    <div class="-" style="width: calc(289/522 * 100%)">289</div>
-  
-  
-    <div class="0" style="width: calc(23/522 * 100%)">23</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/141586">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    ECR
     
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2515(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/B-9-2022-0175_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">210</div>
+  <div class="against">289</div>
+  <div class="abstention">23</div>
+</span>
+
   
+    
+    <a href="/voting/141586">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-04-07-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Reconquête!</header>
+            . – J’ai voté en faveur de ce texte de bon sens qui entend augmenter la durée de vie des produits et favoriser la réparation plutôt que le remplacement. Même s’il se place sous le prisme idéologique du pacte vert, ce texte est une bonne chose pour un peu plus de sobriété, au bénéfice de l’environnement et du pouvoir d’achat des consommateurs.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Ce texte faisait partie des textes très encourageants que l’on nous demande d’examiner. L’objectif, très ambitieux, est de promouvoir le droit à la réparation des produits et de dénoncer les obstacles persistants à la réparation : manque d’informations, manque d’accès aux pièces détachées, manque de standardisation et d’interopérabilité, coût dissuasif de la réparation... Il est pourtant bon de rappeler que les déchets électroniques représentent 53 millions de tonnes de déchets jetés. Le texte demande donc de lever les barrières à la réparation des produits tant au niveau de la conception (imaginer des produits recyclables), de la vente (mettre en avant les produits recyclables par l&#39;étiquetage) que de la fin de vie (accès facilité aux pièces de rechange). Pour cela, il avance une série de mesures : fournir un produit de remplacement le temps de la réparation, offrir des bonus pour le choix de la réparation, étendre la garantie pour certaines catégories de produits, proposer un indice de réparabilité au moment de l’achat. Il pose également le principe que toute entrave au droit à la réparation peut être considérée comme une pratique commerciale déloyale. J’ai évidemment voté en faveur.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            . – J’ai voté en faveur de cette résolution sur le droit à la réparation. Le texte promeut la réparation des objets, bénéfique tant pour l’environnement que pour le pouvoir d’achat des consommateurs. Il émet une série de recommandations pour favoriser la réparation plutôt que le remplacement : accès gratuit à l’information sur la réparation et l’entretien des produits, lutte contre l’obsolescence programmée, mise en œuvre de scores de réparation et de primes à réparer, obligation de fournir au consommateur un bien de remplacement pendant la réparation, etc.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            La Commission européenne devrait proposer cette année une directive sur le droit à la réparation. Par cette résolution, le Parlement européen entend prendre position en amont de cette proposition législative afin de renforcer la réparabilité des produits dans l’optique d’augmenter la durabilité des produits et leur écoconception. L’un des points phares de cette résolution demande notamment l’amélioration de l’information du consommateur sur la réparabilité. Toutefois, la Commission, dans sa proposition à venir, devra également protéger l’innovation et le secret d’affaires. J’ai donc voté en faveur de cette résolution.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Cette résolution vise à présenter les observations et les recommandations du Parlement européen sur la mise en place d’un droit à la réparation des produits. Il souligne notamment la nécessité de traiter l’intégralité du cycle de vie des produits, d’exiger des fabricants l’accessibilité et la facilité d’utilisation des pièces détachées, de créer un indice fiable de réparabilité et de durée de vie estimée du produit ou encore d’harmoniser vers le haut la durée de garantie des produits. J’ai donc voté pour ce texte qui offre des pistes de travail intéressantes pour limiter le gaspillage et la surconsommation.
+        </article>
+    
+        <article>
+            <div class="hidden">197589</div>
+            
+            <header><b>Laurence FARRENG</b> | Mouvement Démocrate</header>
+            Jeudi 7 avril 2022, j’ai voté en faveur de la résolution consacrant le droit à la réparation dans le cadre du soutien de mon groupe aux législations portant sur l’obsolescence programmée et l’économie circulaire. Ce texte représente la position du Parlement européen, en amont de la publication de la proposition législative de la Commission, prévue pour la fin de cette année 2022. Nous demandons à cette que cette future législation permette aux consommateurs de faire réparer leurs biens défectueux et ainsi, de les utiliser plus longtemps. Sur le court terme, la consécration et l’application effective du droit à la réparation entraînera une réduction des coûts pour les consommateurs. Sur le long terme, des effets tendant vers une consommation plus responsable et raisonnée devraient être observés.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Reconquête!</header>
+            J’ai voté en faveur de ce texte de bon sens qui entend augmenter la durée de vie des produits et favoriser la réparation plutôt que le remplacement. Même s’il se place sous le prisme idéologique du pacte vert, ce texte est une bonne chose pour un peu plus de sobriété, pour les enjeux environnementaux, et pour le pouvoir d’achat des consommateurs.
+        </article>
+    
+        <article>
+            <div class="hidden">197536</div>
+            
+            <header><b>Nathalie COLIN-OESTERLÉ</b> | Les centristes</header>
+            . – J’ai voté en faveur de la résolution sur le droit à la réparation. Cette résolution du Parlement invite à donner à l’industrie de la réparation, y compris aux réparateurs indépendants, et aux consommateurs, l’accès gratuit à l’information sur la réparation et l’entretien des produits. Elle souligne que les pratiques qui restreignent indûment le droit à la réparation ou conduisent à l’obsolescence pourraient être considérées comme des «pratiques commerciales déloyales».Différentes mesures visant à motiver les consommateurs à choisir la réparation plutôt que le remplacement sont également proposées dans le texte. Il peut s’agir de l’obligation de fournir un bien de remplacement pour la durée d’une réparation de certains produits, de l’extension des garanties ou encore de l’octroi de primes aux consommateurs qui choisissent de réparer. Je resterai attentive à la proposition législative qui sera faite fin 2022 par la Commission européenne sur le droit à la réparation. L’économie circulaire est un pilier important pour atteindre les objectifs fixés par le Pacte Vert.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197527</div>
+            
+            <header><b>Anne-Sophie PELLETIER</b> | La France Insoumise</header>
+            
+                <p>En Europe, nous sommes les champions du monde de la pollution électronique: pas moins de 12 millions de tonnes de ces déchets générés chaque année, soit 16,2 kg par habitant. Une montagne de téléviseurs, d’ordinateurs, de jouets connectés, de machines à laver, de téléphones. Certes, la filière du recyclage en Europe est l’une des plus développées, mais c’est encore loin d’être suffisant. Nous le savons, une grande partie de ces déchets finissent jetés dans la nature, non recyclés ou réexpédiés dans d’autres pays où ils alimentent des décharges à ciel ouvert, polluant aussi les sols. Nous envoyons ainsi nos déchets en Afrique, en Asie, pour notre petit confort d’Européens, mais dans le mépris le plus total de l’environnement et des populations.</p>
+            
+                <p>C’est pourquoi nous devons agir vite: obliger les fabricants à rendre accessibles les pièces détachées et à faciliter la réparation. Celles-ci doivent être disponibles à moindre coût. Que dire de l’obsolescence programmée qui est un fléau pour les consommateurs, leur pouvoir d’achat et la planète? Encourageons donc les consommateurs à faire valoir leurs droits et à privilégier, comme ils le souhaitent à hauteur de 77 %, la réparation de leurs produits. Permettons-leur de faire des choix d’achat parfaitement éclairés sur la base d’indices de réparabilité obligatoires des produits. La réparation, c’est un droit et c’est un droit de bon sens pour les consommateurs.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197503</div>
+            
+            <header><b>David CORMAND</b> | Les Écologistes</header>
+            
+                <p>Notre marché unique doit être plus durable pour éviter bien sûr le gaspillage et les déchets, pour protéger la planète, les consommatrices et les consommateurs. Pour cela, il faut sortir d’une société de consommation qui est devenue une société de consumation.</p>
+            
+                <p>Le droit à la réparation doit être garanti aux consommatrices et aux consommateurs. Pour cela, ils doivent en être informés et il faut responsabiliser les entreprises et les fabricants, et non pas l’inverse. Cela veut dire un affichage obligatoire sur les produits afin de connaître leur durabilité et leur réparabilité, ainsi qu’un accès aux pièces détachées. Cela a été voté au sein de cette Assemblée, il y a deux ans.</p>
+            
+                <p>Il y a deux ans également, a été votée dans cette Assemblée l’interdiction de l’obsolescence prématurée des produits, parce que cela a des effets pervers sur la planète, sur les consommatrices et sur les consommateurs.</p>
+            
+                <p>La question qui nous occupe et dont on parle, ce n’est pas une question de bricolage. Réparer, c’est bon pour l’emploi local, pour la souveraineté de l’Union européenne, pour l’économie européenne, pour le porte-monnaie des consommatrices et des consommateurs et évidemment, c’est une bonne chose pour l’environnement et pour le climat.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">204419</div>
+            
+            <header><b>Sandro GOZI</b> | Renaissance</header>
+            
+                <p> – Madame la Présidente, 77 % des Européens préféreraient réparer leurs biens plutôt que de les changer. Pourtant, trois quarts d’entre eux sont obligés de jeter sans réparer. Impossible de parler d’économie circulaire sans droit à la réparation. Inacceptable de dénier la liberté des choix aux consommateurs. Nous devons interdire les pratiques d’obsolescence programmée et le choix réparable doit devenir le choix par défaut. L’enjeu est double: créer un marché unique durable et augmenter le pouvoir d’achat des Européens. Droit à la réparation et innovation peuvent parfaitement coexister, l’innovation ne doit pas être utilisée comme une excuse pour ne pas reconnaître le droit à la réparation. On parle de notre vie quotidienne et on parle de la planète, permettez-moi alors de conclure par une métaphore biologique: le corps humain est la plus belle des machines. Quand on se casse un membre ou que l’on a un problème de santé, que fait-on? On répare. Alors pourquoi ce qui est une évidence pour l’homme ne le serait-il pas aussi pour ce que fabrique l’homme?</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

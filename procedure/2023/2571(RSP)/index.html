@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Résolution sur le suivi des mesures demandées par le Parlement pour renforcer l’intégrité des institutions européennes</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Résolution sur le suivi des mesures demandées par le Parlement pour renforcer l’intégrité des institutions européennes</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(401/537 * 100%)">401</div>
-  
-  
-    <div class="-" style="width: calc(3/537 * 100%)">3</div>
+    <div class="for" style="width: calc(401/537 * 100%)">401</div>
   
   
-    <div class="0" style="width: calc(133/537 * 100%)">133</div>
+    <div class="against" style="width: calc(3/537 * 100%)">3</div>
+  
+  
+    <div class="abstention" style="width: calc(133/537 * 100%)">133</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(43/61 * 100%)">43</div>
+    <div class="for" style="width: calc(43/61 * 100%)">43</div>
   
   
-    <div class="-" style="width: calc(1/61 * 100%)">1</div>
+    <div class="against" style="width: calc(1/61 * 100%)">1</div>
   
   
-    <div class="0" style="width: calc(17/61 * 100%)">17</div>
+    <div class="abstention" style="width: calc(17/61 * 100%)">17</div>
   
 </div>
  
 </section>
-            <a href="/voting/153139">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/153139">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -106,12 +111,12 @@
     
         
         
-            <li>Etat et évolution de l&#39;Union</li>
+            <li>Relations interinstitutionnelles, subsidiarité, proportionnalité, comitologie</li>
         
     
         
         
-            <li>Relations interinstitutionnelles, subsidiarité, proportionnalité, comitologie</li>
+            <li>Etat et évolution de l&#39;Union</li>
         
     
         
@@ -121,958 +126,1104 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/2571(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/RC-9-2023-0147_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-02-16-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,124693,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,124693">🇫🇷 Renaissance</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197626,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197615">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197626,197629">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>A bis. considérant que le récent scandale du Qatargate a mis à nu les graves faiblesses systémiques des institutions européennes, qui ont été exploitées à plusieurs reprises par le comportement et les activités de leurs membres et fonctionnaires; que le Qatargate n’est que la partie émergée de l’iceberg, car ce problème frappe toutes les institutions européennes et implique également des pays tiers;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">116</div>
+  <div class="against">410</div>
+  <div class="abstention">17</div>
+</span>
+
+  
+    
+    <a href="/voting/153137">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(116/543 * 100%)">116</div>
-  
-  
-    <div class="-" style="width: calc(410/543 * 100%)">410</div>
-  
-  
-    <div class="0" style="width: calc(17/543 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153137">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       9. 
   
 
   
-      <del>renouvelle, en particulier, sa demande formulée de longue date concernant la présentation, dans les plus brefs délais, d’une proposition visant à mettre en place un organisme indépendant et efficace chargé des questions d’éthique, conformément aux résolutions du Parlement du 16 septembre 2021; déplore que la Commission n’ait toujours pas présenté de proposition en ce sens bien que la présidente de la Commission ait inclus cette proposition dans la lettre de mission de la commissaire Věra Jourová en 2019, et regrette que le plan d’action de la présidente du Parlement européen ne contienne aucune mesure visant à accélérer la procédure; demande instamment à la Commission de présenter sa proposition de création d’un organisme indépendant </del>
+      <del>renouvelle, en particulier, sa demande formulée de longue date concernant la présentation, dans les plus brefs délais, d’une proposition visant à mettre en place un organisme indépendant et efficace chargé des questions d’éthique, conformément aux résolutions du Parlement du 16 septembre 2021; déplore que la Commission n’ait toujours pas présenté de proposition en ce sens bien que la présidente de la Commission ait inclus cette proposition dans la lettre de mission de la commissaire Věra Jourová en 2019, et regrette que le plan</del>
   
 
   
-      <ins>rappelle que la résolution du 16 septembre 2021 envisage que l’organisme chargé des questions d’éthique sera à terme doté d’un pouvoir décisionnel, ce qui empiéterait sur l’équilibre des pouvoirs entre les institutions; regrette que cet organisme chargé des questions d’éthique, tel qu’il est proposé, comprenne trois membres sélectionnés par la Commission, soit de facto des membres de l’exécutif ce qui constituerait une violation du principe de séparation des pouvoirs; déplore les lacunes profondes de la proposition présentée dans la résolution susmentionnée du Parlement, qui empêcheraient l’organisme européen chargé des questions d’éthique de respecter les normes d’indépendance et d’impartialité dans ses actions; souligne dans ce contexte qu’il est essentiel de respecter le cadre des traités, avant tout en assurant le maintien de l’équilibre et de l’autonomie institutionnelle; souligne que la seule solution possible est un organisme externe de l’Union </ins>
+      <ins>rappelle que la résolution du 16 septembre 2021 envisage que l’organisme chargé des questions d’éthique sera à terme doté d’un pouvoir décisionnel, ce qui empiéterait sur l’équilibre des pouvoirs entre les institutions; regrette que cet organisme chargé des questions d’éthique, tel qu’il est proposé, comprenne trois membres sélectionnés par la Commission, soit de facto des membres de l’exécutif ce qui constituerait une violation du principe de séparation des pouvoirs; déplore les lacunes profondes de la proposition présentée dans la résolution susmentionnée du Parlement, qui empêcheraient l’organisme européen chargé des questions</ins>
   
 
   
-      chargé des 
+       d’
   
 
   
-      <ins>  </ins>
+      <del>action</del>
   
 
   
-      questions d’é
+      <ins>éthique</ins>
   
 
   
-      <del>thique d’ici au mois de mars 2023, conformément à la résolution du Parlement de février 2022 sur la création d’un organisme indépendant chargé des questions d’éthique;</del>
+       de 
   
 
   
-      <ins>thique, composé de personnes extérieures aux institutions de l’Union déléguées par les parlements nationaux de chaque État membre, garantissant ainsi son indépendance et son impartialité; souligne que, pour garantir l’indépendance de l’organisme européen chargé des questions d’éthique, ses membres ne devraient pas participer activement ni avoir participé activement par le passé, aux travaux des institutions de l’Union; observe que cette précaution garantirait que les membres ne fassent preuve d’aucune partialité à l’égard d’une institution dans leurs travaux;</ins>
+      <del>la présidente du Parlement européen ne contienne aucune mesure visant à accélérer la procédure; demande instamment à la Commission de présenter sa proposition de création d’un organisme indépendant</del>
+  
+
+  
+      <ins>respecter les normes d’indépendance et d’impartialité dans ses actions; souligne dans ce contexte qu’il est essentiel de respecter le cadre des traités, avant tout en assurant le maintien de l’équilibre et de l’autonomie institutionnelle; souligne que la seule solution possible est un organisme externe de l’Union</ins>
+  
+
+  
+       chargé des
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>   </ins>
+  
+
+  
+      questions d’éthique
+  
+
+  
+      <del> d’ici au mois de mars 2023, conformément à la résolution du Parlement de février 2022 sur la création d’un organisme indépendant chargé des questions d’éthique</del>
+  
+
+  
+      <ins>, composé de personnes extérieures aux institutions de l’Union déléguées par les parlements nationaux de chaque État membre, garantissant ainsi son indépendance et son impartialité; souligne que, pour garantir l’indépendance de l’organisme européen chargé des questions d’éthique, ses membres ne devraient pas participer activement ni avoir participé activement par le passé, aux travaux des institutions de l’Union; observe que cette précaution garantirait que les membres ne fassent preuve d’aucune partialité à l’égard d’une institution dans leurs travaux</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">114</div>
+  <div class="against">434</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/153109">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(114/559 * 100%)">114</div>
-  
-  
-    <div class="-" style="width: calc(434/559 * 100%)">434</div>
-  
-  
-    <div class="0" style="width: calc(11/559 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153109">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
-
-  
-      10. 
-  
+<p>
 
   
-      <del>regrette que les mesures adoptées ne comportent pas de propositions de réforme crédible du comité consultatif sur la conduite des députés; </del>
+      10.
   
 
   
-      s’engage à 
+      <del> regrette que les mesures adoptées ne comportent pas de propositions de réforme crédible du comité consultatif sur la conduite des députés;</del>
   
 
   
-      <del>réformer </del>
+       s’engage à 
   
 
   
-      <ins>renforcer </ins>
+      <del>réformer</del>
   
 
   
-      le comité 
+      <ins>renforcer</ins>
   
 
   
-      <del>consultatif conformément à sa proposition de création d’un organisme indépendant chargé des questions d’éthique, jusqu’à ce que celui-ci soit en mesure de prendre le relais du comité consultatif pour contrôler les députés de sa propre initiative, permettre à toute personne de déposer des plaintes motivées, mettre en place des contrôles proactifs des déclarations d’intérêts des députés et instaurer un système plus efficace et transparent de sanctions plus sévères à l’encontre des députés en exercice et des anciens députés;</del>
+       le comité consultatif
   
 
   
-      <ins>consultatif, en lui permettant de contrôler les députés de sa propre initiative;</ins>
+      <del> conformément à sa proposition de création d’un organisme indépendant chargé des questions d’éthique, jusqu’à ce que celui-ci soit en mesure de prendre le relais du comité consultatif pour contrôler les députés de sa propre initiative, permettre à toute personne de déposer des plaintes motivées, mettre en place des contrôles proactifs des déclarations d’intérêts des députés et instaurer un système plus efficace et transparent de sanctions plus sévères à l’encontre des députés en exercice et des anciens députés</del>
+  
+
+  
+      <ins>, en lui permettant de contrôler les députés de sa propre initiative</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">104</div>
+  <div class="against">443</div>
+  <div class="abstention">12</div>
+</span>
+
+  
+    
+    <a href="/voting/153113">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(104/559 * 100%)">104</div>
-  
-  
-    <div class="-" style="width: calc(443/559 * 100%)">443</div>
-  
-  
-    <div class="0" style="width: calc(12/559 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153113">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
-
-  
-      17. se félicite des mesures adoptées à l’égard des représentants du Qatar à la suite des révélations; réitère toutefois sa profonde inquiétude face aux allégations de corruption de la part des autorités marocaines; demande la mise en œuvre des mêmes mesures à l’égard des représentants du 
-  
+<p>
 
   
-      <del>Maroc;</del>
+      17. se félicite des mesures adoptées à l’égard des représentants du Qatar à la suite des révélations; réitère toutefois sa profonde inquiétude face aux allégations de corruption de la part des autorités marocaines; demande la mise en œuvre des mêmes mesures à l’égard des représentants du Maroc
   
 
   
-      <ins>Maroc si les allégations sont confirmées;</ins>
+      <ins> si les allégations sont confirmées</ins>
   
 
   
-       réaffirme sa détermination à enquêter pleinement sur les cas de corruption impliquant des pays qui recherchent une prise d’influence au Parlement, et à prendre les mesures qui s’imposent à cet égard;
+      ; réaffirme sa détermination à enquêter pleinement sur les cas de corruption impliquant des pays qui recherchent une prise d’influence au Parlement, et à prendre les mesures qui s’imposent à cet égard;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">189</div>
+  <div class="against">341</div>
+  <div class="abstention">12</div>
+</span>
+
+  
+    
+    <a href="/voting/153131">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(189/542 * 100%)">189</div>
-  
-  
-    <div class="-" style="width: calc(341/542 * 100%)">341</div>
-  
-  
-    <div class="0" style="width: calc(12/542 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153131">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>5 bis. déplore néanmoins le peu d’efforts déployés jusqu’à présent pour enquêter en interne sur le scandale du Qatargate; s’engage à mettre en place immédiatement une commission d’enquête couvrant l’ensemble des questions relatives au Qatargate, tout en respectant pleinement les limites fixées à l’article 226 du traité FUE; souligne que cette commission d’enquête devrait se concentrer sur les responsabilités politiques, les lacunes de la structure de gouvernance interne du Parlement et l’examen de l’influence des lobbies et des ONG dans le processus décisionnel du Parlement;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">116</div>
+  <div class="against">428</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/153104">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(116/555 * 100%)">116</div>
-  
-  
-    <div class="-" style="width: calc(428/555 * 100%)">428</div>
-  
-  
-    <div class="0" style="width: calc(11/555 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153104">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>5 ter. souligne que la commission d’enquête devrait se pencher sur toutes les relations établies de longue date, voire avant l’affaire du Qatargate dans laquelle le groupe S&amp;D est impliqué, entre certains groupes politiques de cette assemblée et certains pays tiers, notamment islamiques, et analyser si, et de quelle manière, des influences indues ont effectivement été exercées dans le passé;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">114</div>
+  <div class="against">435</div>
+  <div class="abstention">3</div>
+</span>
+
+  
+    
+    <a href="/voting/153105">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(114/552 * 100%)">114</div>
-  
-  
-    <div class="-" style="width: calc(435/552 * 100%)">435</div>
-  
-  
-    <div class="0" style="width: calc(3/552 * 100%)">3</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153105">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>5 quater. souligne que l’intégrité des institutions de l’Union peut également sembler remise en cause par la décision de la Commission de financer certaines ONG qui parrainent la propagande pro- islamique ou de rencontrer officiellement leurs représentants;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">87</div>
+  <div class="against">434</div>
+  <div class="abstention">35</div>
+</span>
+
+  
+    
+    <a href="/voting/153106">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(87/556 * 100%)">87</div>
-  
-  
-    <div class="-" style="width: calc(434/556 * 100%)">434</div>
-  
-  
-    <div class="0" style="width: calc(35/556 * 100%)">35</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153106">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>13 bis. rappelle que des ONG non réglementées ont joué un rôle important dans le scandale du Qatargate; appelle instamment à réviser les règles existantes dans le but d’accroître la transparence et la responsabilité des ONG dans leurs interactions avec les députés du Parlement européen; affirme résolument qu’aucune ONG ou partie prenante ne devrait prendre de décisions politiques à la place des députés;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">123</div>
+  <div class="against">422</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/153122">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(123/556 * 100%)">123</div>
-  
-  
-    <div class="-" style="width: calc(422/556 * 100%)">422</div>
-  
-  
-    <div class="0" style="width: calc(11/556 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153122">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>13 ter. demande instamment que les ONG fassent l’objet d’un examen financier préalable avant leur inscription au registre de transparence et que la publication des accords contractuels existants entre les ONG et la Commission soient rendue obligatoire; insiste sur le fait que les ONG qui reçoivent des fonds de tiers doivent être tenues de divulguer l’origine de leur financement pour continuer à bénéficier des fonds publics de l’Union;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">121</div>
+  <div class="against">420</div>
+  <div class="abstention">14</div>
+</span>
+
+  
+    
+    <a href="/voting/153123">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(121/555 * 100%)">121</div>
-  
-  
-    <div class="-" style="width: calc(420/555 * 100%)">420</div>
-  
-  
-    <div class="0" style="width: calc(14/555 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153123">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>20 bis. note que l’opinion publique tolère de moins en moins les scandales liés à l’Union, et appelle donc à un regain d’enthousiasme pour une réforme fondamentale de la gouvernance de l’Union; est toutefois conscient que, quelles que soient les améliorations apportées à la structure de gouvernance de l’Union en vue de renforcer les comportements éthiques, il est malheureusement impossible d’empêcher totalement les députés en exercice, les anciens députés et le personnel d’adopter une conduite criminelle;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">114</div>
+  <div class="against">430</div>
+  <div class="abstention">4</div>
+</span>
+
+  
+    
+    <a href="/voting/153136">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(114/548 * 100%)">114</div>
-  
-  
-    <div class="-" style="width: calc(430/548 * 100%)">430</div>
-  
-  
-    <div class="0" style="width: calc(4/548 * 100%)">4</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153136">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>5 bis. souligne que ne pas mettre en œuvre toutes les recommandations de la résolution constituerait une atteinte grave à l’intégrité du Parlement, un manquement injustifiable à ses engagements, qui saperait encore davantage la confiance des citoyens dans cet organe démocratiquement élu;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">244</div>
+  <div class="against">302</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/153107">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(244/556 * 100%)">244</div>
-  
-  
-    <div class="-" style="width: calc(302/556 * 100%)">302</div>
-  
-  
-    <div class="0" style="width: calc(10/556 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153107">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°12 | 
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
-
-  
-      6. note que les propositions initiales visant à renforcer l’intégrité, l’indépendance et la responsabilité, présentées par la Présidente le 8 février 2023, sont une première étape nécessaire pour répondre à la nécessité urgente d’agir pour garantir la responsabilité, la transparence et l’intégrité des institutions de l’Union; 
-  
+<p>
 
   
-      <ins>regrette que ces propositions sur la transparence et l’intégrité aient été présentées et débattues lors d’une réunion «à huis clos» de la Conférence des présidents et non dans le cadre d’un débat public clôturé par un vote garantissant la responsabilité politique des décideurs et la lisibilité pour les citoyens; </ins>
+      6. note que les propositions initiales visant à renforcer l’intégrité, l’indépendance et la responsabilité, présentées par la Présidente le 8 février 2023, sont une première étape nécessaire pour répondre à la nécessité urgente d’agir pour garantir la responsabilité, la transparence et l’intégrité des institutions de l’Union;
   
 
   
-      relève que le plan adopté par la Conférence des présidents couvre certaines mesures votées par le Parlement en décembre 2022 et n’exclut pas d’envisager d’autres mesures dans le cadre d’un processus de réforme plus large; s’engage à donner suite à toutes les mesures adoptées dans la résolution de 
+      <ins> regrette que ces propositions sur la transparence et l’intégrité aient été présentées et débattues lors d’une réunion «à huis clos» de la Conférence des présidents et non dans le cadre d’un débat public clôturé par un vote garantissant la responsabilité politique des décideurs et la lisibilité pour les citoyens;</ins>
   
 
   
-      <ins>  </ins>
+       relève que le plan adopté par la Conférence des présidents couvre certaines mesures votées par le Parlement en décembre 2022 et n’exclut pas d’envisager d’autres mesures dans le cadre d’un processus de réforme plus large; s’engage à donner suite à toutes les mesures adoptées dans la résolution de
   
 
   
-      décembre et réaffirme son ambition de prendre toutes les mesures nécessaires pour garantir la responsabilité, la transparence et l’intégrité des institutions de l’Union; s’engage désormais en faveur d’un processus ouvert et transparent afin de démontrer au public son engagement fort en faveur des 
+      <del> </del>
   
 
   
-      <del>  </del>
+      <ins>   </ins>
+  
+
+  
+      décembre et réaffirme son ambition de prendre toutes les mesures nécessaires pour garantir la responsabilité, la transparence et l’intégrité des institutions de l’Union; s’engage désormais en faveur d’un processus ouvert et transparent afin de démontrer au public son engagement fort en faveur des
+  
+
+  
+      <del>   </del>
+  
+
+  
+      <ins> </ins>
   
 
   
       réformes et de regagner la confiance des citoyens;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">172</div>
+  <div class="against">365</div>
+  <div class="abstention">14</div>
+</span>
+
+  
+    
+    <a href="/voting/153108">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(172/551 * 100%)">172</div>
-  
-  
-    <div class="-" style="width: calc(365/551 * 100%)">365</div>
-  
-  
-    <div class="0" style="width: calc(14/551 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153108">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°13 | 
+        
+            <article id="13">
+            <header>📝 Amendement n°13 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>12 bis. note que, dans sa résolution de décembre, le Parlement demande que le registre de transparence soit rendu obligatoire; regrette qu’aucune autre mesure n’ait été proposée à cet effet, et appelle en particulier à élaborer des mesures d’exécution et des sanctions en cas de violation des règles du registre;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">231</div>
+  <div class="against">242</div>
+  <div class="abstention">82</div>
+</span>
+
+  
+    
+    <a href="/voting/153121">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(231/555 * 100%)">231</div>
-  
-  
-    <div class="-" style="width: calc(242/555 * 100%)">242</div>
-  
-  
-    <div class="0" style="width: calc(82/555 * 100%)">82</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153121">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°14 | 
+        
+            <article id="14">
+            <header>📝 Amendement n°14 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>13 bis. demande qu’il soit interdit pour les députés d’exercer des activités parallèles rémunérées susceptibles de créer un conflit d’intérêts avec leur mandat;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">278</div>
+  <div class="against">245</div>
+  <div class="abstention">33</div>
+</span>
+
+  
+    
+    <a href="/voting/153124">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(278/556 * 100%)">278</div>
-  
-  
-    <div class="-" style="width: calc(245/556 * 100%)">245</div>
-  
-  
-    <div class="0" style="width: calc(33/556 * 100%)">33</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153124">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°15 | 
+        
+            <article id="15">
+            <header>📝 Amendement n°15 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>13 ter. est préoccupé par le fait qu’en raison de leurs salaires disproportionnés, les députés au Parlement européen et les membres de la Commission européenne soient totalement déconnectés de la réalité du quotidien des citoyens, de leurs besoins et de leurs difficultés; demande dès lors que leur revenu total soit plafonné à environ trois fois le salaire médian de l’Union;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">38</div>
+  <div class="against">459</div>
+  <div class="abstention">58</div>
+</span>
+
+  
+    
+    <a href="/voting/153125">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(38/555 * 100%)">38</div>
-  
-  
-    <div class="-" style="width: calc(459/555 * 100%)">459</div>
-  
-  
-    <div class="0" style="width: calc(58/555 * 100%)">58</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153125">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°16 | Partie 1 | 
+        
+            <article id="16">
+            <header>📝 Amendement n°16 | Partie 1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(39/547 * 100%)">39</div>
-  
-  
-    <div class="-" style="width: calc(372/547 * 100%)">372</div>
-  
-  
-    <div class="0" style="width: calc(136/547 * 100%)">136</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153133">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°16 | Partie 2 | 
+        
+            <article id="16">
+            <header>📝 Amendement n°16 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(471/540 * 100%)">471</div>
-  
-  
-    <div class="-" style="width: calc(34/540 * 100%)">34</div>
-  
-  
-    <div class="0" style="width: calc(35/540 * 100%)">35</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153134">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°17 | 
+        
+            <article id="17">
+            <header>📝 Amendement n°17 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>17 ter. déplore que soit utilisé un scandale de corruption pour lancer une campagne de dénigrement injustifiée contre les ONG et diffuser de fausses informations sur le manque de transparence de leur financement; réaffirme son soutien indéfectible aux organisations de la société civile qui défendent les droits de l’homme et l’environnement dans le plein respect des règles de transparence et d’intégrité des institutions européennes;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">272</div>
+  <div class="against">258</div>
+  <div class="abstention">13</div>
+</span>
+
+  
+    
+    <a href="/voting/153135">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(272/543 * 100%)">272</div>
-  
-  
-    <div class="-" style="width: calc(258/543 * 100%)">258</div>
-  
-  
-    <div class="0" style="width: calc(13/543 * 100%)">13</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153135">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°18 | 
+        
+            <article id="18">
+            <header>📝 Amendement n°18 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       C. considérant que la Présidente du Parlement a présenté des projets de propositions visant à réformer les règles d’éthique du Parlement 
@@ -1086,428 +1237,523 @@
       lors d’une réunion de la Conférence des présidents début janvier 2023;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">382</div>
+  <div class="against">140</div>
+  <div class="abstention">15</div>
+</span>
+
+  
+    
+    <a href="/voting/153138">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(382/537 * 100%)">382</div>
-  
-  
-    <div class="-" style="width: calc(140/537 * 100%)">140</div>
-  
-  
-    <div class="0" style="width: calc(15/537 * 100%)">15</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153138">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°19 | 
+        
+            <article id="19">
+            <header>📝 Amendement n°19 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       10. 
   
 
   
-      <del>regrette que les mesures adoptées ne comportent pas de propositions de réforme crédible du comité consultatif sur la conduite des députés; s’engage à réformer le comité consultatif conformément à sa proposition de création d’un organisme indépendant chargé des questions d’éthique, jusqu’à ce que celui-ci soit en mesure de prendre le relais du comité consultatif pour contrôler les députés de sa propre initiative, permettre à toute personne de déposer des plaintes motivées, mettre en place des contrôles proactifs des déclarations d’intérêts des députés et instaurer un système plus efficace et transparent de sanctions plus sévères à l’encontre des députés en exercice et des anciens députés;</del>
+      <del>regrette que les mesures adoptées ne comportent pas de propositions de réforme crédible du comité consultatif sur la conduite des députés; s’engage à réformer le comité consultatif conformément à sa proposition de création d’un organisme indépendant chargé des questions d’éthique, jusqu’à ce que celui-ci soit en mesure de prendre le relais du comité consultatif pour contrôler les députés de sa propre initiative, permettre à toute personne de déposer des plaintes motivées, mettre en place des contrôles proactifs des déclarations d’intérêts des députés et instaurer un système plus efficace et transparent de sanctions plus sévères à l’encontre des députés en exercice et des anciens députés</del>
   
 
   
-      <ins>s’engage, bien qu’il ait déjà proposé de créer un nouvel organisme chargé des questions d’éthique pour les institutions de l’Union, à prendre des mesures unilatérales pour faire en sorte que les députés puissent obtenir facilement, rapidement et de façon systématique des conseils concernant d’éventuels conflits d’intérêts auprès du comité consultatif sur la conduite des députés; propose que le rôle du comité soit renforcé;</ins>
+      <ins>s’engage, bien qu’il ait déjà proposé de créer un nouvel organisme chargé des questions d’éthique pour les institutions de l’Union, à prendre des mesures unilatérales pour faire en sorte que les députés puissent obtenir facilement, rapidement et de façon systématique des conseils concernant d’éventuels conflits d’intérêts auprès du comité consultatif sur la conduite des députés; propose que le rôle du comité soit renforcé</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">264</div>
+  <div class="against">288</div>
+  <div class="abstention">7</div>
+</span>
+
+  
+    
+    <a href="/voting/153114">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(264/559 * 100%)">264</div>
-  
-  
-    <div class="-" style="width: calc(288/559 * 100%)">288</div>
-  
-  
-    <div class="0" style="width: calc(7/559 * 100%)">7</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153114">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°20 | 
+        
+            <article id="20">
+            <header>📝 Amendement n°20 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       11. recommande d’accroître les vérifications concernant les assistants parlementaires et le personnel travaillant sur des domaines politiques sensibles, en particulier les affaires étrangères, la sécurité et la défense; estime que le personnel travaillant dans ces domaines devrait être considéré comme des personnes politiquement exposées, conformément à la définition qui figure dans la directive anti-blanchiment; est d’avis que les voyages payés par des pays tiers devraient être soumis 
   
 
   
-      <del>à l’approbation </del>
+      <del>à l’approbation</del>
   
 
   
-      <ins>au contrôle </ins>
+      <ins>au contrôle</ins>
   
 
   
-      préalable d’un organe spécifique du Parlement;
+       préalable d’un organe spécifique du Parlement;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">245</div>
+  <div class="against">286</div>
+  <div class="abstention">21</div>
+</span>
+
+  
+    
+    <a href="/voting/153116">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(245/552 * 100%)">245</div>
-  
-  
-    <div class="-" style="width: calc(286/552 * 100%)">286</div>
-  
-  
-    <div class="0" style="width: calc(21/552 * 100%)">21</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153116">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°21 | 
+        
+            <article id="21">
+            <header>📝 Amendement n°21 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       12. juge essentielle l’introduction d’une période de carence 
   
 
   
-      <del>pour les députés à la fin de leur mandat et estime que cette période </del>
+      <del>pour les députés à la fin de leur mandat</del>
   
 
   
-      <ins>de six mois suivant immédiatement la fin du mandat des députés et estime que celle-ci </ins>
+      <ins>de six mois suivant immédiatement la fin du mandat des députés</ins>
   
 
   
-      devrait être définie en tenant compte des règles applicables, par exemple, aux anciens commissaires lorsqu’ils exercent des activités de lobbying en relation avec 
+       et estime que 
   
 
   
-      <del>les institutions européennes;</del>
+      <del>cette période</del>
   
 
   
-      <ins>le Parlement;</ins>
+      <ins>celle-ci</ins>
+  
+
+  
+       devrait être définie en tenant compte des règles applicables, par exemple, aux anciens commissaires lorsqu’ils exercent des activités de lobbying en relation avec 
+  
+
+  
+      <del>les institutions européennes</del>
+  
+
+  
+      <ins>le Parlement</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">278</div>
+  <div class="against">244</div>
+  <div class="abstention">36</div>
+</span>
+
+  
+    
+    <a href="/voting/153117">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(278/558 * 100%)">278</div>
-  
-  
-    <div class="-" style="width: calc(244/558 * 100%)">244</div>
-  
-  
-    <div class="0" style="width: calc(36/558 * 100%)">36</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153117">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°22 | 
+        
+            <article id="22">
+            <header>📝 Amendement n°22 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       14. se félicite des mesures adoptées pour accroître la transparence des déclarations 
   
 
   
-      <del>financières des députés, en exigeant </del>
+      <del>financières des députés, en exigeant davantage d’informations sur les activités secondaires et extérieures des députés, y compris le montant exact des revenus secondaires qu’ils perçoivent et les clients pour le compte desquels ils travaillent contre rémunération; demande une nouvelle fois d’envisager la mise en place de garanties supplémentaires contre la corruption, telles qu’une déclaration de patrimoine des députés au début et à la fin de chaque législature</del>
   
 
   
-      <ins>d’intérêts financiers des députés, qui prévoient l’élaboration d’un formulaire révisé et plus détaillé de déclaration d’intérêts financiers et contenant, le cas échéant, </ins>
+      <ins>d’intérêts financiers des députés, qui prévoient l’élaboration d’un formulaire révisé et plus détaillé de déclaration d’intérêts financiers et contenant, le cas échéant, davantage d’informations sur les activités parallèles et extérieures des députés; confirme que des contrôles devraient être autorisés afin de garantir la bonne application des règles</ins>
   
 
   
-      davantage d’informations sur les activités 
-  
-
-  
-      <del>secondaires </del>
-  
-
-  
-      <ins>parallèles </ins>
-  
-
-  
-      et extérieures des député
-  
-
-  
-      <del>s, y compris le montant exact des revenus secondaires qu’ils perçoivent et les clients pour le compte desquels ils travaillent contre rémunération; demande une nouvelle fois d’envisager la mise en place de garanties supplémentaires contre la corruption, telles qu’une déclaration de patrimoine des députés au début et à la fin de chaque législature;</del>
-  
-
-  
-      <ins>s; confirme que des contrôles devraient être autorisés afin de garantir la bonne application des règles;</ins>
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">240</div>
+  <div class="against">292</div>
+  <div class="abstention">25</div>
+</span>
+
+  
+    
+    <a href="/voting/153126">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(240/557 * 100%)">240</div>
-  
-  
-    <div class="-" style="width: calc(292/557 * 100%)">292</div>
-  
-  
-    <div class="0" style="width: calc(25/557 * 100%)">25</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153126">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°23 | 
+        
+            <article id="23">
+            <header>📝 Amendement n°23 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       15. demande que 
   
 
   
-      <del>tous les députés, assistants parlementaires accrédités et agents soient tenus </del>
+      <del>tous les députés, assistants parlementaires accrédités et agents soient tenus</del>
   
 
   
-      <ins>soit étendue aux APA et au personnel, pour certains rapports ou résolutions spécifiques, ou dans des situations dans lesquelles les députés ont un rôle actif et une influence claire et immédiate sur l’évolution de dossiers spécifiques, l’obligation qui s’applique aux députés </ins>
+      <ins>soit étendue aux APA et au personnel, pour certains rapports ou résolutions spécifiques, ou dans des situations dans lesquelles les députés ont un rôle actif et une influence claire et immédiate sur l’évolution de dossiers spécifiques, l’obligation qui s’applique aux députés</ins>
   
 
   
-      de déclarer toute rencontre prévue avec des représentants diplomatiques de pays tiers et des tiers couverts par le champ d’application du registre de transparence, sauf dans certains cas où la désignation d’une personne ou d’une entité mettrait en danger la vie ou l’intégrité d’une personne; 
+       de déclarer toute rencontre prévue avec des représentants diplomatiques de pays tiers et des tiers couverts par le champ d’application du registre de transparence, sauf dans certains cas où la désignation d’une personne ou d’une entité mettrait en danger la vie ou l’intégrité d’une personne; 
   
 
   
-      <del>demande une nouvelle fois la mise en place d’une empreinte législative et non législative obligatoire;</del>
+      <del>demande une nouvelle fois la mise en place d’une empreinte législative et non législative obligatoire</del>
   
 
   
-      <ins>ou lorsque d’autres raisons impérieuses d’intérêt général exigent la confidentialité; ou pour des réunions avec des personnes physiques agissant à titre strictement personnel et non en association avec d’autres; ou pour des réunions spontanées ou à caractère purement privé ou social;</ins>
+      <ins>ou lorsque d’autres raisons impérieuses d’intérêt général exigent la confidentialité; ou pour des réunions avec des personnes physiques agissant à titre strictement personnel et non en association avec d’autres; ou pour des réunions spontanées ou à caractère purement privé ou social</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">286</div>
+  <div class="against">251</div>
+  <div class="abstention">6</div>
+</span>
+
+  
+    
+    <a href="/voting/153130">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(286/543 * 100%)">286</div>
-  
-  
-    <div class="-" style="width: calc(251/543 * 100%)">251</div>
-  
-  
-    <div class="0" style="width: calc(6/543 * 100%)">6</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153130">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°24 | 
+        
+            <article id="24">
+            <header>📝 Amendement n°24 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>4 bis. relève que, dans le cas des députés et anciens députés faisant actuellement l’objet d’une enquête, des ONG auraient été utilisées comme vecteurs d’ingérence étrangère dans la démocratie parlementaire européenne; demande la révision des règles actuelles applicables aux ONG dans le but d’accroître leur transparence et leur responsabilité, notamment des règles relatives à la gouvernance, au budget, à l’influence étrangère et aux personnes exerçant un contrôle important; souligne que les ONG qui reçoivent des fonds de la part de tiers qui ne sont pas tenus de s’inscrire au registre de transparence doivent divulguer leurs sources de financement en fournissant les mêmes informations que toutes les entités régulièrement inscrites; demande que tout financement public de ces ONG soit immédiatement gelé si ces informations ne sont pas divulguées; demande un examen financier préalable complet des ONG avant leur inscription au registre de transparence de l’Union, insiste sur le fait que les accords contractuels entre la Commission et les   ONG doivent être publiés et demande qu’une définition juridique claire du «statut d’ONG» soit élaborée, laquelle s’appliquerait à toutes les organisations susceptibles de s’inscrire au registre de transparence et de prétendre à un financement de l’Union;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(277/560 * 100%)">277</div>
-  
-  
-    <div class="-" style="width: calc(265/560 * 100%)">265</div>
-  
-  
-    <div class="0" style="width: calc(18/560 * 100%)">18</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/153103">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/2571(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/RC-9-2023-0147_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">277</div>
+  <div class="against">265</div>
+  <div class="abstention">18</div>
+</span>
+
   
+    
+    <a href="/voting/153103">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-02-16-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Reconquête!</header>
+            . – Je me suis abstenu sur ce texte. Quelques idées permettant de limiter les conflits d’intérêt et la corruption semblent bonnes, néanmoins je crains que cela n’aille parfois trop loin, au risque de limiter l’action politique des élus. Par exemple, si l’on suit la logique jusqu’au bout, un élu qui serait engagé à titre personnel dans une association sportive pourrait être sommé de la quitter ou accusé de conflit d’intérêts s’il venait à travailler sur un texte législatif concernant le sport… ce qui serait évidemment ridicule.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Le contexte appellerait à soutenir un texte sur l’intégrité des institutions de l’Union. Malheureusement, le refus réitéré du Parlement européen de mettre en place immédiatement une commission d’enquête me fait douter de sa sincérité et de sa réelle volonté de réforme structurelle, au-delà des effets de manche médiatiques. D’où mon abstention.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            Je me suis abstenu sur cette résolution. Certes, il est nécessaire de renforcer l’intégrité, la transparence et la responsabilité des institutions de l’Union. Mais le refus du Parlement de mettre en place immédiatement une commission d’enquête sur le «Qatargate» fait peser des doutes sur la sincérité de cette volonté de réforme. En outre, la résolution confie la mission de formuler des propositions de réforme concernant les ingérences étrangères à… la Commission, qui n’avait pourtant pas anticipé le scandale.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            Je me suis abstenue sur cette résolution relative aux mesures demandées par le Parlement pour renforcer l’intégrité des institutions européennes. Le texte présentait des suggestions pertinentes, pour assurer par exemple des ressources suffisantes au secrétariat du registre de transparence en vue de garantir que l’exactitude des informations relatives aux activités de lobbying des groupes d’intérêt, des groupes de pression et des ONG puisse être vérifiée et pour renforcer la transparence de ces activités. Il invitait toutefois à créer un nouvel «organisme indépendant chargé des questions d’éthique», aux compétences floues, dans un contexte où les membres des institutions européennes sont déjà soumis à des normes administratives et de transparence élevées, dont l’application est contrôlée par une multitude d’organes: services de contrôle internes, OLAF, Parquet européen, juridictions nationales, etc.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Cette résolution, obtenue à ma demande et que j’ai coordonnée, demande des actions plus rapides et plus ambitieuses pour mettre en place des réformes éthiques à la hauteur du scandale de corruption du «QatarGate». Elle déplore que le plan présenté par la Présidente du Parlement ne reprenne pas l’ensemble des mesures votées dans la feuille de route du Parlement – adoptée à la quasi-unanimité en décembre – et exige la mise en œuvre point par point de la résolution de décembre. Elle propose un calendrier et détaille certaines attentes du Parlement que le plan de la Présidente ne couvre pas. Elle appelle à un suivi régulier et transparent des avancées réalisées (création d’une autorité éthique indépendante ou publication obligatoire de l’origine des amendements, notamment). Elle prévoit également, à ma demande et pour la première fois, un encadrement des activités et des revenus annexes des députés.J’ai donc voté pour ce texte, qui exprime une position ferme contre la volonté de celles et ceux qui tentent de mettre la poussière sous le tapis au lieu de mettre fin à la culture d’opacité qui a cours dans la politique européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">197543</div>
+            
+            <header><b>Bernard GUETTA</b> | Renaissance</header>
+            . – Je me suis refusé à prendre part au vote sur le «renforcement de l’intégrité» des institutions européennes pour les raisons suivantes :– 1) j’ai trop régulièrement critiqué les autorités de mon pays quand elles réagissaient à un fait divers par l’adoption de nouvelles lois pour le faire à mon tour. Une affaire de corruption a porté atteinte à l’image de notre Parlement. La justice est en marche. Elle agit efficacement et avec célérité. Nos institutions démocratiques fonctionnent. Il n’y a aucune raison de nous ruer sur d’illusoires mesures;– 2) les mesures envisagées ont, en l’occurrence, le tort de laisser penser que tous les députés seraient des coupables en puissance et de ne proposer que des dispositions inefficaces ou même dangereuses. En quoi le fait de recevoir un ambassadeur ou un lobbyiste devrait-il susciter le soupçon ? N’est-ce pas là l’un des devoirs d’un élu avant de se prononcer sur une législation? En quoi l’obligation de déclarer ces rendez-vous empêcherait-elle une tentative de corruption? Pourquoi un député devrait-il s’abstenir de poursuivre une activité professionnelle déclarée? Pourquoi les affaires étrangères devraient-elles être considérées comme un domaine plus sensible que l’industrie ou les finances?
+        </article>
+    
+        <article>
+            <div class="hidden">197504</div>
+            
+            <header><b>Jérémy DECERLE</b> | Renaissance</header>
+            . – Si je soutiens l’essentiel de cette résolution, je me suis abstenu en raison d’un paragraphe qui n’est pas en phase avec ma vision du mandat de député. Proposé par l’extrême gauche, ce paragraphe demande l’interdiction d’exercer «des activités parallèles rémunérées susceptibles de créer un conflit d’intérêts avec leur mandat».Certes, il existe un risque que ces activités puissent porter préjudice à l’objectivité de certains, mais elles assurent aussi, souvent, un lien précieux avec le terrain. Je suis à la fois éleveur et eurodéputé, ce qui me rappelle constamment que les décisions prises à Bruxelles influent sur le quotidien des citoyens européens. Ce paragraphe brouillon amènerait à considérer comme un conflit d’intérêts ce qui constitue en réalité une force pour mener à bien mon mandat.Je m’oppose donc à cette interdiction à l’emporte-pièce, qui opère une confusion désastreuse voire dangereuse entre corruption et conflit d’intérêts, dévoyant de fait la représentation démocratique.La force du Parlement européen émane de la diversité de ses membres: en m’abstenant sur cette résolution, mon ambition est de préserver cette richesse et de rappeler que la fonction d’un député, certes indemnisée, n’est pas un métier, et que certaines professions ne peuvent s’interrompre le temps d’un mandat.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai soutenu cette résolution réalisant un bilan d’étape des mesures adoptées pour renforcer l’intégrité des institutions européennes après les révélations de pratiques de corruption qui ont entaché la réputation du Parlement européen.Si l’adoption de premières mesures depuis le mois de décembre 2022 est à saluer, des progrès restent à faire dans de nombreux domaines: meilleure application du code de conduite, réalisation d’une déclaration de patrimoine par les parlementaires, ou encore réforme des obligations relatives au registre de transparence de l’Union européenne.J’appelle de mes vœux ces réformes, qui sont essentielles au rétablissement de la confiance entre les citoyens et les institutions européennes.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Le contexte appellerait à soutenir un texte sur l’intégrité des institutions de l’Union, dont certaines dispositions vont dans le bon sens. Malheureusement, notre expérience de ces institutions, et notamment le refus du Parlement européen de mettre en place immédiatement une commission d’enquête sur le «Qatargate», nous font douter de la sincérité et de la réelle volonté de réforme structurelle, au-delà des effets de manche médiatiques. Je me suis donc abstenu.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b>Marina MESURE</b> | La France Insoumise</header>
+            . – À la suite du scandale du «Qatargate», le Parlement européen a adopté à la quasi-unanimité une résolution formulant un certain nombre de demandes pour lutter contre la corruption au sein de l’institution. Cependant, plusieurs groupes politiques tentent depuis d’enterrer ce texte. Cette proposition de résolution reconnaît que les propositions formulées par la Présidente, Roberta Metsola, ne couvrent qu’une partie de ce que les députés européens ont préconisé. Outre cela, le texte présente de nouvelles demandes, de même qu’il rehausse l’ambition de précédentes requêtes. Il appelle notamment à la publication obligatoire de toutes les réunions des députés avec les lobbys et entend doter de moyens suffisants le secrétariat du registre de transparence afin de garantir que les entrées sur les activités de lobbying des groupes d’intérêts pourront être correctement vérifiées. Le texte critique aussi l’absence de sanction pour non-respect des exigences du code de conduite par les députés (déclaration de voyages, cadeaux…) et demande des sanctions dissuasives effectives. J’ai donc voté en faveur de cette résolution.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

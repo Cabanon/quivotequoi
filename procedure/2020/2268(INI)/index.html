@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Ingérence étrangère dans l’ensemble des processus démocratiques de l’Union européenne, y compris la désinformation</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Ingérence étrangère dans l’ensemble des processus démocratiques de l’Union européenne, y compris la désinformation</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(552/693 * 100%)">552</div>
-  
-  
-    <div class="-" style="width: calc(81/693 * 100%)">81</div>
+    <div class="for" style="width: calc(552/693 * 100%)">552</div>
   
   
-    <div class="0" style="width: calc(60/693 * 100%)">60</div>
+    <div class="against" style="width: calc(81/693 * 100%)">81</div>
+  
+  
+    <div class="abstention" style="width: calc(60/693 * 100%)">60</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,28 +88,24 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(56/79 * 100%)">56</div>
+    <div class="for" style="width: calc(56/79 * 100%)">56</div>
   
   
-    <div class="-" style="width: calc(23/79 * 100%)">23</div>
+    <div class="against" style="width: calc(23/79 * 100%)">23</div>
   
   
 </div>
  
 </section>
-            <a href="/voting/140790">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/140790">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Politiques communautaires</li>
-        
     
         
         
@@ -114,78 +114,203 @@
     
         
         
-            <li>Réseaux mondiaux et société de l&#39;information, internet</li>
+            <li>Ethique de l&#39;information</li>
         
     
         
         
-            <li>Ethique de l&#39;information</li>
+            <li>Politiques communautaires</li>
+        
+    
+        
+        
+            <li>Réseaux mondiaux et société de l&#39;information, internet</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2268(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0022_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-03-08-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>H bis. considérant que la désinformation étrangère s’approprie et fausse souvent les critiques légitimes formulées à l’encontre des politiques de l’Union et de ses États membres, en particulier dans le domaine de la politique étrangère; que pour préserver le caractère démocratique de la société exige, les critiques légitimes et fermes à l’encontre de la politique gouvernementale ne peuvent pas être stigmatisées ou réprimées en étant mêlées à la désinformation étrangère; que l’absence de distinction entre les cas réels et avérés de désinformation étrangère et l’expression légitime d’opinions politiques dissidentes et minoritaires mettrait l’Union sur une voie autoritaire;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">128</div>
+  <div class="against">524</div>
+  <div class="abstention">42</div>
+</span>
+
+  
+    
+    <a href="/voting/140244">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(128/694 * 100%)">128</div>
-  
-  
-    <div class="-" style="width: calc(524/694 * 100%)">524</div>
-  
-  
-    <div class="0" style="width: calc(42/694 * 100%)">42</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140244">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       BO. considérant que l’incidence des cyberattaques et des incidents facilités par l’internet causés par des acteurs hostiles, étatiques ou non, a connu une hausse ces dernières années; 
@@ -200,232 +325,244 @@
   
 
   
-      que plusieurs cyberattaques, telles que les campagnes mondiales d’hameçonnage ciblant les 
+      que plusieurs cyberattaques, telles que les campagnes mondiales d’hameçonnage ciblant les
   
 
   
-      <ins>   </ins>
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
   
 
   
       structures stratégiques de stockage des vaccins et les cyberattaques contre l’Agence européenne des médicaments, l’Autorité bancaire européenne, le Parlement norvégien et de nombreuses autres institutions, ont été attribuées à des groupes de pirates informatiques soutenus par des États, principalement affiliés aux gouvernements russe et chinois;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">51</div>
+  <div class="against">589</div>
+  <div class="abstention">54</div>
+</span>
+
+  
+    
+    <a href="/voting/140246">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(51/694 * 100%)">51</div>
-  
-  
-    <div class="-" style="width: calc(589/694 * 100%)">589</div>
-  
-  
-    <div class="0" style="width: calc(54/694 * 100%)">54</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140246">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
-
-  
-      3. 
-  
+<p>
 
   
-      <ins>prend acte du risque inhérent que représente, pour les droits fondamentaux et le caractère démocratique de la société, l’application d’une approche de sécurité à l’espace dévolu à la société civile et à la sphère publique, et en particulier aux opinions politiques dissidentes et minoritaires ainsi qu’à leur expression; </ins>
+      3.
   
 
   
-      souligne que toutes les mesures visant à prévenir et à détecter l’ingérence étrangère, à l’imputer à ses responsables, à lutter contre elle et à la sanctionner doivent être élaborées de manière à défendre et à promouvoir les droits fondamentaux, notamment la capacité des citoyens de l’Union à communiquer de manière sûre, anonyme et non censurée, sans ingérence indue de la part d’acteurs étrangers;
+      <ins> prend acte du risque inhérent que représente, pour les droits fondamentaux et le caractère démocratique de la société, l’application d’une approche de sécurité à l’espace dévolu à la société civile et à la sphère publique, et en particulier aux opinions politiques dissidentes et minoritaires ainsi qu’à leur expression;</ins>
+  
+
+  
+       souligne que toutes les mesures visant à prévenir et à détecter l’ingérence étrangère, à l’imputer à ses responsables, à lutter contre elle et à la sanctionner doivent être élaborées de manière à défendre et à promouvoir les droits fondamentaux, notamment la capacité des citoyens de l’Union à communiquer de manière sûre, anonyme et non censurée, sans ingérence indue de la part d’acteurs étrangers;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">98</div>
+  <div class="against">550</div>
+  <div class="abstention">46</div>
+</span>
+
+  
+    
+    <a href="/voting/140238">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(98/694 * 100%)">98</div>
-  
-  
-    <div class="-" style="width: calc(550/694 * 100%)">550</div>
-  
-  
-    <div class="0" style="width: calc(46/694 * 100%)">46</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140238">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>13 bis. souligne que toute nouvelle proposition législative doit être accompagnée d’une analyse d’impact approfondie et complète, y compris un contrôle systématique de l’espace dévolu à la société civile fondé sur les normes internationales en matière de droits de l’homme ainsi que sur la liberté d’association, d’expression et de réunion, comme l’a également réaffirmé la charte des droits fondamentaux, afin d’éviter les retombées négatives sur l’espace dévolu à la société civile; insiste sur la nécessité, lorsque des risques sont identifiés, d’instaurer les garanties nécessaires et d’élaborer des lignes directrices pour la mise en œuvre de la nouvelle législation par les États membres, en coopération avec la société civile, lesquelles doivent inclure une évaluation des risques de discrimination et des incidences éventuelles sur les droits fondamentaux, y compris la liberté d’association, d’expression et de réunion;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">94</div>
+  <div class="against">526</div>
+  <div class="abstention">74</div>
+</span>
+
+  
+    
+    <a href="/voting/140239">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(94/694 * 100%)">94</div>
-  
-  
-    <div class="-" style="width: calc(526/694 * 100%)">526</div>
-  
-  
-    <div class="0" style="width: calc(74/694 * 100%)">74</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140239">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       54. préconise une réglementation des services offrant des outils et des services de manipulation des médias sociaux, utilisés par exemple pour gonfler la portée de comptes ou de contenus à l’aide d’une participation artificielle ou de profils non authentiques; souligne que cette réglementation doit être fondée sur une évaluation approfondie des pratiques actuelles et des risques associés et doit empêcher que des acteurs 
   
 
   
-      <del>malveillants </del>
+      <del>malveillants</del>
   
 
   
-      <ins>de l’Union ou de pays tiers </ins>
+      <ins>de l’Union ou de pays tiers</ins>
   
 
   
-      utilisent ces services à des fins d’ingérence 
+       utilisent ces services à des fins d’ingérence politique
   
 
   
-      <del>politique;</del>
+      <ins> quelle qu’elle soit</ins>
   
 
   
-      <ins>politique quelle qu’elle soit;</ins>
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">90</div>
+  <div class="against">584</div>
+  <div class="abstention">20</div>
+</span>
+
+  
+    
+    <a href="/voting/140240">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(90/694 * 100%)">90</div>
-  
-  
-    <div class="-" style="width: calc(584/694 * 100%)">584</div>
-  
-  
-    <div class="0" style="width: calc(20/694 * 100%)">20</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140240">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       123. s’inquiète vivement de l’application extraterritoriale de mesures coercitives découlant 
@@ -448,55 +585,103 @@
   
 
   
-      la loi chinoise sur la lutte contre les sanctions étrangères, combiné
+      la loi chinoise sur la lutte contre les sanctions étrangères, 
   
 
   
-      <del>e </del>
+      <del>combinée</del>
   
 
   
-      <ins>es </ins>
+      <ins>combinées</ins>
   
 
   
-      aux accords d’extradition 
+       aux accords d’extradition 
   
 
   
-      <del>conclus par la Chine </del>
+      <del>conclus par la Chine</del>
   
 
   
-      <ins>dont ces pays bénéficient </ins>
+      <ins>dont ces pays bénéficient</ins>
   
 
   
-      avec d’autres pays, qui 
+       avec d’autres pays, qui 
   
 
   
-      <del>permet à la Chine </del>
+      <del>permet à la Chine</del>
   
 
   
-      <ins>leur permettent </ins>
+      <ins>leur permettent</ins>
   
 
   
-      de mettre en œuvre des mesures dissuasives à grande échelle à l’encontre de 
+       de mettre en œuvre des mesures dissuasives à grande échelle à l’encontre de 
   
 
   
-      <del>ressortissants non chinois critiques envers le régime, par exemple, dans une affaire récente,</del>
+      <del>ressortissants non chinois</del>
   
 
   
-      <ins>non- ressortissants critiques envers ces régimes, par exemple, dans l’inculpation et la tentative d’extrader l’éditeur de WikiLeaks Julian Assange pour espionnage en raison d’activités de journalisme menées dans l’Union européenne, dans une affaire récente de la Chine,</ins>
+      <ins>non- ressortissants</ins>
   
 
   
-       à l’encontre de deux députés danois, ainsi que des contre-
+       critiques envers 
+  
+
+  
+      <del>le régime</del>
+  
+
+  
+      <ins>ces régimes</ins>
+  
+
+  
+      , par exemple, dans 
+  
+
+  
+      <del>une affaire récente</del>
+  
+
+  
+      <ins>l’inculpation et la tentative d’extrader l’éditeur de WikiLeaks Julian Assange pour espionnage en raison d’activités de journalisme menées dans l’Union européenne, dans une affaire récente de la Chine</ins>
+  
+
+  
+      , à l’encontre de deux députés danois, ainsi que des contre
+  
+
+  
+      <del>- </del>
+  
+
+  
+      <ins>-</ins>
+  
+
+  
+      sanctions visant cinq députés européens, la sous
+  
+
+  
+      <del>-</del>
+  
+
+  
+      <ins>- </ins>
+  
+
+  
+      commission «droits de l’homme» du Parlement, trois députés des États membres de l’Union, le Comité politique et de sécurité du Conseil de l’Union européenne, deux universitaires européens et deux groupes de réflexion européens en Allemagne et au Danemark; invite tous les États membres à résister et à refuser l’extradition et, le cas échéant, à offrir une protection appropriée aux personnes
   
 
   
@@ -504,259 +689,502 @@
   
 
   
-      sanctions visant cinq députés européens, la sous-
-  
-
-  
-      <ins> </ins>
-  
-
-  
-      commission «droits de l’homme» du Parlement, trois députés des États membres de l’Union, le Comité politique et de sécurité du Conseil de l’Union européenne, deux universitaires européens et deux groupes de réflexion européens en Allemagne et au Danemark; invite tous les États membres à résister et à refuser l’extradition et, le cas échéant, à offrir une protection appropriée aux personnes 
-  
-
-  
-      <ins>   </ins>
+      <ins>    </ins>
   
 
   
       concernées afin de prévenir d’éventuelles violations des droits de l’homme;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">95</div>
+  <div class="against">575</div>
+  <div class="abstention">22</div>
+</span>
+
+  
+    
+    <a href="/voting/140242">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(95/692 * 100%)">95</div>
-  
-  
-    <div class="-" style="width: calc(575/692 * 100%)">575</div>
-  
-  
-    <div class="0" style="width: calc(22/692 * 100%)">22</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140242">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE,RE</div>
+                
 
-<section>
+<p>
 
   
       <ins>B bis. considérant que la Russie s’est livrée à une désinformation d’une ampleur et d’une malveillance sans précédent, tant dans les médias traditionnels que dans les plateformes de médias sociaux, afin de tromper ses propres citoyens et la communauté internationale à la veille et au cours de la guerre d’agression contre l’Ukraine, lancée par la Russie le 24 février 2022, ce qui prouve que même des informations constituer des armes;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+     et 
+  
+    
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">624</div>
+  <div class="against">18</div>
+  <div class="abstention">48</div>
+</span>
+
+  
+    
+    <a href="/voting/140243">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(624/690 * 100%)">624</div>
-  
-  
-    <div class="-" style="width: calc(18/690 * 100%)">18</div>
-  
-  
-    <div class="0" style="width: calc(48/690 * 100%)">48</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140243">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE,RE</div>
+                
 
-<section>
+<p>
 
   
       <ins>AE bis. considérant qu’en réponse à la guerre d’agression menée par la Russie contre l’Ukraine, les premiers ministres de l’Estonie, de la Lettonie, de la Lituanie et de la Pologne ont envoyé, le 27 février 2022, une lettre aux PDG des plateformes de médias sociaux des grandes entreprises technologiques (Twitter, Alphabet, YouTube et Meta) en leur demandant notamment de suspendre les comptes qui mettent en valeur et glorifient les crimes de guerre et les crimes contre l’humanité, d’assurer une modération renforcée des contenus en langues russe et ukrainienne, de démonétiser complètement et immédiatement tous les comptes diffusant la désinformation émanant des gouvernements russe et biélorusse, et d’aider les utilisateurs qui tentent de trouver des informations fiables sur la guerre en Ukraine;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+     et 
+  
+    
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">630</div>
+  <div class="against">16</div>
+  <div class="abstention">45</div>
+</span>
+
+  
+    
+    <a href="/voting/140245">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(630/691 * 100%)">630</div>
-  
-  
-    <div class="-" style="width: calc(16/691 * 100%)">16</div>
-  
-  
-    <div class="0" style="width: calc(45/691 * 100%)">45</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140245">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE,RE</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. se félicite de l’annonce faite par la présidente de la Commission le 27 février 2022 d’une interdiction, à l’échelle de l’Union, des chaînes de propagande russes telles que Sputnik TV, RT (anciennement «Russia Today») ainsi que des autres organes russes de désinformation qui ont pour seul objectif d’affaiblir et de diviser l’opinion publique et les décideurs de l’Union; demande que des mesures supplémentaires soient prises à cet égard;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+     et 
+  
+    
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">556</div>
+  <div class="against">81</div>
+  <div class="abstention">53</div>
+</span>
+
+  
+    
+    <a href="/voting/140237">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(556/690 * 100%)">556</div>
-  
-  
-    <div class="-" style="width: calc(81/690 * 100%)">81</div>
-  
-  
-    <div class="0" style="width: calc(53/690 * 100%)">53</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140237">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>96 bis. insiste sur la nécessité pour l’Union, l’OTAN et les partenaires internationaux animés du même esprit de renforcer leur assistance à l’Ukraine en matière de cybersécurité; se félicite du déploiement initial des experts de l’équipe d’intervention rapide en cas d’incident informatique financée par la CSP et demande que soit pleinement utilisé le régime de sanctions de l’Union applicable aux cyberattaques orchestrées ou menées par des personnes, entités et organismes contre l’Ukraine; demande que soit examinée d’urgence la demande d’adhésion de l’Ukraine au Centre coopératif d’excellence pour la cyberdéfense de l’OTAN et que tous les membres de ce centre soutiennent cette demande;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(605/691 * 100%)">605</div>
-  
-  
-    <div class="-" style="width: calc(52/691 * 100%)">52</div>
-  
-  
-    <div class="0" style="width: calc(34/691 * 100%)">34</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140241">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2268(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0022_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">605</div>
+  <div class="against">52</div>
+  <div class="abstention">34</div>
+</span>
+
   
+    
+    <a href="/voting/140241">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-03-08-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce texte, qui, sous prétexte de lutter contre les ingérences étrangères, préconise un contrôle accru des médias, ce que je ne peux pas accepter.
+        </article>
+    
+        <article>
+            <div class="hidden">96952</div>
+            
+            <header><b>Sylvie GUILLAUME</b> | Parti socialiste</header>
+            J’ai voté en faveur du rapport de la commission spéciale sur l’ingérence étrangère qui démontre la façon dont les puissances étrangères malveillantes manipulent l’information et discréditent les processus démocratiques européens en influençant les élections, menant des cyberattaques, embauchant d’anciens hauts responsables politiques et en accroissant la polarisation du débat public. Le rapport exhorte l’UE à déployer une stratégie commune pour remédier à cette situation et liste toute une série de mesures à considérer de toute urgence pour contrer ce poison allant du soutien aux médias indépendants et pluralistes, au fact-checking, à l’amélioration de la cybersécurité.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il vise à donner plus de pouvoir à l’UE, notamment dans les domaines de la santé, de l’éducation ou encore de la liberté d’expression. Je suis contre la censure qu’elle essaye de mettre en place !
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution sur l’ingérence étrangère dans l’ensemble des processus démocratiques de l’Union européenne. Le texte invite la Commission et les États membres à mettre en œuvre toutes les mesures visant à prévenir et à détecter l’ingérence étrangère, à l’imputer à ses responsables, à lutter contre elle et à la sanctionner, mais aussi à soutenir la capacité des citoyens de l’Union à communiquer de manière sûre, anonyme et non censurée, sans ingérence indue de la part d’acteurs étrangers.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Cette résolution vise à présenter les observations et les recommandations du Parlement sur l’enjeu de l’ingérence étrangère dans les processus démocratiques au sein de l’Union européenne. Elle rappelle la nécessité de prise en compte de ces enjeux par les réseaux sociaux et notamment Facebook suite au scandale Cambridge Analytica, s’inquiète de la dépendance des États européens vis-à-vis de technologies et matériels étrangers qui les rendent vulnérables, souligne l’importance des services publics d’information, alerte sur les financements étrangers de partis politiques et salue le travail de lanceurs d’alerte.J’ai donc voté pour ce texte qui établit certains constats pertinents sur un enjeu important, malgré des propositions qui posent parfois question en termes de garanties juridiques et de préservation des libertés publiques.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce rapport entend dresser la liste des ingérences de puissances étrangères dans les processus démocratiques des États membres de l’Union européenne. Ces ingérences sont de plus en plus nombreuses et proviennent de plusieurs États tiers. Le rapport rappelle ainsi les liens multiples entre les partis d’extrême-droite et le régime réactionnaire de Vladimir Poutine. Il s’inquiète également de la vulnérabilité de l’Union face aux cyberattaques, phénomène dont l’ampleur n’a fait que croître depuis le début de la pandémie de Covid-19. Enfin, le rapport a le mérite de rappeler l’importance de lutter contre la concentration des médias et de garantir leur indépendance et pluralisme. Pour ces raisons, je fais le choix de soutenir ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197589</div>
+            
+            <header><b>Laurence FARRENG</b> | Mouvement Démocrate</header>
+            Mercredi 9 mars, j&#39;ai voté en faveur du rapport du Parlement sur l&#39;ingérence étrangère dans les processus démocratiques de l&#39;Union européenne. Ce texte fait un état des lieux des menaces d&#39;ingérence, qui ont augmenté tant en volume qu&#39;en complexité, et bénéficient de cadres légaux encore trop laxistes, notamment en matière de lutte contre la désinformation. Le rapport recommande de clarifier et renforcer le mandat du Service européen pour l&#39;action extérieure, notamment via davantage de financements, de renforcer les capacités de lutte des institutions européennes contre les ingérences, d&#39;adopter un régime européen de sanctions et d&#39;harmoniser davantage la surveillance européenne des acteurs étrangers dans les environnements politiques nationaux.
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            À travers ce rapport voté par le Parlement européen, nous affirmons notre volonté que l’Union européenne lutte davantage contre l’ingérence étrangère et la désinformation. Le risque est que l’absence de mesures européennes fasse de l’ingérence une tactique attrayante pour les acteurs étrangers malintentionnés et mettent véritablement en danger la démocratie.Des pays malveillants et autoritaires, comme la Russie et la Chine par exemple, manipulent en effet l’information pour déstabiliser les démocraties européennes. Or, avec mes collègues députés européens, nous déplorons que la plupart des citoyens et des gouvernements européens ne soient pas conscients de la menace que représentent ces ingérences.Nous appelons à des sanctions contre les ingérences étrangères et les campagnes de désinformation, et demandons à ce qu’il soit envisagé de révoquer les licences des organisations qui diffusent de la propagande d’État étrangère.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Cette résolution sur l’ingérence étrangère pêche par son aveuglement en ne dénonçant que les ingérences d’origines Russes ou chinoises, sans jamais dénoncer d’autres ingérences occidentales. De plus, elle instaure une parole officielle, limite la liberté d’expression dans la suppression de certains media et des sanctions contre ce qu’elle appelle des « discours de haine ». Enfin, elle exige une réponse commune de l’Union européenne qui entache la souveraineté des États. J’ai donc voté contre
+        </article>
+    
+        <article>
+            <div class="hidden">197551</div>
+            
+            <header><b>Stéphane BIJOUX</b> | Renaissance</header>
+            J’ai voté en faveur de ce rapport qui fait l’état des lieux des menaces d’ingérence étrangère qui pèsent sur les processus démocratiques au sein de l’Union européenne et formule des propositions pour les contrer. Ces dernières années, plusieurs élections dans l’UE ont été victimes d’opérations de déstabilisation menées depuis l’étranger, et la guerre en Ukraine fait craindre de nouvelles offensives notamment en provenance de la Russie. Plus particulièrement, ce texte propose des mesures pour mieux lutter contre les cyberattaques et la désinformation, véritable poison pour nos démocraties.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté avec mes collègues du groupe Renew en faveur de ce rapport sur l’ingérence étrangère dans l’ensemble des processus démocratiques de l’Union. Ce rapport trouve un résonnance particulière au vu du contexte actuel et de l’historique d’ingérence qui est celui de la Russie.Le texte dresse ainsi un état des lieux de la désinformation et des menaces qui pèsent sur nos démocraties et formule des recommandations basées sur 18 mois de travaux. Les recommandations sont de plusieurs ordres :1) Renforcer le mandat du SEAE en créant un centre européen indépendant de lutte contre la désinformation ;2) Augmenter les moyens informationnels et financiers du SEAE, notamment destiné au renfort des équipes de fact-checking ;3) Harmoniser les règlementations nationales en matière de financement des partis politiques, en interdisant les dons anonymes venant de l’extérieur de l’Union ;4) Adopter des règles de transparence pour les voyages effectués par les élus qui seraient financés par des pays étrangers ;5) Renforcer les règles pour éviter les conflits d’intérêts entre les élites ;6) Mettre en place un régime européen de sanction spécifiques contre l’ingérence étrangère et la désinformation.Ce rapport est une étape supplémentaire et cruciale dans la sortie de l&#39;Europe naïve et la naissance d&#39;une Europe puissance qui se protège des menaces externes.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            À l’heure où la désinformation peut être considérée comme une arme majeure dans les conflits du XXIe siècle, il est urgent que les États membres de l’Union européenne luttent de manière conjointe contre l’ingérence étrangère. J’ai ainsi voté en faveur du rapport issu des travaux de la commission spéciale sur l’ingérence étrangère dans l’ensemble des processus démocratiques de l’Union européenne, y compris la désinformation, qui insiste non seulement sur l’importance des médias indépendants, mais qui appelle également à sanctionner les campagnes de désinformation à grande échelle, notamment par le biais d’une révocation des licences d’organisations qui diffuseraient de la propagande étrangère.En outre, j’ai soutenu les points essentiels visant à éclaircir les relations des partis européens avec la Russie, et à interdire leur financement via des fonds étrangers.Enfin, le texte présente la nécessité pour l’Union européenne d’améliorer la cybersécurité, notamment par l’investissement dans les capacités et moyens stratégiques européens en matière de cybercriminalité afin de détecter, dénoncer et combattre les ingérences étrangères, tout en dressant une liste des logiciels de surveillance illicite, tels que Pegasus.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Ce texte, sous prétexte de lutter contre l’ingérence de pays tiers dans les États membres, développe une vision autoritaire du contrôle de l’information et prend de véritables accents de ministère de la vérité. Organisée par Raphaël Glucksmann, elle entend très clairement attaquer la droite nationale en Europe. J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            Ce texte prétend lutter contre les ingérences étrangères dans l&#39;UE, sans jamais se préoccuper des tentatives d&#39;influences islamistes, qui ont pourtant réussi à pénétrer au cœur des institutions européennes, par le biais de l&#39;association Femyso par exemple. Le texte défend une conception autoritaire du contrôle de l&#39;information, et il attaque nommément le Rassemblement National par des accusations diffamatoires. J&#39;ai donc résolument voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Je me suis opposée à ce texte qui souhaite donner plus de pouvoir à l&#39;UE pour réglementer toute une série d’enjeux relevant des compétences des États membres (la santé, l’éducation, la liberté d’expression…). Alors que le Parlement ne cesse de dénoncer des censures à travers le monde, elle en mettrait en place une au sein même de son institution.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Ce texte est un rapport de la commission spéciale pour l&#39;ingérence étrangère dans tous les processus démocratiques de l&#39;UE, y compris la désinformation (INGE) qui se définit comme commission qui passe un message d&#39;alerte très clair envoyé à toutes les puissances étrangères qui tentent d&#39;interférer dans les institutions et les processus démocratiques de l&#39;UE et de ses États membres. Le rapport viserait à « établir un diagnostic général, identifier des solutions et proposer des outils pour contrer ces tentatives de sabotage du travail de base du Parlement. ». Il s’agit en réalité d’une tentative de censure de tout discours allant à l’encontre des positions défendues par le président de cette commission, Raphaël Glucksmann. Le texte vise à donner plus de pouvoir à l&#39;UE pour réglementer toute une série de questions qui relèvent des compétences des États membres, que ce soit la santé, l’éducation, la liberté d’expression. Il s’agirait de la mise en place d’une censure totale, ce que ce Parlement dénonce chez les pays tiers, il s’empresse à mettre en place au sein de l’UE. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Ce texte est un rapport de la commission spéciale pour l&#39;ingérence étrangère dans tous les processus démocratiques de l&#39;UE, y compris la désinformation (INGE), qui se définit comme commission qui passe un message d&#39;alerte très clair envoyé à toutes les puissances étrangères qui tentent d&#39;interférer dans les institutions et les processus démocratiques de l&#39;UE et de ses États membres. Il s’agit en réalité d’une tentative de censure de tout discours allant à l’encontre des positions défendues par le président de cette commission, Raphaël Glucksmann.Le texte vise à donner plus de pouvoir à l&#39;UE pour réglementer toute une série de questions qui relèvent des compétences des États membres, que ce soit la santé, l’éducation, la liberté d’expression. Il s’agirait de la mise en place d’une censure totale, ce que ce Parlement dénonce chez les pays tiers, il s’empresse à mettre en place au sein de l’UE.J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            . – Ce texte vise à donner plus de pouvoir à l&#39;UE pour réglementer toute une série de questions qui relèvent des compétences des États membres, que ce soit la santé, l’éducation, la liberté d’expression. Il s’agirait de la mise en place d’une censure totale, bref, tout ce que ce Parlement dénonce chez les pays tiers… J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre cette résolution qui, sous prétexte de lutter contre l’ingérence de pays tiers dans les sociétés de l’UE, développe une vision autoritaire du contrôle de l’information et prend de véritables accents de ministère de la vérité. Fomentée par Raphael Glucksmann, cette résolution est une basse manœuvre politicienne contre la droite nationale en Europe.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            
+                <p> – Monsieur le Président, chers collègues, le rapport Kalniete a le mérite de dénoncer l’ingérence étrangère dans les processus démocratiques de l’Union européenne, notamment par le biais de la désinformation. C’est, en soi, une bonne chose, car la désinformation étrangère, notamment russe et chinoise, est une réalité.</p>
+            
+                <p>Le rapport a aussi le mérite de donner une définition acceptable de la désinformation, qu’il présente comme une information trompeuse, intentionnellement diffusée dans le but de déstabiliser la société. Il la distingue ainsi de la mésinformation, qu’il définit comme une fausse information divulguée de bonne foi, sans intention de nuire. Sagement, il constate, je cite son considérant (V), qu’il existe une frontière ténue entre la liberté d’expression et la désinformation et qu’il ne faut pas la franchir. C’est le meilleur moment de ce long rapport, triste comme un jour sans pain. </p>
+            
+                <p>Le reste sombre dans la diffamation des adversaires des fédéralistes européens. À mots couverts, il attaque ainsi les partis au pouvoir en Pologne et en Hongrie en les accusant, dans son considérant (X), d’avoir reçu, je cite, des millions d’euros de financements étrangers pour promouvoir des valeurs traditionnelles ou conservatrices. De façon encore plus brutale, il accuse nommément, sans aucune preuve, le Rassemblement national et la Lega, je cite son considérant (BG), d’être disposés à accepter un financement politique de la part de la Russie.</p>
+            
+                <p>Si on veut trouver des responsables politiques français ayant des liens d’argent avérés avec des États étrangers, ce n’est pourtant pas du côté des dirigeants du Rassemblement national qu’il faut se tourner. Regardons plutôt vers les anciens Premiers ministres Jean-Pierre Raffarin et François Fillon, respectivement embauchés par des sociétés chinoise et russe. Mais évidemment, le rapport préfère faire diversion, car le premier des deux est un soutien du Président Macron. </p>
+            
+                <p>On peut finalement se demander si ce n’est pas le rapport Kalniete lui-même qui constitue le plus bel exemple d’ingérence étrangère, car il insiste de façon suspecte pour augmenter le financement européen, pourtant déjà énorme, des ONG, sous prétexte de leur permettre de combattre l’influence étrangère. Or, les ONG sont souvent financées par des capitaux extra-européens, à l’exemple de celle du milliardaire américain George Soros. Et elles déstabilisent tout autant que certains États étrangers nos sociétés européennes, notamment quand elles organisent notre submersion migratoire. Ce sont, dès lors, des organes d’ingérence étrangère que le rapport aurait dû dénoncer et que je dénonce à sa place, à cette tribune.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197494</div>
+            
+            <header><b>Nathalie LOISEAU</b> | Renaissance</header>
+            
+                <p> – Monsieur le Président, l’Ukraine nous l’a montré, la guerre hybride mène à la guerre tout court. Pendant des années, la Russie a déversé sur Kiev des torrents de désinformation. Elle a soudoyé des hommes politiques, harcelé le pays par d’innombrables cyberattaques. Et puis, elle a donné l’assaut. </p>
+            
+                <p>C’est parce que l’Ukraine est une démocratie qu’elle est attaquée. Aujourd’hui, ce sont toutes les démocraties qui sont la cible d’ingérences étrangères et toutes doivent comprendre la menace qui pèse sur elles. Nous devons aussi bien mesurer que ce sont tous les États autoritaires qui recourent à ces opérations d’influence pour tenter de nous affaiblir, de nous diviser et de discréditer la démocratie. La Russie la première, certes, mais elle n’est pas la seule. </p>
+            
+                <p>Le rapport que nous allons voter présente un immense mérite. Il nomme les choses. On ne pourra plus dire que nous ne savions pas. On ne pourra plus ignorer comment les anti-vaccins ont pu être manipulés. On aura compris que, du Brexit aux élections américaines en passant par la Catalogne, des scrutins ont été exploités depuis des capitales étrangères pour tenter de fracturer nos démocraties. On ne pourra plus fermer les yeux sur les idiots utiles qui récitent la propagande dictée par des dictatures, ni faire semblant de ne pas voir que cette Assemblée en compte quelques-uns. </p>
+            
+                <p>Le rapport que nous allons voter formule également des recommandations. Elles s’adressent aux États, à l’Union européenne, aux plateformes numériques, aux médias, aux universités. La première exigence est celle de la transparence des algorithmes, des financements des partis politiques, des accointances de certains responsables ou anciens responsables. La deuxième exigence est celle de la mobilisation de tous. Le peuple ukrainien se bat aujourd’hui pour la liberté. N’attendons pas d’en arriver là pour...</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197531</div>
+            
+            <header><b>Gwendoline DELBOS-CORFIELD</b> | Les Écologistes</header>
+            
+                <p> – Madam President, we are becoming more and more concerned about foreign interference in our electoral process. We now fear the destructive capacity of fake news on security issues, health matters, our political leaders. But for years and years, there has been disinformation targeting one very specific topic, women’s rights. And it is a mistake that this has not been considered to be a serious problem, because gendered disinformation not only has the power to severely harm women’s lives, but it is also a clear and constant attack on the foundations of our societies. </p>
+            
+                <p>Russia is today spreading lies about the Ukrainian people, the war, Europe’s involvement, but Russia has long taken an active role in promoting dangerous disinformation based on so-called ‘traditional’ narratives. This is meant to fuel hate against women, minorities, LGBTI people, both online and offline. These mobilisations against us, all across Europe. We see financing from anti-gender groups within the EU, from US Christian right—wing groups and Russian oligarchs, and do not be mistaken, this is part of a broader political strategy to undermine equal participation in our democracy, the European Union itself, the world we want to live in; a world of emancipation, gender equality, freedom and fundamental rights.</p>
+            
+                <p>It is a strategy to put each and every one of us in a box where we are to stay for all our lives and accept an authoritarian, ultraconservative way of life. They first attack women, LGBTI people, Muslims, people of colour, all minorities. But in the end, once they have created threats that silence all of these people, they come for the others. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            
+                <p> – Madame la Présidente, chers collègues, une fois encore, l’hypocrisie de nos débats est navrante. Le rapport que vous présentez pourrait être un rempart contre la désinformation, mais il affiche le double refus de valeurs qui sont pourtant censées être les nôtres: la démocratie et la liberté d’expression. </p>
+            
+                <p>Refus d’abord, et c’est le plus grave, de la démocratie. À vous lire, les élections dont les résultats ne sont pas conformes à l’idéologie mondialiste et immigrationniste sont forcément remportées sous l’influence d’une ingérence étrangère. Ainsi, le Brexit et l’élection de Trump, les victoires du Fidesz et du parti Droit et justice doivent être appréhendés sous ce prisme. La volonté souveraine des peuples britannique, américain, hongrois et polonais n’aurait rien à voir dans ces résultats électoraux. </p>
+            
+                <p>Refus ensuite de la liberté d’expression, bafouée au nom de l’interdiction des discours de haine. Mais aucune condamnation sur vos bans des fermetures «par erreur» de multiples comptes Twitter, de soutiens à Éric Zemmour et au Rassemblement national, en pleine campagne présidentielle en France. </p>
+            
+                <p>Dans son discours de réception à l’Académie française, François Sureau a rappelé que la liberté, c’est d’être révolté, blessé ou au moins surpris par les opinions contraires. Votre texte introduit de facto une parole officielle. Vous refusez les opinions contraires. Quel irrespect pour la souveraineté des peuples! Mais n’en doutez pas, ils choisissent librement. Voyez en Hongrie, en Pologne et, demain, en France.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197694</div>
+            
+            <header><b>Raphaël GLUCKSMANN</b> | Place publique</header>
+            
+                <p> – Madame la Vice-Présidente, Madame la Ministre, Monsieur le Haut-Représentant, permettez-moi d’abord de saluer et de remercier le travail de Mme la rapporteure Kalniete et de tous les membres de la commission que j’ai l’honneur de présider depuis 18 mois. Nous avons montré que la défense de la démocratie n’était pas une affaire de gauche ou de droite et que cela transcendait l’ensemble des clivages politiques. </p>
+            
+                <p>Chers collègues, pendant 20 ans, biberonnées au mythe de la fin de l’Histoire, convaincues de ne plus avoir d’ennemis, les élites européennes ont fait preuve d’une naïveté confondante. Elles n’ont pas vu, elles n’ont pas voulu voir ce que Poutine faisait à nos portes, en Tchétchénie, en Géorgie, en Ukraine. Plus incroyable encore, ces mêmes élites intellectuelles, politiques, culturelles n’ont pas vu, n’ont pas voulu voir ces attaques au sein même de nos nations, au cœur de l’Union européenne. Il est des moments dans l’Histoire où l’indolence confine à la trahison. </p>
+            
+                <p>Voilà pourquoi nous avons demandé, au premier jour de ce mandat, la création de cette commission spéciale sur les ingérences étrangères dans nos démocraties. La démocratie est notre trésor commun et ce trésor est aujourd’hui attaqué. Depuis 18 mois, d’audition en audition, d’étude en étude, nous avons analysé toutes les formes que revêtent ces attaques: financement de partis politiques hostiles à l’Union européenne et présents ici, cyberattaques, campagnes de désinformation, investissements dans les infrastructures stratégiques, capture des élites et espionnage... Ces attaques n’ont rien d’épisodique. Elles sont systématiques et nous plongent dans un entre-deux. Nous ne sommes pas en guerre, mais nous ne sommes plus en paix non plus. Elles brouillent toutes les frontières qui, jusqu’ici, structuraient notre pensée. Il n’y a plus de séparation désormais entre politique étrangère et politique intérieure, entre le dedans et le dehors. La conflictualité que nous voulions tant fuir se retrouve partout et nous n’avons d’autre choix que de l’assumer. </p>
+            
+                <p>Notre responsabilité est immense et la révolution mentale qui s’impose, gigantesque. J’enjoins donc à la Commission de se saisir immédiatement des recommandations formulées dans ce rapport: harmonisons les lois électorales et interdisons les financements étrangers pour les partis et formations politiques, traquons les citoyens prête-noms et les sociétés-écrans, investissons massivement dans notre cybersécurité et sanctionnons bien plus durement les États qui coordonnent les attaques contre nos institutions, imposons des responsabilités aux plateformes numériques, construisons un système pérenne de protection de l’espace informationnel européen. Faisons-le vite. Et surtout, traquons cette corruption qui a miné nos cités. Comment a-t-on pu tolérer que nos ministres, nos chefs de gouvernement, aillent travailler pour les intérêts russes et chinois? Comment a-t-on pu tolérer, par exemple, que, de Gerhard Schroeder à Marion Scheller, ceux qui ont décidé de la politique énergétique allemande pendant des années deviennent des employés de Gazprom? </p>
+            
+                <p>Il est temps de redonner à nos démocraties la force et la vertu sans lesquelles nous périrons.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">204419</div>
+            
+            <header><b>Sandro GOZI</b> | Renaissance</header>
+            
+                <p> – Madame la Présidente, je voudrais vous parler des NTIC. Ces quatre lettres étaient jusqu’à récemment la fierté de nos démocraties. Oui, les nouvelles technologies de l’information et de la communication permettaient au plus grand nombre de nos concitoyens de s’informer, d’échanger, de vivre. </p>
+            
+                <p>Je dis bien «permettaient», car ces quatre lettres sont aujourd’hui tordues, abîmées par les démocratures comme la Chine, le Venezuela et, bien évidemment, la Russie. Ces pays manipulent, falsifient, truquent la vérité. Ces pays interfèrent dans nos processus démocratiques – on l’a vu avec le référendum sur le Brexit, le référendum italien en 2016, la présidentielle française en 2017. Ils en profiteraient même pour financer des forces politiques présentes ici, dans ce Parlement. Des enquêtes sont en cours. Après, si les événements récents poussent ces forces – comme on l’a entendu ce matin – à des conversions soudaines, tant mieux. </p>
+            
+                <p>Les têtes du dragon des temps modernes s’appellent Xi Jinping, Nicolas Maduro ou encore Vladimir Poutine. Ils veulent la mort de nos démocraties. Pour nos élections, pour la publicité politique, nous devons imposer de nouvelles règles, Madame la Présidente, chère Eva, avec fermeté. Unissons nos forces pour vaincre ces dragons à plusieurs têtes. </p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

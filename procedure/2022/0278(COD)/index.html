@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Instrument du marché unique pour les situations d&#39;urgence</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,82 +22,39 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Instrument du marché unique pour les situations d&#39;urgence</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
-    <article>
-    <header>👍 Adoption du texte | 
-
-✅️ Adopté
-
-</header>
-    
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
-        <section>
-
-<div class="votes ">
-  
-    <div class="+" style="width: calc(476/648 * 100%)">476</div>
-  
-  
-    <div class="-" style="width: calc(121/648 * 100%)">121</div>
-  
-  
-    <div class="0" style="width: calc(51/648 * 100%)">51</div>
-  
-</div>
-</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
-        <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
-        
-        
-            <section>
-
-
-
-<div class="votes">
-  
-    <div class="+" style="width: calc(54/73 * 100%)">54</div>
-  
-  
-    <div class="-" style="width: calc(19/73 * 100%)">19</div>
-  
-  
-</div>
- 
-</section>
-            <a href="/voting/157797">🗳 Voir le détail du vote</a>
-        
-    
-    </article>
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -104,7 +62,7 @@
     
         
         
-            <li>Libre circulation des marchandises</li>
+            <li>Libre circulation et prestation des services</li>
         
     
         
@@ -114,17 +72,17 @@
     
         
         
-            <li>Libre circulation des personnes</li>
-        
-    
-        
-        
             <li>Marché intérieur, marché unique</li>
         
     
         
         
-            <li>Libre circulation et prestation des services</li>
+            <li>Libre circulation des personnes</li>
+        
+    
+        
+        
+            <li>Libre circulation des marchandises</li>
         
     
         
@@ -134,300 +92,563 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/0278(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0246_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-09-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                            <option value="RE,197511">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197683,197615">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197629">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°21 | Partie 1 | 
+        
+        
+            <article id="21">
+            <header>📝 Amendement n°21 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°21 | Partie 2 | 
+        
+            <article id="21">
+            <header>📝 Amendement n°21 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°128 | 
+        
+            <article id="128">
+            <header>📝 Amendement n°128 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>Article 7 ter  Cartographie des secteurs critiques  1. La Commission, en tenant compte de l’avis du comité et des contributions des organismes compétents au niveau de l’Union et après consultation des États membres, est habilitée à adopter un acte délégué afin de compléter le présent règlement en établissant une méthode de cartographie pour le recensement des secteurs critiques.  2. Aux fins de la méthode visée au paragraphe 1, la Commission tient compte des éléments suivants:  a) les flux commerciaux;  b) l’offre et la demande;  c) la concentration de l’offre;  d) la production et la capacité de production mondiales et de l’Union à différents stades de la chaîne de valeur.  e) l’interdépendance des opérateurs économiques opérant tant à l’intérieur qu’à l’extérieur du marché intérieur.  3. La Commission, en utilisant la procédure visée au paragraphe 1 et en tenant compte de l’avis du comité, procède régulièrement à un inventaire afin de recenser les secteurs critiques. Ces exercices de cartographie se fondent uniquement sur les données disponibles publiquement ou sur le marché et les informations non confidentielles pertinentes émanant des entreprises.  4. La Commission publie les résultats de cet exercice de cartographie.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">442</div>
+  <div class="against">199</div>
+  <div class="abstention">5</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/158040">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(442/646 * 100%)">442</div>
-  
-  
-    <div class="-" style="width: calc(199/646 * 100%)">199</div>
-  
-  
-    <div class="0" style="width: calc(5/646 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/158040">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°136 | 
+        
+            <article id="136">
+            <header>📝 Amendement n°136 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>Article 8 bis  Réserves stratégiques  1. Les États membres mettent tout en œuvre pour constituer des réserves stratégiques de biens d’importance critique. La Commission apporte son soutien aux États membres afin qu’ils coordonnent et qu’ils rationalisent leurs efforts. Elle veille plus particulièrement à la coordination et aux échanges d’informations et encourage la solidarité entre les autorités nationales compétentes en ce qui concerne les pénuries de biens ou de services nécessaires en cas de crise et la constitution de réserves stratégiques de biens d’importance critique. Les capacités qui font partie de la réserve rescEU conformément à l’article 12 de la l’application du présent article.  2. Les échanges d’informations et de bonnes pratiques visées au paragraphe 1 peuvent notamment porter sur:  a) le risque de pénurie et ses conséquences possibles visés au paragraphe 1;  b) le niveau des stocks existants des opérateurs économiques et des réserves stratégiques dans l’Union, ainsi que de toute information sur les mesures prises par les opérateurs économiques en vue d’augmenter leurs stocks;  c) les coûts liés à la constitution et au maintien de telles réserves stratégiques;  d) les solutions de remplacement existantes et potentielles pour l’approvisionnement;  e) d’autres informations susceptibles de garantir la disponibilité de ces biens et services.  Ces informations et bonnes pratiques sont échangées par un canal de communication sécurisé.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">472</div>
+  <div class="against">93</div>
+  <div class="abstention">80</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/158041">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(472/645 * 100%)">472</div>
-  
-  
-    <div class="-" style="width: calc(93/645 * 100%)">93</div>
-  
-  
-    <div class="0" style="width: calc(80/645 * 100%)">80</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/158041">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°146 | 
+        
+            <article id="146">
+            <header>📝 Amendement n°146 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      3. Les États membres établissent et tiennent à 
-  
+<p>
 
   
-      <del>jour </del>
+      3. Les États membres établissent et tiennent à jour
   
 
   
-      <ins>jour, lorsque cette possibilité existe, </ins>
+      <del> </del>
   
 
   
-      un inventaire des opérateurs économiques les plus pertinents établis sur leur territoire national respectif qui opèrent le long des chaînes d’approvisionnement de biens et 
+      <ins>, lorsque cette possibilité existe, </ins>
   
 
   
-      <del>services </del>
+      un inventaire des opérateurs économiques les plus pertinents établis sur leur territoire national respectif qui opèrent le long des chaînes d’approvisionnement de biens et services
   
 
   
-      <ins>services, ainsi que des catégories de travailleurs </ins>
+      <ins>, ainsi que des catégories de travailleurs</ins>
   
 
   
-      d’importance stratégique qui ont été recensés dans l’acte d’exécution mettant en œuvre le mode d’alerte.
+       d’importance stratégique qui ont été recensés dans l’acte d’exécution mettant en œuvre le mode d’alerte.
   
 
   
       <ins> Le contenu de l’inventaire reste confidentiel en toute situation.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°151 | 
+        
+        
+            <article id="151">
+            <header>📝 Amendement n°151 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>7 bis.La Commission peut exiger, au moyen d’actes d’exécution, que les États membres fournissent les informations suivantes sur les biens d’importance critique énumérés dans un acte d’exécution adopté en vertu de l’article 9, paragraphe 1:  a) le niveau des réserves stratégiques détenues sur leur territoire respectif;  b) toute possibilité d’achat ultérieur.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">487</div>
+  <div class="against">152</div>
+  <div class="abstention">11</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/158043">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(487/650 * 100%)">487</div>
-  
-  
-    <div class="-" style="width: calc(152/650 * 100%)">152</div>
-  
-  
-    <div class="0" style="width: calc(11/650 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/158043">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°152 | 
+        
+            <article id="152">
+            <header>📝 Amendement n°152 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>7 ter. Avant d’adopter l’acte d’exécution, la Commission procède comme suit:  a) elle démontre qu’elle n’a pas accès à ces informations par d’autres moyens et justifie la nécessité d’un acte d’exécution; et  b) elle demande l’avis du comité.  Lorsque l’examen de la Commission s’écarte de l’avis du groupe consultatif, la Commission fournit aussi une justification valable.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
+        
     
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Reconquête!</header>
+            . – J’ai voté contre cette proposition qui augmente les pouvoirs de la Commission européenne au-delà des limites qu’une situation d’urgence peut demander. En outre, c’est la Commission qui décide elle-même s’il existe une urgence liée au marché intérieur.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport, qui inclut une mesure aux termes de laquelle la Commission pourrait s’opposer à des mesures nationales portant sur la libre circulation. C’est évidemment inacceptable.Par ailleurs, la Commission pourrait contraindre les entreprises à donner la priorité à certaines entreprises à prioriser certaines commandes - obligation assortie potentiellement d’amendes.Il n’est pas possible de s’associer à un texte à ce point interventionniste.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            L&#39;instrument d&#39;urgence pour le marché unique a été présenté par la Commission en septembre 2022. Il s&#39;appuie sur les leçons tirées de la pandémie de COVID-19 et vise à remédier à la fragmentation, aux obstacles et aux faiblesses qui subsistent dans le marché unique face aux situations d&#39;urgence. Il propose un cadre horizontal de mesures pour anticiper les crises ayant un impact sur le marché unique, s&#39;y préparer et y répondre. Il ambitionne de protéger la libre circulation des biens, des services et des personnes dans les situations d&#39;urgence et à garantir la disponibilité des biens et services d&#39;importance critique. J’ai voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            J’ai voté en faveur de l’instrument d&#39;urgence pour le marché qui s&#39;appuie sur les leçons tirées de la pandémie de COVID-19 et vise à remédier à la fragmentation, aux obstacles et aux faiblesses qui subsistent dans le marché unique face aux situations d&#39;urgence. Il propose un cadre horizontal de mesures pour anticiper les crises ayant un impact sur le marché unique, s&#39;y préparer et y répondre et ambitionne de protéger la libre circulation des biens, des services et des personnes dans les situations d&#39;urgence et à garantir la disponibilité des biens et services d&#39;importance critique.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Au lieu d&#39;améliorer et d&#39;investir dans ce qui existe déjà, la proposition de nouveau règlement crée un instrument interventionniste élargissant considérablement les compétences de la Commission. Enfin, le fait de confier à cette dernière la responsabilité des marchés publics est ahurissante, surtout après la débâcle de l&#39;achat groupé des vaccins Covid, qui a été conclu de la manière la moins transparente possible entre Mme Von Der Leyen et le PDG de Pfizer. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il accorde des pouvoirs exorbitants à la Commission : il étend ses compétences dans la gestion des situations d’urgence sur le marché unique, réduisant ainsi les capacités décisionnelles souveraines des États membres. La gestion catastrophique de la crise du covid devrait plutôt nous inciter à faire l’inverse en rendant aux États leur capacité d’action.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport sur l’instrument du marché unique pour les situations d&#39;urgence (SMEI). Le SMEI s&#39;appuie sur les enseignements tirés de la pandémie de COVID-19 et vise à remédier à la fragmentation, aux obstacles et aux faiblesses qui subsistent dans le marché unique face aux situations d&#39;urgence. Il contient un cadre horizontal de mesures pour anticiper les crises ayant un impact sur le marché unique, s&#39;y préparer et y répondre. Il a pour objectif de protéger la libre circulation des biens, des services et des personnes dans les situations d&#39;urgence et à garantir la disponibilité des biens et services d&#39;importance critique.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            Suite à la pandémie de Covid-19, l’Union européenne a souhaité se doter d’un instrument pour les situations d’urgence afin de renforcer le marché en vue d’éventuelles crises. Dans de telles situations, cet instrument interdit toute restriction à la libre circulation des biens, des travailleurs et des services. Si nécessaire, la Commission européenne, sous le contrôle des États-membres, pourra exiger des entreprises qu’elles produisent en priorité pour certains secteurs des biens et services d’importance critique. En outre, en cas de restrictions, elle devra créer des certificats numériques pour les travailleurs. Ce texte devrait permettre notamment aux travailleurs frontaliers de continuer le plus possible leur travail en présentiel. J’ai par conséquent voté pour cet instrument.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter la position du Parlement sur la création d’un nouveau mécanisme permettant d’améliorer la gestion de crise au sein du marché unique, suite aux difficultés rencontrées pendant la pandémie. Il insiste notamment sur la nécessité de protéger la liberté de circuler des citoyens et notamment des travailleurs transfrontaliers, de mieux identifier les risques d’approvisionnement des secteurs critiques et stratégiques, de renforcer la visibilité et l’anticipation sur les stocks. J’ai donc voté pour ce texte qui apporte des éléments positifs pour mieux anticiper et gérer des situations de crise au sein de l’Union européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">197527</div>
+            
+            <header><b>Anne-Sophie PELLETIER</b> | La France Insoumise</header>
+            Pendant la pandémie de Covid, de nombreux pays européens ont eu des difficultés pour se fournir en biens essentiels, notamment en matériel médical. La crise a perturbé les échanges entre pays y compris au sein de notre Union. Pour éviter que ceci ne se reproduise, ce règlement prévoit un nouveau mécanisme qui permettra d’anticiper et de gérer les crises futures. Grâce à la gauche, les droits fondamentaux et particulièrement le droit de grève ont été préservés. Ce texte propose donc une solution équilibrée pour assurer qu’aucun produit essentiel ne vienne à manquer en cas de crise, c’est pourquoi je l’ai soutenu.
+        </article>
+    
+        <article>
+            <div class="hidden">197551</div>
+            
+            <header><b>Stéphane BIJOUX</b> | Renaissance</header>
+            J’ai approuvé le mandat de négociation du Parlement européenne sur cette proposition de bon sens qui vise à introduire des instruments adaptés pour protéger notre marché unique en temps de crise. La crise COVID-19 ou la guerre en Ukraine ont rappelé que nous devons être prêts à répondre aux circonstances exceptionnelles qui perturbent ou entravent le marché unique. Le texte que nous avons adopté fournit un cadre général pour l’action de l’Union en cas de crise sur le marché intérieur et ajoute également des dispositions sectorielles pour être le plus efficace possible. En soutenant ce rapport, nous défendons la croissance, la compétitivité et surtout la résilience de l’économie européenne. Dans notre mandat de négociation, nous insistons aussi sur la nécessité de prendre en compte la situation spécifique des régions ultrapériphériques, qui font face à des défis supplémentaires liés à leur éloignement géographique et à leur insularité.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Au lieu d&#39;améliorer et d&#39;investir dans le mécanisme de gestion des crises déjà existant, cette proposition de nouveau règlement créerait un instrument interventionniste élargissant considérablement les compétences de la Commission. Elle placerait la Commission à la tête de la gestion de la crise, réduisant ainsi les capacités décisionnelles souveraines des États-membres. La proposition confère à la Commission la responsabilité de définir les secteurs critiques et un rôle de coordination dans la création de réserves stratégiques. En particulier, il serait impossible pour les pays de prendre des mesures liées à la crise qui perturberaient la libre circulation (par exemple, la fermeture et le contrôle des frontières) sans l&#39;approbation de la Commission européenne. En outre, la proposition rend la Commission responsable de ce qui est essentiellement une économie planifiée. Elle pourrait intervenir directement dans la production en obligeant les entreprises françaises à donner la priorité à certaines commandes sous peine d&#39;amendes. Enfin, la proposition de confier à la Commission la responsabilité des marchés publics est ahurissante, surtout après la débâcle de l&#39;achat groupé des vaccins Covid, qui a été conclu de la manière la moins transparente possible, par le biais de SMS entre Mme Von Der Leyen et le PDG de Pfizer.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            Au lieu de renforcer un mécanisme existant qui mérite des éloges, la nouvelle proposition de règlement étend considérablement les pouvoirs de la Commission européenne, plaçant ainsi cette dernière en position de gestionnaire de crise. Cette initiative risque de limiter la souveraineté décisionnelle des États membres. En vertu de cette proposition, la Commission serait chargée de définir les secteurs critiques et jouerait un rôle de coordination dans la création de réserves stratégiques. Elle aurait également le pouvoir d&#39;approuver ou de rejeter les mesures prises par les États membres en cas de crise, notamment celles affectant la libre circulation, comme la fermeture des frontières. De plus, cette proposition confierait à la Commission un rôle dans la régulation de l&#39;économie, notamment en imposant des priorités de production aux entreprises sous peine de sanctions financières. Je me suis opposé à ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            . – Il existe déjà un mécanisme de crise au niveau de l&#39;UE. Le dispositif intégré de l&#39;UE pour une réaction au niveau politique dans les situations de crise (IPCR). Ce système est géré par le Conseil et a été utilisé lors de crises antérieures, telles que la crise migratoire et la crise Covid-19. Au lieu d&#39;améliorer et d&#39;investir dans ce mécanisme déjà existant, la proposition de nouveau règlement créerait un instrument interventionniste élargissant considérablement les compétences de la Commission. Elle placerait la Commission à la tête de la gestion de la crise, réduisant ainsi les capacités décisionnelles souveraines des États membres. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car au lieu d&#39;améliorer et d&#39;investir dans ce mécanisme déjà existant, qui devrait être soutenu, la proposition de nouveau règlement créerait un instrument interventionniste élargissant considérablement les compétences de la Commission. En effet, elle placerait la Commission à la tête de la gestion de la crise, réduisant ainsi les capacités décisionnelles souveraines des États membres.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b>Marina MESURE</b> | La France Insoumise</header>
+            Le rapport a pour objet l’introduction dans le droit européen d’un nouveau mécanisme qui permettrait de prévenir, anticiper et gérer les crises futures (telles qu’une nouvelle pandémie ou une catastrophe naturelle par exemple). L’objectif est donc d’avoir un cadre européen harmonisé de gestion de crise et de mise en place d’une solidarité européenne, ainsi qu’une coordination rapide et efficace. Le texte permet également l’identification de biens et secteurs stratégiques et pertinents pour la crise (comme pour les masques et respirateurs en 2020). Le texte souligne bien le fait que son application n’affectera en rien l’exercice du droit de grève et des droits fondamentaux. Enfin, plusieurs éléments renforcent la transparence. Cependant, cet instrument risque de limiter la marge de manœuvre des États-membres en cas de crise en matière de liberté de circulation, j’ai donc voté contre les dispositions de ce texte en la matière. Néanmoins, le texte dans son ensemble comporte de nombreux points positifs, j’ai donc décidé de voter en faveur de ce dernier.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-    
-    
 
+    <section>
     
     
-
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            
+                <p>Toutefois, se confier à l’administration de la Commission en temps de crise n’est ni réaliste ni efficace. Lors de la pandémie, la Cour des comptes européenne a relevé un certain amateurisme: pas d’experts en logistique ni d’experts juridiques, et surtout un manque de transparence des contrats d’achats. Comment oublier le scandale des SMS entre Madame Von der Leyen et le PDG de Pfizer, qui a décroché le plus gros contrat, avec des commandes jusqu’en 2027 pour des milliards d’euros? Tant que cette affaire n’est pas élucidée, nous ne pouvons pas accepter de confier à cette administration de négocier des achats à notre place en payant plus cher, de préempter la production de nos entreprises sans même savoir à qui Bruxelles enverra les produits, ou encore d’intervenir dans la gestion de nos frontières. Comment expliquez-vous que l’Union européenne paye plus cher les doses Pfizer-BioNtech que le Brésil ou l’Afrique du Sud?</p>
+            
+        </article>
     
+        <article>
+            <div class="hidden">197581</div>
+            
+            <header><b>Stéphanie YON-COURTIN</b> | Renaissance</header>
+            
+                <p> – Madame la Présidente, il y a presque un an, jour pour jour, lors du discours sur l’état de l’Union, la Commission européenne présentait son nouvel instrument du marché unique pour les situations d’urgence. Tirant les leçons de la pandémie de Covid et de l’invasion de l’Ukraine, ce nouvel outil vise à garantir la libre circulation des personnes, des biens, des services, même en temps de crise. Car les citoyens, à raison, n’ont pas compris le manque de coordination entre les États membres ni les pénuries que nous avons vécues durant la pandémie. Or, nous le savons, notre marché unique est notre meilleur atout en gestion des crises, l’achat en commun des vaccins en est un exemple – on salue ici notre Commissaire Breton.</p>
+            
+                <p>Il nous faut donc mieux structurer les réponses d’urgence qui ne peuvent être garanties ni par de l’improvisation ni par des mesures nationales prises chacun dans son coin. Désormais, nous garantissons, en temps de crise, l’approvisionnement rapide pour les biens et services critiques. Nous mettons en place un mécanisme qui permet aux États membres de lancer un appel à la solidarité en cas de pénurie. En dernier recours, si la situation l’impose, nous permettons la commande prioritaire et contraignante auprès des opérateurs économiques. Pour répondre aux crises actuelles et futures, dotons-nous des moyens nécessaires à la coordination, à la solidarité et à la cohérence de la réponse européenne. Il en va de la protection de notre marché unique.</p>
+            
+        </article>
     
-
+        <article>
+            <div class="hidden">204421</div>
+            
+            <header><b>Jean-Lin LACAPELLE</b> | Rassemblement national</header>
+            
+                <p> – Madame la Présidente, chers collègues, la marche de l’Union européenne vers le fédéralisme se poursuit et elle profite des crises pour se doter de nouveaux pouvoirs. D’ailleurs, tout est prétexte pour s’accaparer les pleins pouvoirs. Ces pouvoirs, qui n’ont jamais été prévus par les traités, sont évidemment inquiétants, car les eurocrates risquent de ne pas hésiter à déclarer que leurs adversaires politiques représentent une menace à combattre. Mais ils ne sont pas non plus rassurants dans les situations de crise objective. La pandémie de coronavirus a montré l’inefficacité de l’Union européenne. La Commission européenne a agi dans l’opacité la plus totale en tenant secrets les contrats des vaccins. Elle a agi avec incompétence dans les négociations, et avec brutalité en interdisant des négociations pays par pays.</p>
+            
+                <p>Et aujourd’hui, elle veut répéter ce résultat calamiteux dans tous les domaines. Mais le marché unique, c’est aussi la circulation des personnes. Rappelons-nous le refus idéologique de l’Union européenne de fermer les frontières, car «le virus n’a pas de passeport», avant d’imposer un passe sanitaire pour le moindre déplacement. Alors soyons conscients qu’en cas de nouvelle crise migratoire, avec ce texte, l’Union européenne prendra tous les pouvoirs. Nous ne pouvons accepter un risque aussi exorbitant. En période de crise, seules les nations sont le refuge des citoyens.</p>
+            
+        </article>
     
-    
-
-    
-    
-
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/0278(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0246_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-09-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

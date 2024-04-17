@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Résolution sur la protection des sols</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Résolution sur la protection des sols</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(605/701 * 100%)">605</div>
-  
-  
-    <div class="-" style="width: calc(55/701 * 100%)">55</div>
+    <div class="for" style="width: calc(605/701 * 100%)">605</div>
   
   
-    <div class="0" style="width: calc(41/701 * 100%)">41</div>
+    <div class="against" style="width: calc(55/701 * 100%)">55</div>
+  
+  
+    <div class="abstention" style="width: calc(41/701 * 100%)">41</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,28 +88,24 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(56/79 * 100%)">56</div>
+    <div class="for" style="width: calc(56/79 * 100%)">56</div>
   
   
   
-    <div class="0" style="width: calc(23/79 * 100%)">23</div>
+    <div class="abstention" style="width: calc(23/79 * 100%)">23</div>
   
 </div>
  
 </section>
-            <a href="/voting/130720">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/130720">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Politiques communautaires</li>
-        
     
         
         
@@ -122,125 +122,379 @@
             <li>Pollution du sol, dégradation</li>
         
     
+        
+        
+            <li>Politiques communautaires</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2548(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/B-9-2021-0221_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-04-26-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>4 bis. souligne l’importance de protéger et de restaurer les sols pour renforcer la cohésion territoriale, économique et sociale de l’Union; insiste sur le fait que la protection et la restauration des sols est indispensable pour lutter contre le dépeuplement dont souffrent de nombreuses populations et régions de l’Union;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">191</div>
+  <div class="against">424</div>
+  <div class="abstention">82</div>
+</span>
+
+  
+    
+    <a href="/voting/130067">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(191/697 * 100%)">191</div>
-  
-  
-    <div class="-" style="width: calc(424/697 * 100%)">424</div>
-  
-  
-    <div class="0" style="width: calc(82/697 * 100%)">82</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/130067">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
-
-  
-      29. 
-  
+<p>
 
   
-      <ins>souligne que l’élevage industriel a des incidences négatives sur notre environnement, y compris sur nos sols, et attire l’attention sur la contamination due aux rejets de lisier, aux émissions d’azote et à d’autres pollutions connexes, ainsi que sur les incidences de la production et de l’importation d’aliments pour animaux; demande instamment aux États membres de supprimer progressivement l’élevage industriel et de planifier cette transition de manière juste; </ins>
+      29.
   
 
   
-      demande l’application stricte des bonnes normes d’élevage dans les élevages afin de réduire considérablement l’utilisation de médicaments vétérinaires et leur épandage dans les champs par l’intermédiaire du fumier, ainsi qu’une application stricte de la directive sur les nitrates;
+      <ins> souligne que l’élevage industriel a des incidences négatives sur notre environnement, y compris sur nos sols, et attire l’attention sur la contamination due aux rejets de lisier, aux émissions d’azote et à d’autres pollutions connexes, ainsi que sur les incidences de la production et de l’importation d’aliments pour animaux; demande instamment aux États membres de supprimer progressivement l’élevage industriel et de planifier cette transition de manière juste;</ins>
+  
+
+  
+       demande l’application stricte des bonnes normes d’élevage dans les élevages afin de réduire considérablement l’utilisation de médicaments vétérinaires et leur épandage dans les champs par l’intermédiaire du fumier, ainsi qu’une application stricte de la directive sur les nitrates;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(143/697 * 100%)">143</div>
-  
-  
-    <div class="-" style="width: calc(541/697 * 100%)">541</div>
-  
-  
-    <div class="0" style="width: calc(13/697 * 100%)">13</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/130068">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2548(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/B-9-2021-0221_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">143</div>
+  <div class="against">541</div>
+  <div class="abstention">13</div>
+</span>
+
   
+    
+    <a href="/voting/130068">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-04-26-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Cette résolution invite la Commission à promouvoir un cadre commun à l’échelle de l’UE pour la protection et l’utilisation durable des sols. Bien que sur le fond la protection des sols soit une mesure de bon sens, sur la forme le texte insiste fortement sur la nécessité d’un cadre juridique européen commun qui serait aussi lourd qu’inutile. Je me suis donc abstenu.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            Je me suis abstenue sur ce texte, qui comporte l’inconvénient notable de faire référence au Pacte vert et aux objectifs climat à horizon 2030 et 2050. Toutefois, il est louable d’accroître les relations entre les États membres transfrontaliers.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Cette résolution s’inscrit dans le cadre des objectifs fixés dans le pacte vert et soutient le texte initial visant à rendre le règlement pour la protection des sols juridiquement contraignant. Des réglementations similaires existent déjà pour l’eau et l’air. Il est important d’améliorer la santé des sols qui représente un élément essentiel pour lutter contre la dégradation des terres. J’ai voté en faveur de cette résolution.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            La protection des sols est une politique de bon sens pour protéger notre écosystème. Ce texte aborde de façon constructive l’aspect transfrontalier en proposant l’adoption de mesures communes entre des États frontaliers. Certains de nos amendements ont été votés en ce sens. Cependant, ce texte va trop loin en voulant imposer à l’agriculture un cadre juridique commun sur de nombreux éléments (objectifs, ressources financières, etc.). Je me suis donc abstenu.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Le débat sur la protection des sols dans l’Union européenne est ancien. Il faut dire que cela représente un enjeu majeur pour les prochaines années. En effet, la dégradation des sols par l’agriculture, la foresterie ou encore l’artificialisation des sols liée l’extension urbaine est une menace très préoccupante, puisque ses conséquences sur le long terme sont encore méconnues. Les sols constituent un écosystème abritant un quart de la biodiversité mondiale, et stockent davantage de carbone que la végétation, les animaux et l’atmosphère réunis. Des sols sains jouent un rôle majeur dans le cycle de l’eau, des éléments et pour l’alimentation. Ils sont menacés et dégradés : 60-70 % des sols européens sont en mauvais état et le coût de leur dégradation en Europe s’élèverait déjà à 50 milliards d’euros/an.Cette résolution vise à demander à la Commission de créer un cadre légal européen de protection et de la subsidiarité des sols, demande des études d’impacts renouvelées régulièrement, et invite à des changements de culture, notamment par l’intermédiaire de la PAC. J’ai naturellement voté en faveur de cette résolution.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution sur la protection des sols. Le texte rappelle que les sols de la planète constituent le plus grand réservoir terrestre de carbone (2 500 gigatonnes de carbone), que 320 types de sols sont recensés en Europe. Il invite la Commission à présenter une proposition législative pour créer un cadre juridique sur les sols afin de mieux les protéger, sur le modèle des cadres qui existent pour la protection de l’eau et de l’air.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Cette résolution vise à présenter les propositions du Parlement pour la création d’un cadre de protection des sols au niveau européen. Elle insiste sur la nécessité de considérer les sols comme un bien commun, appelle à la création d’un socle juridique commun pour leur utilisation durable et demande que la politique agricole commune soit réorientée pour mieux préserver les sols. J’ai donc voté pour ce texte qui alerte sur une problématique écologique cruciale et établit des recommandations pertinentes pour y faire face.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            La dégradation des sols est une menace extrêmement préoccupante et mal connue, causée en premier lieu par l’agriculture, la foresterie et l’artificialisation intensives. Les sols forment des écosystèmes complexes abritant un quart de la biodiversité mondiale et stockent davantage de carbone que la végétation, les animaux et l’atmosphère réunis. Des sols sains jouent un rôle majeur dans le cycle de l’eau, des éléments et pour l’alimentation. Ils sont particulièrement menacés et dégradés : 60-70 % des sols européens sont en mauvais état et le coût de leur dégradation en Europe s’élèverait déjà à 50 milliards par an. Il y a urgence à agir! Par cette résolution le Parlement européen demande à la Commission d’élaborer un cadre juridique commun à l’échelle de l’Union de protection des sols, législatif à l’instar de ce qui se fait déjà pour l’air et l’eau. La résolution demande à ce que ce futur cadre traite de toutes les menaces pesant sur les sols, et soit accompagné d’objectifs, d’indicateurs, d’une méthodologie pour la surveillance continue de l’état des sols et l’établissement de rapports en la matière. Je ne peux que soutenir cette très bonne résolution.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Je me suis abstenu sur ce texte qui, s’il présente des avancées sur le rôle des États membres et leur souveraineté, s’accroche à des objectifs idéalistes et irréalistes, dans le cadre du Pacte vert.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai voté en faveur de la résolution sur la protection des sols qui s’inscrit dans le cadre du pacte vert européen et considère que l’amélioration de la santé des sols représente un élément essentiel pour lutter contre la dégradation des terres. Elle demande – comme ce qui existe déjà pour l’air et l’eau – un cadre législatif sur la protection des sols. Alors que la Commission européenne doit présenter sa stratégie sur la protection des sols à l’automne 2021, cette résolution est un message fort que nous lui envoyons afin de guider la suite de ses travaux. Nous demandons d’ailleurs à la Commission européenne une analyse d’impact approfondie, basée sur des données scientifiques, afin d’étudier les coûts de l’action et de l’inaction en matière d’incidences immédiates et à long terme sur l’environnement, la santé humaine, le marché intérieur et la durabilité.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Je me suis abstenu car malgré quelques références au Pacte vert et aux objectifs climat à l’horizon 2030 et 2050, ce texte laisse transparaître une volonté d’accroître les relations entre les États membres transfrontaliers quant à la protection des sols, ce que nous avons soutenu dans nos amendements, et prend en compte l’ensemble des problématiques en incluant les différentes échelles du territoire européen.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            Malgré quelques références au Pacte vert et aux objectifs climat à l’horizon 2030 et 2050, ce texte laisse transparaître une volonté d’accroître les relations entre les États membres transfrontaliers, ce que nous avons soutenu dans nos amendements. Il prend en compte l’ensemble des problématiques en incluant les différentes échelles du territoire européen. Il promeut enfin une mise à jour des données et une méthodologie commune. Je me suis abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            La proposition de résolution sur la protection des sols reconnaît l’importance d’un sol sain, notamment en tant que garant de la biodiversité et contributeur aux mesures d’atténuation et d’adaptation du climat. Cette proposition reconnaît également que le sol est une ressource non renouvelable exposée à une variété de processus de dégradation. La résolution invite la Commission à promouvoir un cadre commun à l’échelle de l’UE pour la protection et l’utilisation durable des sols, en s’attaquant aux différentes menaces pesant sur les sols et en favorisant les mesures de restauration. Malgré quelques références au Pacte vert et aux objectifs climat à l’horizon 2030 et 2050, ce texte laisse transparaître une volonté d’accroître les relations entre les États membres transfrontaliers, ce que nous avons soutenu dans nos amendements. Il prend en compte l’ensemble des problématiques en incluant les différentes échelles du territoire européen. Il promeut enfin une mise à jour des données et une méthodologie commune. Cependant, ce texte va trop loin sur le thème de l’agriculture en dénonçant les grandes exploitations agricoles et voulant imposer un cadre juridique commun sur de nombreux éléments. Je me suis donc abstenue sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            La proposition de résolution sur la protection des sols reconnaît l’importance d’un sol sain, notamment en tant que garant de la biodiversité et contributeur aux mesures d’atténuation et d’adaptation du climat. Cette proposition reconnaît également que le sol est une ressource non renouvelable exposée à une variété de processus de dégradation. La motion met en outre en évidence le rôle multifonctionnel du sol, soulignant également que des sols sains sont essentiels pour atteindre la restauration de la biodiversité, des systèmes alimentaires sains et durables et un environnement résilient.Malgré quelques références au Pacte vert et aux objectifs climats à l’horizon 2030 et 2050, ce texte laisse transparaître une volonté d’accroître les relations entre les États membres transfrontaliers. Il prend en compte l’ensemble des problématiques en incluant les différentes échelles du territoire européen. De plus, ce texte remet en question la problématique de la dégradation des sols importés et promeut l’esprit des circuits courts.Cependant, ce texte va trop loin sur le thème de l’agriculture en dénonçant les grandes exploitations agricoles et voulant imposer un cadre juridique commun sur de nombreux éléments (objectifs, ressources financières, etc.).J’ai donc choisi de m’abstenir sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            La proposition de résolution sur la protection des sols reconnaît l’importance d’un sol sain pour préserver la biodiversité et lutter contre le changement. Cette proposition reconnaît également que le sol est une ressource non renouvelable, exposée à une variété de processus de dégradation. La résolution invite la Commission à promouvoir un cadre commun à l’échelle de l’UE pour la protection et l’utilisation durable des sols, en s’attaquant aux différentes menaces pesant sur eux et en favorisant les mesures de restauration. Ce texte ne comporte pas d’aspect contraignant. La protection des sols nécessite une politique commune (adoption de mesures communes entre des États frontaliers) si nous voulons réellement protéger cet écosystème. J’ai voté pour.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197504</div>
+            
+            <header><b>Jérémy DECERLE</b> | Renaissance</header>
+            
+                <p>Premièrement, pour préserver nos sols, il faut déjà s’assurer qu’il nous en reste assez. Si l’érosion est un enjeu mondial réel qui n’épargne pas notre continent, l’artificialisation et l’urbanisation incontrôlées sont la première menace à laquelle nous devons faire face. L’extension galopante des surfaces artificialisées est tout le contraire de la durabilité. C’est une compétence nationale aujourd’hui, mais c’est indéniablement un enjeu commun.</p>
+            
+                <p>Deuxièmement, aussi bien pour nos forêts que pour notre agriculture, notre premier objectif doit être de garder et de retrouver des sols vivants, tant pour des raisons de biodiversité que de climat, de productivité et de durabilité. En somme, c’est ça le résultat premier que nous devons viser.</p>
+            
+                <p>Troisièmement, il faut que les pratiques agricoles favorables – prairies permanentes, couverture du sol ou stockage de carbone – qui sont bien connues et déjà appliquées sur beaucoup de territoires soient identifiées, encouragées et rémunérées, que ce soit par le marché ou par les politiques agricoles publiques. La politique agricole commune contribue déjà et peut le faire davantage. Les acteurs économiques ont tout leur rôle à jouer en valorisant ces pratiques dans leur stockage.</p>
+            
+                <p>Si nous ne nous dispersons pas, cette approche est réaliste; elle est plus facile à mettre en œuvre aujourd’hui qu’elle ne l’était hier, parce que nous avons fait des progrès dans les outils d’évaluation de la qualité des sols qui sont aujourd’hui plus simples à utiliser. Pour atteindre ces objectifs ambitieux, nous avons la responsabilité de reconnaître le travail déjà fait par les agricultrices et les agriculteurs qui mesurent parfaitement ces enjeux. Le sol est le support de travail de ceux qui cultivent et soignent nos terres, et qui sont bien les premiers intéressés par leur durabilité.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

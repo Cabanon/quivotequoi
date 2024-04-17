@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>L’Union et la défense du multilatéralisme</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>L’Union et la défense du multilatéralisme</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(454/639 * 100%)">454</div>
-  
-  
-    <div class="-" style="width: calc(73/639 * 100%)">73</div>
+    <div class="for" style="width: calc(454/639 * 100%)">454</div>
   
   
-    <div class="0" style="width: calc(112/639 * 100%)">112</div>
+    <div class="against" style="width: calc(73/639 * 100%)">73</div>
+  
+  
+    <div class="abstention" style="width: calc(112/639 * 100%)">112</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(41/68 * 100%)">41</div>
+    <div class="for" style="width: calc(41/68 * 100%)">41</div>
   
   
-    <div class="-" style="width: calc(15/68 * 100%)">15</div>
+    <div class="against" style="width: calc(15/68 * 100%)">15</div>
   
   
-    <div class="0" style="width: calc(12/68 * 100%)">12</div>
+    <div class="abstention" style="width: calc(12/68 * 100%)">12</div>
   
 </div>
  
 </section>
-            <a href="/voting/146585">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/146585">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -106,57 +111,269 @@
     
         
         
-            <li>Relations avec les pays tiers</li>
+            <li>Relations extérieures de l&#39;Union</li>
         
     
         
         
-            <li>Relations extérieures de l&#39;Union</li>
+            <li>Relations avec les pays tiers</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2114(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0172_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-07-06-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>98 bis. se félicite de la conclusion positive de la 12e conférence ministérielle de l’OMC et réaffirme son soutien sans réserve à un système commercial fondé sur des règles, qui devrait contribuer à relever les défis mondiaux et à accompagner la transition écologique, la révolution numérique et la lutte contre les inégalités; invite instamment les pays de l’OMC à mettre en œuvre sans délai les décisions prises et à œuvrer à la réforme de l’organisation avant la 13e conférence ministérielle afin de rendre l’OMC pleinement opérationnelle et adaptée à son objectif; regrette que la 12e conférence ministérielle n’ait pas inclus la dimension de l’égalité hommes- femmes en matière de relations commerciales, et demande que cette question soit au cœur de la 13e conférence ministérielle;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2114(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0172_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-07-06-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – J’ai voté contre ce texte qui défend le multilatéralisme et qui se pare de tous les sujets idéologiques à la mode, loin des réalités du monde d’aujourd’hui. Il donne par ailleurs la primauté à l’UE sur les États, avec un siège de l’UE aux Nations unies, par exemple.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            Le multilatéralisme est entretenu par les institutions internationales qui s’occupent de gérer le bon déroulé des relations entre les États. L’Union européenne s’est accaparé une compétence normalement dévolue à l’ONU qui est le droit de sanctions, qui est un abus en bonne et due forme de sa capacité. Le rapport va trop loin en demandant d’avoir une représentation de l’ONU à l’UE, rajouter des prérogatives à l’UE au sein des institutions internationales. Je m’oppose à la construction d’un super-État européen et à l’ingérence de l’UE dans un domaine qui ne la concerne pas. Le multilatéralisme est défini à mauvais escient, en effet il est vu comme la lutte contre l’émergence de nouvelles puissance au lieu de redéfinir les relations internationales. Je vote donc contre ce texte dans l’intérêt du rayonnement français à travers le monde.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            . – Ce texte donne suite à une communication conjointe de la Commission et du HR/VP sur la contribution de l’Union au multilatéralisme. Il rappelle que ce dernier est le système organisationnel le plus adapté pour répondre aux défis mondiaux et s’interroge sur les moyens de redynamiser et protéger ce système, notamment grâce à un accroissement du rôle des assemblées parlementaires. Bien que partageant l’opinion de ce texte sur le multilatéralisme, je me suis abstenu de le voter, notamment car il propose la prise de décision à la majorité qualifiée dans le domaine de la politique étrangère, alors que le vote à l’unanimité est, à mon sens, le garant de l’unité des États membres dans la politique étrangère commune de l’UE.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il appelle à construire un État fédéral européen dans le but de peser dans le jeu multilatéral mondial. Or, je pense au contraire que seule une coopération librement consentie entre les nations européennes sera en mesure de défendre nos intérêts, à l’opposé d’un super-État construit contre la volonté du peuple français.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            Je me suis abstenue sur ce rapport relatif à la défense du multilatéralisme. Si le texte rappelait utilement que le multilatéralisme est le système organisationnel le plus adapté pour répondre aux enjeux mondiaux et suggérait des pistes de réflexion pour redynamiser et défendre ce système, il contenait également des dispositions inacceptables: il plaidait par exemple en faveur de l’extension de la procédure de la majorité qualifiée (à la place de l’unanimité) au domaine de la politique étrangère, ce qui serait de nature à nuire à la souveraineté comme à la protection des intérêts fondamentaux des États membres.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations et les recommandations du Parlement européen sur la crise du multilatéralisme dans l’organisation actuelle des relations internationales. Il souligne à raison la nécessité de préserver l’indépendance des organismes de défense des droits humains, d’intégrer les questions de genre dans les coopérations internationales et de renforcer l’engagement de l’Union en faveur de la non-prolifération des armes de destruction massive. Il s’inscrit en revanche dans une vision atlantiste plutôt qu’altermondialiste des relations internationales et salue sans nuances ni critiques le rôle de l’Organisation mondiale du commerce. Je me suis donc abstenue sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport car, s’il reconnaît l’émergence d’un monde multipolaire, il propose à l’Union européenne de s’enfoncer dans les politiques peu réalistes. Par ailleurs, il est en faveur d’un super-État européen. Enfin, je note que le multilatéralisme est une nouvelle fois compris comme un outil de lutte contre l’émergence de nouvelles grandes puissances dans le monde plutôt que comme une occasion de renouveler nos alliances internationales.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Est multilatéral ce qui a la prétention d’être digne de respect universel du fait de son respect des lois, de la légitimité des négociations et du consensus. Cette thématique a repris une actualité médiatique pendant la présidence Trump qui fut régulièrement accusé de remettre en cause le multilatéralisme par sa politique de «deals» au profit des États-Unis.Ainsi, les régimes américains et européens de sanctions sont des entorses explicites au multilatéralisme puisque cette fonction était censée être dévolue à l’ONU, les volontés constantes d’exclusions de certains pays d’institutions internationales, la prétention à désigner des gouvernements à la place des peuples ou encore l’isolement des pays occidentaux dans leurs propres institutions.Ici c’est un texte idéologique qui reconnaît l’émergence d’un monde multipolaire, mais propose à l’Union européenne de s’enfoncer dans les politiques qui l’amènent à partager la chute de l’hégémonie américaine.Notons aussi que le multilatéralisme est une nouvelle fois compris comme un outil de lutte contre l’émergence de nouvelles grandes puissances dans le monde plutôt que comme une occasion de renouveler nos alliances internationales.Pour toutes ces raisons, j’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            . – Nous voterons contre un texte idéologique qui reconnaît certes l’émergence d’un monde multipolaire mais propose à l’Union européenne de sombrer dans les politiques qui l’amènent à partager la chute de l’hégémonie américaine. Par ailleurs, le rapporteur essaye de continuer à construire un super-État européen. Enfin, nous relevons que le multilatéralisme est une nouvelle fois compris comme un outil de lutte contre l’émergence de nouvelles grandes puissances dans le monde plutôt que comme une occasion de renouveler nos alliances internationales. J’ai voté contre.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">204421</div>
+            
+            <header><b>Jean-Lin LACAPELLE</b> | Rassemblement national</header>
+            
+                <p>Peu importe qu’ils soient sous le coup d’une sécession armée comme la Moldavie, ou carrément en guerre comme en Ukraine. Peu importe qu’il s’agisse d’un territoire notoirement mafieux, islamiste, en proie aux trafics, comme l’illustre le cas présent du Kosovo.</p>
+            
+                <p>En fait, vous souhaitez ouvrir les portes de l’Europe à l’afflux massif d’armes, au trafic de drogue, au trafic d’êtres humains ou encore au terrorisme islamiste. Je vous rappelle que c’est le Kosovo qui a fourni le plus grand nombre de djihadistes à la Syrie et à l’Iraq en Europe, proportionnellement à son nombre d’habitants. Pourtant, vous préconisez sans délai l’adhésion du Kosovo à l’Union européenne, ainsi que la libéralisation des visas pour les Kosovars, sans vous soucier que cinq États membres de l’Union européenne ne reconnaissent toujours pas l’existence du territoire.</p>
+            
+                <p>Ce rapport, comme à l’accoutumée, est un ramassis idéologique qui ne tient aucun compte des conséquences réelles qu’une adhésion du Kosovo aurait sur l’ensemble des pays européens.</p>
+            
+                <p>Selon une enquête menée par le Conseil européen des relations étrangères, une large majorité des citoyens des États membres de l’Union européenne est opposée à un élargissement aux pays des Balkans. Mais vous vous en moquez.</p>
+            
+                <p>D’autre part, le gouvernement kosovar souhaite à terme l’intégration du Kosovo dans une Grande Albanie qui se retrouverait de facto membre de l’Union européenne, en pleine contradiction avec la résolution 1244 du Conseil de sécurité des Nations unies. Et ça, vous vous en moquez aussi.</p>
+            
+                <p>En conclusion, face à cette désinvolture hallucinante, le Rassemblement national s’opposera toujours à cette volonté expansionniste acharnée et défendra toujours fermement l’intérêt et la volonté de nos peuples.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

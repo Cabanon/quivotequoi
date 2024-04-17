@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Règlement sur les semi-conducteurs</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,27 +22,39 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Règlement sur les semi-conducteurs</h2>
 
 
 
-
 <h3>🎯 Votes principaux</h3>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -54,32 +67,280 @@
     
         
         
-            <li>Industries électronique, électrotechnique, TIC, robotique</li>
-        
-    
-        
-        
             <li>Politique industrielle</li>
         
     
+        
+        
+            <li>Industries électronique, électrotechnique, TIC, robotique</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    
-    
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/0032(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/0032(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0014_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-07-11-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-07-11-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
+
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,197683,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,197683,197629,197615">🇫🇷 Reconquête!</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Je vote en faveur de ce texte qui établit l’initiative « Semi-conducteurs pour l’Europe », destinée à renforcer la compétitivité, la résilience et la capacité d’innovation de l’Union, et qui prévoit la mise en place d’un mécanisme de coordination entre les États membres et la Commission pour suivre l’état de l’approvisionnement des semi-conducteurs, et permettre une réaction coordonnée en cas de crise et d’ainsi recourir à des mesures spécifiques pour y faire face. Plus concrètement, la proposition vise à renforcer notre souveraineté industrielle afin d’attirer des entreprises pour renforcer nos capacités de production, de conditionnement avancé et d’assemblage des semi-conducteurs. De tels projets sont indispensables pour notre indépendance face aux autres grandes puissances.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            . – La proposition de règlement établit un cadre pour le renforcement du secteur des semi-conducteurs au niveau de l&#39;Union. Le texte vise à mettre au point des outils de prévention et de réaction en cas de pénurie dans la chaîne d&#39;approvisionnement en semi-conducteurs, en vue d&#39;assurer la résilience du marché intérieur et de permettre à l&#39;Union de jouer un rôle plus important au niveau mondial. Favorable au renforcement du rôle de l’Union dans ce secteur, j’ai soutenu ce texte par mon vote.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Face à l’interventionnisme des concurrents pour s’assurer la place de numéro 1 mondial dans le secteur du semi-conducteur, l’UE semble vouloir rattraper son retard jusqu’à parler de « souveraineté industrielle ». J’ai soutenu ce dossier dans le but de favoriser l’installation et le développement sur le territoire, d’usines ayant vocation à produire des biens stratégiques indispensables à nos industries.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté pour ce rapport car il permet d’une part à l’UE de rattraper son retard en matière de fabrication et de commercialisation de semi-conducteurs par rapport à la Chine et aux USA, et d’autre part d’affermir sa souveraineté technologique en produisant des biens indispensables au développement de nos territoires.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            J’ai voté en faveur de ce règlement qui vise à porter la part de l’Europe dans la production mondiale de semi-conducteurs à 20% d’ici 2030. Ils sont en effet des composants essentiels à notre industrie et à sa transition. En adoptant ce règlement, l’Union européenne souhaite renforcer ses capacités de fabrication afin d’assurer sa compétitivité, la pérennité de sa recherche et la sécurité de ses approvisionnements. Ainsi, ce texte prévoit de réduire la dépendance de l’Europe à l’égard de l’Asie et de Taïwan en attirant des investissements dans les fonderies et les centres de recherche en Europe.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce règlement sur les semi-conducteurs. Cet accord de trilogue a pour objectif de garantir l’approvisionnement de l’Union européenne en ces éléments électroniques stratégiques, vitaux dans la mise en œuvre de nombreuses technologies : informatique, automobile, aéronautique, etc. En vue de soutenir la production européenne de puces, il mobilise 3,3 Mds EUR pour consolider le tissu industriel et renforce les mécanismes de protection de la propriété intellectuelle. Il prévoit également un mécanisme d’alerte permettant de mettre en œuvre des mesures d’urgence, tels que des achats groupés à 27.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            Le Parlement a voté en faveur du règlement sur les semi-conducteurs. L’objectif de ce règlement est de renforcer la position de l&#39;Union européenne dans le paysage mondial des semi-conducteurs. Avec un budget de 43 milliards, l’objectif sera d’investir dans l’innovation, et le retour de la conception de nouvelles technologies au sein de l’Europe, en soutenant par exemple la production de puces électroniques sur le continent, tout cela en coordonnant les États membres et la Commission européenne pour prévenir les vulnérabilités des chaînes d&#39;approvisionnement. J’ai voté en faveur de ce règlement.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à approuver l’accord de trilogue sur le règlement établissant un cadre pour renforcer l’écosystème européen des semi-conducteurs. Il dessine à raison une stratégie européenne pour garantir notre souveraineté et notre indépendance sur la production de ces puces essentielles pour les nouvelles technologies et sur lesquelles l’UE a pris beaucoup de retard. Il s’inscrit en revanche dans une logique de dumping environnemental (à travers la possibilité de dérogations aux directives Habitat et eau), affaiblit l’outil protectionniste initialement prévu par la Commission (dont l’utilisation a été rendue plus complexe par le Parlement) et ne prévoit pas de conditionnalités suffisantes en matière d’emploi et de formation des travailleurs pour recevoir les aides publiques prévues. Je me suis donc abstenue sur ce texte, qui traite une question primordiale pour réduire les dépendances stratégiques de l’Union européenne, mais qui aurait dû intégrer une dimension écologique et sociale beaucoup plus importante.
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            Car les puces électroniques sont aujourd&#39;hui indispensables et omniprésentes (dans nos smartphones, nos appareils électroménagers, dans les trains ou les avions que nous empruntons…), la maîtrise de leur chaîne de production est un enjeu clé de notre souveraineté technologique européenne. Je me suis donc naturellement prononcé en faveur de ce texte qui vise à corriger une trop grande dépendance de l&#39;Union dans ce domaine, en doublant la part des puces fabriquées en Europe pour atteindre 20% en 2030.La proposition aidera les petites et moyennes entreprises à encourager l&#39;innovation dans la conception des semi-conducteurs, et les nouvelles règles établiront un réseau de centres de compétences pour remédier aux pénuries de travailleurs qualifiés. En votant pour ce texte, je soutiens enfin le mécanisme de réponse aux crises et les mesures d&#39;urgence qui incluent la priorisation de l&#39;approvisionnement des produits touchés par les pénuries et la réalisation d&#39;achats communs pour les États membres. J’entends par là soutenir et défendre l’autonomie stratégique européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté en faveur de cet accord de trilogue, qui vise à relancer la production de semi-conducteurs en Europe, avec l’objectif que l’UE concentre au moins 20% de la production mondiale de semi-conducteurs d’ici à 2030. Grâce à ce texte, nous garantirons au secteur des semi-conducteurs un environnement favorable aux investissements, et nous soutiendrons les projets industriels permettant de renforcer nos capacités de production et sécuriser nos approvisionnements. À l’issue des négociations interinstitutionnelles, nous avons obtenu que 3,3 milliards d’euros soient mobilisés pour l’industrie européenne des puces. En cas de crise, la Commission européenne devra évaluer les risques pesant sur la sécurité de nos approvisionnements en semi-conducteurs et prendre les mesures nécessaires pour y faire face (prioriser l’approvisionnement, organiser des achats en commun, etc.)L&#39;adoption de cette législation constitue une avancée majeure pour notre souveraineté industrielle. Elle permettra de réduire notre dépendance vis-à-vis de pays-tiers pour des produits aussi stratégiques. Je me réjouis que cette priorité politique que nous portons avec ma délégation L’Europe Ensemble puisse aujourd’hui trouver une traduction concrète dans l’industrie des semi-conducteurs.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            Ce texte est destiné à renforcer la compétitivité, la résilience et la capacité d’innovation de l’Union européenne face au retard en ce qui concerne ses capacités de production et de recherche dans le domaine des puces de dernières générations. J’ai voté en faveur de cette proposition de règlement.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Ce texte constitue un changement de paradigme en ce qu’il rompt avec la politique ultra-libérale défendue par l’UE. Bien que le texte n’envisage pas de développer des logiciels européens de conception de puces de dernière génération et préfère l’usage de logiciels américains, il permet aux états d’opter pour une politique économique plus interventionniste, nous permettant ainsi de favoriser l’installation et le développement sur le territoire, d’usines ayant vocation à produire des biens stratégiques indispensables à nos industries. J’ai donc voté pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            La crise de la COVID a induit une pénurie mondiale de semi-conducteurs, entraînant en Europe des ruptures d’approvisionnement qui ont impacté de nombreux secteurs industriels. la Commission a donc présenté en février 2022, son projet de règlement sur les semi-conducteurs, pour accroître et développer l’écosystème européen des semi-conducteurs :Cette volonté de l’UE de rattraper le retard européen dans ce domaine critique est louable. Si le texte porte toujours des lacunes, comme l’absence de projet de conception de semis conducteurs européen, ce qui nous laisse toujours dépendant des innovations américaines ou chinoises. Mais ce texte traduit aussi un léger changement de paradigme de l’union, qui abandonne la doctrine ultra-libérale pour laisser place à un peu d’interventionnisme étatique.J’ai donc voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            La crise de la COVID a induit une pénurie mondiale de semi-conducteurs, entraînant en Europe des ruptures d’approvisionnement qui ont impacté de nombreux secteurs industriels. Cela a mis en évidence la dépendance de l’Europe à l’égard d’un nombre limité de fournisseurs, principalement asiatiques, ainsi que sa vulnérabilité face aux restrictions d’exportations imposées par ces pays tiers.L’UE semble vouloir rattraper son retard en ce qui concerne ses capacités de production et dans la recherche des puces de dernière génération en allant jusqu’à parler de « souveraineté industrielle ». Cette proposition représente, malgré ses failles, une inflexion de la logique ultra-libérale défendue jusque-là par l’UE. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté en faveur de ce texte qui permet le retour d’un interventionnisme des États membres dans l’économie, certes encadré, dans le but de favoriser l’installation et le développement sur le territoire, d’usines ayant vocation à produire des biens stratégiques indispensables à nos industries.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b></b> | </header>
+            Les puces électroniques, ou semi-conducteurs, sont des éléments essentiels présent dans les ordinateurs, les smartphones, les voitures, les avions ou encore les panneaux solaires. Dans ce domaine, l’Union Européenne est extrêmement dépendante des importations, ne produisant sur son territoire que 10% de la production mondiale, quasiment monopolisée par Taiwan. Dans une ambition similaire au « Chips Act » américain qui prévoit plus de 75 milliards de dollars de subvention publique et crédit d’impôt afin de relocaliser la production sur le sol américain, le règlement vise à porter à la part de production européenne à 20% en 2030, en développant des nouvelles générations de puces plus économes en énergie via des soutiens publics et une réponse coordonnée à l’échelle européenne en cas de crise d’approvisionnement. Plusieurs dispositions permettent de s’assurer que ces puces seront produites dans le respect des normes environnementales. Malgré l’approche du texte centrée sur la compétitivité, le secteur des semi-conducteur est crucial notamment pour la transition énergétique et nous devons nous donner les moyens de rétablir la souveraineté européenne dans le domaine : j’ai donc voté pour le règlement.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">236050</div>
+            
+            <header><b></b> | </header>
+            
+                <p>Votre proposition, qui vise à soutenir financièrement l’installation d’usines de pointe sur notre territoire, ne parvient pas à corriger la situation préoccupante dans laquelle nous nous trouvons. Vous refusez de garantir pleinement notre souveraineté malgré vos affirmations. Vous refusez de financer le développement de logiciels européens essentiels à la conception des puces du futur. Cette décision nous expose à une possible interdiction d’utilisation par les détenteurs de ces logiciels, comme les États-Unis l’ont récemment fait avec la Chine. De plus, vous accordez aux entreprises étrangères qui s’installent chez nous la copropriété de tous les brevets issus des recherches auxquelles elles participent pour obtenir des subventions sans que leur pays d’origine ne nous offre de réciprocité. C’est un véritable manque de vigilance de votre part.</p>
+            
+                <p>Au lieu de créer un géant européen des semi-conducteurs, à l’image des succès d’Airbus et d’Ariane, votre règlement ne représente qu’une demi-victoire. C’est une occasion manquée que nous devrons accepter en attendant une Europe des nations qui n’aura pas peur de revendiquer sa grandeur. </p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

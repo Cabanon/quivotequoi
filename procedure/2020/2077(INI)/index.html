@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Nouveau plan d’action en faveur d’une économie circulaire</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Nouveau plan d’action en faveur d’une économie circulaire</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(574/691 * 100%)">574</div>
-  
-  
-    <div class="-" style="width: calc(22/691 * 100%)">22</div>
+    <div class="for" style="width: calc(574/691 * 100%)">574</div>
   
   
-    <div class="0" style="width: calc(95/691 * 100%)">95</div>
+    <div class="against" style="width: calc(22/691 * 100%)">22</div>
+  
+  
+    <div class="abstention" style="width: calc(95/691 * 100%)">95</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,17 +88,18 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(78/78 * 100%)">78</div>
+    <div class="for" style="width: calc(78/78 * 100%)">78</div>
   
   
   
 </div>
  
 </section>
-            <a href="/voting/127624">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/127624">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -102,22 +107,7 @@
     
         
         
-            <li>Politiques communautaires</li>
-        
-    
-        
-        
-            <li>Développement durable</li>
-        
-    
-        
-        
             <li>Politique de l&#39;environnement</li>
-        
-    
-        
-        
-            <li>Politique industrielle</li>
         
     
         
@@ -127,151 +117,550 @@
     
         
         
+            <li>Politique industrielle</li>
+        
+    
+        
+        
+            <li>Politiques communautaires</li>
+        
+    
+        
+        
             <li>Matières premières</li>
+        
+    
+        
+        
+            <li>Développement durable</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2077(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0008_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-02-08-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">197521,197503,96740,197500</div>
+                
 
-<section>
+<p>
 
   
       119. souligne 
   
 
   
-      <del>l’importance de la capture, de l’</del>
+      <del>l’importance de la capture, de l</del>
   
 
   
-      <ins>le rôle que peuvent jouer des conditions écologiquement sûres de piégeage, d’</ins>
+      <ins>le rôle que peuvent jouer des conditions écologiquement sûres de piégeage, d</ins>
   
 
   
-      utilisation et 
+      ’utilisation et 
   
 
   
-      <del>du </del>
+      <del>du</del>
   
 
   
-      <ins>de </ins>
+      <ins>de</ins>
   
 
   
-      stockage du 
+       stockage du 
   
 
   
-      <del>dioxyde de carbone </del>
+      <del>dioxyde de carbone</del>
   
 
   
-      <ins>CO </ins>
+      <ins>CO</ins>
   
 
   
-      pour atteindre les objectifs 
+       pour atteindre les objectifs du
   
 
   
-      <del>du </del>
+      <ins>
+2</ins>
   
 
   
-      <ins>du
-2 </ins>
+       pacte vert pour l’Europe
   
 
   
-      pacte vert pour l’
+      <del>, en soutenant l’économie circulaire, l’évolution des systèmes de piégeage</del>
   
 
   
-      <del>Europe, en soutenant l’économie circulaire, l’évolution des systèmes de piégeage du CO et les efforts de lutte contre les
-2 changements climatiques; se déclare favorable à un système intégré de prise en compte du contexte stratégique et d’incitation </del>
+      <ins>; se déclare favorable à un programme d’action intégré visant à favoriser le recours à des mesures écologiquement sûres de piégeage, d’utilisation et de stockage</ins>
   
 
   
-      <ins>Europe; se déclare favorable à un programme d’action intégré </ins>
+       du CO 
   
 
   
-      visant à favoriser le recours à des mesures 
+      <del>et</del>
   
 
   
-      <ins>écologiquement sûres </ins>
+      <ins>pour
+2 réduire</ins>
   
 
   
-      de piégeage, d’utilisation et de stockage du 
+       les 
   
 
   
-      <del>dioxyde de carbone écologiquement sûres qui se traduisent par une réduction nette des émissions de gaz à effet de serre;</del>
+      <del>efforts</del>
   
 
   
-      <ins>CO pour
-2 réduire les émissions de gaz à effet de serre dans l’objectif de neutraliser l’industrie lourde sur le plan climatique lorsqu’il n’existe aucune possibilité directe de réduction des émissions1 bis; réaffirme toutefois que la stratégie de l’Union pour parvenir à un niveau zéro d’émission nette doit donner la priorité à la réduction directe des émissions et aux action permettant de maintenir et de multiplier le    nombre de puits et réservoirs naturels de l’Union2 bis;  ________________  1 bis Résolution du Parlement européen du 15 janvier 2020 sur le Pacte vert pour l’Europe, paragraphe 33.  2 bis Résolution du 14 mars 2019 du Parlement sur le changement climatique – une vision européenne stratégique à long terme pour une économie prospère, moderne, compétitive et neutre pour le climat conformément à l’accord de Paris, paragraphe 13.</ins>
+      <ins>émissions</ins>
+  
+
+  
+       de 
+  
+
+  
+      <del>lutte contre les
+2 changements climatiques; se déclare favorable à un système intégré de prise en compte du contexte stratégique et d’incitation visant à favoriser le recours à des mesures de piégeage, d’utilisation et de stockage du dioxyde de carbone écologiquement sûres qui se traduisent par une réduction nette des émissions de gaz à effet de serre;</del>
+  
+
+  
+      <ins>gaz à effet de serre dans l’objectif de neutraliser l’industrie lourde sur le plan climatique lorsqu’il n’existe aucune possibilité directe de réduction des émissions1 bis; réaffirme toutefois que la stratégie de l’Union pour parvenir à un niveau zéro d’émission nette doit donner la priorité à la réduction directe des émissions et aux action permettant de maintenir et de multiplier le    nombre de puits et réservoirs naturels de l’Union2 bis;  ________________  1 bis Résolution du Parlement européen du 15 janvier 2020 sur le Pacte vert pour l’Europe, paragraphe 33.  2 bis Résolution du 14 mars 2019 du Parlement sur le changement climatique – une vision européenne stratégique à long terme pour une économie prospère, moderne, compétitive et neutre pour le climat conformément à l’accord de Paris, paragraphe 13.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(358/697 * 100%)">358</div>
-  
-  
-    <div class="-" style="width: calc(312/697 * 100%)">312</div>
-  
-  
-    <div class="0" style="width: calc(27/697 * 100%)">27</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/127227">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+      Yannick JADOT (EELV), 
     
+      Manuel BOMPARD (LFI), 
+    
+      David CORMAND (EELV) et 
+    
+      Mounir SATOURI (EELV)
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2077(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0008_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">358</div>
+  <div class="against">312</div>
+  <div class="abstention">27</div>
+</span>
+
   
+    
+    <a href="/voting/127227">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-02-08-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – J’ai soutenu cette initiative qui peut contribuer à remettre en cause la logique du libre-échange mondialisé, ainsi que la concurrence déloyale qui va avec, et de division internationale du travail. Il s’agit aussi d’accompagner favorablement une volonté de sécuriser notre approvisionnement en ressources stratégiques et de transformer une production orientée vers l’usage unique et jetable en une production orientée vers des produits de qualité, dont l’usage est durable, et qui peuvent être valorisés lorsqu’ils sont en fin de vie.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté pour ce texte.Je suis favorable à un changement de paradigme et à une transition vers des productions de biens durables, et non pas à usage unique. L&#39;économie circulaire, c&#39;est aussi rompre avec le dogme de la mondialisation tout en sécurisant notre approvisionnement en ressources stratégiques.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Pour parvenir à une économie plus propre, neutre sur le plan climatique et respecter les engagements pris avec le “Green Deal”, le Parlement européen a établi un plan d’action. Il est nécessaire pour une économie circulaire européenne. Il insiste sur le fait que l&#39;instrument Next Generation EU devrait être utilisé pour stimuler l&#39;économie circulaire et le potentiel de la numérisation. Il propose également de fixer des objectifs spécifiques par secteurs. Ce texte est une première base pour la mise en place de mesures concrètes en faveur du pacte vert. Il est important de veiller à respecter les engagements pris, je me positionne donc en faveur de ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">96952</div>
+            
+            <header><b>Sylvie GUILLAUME</b> | Parti socialiste</header>
+            J’ai voté en faveur de la nouvelle stratégie dans le cadre de l’économie circulaire qui doit nous aider à atteindre les objectifs définis par le pacte vert européen. Ce plan appelle à des objectifs contraignants pour 2030 concernant l’utilisation des matières premières et l’empreinte de la consommation pour couvrir l’ensemble du cycle de vie de chaque catégorie de produit mise sur le marché européen.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            J’ai soutenu avec le RN depuis le mandat précédent cette initiative qui contribue à briser un peu plus la logique de concurrence mondialisée et de division internationale du travail. Il s’agit aussi de sécuriser notre approvisionnement en ressources stratégiques et de transformer une production orientée vers l’usage unique et jetable en une production orientée vers des produits de qualité, dont l’usage est durable, et qui peuvent être valorisés lorsqu’ils sont en fin de vie.
+        </article>
+    
+        <article>
+            <div class="hidden">22858</div>
+            
+            <header><b>Fabienne KELLER</b> | Renaissance</header>
+            Je me réjouis de l’adoption de ce rapport d’initiative à une large majorité qui vient soutenir le plan d’action sur l’économie circulaire proposé par la Commission. De nombreuses priorités de notre délégation Renaissance et du groupe Renew y sont défendues.Nous défendons ainsi des objectifs contraignants pour 2030 afin de réduire notre consommation, notre empreinte matérielle et nos déchets. Nous proposons notamment de réduire de moitié les déchets alimentaires.Le rapport promeut également une série de mesures pour améliorer l’information et la sensibilisation des citoyens et en faire des acteurs de la transition vers une économie circulaire.Par le biais de ce rapport, qui reprend une quinzaine des mesures proposées par la convention citoyenne pour le climat, le Parlement européen affiche une ambition forte en faveur de l’économie circulaire et la transition vers une économie durable.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté pour ce texte sur l’économie circulaire car il vise à transformer notre production orientée vers l’usage unique et le jetable en une production orientée vers des produits de qualité, dont l’usage est durable et qui pourront être valorisés une fois en fin de vie. Le principe de l’économie circulaire contribue à briser la logique de la concurrence mondialisée et de la division internationale du travail.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Il arrive que le Parlement européen propose des textes novateurs et dont la portée peut être bénéfique pour tous. C’est le cas de cette initiative sur l’économie circulaire appelant un nouveau modèle économique, fondé sur la nécessité non seulement de recycler, mais aussi de prévenir la création de déchets et de favoriser le «droit à la réparation».Il y va des écosystèmes comme des êtres humains: leur surexploitation et leur obsolescence programmée en régime de production et d’accumulation capitalistes sont des maux auxquels nous devons trouver des solutions urgentes et justes.La généralisation de l’écoconception (batteries, produits électroniques, emballages, plastique, textile, construction, alimentaire) est une de ces réponses concrètes. Elle devra faire écho à un volontarisme industriel renouvelé, garantissant l’avantage compétitif du modèle, la réciprocité des normes et l’investissement massif dans la formation continue et les droits des travailleurs, en première ligne pour améliorer les savoir-faire.C’est le sens de la planification écologique et sociale qui permettra à tous de mieux vivre dans un environnement respecté.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            Dans le sillage du pacte vert pour l&#39;Europe, présenté par la Commission le 11 décembre 2019, ont été énumérés les grands principes pour une économie circulaire qui réduirait la pression exercée sur les ressources naturelles et mettre un terme à la perte de biodiversité.En effet, la moitié des émissions totales de gaz à effet de serre et plus de 90 % de la perte de biodiversité et du stress hydrique résultent de l&#39;extraction et de la transformation des ressources.Les projections de croissance du PIB et de création d&#39;emplois via l’économie circulaire et la réalisation de ses objectifs devraient également aboutir sur la naissance de nouvelles filières et une profonde transformation de notre tissu industriel. Les industriels français, qui attendent les applications concrètes de ce dossier, se réjouissent de la proposition de la Commission et attendent ce changement de paradigme qu’ils identifient comme une barrière normative qui peut contribuer à briser l’hégémonie industrielle chinoise.Il s’agit aussi d’accompagner une volonté de sécuriser notre approvisionnement en ressources stratégiques et d’orienter la production vers des produits de qualité, durables, et qui peuvent être valoriser lorsqu’ils sont en fin de vie.J’ai donc voté POUR ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport relatif au nouveau plan d’action en faveur de l’économie circulaire. Le texte souligne que ce nouveau plan contribuera à la réduction des émissions de CO2 de l’Union, mais aussi qu’il est susceptible de créer 700 000 emplois. Il formule des préconisations pour renforcer le caractère circulaire de notre économie: meilleure collecte des déchets et création de nouvelles infrastructures de tri, lutte contre la présence de microplastiques dans les textiles, etc.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            Ce rapport répond au nouveau plan d’action présenté par la Commission européenne suite à une situation planétaire alarmante. Le texte rappelle qu’en 2050, nous consommerons comme s’il y avait trois planètes Terre. Étant donné que nos ressources naturelles sont limitées et que notre climat est en train de changer, il est impératif de faire évoluer notre modèle de société actuelle en visant une économie circulaire. D’autant plus qu’aujourd’hui, l’Europe se trouve en pleine reprise après une crise sanitaire et économique sans précédent, qui a révélé la fragilité de nos ressources et de nos chaînes de valeur. C’est un moment opportun pour nous attaquer aux obstacles qui empêchent les solutions circulaires de réussir. Non seulement il s’avère qu’une économie circulaire réduirait considérablement les émissions de CO2 de l’UE, mais elle stimulerait également la croissance économique et créerait les emplois dont l’Europe a besoin pour se redresser. Les estimations montrent que le PAEC 2.0 pourrait créer 700 000 emplois dans l’ensemble de l’Union d’ici à 2030 et que la croissance du PIB de l’UE augmenterait de 0,5 %. Malgré quelques points à surveiller notamment sur le devoir de diligence ou la charge de la preuve, j’ai voté en faveur de ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter la position du Parlement européen en réaction à la présentation par la Commission d’un nouveau plan d’action pour l’économie circulaire. Il appelle notamment à inventer de nouveaux modèles économiques respectant les limites des ressources planétaires, insiste sur la nécessité de prévenir la création de déchets et demande à la Commission de proposer des objectifs contraignants de réduction de l’empreinte écologique de consommation de l’Union. J’ai donc voté pour ce texte qui rappelle la nécessité de changer radicalement nos manières de produire et consommer pour répondre à l’urgence climatique et à la crise de la biodiversité.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            La crise écologique interroge l’ensemble de notre mode de production, de consommation et d’échange. Ce dernier repose sur une surexploitation des écosystèmes et des êtres humains et engendre une surproduction de déchets faisant de notre civilisation une civilisation du déchet selon de nombreux auteurs. L’économie circulaire peut être porteuse d’une profonde mise à jour de notre système. Au plus immédiat, elle se propose de résoudre la question de nos montagnes de déchet. Plus largement, elle interroge notre mode de consommation et pose des questions relatives à la définition de ce que devraient être nos besoins nécessaires et désirables. Bien évidemment, transformer notre mode de consommation ne peut pas se faire sans transformer radicalement nos procès de productions industriels en vue de faire des biens plus durables. Réponse au plan présenté l’année dernière par la Commission, ce rapport appelle à un nouveau modèle économique respectant les neuf limites planétaires, ce qui est conforme avec la proposition de la France insoumise d’instaurer une règle verte. Ce rapport insiste également sur la nécessité non seulement de recycler mais surtout de prévenir la création de déchets, et demande la reconnaissance effective du droit à la réparation. Je soutiens donc sans hésitation ce rapport!
+        </article>
+    
+        <article>
+            <div class="hidden">197589</div>
+            
+            <header><b>Laurence FARRENG</b> | Mouvement Démocrate</header>
+            Par ce rapport d&#39;initiative, en amont de la présentation par la Commission européenne de la future législation sur l&#39;économie circulaire, le Parlement européen fait part de sa position: si on souhaite réussir le Green Deal, il faut réduire notre impact sur les ressources et réduire notre volume de déchets.J&#39;ai voté en faveur de ce rapport qui contient des demandes de mesures concrètes et rapides: des objectifs contraignants en matière de recyclage des déchets, des mesures de lutte contre l&#39;obsolescence programmée et les pratiques dites de &quot;greenwashing&quot; ou encore des mesures pour réduire l&#39;impact environnemental des produits que nous utilisons au quotidien.Nous serons bien évidemment attentifs à la future proposition de la Commission, présentée dans quelques mois, qui devra intégrer ces points cruciaux.
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            Changer la manière dont nous produisons et nous consommons est indispensable afin que l’Union européenne puisse atteindre ses objectifs climatiques et environnementaux. C’est pourquoi j’ai voté en faveur du rapport sur le plan d’action de l’UE pour l’économie circulaire. L’objectif derrière ce texte ambitieux est de mettre en place une règlementation européenne efficace pour aboutir à une économie pleinement circulaire, neutre en carbone et non toxique d’ici 2050. J’ai notamment apporté mon soutien pour la mise en place d’objectifs contraignants pour l’utilisation efficace des matières premières, ainsi que pour le recyclage de certains produits.J’ai particulièrement soutenu les dispositions de ce texte appelant à la mise en place d’une législation européenne ambitieuse pour le recyclage des batteries, prenant en compte l’intégralité du cycle de vie de ces produits ayant un rôle important dans le secteur des transports et pour le stockage de l’énergie. Rompre avec le mode de production en silo afin d’assurer une meilleure circularité dans l’utilisation de nos ressources est un objectif ambitieux que je défends également à travers mon rapport sur l’intégration des systèmes énergétiques.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Le RN a soutenu, et ce depuis le mandat précédent, cette initiative qui peut contribuer à briser un peu plus la logique de concurrence mondialisée et de division internationale du travail. Il s’agit aussi d’accompagner favorablement une volonté de sécuriser notre approvisionnement en ressources stratégiques et de transformer une production orientée vers un usage unique et jetable en une production orientée vers des produits de qualité, dont l’usage est durable, et qui peuvent être valorisés lorsqu’ils sont en fin de vie.Pour.
+        </article>
+    
+        <article>
+            <div class="hidden">197536</div>
+            
+            <header><b>Nathalie COLIN-OESTERLÉ</b> | Les centristes</header>
+            J’ai voté en faveur du rapport sur le nouveau plan d’action pour l’économie circulaire qui a pour objectif d’accélérer le changement transformationnel requis par le &quot;Green Deal&quot; européen et parvenir ainsi à une économie plus propre, neutre sur le plan climatique, efficace sur le plan des ressources et compétitive. Il est étroitement lié à de nombreuses autres stratégies de l&#39;UE comme celle pour l&#39;industrie, les produits chimiques, les énergies propres ou encore la loi sur le climat.Le présent rapport souligne les avantages de l&#39;économie circulaire notamment en matière d&#39;environnement, d&#39;emploi et de croissance. Il insiste également sur le fait que l&#39;instrument Next Generation EU devrait être utilisée pour stimuler l&#39;économie circulaire et le potentiel de la numérisation. Enfin, il souligne l&#39;importance des communautés locales et régionales pour assurer son succès.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport sur le nouveau plan d’action en faveur de l’économie circulaire. L’économie circulaire est un enjeu essentiel de la transition écologique. Elle doit nous permettre, notamment grâce au recyclage ou à l’écoconception, d’économiser nos ressources primaires. Pour cela, elle nécessite un marché des matières premières secondaires suffisamment développé, avec une réelle demande. C’est pourquoi je soutiens l’ambition de ce rapport qui demande des incitants pour développer ce marché, ainsi que la mise en place de contenus recyclés minimaux spécifiques à chaque produit. Avec un potentiel de 1,2 à 3 millions de nouveaux emplois créés d’ici 2030, l’économie circulaire est également un levier important pour la compétitivité et l’économie européenne. Enfin, le rôle des consommateurs est essentiel et je soutiens l’ambition de ce rapport quant au développement des informations sur les produits, leur conception, leur réparabilité ou encore leur empreinte sociale et environnementale.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté pour ce rapport car cette initiative, soutenue par le RN depuis le mandat précédent, peut contribuer à briser un peu plus la logique de concurrence mondialisée et de division internationale du travail. Il s’agit aussi d’accompagner favorablement une volonté de sécuriser notre approvisionnement en ressources stratégiques et de transformer une production orientée vers un usage unique et jetable en une production orientée vers des produits de qualité, dont l’usage est durable, et qui peuvent être valorisés lorsqu’ils sont en fin de vie.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            Je soutiens, ainsi que mes collègues depuis le mandat précédent, cette initiative qui peut contribuer à briser un peu plus la logique de concurrence mondialisée et de division internationale du travail. Il s’agit également d’accompagner favorablement une volonté de sécuriser notre approvisionnement en ressources stratégiques et de transformer une production orientée vers le l’usage unique et jetable en une production orientée vers des produits de qualité, dont l’usage est durable, et qui peuvent être valorisés lorsqu’ils sont en fin de vie. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            Je soutiens cette initiative, car le développement de l&#39;économie circulaire peut contribuer à rompre avec la logique de concurrence mondialisée et de division internationale du travail. L&#39;économie circulaire nous permettra aussi de mieux sécuriser notre approvisionnement en ressources stratégiques et de transformer une production orientée vers l’usage unique et jetable en une production durable et de qualité.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – L’idée de ce dossier est que nous vivons aujourd’hui dans un monde fini et qu’il comporte des limites en termes de ressources, il faut donc accélérer la valorisation de la chaîne de production. Le RN a soutenu cette initiative depuis le mandat précédent. Elle peut contribuer à briser un peu plus la logique de concurrence mondialisée et de division internationale du travail. Il s’agit aussi de sécuriser notre approvisionnement en ressources stratégiques et de transformer une production orientée vers l’usage unique et jetable en une production orientée vers des produits de qualité, dont l’usage est durable, et qui peuvent être valorisés lorsqu’ils sont en fin de vie. J’ai donc voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Dans le sillage du pacte vert pour l&#39;Europe, présenté par la Commission von der Leyen le 11 décembre 2019, ont été énumérés les grands principes pour une économie circulaire qui réduirait la pression exercée sur les ressources naturelles et constituerait une condition préalable indispensable pour atteindre l&#39;objectif de neutralité climatique à l&#39;horizon 2050 et mettre un terme à la perte de biodiversité. En effet, la moitié des émissions totales de gaz à effet de serre et plus de 90 % de la perte de biodiversité et du stress hydrique résultent de l&#39;extraction et de la transformation des ressources. Ce nouveau plan d’action, qui sera piloté par la Commission, prévoit de laisser les États membres largement à la manœuvre via les plans nationaux (comme la PAC). L’idée sous-jacente de ce dossier est que nous vivons aujourd’hui dans un monde fini et qu’il comporte des limites en termes de ressources, il faut donc accélérer la valorisation de la chaîne de production (en préemptant par exemple les ressources grâce au recyclage). Ce plan peut, à terme, comporter deux vertus pour la France, d’abord la création de filières et ensuite redynamiser le tissu industriel français existant. J’ai donc voté pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Dans le sillage du pacte vert pour l&#39;Europe, ont été énumérés les grands principes pour une économie circulaire. Ces principes sont une condition indispensable pour atteindre l&#39;objectif de neutralité climatique à l&#39;horizon 2050 et mettre un terme à la perte de biodiversité. Ce nouveau plan d’action, qui sera piloté par la Commission, prévoit néanmoins de laisser les États membres largement à la manœuvre, notamment via la PAC. L’idée de ce dossier est que nous vivons aujourd’hui dans un monde fini et qu’il comporte des limites en termes de ressources, il faut donc accélérer la valorisation de la chaîne de production. Le RN a soutenu cette initiative depuis le mandat précédent. Elle peut contribuer à briser un peu plus la logique de concurrence mondialisée et de division internationale du travail. Il s’agit aussi de sécuriser notre approvisionnement en ressources stratégiques et de transformer une production orientée vers l’usage unique et jetable en une production orientée vers des produits de qualité, dont l’usage est durable, et qui peuvent être valorisés lorsqu’ils sont en fin de vie.J’ai donc voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            L’économie circulaire constitue une condition préalable indispensable pour atteindre l&#39;objectif de neutralité climatique et mettre un terme à la réelle et inquiétante perte de biodiversité. Ce nouveau plan d’action, qui sera piloté par la Commission, prévoit néanmoins de laisser les États membres largement à la manœuvre via les plans nationaux. L’idée qui traverse ce dossier est que le monde limité en termes de ressources dans lequel nous vivons commande d’accélérer la valorisation de la chaîne de production (en préemptant par exemple les ressources grâce au recyclage). Ce plan peut, à terme, comporter deux vertus pour la France, d’abord la création de filières et ensuite redynamiser le tissu industriel français existant. Le RN a soutenu cette initiative qui peut contribuer à briser un peu plus la logique de concurrence mondialisée et de division internationale du travail. Il s’agit aussi d’accompagner favorablement une volonté de sécuriser notre approvisionnement en ressources stratégiques et de transformer une production orientée vers l’usage unique et jetable en une production orientée vers des produits de qualité, dont l’usage est durable, et qui peuvent être valorisés lorsqu’ils sont en fin de vie. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté en faveur de ce plan d’action en faveur de l’économie circulaire. En effet, la moitié des émissions totales de gaz à effet de serre et plus de 90 % de la perte de biodiversité résultent de l&#39;extraction et de la transformation des ressources.Il est donc important de réduire la pression exercée sur les ressources naturelles en recyclant les matériaux et en valorisant les produits lorsqu’ils sont en fin de vie.Cette économie circulaire est surtout de nature à créer des emplois en France en créant de nouvelles filières et en transformant notre tissu industriel.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            
+                <p>Le nouveau plan d’action pour l’économie circulaire s’inscrit bien dans cette démarche. À ce titre, il irait dans le bon sens si l’on admet sous certaines réserves que 50 % des émissions de gaz à effet de serre et 90 % de la perte de la biodiversité résultent de l’extraction et de la transformation des ressources de la planète.</p>
+            
+                <p>Ce dossier particulièrement important présente pourtant un double aspect. Le premier, parfaitement recevable, envisage de recycler quasi à l’infini nos ressources minérales et particulièrement énergétiques, nos ressources végétales nourricières et régulatrices de CO2, et même nos ressources animales, dans le respect dû aux animaux. C’est une démarche immédiatement gagnante, si nous participons tous au renversement d’attitude de 50 ans de consommation aveugle et effrénée. À moyen terme, c’est une grande opportunité de réorienter et de réimplanter nos industries en bout de modèle pour créer des filières plus locales et de très nombreux emplois.</p>
+            
+                <p>Mais il y a une phase plus inquiétante, celle, déjà contraignante, du bucolique </p>
+            
+                <p>Parce qu’un produit recyclé coûte moins cher à la production comme à la vente, on finit par persuader les consommateurs aux salaires toujours aussi bas et précaires qu’ils gardent un pouvoir d’achat. Cela est un vrai danger. C’est une grande partie de notre avenir qui se joue sur ce dossier, que nous voterons tout en en dénonçant les dérives potentielles. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            
+                <p> – Madame la Présidente, Monsieur le Commissaire, la transition vers l’économie circulaire, c’est potentiellement entre 1,2 et 3 millions de nouveaux emplois créés d’ici 2030!</p>
+            
+                <p>Industries de la chimie, PME spécialisées dans le recyclage ou la maintenance, la liste des acteurs impliqués est très longue. </p>
+            
+                <p>Pour que l’économie circulaire fonctionne, elle nécessite un marché. Ce marché, c’est celui des matières premières recyclées. Plus concrètement, c’est permettre qu’un fabricant de bouteilles plastiques utilise du plastique recyclé plutôt que du plastique issu directement du pétrole.</p>
+            
+                <p>Or, la réalité c’est qu’il n’y a pas assez de demande actuellement sur le marché pour les matières premières secondaires produites à partir de déchets. À nous donc de développer cela en stimulant cette demande, ce qui peut notamment être fait de deux façons. </p>
+            
+                <p>D’abord, en introduisant des contenus recyclés obligatoires dans certains produits. Cela créera automatiquement une augmentation de la demande et donc des débouchés pour les matières premières recyclées.</p>
+            
+                <p>Ensuite, en orientant les choix des consommateurs au travers de labels clairs et explicites sur la conception et la recyclabilité de ce qu’ils achètent. Ainsi, ils feront évoluer le marché.</p>
+            
+                <p>N’en déplaise à certains, l’économie de marché peut être une formidable opportunité pour réussir la transition écologique.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">204420</div>
+            
+            <header><b>Claude GRUFFAT</b> | Les Écologistes</header>
+            
+                <p>C’est pourquoi, à côté de l’approche industrielle, il est essentiel de sensibiliser le secteur agricole et alimentaire à cette problématique, avec en ligne de mire la réduction au strict minimum de sa dette envers la nature.</p>
+            
+                <p>Dans ce plan d’action en faveur de l’économie circulaire, la Commission ouvre des portes bienvenues aux alternatives à un modèle agricole productiviste toujours dominant, trop gourmand en ressources naturelles, peu vertueux pour le climat et destructeur d’emplois. Meilleur contrôle des intrants, réduction de la dépendance en protéines végétales, relocalisation de la production, valorisation des déchets, lutte contre le gaspillage alimentaire, information des consommateurs plus transparente, notamment par l’étiquetage, sont autant d’outils qui aideront à faire entrer enfin l’agriculture dans l’ère de l’économie circulaire. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">204419</div>
+            
+            <header><b>Sandro GOZI</b> | Renaissance</header>
+            
+                <p>Il est essentiel: de renforcer l’autonomie stratégique européenne et de faire de l’Europe un leader mondial dans la transition verte; de faire des investissements, y compris dans la R&amp;D, dans les produits et services durables; d’avoir le droit de réparer; de mieux informer les consommateurs, notamment à travers un étiquetage harmonisé; de favoriser l’adoption par les marchés publiques de produits écologiques et innovants; d’en finir avec les pratiques entrainant une obsolescence programmée; de garantir un choix plus large et meilleur, ainsi que de garantir la protection des consommateurs pour tous les citoyens européens. Après tout, il ne peut y avoir d’économie circulaire sans nouveaux droits pour les citoyens. C’est là le sens le plus profond de notre engagement.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

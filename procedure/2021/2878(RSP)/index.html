@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Résolution sur la situation au Liban</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Résolution sur la situation au Liban</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(575/685 * 100%)">575</div>
-  
-  
-    <div class="-" style="width: calc(71/685 * 100%)">71</div>
+    <div class="for" style="width: calc(575/685 * 100%)">575</div>
   
   
-    <div class="0" style="width: calc(39/685 * 100%)">39</div>
+    <div class="against" style="width: calc(71/685 * 100%)">71</div>
+  
+  
+    <div class="abstention" style="width: calc(39/685 * 100%)">39</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,30 +88,26 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(50/79 * 100%)">50</div>
+    <div class="for" style="width: calc(50/79 * 100%)">50</div>
   
   
-    <div class="-" style="width: calc(23/79 * 100%)">23</div>
+    <div class="against" style="width: calc(23/79 * 100%)">23</div>
   
   
-    <div class="0" style="width: calc(6/79 * 100%)">6</div>
+    <div class="abstention" style="width: calc(6/79 * 100%)">6</div>
   
 </div>
  
 </section>
-            <a href="/voting/135752">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/135752">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Situation politique des pays-tiers, conflits régionaux et locaux</li>
-        
     
         
         
@@ -121,313 +121,444 @@
     
         
         
+            <li>Situation politique des pays-tiers, conflits régionaux et locaux</li>
+        
+    
+        
+        
             <li>Politique étrangère et de sécurité commune (PESC)</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2878(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/RC-9-2021-0465_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-09-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
-
-  
-      13. invite le SEAE, en coopération avec les États membres, à proposer une liste des autorités responsables au Liban; demande le recours à des sanctions ciblées, conformément au cadre adopté par le Conseil le 30 juillet 2021, à l’encontre de toutes les personnalités ou organisations qui remplissent les critères dudit 
-  
+<p>
 
   
-      <del>cadre;</del>
+      13. invite le SEAE, en coopération avec les États membres, à proposer une liste des autorités responsables au Liban; demande le recours à des sanctions ciblées, conformément au cadre adopté par le Conseil le 30 juillet 2021, à l’encontre de toutes les personnalités ou organisations qui remplissent les critères dudit cadre
   
 
   
-      <ins>cadre, si celles-ci devaient continuer de faire obstruction à la lutte contre la corruption et aux réformes nécessaires pour surmonter la crise grave que traverse le pays;</ins>
+      <ins>, si celles-ci devaient continuer de faire obstruction à la lutte contre la corruption et aux réformes nécessaires pour surmonter la crise grave que traverse le pays</ins>
   
 
   
-       souligne que l’introduction de sanctions ciblées pour entraver ou affaiblir le processus politique démocratique reste une option qui pourrait être activée si les acteurs responsables au Liban continuaient à bloquer la réforme et la lutte contre la corruption; invite tous les États membres de l’Union, sans exception, à coopérer pleinement aux nouvelles sanctions ciblées de l’Union à l’encontre des dirigeants corrompus et des responsables des atteintes à la démocratie et à l’état de droit ainsi qu’à leurs affiliés au Liban, et à renforcer ces 
+      ; souligne que l’introduction de sanctions ciblées pour entraver ou affaiblir le processus politique démocratique reste une option qui pourrait être activée si les acteurs responsables au Liban continuaient à bloquer la réforme et la lutte contre la corruption; invite tous les États membres de l’Union, sans exception, à coopérer pleinement aux nouvelles sanctions ciblées de l’Union à l’encontre des dirigeants corrompus et des responsables des atteintes à la démocratie et à l’état de droit ainsi qu’à leurs affiliés au Liban, et à renforcer ces sanctions
   
 
   
-      <del>sanctions;</del>
+      <ins>, une fois que l’Union aura établi que les conditions ont été réunies pour mettre en œuvre de nouvelles   sanctions ciblées</ins>
   
 
   
-      <ins>sanctions, une fois que l’Union aura établi que les conditions ont été réunies pour mettre en œuvre de nouvelles   sanctions ciblées;</ins>
+      ; invite instamment le SEAE et le Conseil à affecter d’urgence des ressources suffisantes au développement effectif du nouveau mécanisme; engage les États membres de l’Union et leurs partenaires, tels que le Royaume-Uni et la Suisse, à coopérer à la lutte contre le
   
 
   
-       invite instamment le SEAE et le Conseil à affecter d’urgence des ressources suffisantes au développement effectif du nouveau mécanisme; engage les États membres de l’Union et leurs partenaires, tels que le Royaume-Uni et la Suisse, à coopérer à la lutte contre le 
+      <del>   </del>
   
 
   
-      <del>  </del>
+      <ins> </ins>
   
 
   
       détournement présumé d’argent public par un certain nombre de fonctionnaires libanais; suggère aux États membres d’engager des poursuites judiciaires dans le cadre de leur juridiction à l’encontre des propriétaires de capitaux acquis illicitement et détenus sur leur territoire et à promouvoir les efforts en vue de la restitution des fonds illégaux à la population libanaise;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">204</div>
+  <div class="against">435</div>
+  <div class="abstention">49</div>
+</span>
+
+  
+    
+    <a href="/voting/135605">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(204/688 * 100%)">204</div>
-  
-  
-    <div class="-" style="width: calc(435/688 * 100%)">435</div>
-  
-  
-    <div class="0" style="width: calc(49/688 * 100%)">49</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135605">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       <ins>8 bis. demande aux États membres de faire preuve d&#39;un engagement bien plus ferme en faveur du partage des responsabilités, en donnant la possibilité aux réfugiés de trouver une protection au- delà de la région directement voisine grâce à des programmes de réinstallation et d&#39;accueil humanitaire, à une simplification du regroupement familial et à des réglementations plus souples en matière de visas;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">283</div>
+  <div class="against">394</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/135602">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(283/687 * 100%)">283</div>
-  
-  
-    <div class="-" style="width: calc(394/687 * 100%)">394</div>
-  
-  
-    <div class="0" style="width: calc(10/687 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135602">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>O bis. considérant que l’article 534 du code pénal libanais est toujours employé pour poursuivre les personnes LGBTI et les arrêter; que, dans certaines parties du pays, les hommes soupçonnés d’avoir des relations homosexuelles sont régulièrement arrêtés et soumis à des traitements dégradants dans les postes de police;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">548</div>
+  <div class="against">53</div>
+  <div class="abstention">87</div>
+</span>
+
+  
+    
+    <a href="/voting/135607">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(548/688 * 100%)">548</div>
-  
-  
-    <div class="-" style="width: calc(53/688 * 100%)">53</div>
-  
-  
-    <div class="0" style="width: calc(87/688 * 100%)">87</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135607">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       S. considérant que la neutralité du Liban est la clé de sa stabilité à l’avenir; considérant qu’un Liban stable, pleinement souverain, uni et démocratique revêt une importance cruciale pour la stabilité, la sécurité et le développement pacifique de l’ensemble du Moyen-Orient; que le tout nouveau gouvernement et ses ministres doivent demeurer politiquement indépendants et résister à toute ingérence extérieure, que ce soit de pays du voisinage libanais ou plus lointains; que l’ingérence extérieure nuit au développement et à la stabilité du Liban; que 
   
 
   
-      <del>le Hezbollah contrôle toujours des ministères importants du gouvernement libanais; que plusieurs États membres de l’Union ont inscrit le Hezbollah sur la liste des organisations terroristes; que le Hezbollah a fait montre à de nombreuses reprises de sa forte allégeance idéologique vis-à-vis de l’Iran, ce qui déstabilise le gouvernement libanais et ébranle la cohésion dont il a tant besoin;</del>
+      <del>le Hezbollah contrôle toujours des ministères importants du gouvernement libanais; que plusieurs États membres de l’Union ont inscrit le Hezbollah sur la liste des organisations terroristes; que le Hezbollah a fait montre à de nombreuses reprises de sa forte allégeance idéologique vis-à-vis de l’Iran, ce qui déstabilise le gouvernement libanais et ébranle la cohésion dont il a tant besoin</del>
   
 
   
-      <ins>l’Union européenne a inscrit la branche militaire du Hezbollah sur la liste des organisations terroristes;</ins>
+      <ins>l’Union européenne a inscrit la branche militaire du Hezbollah sur la liste des organisations terroristes</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">228</div>
+  <div class="against">414</div>
+  <div class="abstention">44</div>
+</span>
+
+  
+    
+    <a href="/voting/135608">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(228/686 * 100%)">228</div>
-  
-  
-    <div class="-" style="width: calc(414/686 * 100%)">414</div>
-  
-  
-    <div class="0" style="width: calc(44/686 * 100%)">44</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135608">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
-
-  
-      10. met en avant la responsabilité particulière du Hezbollah et d’autres factions dans la répression du mouvement populaire libanais de 2019 et dans la crise politique et économique du Liban; 
-  
+<p>
 
   
-      <ins>se déclare vivement préoccupé par les informations faisant état de violations généralisées des droits de l’homme par les forces de sécurité dans le contexte des manifestations, y compris le recours excessif à la violence et des tirs à balles réelles au cours des manifestations, ainsi que la détention arbitraire de militants et de journalistes; </ins>
+      10. met en avant la responsabilité particulière du Hezbollah et d’autres factions dans la répression du mouvement populaire libanais de 2019 et dans la crise politique et économique du Liban;
   
 
   
-      demande à toute puissance extérieure de s’abstenir de toute immixtion dans les affaires du Liban et demande que la souveraineté et l’indépendance politique du pays soient respectées; invite instamment l’ensemble des factions politiques au sein du gouvernement à mettre un terme au sectarisme et à mettre en œuvre les réformes au service de tous les habitants du Liban, sans discrimination religieuse ou ethnique;
+      <ins> se déclare vivement préoccupé par les informations faisant état de violations généralisées des droits de l’homme par les forces de sécurité dans le contexte des manifestations, y compris le recours excessif à la violence et des tirs à balles réelles au cours des manifestations, ainsi que la détention arbitraire de militants et de journalistes;</ins>
+  
+
+  
+       demande à toute puissance extérieure de s’abstenir de toute immixtion dans les affaires du Liban et demande que la souveraineté et l’indépendance politique du pays soient respectées; invite instamment l’ensemble des factions politiques au sein du gouvernement à mettre un terme au sectarisme et à mettre en œuvre les réformes au service de tous les habitants du Liban, sans discrimination religieuse ou ethnique;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">273</div>
+  <div class="against">371</div>
+  <div class="abstention">44</div>
+</span>
+
+  
+    
+    <a href="/voting/135603">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(273/688 * 100%)">273</div>
-  
-  
-    <div class="-" style="width: calc(371/688 * 100%)">371</div>
-  
-  
-    <div class="0" style="width: calc(44/688 * 100%)">44</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135603">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       11. se déclare vivement préoccupé par l’absence persistante de progrès sur la voie de l’instauration d’un cessez-le-feu permanent et de la mise en œuvre d’autres dispositions essentielles de la résolution 1701 (2006) du Conseil de sécurité de l’ONU, compte tenu des récentes tensions qui persistent le long de la frontière sud du Liban; réaffirme son ferme soutien à l’intégrité territoriale, à la souveraineté et à l’indépendance politique du Liban, conformément à la récente résolution 2591 (2021) du Conseil de sécurité des Nations unies; rappelle la position de l’Union européenne, à savoir que les résolutions pertinentes 1559 (2005) et 1701 (2006) du Conseil de sécurité de l’ONU doivent être pleinement respectées;
@@ -437,96 +568,235 @@
       <ins> demande dès lors qu’Israël se retire immédiatement et sans condition des fermes de Cheeba;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">56</div>
+  <div class="against">511</div>
+  <div class="abstention">121</div>
+</span>
+
+  
+    
+    <a href="/voting/135604">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(56/688 * 100%)">56</div>
-  
-  
-    <div class="-" style="width: calc(511/688 * 100%)">511</div>
-  
-  
-    <div class="0" style="width: calc(121/688 * 100%)">121</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135604">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>17 bis. demande l’abrogation de l’article 534 du code pénal libanais et la cessation de toutes les formes de violences et de persécutions légales et institutionnelles à l’encontre des personnes LGBTI; appelle de ses vœux l’abolition des autres lois discriminatoires, dont celles privant les réfugiés palestiniens des mêmes droits que les autres résidents étrangers;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(440/687 * 100%)">440</div>
-  
-  
-    <div class="-" style="width: calc(190/687 * 100%)">190</div>
-  
-  
-    <div class="0" style="width: calc(57/687 * 100%)">57</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135606">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2878(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/RC-9-2021-0465_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">440</div>
+  <div class="against">190</div>
+  <div class="abstention">57</div>
+</span>
+
   
+    
+    <a href="/voting/135606">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-09-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce texte.Je regrette que cette résolution, qui aborde un certain nombre de points pertinents, mette l&#39;accent sur la menace de sanctions européennes ciblées.D&#39;une manière générale, je suis favorable à un soutien européen à ce pays, notamment à ses forces armées.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce texte exhorte les autorités libanaises à respecter le calendrier électoral de 2022 et les engagements internationaux en matière de réformes. Il appelle également à la libération de l’aide humanitaire acheminée par l’intermédiaire d’ONG et d’un groupe de travail humanitaire international soutenu par l’ONU. Il propose au Liban le déploiement d’une mission administrative consultative et d’une mission d’enquête indépendante sur l’explosion du port de Beyrouth. Je me suis donc positionné en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Derrière une générosité de façade, ce texte aborde en réalité une situation complexe de manière simpliste et partisane, tout en parvenant à l’exploit de parler du Liban sans mentionner une seule fois les chrétiens. Ce document estime que la menace de sanctions est efficace en politique étrangère. Ce qui ne concorde pas avec la nécessaire solidarité qu’il serait utile d’afficher avec le peuple libanais qui affronte de nombreux défis intérieurs. J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre cette résolution, car elle se sert une fois de plus de la menace de sanctions comme d’un outil de politique étrangère, alors qu’elle est inefficace. De plus, le texte est mensonger lorsqu’il prétend que le fardeau des réfugiés au Liban est de l’entière responsabilité du gouvernement syrien.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution sur la situation au Liban. Le texte prend acte de la récente formation d’un gouvernement après 13 mois d’impasse politique. Il demande à l’Union européenne de proposer au Liban de déployer une mission de conseil administratif intégral de l’Union afin d’appuyer l’administration du pays. Enfin, il invite la Commission et les États membres à débloquer une aide humanitaire supplémentaire, compte tenu des conditions dramatiques sur le terrain, en particulier une aide alimentaire et du matériel hospitalier et pharmaceutique, et à fournir des ressources énergétiques.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Cette résolution présente l’analyse du Parlement européen sur la situation politique et sociale du Liban un an après l’explosion du port de Beyrouth. Elle demande à raison une enquête indépendante sur ce drame, invite la Commission et les États membres à débloquer une aide humanitaire supplémentaire et appelle à intensifier la lutte contre la corruption. Elle insiste en revanche sur la nécessité pour le Liban d’appliquer les recommandations du FMI en matière d’austérité et de libéralisation. Je me suis donc abstenue sur ce texte qui présente des constats que je partage, mais défend un agenda néolibéral qui va à l’encontre des intérêts du peuple libanais.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Le Liban est un pays ami et frère de la France. Nos liens avec le peuple libanais sont profonds et anciens. Depuis plus d’un an, le Liban connaît une situation sociale, sanitaire et économique dramatique. L’explosion d’août 2020 au port de Beyrouth, dix fois plus puissante que celle ayant eu lieu à l’usine AZF de Toulouse en septembre 2001, a jeté le pays dans le chaos, nous rappelant à tous les risques qui menacent constamment nos vies lorsque la puissance publique est démantelée. Car c’est bien de cela dont il s’agit, la puissance publique libanaise n’est presque plus qu’une fiction entre les mains d’une classe politique corrompue. En effet, avant l’explosion, une révolution citoyenne était en cours au Liban, issue des mobilisations contre la hausse des prix de l’essence, du tabac et du tarif des communications via l’application WhatsApp. Cette résolution revient en détails sur la situation libanaise et se félicite de la formation d’un nouveau gouvernement. Malheureusement elle appelle à une coopération très étroite avec le FMI pour mener une série de réformes structurelles... Le peuple libanais souffre déjà assez sans devoir lui rajouter le fléau des cures du FMI. Pour cette raison je préfère m’abstenir sur cette résolution.
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            Après avoir obtenu la tenue d’un débat en plénière, je me félicite de l’adoption, par 575 voix, de la résolution sur la situation au Liban. Elle vient en soutien au peuple libanais qui souffre depuis trop longtemps, avec l’explosion du port de Beyrouth ou encore aujourd’hui avec une pénurie d’essence ou même d’électricité. 85 % de la population vit sous le seuil de pauvreté, il est temps que cela cesse.Par cette résolution, que j’ai portée au nom de mon groupe Renew Europe, nous envoyons donc un message fort: nous ne laissons pas tomber les Libanais face à un désastre créé par l’homme. Le rétablissement des services publics et la lutte contre la corruption doivent être la priorité absolue.À travers cette résolution, nous insistons sur le respect de l’obligation de rendre des comptes, sur le maintien d’élections libres et équitables et sur la fourniture de services publics de base, qui doivent l’emporter sur toute considération personnelle au sein de la classe politique libanaise.Nous appelons aussi à l’action sur les sanctions, en demandant à tous les États membres de l’UE, ainsi qu’au Royaume-Uni et à la Suisse, de travailler ensemble et d’inscrire sur la liste des sanctions de l’UE les noms des politiciens corrompus de haut niveau, qui font obstacle à l’enquête sur l’explosion du port de Beyrouth.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Cette résolution aborde de nombreux points intéressants au sujet du Liban mais néglige la désignation d’un nouveau gouvernement et continue d’être obsédée.Contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Nous aurions aimé pouvoir soutenir cette résolution dans une optique de témoignage de notre solidarité avec le peuple libanais qui affronte de nombreux défis intérieurs (crise économique et politique) et extérieur.Si la résolution souligne régulièrement des éléments essentiels de la résolution de la crise au Liban, comme la lutte contre la corruption et la nécessité d’une refondation du pacte civique libanais, elle tombe dans plusieurs écueils.Elle s’accroche par exemple à l’idée que la menace de sanctions est un outil efficace de politique étrangère. C’est tout l’inverse qui est vrai et qui est en plus à contre temps, puisque les États-Unis viennent par exemple de renoncer à une partie des sanctions contre la Syrie pour relancer l’approvisionnement en gaz du pays du Cèdre.Derrière une générosité de façade, la résolution embrasse une situation complexe avec des idées simplistes, extrêmement partisanes. J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            Si la résolution souligne régulièrement des éléments essentiels de la résolution de la crise au Liban, comme la lutte contre la corruption et la nécessité d’une refondation du pacte civique libanais, elle tombe dans plusieurs écueils. D’abord elle s’accroche à l’idée que la menace de sanctions est un outil efficace de politique étrangère. C’est tout l’inverse qui est vrai et qui est en plus à contre temps, puisque les États-Unis viennent par exemple de s’asseoir sur une partie des sanctions contre la Syrie pour relancer l’approvisionnement en gaz du pays du Cèdre. Ensuite, la résolution est absolument mensongère quant au fardeau des réfugiés syriens présents au Liban, et prétend que leur présence serait due à l’attitude de Damas quand c’est bien la communauté internationale qui est responsable de cette situation.Derrière une générosité de façade, la résolution embrasse en réalité une situation complexe avec des idées simplistes, extrêmement partisanes et parvient à l’exploit de parler du Liban sans mentionner une seule fois le terme chrétien.J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Le 4 août 2020, l’explosion de stocks de nitrates, réputés stockés par le Hezbollah, dans le port de Beyrouth, choquait l’opinion publique internationale. La violence de l’onde de choc, qui a ravagé de nombreux quartiers chrétiens, et l’irrationalité d’un tel entrepôt soulevèrent les consciences et provoquèrent la démission du gouvernement libanais.Le Liban souffre d’une terrible crise économique. Ses causes sont multiples: dollarisation de l’économie, dépendance aux transferts de la diaspora, corruption de l’État.Si la résolution souligne régulièrement des éléments essentiels comme la lutte contre la corruption et la nécessité d’une refondation du pacte civique libanais, elle tombe dans plusieurs écueils.D’abord elle s’accroche à l’idée que la menace de sanctions est un outil efficace de politique étrangère. Ensuite, la résolution est absolument mensongère quant au fardeau des réfugiés syriens présents au Liban, et prétend que leur présence serait due à l’attitude de Damas quand c’est bien la communauté internationale qui est responsable de cette situation.Derrière une générosité de façade, la résolution embrasse en réalité une situation complexe avec des idées simplistes, extrêmement partisanes et parvient à l’exploit de parler du Liban sans mentionner une seule fois la communauté chrétienne.J’ai donc voté contre.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            
+                <p>Je me réjouis de la formation du nouveau gouvernement libanais et, devant mes pairs, j’appelle de mes vœux ses représentants à faire preuve d’écoute et de respect à l’égard de leur peuple. Je me réjouis aussi de la résolution que nous préparons ensemble pour améliorer les conditions de vie des Libanais, pour mettre fin aux actes de corruption, aux ingérences étrangères, pour relancer le pays ou encore l’aider à trouver une solution durable pour le million de réfugiés présents sur son territoire. Je suis certain que l’Europe saura faire passer le bon message aux autorités libanaises avec le soutien indispensable de toutes les instances nationales et européennes. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197511</div>
+            
+            <header><b>Salima YENBOU</b> | Les Écologistes</header>
+            
+                <p>Il y a deux semaines, un représentant du SEAE nous avouait en commission parlementaire AFET que la discussion sur les noms des personnes à sanctionner n’avait même pas encore eu lieu. Mais quand est-ce qu’une décision sur cette liste de noms va être prise? Quand va-t-on sanctionner les responsables de l’explosion à Beyrouth en août 2020? Et ces dirigeants qui ont perdu le sens du peuple, ces élites qui se sont enrichies sur le dos du pays et ces détenteurs des biens mal acquis, ces fortunes dues à la corruption, aux magouilles et aux enrichissements personnels? Tout cet argent volé qui dort en grande partie en Europe: quand va-t-il être gelé et rendu au peuple libanais?</p>
+            
+                <p>Monsieur Borrell, les Libanaises et les Libanais nous le demandent régulièrement avec insistance: quand est-ce que l’Union européenne va enfin utiliser ce régime de sanctions? J’en ai assez de devoir leur répondre que nous ne savons pas, qu’il faut encore attendre. J’ai honte de notre lenteur à réagir, à nous coordonner. Je pense surtout aux 80 % de Libanaises et Libanais qui n’ont rien à manger, pas d’électricité ni d’eau potable et qui réclament seulement la justice et la reconstruction de leur pays. L’Union européenne doit accélérer le rythme de ses actions.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">204418</div>
+            
+            <header><b>Nora MEBAREK</b> | Parti socialiste</header>
+            
+                <p> – Madame la Présidente, Monsieur le Haut représentant, chers collègues, j’étais à Beyrouth la semaine dernière et chaque jour, le Liban s’effondre au risque de disparaître. La situation au Liban est d’une extrême urgence humanitaire, politique et démocratique. La misère grandissante, les menaces internationales, la corruption ont durablement affaibli le pays. La formation d’un nouveau gouvernement après de longs mois d’attente ne doit pas nous abuser, comme l’illustrent les manœuvres de sabotage de l’enquête sur les circonstances de l’explosion du port de Beyrouth.</p>
+            
+                <p>Si nous voulons répondre au désespoir des Libanais, nous devons être d’une exigence extrême, en étant durs avec ces mêmes dirigeants et bienveillants avec la population. Cette exigence doit s’exercer avec des sanctions individuelles sur les responsables corrompus, l’obligation d’un encadrement extérieur des futures élections et la mise en place d’une autorité internationale indépendante, qui veillera à la bonne utilisation des aides accordées au Liban.</p>
+            
+                <p>Nous ne laisserons pas tomber le peuple libanais. C’est ce que nous devons au Liban et à l’Union européenne.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">204419</div>
+            
+            <header><b>Sandro GOZI</b> | Renaissance</header>
+            
+                <p> – Madame la Présidente, depuis vendredi, le Liban a un gouvernement. Ce petit pas était l’une des conditions pour l’octroi d’aide internationale, mais nous devons être très prudents; ce n’est pas parce que le Liban a un gouvernement que l’Union européenne doit s’empêcher de sanctionner certains de ses dirigeants corrompus et coupables de la non-stabilité du pays. Notre politique de sanctions à l’égard des dirigeants libanais, même avec un gouvernement, doit être mise en œuvre ces prochaines semaines avec le vote d’une première liste de noms, puisque nous avons désormais un cadre politique et juridique très clair, voté en juillet dernier.</p>
+            
+                <p>Nous attendons aussi que ce nouveau gouvernement garantisse la tenue, le bon déroulement et la transparence des élections en 2022, avec pour horizon les législatives du 8 mai, suivies par les municipales et la présidentielle. Mes chers collègues, pour les Libanais, nous, les Européens, nous devons être au rendez-vous.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

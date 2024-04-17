@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Extension de la liste des infractions de l&#39;UE aux discours de haine et aux crimes de haine</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Extension de la liste des infractions de l&#39;UE aux discours de haine et aux crimes de haine</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(397/544 * 100%)">397</div>
-  
-  
-    <div class="-" style="width: calc(121/544 * 100%)">121</div>
+    <div class="for" style="width: calc(397/544 * 100%)">397</div>
   
   
-    <div class="0" style="width: calc(26/544 * 100%)">26</div>
+    <div class="against" style="width: calc(121/544 * 100%)">121</div>
+  
+  
+    <div class="abstention" style="width: calc(26/544 * 100%)">26</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,25 +88,31 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(40/63 * 100%)">40</div>
+    <div class="for" style="width: calc(40/63 * 100%)">40</div>
   
   
-    <div class="-" style="width: calc(16/63 * 100%)">16</div>
+    <div class="against" style="width: calc(16/63 * 100%)">16</div>
   
   
-    <div class="0" style="width: calc(7/63 * 100%)">7</div>
+    <div class="abstention" style="width: calc(7/63 * 100%)">7</div>
   
 </div>
  
 </section>
-            <a href="/voting/162202">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/162202">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
+    
+        
+        
+            <li>Lutte contre la criminalité</li>
+        
     
         
         
@@ -114,99 +124,246 @@
             <li>Coopération policière, judiciaire et douanière en général</li>
         
     
-        
-        
-            <li>Lutte contre la criminalité</li>
-        
+</ul>
+
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/2068(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0377_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-01-18-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>🗃️ Données</h3>
 
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,124693,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,124693">🇫🇷 Renaissance</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197626,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197626,197629,197615">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      G. considérant qu’au cours des dernières décennies, la discrimination, les crimes de haine et les discours de haine ont fortement augmenté dans l’ensemble de l’Union7, que diverses formes de racisme, d’antisémitisme, d’islamophobie, de xénophobie, d’homophobie, de transphobie et d’autres manifestations d’intolérance ont augmenté et qu’un pic alarmant de discours et d’incitations à la haine en ligne et hors ligne a été observé; que les personnes appartenant à des groupes vulnérables, telles que les personnes LGBTIQ+, les personnes racialisées, les minorités ethniques, religieuses ou linguistiques, les communautés autochtones8,9, les personnes handicapées, les personnes issues de milieux socio-économiques défavorisés, les demandeurs d’asile, les réfugiés et les migrants, sont régulièrement la cible de discours de haine et de crimes de haine; que 
-  
+<p>
 
   
-      <ins>ces groupes vulnérables se heurtent à des obstacles plus importants lorsqu’il s’agit de signaler des crimes motivés par la haine; que le refus de remédier au manque de confiance des victimes de crimes motivés par la haine à l’égard des services répressifs et du système judiciaire est un facteur important expliquant le sous-signalement; que doter les autorités compétentes d’une formation appropriée, notamment des compétences non techniques nécessaires pour écouter    attentivement, comprendre et respecter les victimes de discours de haine et de crimes motivés par la haine, peut contribuer à lutter contre le sous-signalement et la revictimisation et instaurer un environnement plus sûr pour les victimes; que </ins>
+      G. considérant qu’au cours des dernières décennies, la discrimination, les crimes de haine et les discours de haine ont fortement augmenté dans l’ensemble de l’Union7, que diverses formes de racisme, d’antisémitisme, d’islamophobie, de xénophobie, d’homophobie, de transphobie et d’autres manifestations d’intolérance ont augmenté et qu’un pic alarmant de discours et d’incitations à la haine en ligne et hors ligne a été observé; que les personnes appartenant à des groupes vulnérables, telles que les personnes LGBTIQ+, les personnes racialisées, les minorités ethniques, religieuses ou linguistiques, les communautés autochtones8,9, les personnes handicapées, les personnes issues de milieux socio-économiques défavorisés, les demandeurs d’asile, les réfugiés et les migrants, sont régulièrement la cible de discours de haine et de crimes de haine;
   
 
   
-      les crimes de haine et les discours de haine à l’encontre des personnes LGBTIQ ont connu une forte augmentation en Europe10, tout comme la discrimination et la haine envers les femmes; que la discrimination multiple et intersectionnelle est un terrain fertile pour les discours et les crimes de haine; que les cibles des discours de haine sont de plus en plus exclues de la société;  
+      <ins> que ces groupes vulnérables se heurtent à des obstacles plus importants lorsqu’il s’agit de signaler des crimes motivés par la haine; que le refus de remédier au manque de confiance des victimes de crimes motivés par la haine à l’égard des services répressifs et du système judiciaire est un facteur important expliquant le sous-signalement; que doter les autorités compétentes d’une formation appropriée, notamment des compétences non techniques nécessaires pour écouter    attentivement, comprendre et respecter les victimes de discours de haine et de crimes motivés par la haine, peut contribuer à lutter contre le sous-signalement et la revictimisation et instaurer un environnement plus sûr pour les victimes;</ins>
   
 
   
-      <del>                     </del>
+       que les crimes de haine et les discours de haine à l’encontre des personnes LGBTIQ ont connu une forte augmentation en Europe10, tout comme la discrimination et la haine envers les femmes; que la discrimination multiple et intersectionnelle est un terrain fertile pour les discours et les crimes de haine; que les cibles des discours de haine sont de plus en plus exclues de la société
+  
+
+  
+      <del>;                       </del>
+  
+
+  
+      <ins>;  </ins>
   
 
   
       _________________  7 Voir, par exemple, le rapport annuel sur les activités de l’ECRI couvrant la période allant du 1er janvier au 31 décembre 2019 et le rapport annuel sur les activités de l’ECRI couvrant la période allant du 1er janvier au 31 décembre 2020, ainsi que l’étude commandée par le département thématique des droits des citoyens et des affaires constitutionnelles du Parlement européen intitulée «Hate speech and hate crime in the EU and the evaluation of online content regulation approaches» (Discours de haine et crimes de haine dans l’Union et évaluation des approches en matière de réglementation des contenus en ligne), publiée en juillet 2020.  8 Lingaas, C., ‘Hate Speech and Racialised Discrimination of the Norwegian Sámi:Legal Responses and Responsibility’ (Discours de haine et discrimination racialisée des Samis norvégiens: réponses juridiques et responsabilité), Oslo Law Review, vol. 8, n° 2, 2021, p. 88 à 107.  9 Civil Rights Defenders, ‘Joint submission to the UN Universal Periodic Review of Sweden –35th Session of the UPR Working Group of the Human Rights Council – January 2020’ (Soumission conjointe à l’examen périodique universel des Nations unies sur la Suède –    35e session du groupe de travail de l’EPU du Conseil des droits de l’homme – janvier 2020), 2019.  10 ILGA-Europe, ‘2023 Annual Review of the Human Rights Situation of Lesbian, Gay, Bisexual, Trans and Intersex People in Europe and Central Asia’ (Examen annuel 2023 de la situation des droits de l’homme des personnes lesbiennes, gays, bisexuelles, transgenres et intersexuées en Europe et en Asie centrale), février 2023.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°2 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>11 bis. souligne que la Commission a contrôlé la transposition de la décision- cadre dans les systèmes juridiques des États membres et que des problèmes persistent quant à sa transposition et à sa mise en œuvre correctes; relève, à cet égard, que les discours de haine et les crimes de haine dirigés contre les groupes minoritaires, en particulier le seul peuple autochtone reconnu de l’Europe, les Samis, ainsi que le manque de respect des droits spécifiques des peuples autochtones et le manque de connaissance de la nature et des expressions spécifiques des crimes de haine visant ce groupe, les placent dans une situation encore plus vulnérable1 bis; invite les États membres concernés à remédier d’urgence aux lacunes de la législation nationale criminalisant les discours de haine et les crimes de haine sur la base de la décision- cadre et à redoubler d’efforts pour enquêter comme il se doit sur les crimes motivés par la haine visant les minorités et les peuples autochtones et pour engager les poursuites qui s’y rapportent;  _________________  1 bis Perry, B., ‘Hate crime: contexts and consequences’ (Crimes de haine: contextes et conséquences), dans Minority Rights Group International, State of the    World Minorities and Indigenous Peoples 2014 (Situation des minorités et des peuples autochtones dans le monde en 2014), Minority Rights Group International, Londres, juillet 2014.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°3 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       13. rappelle que les pouvoirs publics ont une responsabilité en matière de prévention, d’enquête, de poursuite et de signalement à l’égard des discours de haine et des crimes de haine et qu’ils doivent tenir compte des faits témoignant d’une haine dans ce cadre; souligne que la future législation de l’Union devrait soutenir et promouvoir une coopération étroite avec la société civile, les organismes de promotion de l’égalité et les institutions nationales de défense des droits de l’homme;
@@ -216,420 +373,521 @@
       <ins> invite, à cet égard, la Commission et les États membres à introduire l’obligation, pour les autorités compétentes en matière de détection, d’enquête, de poursuite et de jugement des infractions pénales dans l’ensemble de l’Union européenne, de tenir dûment compte des faits qui témoignent de préjugés, de haine ou de motifs discriminatoires à l’origine d’une infraction pénale, y compris lorsque cette infraction est commise par des autorités et des fonctionnaires publics;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°4 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. fait observer que la classification des discours de haine et des crimes de haine relève de la compétence nationale des États membres et rappelle que la liberté d’expression ne peut être restreinte que par les organes législatifs nationaux; souligne que l’absence de définition précise et objective du «discours de haine» pourrait entraîner des restrictions disproportionnées et injustifiées; souligne que le «discours de haine» est une notion très subjective, qui pourrait être exploitée pour limiter la liberté d’expression, principe fondamental de nos démocraties;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">119</div>
+  <div class="against">414</div>
+  <div class="abstention">18</div>
+</span>
+
+  
+    
+    <a href="/voting/163431">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(119/551 * 100%)">119</div>
-  
-  
-    <div class="-" style="width: calc(414/551 * 100%)">414</div>
-  
-  
-    <div class="0" style="width: calc(18/551 * 100%)">18</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/163431">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>– vu l’opinion divergente du 10 février 2022 des membres de la commission des affaires juridiques du Parlement finlandais sur la communication de la Commission intitulée «Une Europe plus inclusive et plus protectrice: extension de la liste des infractions de l’UE aux discours de haine et aux crimes de haine»1 bis,  _________________  1 bis Opinion divergente des membres Tynkkynen, Meri, Laukkanen et Vallin vp du 10 février 2022 de la commission des affaires juridiques du Parlement finlandais sur la communication de la Commission intitulée «Une Europe plus inclusive et plus protectrice: extension de la liste des infractions de l’UE aux discours de haine et aux crimes de haine».</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
+    
+    ECR
     
     
-    <article>
-    <header>📝 Amendement n°6 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>M bis. considérant que la proposition visant à ajouter les discours de haine et les crimes de haine à la liste des infractions de l’UE modifierait le champ d’application des dispositions des traités de l’Union en élargissant la compétence pénale de l’Union; qu’il n’existe pas de définition précise de ce qui constitue un discours de haine et un crime de haine; que cette approche s’écarte de la compétence de l’Union en ce qui concerne la coopération judiciaire en matière pénale, qui est étroitement définie et mise en œuvre dans le cadre d’une coopération officielle conformément au principe de reconnaissance mutuelle;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">119</div>
+  <div class="against">421</div>
+  <div class="abstention">6</div>
+</span>
+
+  
+    
+    <a href="/voting/163440">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(119/546 * 100%)">119</div>
-  
-  
-    <div class="-" style="width: calc(421/546 * 100%)">421</div>
-  
-  
-    <div class="0" style="width: calc(6/546 * 100%)">6</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/163440">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. constate qu’il n’existe pas de définition précise du «discours de haine»; déplore que, dans la société d’aujourd’hui, toutes les expressions qui ne sont pas conformes aux valeurs ou aux objectifs du destinataire soient qualifiées de «discours de haine»; est préoccupé par le fait que cette façon de faire risque d’affaiblir encore davantage la liberté d’expression; regrette que la communication de la Commission ne reconnaisse pas le risque que représentent les restrictions à la liberté d’expression en ce qui concerne l’autocensure; estime que la liberté d’expression est l’un des fondements essentiels de la démocratie et de la civilisation occidentale;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">124</div>
+  <div class="against">415</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/163432">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(124/550 * 100%)">124</div>
-  
-  
-    <div class="-" style="width: calc(415/550 * 100%)">415</div>
-  
-  
-    <div class="0" style="width: calc(11/550 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/163432">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 ter. relève que les crimes de haine sont considérés exclusivement comme des crimes commis contre différents groupes minoritaires; déplore que la communication de la Commission n’ait pas tenu compte des membres des groupes majoritaires qui sont victimes de crimes de haine commis par les personnes appartenant à des minorités; estime qu’une telle perspective unilatérale des crimes de haine est contraire au principe d’égalité et de liberté d’expression inscrit dans les constitutions de nombreux États membres;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">124</div>
+  <div class="against">429</div>
+  <div class="abstention">7</div>
+</span>
+
+  
+    
+    <a href="/voting/163433">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(124/560 * 100%)">124</div>
-  
-  
-    <div class="-" style="width: calc(429/560 * 100%)">429</div>
-  
-  
-    <div class="0" style="width: calc(7/560 * 100%)">7</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/163433">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>9 bis. rappelle que la liberté de pensée, de conscience et de religion est une valeur fondamentale des sociétés démocratiques, consacrée à l’article 10 de la charte, et ne devrait pas être restreinte de manière injustifiée; rappelle en outre que toute législation sur les discours de haine et les crimes de haine devrait être fondée sur les principes de nécessité et de proportionnalité;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">133</div>
+  <div class="against">414</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/163438">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(133/557 * 100%)">133</div>
-  
-  
-    <div class="-" style="width: calc(414/557 * 100%)">414</div>
-  
-  
-    <div class="0" style="width: calc(10/557 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/163438">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       7. 
   
 
   
-      <del>recommande de modifier </del>
+      <del>recommande de modifier</del>
   
 
   
-      <ins>rappelle que la modification de </ins>
+      <ins>rappelle que la modification de</ins>
   
 
   
-      l’article 83 du traité FUE 
+       l’article 83 du traité FUE 
   
 
   
-      <del>afin qu’il soit soumis à une majorité qualifiée renforcée plutôt qu’à l’unanimité actuellement requise; demande que la «clause passerelle» soit activée à cet égard;</del>
+      <del>afin qu’il soit soumis à une majorité qualifiée renforcée plutôt qu’à l’unanimité actuellement requise; demande que la «clause passerelle» soit activée à cet égard</del>
   
 
   
-      <ins>requiert l’unanimité au Conseil; demande, par conséquent, un débat équilibré et approfondi afin de prendre en considération toutes les conséquences possibles de la criminalisation des discours de haine, notamment son incidence sur la liberté d’expression;</ins>
+      <ins>requiert l’unanimité au Conseil; demande, par conséquent, un débat équilibré et approfondi afin de prendre en considération toutes les conséquences possibles de la criminalisation des discours de haine, notamment son incidence sur la liberté d’expression</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">136</div>
+  <div class="against">396</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    
+    <a href="/voting/163434">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(136/541 * 100%)">136</div>
-  
-  
-    <div class="-" style="width: calc(396/541 * 100%)">396</div>
-  
-  
-    <div class="0" style="width: calc(9/541 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/163434">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       10. rappelle que la liberté d’expression est une valeur fondamentale des sociétés démocratiques et ne devrait pas être 
   
 
   
-      <del>limitée de manière injustifiée; rappelle en outre que toute législation sur les discours de haine et les crimes de haine devrait être fondée sur les principes de nécessité et de proportionnalité; souligne que la liberté d’expression doit s’exercer dans le cadre de la loi et conformément à l’article 11 de la charte et ne devrait pas être exploitée pour cautionner les discours de haine et les crimes de haine;</del>
+      <del>limitée de manière injustifiée; rappelle en outre que toute législation sur les discours de haine et les crimes de haine devrait être fondée sur les principes de nécessité et de proportionnalité; souligne que la liberté d’expression doit s’exercer dans</del>
   
 
   
-      <ins>exploitée pour se livrer à des discours de haine ni pour commettre des crimes de haine; souligne toutefois que l’absence de définition précise et objective du «discours de haine» pourrait entraîner des restrictions disproportionnées et injustifiées; souligne que le discours de haine est une notion très subjective et qu’il pourrait donc être exploité pour limiter la liberté d’expression, qui est fondamentale pour nos démocraties;</ins>
+      <ins>exploitée pour se livrer à des discours de haine ni pour commettre des crimes de haine; souligne toutefois que l’absence de définition précise et objective du «discours de haine» pourrait entraîner des restrictions disproportionnées et injustifiées; souligne que</ins>
+  
+
+  
+       le 
+  
+
+  
+      <del>cadre</del>
+  
+
+  
+      <ins>discours</ins>
+  
+
+  
+       de 
+  
+
+  
+      <del>la loi et conformément à l’article 11 de la charte et ne devrait pas</del>
+  
+
+  
+      <ins>haine est une notion très subjective et qu’il pourrait donc</ins>
+  
+
+  
+       être 
+  
+
+  
+      <del>exploitée</del>
+  
+
+  
+      <ins>exploité</ins>
+  
+
+  
+       pour 
+  
+
+  
+      <del>cautionner les discours de haine et les crimes de haine</del>
+  
+
+  
+      <ins>limiter la liberté d’expression, qui est fondamentale pour nos démocraties</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(117/542 * 100%)">117</div>
-  
-  
-    <div class="-" style="width: calc(415/542 * 100%)">415</div>
-  
-  
-    <div class="0" style="width: calc(10/542 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/163439">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    ID
+    (🇫🇷 : Rassemblement national)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/2068(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0377_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">117</div>
+  <div class="against">415</div>
+  <div class="abstention">10</div>
+</span>
+
   
+    
+    <a href="/voting/163439">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-01-18-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

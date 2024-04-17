@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Banque centrale européenne - rapport annuel 2022</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Banque centrale européenne - rapport annuel 2022</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(376/507 * 100%)">376</div>
-  
-  
-    <div class="-" style="width: calc(96/507 * 100%)">96</div>
+    <div class="for" style="width: calc(376/507 * 100%)">376</div>
   
   
-    <div class="0" style="width: calc(35/507 * 100%)">35</div>
+    <div class="against" style="width: calc(96/507 * 100%)">96</div>
+  
+  
+    <div class="abstention" style="width: calc(35/507 * 100%)">35</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,30 +88,26 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(42/61 * 100%)">42</div>
+    <div class="for" style="width: calc(42/61 * 100%)">42</div>
   
   
-    <div class="-" style="width: calc(13/61 * 100%)">13</div>
+    <div class="against" style="width: calc(13/61 * 100%)">13</div>
   
   
-    <div class="0" style="width: calc(6/61 * 100%)">6</div>
+    <div class="abstention" style="width: calc(6/61 * 100%)">6</div>
   
 </div>
  
 </section>
-            <a href="/voting/152523">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/152523">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Union monétaire</li>
-        
     
         
         
@@ -119,33 +119,158 @@
             <li>Système économique et monétaire</li>
         
     
+        
+        
+            <li>Union monétaire</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2037(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0022_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-02-16-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                            <option value="RE,197511">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197683,197629,197615">🇫🇷 Reconquête!</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
-
-  
-      15. prend acte des récentes décisions de politique monétaire de la BCE visant à relever les taux de 50 points de base en juillet, de 75 points de base en septembre, de 75 points de base en 
-  
+<p>
 
   
-      <del>novembre et de </del>
+      15. prend acte des récentes décisions de politique monétaire de la BCE visant à relever les taux de 50 points de base en juillet, de 75 points de base en septembre, de 75 points de base en novembre
   
 
   
-      <ins>novembre, de 50 points de base en janvier 2023; </ins>
+      <del> et de </del>
+  
+
+  
+      <ins>, de 50 points de base en janvier 2023; </ins>
   
 
   
@@ -153,548 +278,595 @@
   
 
   
-      <del>2,5 </del>
+      <del>2,5</del>
   
 
   
-      <ins>3,0 </ins>
+      <ins>3,0</ins>
   
 
   
-      %; prend acte de la déclaration de la présidente Lagarde selon laquelle la BCE a l’intention de relever davantage encore les taux d’intérêt lors des prochaines réunions jusqu’à ce que l’inflation atteigne son niveau cible; constate que les taux d’intérêt nominaux restent inférieurs au taux neutre;
+       %; prend acte de la déclaration de la présidente Lagarde selon laquelle la BCE a l’intention de relever davantage encore les taux d’intérêt lors des prochaines réunions jusqu’à ce que l’inflation atteigne son niveau cible; constate que les taux d’intérêt nominaux restent inférieurs au taux neutre;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
-    <article>
-    <header>📝 Amendement n°2 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. souligne que les ménages à faibles revenus souffrent le plus des effets de l’inflation actuelle, étant donné qu’ils consacrent la plus grande partie de leurs revenus à des biens essentiels, tels que l’alimentation, l’énergie et le logement; souligne que, selon une analyse de la BCE, une augmentation stylisée de 10 % du coût de la vie (qui n’est pas compensée par la croissance des revenus) se traduirait par une réduction du pouvoir de dépense de plus de 20 % pour les ménages à revenus les plus faibles, contre environ 5 % pour les ménages à revenu intermédiaire;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">194</div>
+  <div class="against">292</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/152768">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(194/497 * 100%)">194</div>
-  
-  
-    <div class="-" style="width: calc(292/497 * 100%)">292</div>
-  
-  
-    <div class="0" style="width: calc(11/497 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/152768">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       5. 
   
 
   
-      <del>reconnaît que la BCE pourrait faire baisser les prix en réduisant fortement la demande globale au moyen de ses instruments de politique monétaire, tout en admettant que cela augmenterait le risque de répercussions négatives sur la croissance et l’emploi;</del>
+      <del>reconnaît que la BCE pourrait faire baisser les prix en réduisant fortement la demande globale au moyen de ses instruments de politique monétaire, tout en admettant que cela augmenterait le risque de répercussions négatives sur la croissance et l’emploi</del>
   
 
   
-      <ins>souligne qu’une politique monétaire restrictive entraîne des conséquences de type récession qui ne peuvent être négligées dans les décisions politiques, et qu’elle peut ainsi: 1) nuire à la croissance et à l’emploi, en particulier pour les plus vulnérables; 2) accroître le risque d’instabilité bancaire en favorisant les défauts de crédit; et 3) détériorer les conditions de financement sur les marchés internationaux, en particulier pour les pays dont le ratio dette/PIB est plus élevé;</ins>
+      <ins>souligne qu’une politique monétaire restrictive entraîne des conséquences de type récession qui ne peuvent être négligées dans les décisions politiques, et qu’elle peut ainsi: 1) nuire à la croissance et à l’emploi, en particulier pour les plus vulnérables; 2) accroître le risque d’instabilité bancaire en favorisant les défauts de crédit; et 3) détériorer les conditions de financement sur les marchés internationaux, en particulier pour les pays dont le ratio dette/PIB est plus élevé</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">130</div>
+  <div class="against">350</div>
+  <div class="abstention">23</div>
+</span>
+
+  
+    
+    <a href="/voting/152769">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(130/503 * 100%)">130</div>
-  
-  
-    <div class="-" style="width: calc(350/503 * 100%)">350</div>
-  
-  
-    <div class="0" style="width: calc(23/503 * 100%)">23</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/152769">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       8. souligne que l’indépendance statutaire de la BCE, telle qu’elle est consacrée dans les traités, est un 
   
 
   
-      <del>préalable indispensable à l’accomplissement de son mandat;</del>
+      <del>préalable indispensable à l’accomplissement de son mandat</del>
   
 
   
-      <ins>obstacle à une politique monétaire démocratique; relève que l’indépendance de la BCE la met à l’abri du contrôle démocratique, tandis que son mandat unique de maintien de la stabilité des prix conduit à un parti pris récurrent en faveur des intérêts des agents du secteur financier; déplore l’absence de révision du mandat de la BCE afin d’inclure un double mandat lui permettant de maintenir la stabilité des prix et de promouvoir le plein emploi, comme dans d’autres zones économiques comparables, telles que les États-Unis;</ins>
+      <ins>obstacle à une politique monétaire démocratique; relève que l’indépendance de la BCE la met à l’abri du contrôle démocratique, tandis que son mandat unique de maintien de la stabilité des prix conduit à un parti pris récurrent en faveur des intérêts des agents du secteur financier; déplore l’absence de révision du mandat de la BCE afin d’inclure un double mandat lui permettant de maintenir la stabilité des prix et de promouvoir le plein emploi, comme dans d’autres zones économiques comparables, telles que les États-Unis</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">38</div>
+  <div class="against">430</div>
+  <div class="abstention">40</div>
+</span>
+
+  
+    
+    <a href="/voting/152770">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(38/508 * 100%)">38</div>
-  
-  
-    <div class="-" style="width: calc(430/508 * 100%)">430</div>
-  
-  
-    <div class="0" style="width: calc(40/508 * 100%)">40</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/152770">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>13 bis. invite la BCE à réévaluer sa politique et à mettre un terme à l’augmentation des taux d’intérêt et au resserrement quantitatif;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">61</div>
+  <div class="against">358</div>
+  <div class="abstention">87</div>
+</span>
+
+  
+    
+    <a href="/voting/152775">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(61/506 * 100%)">61</div>
-  
-  
-    <div class="-" style="width: calc(358/506 * 100%)">358</div>
-  
-  
-    <div class="0" style="width: calc(87/506 * 100%)">87</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/152775">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       16. 
   
 
   
-      <del>note que la BCE dispose d’instruments pour réduire la demande globale afin de ramener l’inflation à son niveau cible à moyen terme; s’inquiète des répercussions de ces décisions politiques sur la croissance et l’emploi, qu’il convient de prendre en compte dans le cadre de l’évaluation de la proportionnalité; invite la BCE à réfléchir à un ajustement plus équilibré et progressif des politiques, compte tenu de l’incertitude élevée; demande de justifier davantage toute décision future sur les taux directeurs;</del>
+      <del>note que la BCE dispose d’instruments pour réduire la demande globale afin de ramener l’inflation à son niveau cible à moyen terme; s’inquiète des répercussions de ces décisions politiques sur la croissance et l’emploi, qu’il convient de prendre en compte dans le cadre de l’évaluation de la proportionnalité; invite la BCE à réfléchir à un ajustement plus équilibré et progressif des politiques, compte tenu de l’incertitude élevée; demande de justifier davantage toute décision future sur les taux directeurs</del>
   
 
   
-      <ins>déplore les dernières décisions de politique monétaire de la BCE du 2 février 2023 visant à relever à nouveau les taux d’intérêt de 50 points de base et à réduire fortement le portefeuille du programme d’achat d’actifs; souligne qu’il s’agit du cinquième relèvement des taux d’intérêt et que l’efficacité de ces décisions s’est révélée être faible, alors que ce relèvement accroît au contraire le risque de récession économique;</ins>
+      <ins>déplore les dernières décisions de politique monétaire de la BCE du 2 février 2023 visant à relever à nouveau les taux d’intérêt de 50 points de base et à réduire fortement le portefeuille du programme d’achat d’actifs; souligne qu’il s’agit du cinquième relèvement des taux d’intérêt et que l’efficacité de ces décisions s’est révélée être faible, alors que ce relèvement accroît au contraire le risque de récession économique</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">70</div>
+  <div class="against">363</div>
+  <div class="abstention">74</div>
+</span>
+
+  
+    
+    <a href="/voting/152776">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(70/507 * 100%)">70</div>
-  
-  
-    <div class="-" style="width: calc(363/507 * 100%)">363</div>
-  
-  
-    <div class="0" style="width: calc(74/507 * 100%)">74</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/152776">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>16 bis. souligne qu’un soutien budgétaire est nécessaire pour atténuer les répercussions économiques et sociales du scénario macroéconomique actuel, c’est- à-dire pour faire face à la hausse des prix de l’énergie et éviter une perte plus importante des salaires réels;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">213</div>
+  <div class="against">227</div>
+  <div class="abstention">66</div>
+</span>
+
+  
+    
+    <a href="/voting/152780">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(213/506 * 100%)">213</div>
-  
-  
-    <div class="-" style="width: calc(227/506 * 100%)">227</div>
-  
-  
-    <div class="0" style="width: calc(66/506 * 100%)">66</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/152780">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>16 ter. s’inquiète des conséquences d’une hausse des taux d’intérêt sur la soutenabilité de la dette dans la zone euro; constate que les écarts de dette publique sont à nouveau en hausse pour les pays de la périphérie méridionale de la zone euro;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">157</div>
+  <div class="against">347</div>
+  <div class="abstention">7</div>
+</span>
+
+  
+    
+    <a href="/voting/152781">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(157/511 * 100%)">157</div>
-  
-  
-    <div class="-" style="width: calc(347/511 * 100%)">347</div>
-  
-  
-    <div class="0" style="width: calc(7/511 * 100%)">7</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/152781">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>19 bis. constate que l’analyse réalisée par la BCE elle-même a montré que c’était l’augmentation des bénéfices, et non des salaires, qui avait été l’un des principaux catalyseurs de la période inflationniste actuelle; rappelle que les salaires réels ont fortement baissé ces derniers mois dans les pays de la zone euro;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">234</div>
+  <div class="against">236</div>
+  <div class="abstention">35</div>
+</span>
+
+  
+    
+    <a href="/voting/152783">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(234/505 * 100%)">234</div>
-  
-  
-    <div class="-" style="width: calc(236/505 * 100%)">236</div>
-  
-  
-    <div class="0" style="width: calc(35/505 * 100%)">35</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/152783">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>9 bis. demande à la Commission et à la BCE de reconnaître que les États membres ne sont pas tous disposés à introduire l’euro;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">133</div>
+  <div class="against">356</div>
+  <div class="abstention">17</div>
+</span>
+
+  
+    
+    <a href="/voting/152771">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(133/506 * 100%)">133</div>
-  
-  
-    <div class="-" style="width: calc(356/506 * 100%)">356</div>
-  
-  
-    <div class="0" style="width: calc(17/506 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/152771">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      36. 
-  
+<p>
 
   
-      <ins>souligne que la réponse à l’urgence climatique et à la dépendance de la zone euro à l’égard des combustibles fossiles relève non seulement du mandat secondaire de la BCE, mais aussi de son mandat primaire, étant donné la menace sérieuse que ces questions font peser sur la stabilité des prix; </ins>
+      36.
   
 
   
-      note que la stabilité des prix et un environnement macroéconomique stable sont nécessaires pour encourager les investissements verts et contribueraient, entre autres, à instaurer les conditions propices à la mise en œuvre de l’accord de Paris; invite la BCE à évaluer dans quelle mesure le changement climatique affecte sa capacité à maintenir la stabilité des prix;
+      <ins> souligne que la réponse à l’urgence climatique et à la dépendance de la zone euro à l’égard des combustibles fossiles relève non seulement du mandat secondaire de la BCE, mais aussi de son mandat primaire, étant donné la menace sérieuse que ces questions font peser sur la stabilité des prix;</ins>
+  
+
+  
+       note que la stabilité des prix et un environnement macroéconomique stable sont nécessaires pour encourager les investissements verts et contribueraient, entre autres, à instaurer les conditions propices à la mise en œuvre de l’accord de Paris; invite la BCE à évaluer dans quelle mesure le changement climatique affecte sa capacité à maintenir la stabilité des prix;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">189</div>
+  <div class="against">312</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(189/506 * 100%)">189</div>
-  
-  
-    <div class="-" style="width: calc(312/506 * 100%)">312</div>
-  
-  
-    <div class="0" style="width: calc(5/506 * 100%)">5</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°12 | 
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       41. prend acte, en outre, de l’annonce de l’écologisation du dispositif de garanties de la BCE, qui contribuera à réduire le risque financier dans son bilan;
@@ -704,29 +876,41 @@
       <ins> regrette toutefois que cela se limite aux instruments émis par des sociétés non financières, qui ne représentent qu’une petite partie des instruments que les banques nantissent en garantie; souligne que l’absence d’exigences en matière de publication d’informations sur le climat pour les obligations garanties dans la législation de l’Union empêche la BCE de poursuivre l’écologisation de son cadre de garanties; invite la BCE à exiger la publication d’informations sur le climat pour les obligations garanties dans son cadre d’éligibilité dans l’attente d’une modification législative;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°13 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="13">
+            <header>📝 Amendement n°13 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       37. rappelle que la BCE, en tant qu’institution européenne, est liée par les engagements que l’Union a pris dans le cadre de l’accord de Paris;
@@ -736,28 +920,195 @@
       <ins> souligne que, pour ce faire, elle doit adopter une approche intégrée dans l’ensemble de ses politiques, décisions et opérations, conformément à son mandat de soutien aux politiques économiques générales de l’Union, en l’occurrence la réalisation d’une économie neutre pour le climat d’ici à 2050, comme le prévoit la loi européenne sur le climat;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2037(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0022_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
   
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-02-16-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Reconquête!</header>
+            . – J’ai voté contre ce rapport, exercice annuel où la Parlement commente la politique monétaire de la BCE pour l’année écoulée. Et donc principalement, cette fois-ci, la lutte contre l’inflation par l’augmentation des taux d’intérêts.Le rapport incite à la «modération salariale» pour éviter toute spirale inflationniste ou, dans un autre registre, manifeste son soutien à l’euro numérique. Il n’y a pas une ligne sur le rôle des emprunts massifs de l’Union européenne elle-même dans l’alimentation de l’inflation. On ne trouve qu’un minimum d’interrogations sur la compatibilité de l’orthodoxie monétaire de la BCE avec les politiques d’investissements encouragées et financées par l’UE (Pacte vert), sans même parler du bien-fondé de ces politiques. La question des paiements en dollars des importations de matières premières et énergétiques, qui fragilise nos économies et renforcent leur coût, est à peine abordée.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté contre ce texte.Le Parlement établit chaque année un bilan de ses recommandations à la BCE, pour l’essentiel, s’agissant de la politique monétaire, de la stabilité financière et de la politique climatique.Cette édition fait état de certaines inquiétudes quant à l’inflation et s’agissant de la future hausse des taux d’intérêt, qui devrait permettre aux banques de faire des bénéfices considérables.Je ne suis pas favorable à la poursuite de la politique de verdissement de la BCE. Par ailleurs, les estimations de la BCE s’agissant de l’inflation se sont révélées erronées par le passé
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Le rapport de cette année ne déroge pas aux fondamentaux et ne dit au final rien de plus que celui de 2021. La continuation du verdissement de la politique de la BCE répond à des objectifs idéologiques auxquels je ne souscris pas. Les prévisions d’inflation présentées dans le rapport sont excessivement optimistes. Il faut en effet rappeler que, jusqu’ici, la BCE a toujours prévu le contraire de ce qui est arrivé au niveau de l’inflation… J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car les prévisions d’inflation présentées par la BCE pour 2024 sont excessivement optimistes et ne reflètent pas la réalité actuelle. De plus, la BCE poursuit le «verdissement» de sa politique, et avec lui des objectifs idéologiques que je ne partage pas.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution sur le rapport annuel 2022 de la Banque centrale européenne. Le texte rappelle que le niveau d’inflation dans la zone euro demeure bien supérieur à l’objectif de 2 % à moyen terme de la BCE. S’il reconnaît clairement l’indépendance statutaire de la Banque centrale, il s’inquiète en revanche du manque de coordination des politiques monétaires entre les principales banques centrales du monde et appelle la BCE à engager un dialogue international avec les autres banques. Enfin, il salue l’adhésion de la Croatie à la zone euro, en tant que vingtième pays membre, depuis janvier 2023.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport présente les observations et les recommandations du Parlement sur l’activité de la banque centrale européenne. Il intervient dans un contexte de forte inflation contre laquelle la BCE a choisi de mettre en place une politique de hausse brutale de ses taux directeurs. Il souligne à raison les limites de cette politique qui n’impactera qu’à la marge la hausse des prix essentiellement liée à des facteurs exogènes (pandémie, guerre en Ukraine) mais risque en revanche d’aggraver la crise économique et de toucher de plein fouet les ménages les plus pauvres. S’il évoque la nécessité de «verdir» la politique monétaire européenne, il ne remet en revanche aucunement en cause les dogmes fondateurs de la BCE en réaffirmant que la stabilité des prix doit rester l’objectif principal de la politique monétaire européenne et que celle-ci doit être indépendante de tout contrôle politique et démocratique. Je me suis donc abstenue sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai voté en faveur du rapport annuel sur les activités de la Banque centrale européenne en 2022. Le rapport évoque notamment le rôle de la Banque centrale européenne dans la sauvegarde de la stabilité de l’euro et de son indépendance statutaire. Il y est également question du niveau d’inflation de la zone euro, qui reste bien supérieur à l’objectif de taux de 2 % à moyen terme de la BCE. Le rapport demande ainsi à la BCE de développer une stratégie de communication crédible soutenue par une action rapide et tangible pour signaler aux citoyens européens que l’inflation diminuera à moyen terme. Enfin, je salue les dispositions du rapport qui évoquent la décision de la BCE d’impliquer Amazon dans le test d’interfaces prototypes pour un euro numérique.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Le rapport promeut plus de fédéralisme budgétaire et fiscal, fait les louanges du verdissement des politiques de la BCE et ne comprend pas de réelle réflexion sur la déconcentration du risque financier dans la zone euro ni de véritables recommandations pour lutter contre l’inflation. J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b></b> | </header>
+            . – Ce texte constitue la réponse du Parlement européen au rapport annuel de la Banque centrale européenne pour 2022. Produit chaque année, il fait partie des quelques instruments à disposition du Parlement pour assurer le suivi de la politique monétaire mise en œuvre par la BCE. Il intervient dans un contexte particulier concernant la politique monétaire, puisque la forte inflation (8,4 % de moyenne en 2022) a amené la BCE à engager une politique de resserrement monétaire, à travers une forte hausse des taux directeurs notamment. Le texte comporte plusieurs éléments positifs, comme la mention des risques de la hausse des taux sur les ménages les plus pauvres et la mise en doute de l’efficacité d’une telle politique pour lutter contre l’inflation. Néanmoins, cela est insuffisant car les grands dogmes de la BCE en sortent confortés. Le texte réaffirme le mandat primaire de stabilité des prix et la hiérarchie entre mandat primaire et mandat secondaire (lutte contre le réchauffement climatique, transparence, égalité femmes-hommes…). Il pose aussi comme principe inaliénable l’indépendance de la BCE et le prétendu «apolitisme» de l’institution, qui doit se contenter de respecter la «neutralité de marché». Je me suis donc abstenue.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            
+                <p> – Madame la présidente, Mesdames, Madame Lagarde, ç’a été dit plusieurs fois ce soir, effectivement: le rôle de la BCE est avant tout d’assurer la stabilité monétaire et de renforcer l’indépendance stratégique de l’Europe. La politique de verdissement idéologique de la BCE, aujourd’hui, au sens où l’entend l’Union européenne, la détourne non seulement de ses objectifs, mais aussi de son rôle.</p>
+            
+                <p>Par contre, notre stabilité monétaire et notre indépendance stratégique passent par le soutien à la filière nucléaire, pierre angulaire sur laquelle la France a bâti sa prospérité. Décarbonée, abondante et abordable, elle doit être le socle de notre réindustrialisation, condition de notre indépendance et de notre compétitivité. C’est l’esprit du plan Biden, lancé au soutien de l’industrie américaine.</p>
+            
+                <p>Que Bruxelles le qualifie de concurrence déloyale prouve qu’elle n’a rien compris aux enjeux politiques, économiques et géopolitiques auxquels nous sommes confrontés. Car c’est bien vers une relocalisation de notre politique énergétique et un patriotisme économique que nous devons nous orienter.</p>
+            
+                <p>Notre souveraineté énergétique nous permettrait alors de protéger nos compatriotes, et particulièrement les plus précaires, contre la hausse des prix des denrées alimentaires, de l’électricité, du gaz, des loyers et du coût de la vie. Parce que, face aux abus de ce monde financiarisé, ce sont eux qui sont sanctionnés, car ce sont eux qui vivent dans l’économie réelle et qui paient le prix fort des dérives de Bruxelles.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197534</div>
+            
+            <header><b>François-Xavier BELLAMY</b> | Les Républicains</header>
+            
+                <p> – Madame la Présidente, Madame la Commissaire, Madame la Présidente de la BCE, je voudrais m’associer aux remerciements de mon collègue Sven Simon et à ceux de tous mes collègues pour vous dire que nous sommes très reconnaissants que vous soyez restée si tard – malgré les difficultés de la journée au sein du Parlement européen – pour cette discussion importante.</p>
+            
+                <p>Vous avez cité Thomas Jefferson, qui disait que «le prix de la liberté, c’est la vigilance éternelle». Vigilance qu’il faut garantir envers les dangers qui ne sont pas encore passés, mais qui sont devant nous. Et l’un d’entre eux – je crois –, c’est celui auquel nous exposent les conséquences de l’insouciance, de long terme, de beaucoup d’États membres de l’Union européenne, qui ont vécu, pendant longtemps, dans un monde presque fictif.</p>
+            
+                <p>«</p>
+            
+                <p>Hier c’était la COVID-19, aujourd’hui c’est la hausse des prix de l’énergie qui fait que les dettes publiques n’ont cessé d’augmenter dans beaucoup de nos pays. Or, nous le voyons, l’inflation – dont vous avez dit à quel point elle est pesante est éprouvante pour beaucoup de ménages européens – oblige la Banque centrale européenne à remonter ses taux d’intérêt.</p>
+            
+                <p>Pour un pays comme le mien, la France – un pays comme le nôtre, même, Madame la Présidente –, chaque point d’augmentation des taux d’intérêt représente, à moyen terme, 20 milliards d’euros de dépenses supplémentaires sur cinq ans et 40 milliards d’euros sur dix ans. Chaque point d’augmentation!</p>
+            
+                <p>Et vous l’avez dit: malheureusement, cela pourrait ne pas suffire à faire baisser l’inflation. Nous risquons de nous trouver dans une situation terrible: nos États n’auraient plus les moyens d’intervenir sur le plan social, en étant confrontés à cette asphyxie que créerait une nouvelle crise de la dette.</p>
+            
+                <p>Alors, Madame la Présidente, je n’ai qu’une seule question à vous poser: craignez-vous, vous aussi, une nouvelle crise de la dette? Et ne croyez-vous pas qu’il est temps de revenir à cette autre maxime bien connue de Thomas Jefferson: «Ne dépensez pas votre argent avant de l’avoir gagné»?</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197626</div>
+            
+            <header><b>Hervé JUVIN</b> | Rassemblement national</header>
+            
+                <p> – Madame la Présidente, Madame la Commissaire, Madame la Présidente de la BCE, votre courtoisie est renommée. Nous sommes très sensibles au fait que vous ayez la patience de rester avec nous ce soir, et je crois que tous mes collègues s’unissent à moi pour vous saluer.</p>
+            
+                <p>La décision politique majeure que vous avez prise avec le verdissement de la politique monétaire de la BCE appelle de ma part deux questions, notamment en cette période de forte inquiétude quant au maintien du pouvoir d’achat.</p>
+            
+                <p>La première question porte sur sa légitimité: ne conviendrait-il pas d’envisager une nouvelle négociation et une extension de votre mandat pour légitimer ce verdissement de la politique monétaire, avec ses conséquences?</p>
+            
+                <p>Parce que ma seconde question porte sur l’inquiétude de nombreux économistes, qui considèrent que la préférence irrationnelle et exorbitante pour les énergies renouvelables aura des effets inflationnistes marqués.</p>
+            
+                <p>Serait-ce la raison pour laquelle on évoque de plus en plus un objectif d’inflation glissant de 2 à 4 ou 5 %? Ne craignez-vous pas les effets inflationnistes du verdissement forcé de votre politique monétaire?</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197697</div>
+            
+            <header><b>Aurore LALUCQ</b> | Place publique</header>
+            
+                <p> – Madame la Présidente, Madame la Commissaire, Madame la Présidente Lagarde, cher rapporteur, bravo pour le travail que vous avez réalisé!</p>
+            
+                <p>Mme Schnabel, du directoire de la BCE, a déclaré en janvier 2023: «Nous avons besoin d’une meilleure compréhension de la façon dont le dérèglement climatique va agir sur le secteur financier, et vice versa; pour cela, le développement de données de grande qualité sera clé». Ma question est simple: vraiment?</p>
+            
+                <p>Est-ce que nous avons le temps d’attendre? Est-ce que, pour commencer, nous serons capables d’avoir des données de bonne qualité sur des événements que nous ne sommes aujourd’hui pas en mesure d’imaginer? Et est-ce que nous devons attendre pour agir? Comme le disait Keynes, «à long terme, nous serons tous morts». Est-ce que nous ne serons pas tous morts quand nous aurons les bonnes données pour pouvoir agir? Pourquoi ne pas agir tout de suite, notamment sur le prudentiel?</p>
+            
+                <p>On sait que certains établissements bancaires sont extrêmement exposés au risque fossile, risque fossile qui peut engendrer un risque systémique, risque systémique qui peut être évité en augmentant les exigences de fonds propres. Voilà donc ma question, Madame la Présidente Lagarde.</p>
+            
+                <p>Cela dit, je crois que nous pouvons quand même être fiers, en Europe, d’avoir une banque centrale, la banque centrale qui évolue le plus vite dans le domaine environnemental. Certains pays, notamment les États-Unis, n’ont pas cette chance.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">204420</div>
+            
+            <header><b>Claude GRUFFAT</b> | Les Écologistes</header>
+            
+                <p> – Madame la Présidente, Madame la Commissaire, Madame Lagarde, pour beaucoup de citoyens européens et de citoyennes européennes, la BCE est indépendante, elle est à Francfort et on y parle de taux directeurs. Mais depuis la guerre que mène M. Poutine en Ukraine, son rôle est devenu beaucoup plus concret, et notamment sur son choix de relever ces fameux taux.</p>
+            
+                <p>La politique monétaire ne peut rien faire contre la hausse des prix de l’énergie ou du blé. Alors à quoi bon lui donner un tour restrictif? Ce serait un bon choix si la hausse des prix était due à une augmentation de la demande. Mais ce n’est pas le cas dans la zone euro, où nous subissons une inflation de pénurie et payons notre dépendance aux énergies fossiles. Des taux d’intérêt plus élevés ne permettront donc pas de contrer la hausse des prix et ils risquent surtout d’être extrêmement coûteux pour nos économies.</p>
+            
+                <p>J’ai dès lors deux questions: si lutter contre cette inflation, c’est d’abord investir massivement dans des secteurs en tension, réduire nos dépendances et transformer la structure de l’offre et de la demande, en mettant en œuvre des outils pour adapter nos besoins, quelle action la BCE entend-elle mener dans ce sens pour l’année qui vient?</p>
+            
+                <p>Et ma deuxième question: sachant – et je conclus – qu’il sera difficile de ramener l’inflation à 2 %, sauf à provoquer une forte récession et une hausse du chômage, la BCE entend-elle prendre des mesures pour lutter contre cela?</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

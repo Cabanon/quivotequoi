@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>La cohésion économique, sociale et territoriale dans l&#39;UE : le 8e rapport sur la cohésion</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>La cohésion économique, sociale et territoriale dans l&#39;UE : le 8e rapport sur la cohésion</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(448/584 * 100%)">448</div>
-  
-  
-    <div class="-" style="width: calc(61/584 * 100%)">61</div>
+    <div class="for" style="width: calc(448/584 * 100%)">448</div>
   
   
-    <div class="0" style="width: calc(75/584 * 100%)">75</div>
+    <div class="against" style="width: calc(61/584 * 100%)">61</div>
+  
+  
+    <div class="abstention" style="width: calc(75/584 * 100%)">75</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,19 +88,20 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(53/70 * 100%)">53</div>
+    <div class="for" style="width: calc(53/70 * 100%)">53</div>
   
   
   
-    <div class="0" style="width: calc(17/70 * 100%)">17</div>
+    <div class="abstention" style="width: calc(17/70 * 100%)">17</div>
   
 </div>
  
 </section>
-            <a href="/voting/147371">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/147371">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -114,21 +119,335 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2032(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2032(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0210_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-09-15-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-09-15-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,197683,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,197683,197629,197615">🇫🇷 Reconquête!</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            La Commission publie tous les trois ans un rapport sur les résultats et perspectives des politiques de cohésion dans l’UE. Ce 8e rapport met l’accent sur le rattrapage des régions les plus pauvres depuis le dernier paquet programmatique mais également sur la stagnation des régions intermédiaires et les défis à venir en matière de transition écologique et de numérisation. Si l’on peut reconnaitre du positif dans le contenu (s’assurer que les bénéficiaires recevront les fonds, élargir le PIB à des critères sociaux et environnementaux etc.), on ne peut que regretter que rien ne soit dit sur les effets des politiques migratoires, et le flou général du rapport, qui ne permet pas de se rendre compte des effets réels. Je me suis donc abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            . – Ce rapport est un document triennal dressant une évaluation stratégique et programmatique de la Commission. Il rappelle que les transitions écologique et numérique présentent un fort potentiel de croissance pour l’UE, à condition que ces opportunités soient suivies d’actes politiques forts, sinon les États membres pourraient souffrir de disparités économiques, sociales et territoriales. Le texte invite à réfléchir à la manière par laquelle la politique de cohésion pourrait lutter contre ce risque et esquisse une partie de réponse en proposant notamment une réforme de la nomenclature des régions, influant alors sur la distribution du fonds de cohésion. Partageant les orientations et ambitions de ce texte, je me suis prononcé en sa faveur.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Si certains de nos amendements ont été pris en compte, je note que ce rapport ne dit pas un mot sur les conséquences des vagues migratoires, notamment sur les poches de pauvreté, les besoins supplémentaires en services publics, l’identité. D’où mon abstention.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations et les recommandations du Parlement européen sur la politique européenne de cohésion. Il demande notamment une augmentation des fonds de cohésion, une meilleure prise en compte améliorée des enjeux spécifiques des Outre-mer, une prise de conscience des limites du PIB comme indicateur de développement durable et une attention particulière portée à la ruralité. J’ai donc voté pour ce texte qui va dans le sens d’un renforcement des politiques européennes de solidarité en faveur des territoires les plus désavantagés.
+        </article>
+    
+        <article>
+            <div class="hidden">197551</div>
+            
+            <header><b>Stéphane BIJOUX</b> | Renaissance</header>
+            J’ai soutenu ce rapport d’initiative, rédigé suite à la publication du 8e rapport sur la cohésion économique, sociale et territoriale par la Commission européenne, et qui exprime la position du Parlement européen sur l’avenir de la politique de cohésion. Ce texte porte un certain nombre de propositions sur la simplification de l’accès et de la gestion des fonds européens, sur l’extension et le renforcement du Fonds de solidarité de l’Union européenne pour aider les régions européennes à s’adapter au changement climatique et à faire face à la multiplication des catastrophes naturelles, et rappelle l’exigence d’une conditionnalité du versement des fonds de cohésion européens au respect de l’état de droit. Ce rapport rappelle également le rôle essentiel de la politique de cohésion dans les régions ultrapériphériques et réaffirme la nécessité de prévoir des législations adaptées aux spécificités de ces régions et de maintenir les instruments qui leur sont spécifiquement dédiés.
+        </article>
+    
+        <article>
+            <div class="hidden">197576</div>
+            
+            <header><b>Sylvie BRUNET</b> | Mouvement Démocrate</header>
+            J’ai voté pour cette résolution qui vise à donner un cap à la politique de cohésion européenne pour les années à venir. Celle-ci est d’autant plus nécessaire que certaines disparités persistent entre les régions urbaines et rurales par exemple, en termes d’infrastructures, de services, d’offres de transport, ou encore d’accès aux soins. D’autre part, bien que le nombre de personnes menacées de pauvreté et d’exclusion sociale ait diminué ces dernières années, 20 % de la population de l’Union y reste exposée.Pour adapter la politique de cohésion aux défis que nous traversons, tant au niveau environnemental que social, cette résolution demande à la Commission européenne de présenter un deuxième Fonds de transition juste avec des moyens financiers renforcés, pour soutenir les régions dans leur transition vers la neutralité carbone. Nous appelons également à l’augmentation du budget du Fonds de solidarité de l’UE, ce qui me paraît indispensable pour permettre aux régions de faire face aux catastrophes naturelles, dont l’augmentation est malheureusement à prévoir en raison du changement climatique.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – D’un côté, ce rapport comporte un certain nombre de constats et de propositions intéressantes. Mais, d’un autre côté, il reste flou sur l’évaluation des propositions les plus emblématiques ou ne mentionne pas les conséquences de l’immigration sur la cohésion économique ou culturelle. Je me suis donc abstenu.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            Ce rapport soulève plusieurs propositions intéressantes, mais il reste flou sur des questions essentielles comme la réduction à deux des catégories de régions (contre trois actuellement), ou encore la réintégration du Feader au règlement cadre pour les fonds structurels. On ne trouve en outre aucune considération sur les conséquences de l’immigration sur la cohésion économique et culturelle. Je me suis donc abstenu.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Il est très hasardeux de visualiser l’impact des mesures concrètes proposées par le rapport, notamment pour l’intégration du Feader dans le cadre général, pour les mesures budgétaires ou pour la réduction à deux catégories de régions, tant pour ce qui concerne les bénéficiaires en France que des couts budgétaires induits. La position sectaire de la rapporteure à l’égard des amendements proposés par notre groupe a coûté une amélioration dans le bon sens du texte. Je me suis donc abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            La Commission européenne doit rendre public, en principe tous les trois ans, un rapport sur les résultats et les perspectives des politiques de cohésion dans l’Union européenne.Le 8e rapport a été dévoilé le 9 février, il met l’accent sur le rattrapage des régions les plus pauvres depuis le dernier paquet programmatique, mais également sur la stagnation des régions intermédiaires et les défis à venir en matière de transition écologique et de numérisation.Au global, la rapporteur est restée dans une posture consistant à rejeter par principe les amendements issus de notre groupe. Ceux-ci portaient en grande partie sur une prise en compte accrue de l’Outre-mer.Il faut noter que le rapport ne dit pas un mot sur les conséquences des vagues migratoires, notamment sur les poches de pauvreté, les besoins supplémentaires en services publics, l’identité.Au global, la cohésion reste une politique désincarnée, sans âme, se basant sur des statistiques et des courbes.Malgré tout, des éléments techniques dans le texte sont plutôt favorables comme l’élargissement de l’indicateur du PIB à des critères sociaux et environnementaux (durabilité, inclusion sociale, santé, éducation).Pour toutes ces raisons, je me suis abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Ce rapport reste dans une posture consistant à rejeter par principe les amendements issus de notre groupe. Ceux-ci portaient en grande partie sur une prise en compte accrue de l’Outre-mer. De plus le rapport ne dit pas un mot sur les conséquences des vagues migratoires sur la pauvreté déjà existante, les besoins supplémentaires en services publics, l’identité… En outre il est difficile de visualiser l’impact des mesures proposées, notamment pour l’intégration du Feader dans le cadre général tant pour ce qui concerne les bénéficiaires en France que des coûts budgétaires induits. Je me suis abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            Je me suis abstenue sur ce 8e rapport de la cohésion, bilan et perspectives pour les politiques régionales de l’UE.Un certain nombre de constats et de propositions sont intéressants voire convergent avec nos amendements. Mais on note un certain flou sur l’évaluation des propositions les plus emblématiques, comme la réduction à deux des catégories des régions, contre trois actuellement, ou encore la réintégration du Feader au règlement cadre pour les fonds structurels.On ne trouve enfin aucun mot sur les conséquences de l’immigration sur la cohésion économique ou culturelle de nos régions.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b></b> | </header>
+            Ce rapport fait le bilan de la politique de cohésion de l’UE. Il critique notamment le pacte de stabilité et de croissance, lequel empêche les États membres d’investir massivement, ce qui est pourtant nécessaire pour préparer les États aux effets du changement climatique et pour lutter contre la misère. Ce texte insiste également sur le renforcement de l’état de droit dans le cadre de la politique de cohésion, sur l’importance de créer des emplois de qualité et bien rémunérés, sur la lutte contre la pauvreté et sur l’intégration des migrants. C’est en particulier pour ces raisons que j’ai soutenu ce texte en votant pour.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">96750</div>
+            
+            <header><b>François ALFONSI</b> | Régions et Peuples Solidaires</header>
+            
+                <p> – Madame la Présidente, Madame la Commissaire, ce rapport sur les régions frontalières, laboratoires vivants de l’intégration européenne, montre tout l’intérêt qu’il y a pour l’Union européenne à définir des politiques ciblées pour ces territoires spécifiques, comme le sont les îles et comme le sont les régions transfrontalières.</p>
+            
+                <p>Ces régions sont bel et bien des laboratoires vivants de l’intégration européenne. Si l’on devait faire un bilan comparant la situation avant d’être en Europe et la situation nouvelle après avoir intégré l’Union européenne, c’est sans nul doute ces régions frontalières qui montreraient les changements les plus grands dans la vie de leurs citoyens. Cela tient à un double effet: reléguées aux marges de leurs États membres, ces régions étaient le plus souvent marginalisées et à l’écart du développement. L’avènement du marché unique, l’ouverture d’espaces nouveaux grâce à la suppression des frontières ont été pour elles des facteurs incontestables de développement.</p>
+            
+                <p>Pour autant, beaucoup reste à faire pour valoriser toutes les potentialités de ces régions pour l’Europe. C’est dans les régions frontalières que la politique de cohésion et de développement régional pourra disposer de la plus grande marge de progression pour les années à venir. Pour cela, il faut lever les obstacles qui restent encore nombreux et vivaces: des obstacles physiques, par des connexions qui sont encore insuffisantes; des obstacles administratifs et juridiques, car il faut harmoniser les politiques publiques entre des régions proches géographiquement mais séparées par les législations étatiques. Il y a aussi les obstacles linguistiques qui pourraient souvent facilement être levés en mettant en avant les cultures et les langues transfrontalières, souvent différentes de celles des capitales étatiques. Je pense à l’Alsace, où nous sommes aujourd’hui, à la Corse où j’habite, qui bénéficie d’une même base linguistique et culturelle que la Sardaigne et le reste de l’Italie, au Pays basque ou à la Catalogne, dont la langue commune est un trait d’union par dessus les Pyrénées. Tous ces atouts doivent revivre et être mis à profit avec l’aide de l’Union européenne.</p>
+            
+                <p>Aux frontières des États membres, il existe donc de multiples territoires dans lesquels la construction européenne peut connaître des développements considérables. Encore faut-il leur en donner les moyens. C’est ce que propose ce rapport que mon groupe soutient sans réserve. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">30482</div>
+            
+            <header><b>Younous OMARJEE</b> | La France Insoumise</header>
+            
+                <p>S’agissant des régions frontalières, j’ai la conviction que ces régions, qui couvrent 40 % du territoire européen ‒ un Européen sur quatre, près de 120 millions d’Européens vivant de part et d’autre de 40 frontières intérieures terrestres ‒, expriment dans leur réalité historique, géographique, économique et culturelle ce qu’est véritablement le projet européen, qu’elles sont appelées à jouer un rôle de plus en plus important et qu’elles doivent être au cœur de toutes nos préoccupations dans le travail que nous engageons à présent pour penser le futur de la politique de cohésion.</p>
+            
+                <p>Dans le temps de la crise du COVID, alors que nous étions en Europe habitués à vivre dans un espace de libre circulation totale, nous avons repris conscience du poids des barrières qui, soudainement, peuvent s’imposer à nouveau à nous avec toutes les difficultés engendrées, notamment pour les travailleurs transfrontaliers. Mais nous avons aussi perçu, dans le temps de la crise du COVID, la force des solidarités et la force des coopérations transfrontalières dans le domaine sanitaire, ce qui a permis de sauver des vies.</p>
+            
+                <p>Aujourd’hui avec la guerre d’agression de la Russie en Ukraine, la conscience des frontières resurgit. Et plus que jamais, nous avons conscience que ce que nous avons réussi à construire en Europe est absolument extraordinaire. Un espace commun de droits, de libertés et de circulation pour la paix. À présent, la crise d’approvisionnement en énergie, qui s’impose à toutes les régions et en particulier aux régions frontalières, doit nous appeler à réfléchir à un certain nombre de propositions nouvelles. Et nous devons considérer que les projets énergétiques transfrontaliers d’intérêt européen participent sans doute aux solutions que nous devons rechercher pour notre souveraineté énergétique. C’est là, me semble-t-il, une piste de proposition pour REpowerEU.</p>
+            
+                <p>Le rapport que je soumets à votre approbation aujourd’hui rappelle donc toute l’importance de ces régions et les défis économiques, sociaux, juridiques, géographiques et territoriaux auxquels les espaces transfrontaliers sont confrontés.</p>
+            
+                <p>Madame la Commissaire, vous connaissez l’attachement de notre Parlement au mécanisme européen transfrontalier qui doit permettre de lever les obstacles juridiques entraînant de nombreuses difficultés pour les citoyens: insuffisance de transports publics transfrontaliers, problèmes d’accès à l’emploi, à l’éducation, à la santé, aux services culturels et aux loisirs, pour ne citer que ceux-là. Ce mécanisme est aujourd’hui bloqué par le Conseil et, comme je l’ai indiqué à Prague lors du sommet informel des ministres de la cohésion, nous devons relancer le processus. Nous avons pu rapprocher les positions, je crois, entre le Parlement et le Conseil ‒ je salue le travail de notre collègue Gozi ‒ et nous demandons à présent à la Commission de prendre une initiative. Comme nous attendons que la Commission concrétise les initiatives parlementaires de notre commission REGI, conformément aux engagements qui ont été pris par la présidente de la Commission, Ursula von der Leyen. Nous avons adopté des rapports d’initiative massivement en plénière. Nous attendons à présent que la Commission les traduise effectivement. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">30482</div>
+            
+            <header><b>Younous OMARJEE</b> | La France Insoumise</header>
+            
+                <p>Très rapidement, le climat de ce débat et le soutien massif apporté au rapport de Constanze Krehl et au rapport sur les régions frontalières disent la grande unité au sein de la commission REGI et au sein du Parlement européen, tous groupes politiques confondus, quasiment, pour défendre la politique de cohésion et pour l’engager vers une modernisation. C’est la condition même pour son avenir. Je veux remercier tous les orateurs qui ont apporté leur soutien à mon rapport, et je ne suis pas étonné que ce soient les nationalistes et les fascistes qui s’opposent au rapport sur les régions frontalières parce qu’évidemment, ils n’y comprennent rien.</p>
+            
+                <p>Madame la Commissaire, pour conclure je veux vous dire que nous allons voter massivement demain le rapport de Constanze Krehl. Nous allons voter, je l’espère, massivement, mon rapport. Dans son rapport, comme dans le mien, comme dans tous les rapports que nous avons adoptés en plénière, le rapport sur le FSUE, le rapport de la commission REGI sur les îles, les rapports que nous allons adopter, nous faisons des propositions très concrètes. Et je ne veux pas que les rapports d’initiative de notre commission REGI et du Parlement finissent dans des tiroirs. Il y a une base concrète pour que la Commission puisse mettre des propositions sur la table. S’agissant aujourd’hui du mécanisme transfrontalier, il est urgent, urgent que le Conseil comme la Commission répondent à la balle lancée par le Parlement. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            
+                <p> – Monsieur le Président, Madame la Commissaire, je voudrais moi aussi saluer ce rapport, qui reprend toutes les opportunités des régions frontalières, mais qui montre aussi les difficultés. Habitant moi-même en Alsace, dans le Grand Est, des territoires profondément frontaliers, je voudrais témoigner des difficultés – en particulier l’engorgement sur les routes – que subissent les travailleurs frontaliers qui traversent les frontières chaque jour, avec son lot d’effets négatifs sur la santé humaine, mais aussi sur la santé de notre planète.</p>
+            
+                <p>Je voudrais qu’on réfléchisse ensemble à deux pistes. D’abord, la piste des mobilités transfrontalières à développer: des mobilités douces, mais aussi des mobilités ferroviaires, pour lesquelles il nous faut des financements. À quelques kilomètres d’ici, nous manquons par exemple de trains pour traverser le Rhin. Je voudrais aussi explorer une deuxième piste, celle – lorsque c’est possible – du télétravail pour nos travailleurs frontaliers. Ce télétravail qui était possible pendant le COVID et qui aujourd’hui est un véritable parcours du combattant pour les travailleurs parce qu’ils se retrouvent face au mur des États membres et dépendants de leur volonté, ou non d’ailleurs, pour avancer sur les législations sociales et fiscales. Et là, Madame la Commissaire, nous avons besoin aussi d’une impulsion forte, politique, de votre part et de la nôtre. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197547</div>
+            
+            <header><b>Irène TOLLERET</b> | Renaissance</header>
+            
+                <p>Le cours de l’histoire nous amène aujourd’hui à une réflexion sur le futur de cette politique dans le but de la renforcer, de la moderniser, de la rendre plus simple et à la hauteur des grands défis de notre continent. Je me félicite donc du travail de cette assemblée, rends hommage à Constanze Krehl et à tous les rapporteurs fictifs, dont je fais partie, dans cette assemblée, car dans le cadre du huitième rapport, nous avons produit un texte ambitieux qui apporte des propositions de réformes très concrètes.</p>
+            
+                <p>Nous attendons donc avec impatience le retour de la Commission pour travailler ensemble dès maintenant, pour simplifier la politique de cohésion, pour investir plus, plus efficacement dans le développement rural et pour améliorer l’articulation entre la cohésion et la gouvernance économique.</p>
+            
+                <p>Tous nos territoires, tous nos citoyens nous attendent. Nous devons être au rendez vous. Nous devons répondre présent. La politique régionale de l’Union est la politique la plus proche, la plus accessible aux citoyens. Il s’agit d’un outil indispensable pour construire une Europe plus inclusive, plus verte, plus connectée, plus intelligente. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197690</div>
+            
+            <header><b>André ROUGÉ</b> | Rassemblement national</header>
+            
+                <p>La Commission a évoqué des laboratoires vivants, ce qui est blessant et choquant, car elle semble sous-entendre que les citoyens ultramarins concernés par ce texte sont des cobayes. S’agissant du rapport de Mme Krehl, je me réjouis que certaines de nos propositions aient été reprises. Un mécanisme de pré-validation dont les porteurs de projets pourraient se prévaloir auprès de leur banque afin de ne pas devoir attendre les déblocages budgétaires, souvent tardifs. En revanche, je rejoins les critiques quant au manque d’étude d’impact accompagnant la suppression des régions intermédiaires ou l’intégration du FEADER dans le règlement général. Je déplore enfin qu’un rapport aussi vaste ne dise mot des conséquences des politiques migratoires sur la cohésion économique ou culturelle. Pour ces raisons, nous voterons contre le rapport de M. Omarjee et nous nous abstiendrons sur celui de Mme Krehl.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197629</div>
+            
+            <header><b>Maxette PIRBAKAS</b> | Reconquête!</header>
+            
+                <p> – Madame la Présidente, Monsieur le rapporteur, à mon avis, ce rapport sur les régions frontalières ne fait pas l’impasse sur l’outre-mer. Parce que oui, nous sommes aussi des régions frontalières. J’apprécie cette attention portée aux territoires qui ont un besoin particulier d’Europe, surtout dans le contexte très difficile que nous connaissons actuellement.</p>
+            
+                <p>Adaptation et pragmatisme sont les deux ambitions que nous devons porter pour les régions frontalières, parmi lesquelles nos départements d’outre-mer. Adaptation parce que nous sommes confrontés à des réalités locales très spécifiques, et pragmatisme afin d’agir sans idéologie, au plus près des problèmes que nous subissons. C’est pourquoi je salue la perspective que trace votre rapport de développer les coopérations transfrontalières.</p>
+            
+                <p>Bien sûr, nous le savons, nous qui sommes loin du continent, les meilleurs axes de développement se trouvent souvent dans la coopération avec des régions dépendant d’États tiers situés dans notre zone géographique. Notre histoire ultramarine s’est construite dans un rapport de satellisation vis-à-vis de la centralité du continent européen. Nous sommes désormais conscients qu’il faut rompre avec ce cercle vicieux qui bride le développement des régions frontalières et singulièrement de l’outre-mer. Toute initiative allant dans le sens d’une nouvelle relation entre les marges et la centralité est positive. Aussi, je soutiens votre rapport, Monsieur le rapporteur. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">204419</div>
+            
+            <header><b>Sandro GOZI</b> | Renaissance</header>
+            
+                <p> – Madame la Présidente, Madame la Commissaire, pendant la crise du COVID, les régions frontalières voulaient coopérer davantage. Elles n’ont pas pu, à cause d’obstacles bureaucratiques. Face aux catastrophes naturelles, face à la crise énergétique, une intégration entre régions frontalières s’impose. Elles rencontrent trop d’entraves. Les travailleurs transfrontaliers demandent des services dans leur lieu de travail que les autorités locales ne peuvent pas offrir. Le rapport du président Omarjee dénonce justement tout cela.</p>
+            
+                <p>La solution législative, nous la connaissons, elle est sur la table du Conseil. Elle s’appelle le mécanisme frontalier européen, mais les négociations sont bloquées. Nous voulons relancer ce dossier en prenant en compte les principales préoccupations du Conseil et en pleine coopération avec la Commission. À cette fin, chers collègues, nous devons adopter une résolution d’initiative législative, indiquer les modifications législatives nécessaires et favoriser un nouvel accord avec le Conseil. Car notre Europe, c’est l’Europe des solutions concrètes et transnationales, solutions que nous voulons multiplier pour nos régions et pour nos citoyens. </p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
+
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

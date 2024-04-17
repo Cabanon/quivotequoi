@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Rapport sur le rapport 2021 de la Commission concernant la Turquie</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Rapport sur le rapport 2021 de la Commission concernant la Turquie</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(448/622 * 100%)">448</div>
-  
-  
-    <div class="-" style="width: calc(67/622 * 100%)">67</div>
+    <div class="for" style="width: calc(448/622 * 100%)">448</div>
   
   
-    <div class="0" style="width: calc(107/622 * 100%)">107</div>
+    <div class="against" style="width: calc(67/622 * 100%)">67</div>
+  
+  
+    <div class="abstention" style="width: calc(107/622 * 100%)">107</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(37/64 * 100%)">37</div>
+    <div class="for" style="width: calc(37/64 * 100%)">37</div>
   
   
-    <div class="-" style="width: calc(22/64 * 100%)">22</div>
+    <div class="against" style="width: calc(22/64 * 100%)">22</div>
   
   
-    <div class="0" style="width: calc(5/64 * 100%)">5</div>
+    <div class="abstention" style="width: calc(5/64 * 100%)">5</div>
   
 </div>
  
 </section>
-            <a href="/voting/143671">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/143671">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -106,7 +111,7 @@
     
         
         
-            <li>Pays candidats</li>
+            <li>Elargissement de l&#39;Union</li>
         
     
         
@@ -116,132 +121,260 @@
     
         
         
-            <li>Elargissement de l&#39;Union</li>
+            <li>Pays candidats</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2250(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0149_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-06-07-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>41 bis. demande à tous les États membres, compte tenu de la politique étrangère militarisée de la Turquie, de cesser toute exportation d’armes vers la Turquie;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">127</div>
+  <div class="against">375</div>
+  <div class="abstention">115</div>
+</span>
+
+  
+    
+    <a href="/voting/143865">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(127/617 * 100%)">127</div>
-  
-  
-    <div class="-" style="width: calc(375/617 * 100%)">375</div>
-  
-  
-    <div class="0" style="width: calc(115/617 * 100%)">115</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/143865">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>44 bis. déplore que, malgré les appels répétés du Parlement européen, de responsables de l’Union et du Conseil de sécurité des Nations unies, la Turquie se soit non seulement refusée à revenir sur ses précédentes activités illégales en ce qui concerne Varosha, mais qu’elle ait également récemment commis de nouvelles violations des résolutions pertinentes du Conseil de sécurité des Nations unies; regrette que ces agissements exacerbent les tensions et sapent l’espoir d’une reprise rapide des négociations;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">187</div>
+  <div class="against">392</div>
+  <div class="abstention">44</div>
+</span>
+
+  
+    
+    <a href="/voting/143872">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(187/623 * 100%)">187</div>
-  
-  
-    <div class="-" style="width: calc(392/623 * 100%)">392</div>
-  
-  
-    <div class="0" style="width: calc(44/623 * 100%)">44</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/143872">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
-
-  
-      46. condamne de nouveau fermement les interventions militaires turques en Syrie, qui violent le droit international et portent atteinte à la stabilité et à la sécurité de l’ensemble de la région; invite la Turquie à mettre un terme à son occupation illégale du nord de la Syrie et de la ville d’Afrin et rappelle que les préoccupations en matière de sécurité ne peuvent justifier des actions militaires unilatérales dans un pays étranger; dénonce le fait que la Turquie et les factions syriennes locales abusent des droits des civils et restreignent leurs libertés en toute impunité sur les territoires occupés par la Turquie; condamne les transferts illégaux par la Turquie de réfugiés syriens vers le nord de la Syrie en vue de remodeler la nature démographique de la zone kurde en Syrie; dénonce le fait que la Turquie continue à transférer de manière illégale des ressortissants syriens en Turquie pour y subir un procès pour actes de terrorisme qui pourrait aboutir à un emprisonnement à vie; condamne les attaques turques continues et la présence militaire turque constante sur le territoire irakien, 
-  
+<p>
 
   
-      <del>en particulier les </del>
+      46. condamne de nouveau fermement les interventions militaires turques en Syrie, qui violent le droit international et portent atteinte à la stabilité et à la sécurité de l’ensemble de la région; invite la Turquie à mettre un terme à son occupation illégale du nord de la Syrie et de la ville d’Afrin et rappelle que les préoccupations en matière de sécurité ne peuvent justifier des actions militaires unilatérales dans un pays étranger; dénonce le fait que la Turquie et les factions syriennes locales abusent des droits des civils et restreignent leurs libertés en toute impunité sur les territoires occupés par la Turquie; condamne les transferts illégaux par la Turquie de réfugiés syriens vers le nord de la Syrie en vue de remodeler la nature démographique de la zone kurde en Syrie; dénonce le fait que la Turquie continue à transférer de manière illégale des ressortissants syriens en Turquie pour y subir un procès pour actes de terrorisme qui pourrait aboutir à un emprisonnement à vie; condamne les attaques turques continues et la présence militaire turque constante sur le territoire irakien,
   
 
   
-      <ins>qui sont à l’origine de nombreuses victimes civiles et de l’évacuation de 118 villages dans la région de Bradost, en raison de la création de bases militaires turques lourdement armées, et en particulier les    </ins>
+      <ins> qui sont à l’origine de nombreuses victimes civiles et de l’évacuation de 118 villages dans la région de Bradost, en raison de la création de bases militaires turques lourdement armées, et</ins>
+  
+
+  
+       en particulier les
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
   
 
   
@@ -249,332 +382,434 @@
   
 
   
-      <del>Yézidi,</del>
+      <del>Yézidi</del>
   
 
   
-      <ins>yézidie,</ins>
+      <ins>yézidie</ins>
   
 
   
-       qui empêchent le retour des Yézidis et des Chrétiens qui ont 
+      , qui empêchent le retour des Yézidis et des Chrétiens qui ont 
   
 
   
-      <del>fuit </del>
+      <del>fuit</del>
   
 
   
-      <ins>fui </ins>
+      <ins>fui</ins>
   
 
   
-      l’EIIL/Daech en 2014;
+       l’EIIL/Daech en 2014;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">222</div>
+  <div class="against">333</div>
+  <div class="abstention">61</div>
+</span>
+
+  
+    
+    <a href="/voting/143873">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(222/616 * 100%)">222</div>
-  
-  
-    <div class="-" style="width: calc(333/616 * 100%)">333</div>
-  
-  
-    <div class="0" style="width: calc(61/616 * 100%)">61</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/143873">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       3. 
   
 
   
-      <del>remarque qu’alors que les négociations d’adhésion demeurent au point mort, la Turquie a mis à jour son plan d’action national d’adhésion à en outre les progrès réalisés par la Turquie en vue d’un alignement plus poussé sur l’acquis de l’Union dans des domaines tels que le droit de la concurrence, son système national de certification et l’espace européen de la recherche, ainsi que l’amélioration du bilan de la Turquie dans le cadre d’Horizon 2020;</del>
+      <del>remarque qu’alors que les négociations d’adhésion demeurent au point mort, la Turquie a mis à jour son plan d’action national d’adhésion à en outre les progrès réalisés par la Turquie en vue d’un alignement plus poussé sur l’acquis de l’Union dans des domaines tels que le droit de la concurrence, son système national de certification et l’espace européen de la recherche, ainsi que l’amélioration du bilan de la Turquie dans le cadre d’Horizon 2020</del>
   
 
   
-      <ins>insiste pour qu’il soit mis un terme définitif aux négociations d’adhésion entre la Turquie et l’Union européenne, car la Turquie ne pourra jamais faire des raisons géographiques, culturelles et historiques;</ins>
+      <ins>insiste pour qu’il soit mis un terme définitif aux négociations d’adhésion entre la Turquie et l’Union européenne, car la Turquie ne pourra jamais faire des raisons géographiques, culturelles et historiques</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°5 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>3 bis. invite instamment les États membres à prendre les mesures qui s’imposent afin de mettre fin à tous les financements accordés à la Turquie dans le cadre du processus de préadhésion, du cadre financier pluriannuel actuel et futur, de la facilité en faveur des réfugiés en Turquie et du plan d’action commun UE-Turquie en matière de migration; demande en outre à l’Union européenne de stopper tous les prêts de la Banque européenne d’investissement à la Turquie; souligne, à cet égard, que la Turquie utilise la facilité en faveur des réfugiés comme instrument de provocation et de chantage à l’égard de l’Union et de ses États membres, afin d’obtenir des concessions politiques, économiques ou militaires, de justifier son comportement agressif envers les États membres de l’Union et de poursuivre ses ambitions en matière de politique étrangère;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°6 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>7 bis. dénonce l’ingérence étrangère du régime turc en Europe par l’intermédiaire de sa diaspora vivant en Europe; se déclare particulièrement préoccupé par le fait que le régime turc finance différentes organisations gouvernementales et non gouvernementales en Europe, et notamment les Frères musulmans, pour réaliser des objectifs politiques et ainsi influencer la politique européenne; est vivement préoccupé des rapports des services de renseignement selon lesquels les services de renseignement turcs ont sensiblement accru leurs activités dans un certain nombre d’États membres;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°7 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>36 bis. dénonce les menaces répétées du régime turc de flux de migration incontrôlés comme méthode de guerre hybride contre l’Union européenne; réitère que l’Union s’est rendue vulnérable à ces menaces à cause de sa politique de bienvenue quant aux migrants économiques;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°8 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>19 bis. s’inquiète en particulier de ce que les chrétiens en Turquie demeurent soumis, selon le rapport d’Open Doors, à une forte pression due au nationalisme religieux; se préoccupe tout particulièrement d’informations selon lesquelles, en Turquie, les chrétiens étrangers sont pris pour cibles;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°9 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
+<p>
 
   
       35. exprime sa profonde gratitude aux autorités turques pour leur soutien clair à l’indépendance, à la souveraineté et à l’intégrité territoriale de l’Ukraine et pour leur condamnation de l’invasion russe injustifiée et de l’agression militaire contre l’Ukraine; souligne l’importance vitale d’une coopération solide entre l’Union et la Turquie en matière de politique étrangère et de sécurité pendant les difficultés actuelles et salue à cet égard l’alignement ferme de la Turquie avec l’OTAN et l’Union; souligne que la Turquie est un allié de l’OTAN et un associé stratégique auquel d’importants intérêts nous unissent; salue la décision de la Turquie d’invoquer la convention de Montreux de 1936, demandant à tous les États de la mer Noire et riverains de celle-ci de mettre fin aux passages par ses détroits; salue, en outre, l’aide financière et humanitaire que la Turquie continue d’apporter à l’Ukraine, ainsi que la volonté du gouvernement turc d’agir en tant que médiateur entre les parties au conflit; 
   
 
   
-      <del>invite </del>
+      <del>invite</del>
   
 
   
-      <ins>engage </ins>
+      <ins>engage</ins>
   
 
   
-      la Turquie à 
+       la Turquie à 
   
 
   
-      <del>reconsidérer, à la lumière de la gravité de la situation, sa position de principe quant à la non-application de sanctions à l’encontre des autorités russes responsables de cette grave violation du droit international ainsi que des oligarques et des fonctionnaires qui leur sont proches;</del>
+      <del>reconsidérer, à la lumière de la gravité de la situation, sa position de principe quant à la non-application de sanctions à l’encontre des autorités russes responsables de cette grave violation du droit international ainsi que des oligarques et des fonctionnaires qui leur sont proches</del>
   
 
   
-      <ins>s’aligner sur les sanctions et les mesures restrictives prises par l’Union contre les autorités russes et biélorusses ainsi que les personnes coupables de l’agression illégale contre l’Ukraine et de nombreuses violations du droit international commises depuis le début de la guerre;</ins>
+      <ins>s’aligner sur les sanctions et les mesures restrictives prises par l’Union contre les autorités russes et biélorusses ainsi que les personnes coupables de l’agression illégale contre l’Ukraine et de nombreuses violations du droit international commises depuis le début de la guerre</ins>
   
 
   
-       souligne, à cet égard, qu’il espère 
+      ; souligne, à cet égard, qu’il espère
   
 
   
-      <del>   </del>
+      <del>    </del>
   
 
   
-      que la Turquie, en 
+      <ins> </ins>
   
 
   
-      <ins>   </ins>
+      que la Turquie, en
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
   
 
   
       cohérence avec sa position sur l’agression russe contre l’Ukraine, évitera de devenir un refuge pour les capitaux et les investissements russes, contournant ainsi clairement les sanctions de l’Union; encourage la Turquie à fermer son espace aérien aux aéronefs russes;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°10 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
-
-  
-      41. convient que la Turquie peut mener sa propre politique étrangère conformément à ses intérêts et à ses objectifs, mais s’attend à ce que cette politique soit défendue au moyen d’une diplomatie et d’un dialogue fondés sur le droit international et, au vu de son statut de pays candidat, soit de plus en plus alignée sur celle de l’Union; est d’avis que la coopération entre l’Union et la Turquie en matière de politique étrangère et de sécurité est d’une importance primordiale et que les futures structures de sécurité de l’Union, notamment dans le voisinage, requièrent une coopération stratégique et une communication accrue avec la Turquie afin d’être efficaces; est d’avis qu’une coopération accrue entre l’Union et la Turquie peut être atteinte dans plusieurs domaines de politique étrangère, notamment sur les questions de l’Ukraine et l’Afghanistan; rappelle en outre que l’Union européenne et l’OTAN demeurent les partenaires à long terme les plus fiables de la Turquie dans le cadre de la coopération internationale en matière de sécurité, et invite la Turquie à maintenir la cohérence politique dans les domaines des politiques étrangère et de sécurité compte tenu de son rôle en tant que membre de l’OTAN et pays candidat à l’adhésion à l’Union européenne; 
-  
+<p>
 
   
-      <ins>invite le gouvernement turc à traiter de bonne foi    les demandes d’adhésion de la Finlande et de la Suède à l’OTAN, à jouer un rôle constructif en vue de résoudre les éventuelles questions en suspens conformément aux valeurs et aux exigences juridiques de l’Union, et à s’abstenir d’exercer une quelconque pression au cours de ce processus; </ins>
+      41. convient que la Turquie peut mener sa propre politique étrangère conformément à ses intérêts et à ses objectifs, mais s’attend à ce que cette politique soit défendue au moyen d’une diplomatie et d’un dialogue fondés sur le droit international et, au vu de son statut de pays candidat, soit de plus en plus alignée sur celle de l’Union; est d’avis que la coopération entre l’Union et la Turquie en matière de politique étrangère et de sécurité est d’une importance primordiale et que les futures structures de sécurité de l’Union, notamment dans le voisinage, requièrent une coopération stratégique et une communication accrue avec la Turquie afin d’être efficaces; est d’avis qu’une coopération accrue entre l’Union et la Turquie peut être atteinte dans plusieurs domaines de politique étrangère, notamment sur les questions de l’Ukraine et l’Afghanistan; rappelle en outre que l’Union européenne et l’OTAN demeurent les partenaires à long terme les plus fiables de la Turquie dans le cadre de la coopération internationale en matière de sécurité, et invite la Turquie à maintenir la cohérence politique dans les domaines des politiques étrangère et de sécurité compte tenu de son rôle en tant que membre de l’OTAN et pays candidat à l’adhésion à l’Union européenne;
   
 
   
-      regrette, dans ce contexte, que la Turquie soit, de tous les 
+      <ins> invite le gouvernement turc à traiter de bonne foi    les demandes d’adhésion de la Finlande et de la Suède à l’OTAN, à jouer un rôle constructif en vue de résoudre les éventuelles questions en suspens conformément aux valeurs et aux exigences juridiques de l’Union, et à s’abstenir d’exercer une quelconque pression au cours de ce processus;</ins>
   
 
   
-      <del>   </del>
+       regrette, dans ce contexte, que la Turquie soit, de tous les
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
       pays candidats, celui qui s’aligne le moins (14 %) sur la politique étrangère et de sécurité commune (PESC) et la politique de sécurité et de défense commune (PSDC), et réitère son appel à la Turquie pour qu’elle inverse cette tendance de toute urgence, étant donné le grand potentiel d’une action commune face aux différents défis dans la région et dans le monde; constate avec inquiétude, à cet égard, que la politique étrangère de la Turquie est en contradiction avec les priorités de l’Union dans le cadre de la PESC ces dernières années, notamment en ce qui concerne le Caucase, la Syrie, la Libye et l’Iraq;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°11 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       C. considérant que les travaux sur la dimension de sécurité de l’Union ont progressé récemment, en gagnant en structure et en substance, et que la Turquie représente un partenaire extrêmement précieux en tant qu’allié de l’OTAN et partenaire stratégique qui occupe une position clé en Europe et joue un rôle géostratégique déterminant dans l’architecture de sécurité de la mer Noire et, en particulier, dans la sécurité de l’Ukraine, qui est confrontée à une agression russe;
@@ -584,195 +819,249 @@
       <ins> que la Turquie a exprimé des réticences et a posé des conditions politiques à l’adhésion de la Finlande et de la Suède à l’OTAN; qu’il est important, devant la gravité de la situation actuelle, que l’ensemble des alliés au sein de l’OTAN agissent avec clairvoyance et ratifient rapidement les protocoles d’adhésion de la Finlande et de la Suède;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°12 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
-
-  
-      12. prend acte de l’importance du maintien de la liberté de réunion et de manifestation en Turquie, qui est inscrite dans sa constitution et qui constitue une obligation positive découlant de son statut de partie à la Convention européenne des droits de l’homme; déplore le recul important de la liberté de réunion et de manifestation, qui est soumise à une pression croissante face à l’utilisation répétée et à l’augmentation continue des interdictions de protestations et de manifestations par les gouverneurs provinciaux, à l’utilisation excessive de la force contre des manifestants pacifiques et des journalistes, dans un contexte d’impunité générale pour les agents des forces de l’ordre et aux amendes et procès de manifestants accusés d’activités liées au terrorisme; est particulièrement préoccupé par l’interdiction imposée par le gouverneur de la province de Van depuis plus de cinq ans; déplore que les journalistes soient pris pour cible par les forces de police turques lors de manifestations publiques, notamment en vertu de la directive d’avril 2021 du chef de la direction générale de la sécurité turque (EGM) ordonnant aux forces de police d’empêcher la presse d’enregistrer les protestations et les manifestations, directive qui a ensuite été suspendue par le    Conseil d’État; demande de nouveau aux autorités d’abandonner les poursuites engagées contre les étudiants de l’université Boğaziçi, poursuivis pour avoir exercé leur droit de rassemblement pacifique, et souligne qu’il est important de garantir la liberté académique et l’autonomie des universités; s’inquiète à cet égard de la décision récente de limoger trois doyens élus de l’université de Boğaziçi, dont le recteur actuel a été nommé par décret présidentiel en août 2021; se félicite de la déclaration du Service européen pour l’action extérieure (SEAE) du 4 février 2021, qui rappelle que la pandémie de COVID-19 ne peut être utilisée pour réduire au silence les voix critiques, et qui condamne le discours de haine des hauts fonctionnaires à l’encontre des étudiants LGBTI;
-  
+<p>
 
   
-      <ins> condamne fermement la récente répression violente de la police qui, lors de la 9e marche des fiertés à l’université de Boğaziçi, a exercé un recours abusif à la force et a placé de nombreux participants en détention,;</ins>
+      12. prend acte de l’importance du maintien de la liberté de réunion et de manifestation en Turquie, qui est inscrite dans sa constitution et qui constitue une obligation positive découlant de son statut de partie à la Convention européenne des droits de l’homme; déplore le recul important de la liberté de réunion et de manifestation, qui est soumise à une pression croissante face à l’utilisation répétée et à l’augmentation continue des interdictions de protestations et de manifestations par les gouverneurs provinciaux, à l’utilisation excessive de la force contre des manifestants pacifiques et des journalistes, dans un contexte d’impunité générale pour les agents des forces de l’ordre et aux amendes et procès de manifestants accusés d’activités liées au terrorisme; est particulièrement préoccupé par l’interdiction imposée par le gouverneur de la province de Van depuis plus de cinq ans; déplore que les journalistes soient pris pour cible par les forces de police turques lors de manifestations publiques, notamment en vertu de la directive d’avril 2021 du chef de la direction générale de la sécurité turque (EGM) ordonnant aux forces de police d’empêcher la presse d’enregistrer les protestations et les manifestations, directive qui a ensuite été suspendue par le    Conseil d’État; demande de nouveau aux autorités d’abandonner les poursuites engagées contre les étudiants de l’université Boğaziçi, poursuivis pour avoir exercé leur droit de rassemblement pacifique, et souligne qu’il est important de garantir la liberté académique et l’autonomie des universités; s’inquiète à cet égard de la décision récente de limoger trois doyens élus de l’université de Boğaziçi, dont le recteur actuel a été nommé par décret présidentiel en août 2021; se félicite de la déclaration du Service européen pour l’action extérieure (SEAE) du 4 février 2021, qui rappelle que la pandémie de COVID-19 ne peut être utilisée pour réduire au silence les voix critiques, et qui condamne le discours de haine des hauts fonctionnaires à l’encontre des étudiants LGBTI
+  
+
+  
+      <del>;</del>
+  
+
+  
+      <ins>; condamne fermement la récente répression violente de la police qui, lors de la 9e marche des fiertés à l’université de Boğaziçi, a exercé un recours abusif à la force et a placé de nombreux participants en détention,;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°13 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="13">
+            <header>📝 Amendement n°13 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
-
-  
-      24. se déclare préoccupé par l’affaire en cours contre la vice-présidente du CHP, Gökçe Gökçen, dans le cadre d’une enquête contre l’intégralité du conseil exécutif du parti pour la publication et la distribution d’un dépliant; est consterné du fait que dans les trois actions intentées contre elle le parquet général d’Ankara l’a accusée du crime d’agression physique du président, passible d’une peine minimale de cinq ans d’emprisonnement, en raison de la publication de ce dépliant; remarque qu’alors que cette action a été rejetée par la 18e haute cour pénale d’Ankara, les deux autres actions intentées pour calomnie, incitation à la haine et diffamation à l’encontre du président étant toujours en cours; reste gravement préoccupé du harcèlement politique et judiciaire continu de Canan Kaftancıoğlu, la présidente du CHP de la province d’Istanbul, par un nombre croissant de procès engagés contre elle; 
-  
+<p>
 
   
-      <ins>condamne la récente décision de la Cour de cassation confirmant trois des cinq peines prononcées contre Mme Kaftancıoğlu: une peine de prison de quatre ans et onze mois de prison et une interdiction de s’engager en politique; </ins>
+      24. se déclare préoccupé par l’affaire en cours contre la vice-présidente du CHP, Gökçe Gökçen, dans le cadre d’une enquête contre l’intégralité du conseil exécutif du parti pour la publication et la distribution d’un dépliant; est consterné du fait que dans les trois actions intentées contre elle le parquet général d’Ankara l’a accusée du crime d’agression physique du président, passible d’une peine minimale de cinq ans d’emprisonnement, en raison de la publication de ce dépliant; remarque qu’alors que cette action a été rejetée par la 18e haute cour pénale d’Ankara, les deux autres actions intentées pour calomnie, incitation à la haine et diffamation à l’encontre du président étant toujours en cours; reste gravement préoccupé du harcèlement politique et judiciaire continu de Canan Kaftancıoğlu, la présidente du CHP de la province d’Istanbul, par un nombre croissant de procès engagés contre elle;
   
 
   
-      est préoccupé par le caractère arbitraire du processus d’enregistrement prolongé du Parti écologiste turc, qui a introduit une demande le jour de son 
+      <ins> condamne la récente décision de la Cour de cassation confirmant trois des cinq peines prononcées contre Mme Kaftancıoğlu: une peine de prison de quatre ans et onze mois de prison et une interdiction de s’engager en politique;</ins>
   
 
   
-      <ins>   </ins>
+       est préoccupé par le caractère arbitraire du processus d’enregistrement prolongé du Parti écologiste turc, qui a introduit une demande le jour de son
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
   
 
   
       établissement en septembre 2020 auprès du Ministère de l’intérieur turc en vue d’obtenir un certificat de formation, mais qui ne l’a, à ce jour, toujours pas obtenu;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°14 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="14">
+            <header>📝 Amendement n°14 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
-
-  
-      31. condamne les extraditions forcées, les enlèvements et les rapts de citoyens turcs résidant en dehors de la Turquie pour des motifs politiques, une violation du principe de l’état de droit et des droits de l’homme; demande instamment à l’Union de s’attaquer à cette pratique préoccupante dans ses propres États membres ainsi que dans les pays candidats et les pays associés; est préoccupé par les tentatives du gouvernement turc d’influencer des membres de la diaspora turque dans l’Union, par exemple, par l’intermédiaire de la Présidence des Turcs de l’étranger et des communautés liées et de l’Union islamique turque de l’institution pour la religion, susceptibles de s’immiscer dans les processus démocratiques européens; 
-  
+<p>
 
   
-      <ins>condamne, à cet égard, les récentes attaques inacceptables des médias pro- gouvernementaux turcs dirigées contre plusieurs responsables politiques suédois, dont l’eurodéputé Evin Incir, y compris la désinformation et les accusations sans fondement, notamment des accusations de liens avec le terrorisme ; </ins>
+      31. condamne les extraditions forcées, les enlèvements et les rapts de citoyens turcs résidant en dehors de la Turquie pour des motifs politiques, une violation du principe de l’état de droit et des droits de l’homme; demande instamment à l’Union de s’attaquer à cette pratique préoccupante dans ses propres États membres ainsi que dans les pays candidats et les pays associés; est préoccupé par les tentatives du gouvernement turc d’influencer des membres de la diaspora turque dans l’Union, par exemple, par l’intermédiaire de la Présidence des Turcs de l’étranger et des communautés liées et de l’Union islamique turque de l’institution pour la religion, susceptibles de s’immiscer dans les processus démocratiques européens;
   
 
   
-      fait part de son inquiétude concernant la progression du mouvement raciste d’extrême droite Ülkü Ocakları, aussi connu sous le nom des «Loups gris», qui est étroitement lié à la coalition au pouvoir, le Parti d’action nationaliste (MHP), non seulement en 
+      <ins> condamne, à cet égard, les récentes attaques inacceptables des médias pro- gouvernementaux turcs dirigées contre plusieurs responsables politiques suédois, dont l’eurodéputé Evin Incir, y compris la désinformation et les accusations sans fondement, notamment des accusations de liens avec le terrorisme ;</ins>
   
 
   
-      <ins>   </ins>
+       fait part de son inquiétude concernant la progression du mouvement raciste d’extrême droite Ülkü Ocakları, aussi connu sous le nom des «Loups gris», qui est étroitement lié à la coalition au pouvoir, le Parti d’action nationaliste (MHP), non seulement en
   
 
   
-      Turquie, mais aussi dans des États membres de l’Union; invite l’Union et ses États membres à étudier la possibilité d’interdire leurs associations dans les pays de l’Union; invite les États membres à suivre de près l’évolution des activités à caractère raciste de cette organisation et à la combattre pour limiter son influence; 
+      <del> </del>
   
 
   
-      <del>   </del>
+      <ins>    </ins>
+  
+
+  
+      Turquie, mais aussi dans des États membres de l’Union; invite l’Union et ses États membres à étudier la possibilité d’interdire leurs associations dans les pays de l’Union; invite les États membres à suivre de près l’évolution des activités à caractère raciste de cette organisation et à la combattre pour limiter son influence
+  
+
+  
+      <del>;    </del>
+  
+
+  
+      <ins>; </ins>
   
 
   
       demande à la division Communication stratégique du SEAE de constituer un dossier sur les soupçons de désinformation turque dirigée contre l’Union, en particulier en Afrique et dans les Balkans, ainsi que dans région du Proche-Orient et de l’Afrique du Nord, et de transmettre ses conclusions au Parlement européen; exprime sa préoccupation face au fait que les Ouïgours vivant en Turquie sont toujours exposés au risque de détention et d’expulsion vers d’autres pays qui pourraient alors les livrer à la Chine, où il est probable qu’ils subissent de graves persécutions; invite les autorités turques à différer la ratification de son traité d’extradition avec la Chine;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°15 | Partie 1 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="15">
+            <header>📝 Amendement n°15 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°15 | Partie 2 | 
+        
+            <article id="15">
+            <header>📝 Amendement n°15 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°16 | 
+        
+            <article id="16">
+            <header>📝 Amendement n°16 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       44. regrette que le problème chypriote reste non résolu et souligne qu’une solution conforme aux résolutions pertinentes du Conseil de sécurité des Nations unies et dans le cadre convenu aura un impact positif sur les relations de la Turquie avec l’Union; réaffirme avec force que la seule solution durable à la question chypriote est celle d’un règlement équitable, global et viable, y compris de ses aspects extérieurs, dans le cadre des Nations unies, sur la base d’une fédération bicommunautaire et bizonale dotée d’une personnalité juridique internationale unique, d’une souveraineté unique, d’une citoyenneté unique et d’une égalité politique, conformément aux résolutions pertinentes du Conseil de sécurité des Nations unies et au droit international et dans le respect de l’acquis et des principes fondateurs de l’Union; déplore que le gouvernement turc ait abandonné la base convenue de la solution et le cadre des Nations unies pour défendre seul une solution fondée sur la coexistence de deux États à Chypre; invite la Turquie à abandonner cette proposition inacceptable de solution fondée sur la coexistence de deux États; demande 
@@ -783,43 +1072,63 @@
   
 
   
-      à la Turquie 
+      à la Turquie de 
   
 
   
-      <ins>de retirer ses troupes de Chypre et </ins>
+      <ins>retirer ses troupes de Chypre et de </ins>
   
 
   
-      de s’abstenir de toute action unilatérale susceptible d’entériner sur le terrain la division permanente de l’î
+      s’abstenir de toute action unilatérale susceptible d’entériner sur le terrain la division permanente de l’île
   
 
   
-      <del>le et de </del>
+      <del> </del>
   
 
   
-      <ins>le, et de    </ins>
+      <ins>, </ins>
   
 
   
-      s’abstenir de toute action qui 
+      et de
   
 
   
-      <del>   </del>
+      <del> </del>
   
 
   
-      compromettrait l’équilibre démographique; 
+      <ins>    </ins>
   
 
   
-      <del>condamne le fait que la Turquie continue </del>
+      s’abstenir de toute action qui
   
 
   
-      <ins>et les zones de Chypre non contrôlées par le gouvernement; condamne le fait que la Turquie continue de violer les résolutions sécurité des </ins>
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
+  
+
+  
+      compromettrait l’équilibre démographique;
+  
+
+  
+      <ins> et les zones de Chypre non contrôlées par le gouvernement;</ins>
+  
+
+  
+       condamne le fait que la Turquie continue 
+  
+
+  
+      <ins>de violer les résolutions sécurité des </ins>
   
 
   
@@ -834,76 +1143,203 @@
       l’ouverture de la ville de Varosha au public; estime que cette démarche sape la confiance mutuelle et, partant, la perspective d’une reprise des pourparlers directs pour une solution globale au problème chypriote; invite le gouvernement turc à reprendre le dialogue sur la base du format des Nations unies, qui représente la seule voie viable vers la réconciliation; exhorte à relancer les négociations de réunification de Chypre sous l’égide du Secrétaire général de l’Organisation des Nations unies dès que possible et là où elles avaient été laissées à Crans Montana en 2017; renouvelle sa demande à la Turquie afin qu’elle s’acquitte de son obligation de mise en œuvre intégrale et non discriminatoire du protocole additionnel à l’accord d’Ankara à l’égard de tous les États membres, y compris la République de Chypre; regrette que la Turquie n’ait toujours pas progressé sur la voie d’une normalisation de ses relations avec la République de Chypre; souligne que la coopération reste essentielle dans des domaines tels que la justice et les affaires intérieures ainsi que le droit aérien et les communications aériennes avec tous les États membres de l’Union, y compris la République de Chypre ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°17 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="17">
+            <header>📝 Amendement n°17 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
-
-  
-      17. salue l’adoption, sur le principe, d’un nouveau plan d’action sur les droits de l’homme par les autorités turques en mars 2021; remarque cependant qu’un certain nombre de questions sous-jacentes ne sont pas traitées et que l’engagement du gouvernement sera mesuré à l’aune de l’étendue de la mise en œuvre du plan et des réformes entreprises pour assurer son application à tous les citoyens, sans discrimination; prie instamment les autorités turques d’intensifier leurs efforts pour remédier efficacement à la situation désastreuse des Kurdes, 
-  
+<p>
 
   
-      <ins>des Assyriens, </ins>
+      17. salue l’adoption, sur le principe, d’un nouveau plan d’action sur les droits de l’homme par les autorités turques en mars 2021; remarque cependant qu’un certain nombre de questions sous-jacentes ne sont pas traitées et que l’engagement du gouvernement sera mesuré à l’aune de l’étendue de la mise en œuvre du plan et des réformes entreprises pour assurer son application à tous les citoyens, sans discrimination; prie instamment les autorités turques d’intensifier leurs efforts pour remédier efficacement à la situation désastreuse des Kurdes,
   
 
   
-      des Arméniens et, en particulier, 
+      <ins> des Assyriens,</ins>
   
 
   
-      <del>la situation en matière </del>
+       des Arméniens et, en particulier, 
   
 
   
-      <ins>les conditions </ins>
+      <del>la situation en matière</del>
   
 
   
-      de logement et d’éducation de la communauté rom, qui doivent toujours faire face à des niveaux comparativement plus élevés de pauvreté, de chômage, de discrimination et d’exclusion;
+      <ins>les conditions</ins>
+  
+
+  
+       de logement et d’éducation de la communauté rom, qui doivent toujours faire face à des niveaux comparativement plus élevés de pauvreté, de chômage, de discrimination et d’exclusion;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2250(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0149_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
   
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-06-07-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport annuel sur la Turquie: s’il dénonce pour une fois avec justesse l’attitude du régime d’Erdoğan, il n’y est toujours pas question de mettre un terme au processus d’adhésion de la Turquie à l’UE ni, a fortiori, de la sanctionner pour ses multiples provocations et agressions.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté contre ce texte.Il est louable de dénoncer vivement les violations de l’état de droit en Turquie. Toutefois, je ne saurais m’associer à un rapport qui persiste à préconiser un élargissement de l’Union européenne à ce pays.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce texte est un rapport non contraignant dressant le bilan de l’avancée de la Turquie en matière de droits de l’homme et d’état de droit, eu égard à son statut de candidat à l’adhésion à l’Union européenne. Il estime que le Parlement ne peut envisager une reprise des négociations d’adhésion avec la Turquie car aucun progrès clair et significatif n’est perceptible, et appelle à renforcer les relations Turquie-UE via les programmes d’aide aux pays frontaliers de l’UE ainsi qu’aux pays candidats. Le texte exprime également son soutien au processus de libéralisation des visas pour les ressortissants turcs une fois que le pays remplira les conditions fixées. Étant opposé à l’adhésion de la Turquie à l’UE, aux programmes d’aide au titre de la préadhésion et à la libéralisation des visas pour les citoyens turcs, j’ai voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Ce rapport se montre très critique quant à l’attitude de la Turquie et confirme ainsi que mes positions de longue date à cet égard étaient justes. Je me suis donc opposée à ce dossier de manière très claire, dans mon refus total des négociations d’adhésion entre la Turquie et l’UE ainsi que des financements européens dirigés vers ce pays.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il ne propose aucunement de renoncer à l’adhésion de la Turquie à l’Union européenne, ce que je trouve d’une lâcheté incroyable.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté contre ce rapport 2021 concernant la Turquie. Le texte n’était pas assez clair sur la nécessité de mettre un terme définitif aux négociations d’adhésion de la Turquie à l’UE. Si je suis favorable à l’établissement d’un partenariat privilégié avec la Turquie, j’ai soutenu des dispositions et des amendements qui soulignent que cet État tiers ne pourra jamais faire partie de l’Union européenne, pour des raisons géographiques, culturelles et historiques. Compte tenu de l’attitude hostile adoptée par la Turquie vis-à-vis de certains États membres et du chantage migratoire qu’elle exerce régulièrement, j’ai par ailleurs demandé l’arrêt de tout versement de fonds européens à son profit.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            Ce rapport a le mérite de dénoncer vivement les manquements de la Turquie à l’état de droit et les divergences politiques profondes qui séparent le régime turc actuel des pays de l’Union européenne. Mais, malgré ces constats, il considère toujours qu’une adhésion de la Turquie à l’UE est envisageable à terme, ce qui constitue pour moi une ligne rouge. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Les relations entre l’Union européenne et la Turquie remontent à 1959 ; le pays est considéré par l’UE comme un partenaire stratégique sur les questions d’immigration, de sécurité, de lutte contre le terrorisme et de commerce. La Turquie est candidate à l’adhésion à l’Union européenne depuis 1987. Cependant, elle ne cesse de s’éloigner, de son plein gré, de ses «partenaires» européens. Les négociations demeurent aujourd’hui au point mort. D’un côté, le rapport se montre très critique envers la Turquie, concédant par endroits qu’elle a le droit, comme État souverain, d’avoir sa propre politique en fonction de ses propres intérêts. Il adopte également certaines exigences avec lesquelles je suis en accord, telles que la gestion directe par l’Union des fonds d’assistance humanitaire et de développement. Cependant, le texte ne renonce pas fermement à la perspective de l’adhésion. De plus, il ne formule de reproches envers la Turquie qu’à partir de l’idéologie de l’Union européenne. Or, là où la majorité de ce Parlement ne voit qu’un problème de droits de l’homme et de démocratie, je vois une différence civilisationnelle, culturelle, historique, géopolitique et religieuse engendrant une incompatibilité essentielle entre nous. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Les relations entre l’Union européenne et la Turquie remontent à 1959 par l’accord d’association d’Ankara (1963) et l’Union douanière (1995); le pays est considéré par l’UE. Cependant, il ne cesse de s’éloigner, de son plein gré, de ses «partenaires» européens. En 2018, le Conseil gèle les négociations, qui demeurent aujourd’hui au point mort. En cause: la tentative de coup d’État de 2016, la concentration du pouvoir politique par Erdoğan, les exactions en Méditerranée orientale envers Chypre et la Grèce, etc.Le rapport impute à la Turquie des faits dont les États membres de l’Union européenne sont également les auteurs. Par ailleurs, le texte entretient des angles morts habituels à cette assemblée.Sur le plan stratégique, le rapport se pose en faveur du renforcement du cadre commun de l’OTAN.Mais, surtout, c’est l’extravagante prétention de l’Union européenne de pratiquer l’ingérence politique et financière au sein de la société et des collectivités turques qui pose problème, non seulement pour des motifs de souveraineté, mais aussi parce qu’il s’agit d’une attitude totalement contraire à notre position en matière internationale.Tous ces éléments justifient un vote contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport qui, bien qu’il énonce les nombreux manquements de la Turquie, ne renonce toujours pas au processus d’adhésion en faveur de ce pays.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197494</div>
+            
+            <header><b>Nathalie LOISEAU</b> | Renaissance</header>
+            
+                <p> – Madame la Présidente, Monsieur le Commissaire, il paraît que le président Erdogan demande que la première ministre suédoise limoge son ministre de la défense, nous l&#39;avons appris ce week-end. Alors puisque le président turc a des exigences, autant lui dire nous aussi ce que nous attendons de lui. </p>
+            
+                <p>Monsieur Erdogan, cessez de prendre en otage la demande d&#39;adhésion de la Finlande et de la Suède à l&#39;OTAN. Cette demande est légitime. Votre chantage ne l&#39;est pas. Monsieur le Président, cessez de croire que la Turquie est chez elle en Syrie. Vous portez atteinte à la lutte contre Daech, un terrorisme qui a endeuillé notre continent. Monsieur Erdogan, respectez la souveraineté de la Grèce et de Chypre, elle n&#39;est pas négociable. Monsieur le Président, n&#39;achetez pas le blé que la Russie vole aux Ukrainiens, n&#39;accueillez pas à bras ouverts les oligarques. </p>
+            
+                <p>La guerre d&#39;Ukraine est un tournant historique. Il vous revient cette fois-ci, pour une fois, de mettre la Turquie du bon côté de l&#39;histoire. Vous le pouvez encore, mais le temps presse.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197531</div>
+            
+            <header><b>Gwendoline DELBOS-CORFIELD</b> | Les Écologistes</header>
+            
+                <p> – Madam President, this is a very good report and a strong report and so it needs to be followed with strong actions. This report highlights that our approach so far has failed to seriously address the human rights crisis in Turkey that is becoming extremely dire alongside the erosion of democracy and the rule of law.</p>
+            
+                <p>The Turkish authorities have constantly disregarded the rulings by the European Court of Human Rights. We were one month ago, less than one month ago, in this Parliament, discussing the concerns we have on the aggravated life sentence handed to Osman Kavala in 2022. The treatment of migrants at the border in the country is a disgrace for EU because we continue to subcontract how we deal with the situation. We still consider them as a real partner and we act as though we believe that there is a shared mutual respect for human rights, and there is not.</p>
+            
+                <p>And also, discrimination and criminalisation of Kurds in Turkey is not met with enough scrutiny on our part and in general by international stakeholders. Generalised discrimination of minorities continues, while the European Commission continues to engage in high—level dialogues. Of course, it is a step in the right direction that the EU—Turkey Joint Parliamentary Committee took place earlier this year. But this report shows that we urgently need a much more severe attitude that can no longer be based on mutual trust.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

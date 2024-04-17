@@ -5,17 +5,16 @@ lis = document.getElementById("list").getElementsByTagName('article');
 
 getSelectedValue = (select) => select.selectedIndex > 0 ? select.options[select.selectedIndex].text : '' 
 
-
 function filter() {
   query = input.value.toLowerCase();
   tokens = query.split(/\s+/).map((token) => token).filter(Boolean)
 
   for (const li of lis) {
-    string = li.getElementsByTagName("a")[0].innerText.toLowerCase();
-    header = li.getElementsByTagName("header")[0].innerText;
-    if ((tokens.length == 0 || tokens.every((token) => string.includes(token)))
-      && header.includes(getSelectedValue(theme))
+    string = li.getElementsByTagName("a")[0].textContent.toLowerCase();
+    header = li.getElementsByTagName("header")[0].textContent;
+    if (header.includes(getSelectedValue(theme))
       && header.includes(getSelectedValue(area))
+      && (tokens.length == 0 || tokens.every((token) => string.includes(token)))
     ) {
       li.style.display = "";
     } else {

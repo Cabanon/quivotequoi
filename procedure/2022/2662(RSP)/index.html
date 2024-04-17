@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Résolution sur la situation des Roms vivant dans des campements dans l’UE</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Résolution sur la situation des Roms vivant dans des campements dans l’UE</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(486/633 * 100%)">486</div>
-  
-  
-    <div class="-" style="width: calc(109/633 * 100%)">109</div>
+    <div class="for" style="width: calc(486/633 * 100%)">486</div>
   
   
-    <div class="0" style="width: calc(38/633 * 100%)">38</div>
+    <div class="against" style="width: calc(109/633 * 100%)">109</div>
+  
+  
+    <div class="abstention" style="width: calc(38/633 * 100%)">38</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,35 +88,26 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(54/75 * 100%)">54</div>
+    <div class="for" style="width: calc(54/75 * 100%)">54</div>
   
   
-    <div class="-" style="width: calc(19/75 * 100%)">19</div>
+    <div class="against" style="width: calc(19/75 * 100%)">19</div>
   
   
-    <div class="0" style="width: calc(2/75 * 100%)">2</div>
+    <div class="abstention" style="width: calc(2/75 * 100%)">2</div>
   
 </div>
  
 </section>
-            <a href="/voting/148588">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/148588">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Inclusion sociale, pauvreté, revenu minimum</li>
-        
-    
-        
-        
-            <li>Politique sociale, charte et protocole social</li>
-        
     
         
         
@@ -124,153 +119,440 @@
             <li>Cohésion économique, sociale et territoriale</li>
         
     
+        
+        
+            <li>Inclusion sociale, pauvreté, revenu minimum</li>
+        
+    
+        
+        
+            <li>Politique sociale, charte et protocole social</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2662(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/B-9-2022-0413_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-10-05-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197615">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197629">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. réaffirme que la citoyenneté et les droits civiques s’accompagnent de devoirs et de responsabilités, et que les communautés roms sont dès lors tenues de faire des efforts et de faire preuve d’une approche proactive en matière d’intégration dans les sociétés européennes;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">124</div>
+  <div class="against">485</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/148547">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(124/619 * 100%)">124</div>
-  
-  
-    <div class="-" style="width: calc(485/619 * 100%)">485</div>
-  
-  
-    <div class="0" style="width: calc(10/619 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/148547">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 ter. déplore que, bien que les autorités européennes, nationales et locales investissent des montants considérables de fonds publics dans l’amélioration du logement et des conditions de vie des communautés roms, ces dépenses donnent de mauvais résultats en termes d’intégration et de réduction du taux de criminalité;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°3 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>15 bis. met en exergue que les statistiques de la criminalité dans certains pays révèlent une surreprésentation des Roms dans plusieurs types de criminalité, notamment le larcin; souligne, en outre, que les données suggèrent une corrélation entre les campements roms illégaux et les taux de criminalité;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°4 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>15 ter. invite les États membres à coopérer en vue de démanteler les réseaux criminels roms, qui sont particulièrement bien représentés dans les villes européennes qui accueillent le plus grand nombre de touristes;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2662(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/B-9-2022-0413_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
   
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-10-05-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Reconquête!</header>
+            . – J’ai voté contre cette résolution qui, avec une partialité et un aveuglement stupéfiants, culpabilise les Européens et idéalise les populations Roms, demandant à mettre des moyens considérables - dont le déploiement devrait être surveillé par Bruxelles - au service de ces derniers.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            En 2011, la Commission européenne avait présenté une stratégie pour les Roms à l’horizon 2020, qui fixait des objectifs en matière d’éducation, de travail, de santé et de logement. Depuis, elle a publié un plan décennal qui déplore les progrès limités et fixe de nouveaux objectifs, cette fois dans sept domaines.La question orale et la proposition de résolution qui nous concernent ici se concentrent sur l’application effective de ce plan dans les États membres, avec comme angle d’approche les enfants et l’accès au logement. Cet ensemble de textes ne tient, en revanche, pas du tout compte de certaines réalités, à savoir, notamment, que ce sont souvent les parents eux-mêmes qui choisissent de ne pas envoyer leurs enfants dans les établissements concernés par la ségrégation scolaire. Le texte est par ailleurs pétri de partis pris et ignore la question de la criminalité et du refus d’insertion.Pour cette raison, j’ai voté contre. C’est un thème sur lequel je m’étais pleinement investie par le passé, soulignant notamment les causes complexes de la ségrégation scolaire.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Cette résolution aborde les difficultés que vivent certaines communautés Roms vivant sur le territoire de l’Union, notamment en matière de logement, de santé, de chômage et d’éducation des enfants. Ces difficultés représentant des freins à l’intégration sociale des Roms, le texte appelle à des actions aux niveaux nationaux et européen. Favorable à des mesures permettant à ces communautés une meilleure intégration, j’ai voté pour ce texte. Toutefois, je me suis opposé ou abstenu de voter sur différents amendements, notamment ceux proposant un accès gratuit aux crèches et la création d’un coordinateur pour les Roms au sein du Parlement européen, ce qui ne ferait qu’ajouter plus de bureaucratie à une institution qui en est suffisamment pourvue.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Le groupe Identité et Démocratie a déposé quatre amendements, rappelant la surreprésentation des Roms dans les statistiques de criminalité et la nécessité d’un effort d&#39;assimilation réel de la part des Roms. Je ne peux soutenir cet ensemble de textes, qui préconise une tutelle de l’Union européenne sur les programmes nationaux et se fonde sur des présupposés partiaux. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre cette question orale car elle propose une tutelle de l’Union européenne sur les politiques nationales en matière d’intégration des communautés roms au sein des États membres.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport sur la situation des personnes roms vivant dans des campements dans l’Union. Le texte dresse l’état des lieux des difficultés que rencontrent certaines communautés roms sur le territoire européen en matière de logement, de santé, de chômage et d&#39;éducation pour leurs enfants. Il émet une série de recommandations pour favoriser l&#39;intégration sociale des Roms, au niveau national comme au niveau européen.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Cette résolution vise à présenter les observations et les recommandations du Parlement européen sur les conditions de vie des personnes roms vivant dans des campements de fortune au sein de l’Union. Elle rappelle l’urgence d’agir de manière coordonnée à l’échelle européenne, constate les multiples violations des droits humains des personnes roms, demande de garantir effectivement leur droit au logement et à l’éducation, et appelle à la mise en place d’un plan global d’éradication des bidonvilles d’ici à 2030. J’ai donc voté pour ce texte qui alerte sur la situation catastrophique des personnes roms et demande à l’Union européenne d’agir enfin à la hauteur de l’enjeu.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Je n’ai pas soutenu ce texte, car il préconise une tutelle de l’Union européenne sur les programmes nationaux et se fonde sur des présupposés partiaux.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Je n’ai pas soutenu ce texte, car il préconise une tutelle de l’Union européenne sur les programmes nationaux et se fonde sur des présupposés partiaux.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            En 2011, la Commission a présenté une stratégie pour les Roms à horizon 2020, comprenant des objectifs dans quatre domaines clefs : l’éducation, le travail, la santé et le logement. Ces objectifs s’appuient sur des financements tirés des fonds structurels européens, en fonction de stratégies nationales des États membres.En particulier, le Fonds social européen établit des objectifs spécifiques en faveur des «groupes marginalisés que sont par exemple les Roms». Le Fonds européen de développement régional est, notamment, aussi concerné par ce thème, qui fait partie intégrante du semestre européen.La question orale met l’accent sur l’application effective des cadres nationaux, le sort des enfants et l’accès au logement.Le groupe «Identité et Démocratie» a déposé quatre amendements, rappelant la surreprésentation des Roms dans les statistiques de criminalité et la nécessité d’une assimilation réelle de la part des Roms.On ne saurait soutenir cet ensemble de textes, qui préconise une tutelle de l’Union européenne sur les programmes nationaux et se fonde sur des présupposés partiaux. J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            . – Le groupe «Identité et Démocratie» a déposé quatre amendements, rappelant la surreprésentation des Roms dans les statistiques de criminalité et la nécessité d’une assimilation réelle de la part des Roms. On ne saurait soutenir cet ensemble de textes, qui préconise une tutelle de l’Union européenne sur les programmes nationaux et se fonde sur des présupposés partiaux. J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre cette résolution qui occulte les efforts déployés dans certains États membres en faveur des Roms mais aussi certaines pratiques persistantes au sein de certaines communautés Roms, telles que les mariages précoces ou la mendicité infantile.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            
+                <p>Il faut dire que traiter de cette question implique une bonne dose de lucidité, notamment en ce qui concerne la volonté réelle d’assimilation de tant de Roms au sein des populations majoritaires. À cet égard, la persistance de pratiques qui heurtent profondément notre sensibilité, telles que le mariage précoce ou le travail des enfants, justifie certaines spécificités. Cette persistance peut également expliquer en partie que le bilan des politiques publiques déployées ces dernières années en faveur de ces populations soit d’une rare indigence. Ce n’est pourtant pas faute de générosité: en témoignent, dans le domaine éducatif par exemple, les quotas et autres bourses d’études mis à disposition par certains États membres. </p>
+            
+                <p>On ne saurait par ailleurs évoquer la ségrégation scolaire sans reconnaître qu’elle résulte trop souvent, comme je l’avais souligné par le passé, de décisions de parents d’élèves en désaccord avec la gestion de l’école quant aux perspectives de leurs enfants. </p>
+            
+                <p>On le voit: les causes du statu quo actuel sont diverses et elles appellent une réponse mesurée. Tant que la Commission s’arc-boutera sur une condamnation sans nuance de certains États membres, une quelconque amélioration semble hors de portée.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">30482</div>
+            
+            <header><b>Younous OMARJEE</b> | La France Insoumise</header>
+            
+                <p> – Madame la Présidente, Madame la Commissaire, Monsieur le Ministre, au cœur de l’Union européenne se trouvent des ghettos de Roms constitués de bidonvilles sur des montagnes de déchets, sans accès à l’eau potable, sans route, sans accès équitable aux soins, à l’éducation, au marché du travail ni aux aides sociales. C’est à cette réalité moyenâgeuse que nous avons été confrontés lors de la mission que notre commission REGI a menée dans l’est de la Slovaquie, et cette réalité est la même partout en Europe. </p>
+            
+                <p>C’est pourquoi je pose la question: comment cela est-il possible, avec les 370 milliards de la cohésion? Cette réalité, Madame la Commissaire, dit un racisme institutionnel, et il y a une complicité à tous les étages pour que rien ne change. Je vous le dis en tant que président de la commission REGI: la programmation 2021-2027 devra voir une réelle concrétisation à l’égard des communautés marginalisées. C’est le devoir et l’obligation de la Commission européenne d&#39;y veiller et de prendre toutes les mesures en cas de manquement. </p>
+            
+                <p>Madame la Présidente, pour terminer je veux dire que nous n’acceptons pas, en Europe, une caste d’intouchables au sein de notre Union. </p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Organisation du marché de l&#39;électricité de l&#39;Union</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,27 +22,94 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Organisation du marché de l&#39;électricité de l&#39;Union</h2>
 
 
 
-
 <h3>🎯 Votes principaux</h3>
+
+    <article>
+    <header>👎 Rejet du texte | 
+
+❌️ Rejeté
+
+</header>
+    
+        <i>Demandé par 
+
+
+</i>
+        <hr>
+    
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
+        <section>
+
+<div class="votes">
+  
+    <div class="for" style="width: calc(59/578 * 100%)">59</div>
+  
+  
+    <div class="against" style="width: calc(487/578 * 100%)">487</div>
+  
+  
+    <div class="abstention" style="width: calc(32/578 * 100%)">32</div>
+  
+</div>
+</section>
+        <hr>
+        <b>🇫🇷 Votes des députés français</b>
+        
+        
+            <section>
+
+
+
+<div class="votes">
+  
+    <div class="for" style="width: calc(9/64 * 100%)">9</div>
+  
+  
+    <div class="against" style="width: calc(39/64 * 100%)">39</div>
+  
+  
+    <div class="abstention" style="width: calc(16/64 * 100%)">16</div>
+  
+</div>
+ 
+</section>
+            <a role="button" href="/voting/168060">🗳 Voir le détail du vote</a>
+        
+    
+    </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -49,22 +117,7 @@
     
         
         
-            <li>Politiques communautaires</li>
-        
-    
-        
-        
-            <li>Coopération et accords en matière d&#39;énergie</li>
-        
-    
-        
-        
             <li>Politique de l&#39;énergie</li>
-        
-    
-        
-        
-            <li>Réseaux transeuropéens d&#39;énergie</li>
         
     
         
@@ -74,22 +127,375 @@
     
         
         
+            <li>Réseaux transeuropéens d&#39;énergie</li>
+        
+    
+        
+        
+            <li>Politiques communautaires</li>
+        
+    
+        
+        
             <li>Gaz, électricité, gaz naturel, biogaz</li>
+        
+    
+        
+        
+            <li>Coopération et accords en matière d&#39;énergie</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/0077B(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/0077B(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2024-0151_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-11-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,124693,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,124693">🇫🇷 Renaissance</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197626,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197626,197629,197615">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+        
+        
+    
+        
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">GUE/NGL</div>
+                
+
+<p>
+
+  
+      <ins>7 bis) l’article suivant est inséré:  «Article 31 ter  Fournisseur national unique d’électricité  1. Les États membres peuvent confier au gestionnaire du réseau de distribution ou de transport à l’échelle nationale le rôle de fournisseur d’électricité unique pour tous les consommateurs finals sur le territoire de cet État membre.  2. Si un gestionnaire de réseau de transport assume la tâche d’être le seul fournisseur d’électricité opérant dans cet État membre, il établit un prix de l’électricité payé par les consommateurs finals sur la base du coût moyen net de l’électricité produite dans l’État membre, de l’amortissement des nouveaux investissements dans la production et le stockage d’électricité, du coût net de l’importation d’électricité, des taxes applicables et de l’accès au réseau.  3. Le prix fixé par le gestionnaire de réseau de transport ou de distribution agissant en tant que fournisseur national d’électricité conformément aux conditions fixées au paragraphe 2 est sans préjudice du tarif établi par le gestionnaire de réseau de transport conformément à l’article 18 pour réaliser tous les    investissements nécessaires liés au réseau et aux capacités de stockage de l’électricité.  4. Le prix de péréquation fixé conformément au paragraphe 2 est sans préjudice du système de tarification spéciale applicable aux ménages en situation de précarité énergétique et aux entreprises grandes consommatrices d’énergie.»</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">GUE/NGL</div>
+                
+
+<p>
+
+  
+      Les États membres veillent à ce que les 
+  
+
+  
+      <del>clients vulnérables soient protégés contre les interruptions de fourniture d’électricité. Cette protection est fournie dans</del>
+  
+
+  
+      <ins>interruptions de fourniture d’électricité soient interdites pour les PME, les organisations caritatives et les ménages.      L’électricité fournie aux ménages ne doit jamais être inférieure à 9 kVA ou à une capacité supérieure si une puissance de 9 kVA n’est pas suffisante pour garantir la satisfaction des besoins fondamentaux et</ins>
+  
+
+  
+       le 
+  
+
+  
+      <del>cadre</del>
+  
+
+  
+      <ins>respect</ins>
+  
+
+  
+       de la 
+  
+
+  
+      <del>notion de clients vulnérables visée à l’article 28, paragraphe 1, de la présente directive et sans préjudice des mesures énoncées à l’article10, paragraphe 11</del>
+  
+
+  
+      <ins>dignité des êtres humains, tels que le chauffage de l’eau, le chauffage, la climatisation et la cuisine, ainsi que l’accès aux technologies de l’information et de la communication en même temps.  L’électricité fournie aux PME ne doit pas empêcher l’entreprise d’exercer ses activités</ins>
+  
+
+  
+      .
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">GUE/NGL</div>
+                
+
+<p>
+
+  
+      <ins>10 bis)L’article suivant est inséré:  «Article 66 ter  Évaluation des incidences de la libéralisation du secteur de l’énergie  Au plus trad le ... [1 an à compter de la date d’entrée en vigueur du règlement modifié sur l’organisation du marché de l’électricité], la Commission publie une étude détaillée qui analyse les effets sur les prix payés par les consommateurs finals, le développement de la capacité de production d’électricité et la qualité du service fourni à ces mêmes consommateurs dans chaque État membre, en les comparant au niveau de prix et de qualité des services constaté avant ladite libéralisation du secteur de l’énergie.  La Commission évalue de manière explicite, aussi bien à l’échelle des États membres que de l’Union européenne, si un monopole public de la production d’électricité, avec et sans fourniture, permettrait de mieux atteindre les objectifs susmentionnés en matière de développement de la production d’électricité, de réduction de prix et de qualité du service fourni.»</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">GUE/NGL</div>
+                
+
+<p>
+
+  
+      <ins>10 ter) L’article suivant est inséré:  «Article 66 quater  Accès à des prix de l’électricité abordables et stables grâce à des prix réglementés pour les consommateurs finals.  1. Un prix de détail réglementé de l’électricité peut être fixé par les États membres et être appliqué à l’intégralité de la consommation d’électricité de tous les consommateurs finals qui souhaitent opter pour une telle offre, y compris les ménages, les entreprises, les organisations caritatives et les autorités publiques.  2. Tous les consommateurs d’électricité finals peuvent profiter de ce prix réglementé s’ils souhaitent ne pas opter pour une offre fondée sur le marché.  3. Le prix de détail réglementé correspond au prix moyen national de l’électricité qui tient compte du coût des importations de l’électricité, des taxes applicables et de l’accès au réseau. Les régulateurs nationaux de l’énergie calculent ce prix tous les six mois.  4. Lorsque ce prix a augmenté de 15 % par rapport à l’année précédente, les    États membres peuvent fixer un prix réglementé de l’électricité à un niveau inférieur au prix fixé en vertu du paragraphe 3.  5. Les consommateurs finals qui souhaitent changer de fournisseur afin de bénéficier du prix de détail réglementé ne se voient pas imposer de frais par leur fournisseur actuel.</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
+
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

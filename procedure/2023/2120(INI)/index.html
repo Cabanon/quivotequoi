@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Activités du Médiateur européen – rapport annuel 2022</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Activités du Médiateur européen – rapport annuel 2022</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(543/619 * 100%)">543</div>
-  
-  
-    <div class="-" style="width: calc(12/619 * 100%)">12</div>
+    <div class="for" style="width: calc(543/619 * 100%)">543</div>
   
   
-    <div class="0" style="width: calc(64/619 * 100%)">64</div>
+    <div class="against" style="width: calc(12/619 * 100%)">12</div>
+  
+  
+    <div class="abstention" style="width: calc(64/619 * 100%)">64</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,19 +88,20 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(68/69 * 100%)">68</div>
+    <div class="for" style="width: calc(68/69 * 100%)">68</div>
   
   
   
-    <div class="0" style="width: calc(1/69 * 100%)">1</div>
+    <div class="abstention" style="width: calc(1/69 * 100%)">1</div>
   
 </div>
  
 </section>
-            <a href="/voting/163051">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/163051">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -119,318 +124,448 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/2120(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0414_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-01-17-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,124693,197694,197697,197698,204418,245018">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,204418,245018">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,124693">🇫🇷 Renaissance</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197626,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197626,197629,197615">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
-
-  
-      O. considérant que la Médiatrice a ouvert une enquête stratégique sur les retards systémiques et importants dans la manière dont la Commission traite les demandes d’accès du public aux 
-  
+<p>
 
   
-      <del>documents;</del>
+      O. considérant que la Médiatrice a ouvert une enquête stratégique sur les retards systémiques et importants dans la manière dont la Commission traite les demandes d’accès du public aux documents
   
 
   
-      <ins>documents, y compris des documents relatifs à l’achat de vaccins contre la COVID-19;</ins>
+      <ins>, y compris des documents relatifs à l’achat de vaccins contre la COVID-19</ins>
   
 
   
-       que la Médiatrice a constaté un cas de mauvaise administration dans la manière dont la Commission traite ces demandes, notamment dans le traitement des demandes de réexamen des décisions initiales («demandes confirmatives6»);  
+      ; que la Médiatrice a constaté un cas de mauvaise administration dans la manière dont la Commission traite ces demandes, notamment dans le traitement des demandes de réexamen des décisions initiales («demandes confirmatives6
   
 
   
-      <del>  </del>
+      <del>»);    </del>
+  
+
+  
+      <ins>»);  </ins>
   
 
   
       _________________  6 Médiateur européen, «Decision on the time the European Commission takes to deal with requests for public access to documents (strategic inquiry que met la Commission européenne pour traiter les demandes d’accès du public aux documents (enquête stratégique
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">185</div>
+  <div class="against">423</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    
+    <a href="/voting/163224">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(185/617 * 100%)">185</div>
-  
-  
-    <div class="-" style="width: calc(423/617 * 100%)">423</div>
-  
-  
-    <div class="0" style="width: calc(9/617 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/163224">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>P bis. considérant qu’en 2022, le Médiateur a continué de recevoir un grand nombre de plaintes liées à la pandémie de COVID-19, principalement en ce qui concerne les mesures mises en place par les autorités nationales en réaction à la pandémie et le droit de circuler librement au sein de l’Union; que la Médiatrice a répondu même aux plaintes hors mandat, et à toutes les personnes sollicitant de l’aide, dans la langue de leur plainte ou dans leur langue de préférence en apportant des précisions concernant le mandat du Médiateur et, dans la mesure du possible, en conseillant aux plaignants de s’adresser à d’autres organismes1 bis;  _________________  1 bis Médiateur européen, Rapport annuel 2022, 25 avril 2023.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">194</div>
+  <div class="against">373</div>
+  <div class="abstention">39</div>
+</span>
+
+  
+    
+    <a href="/voting/163225">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(194/606 * 100%)">194</div>
-  
-  
-    <div class="-" style="width: calc(373/606 * 100%)">373</div>
-  
-  
-    <div class="0" style="width: calc(39/606 * 100%)">39</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/163225">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>P ter. considérant qu’en 2022, la Médiatrice a estimé que la manière dont la Commission a traité une demande d’accès du public à des documents relatifs à la qualité des masques chirurgicaux distribués pendant la pandémie de COVID-191 bis constituait un cas de mauvaise administration; que cette décision est fondée sur le fait que la Commission n’a pas accordé un accès complet à trois documents en attente et que, par conséquent, en raison du blocage de la Commission pendant près de deux ans, le plaignant n’est actuellement pas en mesure d’utiliser les informations divulguées aux fins initialement prévues;  _________________  1 bis European Ombudsman decision of 25 May 2022 on how the European Commission handled a request for public access to documents concerning the quality of medical masks distributed during the COVID-19 pandemic (case européen du 25 mai 2022 sur la manière dont la Commission européenne a traité une demande d’accès du public à des documents concernant la qualité des masques chirurgicaux distribués pendant la pandémie de COVID-19 (affaire</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">220</div>
+  <div class="against">365</div>
+  <div class="abstention">32</div>
+</span>
+
+  
+    
+    <a href="/voting/163226">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(220/617 * 100%)">220</div>
-  
-  
-    <div class="-" style="width: calc(365/617 * 100%)">365</div>
-  
-  
-    <div class="0" style="width: calc(32/617 * 100%)">32</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/163226">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>T bis. considérant qu’en 2022, constatant l’absence flagrante d’informations publiques, la Médiatrice a demandé à la Commission comment elle comptait garantir la transparence dans les négociations des plans de relance nationaux, comment elle garantirait le contrôle public des jalons atteints par les États membres et comment elle comptait surveiller les audits1 bis;  _________________  1 bis Médiateur européen, «Ombudsman asks Commission how it will ensure accountability of recovery fund spending» (La Médiatrice demande à la Commission comment elle garantira l’obligation de rendre compte des dépenses des fonds de relance), 28 février 2022.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">159</div>
+  <div class="against">358</div>
+  <div class="abstention">99</div>
+</span>
+
+  
+    
+    <a href="/voting/163227">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(159/616 * 100%)">159</div>
-  
-  
-    <div class="-" style="width: calc(358/616 * 100%)">358</div>
-  
-  
-    <div class="0" style="width: calc(99/616 * 100%)">99</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/163227">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | Partie 1 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | Partie 1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(265/624 * 100%)">265</div>
-  
-  
-    <div class="-" style="width: calc(348/624 * 100%)">348</div>
-  
-  
-    <div class="0" style="width: calc(11/624 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/163212">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | Partie 2 | 
 
+🚫 Annulé
+
+</header>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>14 bis. invite la Médiatrice à continuer d’exhorter la Commission à publier immédiatement les contrats non expurgés liés à l’achat de vaccins contre la COVID- 19;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(254/620 * 100%)">254</div>
-  
-  
-    <div class="-" style="width: calc(349/620 * 100%)">349</div>
-  
-  
-    <div class="0" style="width: calc(17/620 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/163217">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    ECR
     
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/2120(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0414_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">254</div>
+  <div class="against">349</div>
+  <div class="abstention">17</div>
+</span>
+
   
+    
+    <a href="/voting/163217">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-01-17-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

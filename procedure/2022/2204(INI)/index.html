@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Rapport 2022 de la Commission concernant la Serbie</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Rapport 2022 de la Commission concernant la Serbie</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(508/621 * 100%)">508</div>
-  
-  
-    <div class="-" style="width: calc(76/621 * 100%)">76</div>
+    <div class="for" style="width: calc(508/621 * 100%)">508</div>
   
   
-    <div class="0" style="width: calc(37/621 * 100%)">37</div>
+    <div class="against" style="width: calc(76/621 * 100%)">76</div>
+  
+  
+    <div class="abstention" style="width: calc(37/621 * 100%)">37</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(39/71 * 100%)">39</div>
+    <div class="for" style="width: calc(39/71 * 100%)">39</div>
   
   
-    <div class="-" style="width: calc(23/71 * 100%)">23</div>
+    <div class="against" style="width: calc(23/71 * 100%)">23</div>
   
   
-    <div class="0" style="width: calc(9/71 * 100%)">9</div>
+    <div class="abstention" style="width: calc(9/71 * 100%)">9</div>
   
 </div>
  
 </section>
-            <a href="/voting/155042">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/155042">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -121,156 +126,321 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2204(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0172_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-05-10-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,124693,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,124693">🇫🇷 Renaissance</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197626,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197615">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197626,197629">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
-
-  
-      72. souligne l’importance de la coopération régionale en matière de crimes de guerre et de disparitions et demande instamment à la Serbie de s’attaquer au problème des personnes disparues et d’obtenir des résultats convaincants dans les poursuites engagées contre les auteurs de crimes de guerre, la restitution des trésors culturels volés et l’identification des fosses communes, et de mettre en œuvre la nouvelle stratégie nationale pour la poursuite des crimes de guerre; invite les autorités serbes à rendre justice aux victimes en reconnaissant et en respectant les verdicts des tribunaux concernant les crimes de guerre, en luttant contre l’impunité pour les crimes commis en temps de guerre; 
-  
+<p>
 
   
-      <ins>salue la déclaration sur les personnes disparues adoptée le 2 mai 2023 dans le cadre du dialogue entre Belgrade et Pristina et demande sa mise en œuvre; </ins>
+      72. souligne l’importance de la coopération régionale en matière de crimes de guerre et de disparitions et demande instamment à la Serbie de s’attaquer au problème des personnes disparues et d’obtenir des résultats convaincants dans les poursuites engagées contre les auteurs de crimes de guerre, la restitution des trésors culturels volés et l’identification des fosses communes, et de mettre en œuvre la nouvelle stratégie nationale pour la poursuite des crimes de guerre; invite les autorités serbes à rendre justice aux victimes en reconnaissant et en respectant les verdicts des tribunaux concernant les crimes de guerre, en luttant contre l’impunité pour les crimes commis en temps de guerre;
   
 
   
-      demande que les rapports sur la mise en œuvre soient transparents et exhaustifs; invite au respect des pratiques et des règles établies du droit international, y compris dans les initiatives visant à donner aux tribunaux serbes une compétence universelle pour les crimes de guerre commis sur le territoire de l’ex- Yougoslavie;
+      <ins> salue la déclaration sur les personnes disparues adoptée le 2 mai 2023 dans le cadre du dialogue entre Belgrade et Pristina et demande sa mise en œuvre;</ins>
+  
+
+  
+       demande que les rapports sur la mise en œuvre soient transparents et exhaustifs; invite au respect des pratiques et des règles établies du droit international, y compris dans les initiatives visant à donner aux tribunaux serbes une compétence universelle pour les crimes de guerre commis sur le territoire de l’ex- Yougoslavie;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
-    <article>
-    <header>📝 Amendement n°2 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>– vu l’accord de Bruxelles du 27 février 2023 et l’accord d’Ohrid du 18 mars 2023, ainsi que l’annexe relative à sa mise en œuvre,</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
-    <article>
-    <header>📝 Amendement n°3 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. souligne les liens historiques et d’amitié unissant les peuples de l’Union européenne et le peuple serbe;  Or. fr</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
     
-    <article>
-    <header>📝 Amendement n°4 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>73 bis. note avec satisfaction la demande expressément formulée par les autorités serbes auprès des Serbes de Bosnie pour que leurs représentants réintègrent les travaux des institutions de Bosnie- Herzégovine; demande à la Serbie de continuer d’agir en faveur de l’apaisement entre les autorités de la Republika Srpska et les autorités fédérales de Bosnie-Herzégovine;  Or. fr</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">140</div>
+  <div class="against">377</div>
+  <div class="abstention">108</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(140/625 * 100%)">140</div>
-  
-  
-    <div class="-" style="width: calc(377/625 * 100%)">377</div>
-  
-  
-    <div class="0" style="width: calc(108/625 * 100%)">108</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       80. prend acte des 
@@ -281,40 +451,52 @@
   
 
   
-      signaux positifs envoyés par les deux parties pour désamorcer les tensions; se réjouit des étapes positives vers l’acceptation de la proposition de l’Union, qui constitue une bonne base pour faire avancer la normalisation des relations entre la Serbie et le Kosovo; demande instamment à la Serbie de ne pas empêcher le Kosovo de devenir un membre à part entière des organisations internationales et invite les deux parties à accepter la proposition de l’Union et à y consacrer tous leurs efforts en vue de parvenir enfin à une solution durable à long terme; 
+      signaux positifs envoyés par les deux parties pour désamorcer les tensions; se réjouit des étapes positives vers l’acceptation de la proposition de l’Union, qui constitue une bonne base pour faire avancer la normalisation des relations entre la Serbie et le Kosovo; demande instamment à la Serbie de ne pas empêcher le Kosovo de devenir un membre à part entière des organisations internationales et invite les deux parties à accepter la proposition de l’Union et à y consacrer tous leurs efforts en vue de parvenir enfin à une solution durable à long terme;
   
 
   
-      <ins>regrette profondément, dans ce contexte, le vote de la Serbie au Comité des ministres du Conseil de l’Europe contre la décision relative à la demande d’adhésion du Kosovo, en violation de l’accord d’Ohrid du 18 mars 2023, ainsi que le boycott des élections locales du Kosovo dans les municipalités du nord le 23 avril 2023, orchestré par Belgrade, et l’intimidation des politiciens serbes de l’opposition à cette occasion; </ins>
+      <ins> regrette profondément, dans ce contexte, le vote de la Serbie au Comité des ministres du Conseil de l’Europe contre la décision relative à la demande d’adhésion du Kosovo, en violation de l’accord d’Ohrid du 18 mars 2023, ainsi que le boycott des élections locales du Kosovo dans les municipalités du nord le 23 avril 2023, orchestré par Belgrade, et l’intimidation des politiciens serbes de l’opposition à cette occasion;</ins>
   
 
   
-      souligne une nouvelle fois la nécessité d’améliorer la qualité du processus de dialogue en y associant tous les pans de la société, dont les femmes, mais aussi en renforçant la transparence à l’égard du public et en promouvant la participation active de la société civile;
+       souligne une nouvelle fois la nécessité d’améliorer la qualité du processus de dialogue en y associant tous les pans de la société, dont les femmes, mais aussi en renforçant la transparence à l’égard du public et en promouvant la participation active de la société civile;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°6 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       31. renouvelle son appel à la justice pour qu’elle intervienne concernant la démolition illégale de propriétés privées dans le quartier de Savamala à Belgrade; prend acte du fait que l’officier de police condamné a assumé seul l’entière responsabilité de l’affaire; exhorte les autorités à enquêter de manière approfondie sur cette affaire et à poursuivre tous les responsables sans délai;
@@ -324,43 +506,147 @@
       <ins> regrette que de hauts responsables du gouvernement serbe continuent à banaliser et à ridiculiser publiquement l’affaire Savamala, malgré la gravité des violations de l’état de droit en cause;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
+        
     
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport, qui fait montre, comme l’on pouvait s’y attendre, d’un parti pris marqué contre la Serbie, priée d’aligner sa politique étrangère sur celle de l’Union européenne, en particulier, on s’en doute, en ce qui concerne la Russie.Je n’y suis pas favorable, mais je ne suis pas davantage favorable à un élargissement de l’Union européenne aux Balkans.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            . – Ce rapport sur la Serbie constate des progrès du pays sur l’état de droit et les droits fondamentaux, la normalisation des relations avec le Kosovo. Il rappelle aussi que la Serbie doit continuer à faire des progrès dans certains domaines, dont la politique étrangère et le manque de sanctions à l’égard de la Russie, la liberté d&#39;expression, l&#39;indépendance des médias et la lutte contre la corruption. Je me suis abstenu sur ce texte, car il appelle notamment les États membres de l’Union à privilégier l’élargissement.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            Je me suis abstenue sur cette résolution concernant la Serbie. Le texte dressait le bilan des progrès réalisés par cet État tiers, candidat à l’entrée dans l’UE, dans des domaines tels que l’état de droit, la normalisation des relations avec le Kosovo, mais aussi des améliorations à fournir dans le champ de la liberté d’expression, de l’indépendance des médias et de la lutte contre la corruption. Mais il comportait aussi des dispositions en faveur de l’accélération du processus d’adhésion de la Serbie à l’Union. Conformément à mon engagement pris de ne soutenir aucun nouvel élargissement l’UE pendant mon mandat, je n’ai pas soutenu ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations et les recommandations du Parlement sur l’avancée des négociations d’adhésion à l’Union européenne de la Serbie. Il insiste à raison sur la nécessité de renforcer l’indépendance de la justice et la stabilité de l’état de droit, appelle à mieux protéger la liberté d’expression et l’indépendance des médias, et souligne les efforts restant à faire pour lutter contre les discriminations des minorités. Il n’insiste en revanche pas sur la nécessaire harmonisation sociale qui doit être un préalable à tout élargissement de l’Union et salue la coopération en matière migratoire avec l’agence Frontex, pourtant responsable de violations multiples des droits humains des exilés. Je me suis donc abstenue sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Le rapport multiplie les remarques partisanes au sujet de la vie politique intérieure serbe, continue à exiger l’alignement de Belgrade sur la politique étrangère de l’UE et maintient une vision favorable à l’élargissement de l’UE. Je m’y suis donc opposé.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Ce rapport fait le point sur la situation de la Serbie de l’année 2022, notamment sous le prisme de son adhésion future à l’UE, dont le statut de pays candidat lui a été attribué en 2012. Depuis lors, elle perçoit de l’UE nombre d’aides de pré-adhésion. Cependant, les deux conditions déterminantes à l’intégration définitive de la Serbie dans l’Union sont la normalisation des relations avec Pristina et l’alignement de la politique étrangère de l’Union. Sur la politique étrangère serbe, le refus d’alignement sur la question russe mais encore plus sur les liens ténus entretenus par Belgrade avec Moscou et le rapprochement avec la Chine continuent d’inquiéter l’UE.Ce texte est un ensemble de requêtes de l’UE qui, au prétexte de l’adhésion à l’organisation de la Serbie, exige des réformes politiques intérieures et extérieures.Ces réformes, en plus de constituer une véritable ingérence dans les affaires internes serbes, vont à l’encontre d’intérêts qui peuvent être les siens. Étant contre l’élargissement de l’UE et jugeant que les critiques exprimées ne témoignent que de la volonté de vassalisation de la Serbie et d’une ingérence complète dans ses affaires internes, j’ai voté contre ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            . – Ce rapport fait le point sur la situation de la Serbie, notamment sous le prisme de son adhésion future à l’UE, dont le statut de pays candidat lui a été attribué en 2012. Cependant, les deux conditions déterminantes à l’intégration définitive de la Serbie dans l’Union sont la normalisation des relations avec Pristina et l’alignement de la politique étrangère de l’Union. Ce texte est un ensemble de requêtes de l’UE qui, au prétexte de l’adhésion à l’organisation de la Serbie, exige des réformes politiques intérieures et extérieures. Ces réformes, en plus de constituer une véritable ingérence dans ses affaires internes, vont à l’encontre d’intérêts qui peuvent être les siens. Nous nous opposons au texte car nous sommes contre l’élargissement de l’UE et que nous jugeons que les critiques exprimées ne témoignent que de la volonté de vassalisation de la Serbie et d’une ingérence complète dans ses affaires internes. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport, car, comme l’année dernière, ce texte est un ensemble de requêtes de l’UE, qui, au prétexte de l’adhésion de la Serbie, exige des réformes politiques intérieures et extérieures. Ces réformes, en plus de constituer une véritable ingérence dans les affaires internes serbes, vont à l’encontre d’intérêts qui peuvent être les siens.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b>Marina MESURE</b> | La France Insoumise</header>
+            Cette résolution évalue la situation politique en Serbie et avance plus globalement la position du Parlement quant au processus d’adhésion de la Serbie à l’UE. Malgré une analyse pertinente de la situation relative aux droits de l’Homme en Serbie, le texte avance des recommandations contrevenant aux principes qui doivent présider les relations de voisinage de l’Union européenne. En effet, la résolution demande un alignement strict des positions de la Serbie sur celles de l’UE en matière de relations internationales en dépit de la souveraineté reconnue des États candidats à l’adhésion à l’UE dans ce domaine. De plus, la résolution adopte un positionnement sur la question du Kosovo qui constitue un parti pris en faveur de ce dernier et empêcherait ainsi l’UE de pleinement remplir son rôle de médiateur afin d’éviter tout regain de tension dans la région. Je me suis donc abstenue.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-    
-    
 
+    <section>
     
     
-
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            
+                <p>Comme nous, le peuple serbe aspire à la paix, à la démocratie et c’est, je crois, le sens du dialogue sincère et positif que l’Union européenne doit avoir avec un pays qui est candidat à l’adhésion depuis 2012, et qui a montré sur au moins la moitié des chapitres de négociation qu’il avait réalisé d’incontestables progrès. Alors, est-ce que cela suffit? À l’évidence, non. Il faut que la Serbie agisse pour élargir son espace médiatique, qu’elle fasse davantage confiance à la société civile, et évidemment qu’elle poursuive sa politique d’apaisement vis-à-vis de la Bosnie. Et puis aussi qu’elle trouve une solution durable avec le Kosovo.</p>
+            
+                <p>Mais quand même, je voudrais dire que parfois, j’ai l’impression qu’on traite la Serbie très différemment des autres pays des Balkans. Et je regrette ce «deux poids, deux mesures». Sous prétexte que la Serbie n’est pas totalement alignée sur notre politique étrangère, il faudrait la traiter durement. Moi, je ne suis pas d’accord avec ça. Je pense que cela n’aurait aucun sens de s’ouvrir aux Balkans sans prendre en compte la Serbie. Et je crois que c’est une attitude qui en réalité conduit exactement à l’inverse du but recherché, c’est-à-dire qu’elle ne sert ni les intérêts de la Serbie, ni ceux de l’Union européenne. Alors soyons cohérents et continuons à tendre la main à la Serbie qui a tant à attendre de nous.</p>
+            
+        </article>
     
+        <article>
+            <div class="hidden">197623</div>
+            
+            <header><b>Thierry MARIANI</b> | Rassemblement national</header>
+            
+                <p>Récemment, les élections locales des municipalités serbes du Kosovo ont enregistré une participation d&#39;à peine 3 % des électeurs. Presque aucun Serbe n&#39;a voulu participer à ce vote. C&#39;est un nouveau camouflet pour l&#39;Union européenne et ses amis de Pristina. Dans le même temps, l&#39;Union européenne fait pression sur la Serbie pour transformer sa vie politique et sociale. Bruxelles voudrait couper Belgrade de son amitié historique pour la Russie, notamment en dictant désormais sa politique étrangère. </p>
+            
+                <p>Nous n&#39;avons aucun intérêt à construire une perspective européenne dans les Balkans si celle-ci est fondée sur l&#39;atlantisme que Bruxelles veut imposer à la Serbie. Quand il parle aux Français, Emmanuel Macron leur affirme, la main sur le cœur, il n&#39;y aura pas d&#39;élargissement. À Bruxelles pourtant, ses élus annoncent une Europe à 35 ou à 40 et soutiennent toutes les résolutions qui exigent l&#39;intégration immédiate des pays candidats. Ce matin, ils applaudissaient le chancelier Scholz, demandant un élargissement rapide aux six pays des Balkans. Décidément, les fédéralistes européens mentent autant à leurs peuples qu&#39;au peuple serbe, que ce soit à Bruxelles ou que ce soit à Paris. </p>
+            
+        </article>
     
-
-    
-    
-
-    
-    
-
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2204(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0172_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-05-10-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

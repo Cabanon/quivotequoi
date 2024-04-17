@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Rapport sur les négociations en cours concernant un accord sur le statut des activités opérationnelles menées par l’Agence européenne de garde-frontières et de garde-côtes (Frontex) au Sénégal</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Rapport sur les négociations en cours concernant un accord sur le statut des activités opérationnelles menées par l’Agence européenne de garde-frontières et de garde-côtes (Frontex) au Sénégal</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(212/588 * 100%)">212</div>
-  
-  
-    <div class="-" style="width: calc(347/588 * 100%)">347</div>
+    <div class="for" style="width: calc(212/588 * 100%)">212</div>
   
   
-    <div class="0" style="width: calc(29/588 * 100%)">29</div>
+    <div class="against" style="width: calc(347/588 * 100%)">347</div>
+  
+  
+    <div class="abstention" style="width: calc(29/588 * 100%)">29</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,19 +88,20 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(25/63 * 100%)">25</div>
+    <div class="for" style="width: calc(25/63 * 100%)">25</div>
   
   
-    <div class="-" style="width: calc(38/63 * 100%)">38</div>
+    <div class="against" style="width: calc(38/63 * 100%)">38</div>
   
   
 </div>
  
 </section>
-            <a href="/voting/164578">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/164578">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -109,386 +114,555 @@
     
         
         
-            <li>Espace de liberté, de sécurité et de justice</li>
+            <li>Franchissement et contrôles aux frontières extérieures, visas</li>
         
     
         
         
-            <li>Franchissement et contrôles aux frontières extérieures, visas</li>
+            <li>Espace de liberté, de sécurité et de justice</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/2086(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2024-0032_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-02-28-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,124693,197694,197697,197698,204418,245018">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,204418,245018">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,124693">🇫🇷 Renaissance</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197626,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197626,197629,197615">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>C bis. considérant qu’il convient d’intensifier de manière coordonnée le dialogue avec les pays d’origine et de transit afin de renforcer leurs capacités de gestion des frontières, de prévenir les flux irréguliers, de sauver des vies sur l’ensemble des routes migratoires, de lutter contre la traite des êtres humains et le trafic de migrants, ainsi que d’augmenter le nombre de retours;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">319</div>
+  <div class="against">270</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(319/594 * 100%)">319</div>
-  
-  
-    <div class="-" style="width: calc(270/594 * 100%)">270</div>
-  
-  
-    <div class="0" style="width: calc(5/594 * 100%)">5</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>C ter. considérant que Frontex joue un rôle essentiel dans la protection des frontières extérieures de l’Union, en luttant contre la criminalité transfrontalière et en augmentant les retours;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">304</div>
+  <div class="against">263</div>
+  <div class="abstention">17</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(304/584 * 100%)">304</div>
-  
-  
-    <div class="-" style="width: calc(263/584 * 100%)">263</div>
-  
-  
-    <div class="0" style="width: calc(17/584 * 100%)">17</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       L. considérant que le Sénégal est un pays d’émigration, de transit et d’immigration; que les migrations et la mobilité sont considérées de manière positive au Sénégal; que le droit à la mobilité est consacré dans la Constitution sénégalaise et que la mobilité transfrontalière intercommunautaire est un phénomène normal dans le pays; que le Sénégal est depuis longtemps l’un des principaux pays de destination en Afrique de l’Ouest; que, selon l’Organisation internationale pour les migrations, vivaient au Sénégal en 2018; que 
   
 
   
-      <del>le nombre de bateaux à destination des îles </del>
+      <del>le nombre de bateaux à destination des îles</del>
   
 
   
-      <ins>les dernières données disponibles indiquent étaient arrivés illégalement aux îles Canaries; que le nombre de bateaux à destination des îles Canaries au départ du Sénégal et de Mauritanie a augmenté </ins>
+      <ins>les dernières données disponibles indiquent étaient arrivés illégalement aux îles Canaries; que le nombre de bateaux à destination des îles Canaries au départ du Sénégal et de Mauritanie a augmenté</ins>
   
 
   
-      en 2023; que cette même année, la majorité des personnes qui embarquaient sur ces bateaux étaient des ressortissants sénégalais; que la «route» de l’Atlantique est l’une des plus meurtrières au 
+       en 2023; que cette même année, la majorité des personnes qui embarquaient sur ces bateaux étaient des ressortissants sénégalais; que la «route» de l’Atlantique est l’une des plus meurtrières au monde
   
 
   
-      <del>monde, en grande partie en raison de la longueur du voyage en mer et de l’absence de capacités de recherche et de sauvetage spécifiques; que l’Organisation internationale pour les migrations a indiqué qu’au moins l’Atlantique depuis 2014; que des cas    répétés de refoulement de migrants et de réfugiés depuis les frontières mauritaniennes et maliennes vers le Sénégal ont été signalés;</del>
+      <del>, en grande partie en raison de la longueur du voyage en mer et de l’absence de capacités de recherche et de sauvetage spécifiques; que l’Organisation internationale pour les migrations a indiqué qu’au moins l’Atlantique depuis 2014; que des cas    répétés de refoulement de migrants et de réfugiés depuis les frontières mauritaniennes et maliennes vers le Sénégal ont été signalés</del>
   
 
   
-      <ins>monde; que l’Organisation internationale pour les avaient disparu en mer sur la route de    l’Atlantique depuis 2014; que les migrants qui quittent le Sénégal en situation irrégulière sont généralement forcés de payer des sommes s’élevant jusqu’à trafiquants;</ins>
+      <ins>; que l’Organisation internationale pour les avaient disparu en mer sur la route de    l’Atlantique depuis 2014; que les migrants qui quittent le Sénégal en situation irrégulière sont généralement forcés de payer des sommes s’élevant jusqu’à trafiquants</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
-    <article>
-    <header>📝 Amendement n°4 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>L bis. considérant que, selon les données publiées par le ministère espagnol de l’intérieur, le nombre total de migrants en situation irrégulière arrivés en Espagne entre le 1er et le 31 janvier 2024 a même période de l’année précédente; que, pour les îles Canaries, ce chiffre était période de l’année précédente1 bis;  _________________  1 bis Ministère espagnol de l’intérieur, «Inmigración irregular 2024 – Datos acumulados del 1 enero al 31 enero» (Immigration irrégulière 2024 – Données collectées du 1er au 31 janvier) (en espagnol), février 2024.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
-    <article>
-    <header>📝 Amendement n°5 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>R bis. considérant que la présence active de Frontex et des autorités répressives nationales est essentielle pour lutter contre la criminalité transfrontière, décourager la migration irrégulière, lutter contre les passeurs de migrants et les trafiquants d’êtres humains et mettre un terme aux pertes de vies humaines sur la route de l’Afrique de l’Ouest; que 38 agents de la Guardia Civil et de la Policía Nacional espagnoles sont actuellement déployés au Sénégal pour aider les autorités sénégalaises à prévenir les départs irréguliers; que les déploiements dans des pays tiers font parfois courir de grands risques aux agents de Frontex et des services répressifs;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
-    <article>
-    <header>📝 Amendement n°6 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       U. considérant qu’il existe plusieurs facteurs à l’origine de la migration irrégulière au Sénégal, 
   
 
   
-      <del>à savoir l’absence de voies migratoires sûres et légales, qui se manifeste notamment par des obstacles à l’obtention de visas Schengen, </del>
+      <del>à savoir l’absence de voies migratoires sûres et légales, qui se manifeste notamment par des obstacles à l’obtention de visas Schengen, la pauvreté, l’insécurité et le chômage, en particulier chez les pêcheurs; que la communauté des pêcheurs est surreprésentée dans les groupes de personnes qui tentent d’atteindre les îles Canaries</del>
   
 
   
-      <ins>tels que </ins>
+      <ins>tels que la pauvreté, l’insécurité ou le chômage; que ces circonstances sont utilisées par les passeurs de migrants et les trafiquants d’êtres humains pour créer un modèle économique criminel et inhumain qui met en péril des vies humaines, en particulier la vie de femmes et d’enfants; qu’en raison de leur situation géographique, les îles Canaries sont devenues la destination privilégiée de ces réseaux criminels, quitte à mettre la vie des migrants en danger</ins>
   
 
   
-      la pauvreté, l’insécurité 
-  
-
-  
-      <del>et </del>
-  
-
-  
-      <ins>ou </ins>
-  
-
-  
-      le chô
-  
-
-  
-      <del>mage, en particulier chez les pêcheurs; que la communauté des pêcheurs est surreprésentée dans les groupes de personnes qui tentent d’atteindre les îles Canaries;</del>
-  
-
-  
-      <ins>mage; que ces circonstances sont utilisées par les passeurs de migrants et les trafiquants d’êtres humains pour créer un modèle économique criminel et inhumain qui met en péril des vies humaines, en particulier la vie de femmes et d’enfants; qu’en raison de leur situation géographique, les îles Canaries sont devenues la destination privilégiée de ces réseaux criminels, quitte à mettre la vie des migrants en danger;</ins>
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">300</div>
+  <div class="against">283</div>
+  <div class="abstention">22</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(300/605 * 100%)">300</div>
-  
-  
-    <div class="-" style="width: calc(283/605 * 100%)">283</div>
-  
-  
-    <div class="0" style="width: calc(22/605 * 100%)">22</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>U bis. considérant que, le 15 février 2024, la Policía Nacional espagnole a démantelé un réseau de trafic de migrants qui faisait entrer dans l’Union européenne, via l’aéroport international de Madrid-Barajas, des migrants sénégalais en situation irrégulière qui prétendaient être des mineurs demandant l’asile; que ces migrants sénégalais recevaient un manuel expliquant comment se faire passer pour un mineur originaire d’un pays ou d’une zone en conflit, comme le Mali ou l’Éthiopie, et comment demander un transfert vers un établissement pour mineurs, où la sécurité est moins stricte; qu’après avoir été transférés vers ces établissements, les migrants en sortaient et attendaient d’être récupérés et transportés par le réseau vers leur pays de destination, dont la France, l’Allemagne et la Belgique;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">303</div>
+  <div class="against">289</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(303/597 * 100%)">303</div>
-  
-  
-    <div class="-" style="width: calc(289/597 * 100%)">289</div>
-  
-  
-    <div class="0" style="width: calc(5/597 * 100%)">5</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>W bis. considérant que, le 8 février 2024, le Premier ministre espagnol, Pedro Sánchez, et la présidente de la Commission, Ursula von der Leyen, se sont rendus en Mauritanie et sont convenus de fournir aux autorités mauritaniennes 210 millions d’euros pour contribuer à la gestion des migrations, apporter une aide humanitaire aux réfugiés et investir dans l’emploi, les compétences et l’esprit d’entreprise; que ce type de coopération bilatérale joue un rôle déterminant pour prévenir la migration irrégulière, lutter contre les passeurs et les trafiquants et éviter la perte de vies humaines;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">265</div>
+  <div class="against">270</div>
+  <div class="abstention">72</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(265/607 * 100%)">265</div>
-  
-  
-    <div class="-" style="width: calc(270/607 * 100%)">270</div>
-  
-  
-    <div class="0" style="width: calc(72/607 * 100%)">72</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       Y. considérant 
@@ -502,444 +676,554 @@
       <ins>que la prévention de la migration clandestine devrait être inhérente à tout accord international signé avec des pays tiers, y compris des accords de coopération bilatéraux avec des partenaires clés;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">284</div>
+  <div class="against">276</div>
+  <div class="abstention">41</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(284/601 * 100%)">284</div>
-  
-  
-    <div class="-" style="width: calc(276/601 * 100%)">276</div>
-  
-  
-    <div class="0" style="width: calc(41/601 * 100%)">41</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
-
-  
-      2. reconnaî
-  
+<p>
 
   
-      <ins>t que le déploiement de Frontex au Sénégal conformément à l’acquis de l’Union est susceptible d’avoir un effet positif sur le respect des droits fondamentaux; reconnaî</ins>
+      2.
   
 
   
-      t, malgré la situation difficile du pays en matière de droits de l’homme, les efforts déployés par le gouvernement sénégalais, en sa qualité de membre actif du Conseil des droits de l’homme des Nations unies entre 2018 et 2023, pour faire respecter ou renforcer les droits de l’homme;
+      <ins> reconnaît que le déploiement de Frontex au Sénégal conformément à l’acquis de l’Union est susceptible d’avoir un effet positif sur le respect des droits fondamentaux;</ins>
+  
+
+  
+       reconnaît, malgré la situation difficile du pays en matière de droits de l’homme, les efforts déployés par le gouvernement sénégalais, en sa qualité de membre actif du Conseil des droits de l’homme des Nations unies entre 2018 et 2023, pour faire respecter ou renforcer les droits de l’homme;
   
 
   
       <del> exprime son inquiétude quant à l’augmentation du nombre de signalements de violations des droits de l’homme au Sénégal, en particulier de ceux faisant état de recours à la force ou d’abus à l’encontre des migrants lors des contrôles aux frontières, et à la criminalisation accrue de la société civile; souligne et condamne les cas répétés de refoulement de migrants et de réfugiés depuis les frontières mauritaniennes et maliennes vers le Sénégal; rappelle et souligne que Frontex ne devrait pas prendre part aux refoulements, sous quelque forme que ce soit; estime que la conclusion éventuelle d’un accord sur le statut entre l’Union et le Sénégal prévoyant l’exercice de pouvoirs d’exécution par Frontex dans le pays comporterait pour Frontex un risque élevé de devenir complice de violations directes et indirectes des droits fondamentaux ou des obligations en    matière de protection internationale; estime que ces risques sont graves et sont susceptibles de persister;</del>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">284</div>
+  <div class="against">302</div>
+  <div class="abstention">22</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(284/608 * 100%)">284</div>
-  
-  
-    <div class="-" style="width: calc(302/608 * 100%)">302</div>
-  
-  
-    <div class="0" style="width: calc(22/608 * 100%)">22</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>2 bis. est préoccupé par l’augmentation inquiétante du nombre d’arrivées irrégulières dans les îles Canaries au départ du Sénégal; salue le travail accompli par la Guardia Civil et la police espagnoles, en coopération avec les autorités sénégalaises, dans la lutte contre le trafic de migrants et la traite des êtres humains et dans la prévention des départs irréguliers; reconnaît que le déploiement de Frontex au Sénégal permettrait d’intensifier considérablement les efforts visant à prévenir les départs irréguliers et la perte de vies humaines;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">318</div>
+  <div class="against">278</div>
+  <div class="abstention">7</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(318/603 * 100%)">318</div>
-  
-  
-    <div class="-" style="width: calc(278/603 * 100%)">278</div>
-  
-  
-    <div class="0" style="width: calc(7/603 * 100%)">7</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°12 | 
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>2 ter. est préoccupé par le nouveau mode opératoire des réseaux de trafic de migrants, comme celui qui a été démantelé en Espagne et qui concernait les migrants sénégalais, qui consiste à leur fournir des manuels sur la manière de se déclarer mineur d’un pays en conflit, puis d’être transférés vers des centres d’accueil spéciaux, mettant ainsi en péril la vie et le bien-être des mineurs qui y séjournent;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">283</div>
+  <div class="against">310</div>
+  <div class="abstention">3</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(283/596 * 100%)">283</div>
-  
-  
-    <div class="-" style="width: calc(310/596 * 100%)">310</div>
-  
-  
-    <div class="0" style="width: calc(3/596 * 100%)">3</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°13 | 
+        
+            <article id="13">
+            <header>📝 Amendement n°13 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       8. est conscient du fait que le gouvernement sénégalais a exprimé sa réticence à poursuivre ce type de coopération; 
   
 
   
-      <del>exprime ses réserves quant à la conclusion éventuelle d’un accord sur le statut, compte tenu des préoccupations susmentionnées;</del>
+      <del>exprime ses réserves quant à la conclusion éventuelle d’un accord sur le statut, compte tenu des préoccupations susmentionnées</del>
   
 
   
-      <ins>invite les autorités sénégalaises à entamer les négociations dès que les conditions le permettront;</ins>
+      <ins>invite les autorités sénégalaises à entamer les négociations dès que les conditions le permettront</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">293</div>
+  <div class="against">302</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(293/604 * 100%)">293</div>
-  
-  
-    <div class="-" style="width: calc(302/604 * 100%)">302</div>
-  
-  
-    <div class="0" style="width: calc(9/604 * 100%)">9</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°14 | 
+        
+            <article id="14">
+            <header>📝 Amendement n°14 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       l. parallèlement aux négociations sur l’accord sur le statut, continuer de fournir un soutien et des ressources pour aider les autorités sénégalaises à mettre en place un système 
   
 
   
-      <del>d’asile juridique complet,</del>
+      <del>d’asile juridique complet</del>
   
 
   
-      <ins>juridique complet de gestion des frontières, de migration et d’asile,</ins>
+      <ins>juridique complet de gestion des frontières, de migration et d’asile</ins>
   
 
   
-       fondé sur les droits fondamentaux et conforme aux lignes directrices et aux pratiques du HCR, y compris un soutien supplémentaire au renforcement des capacités des institutions nationales sénégalaises de défense des droits de l’homme et des organisations de la société civile dont les activités sont centrées sur les droits de l’
+      , fondé sur les droits fondamentaux et conforme aux lignes directrices et aux pratiques du HCR, y compris un soutien supplémentaire au renforcement des capacités des institutions nationales sénégalaises de défense des droits de l’homme et des organisations de la société civile dont les activités sont centrées sur les droits de l’homme
   
 
   
-      <del>homme; dispenser </del>
+      <del>; dispenser</del>
   
 
   
-      <ins>homme et sur la lutte contre les passeurs et les trafiquants; offrir </ins>
+      <ins> et sur la lutte contre les passeurs et les trafiquants; offrir</ins>
   
 
   
-      aux autorités sénégalaises compétentes une formation sur les droits fondamentaux en tant que composante essentielle des opérations à mandat exécutif dans le pays, notamment en ce qui concerne les obligations en matière de recherche et de sauvetage et les droits des personnes concernées, y compris les recours contre les plaintes;
+       aux autorités sénégalaises compétentes une formation sur les droits fondamentaux en tant que composante essentielle des opérations à mandat exécutif dans le pays, notamment en ce qui concerne les obligations en matière de recherche et de sauvetage et les droits des personnes concernées, y compris les recours contre les plaintes;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">363</div>
+  <div class="against">234</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(363/606 * 100%)">363</div>
-  
-  
-    <div class="-" style="width: calc(234/606 * 100%)">234</div>
-  
-  
-    <div class="0" style="width: calc(9/606 * 100%)">9</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°15 | 
+        
+            <article id="15">
+            <header>📝 Amendement n°15 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       a) veiller à l’établissement de rapports cohérents, réguliers et transparents sur les activités 
   
 
   
-      <del>menées par </del>
+      <del>menées par</del>
   
 
   
-      <ins>de </ins>
+      <ins>de</ins>
   
 
   
-      Frontex au Sénégal 
+       Frontex au Sénégal 
   
 
   
-      <del>au titre de </del>
+      <del>au titre de</del>
   
 
   
-      <ins>conformément à </ins>
+      <ins>conformément à</ins>
   
 
   
-      tout accord potentiel sur le statut, en mettant l’accent sur 
+       tout accord potentiel sur le statut, en mettant l’accent sur 
   
 
   
-      <del>le respect des droits de l’homme et sur le contexte des droits de l’homme dans le pays;</del>
+      <del>le respect des droits de l’homme et sur</del>
   
 
   
-      <ins>la gestion efficace des frontières, la prévention des départs irréguliers, la lutte contre les trafiquants d’êtres humains et les passeurs de migrants et le respect des droits de l’homme;</ins>
+      <ins>la gestion efficace des frontières, la prévention des départs irréguliers, la lutte contre les trafiquants d’êtres humains et les passeurs de migrants et</ins>
+  
+
+  
+       le 
+  
+
+  
+      <del>contexte</del>
+  
+
+  
+      <ins>respect</ins>
+  
+
+  
+       des droits de l’homme
+  
+
+  
+      <del> dans le pays</del>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
-    <article>
-    <header>📝 Amendement n°16 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="16">
+            <header>📝 Amendement n°16 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       i) 
   
 
   
-      <del>consacre un mécanisme solide et formel pour adresser des plaintes à Frontex ou aux autorités sénégalaises compétentes pour des actions ou un défaut d’action du personnel déployé dans conformément à l’article 111 du des dispositions claires sur les outils de suivi et d’exécution après le dépôt des plaintes et communique clairement sur ce suivi;</del>
+      <del>consacre un mécanisme solide et formel pour adresser des plaintes à Frontex ou aux autorités sénégalaises compétentes pour des actions ou un défaut d’action du personnel déployé dans conformément à l’article 111 du des dispositions claires sur les outils</del>
   
 
   
-      <ins>comprenne les mesures nécessaires pour poursuivre le développement du mécanisme de traitement des plaintes indépendant et efficace de Frontex, conformément à afin de contrôler et de garantir le respect activités de l’Agence;</ins>
+      <ins>comprenne les mesures nécessaires pour poursuivre le développement du mécanisme de traitement des plaintes indépendant et efficace de Frontex, conformément à afin</ins>
+  
+
+  
+       de 
+  
+
+  
+      <del>suivi</del>
+  
+
+  
+      <ins>contrôler</ins>
+  
+
+  
+       et 
+  
+
+  
+      <del>d’exécution après le dépôt des plaintes et communique clairement sur ce suivi</del>
+  
+
+  
+      <ins>de garantir le respect activités de l’Agence</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
-    <article>
-    <header>📝 Amendement n°17 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="17">
+            <header>📝 Amendement n°17 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       ii) maintienne, en coopération avec les autorités sénégalaises, une présence de Frontex dans des zones critiques où l’
   
 
   
-      <del>arrestation de migrants </del>
+      <del>arrestation de migrants</del>
   
 
   
-      <ins>activité des passeurs et des trafiquants d’êtres humains </ins>
+      <ins>activité des passeurs et des trafiquants d’êtres humains</ins>
   
 
   
-      est susceptible d’avoir lieu, et 
+       est susceptible d’avoir lieu, et 
   
 
   
-      <del>garantisse à </del>
+      <del>garantisse à</del>
   
 
   
-      <ins>soutienne le plein accès par </ins>
+      <ins>soutienne le plein accès par</ins>
   
 
   
-      l’officier aux droits fondamentaux et 
+       l’officier aux droits fondamentaux et 
   
 
   
-      <del>aux </del>
+      <del>aux</del>
   
 
   
-      <ins>les </ins>
+      <ins>les</ins>
   
 
   
-      contrôleurs des droits fondamentaux 
+       contrôleurs des droits fondamentaux 
   
 
   
@@ -950,324 +1234,380 @@
       à la zone opérationnelle, conformément à la procédure opérationnelle standard de l’officier aux droits fondamentaux, afin de disposer d’un mécanisme indépendant pour superviser et évaluer les activités de Frontex au Sénégal, tout en prévoyant des engagements clairs en matière de transparence et de partage d’informations sur les activités de Frontex;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">314</div>
+  <div class="against">274</div>
+  <div class="abstention">19</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(314/607 * 100%)">314</div>
-  
-  
-    <div class="-" style="width: calc(274/607 * 100%)">274</div>
-  
-  
-    <div class="0" style="width: calc(19/607 * 100%)">19</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°18 | 
+        
+            <article id="18">
+            <header>📝 Amendement n°18 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       iii) garantisse 
   
 
   
-      <del>le déploiement permanent d’</del>
+      <del>le déploiement permanent d’un contrôleur des droits fondamentaux par l’officier aux droits</del>
   
 
   
-      <ins>l’indépendance de l’officier aux droits fondamentaux, telle qu’elle est consacrée à l’article 109 du les décisions prises par l’officier aux droits fondamentaux de déployer de façon permanente ou non </ins>
+      <ins>l’indépendance de l’officier aux droits fondamentaux, telle qu’elle est consacrée à l’article 109 du les décisions prises par l’officier aux droits fondamentaux de déployer de façon permanente ou non un contrôleur des droits fondamentaux pour superviser les</ins>
   
 
   
-      un contrôleur des droits fondamentaux 
+       opérations au Sénégal et surveiller les activités de coopération en matière de droits fondamentaux
   
 
   
-      <del>par l’officier aux droits </del>
+      <del>, conformément au</del>
   
 
   
-      <ins>pour superviser les </ins>
-  
-
-  
-      opérations au Sénégal et surveiller les activités de coopération en matière de droits 
-  
-
-  
-      <del>fondamentaux, conformément au</del>
-  
-
-  
-      <ins>fondamentaux;</ins>
+      <ins>;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">285</div>
+  <div class="against">293</div>
+  <div class="abstention">30</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(285/608 * 100%)">285</div>
-  
-  
-    <div class="-" style="width: calc(293/608 * 100%)">293</div>
-  
-  
-    <div class="0" style="width: calc(30/608 * 100%)">30</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°19 | 
+        
+            <article id="19">
+            <header>📝 Amendement n°19 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. souligne que la coopération de Frontex avec des pays tiers est fondamentale pour la mise en œuvre globale de la gestion européenne intégrée des frontières et qu’en tirant parti de son expertise et de ses ressources, Frontex est devenue un partenaire essentiel dans la lutte contre la criminalité transfrontière et la protection des frontières, y compris pour les pays tiers, grâce aux accords sur le statut actuellement en vigueur;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    (🇫🇷 : Reconquête!)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">292</div>
+  <div class="against">299</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/165304">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(292/601 * 100%)">292</div>
-  
-  
-    <div class="-" style="width: calc(299/601 * 100%)">299</div>
-  
-  
-    <div class="0" style="width: calc(10/601 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/165304">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°20 | 
+        
+            <article id="20">
+            <header>📝 Amendement n°20 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
-
-  
-      2. reconnaî
-  
+<p>
 
   
-      <ins>t que le déploiement de Frontex au Sénégal conformément à l’acquis de l’Union est susceptible d’avoir un effet positif sur le respect des droits fondamentaux; reconnaî</ins>
+      2.
   
 
   
-      t, malgré la situation difficile du pays en matière de droits de l’homme, les efforts déployés par le gouvernement sénégalais, en sa qualité de membre actif du Conseil des droits de l’homme des Nations unies entre 2018 et 2023, pour faire respecter ou renforcer les droits de l’homme; exprime son inquiétude quant à l’augmentation du nombre de signalements de violations des droits de l’homme au Sénégal, en particulier de ceux faisant état de recours à la force ou d’abus à l’encontre des migrants lors des contrôles aux frontières, et à la criminalisation accrue de la société civile; souligne et condamne les cas répétés de refoulement de migrants et de réfugiés depuis les frontières mauritaniennes et maliennes vers le Sénégal; rappelle et souligne que Frontex ne devrait pas prendre part aux refoulements, sous quelque forme que ce soit; estime que la conclusion éventuelle d’un accord sur le statut entre l’Union et le Sénégal prévoyant l’exercice de pouvoirs d’exécution par Frontex dans le pays comporterait pour Frontex un risque élevé de devenir 
+      <ins> reconnaît que le déploiement de Frontex au Sénégal conformément à l’acquis de l’Union est susceptible d’avoir un effet positif sur le respect des droits fondamentaux;</ins>
   
 
   
-      <ins>   </ins>
+       reconnaît, malgré la situation difficile du pays en matière de droits de l’homme, les efforts déployés par le gouvernement sénégalais, en sa qualité de membre actif du Conseil des droits de l’homme des Nations unies entre 2018 et 2023, pour faire respecter ou renforcer les droits de l’homme; exprime son inquiétude quant à l’augmentation du nombre de signalements de violations des droits de l’homme au Sénégal, en particulier de ceux faisant état de recours à la force ou d’abus à l’encontre des migrants lors des contrôles aux frontières, et à la criminalisation accrue de la société civile; souligne et condamne les cas répétés de refoulement de migrants et de réfugiés depuis les frontières mauritaniennes et maliennes vers le Sénégal; rappelle et souligne que Frontex ne devrait pas prendre part aux refoulements, sous quelque forme que ce soit; estime que la conclusion éventuelle d’un accord sur le statut entre l’Union et le Sénégal prévoyant l’exercice de pouvoirs d’exécution par Frontex dans le pays comporterait pour Frontex un risque élevé de devenir
   
 
   
-      complice de violations directes et indirectes des droits fondamentaux ou des obligations en matière de protection internationale; estime que ces risques sont 
+      <del> </del>
   
 
   
-      <del>   </del>
+      <ins>    </ins>
+  
+
+  
+      complice de violations directes et indirectes des droits fondamentaux ou des obligations en matière de protection internationale; estime que ces risques sont
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
       graves et sont susceptibles de persister;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
     
-    <article>
-    <header>📝 Amendement n°21 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="21">
+            <header>📝 Amendement n°21 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
+<p>
 
   
       8. est conscient du fait que le gouvernement sénégalais a exprimé sa réticence à poursuivre ce type de coopération; 
   
 
   
-      <del>exprime ses réserves quant à </del>
+      <del>exprime ses réserves quant à</del>
   
 
   
-      <ins>estime que </ins>
+      <ins>estime que</ins>
   
 
   
-      la conclusion éventuelle d’un accord sur le 
+       la conclusion éventuelle d’un accord sur le statut
   
 
   
-      <del>statut, compte tenu des préoccupations </del>
+      <del>, compte tenu</del>
   
 
   
-      <ins>statut devrait tenir compte des recommandations </ins>
+      <ins> devrait tenir compte</ins>
   
 
   
-      susmentionnées;
+       des 
+  
+
+  
+      <del>préoccupations</del>
+  
+
+  
+      <ins>recommandations</ins>
+  
+
+  
+       susmentionnées;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
     
-    <article>
-    <header>📝 Amendement n°22 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="22">
+            <header>📝 Amendement n°22 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
-
-  
-      d) garantir des voies d’entrée sûres et légales dans l’Union pour les ressortissants sénégalais et les migrants, dont les réfugiés vivant au Sénégal ou y 
-  
+<p>
 
   
-      <del>transitant, y compris en facilitant l’octroi de visas Schengen;</del>
+      d) garantir des voies d’entrée sûres et légales dans l’Union pour les ressortissants sénégalais et les migrants, dont les réfugiés vivant au Sénégal ou y transitant
   
 
   
-      <ins>transitant;</ins>
+      <del>, y compris en facilitant l’octroi de visas Schengen</del>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(444/603 * 100%)">444</div>
-  
-  
-    <div class="-" style="width: calc(139/603 * 100%)">139</div>
-  
-  
-    <div class="0" style="width: calc(20/603 * 100%)">20</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
-        
-    </footer>
-    </article>
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/2086(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2024-0032_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">444</div>
+  <div class="against">139</div>
+  <div class="abstention">20</div>
+</span>
+
   
+    🤖 Vote électronique
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-02-28-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

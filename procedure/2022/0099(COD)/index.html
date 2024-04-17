@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Règlement sur les gaz fluorés</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,82 +22,39 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Règlement sur les gaz fluorés</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
-    <article>
-    <header>👍 Adoption du texte | 
-
-✅️ Adopté
-
-</header>
-    
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
-        <section>
-
-<div class="votes ">
-  
-    <div class="+" style="width: calc(426/587 * 100%)">426</div>
-  
-  
-    <div class="-" style="width: calc(109/587 * 100%)">109</div>
-  
-  
-    <div class="0" style="width: calc(52/587 * 100%)">52</div>
-  
-</div>
-</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
-        <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
-        
-        
-            <section>
-
-
-
-<div class="votes">
-  
-    <div class="+" style="width: calc(50/65 * 100%)">50</div>
-  
-  
-    <div class="-" style="width: calc(15/65 * 100%)">15</div>
-  
-  
-</div>
- 
-</section>
-            <a href="/voting/153971">🗳 Voir le détail du vote</a>
-        
-    
-    </article>
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -104,17 +62,7 @@
     
         
         
-            <li>Politiques communautaires</li>
-        
-    
-        
-        
             <li>Développement durable</li>
-        
-    
-        
-        
-            <li>Politique de l&#39;environnement</li>
         
     
         
@@ -127,106 +75,259 @@
             <li>Politique climatique, changement climatique, couche d&#39;ozone</li>
         
     
+        
+        
+            <li>Politique de l&#39;environnement</li>
+        
+    
+        
+        
+            <li>Politiques communautaires</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/0099(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0048_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-03-30-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-01-16-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                            <option value="RE,197511">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197683,197629,197615">🇫🇷 Reconquête!</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>(10 bis) Malgré le PRP élevé et l’utilisation croissante du fluorure de sulfuryle, les émissions de ce gaz à effet de serre fluoré n’ont pas été réglementées ou surveillées et elles ne sont pas non plus couvertes par les exigences de déclaration prévues par l’accord de Paris. Dès 2025,  les exploitants devraient veiller à ce que le fluorure de sulfuryle soit récupéré après fumigation, si cela est techniquement possible et ne représente pas un coût disproportionné.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°44 | 
+        
+        
+            <article id="44">
+            <header>📝 Amendement n°44 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>6 bis.Sans préjudice des paragraphes 1 à 6, les exploitants veillent à ce que le fluorure de sulfuryle soit capté et récupéré après fumigation. Les exploitants veillent à ce que la récupération soit effectuée par des personnes physiques dûment qualifiées, afin que les gaz soient recyclés, régénérés ou détruits.  Afin d’apporter la preuve de la destruction, les exploitants établissent une déclaration de conformité et y joignent des documents justificatifs contenant des informations sur l’établissement, la preuve de la disponibilité et du fonctionnement de la meilleure technologie de récupération disponible dans l’établissement ainsi que la preuve des mesures adoptées pour récupérer les émissions de fluorure de sulfuryle. L’efficacité du dispositif fait l’objet d’une vérification scientifique indépendante.  Lorsque la récupération n’est pas techniquement ou économiquement réalisable, les exploitants utilisent des options de traitement de substitution, à moins que celles-ci ne soient pas disponibles. Dans ce cas, l’exploitant établit une documentation prouvant l’impossibilité de récupérer le fluorure de sulfuryle et l’absence d’options de traitement de substitution.  L’exploitant conserve la déclaration de conformité et la documentation pendant cinq ans et les met, sur demande, à la disposition des autorités compétentes d’un État membre et de la Commission.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°49 | 
+        
+        
+            <article id="49">
+            <header>📝 Amendement n°49 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>e bis)équipements de climatisation dans les métros, les trains, les bateaux, les avions et les véhicules de transport routier, à l’exception de ceux qui relèvent européen et du Conseil*;  européen et du Conseil du 17 mai 2006 concernant les émissions provenant des systèmes de climatisation des véhicules à moteur et modifiant la</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°50 | 
+        
+        
+            <article id="50">
+            <header>📝 Amendement n°50 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       2. Les exploitants des équipements énumérés à l’article 5, paragraphe 2, points f) et g), qui contiennent des gaz à effet de serre fluorés énumérés à l’annexe I dans des quantités supérieures ou égales à 500 tonnes équivalent CO et qui ont été
@@ -237,136 +338,238 @@
       <ins> Aux fins de l’article 5, paragraphe 2, point g), le système de détection de fuites présente une sensibilité supérieure à celle d’un dispositif de contrôle de la pression ou de la densité.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
+        
+        
+            <article id="73">
+            <header>📝 Amendement n°73 | Partie 1 | 
+
+🚫 Annulé
+
+</header>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
+        
     
-    <article>
-    <header>📝 Amendement n°74 | 
+        
+        
+            <article id="73">
+            <header>📝 Amendement n°73 | Partie 2 | 
+
+🚫 Annulé
+
+</header>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
+        
+    
+        
+        
+            <article id="74">
+            <header>📝 Amendement n°74 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       Dans les 
   
 
   
-      <del>deux ans </del>
+      <del>deux ans</del>
   
 
   
-      <ins>six mois </ins>
+      <ins>six mois</ins>
   
 
   
-      qui suivent chacune des dates énumérées à l’annexe IV, la fourniture ultérieure ou la mise à disposition d’un tiers dans l’Union, à titre onéreux ou gratuit, de produits ou d’équipements légalement mis sur le marché avant la date visée au premier alinéa n’est autorisée que s’il est démontré que le produit ou l’équipement a été mis légalement sur le marché avant cette 
+       qui suivent chacune des dates énumérées à l’annexe IV, la fourniture ultérieure ou la mise à disposition d’un tiers dans l’Union, à titre onéreux ou gratuit, de produits ou d’équipements légalement mis sur le marché avant la date visée au premier alinéa n’est autorisée que s’il est démontré que le produit ou l’équipement a été mis légalement sur le marché avant cette date
   
 
   
-      <del>date.</del>
-  
-
-  
-      <ins>date</ins>
+      <del>.</del>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°79 | 
+        
+        
+            <article id="79">
+            <header>📝 Amendement n°79 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>Article 11 bis  Restriction à l’exportation de certains produits et équipements contenant des gaz à effet de serre fluorés  L’exportation de produits et d’équipements, ainsi que de parties de ceux-ci, énumérés à l’annexe IV, à l’exception des équipements militaires, est interdite à compter de la date spécifiée dans ladite annexe avec, le cas échéant, des distinctions en fonction du type de gaz qu’ils contiennent ou du potentiel de réchauffement planétaire de ce gaz.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">398</div>
+  <div class="against">168</div>
+  <div class="abstention">16</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/154082">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(398/582 * 100%)">398</div>
-  
-  
-    <div class="-" style="width: calc(168/582 * 100%)">168</div>
-  
-  
-    <div class="0" style="width: calc(16/582 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154082">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
+        
+            <article id="87">
+            <header>📝 Amendement n°87 | 
 
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden"></div>
+                
+
+<p>
+
+  
+      À partir du 1er janvier 2024, 
+  
+
+  
+      <del>l’utilisation</del>
+  
+
+  
+      <ins>les utilisations suivantes sont interdites:      a) l’entretien ou la maintenance des équipements de réfrigération fixes, à l’exception des refroidisseurs, à l’aide</ins>
+  
+
+  
+       des gaz à effet de serre fluorés énumérés à l’annexe 
+  
+
+  
+      <del>I</del>
+  
+
+  
+      <ins>1</ins>
+  
+
+  
+      , dont le potentiel de réchauffement planétaire est supérieur ou 
+  
+
+  
+      <del>maintenance des équipements de réfrigération est interdite.</del>
+  
+
+  
+      <ins>égal à 150;  b) l’entretien ou la maintenance des équipements de climatisation et de pompes à chaleur, des équipements de réfrigération et des refroidisseurs mobiles par des gaz à effet de serre fluorés énumérés à l’annexe I, dont le potentiel de réchauffement planétaire est supérieur</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°88 | 
+        
+        
+            <article id="88">
+            <header>📝 Amendement n°88 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      Le présent paragraphe ne 
-  
+<p>
 
   
-      <del>s ’</del>
+      Le présent paragraphe ne s
   
 
   
-      <ins>s’</ins>
+      <del> ’</del>
+  
+
+  
+      <ins>’</ins>
   
 
   
@@ -374,68 +577,65 @@
   
 
   
-      <del>produits </del>
+      <del>produits</del>
   
 
   
-      <ins>médicaments </ins>
+      <ins>médicaments</ins>
   
 
   
-      à une température inférieure à -50 °
+       à une température inférieure à -50 °C
   
 
   
-      <del>C.</del>
+      <ins> ou aux équipements destinés à des applications conçues pour refroidir des centrales nucléaires</ins>
   
 
   
-      <ins>C ou aux équipements destinés à des applications conçues pour refroidir des centrales nucléaires.</ins>
+      .
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">542</div>
+  <div class="against">13</div>
+  <div class="abstention">31</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/154083">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(542/586 * 100%)">542</div>
-  
-  
-    <div class="-" style="width: calc(13/586 * 100%)">13</div>
-  
-  
-    <div class="0" style="width: calc(31/586 * 100%)">31</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154083">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°89 | 
+        
+            <article id="89">
+            <header>📝 Amendement n°89 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       a) les gaz à effet de serre fluorés régénérés énumérés à l’annexe I, dont le potentiel de réchauffement planétaire est 
@@ -450,108 +650,102 @@
   
 
   
-      <del>existants,</del>
+      <del>existants</del>
   
 
   
-      <ins>fixes existants, à l’exception des refroidisseurs,</ins>
+      <ins>fixes existants, à l’exception des refroidisseurs</ins>
   
 
   
-       à condition qu’ils soient étiquetés conformément à l’article 12, paragraphe 6;
+      , à condition qu’ils soient étiquetés conformément à l’article 12, paragraphe 6;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">404</div>
+  <div class="against">168</div>
+  <div class="abstention">10</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/154084">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(404/582 * 100%)">404</div>
-  
-  
-    <div class="-" style="width: calc(168/582 * 100%)">168</div>
-  
-  
-    <div class="0" style="width: calc(10/582 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154084">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°90 | 
+        
+            <article id="90">
+            <header>📝 Amendement n°90 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>a bis)les gaz à effet de serre fluorés régénérés énumérés à l’annexe I, dont le potentiel de réchauffement planétaire est utilisés pour la maintenance ou l’entretien d’équipements de climatisation et de pompes à chaleur, d’équipements de réfrigération et de refroidisseurs mobiles, à condition qu’ils soient étiquetés conformément à l’article 12, paragraphe 6;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">484</div>
+  <div class="against">87</div>
+  <div class="abstention">6</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/154085">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(484/577 * 100%)">484</div>
-  
-  
-    <div class="-" style="width: calc(87/577 * 100%)">87</div>
-  
-  
-    <div class="0" style="width: calc(6/577 * 100%)">6</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154085">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°91 | 
+        
+            <article id="91">
+            <header>📝 Amendement n°91 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       b) les gaz à effet de serre fluorés recyclés énumérés à l’annexe I, dont le potentiel de réchauffement planétaire est 
@@ -566,189 +760,951 @@
   
 
   
-      <del>existants,</del>
+      <del>existants</del>
   
 
   
-      <ins>fixes existants, à l’exception des refroidisseurs,</ins>
+      <ins>fixes existants, à l’exception des refroidisseurs</ins>
   
 
   
-       à condition qu’ils aient été récupérés à partir de ce type d’équipements. Ces gaz recyclés ne peuvent être utilisés que par l’entreprise qui les a récupérés dans le cadre de la maintenance ou de l’entretien ou par l’entreprise pour le compte de laquelle la récupération a été effectuée dans le cadre de la maintenance ou de l’
+      , à condition qu’ils aient été récupérés à partir de ce type d’équipements. Ces gaz recyclés ne peuvent être utilisés que par l’entreprise qui les a récupérés dans le cadre de la maintenance ou de l’entretien ou par l’entreprise pour le compte de laquelle la récupération a été effectuée dans le cadre de la maintenance ou de l’entretien
   
 
   
-      <del>entretien.</del>
+      <del>.</del>
   
 
   
-      <ins>entretien;</ins>
+      <ins>;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">404</div>
+  <div class="against">172</div>
+  <div class="abstention">10</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/154086">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(404/586 * 100%)">404</div>
-  
-  
-    <div class="-" style="width: calc(172/586 * 100%)">172</div>
-  
-  
-    <div class="0" style="width: calc(10/586 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154086">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°92 | 
+        
+            <article id="92">
+            <header>📝 Amendement n°92 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>b bis)les gaz à effet de serre fluorés recyclés énumérés à l’annexe I, dont le potentiel de réchauffement planétaire est utilisés pour la maintenance ou l’entretien d’équipements de climatisation et de pompes à chaleur, d’équipements de réfrigération et de refroidisseurs existants, à condition qu’ils aient été récupérés à partir de ce type d’équipements; ces gaz recyclés ne peuvent être utilisés que par l’entreprise qui les a récupérés dans le cadre de la maintenance ou de l’entretien ou par l’entreprise pour le compte de laquelle la récupération a été effectuée dans le cadre de la maintenance ou de l’entretien.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">494</div>
+  <div class="against">83</div>
+  <div class="abstention">7</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/154087">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(494/584 * 100%)">494</div>
-  
-  
-    <div class="-" style="width: calc(83/584 * 100%)">83</div>
-  
-  
-    <div class="0" style="width: calc(7/584 * 100%)">7</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154087">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
+        
+            <article id="93">
+            <header>📝 Amendement n°93 | 
 
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden"></div>
+                
+
+<p>
+
+  
+      l’utilisation de desflurane comme anesthésique par inhalation est interdite, 
+  
+
+  
+      <del>sauf</del>
+  
+
+  
+      <ins>et n’est autorisée que</ins>
+  
+
+  
+       lorsque cette utilisation est strictement requise et qu’aucun autre anesthésique ne peut être utilisé pour des raisons médicales. L’
+  
+
+  
+      <del>utilisateur apporte, sur demande, </del>
+  
+
+  
+      <ins>établissement de soins conserve </ins>
+  
+
+  
+      la preuve de la justification médicale
+  
+
+  
+      <ins> et la fournit, sur demande,</ins>
+  
+
+  
+       à l’autorité compétente de l’État membre et à la Commission.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°94 | 
+        
+        
+            <article id="94">
+            <header>📝 Amendement n°94 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>4 bis.À partir du 1er janvier 2030, l’utilisation du fluorure de sulfuryle pour la fumigation après récolte et le traitement du bois et des produits en bois contre les infestations parasitaires est interdite, sauf si cette utilisation est strictement requise pour un certificat phytosanitaire et qu’aucun autre traitement ne peut être utilisé.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">340</div>
+  <div class="against">240</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(340/585 * 100%)">340</div>
-  
-  
-    <div class="-" style="width: calc(240/585 * 100%)">240</div>
-  
-  
-    <div class="0" style="width: calc(5/585 * 100%)">5</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°99 | 
+        
+            <article id="99">
+            <header>📝 Amendement n°99 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       L’allocation de quotas est subordonnée au paiement du montant dû qui équivaut à 
   
 
   
-      <del>trois </del>
+      <del>trois</del>
   
 
   
-      <ins>cinq </ins>
+      <ins>cinq</ins>
   
 
   
-      euros pour chaque tonne d’équivalent CO du quota à 
+       euros pour chaque tonne d’équivalent CO du quota à allouer
   
 
   
-      <del>allouer. Les importateurs et
-2 </del>
+      <del>. Les importateurs et
+2</del>
   
 
   
-      <ins>allouer pour la période
-2 trois ans de manière à garantir des recettes constantes, compte tenu de la réduction progressive des quotas prévue à l’annexe VII. Les importateurs et les producteurs sont informés par </ins>
+      <ins> pour la période
+2 trois ans de manière à garantir des recettes constantes, compte tenu de la réduction progressive des quotas prévue à l’annexe VII. Les importateurs et les producteurs sont informés par</ins>
   
 
   
-      l’intermédiaire du portail F-gas du montant total dû pour les quotas maximaux calculés qui leur sont alloués pour l’année civile suivante et de l’échéance du paiement. La Commission peut, par voie d’actes d’exécution, déterminer les modalités et conditions détaillées pour le paiement du montant dû. Ces actes d’exécution sont 
+       l’intermédiaire du portail F-gas du montant total dû pour les quotas maximaux calculés qui leur sont alloués pour l’année civile suivante et de l’échéance du paiement. La Commission peut, par voie d’actes d’exécution, déterminer les modalités et conditions détaillées pour le paiement du montant dû. Ces actes d’exécution sont
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>  </ins>
+  
+
+  
+      adoptés en conformité avec la procédure d’examen visée à l’article 34, paragraphe 2.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="140">
+            <header>📝 Amendement n°140 | 
+
+✅️ Adopté
+
+</header>
+            
+                <div class="hidden"></div>
+                
+
+<p>
+
+  
+      Pour le 1er janvier 
+  
+
+  
+      <del>2033</del>
+  
+
+  
+      <ins>2027</ins>
+  
+
+  
+      , la Commission publiera un rapport sur la mise en œuvre du présent règlement
+  
+
+  
+      <ins>, notamment en ce qui concerne l’incidence du présent règlement sur le secteur de la santé, en particulier la disponibilité d’inhalateurs doseurs pour la livraison d’ingrédients pharmaceutiques, ainsi qu’en ce qui concerne l’incidence sur le marché des équipements de refroidissement utilisés en combinaison avec des batteries</ins>
+  
+
+  
+      .
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="146">
+            <header>📝 Amendement n°146 | 
+
+✅️ Adopté
+
+</header>
+            
+                <div class="hidden"></div>
+                
+
+<p>
+
+  
+      2. 
+  
+
+  
+      <del>Les éléments de preuve visés au point 23 comprennent</del>
+  
+
+  
+      <ins>L’exception visée au point 23, c) et d), peut être autorisée par l’autorité compétente d’un État membre à la suite d’une demande motivée d’un exploitant. La demande de l’exploitant comprend</ins>
+  
+
+  
+       des documents 
+  
+
+  
+      <del>établissant</del>
+  
+
+  
+      <ins>attestant</ins>
+  
+
+  
+       qu’à la suite d’un appel d’offres ouvert,
+  
+
+  
+      <ins> dont la date limite de dépôt des offres est postérieure aux dates spécifiées au point 23,</ins>
+  
+
+  
+       aucune solution de remplacement appropriée n’était disponible et susceptible de remplir les conditions énoncées au point 23,
+  
+
+  
+      <ins> c) et d),</ins>
+  
+
+  
+       pour des raisons techniques, compte tenu des spécificités démontrées de l’application
+  
+
+  
+      <del>. Les documents sont conservés par l’exploitant pendant au moins cinq ans et sont mis à la disposition de l’autorité compétente de l’État membre et</del>
+  
+
+  
+      <ins>, ou que, dans un délai de deux ansaprès les dates spécifiées au point 23, c) et d) une seule offre avait été  déposée concernant de tels appareils de connexion avec un milieu isolant ou de coupure utilisant des gaz à effet de serre fluorés ou qui en sont tributaires. L’autorité compétente met les documents à la disposition</ins>
+  
+
+  
+       de la Commission, sur demande.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">338</div>
+  <div class="against">233</div>
+  <div class="abstention">17</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+    
+        
+        
+            <article id="152">
+            <header>📝 Amendement n°152 | 
+
+✅️ Adopté
+
+</header>
+            
+                <div class="hidden">PPE</div>
+                
+
+<p>
+
+  
+      À partir du 1er janvier 2024, 
+  
+
+  
+      <del>l’utilisation des gaz à effet de serre fluorés énumérés à l’annexe I, dont le potentiel de réchauffement planétaire est supérieur ou maintenance des équipements de réfrigération est interdite.</del>
+  
+
+  
+      <ins>les utilisations suivantes sont interdites: l’entretien ou la maintenance des équipements de climatisation et de pompes à chaleur ainsi des refroidisseurs fixes et mobiles par des gaz à effet de serre fluorés énumérés à l’annexe I, dont le potentiel de réchauffement planétaire est supérieur ou  À partir du 1er janvier 2030, les utilisations suivantes sont interdites: l’entretien ou la maintenance des équipements de réfrigération fixes, à l’exception des refroidisseurs, à l’aide des gaz à effet de serre fluorés énumérés à l’annexe I, dont le potentiel de réchauffement planétaire est supérieur ou égal à 150.  (Cet amendement remplace l’amendement 87 du rapport de la commission ENVI).</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">335</div>
+  <div class="against">83</div>
+  <div class="abstention">165</div>
+</span>
+
+  
+    
+    <a href="/voting/154095">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+            <article id="156">
+            <header>📝 Amendement n°156 | 
+
+✅️ Adopté
+
+</header>
+            
+                <div class="hidden">96885</div>
+                
+
+<p>
+
+  
+      l’utilisation de desflurane comme anesthésique par inhalation est interdite, 
+  
+
+  
+      <del>sauf</del>
+  
+
+  
+      <ins>et n’est autorisée que</ins>
+  
+
+  
+       lorsque cette utilisation est strictement requise et qu’aucun autre anesthésique ne peut être utilisé pour des raisons médicales
+  
+
+  
+      <del>. L’utilisateur apporte, sur demande, </del>
+  
+
+  
+      <ins>, ou lorsqu’il est garanti que cet agent anesthésique est utilisé en association avec un système de captage. L’établissement de soins conserve </ins>
+  
+
+  
+      la preuve de la justification médicale
+  
+
+  
+      <ins> et la fournit, sur demande,</ins>
+  
+
+  
+       à l’autorité compétente de l’État membre et à la Commission.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
+    
+      Dominique RIQUET (PR)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">343</div>
+  <div class="against">236</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/154097">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+    
+        
+        
+            <article id="159">
+            <header>📝 Amendement n°159 | 
+
+✅️ Adopté
+
+</header>
+            
+                <div class="hidden">RE</div>
+                
+
+<p>
+
+  
+      <ins>(13 bis) L’interdiction de mise sur le marché de parties d’équipements interdits en vertu du présent règlement ne devrait pas s’appliquer aux parties nécessaires à la réparation et à l’entretien d’équipements existants qui ont déjà été installés afin que ces équipements restent réparables et entretenus pendant toute leur durée de vie, ce qui permet ainsi d’éviter le remplacement injustifié d’équipements et d’infrastructures énergétiques existants et, partant, des répercussions négatives potentielles sur les efforts de décarbonation. La réparation ou l’entretien pour lesquels de telles pièces de rechange sont utilisées ne devraient pas entraîner une augmentation de la capacité de l’équipement ou une augmentation de la quantité de gaz fluorés contenus dans l’équipement ou de gaz fluorés utilisés.</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">354</div>
+  <div class="against">123</div>
+  <div class="abstention">67</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="160">
+            <header>📝 Amendement n°160 | 
+
+✅️ Adopté
+
+</header>
+            
+                <div class="hidden">RE,PPE</div>
+                
+
+<p>
+
+  
+      <ins>Par dérogation au premier alinéa, la mise sur le marché des parties d’équipements nécessaires à la réparation et à l’entretien des équipements existants est autorisée, à condition que la réparation ou l’entretien n’entraîne pas une augmentation de la capacité de l’équipement ou une augmentation de la quantité de gaz fluorés contenus dans l’équipement ou de gaz fluorés utilisés.  (Cet amendement remplace l’amendement 73 du rapport de la commission.)</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+     et 
+  
+    
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">376</div>
+  <div class="against">40</div>
+  <div class="abstention">171</div>
+</span>
+
+  
+    
+    <a href="/voting/154091">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="161">
+            <header>📝 Amendement n°161 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">RE</div>
+                
+
+<p>
+
+  
+      2. 
+  
+
+  
+      <del>Les éléments de preuve visés au point 23 comprennent</del>
+  
+
+  
+      <ins>L’exception visée au point 23, sous-points b), c) et d), peut être autorisée par l’autorité compétente d’un État membre à la suite d’une demande motivée d’un exploitant. La demande de l’exploitant comprend</ins>
+  
+
+  
+       des documents 
+  
+
+  
+      <del>établissant</del>
+  
+
+  
+      <ins>attestant</ins>
+  
+
+  
+       qu’à la suite d’un appel d’offres ouvert,
+  
+
+  
+      <ins> dont la date limite de dépôt des offres est postérieure aux dates spécifiées au point 23,</ins>
+  
+
+  
+       aucune solution de remplacement appropriée n’
+  
+
+  
+      <del>était</del>
+  
+
+  
+      <ins>est</ins>
+  
+
+  
+       disponible et susceptible de remplir les conditions énoncées au point 23, 
+  
+
+  
+      <del>pour des raisons techniques, compte tenu des spécificités démontrées de l’application. Les documents sont conservés par l’exploitant pendant au moins cinq ans et sont mis à la disposition de l’autorité compétente de l’État membre et de la Commission, sur demande.</del>
+  
+
+  
+      <ins>sous-points b), c) et d), ou que, jusqu’à deux ans après les dates visées au point 23, sous-points b), c) et d), une seule offre a été placée pour un tel appareil de commutation avec un milieu isolant ou de coupure n’utilisant pas de gaz à effet de serre fluorés ou n’en étant pas tributaire. L’autorité compétente met les documents à la disposition de la Commission, sur demande.  (Cet amendement remplace l’amendement 146 du rapport de la commission. Cet amendement est directement lié à l’amendement au point 23, sous-point b), de l’annexe IV.)</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+            <article id="173">
+            <header>📝 Amendement n°173 | 
+
+❌️ Rejeté
+
+</header>
+            
+                <div class="hidden">197534,197535,24594,5565</div>
+                
+
+<p>
+
+  
+      <ins>d bis) fournis directement par un producteur ou un importateur à une entreprise produisant des inhalateurs- doseurs destinés à l’administration de produits pharmaceutiques avant le 31 décembre 2028;</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
+    
+      Anne SANDER (LR), 
+    
+      Brice HORTEFEUX (LR), 
+    
+      François-Xavier BELLAMY (LR) et 
+    
+      Agnès EVREN (LR)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">224</div>
+  <div class="against">345</div>
+  <div class="abstention">13</div>
+</span>
+
+  
+    
+    <a href="/voting/154098">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+            <article id="186">
+            <header>📝 Amendement n°186 | 
+
+❌️ Rejeté
+
+</header>
+            
+                <div class="hidden">197534,197680,190774,197535,24594,5565,197534,190774,197535,24594,5565,197534,197535,24594,5565</div>
+                
+
+<p>
+
+  
+      Si, après allocation de la totalité des quotas visés au deuxième alinéa, la quantité maximale est dépassée, tous les quotas
+  
+
+  
+      <ins> alloués en vertu de l’annexe VII, point 4, sous-point i),</ins>
+  
+
+  
+       seront réduits proportionnellement.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
+    
+      Geoffroy DIDIER (LR), 
+    
+      Anne SANDER (LR), 
+    
+      Brice HORTEFEUX (LR), 
+    
+      Aurélia BEIGNEUX (RN), 
+    
+      François-Xavier BELLAMY (LR) et 
+    
+      Agnès EVREN (LR)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">174</div>
+  <div class="against">405</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/154134">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="187">
+            <header>📝 Amendement n°187 | 
+
+❌️ Rejeté
+
+</header>
+            
+                <div class="hidden">197535,5565</div>
+                
+
+<p>
+
+  
+      La mise sur le marché de produits et d’équipements
+  
+
+  
+      <del>, ainsi que de parties de ceux-ci, </del>
   
 
   
@@ -756,702 +1712,367 @@
   
 
   
-      adoptés en conformité avec la procédure d’examen visée à l’article 34, paragraphe 2.
-  
- 
-</section>
-
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°140 | 
-
-✅️ Adopté
-
-</header>
-    
-        
-
-<section>
-
-  
-      Pour le 1er janvier 
-  
-
-  
-      <del>2033,</del>
-  
-
-  
-      <ins>2027,</ins>
-  
-
-  
-       la Commission publiera un rapport sur la mise en œuvre du présent rè
-  
-
-  
-      <del>glement.</del>
-  
-
-  
-      <ins>glement, notamment en ce qui concerne l’incidence du présent règlement sur le secteur de la santé, en particulier la disponibilité d’inhalateurs doseurs pour la livraison d’ingrédients pharmaceutiques, ainsi qu’en ce qui concerne l’incidence sur le marché des équipements de refroidissement utilisés en combinaison avec des batteries.</ins>
-  
- 
-</section>
-
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°146 | 
-
-✅️ Adopté
-
-</header>
-    
-        
-
-<section>
-
-  
-      2. 
-  
-
-  
-      <del>Les éléments de preuve visés au point 23 comprennent des documents établissant qu’à la suite d’un appel d’offres ouvert,</del>
-  
-
-  
-      <ins>L’exception visée au point 23, c) et d), peut être autorisée par l’autorité compétente d’un État membre à la suite d’une demande motivée d’un exploitant. La demande de l’exploitant comprend des documents attestant qu’à la suite d’un appel d’offres ouvert, dont la date limite de dépôt des offres est postérieure aux dates spécifiées au point 23,</ins>
-  
-
-  
-       aucune solution de remplacement appropriée n’était disponible et susceptible de remplir les conditions énoncées au point 23, 
-  
-
-  
-      <ins>c) et d), </ins>
-  
-
-  
-      pour des raisons techniques, compte tenu des spécificités démontrées de l’
-  
-
-  
-      <del>application. Les documents sont conservés par l’exploitant pendant au moins cinq ans et sont mis à la disposition de l’autorité compétente de l’État membre et </del>
-  
-
-  
-      <ins>application, ou que, dans un délai de deux ansaprès les dates spécifiées au point 23, c) et d) une seule offre avait été  déposée concernant de tels appareils de connexion avec un milieu isolant ou de coupure utilisant des gaz à effet de serre fluorés ou qui en sont tributaires. L’autorité compétente met les documents à la disposition </ins>
-  
-
-  
-      de la Commission, sur demande.
-  
- 
-</section>
-
-    
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(338/588 * 100%)">338</div>
-  
-  
-    <div class="-" style="width: calc(233/588 * 100%)">233</div>
-  
-  
-    <div class="0" style="width: calc(17/588 * 100%)">17</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
-        
-    </footer>
-    </article>
-    
-
-    
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°152 | 
-
-✅️ Adopté
-
-</header>
-    
-        
-
-<section>
-
-  
-      À partir du 1er janvier 2024, 
-  
-
-  
-      <del>l’utilisation </del>
-  
-
-  
-      <ins>les utilisations suivantes sont interdites: l’entretien ou la maintenance des équipements de climatisation et de pompes à chaleur ainsi des refroidisseurs fixes et mobiles par </ins>
-  
-
-  
-      des gaz à effet de serre fluorés énumérés à l’annexe I, dont le potentiel de réchauffement planétaire est supérieur ou 
-  
-
-  
-      <del>maintenance des équipements de réfrigération est interdite.</del>
-  
-
-  
-      <ins> À partir du 1er janvier 2030, les utilisations suivantes sont interdites: l’entretien ou la maintenance des équipements de réfrigération fixes, à l’exception des refroidisseurs, à l’aide des gaz à effet de serre fluorés énumérés à l’annexe I, dont le potentiel de réchauffement planétaire est supérieur ou égal à 150.  (Cet amendement remplace l’amendement 87 du rapport de la commission ENVI).</ins>
-  
- 
-</section>
-
-    
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(335/583 * 100%)">335</div>
-  
-  
-    <div class="-" style="width: calc(83/583 * 100%)">83</div>
-  
-  
-    <div class="0" style="width: calc(165/583 * 100%)">165</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154095">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°156 | 
-
-✅️ Adopté
-
-</header>
-    
-        
-
-<section>
-
-  
-      l’utilisation de desflurane comme anesthésique par inhalation est interdite, 
-  
-
-  
-      <del>sauf </del>
-  
-
-  
-      <ins>et n’est autorisée que </ins>
-  
-
-  
-      lorsque cette utilisation est strictement requise et qu’aucun autre anesthésique ne peut être utilisé pour des raisons mé
-  
-
-  
-      <del>dicales. L’utilisateur apporte, sur demande, la preuve de la justification médicale </del>
-  
-
-  
-      <ins>dicales, ou lorsqu’il est garanti que cet agent anesthésique est utilisé en association avec un système de captage. L’établissement de soins conserve la preuve de la justification médicale et la fournit, sur demande, </ins>
-  
-
-  
-      à l’autorité compétente de l’État membre et à la Commission.
-  
- 
-</section>
-
-    
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(343/587 * 100%)">343</div>
-  
-  
-    <div class="-" style="width: calc(236/587 * 100%)">236</div>
-  
-  
-    <div class="0" style="width: calc(8/587 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154097">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°159 | 
-
-✅️ Adopté
-
-</header>
-    
-        
-
-<section>
-
-  
-      <ins>(13 bis) L’interdiction de mise sur le marché de parties d’équipements interdits en vertu du présent règlement ne devrait pas s’appliquer aux parties nécessaires à la réparation et à l’entretien d’équipements existants qui ont déjà été installés afin que ces équipements restent réparables et entretenus pendant toute leur durée de vie, ce qui permet ainsi d’éviter le remplacement injustifié d’équipements et d’infrastructures énergétiques existants et, partant, des répercussions négatives potentielles sur les efforts de décarbonation. La réparation ou l’entretien pour lesquels de telles pièces de rechange sont utilisées ne devraient pas entraîner une augmentation de la capacité de l’équipement ou une augmentation de la quantité de gaz fluorés contenus dans l’équipement ou de gaz fluorés utilisés.</ins>
-  
- 
-</section>
-
-    
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(354/544 * 100%)">354</div>
-  
-  
-    <div class="-" style="width: calc(123/544 * 100%)">123</div>
-  
-  
-    <div class="0" style="width: calc(67/544 * 100%)">67</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
-        
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°160 | 
-
-✅️ Adopté
-
-</header>
-    
-        
-
-<section>
-
-  
-      <ins>Par dérogation au premier alinéa, la mise sur le marché des parties d’équipements nécessaires à la réparation et à l’entretien des équipements existants est autorisée, à condition que la réparation ou l’entretien n’entraîne pas une augmentation de la capacité de l’équipement ou une augmentation de la quantité de gaz fluorés contenus dans l’équipement ou de gaz fluorés utilisés.  (Cet amendement remplace l’amendement 73 du rapport de la commission.)</ins>
-  
- 
-</section>
-
-    
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(376/587 * 100%)">376</div>
-  
-  
-    <div class="-" style="width: calc(40/587 * 100%)">40</div>
-  
-  
-    <div class="0" style="width: calc(171/587 * 100%)">171</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154091">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
-    
-
-    
-    
-
-    
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°173 | 
-
-❌️ Rejeté
-
-</header>
-    
-        
-
-<section>
-
-  
-      <ins>d bis) fournis directement par un producteur ou un importateur à une entreprise produisant des inhalateurs- doseurs destinés à l’administration de produits pharmaceutiques avant le 31 décembre 2028;</ins>
-  
- 
-</section>
-
-    
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(224/582 * 100%)">224</div>
-  
-  
-    <div class="-" style="width: calc(345/582 * 100%)">345</div>
-  
-  
-    <div class="0" style="width: calc(13/582 * 100%)">13</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154098">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°186 | 
-
-❌️ Rejeté
-
-</header>
-    
-        
-
-<section>
-
-  
-      Si, après allocation de la totalité des quotas visés au deuxième alinéa, la quantité maximale est dépassée, tous les quotas 
-  
-
-  
-      <ins>alloués en vertu de l’annexe VII, point 4, sous-point i), </ins>
-  
-
-  
-      seront réduits proportionnellement.
-  
- 
-</section>
-
-    
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(174/589 * 100%)">174</div>
-  
-  
-    <div class="-" style="width: calc(405/589 * 100%)">405</div>
-  
-  
-    <div class="0" style="width: calc(10/589 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154134">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°187 | 
-
-❌️ Rejeté
-
-</header>
-    
-        
-
-<section>
-
-  
-      La mise sur le marché de produits et d’é
-  
-
-  
-      <del>quipements, ainsi que de parties de ceux-ci, </del>
-  
-
-  
-      <ins>quipements </ins>
-  
-
-  
       énumérés à l’annexe IV, à l’exception des équipements militaires, est interdite à compter de la date spécifiée dans ladite annexe avec, le cas échéant, des distinctions en fonction du type de gaz qu’ils contiennent ou du potentiel de réchauffement planétaire de ce gaz.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Brice HORTEFEUX (LR) et 
+    
+      Agnès EVREN (LR)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">191</div>
+  <div class="against">382</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/154090">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(191/584 * 100%)">191</div>
-  
-  
-    <div class="-" style="width: calc(382/584 * 100%)">382</div>
-  
-  
-    <div class="0" style="width: calc(11/584 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154090">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°188 | 
+        
+            <article id="188">
+            <header>📝 Amendement n°188 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197535,5565,197534,5565,197535</div>
+                
 
-<section>
-
-  
-      Pour le 1er janvier 2033, la Commission publiera un rapport sur la mise en œuvre du présent rè
-  
+<p>
 
   
-      <del>glement.</del>
+      Pour le 1er janvier 2033, la Commission publiera un rapport sur la mise en œuvre du présent règlement
   
 
   
-      <ins>glement, notamment en ce qui concerne l’incidence du présent règlement sur le secteur de la santé, en particulier la disponibilité d’inhalateurs doseurs pour l’administration d’ingrédients pharmaceutiques, et l’incidence sur le marché des équipements de refroidissement utilisés en combinaison avec des batteries, ainsi qu’un réexamen de l’état des équipements d’aéronefs-aérogires et des nouveaux certificats de types de véhicules aériens.</ins>
+      <ins>, notamment en ce qui concerne l’incidence du présent règlement sur le secteur de la santé, en particulier la disponibilité d’inhalateurs doseurs pour l’administration d’ingrédients pharmaceutiques, et l’incidence sur le marché des équipements de refroidissement utilisés en combinaison avec des batteries, ainsi qu’un réexamen de l’état des équipements d’aéronefs-aérogires et des nouveaux certificats de types de véhicules aériens</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Brice HORTEFEUX (LR), 
+    
+      François-Xavier BELLAMY (LR) et 
+    
+      Agnès EVREN (LR)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">178</div>
+  <div class="against">395</div>
+  <div class="abstention">15</div>
+</span>
+
+  
+    
+    <a href="/voting/154099">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(178/588 * 100%)">178</div>
-  
-  
-    <div class="-" style="width: calc(395/588 * 100%)">395</div>
-  
-  
-    <div class="0" style="width: calc(15/588 * 100%)">15</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154099">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
+        
     
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport.Le 5 avril 2022, la Commission a adopté une proposition de révision du règlement sur les gaz à effet de serre fluorés, avec un objectif de réduction d’au moins 55 % et de réduction progressive des hydrofluorocarbures (« HFC »), dans le cadre du protocole de Montréal.L’objectif, à terme, est d’interdire progressivement les HFC, afin de les remplacer par une substance proche, la HFO.Le mouvement de remplacement des gaz fluorés est louable, mais ce texte va au-delà de la position de la Commission européenne et les propositions qu’il avance pourraient être néfastes dans le secteur de l’énergie.On peut également être inquiet pour la charge administrative pour les TPE/PME.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            Les gaz fluorés sont utilisés dans la réfrigération et la climatisation, ainsi que dans de nombreux équipements de production d’énergie (refroidissement des centrales nucléaires, pompes à chaleur, etc). Ces gaz représentent 2,5% des émission totales de gaz à effet de serre de l’Union européenne. Il est donc particulièrement important de limiter leur utilisation dans le cadre de la transition écologique. Je soutiens ce texte qui installe un système de réduction progressive de ces émissions sur le marché européen, tout en protégeant nos industries françaises. Les centrales nucléaires sont notamment mises à contribution de manière flexible et efficace, pour qu’elles puissent prendre part à cette transition sans être handicapées par des mesures irréalistes et restrictives.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il souhaite interdire des gaz fluorés et les remplacer par des alternatives naturelles. Or ces dernières ne sont encore que très peu développées sur le continent et cela pourrait avoir des conséquences très profondes sur le secteur de l’énergie.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce règlement sur les gaz fluorés. Dans un contexte où les émissions de gaz fluorés, qui disposent d’un potentiel de réchauffement 25 000 fois supérieur à celui du CO2, ont augmenté de 60% depuis 1990, ce rapport a pour ambition de réduire de 40 millions de tonnes supplémentaires d’équivalent CO2 les émissions fluorées d&#39;ici 2030. Le texte permettra également de respecter le Protocole de Montréal qui prévoit la réduction progressive des hydrofluorocarbures (HFC).
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            Les émissions de gaz fluorés représentent 2,5 % des émissions totales de gaz à effet de serre de l&#39;UE et ont augmenté de 60 % depuis 1990. Leur potentiel de réchauffement est jusqu&#39;à 25 000 fois supérieur à celui du dioxyde de carbone. Ce texte vise à supprimer l&#39;équivalent de 40 millions de tonnes supplémentaires d&#39;émissions de dioxyde de carbone (CO2) d&#39;ici 2030 et à assurer le respect du Protocole de Montréal visant à réduire progressivement les hydrofluorocarbures (HFC). La mesure la plus importante du règlement est le système de quotas pour les HFC, qui permettra une réduction progressive de la quantité de nouveaux hydrofluorocarbures disponibles sur le marché européen. Les gaz fluorés sont utilisés dans la réfrigération et la climatisation, ainsi que dans de nombreux équipements de production d’énergie (refroidissement des centrales nucléaires, pompes à chaleur). Il faudra donc laisser à nos entreprises et à nos industries le temps et la possibilité de s’adapter ce que nous avons prévu au sein d’amendements, mais pour l’ambition que propose ce texte, j’ai décidé de le soutenir afin que puisse débuter les négociations interinstitutionnelles.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter la position du Parlement européen sur la révision du règlement sur les gaz à effet de serre fluorés, proposée par la Commission. Ces gaz fluorés, qui représentent 2.5% des émissions totales de gaz à effet de serre de l’Union européenne, ont vu leur volume doubler entre 1990 et 2014 et constituent donc un enjeu essentiel dans la lutte contre le dérèglement climatique. Le Parlement demande donc un effort plus ambitieux notamment en termes de calendrier afin d&#39;éliminer les gaz fluorés les plus climaticides d’ici 2039 et de mettre un terme à l’utilisation de l’ensemble des gaz fluorés d’ici 2050. J’ai donc voté pour ce texte qui marque un progrès significatif par rapport à la proposition initiale de la Commission même s’il aurait dû être encore plus ambitieux.
+        </article>
+    
+        <article>
+            <div class="hidden">197529</div>
+            
+            <header><b>Leila CHAIBI</b> | La France Insoumise</header>
+            Plusieurs secteurs comme la réfrigération, la climatisation, les pompes à chaleur et les appareils de commutation (disjoncteurs, transformateurs de courant et de tension) contribuent à l’émission de gaz fluorés, qui participent à l’effet à de serre.La Commission a adopté une proposition de révision du règlement relatif à ces gaz le 5 avril 2022 afin de contribuer à réduire les émissions de gaz à effet de serre d’au moins 55% d’ici à 2030. La révision garantira la conformité de l’Union européenne à l’amendement de Kigali au Protocole de Montréal (qui prévoit l’abandon progressif des gaz fluorés). Elle est la bienvenue, et aidera à atteindre les objectifs climatiques de l’Union. J’ai donc voté pour ce texte.Toutefois, il faudrait aller plus loin encore et accélérer la réduction de la production et de la consommation des hydrofluorocarbones, ainsi que mettre en place des interdictions supplémentaires pour les secteurs où il est possible de passer à des solutions sans gaz fluorés.
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            Omniprésents dans notre quotidien, les gaz fluorés se trouvent dans de nombreux appareils électriques comme les réfrigérateurs et les climatiseurs. Et pourtant, il s’agit de gaz à effet de serre très puissants qui représentent environ 2,5% des émissions totales de l&#39;UE !Afin de lutter efficacement contre le changement climatique, j’ai voté en faveur de ce texte qui permettra de baisser drastiquement leur mise sur le marché européen de 98% d’ici à 2050. J’ai également soutenu les propositions de mes collègues Renew Europe visant à donner un calendrier réaliste pour ces interdictions.
+        </article>
+    
+        <article>
+            <div class="hidden">197585</div>
+            
+            <header><b>Pierre KARLESKIND</b> | Renaissance</header>
+            . – J’ai voté pour un texte qui vise à éliminer les gaz à effet de serre fluorés en Europe d’ici 30 ans. Ces gaz sont présents dans nos réfrigérateurs, climatisations et pompes à chaleur et produisent 2.5% des émissions de gaz à effet de serre de l’Union Européenne. Le problème est que leur potentiel de réchauffement est beaucoup plus élevé que celui du dioxyde de carbone. Notre objectif est une réduction de 98% de leur présence sur le marché européen d’ici 2050 par rapport à 2015. Il nous faut donc des moyens de contrôle efficaces, notamment sur le commerce illégal des gaz fluorés et produits qui en contiennent.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Reconquête!</header>
+            . – J’ai voté contre ce texte. L’industrie a déjà fait de grands progrès pour trouver des solutions alternatives à l’utilisation de gaz fluorés. Elle est prête à aller plus loin, pour peu que l’on ne lui impose pas de conditions irréalistes en termes de délais, de coûts, et de charge bureaucratique. Or, c’est très exactement ce que fait le rapport de la commission de l’environnement avec sa radicalité.
+        </article>
+    
+        <article>
+            <div class="hidden">197551</div>
+            
+            <header><b>Stéphane BIJOUX</b> | Renaissance</header>
+            J’ai voté en faveur de ce rapport qui fixe la position du Parlement européen sur la révision de la législation sur les émissions de gaz fluorés. Les gaz fluorés sont utilisés dans de nombreux équipements du quotidien, comme les réfrigérateurs, les climatiseurs ou les pompes à chaleur, mais ils provoquent un effet de serre très puissant et représentent à eux seuls environ 2,5% des émissions annuelles de gaz à effet de serre dans l’Union européenne. Avec ce texte, nous proposons des objectifs plus stricts pour réduire de 98% la quantité de gaz fluorés pouvant être mise sur le marché européen d’ici 2050. Ce nouveau cadre permettra de mieux protéger l’environnement et la santé des Européens et contribuera à la réussite du Pacte Vert et de son objectif d’atteindre la neutralité climatique d’ici 2050.
+        </article>
+    
+        <article>
+            <div class="hidden">197536</div>
+            
+            <header><b>Nathalie COLIN-OESTERLÉ</b> | Les centristes</header>
+            . – J&#39;ai voté en faveur du mandat de négociations du Parlement européen relatif au règlement sur les gaz fluorés. C&#39;est une première étape avant l&#39;ouverture des négociations avec les États membres et l&#39;adoption d&#39;un texte définitif. Les émissions de gaz fluorés représentent 2,5 % des émissions totales de gaz à effet de serre de l&#39;UE et ont augmenté de 60 % depuis 1990. Leur potentiel de réchauffement est jusqu&#39;à 25 000 fois supérieur à celui du dioxyde de carbone (CO2). Ce texte vise à supprimer l&#39;équivalent de 40 millions de tonnes supplémentaires d&#39;émissions de dioxyde de carbone (CO2) d&#39;ici 2030.Je regrette cependant le rejet de certains amendements qui auraient laissé aux opérateurs la possibilité de réparer les installations utilisant des gaz fluorés jusqu&#39;à leur fin de vie. Cette question se pose notamment pour certaines installations nucléaires et devra donc être réglée au cours des négociations à venir.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai soutenu le rapport sur la révision du règlement européen portant sur les gaz à effet de serre fluorés. Ces gaz fluorés ont un potentiel de réchauffement de notre planète considérable, puisque cela représente environ 25 000 fois celui du CO2. Bien que leur utilisation soit nécessaire à de nombreuses industries, il nous faut tout faire pour qu’elle soit réduite au minimum, en tenant compte de la possibilité de solutions alternatives. Le texte détermine ainsi des étapes progressives pour la suppression de l’utilisation de gaz fluorés dans les domaines où il est possible, tant techniquement qu’économiquement, de s’en passer. La climatisation, la réfrigération, les pompes à chaleurs et certains appareils électriques sont notamment concernés. Je suis néanmoins satisfaite que les amendements déposés par mon groupe, relatifs aux réparations et pièces détachées, aient été adoptés afin que ce texte réponde mieux à la réalité du terrain et préserve notre production d’énergie européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Passé par la radicalité de la Commission ENVI, ce texte est sensiblement différent de la proposition initiale de la Commission européenne. Ses conséquences pourraient être profondes sur le secteur de l’énergie (interdiction des hydrofluocarbures d’ici 2050), déjà mis à mal par la guerre en Ukraine, ainsi que sur les ménages et notre industrie. J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Ce texte est sensiblement différent de la proposition initiale de la Commission européenne. Ses conséquences pourraient être profondes sur le secteur de l’énergie, déjà mis à mal par la guerre en Ukraine. Le rapport représente de plus une nouvelle charge administrative importante pour les entreprises européennes, ce qui inclut les PME. Aussi, réduire à ce point notre usage de gaz fluorés nous expose à un risque important, les alternatives naturelles étant encore peu développées sur le continent. Ajoutons un dernier argument sur le coût de ces solutions alternatives pour les ménages et les PME, et la balance penche clairement du côté d’une opposition à ce texte. J’ai donc voté contre le texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            La Commission avait proposé un texte sur les gaz fluorés, afin de s’aligner sur le Protocole de Montréal signé en 1986 sur la protection de la couche d’ozone. Si le texte initial était soutenable, la version amendée par le rapporteur en commission ENVI est bien plus radicale. Le rapport compte désormais mettre fin aux gaz fluorés HFC d’ici 2050 alors que ces derniers restent indispensables pour des pans entiers de l’économie et que les alternatives 100% naturelles proposées par le rapporteur sont peu développées.À l’origine, le premier texte européen avait déjà mis fin aux gaz CFC et HCFC qui étaient relativement polluants et peu efficients, pour les remplacer par les HFC bien plus respectueux de l’environnement.Encore une fois la commission ENVI viole le principe de neutralité technologique. Pour protéger nos ménages, nos PME et notre souveraineté énergétique, il n’est pas judicieux de soutenir un tel texte.J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            . – La Commission a adopté une proposition de révision du règlement sur les gaz à effet de serre fluorés qui a pour objectif la réduction des émissions de gaz à effet de serre d&#39;au moins 55 % d&#39;ici 2030 et la réduction progressive des hydrofluorocarbures (HFC). La volonté de remplacer des gaz fluorés par des alternatives est à encourager. Cependant, ce texte est sensiblement différent de la proposition initiale de la Commission européenne. Ses conséquences pourraient être profondes sur le secteur de l’énergie, déjà mis à mal par la guerre en Ukraine. Le rapport présente de surcroît une nouvelle charge administrative importante pour les entreprises européennes, notamment pour nos PME. Aussi, réduire à ce point notre usage de gaz fluorés nous expose à un risque important, les alternatives naturelles étant encore peu développées sur le continent. Enfin, le coût de ces solutions alternatives sera prohibitif pour les ménages et les PME. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car réduire à ce point notre usage de gaz fluorés nous expose à un risque important, les alternatives naturelles étant encore peu développées sur le continent.L’exemple le plus frappant étant la volonté de remplacer ces gaz par des alternatives naturelles (CO2, propane, etc.) qui ne sont pas totalement naturelles (par exemple, l’ammoniac) même dans les secteurs où la technologie n&#39;est pas encore au point (principalement les pompes à chaleur pour le chauffage et le refroidissement, le transport frigorifique, l&#39;appareillage à haute tension).Le coût de ces solutions alternatives pour les ménages et les PME est bien trop importante.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b></b> | </header>
+            Ce rapport a pour objet la révision du règlement relatif aux gaz à effet de serre fluorés (F-gas). Cette révision doit garantir la conformité de l’Union au protocole de Montréal et plus particulièrement à l’amendement de Kigali qui prévoit l’abandon progressif des gaz à effet de serre fluorés. En effet, ces gaz fluorés représentent 2,5% des émissions totales de gaz à effet de serre de l’Union et certains gaz fluorés ont un potentiel de réchauffement climatique 25 000 fois supérieur au CO2. Leur interdiction progressive et par étape prévue par le règlement permettra à elle seule d’empêcher jusqu’à 0,4 degré Celsius de réchauffement climatique d’ici 2030, tout en permettant aux activités impactées par ces restrictions de développer de mettre en place des solutions alternatives. J’ai décidé de voter en faveur de ce rapport qui permet de réduire activement le rôle des gaz fluorés sur le réchauffement climatique, tout en laissant suffisamment de temps d’adaptation pour renforcer le recours aux alternatives existantes, notamment afin de concilier sécurité d’approvisionnement électrique et ambitions climatiques
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-    
-    
 
+    <section>
     
     
-
+        <article>
+            <div class="hidden">197690</div>
+            
+            <header><b>André ROUGÉ</b> | Rassemblement national</header>
+            
+                <p> – Monsieur le Président, chers collègues, je voudrais illustrer l’hypocrisie de formations politiques de notre assemblée. En exemple: le cas très concret de la centrale électrique de l’Ouest guyanais, projet très innovant, résidant dans la création d’une centrale photovoltaïque au sol pour alimenter en énergie une zone autour de Saint-Laurent-du-Maroni.</p>
+            
+                <p>La société qui porte le projet est pionnière dans le domaine de l’hydrogène d’origine renouvelable. Cette technique remplit à 100 % les critères européens en termes de transition verte et d’indépendance énergétique. Les procédures terminées, et alors que les travaux commençaient, certains activistes soutenus par des écologistes et LFI tentent d’empêcher l’avancée du projet en bloquant physiquement les travaux.</p>
+            
+                <p>La seule alimentation électrique actuelle de cette partie de la Guyane française est une centrale thermique très polluante. Il est curieux de voir cette schizophrénie pour la transition et les énergies renouvelables, ici, pour la surenchère et l’affrontement, comme seuls savent le faire les écolos-terroristes qui l’ont rappelé samedi à Sainte-Soline, là-bas.</p>
+            
+                <p>Le tout alimente encore une fois la stratégie du chaos et de la zadisation généralisée. J’appelle à défendre ce projet bénéfique et à ne pas trop accorder de crédit aux écologistes virtuels que nous pouvons croiser ici.</p>
+            
+        </article>
     
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/0099(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0048_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-03-30-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-01-16-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

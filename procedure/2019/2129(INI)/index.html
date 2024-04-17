@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Banque centrale européenne - rapport annuel 2018</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Banque centrale européenne - rapport annuel 2018</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(452/647 * 100%)">452</div>
-  
-  
-    <div class="-" style="width: calc(142/647 * 100%)">142</div>
+    <div class="for" style="width: calc(452/647 * 100%)">452</div>
   
   
-    <div class="0" style="width: calc(53/647 * 100%)">53</div>
+    <div class="against" style="width: calc(142/647 * 100%)">142</div>
+  
+  
+    <div class="abstention" style="width: calc(53/647 * 100%)">53</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(49/75 * 100%)">49</div>
+    <div class="for" style="width: calc(49/75 * 100%)">49</div>
   
   
-    <div class="-" style="width: calc(20/75 * 100%)">20</div>
+    <div class="against" style="width: calc(20/75 * 100%)">20</div>
   
   
-    <div class="0" style="width: calc(6/75 * 100%)">6</div>
+    <div class="abstention" style="width: calc(6/75 * 100%)">6</div>
   
 </div>
  
 </section>
-            <a href="/voting/112371">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/112371">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -121,443 +126,679 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2129(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0016_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-02-12-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       C. considérant que, selon les projections macroéconomiques publiées par l’Eurosystème en 
   
 
   
-      <del>juin </del>
+      <del>juin</del>
   
 
   
-      <ins>septembre </ins>
+      <ins>septembre</ins>
   
 
   
-      2019, le taux d’inflation annuel de l’indice des prix à la consommation harmonisés (IPCH) pour la zone euro devrait atteindre 1,2 % en 2019, 1 % en 2020 et 1,5 % en 2021, 
+       2019, le taux d’inflation annuel de l’indice des prix à la consommation harmonisés (IPCH) pour la zone euro devrait atteindre 1,2 % en 2019, 1 % en 2020 et 1,5 % en 2021, 
   
 
   
-      <del>ce qui s’approche des 2 % sans y parvenir;</del>
+      <del>ce qui s’approche des 2 % sans y parvenir</del>
   
 
   
-      <ins>l’objectif du maintien des taux d’inflation en dessous mais à proximité des 2 % n’étant donc pas atteint;</ins>
+      <ins>l’objectif du maintien des taux d’inflation en dessous mais à proximité des 2 % n’étant donc pas atteint</ins>
   
 
   
-       que les projections en matière d’inflation présentent d’importants écarts dans la zone euro;
+      ; que les projections en matière d’inflation présentent d’importants écarts dans la zone euro;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
-    <article>
-    <header>📝 Amendement n°2 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>34 bis. s’inquiète de l’initiative européenne de répartition des instruments de dette (EDDI) de la BCE et fait remarquer qu’une telle initiative ne doit en aucun cas empiéter sur les prérogatives du législateur européen ou les limiter;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">250</div>
+  <div class="against">376</div>
+  <div class="abstention">18</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(250/644 * 100%)">250</div>
-  
-  
-    <div class="-" style="width: calc(376/644 * 100%)">376</div>
-  
-  
-    <div class="0" style="width: calc(18/644 * 100%)">18</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       38. 
   
 
   
-      <del>regrette </del>
+      <del>regrette</del>
   
 
   
-      <ins>observe </ins>
+      <ins>observe</ins>
   
 
   
-      que la BCE n’
+       que la BCE n’
   
 
   
-      <del>ait </del>
+      <del>ait</del>
   
 
   
-      <ins>a </ins>
+      <ins>a</ins>
   
 
   
-      pas encore inclus les obligations grecques dans le programme d’achats d’actifs du secteur public (PSPP) en dépit des améliorations réalisées par la Grèce concernant la viabilité de sa dette et malgré son retour sur le marché obligataire;
+       pas encore inclus les obligations grecques dans le programme d’achats d’actifs du secteur public (PSPP) en dépit des améliorations réalisées par la Grèce concernant la viabilité de sa dette et malgré son retour sur le marché obligataire;
   
 
   
       <del> invite la BCE à expliquer pourquoi elle n’a pas encore analysé la viabilité de ces obligations alors qu’il s’agit d’une condition préalable à leur inclusion dans l’assouplissement quantitatif;</del>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">315</div>
+  <div class="against">288</div>
+  <div class="abstention">39</div>
+</span>
+
+  
+    
+    <a href="/voting/112449">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(315/642 * 100%)">315</div>
-  
-  
-    <div class="-" style="width: calc(288/642 * 100%)">288</div>
-  
-  
-    <div class="0" style="width: calc(39/642 * 100%)">39</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/112449">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
-
-  
-      44. 
-  
+<p>
 
   
-      <del>souligne que la BCE doit rendre davantage et mieux compte de son action alors que ses missions se sont élargies depuis le début de la crise financière mondiale; </del>
+      44.
   
 
   
-      demande une nouvelle fois que la BCE se montre plus transparente vis-à-vis du Parlement et lui rende davantage compte de son action; se déclare prêt, à cet effet, à améliorer le format du dialogue monétaire avec la présidente de la BCE; 
+      <del> souligne que la BCE doit rendre davantage et mieux compte de son action alors que ses missions se sont élargies depuis le début de la crise financière mondiale;</del>
   
 
   
-      <del>considère que parmi les mesures prises pour renforcer la transparence doivent au minimum figurer celles-ci:      – publication obligatoire des déclarations d’intérêts des membres du conseil des gouverneurs;  – désignation obligatoire de membres indépendants parmi les membres du comité d’audit et du comité d’éthique;  – adoption d’une nouvelle politique en matière de dénonciation des dysfonctionnements;    – établissement de lignes directrices et de règles de transparence claires et fixation de limites pour les rencontres avec les acteurs concernés;  – établissement d’exigences spécifiques en ce qui concerne les prises de position de l’institution dans le cadre des programmes d’assistance financière ainsi que dans les enceintes multilatérales telles que le comité de Bâle;</del>
+       demande une nouvelle fois que la BCE se montre plus transparente vis-à-vis du Parlement et lui rende davantage compte de son action; se déclare prêt, à cet effet, à améliorer le format du dialogue monétaire avec la présidente de la BCE; 
   
 
   
-      <ins>apprécie les mesures prises par la BCE, en particulier l’adoption du code de conduite unique pour tous les fonctionnaires de haut niveau de la BCE, qui, entre autres, comprend une obligation de publication des déclarations d’intérêts des membres du conseil des gouverneurs et établit des lignes directrices claires, des règles de transparence et d’autres dispositions relatives aux rencontres avec les acteurs concernés; estime que d’autres mesures sont nécessaires pour renforcer l’indépendance des membres du comité d’audit et améliorer sa politique en matière de lanceurs d’alerte;</ins>
+      <del>considère que parmi</del>
+  
+
+  
+      <ins>apprécie</ins>
+  
+
+  
+       les mesures prises 
+  
+
+  
+      <del>pour renforcer la transparence doivent au minimum figurer celles-ci:      – publication obligatoire des déclarations d’intérêts des membres du conseil des gouverneurs;  – désignation obligatoire de membres indépendants parmi les membres du comité d’audit et du comité d’éthique;  – adoption d’une nouvelle politique en matière de dénonciation des dysfonctionnements;    – établissement de</del>
+  
+
+  
+      <ins>par la BCE, en particulier l’adoption du code de conduite unique pour tous les fonctionnaires de haut niveau de la BCE, qui, entre autres, comprend une obligation de publication des déclarations d’intérêts des membres du conseil des gouverneurs et établit des</ins>
+  
+
+  
+       lignes directrices 
+  
+
+  
+      <del>et de</del>
+  
+
+  
+      <ins>claires, des</ins>
+  
+
+  
+       règles de transparence 
+  
+
+  
+      <del>claires et fixation de limites pour les rencontres avec les acteurs concernés;  – établissement d’exigences spécifiques en ce qui concerne les prises de position de l’institution dans le cadre des programmes d’assistance financière ainsi que dans les enceintes multilatérales telles que le comité de Bâle</del>
+  
+
+  
+      <ins>et d’autres dispositions relatives aux rencontres avec les acteurs concernés; estime que d’autres mesures sont nécessaires pour renforcer l’indépendance des membres du comité d’audit et améliorer sa politique en matière de lanceurs d’alerte</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">266</div>
+  <div class="against">302</div>
+  <div class="abstention">74</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(266/642 * 100%)">266</div>
-  
-  
-    <div class="-" style="width: calc(302/642 * 100%)">302</div>
-  
-  
-    <div class="0" style="width: calc(74/642 * 100%)">74</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>C bis. considérant que l’objectif en matière d’inflation fixé par la BCE ne dispose d’aucune base juridique dans les traités et, par ailleurs, devrait être modifié pour prendre en considération l’évolution des prix des actifs;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°6 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>M bis. considérant que l’article 123 du traité FUE et l’article 21 des statuts du SEBC et de la BCE interdisent le financement monétaire des gouvernements;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°7 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>14 bis. reconnaît que les politiques de la BCE ont des incidences sur la redistribution; estime que les inégalités de patrimoine ont été exacerbées par l’inflation du prix des actifs financiers, lesquels sont principalement détenus par les plus nantis;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°8 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       19. rappelle 
   
 
   
-      <del>qu’en tant qu’institution de l’Union, la BCE est liée par l’accord de Paris sur le changement climatique et qu’elle devrait se refléter dans ses politiques, tout en respectant pleinement son mandat et son indépendance; se félicite qu’une discussion s’engage sur le rôle des banques centrales et des superviseurs en ce qu’ils soutiennent la lutte contre le changement climatique; invite la BCE à mettre en œuvre les principes environnementaux, sociaux et de gouvernance (principes ESG) dans ses politiques, dans le plein respect de son mandat et de son indépendance;</del>
+      <del>qu’en tant qu’institution de l’Union, la BCE est liée par l’accord de Paris sur le changement climatique et qu’elle devrait se refléter dans ses politiques, tout en respectant pleinement son mandat et son indépendance; se félicite qu’une discussion s’engage sur le rôle des banques centrales et des superviseurs en ce qu’ils soutiennent la lutte contre le changement climatique; invite la BCE à mettre en œuvre les principes environnementaux, sociaux et de gouvernance (principes ESG) dans ses politiques, dans le plein respect de son mandat et de son indépendance</del>
   
 
   
-      <ins>que la BCE est un organe indépendant doté d’un mandat strict et limité énoncé à l’article 127 du traité FUE, consistant à maintenir la stabilité des prix, et que, à ce titre, n’entrent pas dans le champ d’application de son mandat les obligations qui incombent à l’Union en vertu de l’accord de Paris sur le changement climatique;</ins>
+      <ins>que la BCE est un organe indépendant doté d’un mandat strict et limité énoncé à l’article 127 du traité FUE, consistant à maintenir la stabilité des prix, et que, à ce titre, n’entrent pas dans le champ d’application de son mandat les obligations qui incombent à l’Union en vertu de l’accord de Paris sur le changement climatique</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°9 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
-
-  
-      – le renforcement de l’Union monétaire europé
-  
+<p>
 
   
-      <del>enne;</del>
+      – le renforcement de l’Union monétaire européenne
   
 
   
-      <ins>enne, dont l’établissement d’une capacité budgétaire de la zone euro susceptible d’assurer une fonction de stabilisation contracyclique;</ins>
+      <ins>, dont l’établissement d’une capacité budgétaire de la zone euro susceptible d’assurer une fonction de stabilisation contracyclique</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">318</div>
+  <div class="against">303</div>
+  <div class="abstention">22</div>
+</span>
+
+  
+    
+    <a href="/voting/112436">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(318/643 * 100%)">318</div>
-  
-  
-    <div class="-" style="width: calc(303/643 * 100%)">303</div>
-  
-  
-    <div class="0" style="width: calc(22/643 * 100%)">22</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/112436">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       30. prend note que, à la réunion du 4 septembre 2019 de la commission des affaires économiques, Mme Christine Lagarde a déclaré au sujet de la nouvelle réglementation des 
   
 
   
-      <del>cryptomonnaies </del>
+      <del>cryptomonnaies</del>
   
 
   
-      <ins>crypto-actifs </ins>
+      <ins>crypto-actifs</ins>
   
 
   
-      «la BCE et les banques centrales en général doivent surveiller attentivement ces évolutions et contribuer au travail international actuel entrepris pour y apporter des réponses politiques»; demande à la BCE d’évaluer, en collaboration avec la Commission, le cadre juridique et règlementaire relatif à la monnaie électronique, aux instruments financiers et aux 
+       «la BCE et les banques centrales en général doivent surveiller attentivement ces évolutions et contribuer au travail international actuel entrepris pour y apporter des réponses politiques»; demande à la BCE d’évaluer, en collaboration avec la Commission, le cadre juridique et règlementaire relatif à la monnaie électronique, aux instruments financiers et aux 
   
 
   
@@ -568,57 +809,81 @@
       actifs virtuels, afin de disposer d’un cadre complet de surveillance des infrastructures, instruments et organismes financiers, de lutter contre le blanchiment des capitaux, de favoriser la stabilité et de renforcer la coopération et la coordination transfrontières; demande à la BCE d’œuvrer avec la Commission à l’encadrement de ces nouvelles monnaies afin de concilier l’innovation et les besoins des citoyens tout en préservant la stabilité financière et le respect de l’état de droit;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°12 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       <ins>Responsabilité</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°13 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="13">
+            <header>📝 Amendement n°13 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       <del>42. rappelle que les désignations des membres du directoire doivent être préparées avec soin, en toute transparence et en collaboration avec le Parlement, dans le respect des traités; invite le Conseil à établir dorénavant des listes restreintes respectueuses de l’équilibre hommes/femmes pour toutes les vacances de postes et à les partager avec le Parlement, afin de lui permettre de jouer un rôle consultatif plus important dans le processus de nomination; déplore qu’à ce jour, aucun progrès satisfaisant n’ait été accompli;</del>
@@ -628,65 +893,89 @@
       <ins>(Ne concerne pas la version française.)</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°14 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="14">
+            <header>📝 Amendement n°14 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
-
-  
-      44. souligne que la BCE doit rendre davantage et mieux compte de son action alors que ses missions se sont élargies depuis le début de la crise financière mondiale; demande une nouvelle fois que la BCE se montre plus transparente vis-à- vis du Parlement et lui rende davantage compte de son action; se déclare prêt, à cet effet, à améliorer le format du dialogue monétaire avec la présidente de la BCE; 
-  
+<p>
 
   
-      <ins>prend acte des mesures prises par la BCE à cet égard, en particulier l’adoption du code de conduite unique pour tous les fonctionnaires de haut niveau de la BCE, qui comprend une obligation de publication des déclarations d’intérêts des membres du conseil des gouverneurs et établit des lignes directrices claires, des règles de transparence et d’autres dispositions restrictives relatives aux rencontres avec les acteurs concernés; </ins>
+      44. souligne que la BCE doit rendre davantage et mieux compte de son action alors que ses missions se sont élargies depuis le début de la crise financière mondiale; demande une nouvelle fois que la BCE se montre plus transparente vis-à- vis du Parlement et lui rende davantage compte de son action; se déclare prêt, à cet effet, à améliorer le format du dialogue monétaire avec la présidente de la BCE;
   
 
   
-      considère que parmi les mesures prises pour renforcer la transparence doivent au minimum figurer celles-ci:
+      <ins> prend acte des mesures prises par la BCE à cet égard, en particulier l’adoption du code de conduite unique pour tous les fonctionnaires de haut niveau de la BCE, qui comprend une obligation de publication des déclarations d’intérêts des membres du conseil des gouverneurs et établit des lignes directrices claires, des règles de transparence et d’autres dispositions restrictives relatives aux rencontres avec les acteurs concernés;</ins>
+  
+
+  
+       considère que parmi les mesures prises pour renforcer la transparence doivent au minimum figurer celles-ci:
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°17 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="17">
+            <header>📝 Amendement n°17 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       42. rappelle que les désignations des membres du directoire doivent être préparées avec soin, en toute transparence et en collaboration avec le Parlement, dans le respect des traités; invite le Conseil à établir dorénavant des listes restreintes respectueuses de l’équilibre hommes/femmes pour toutes les vacances de postes et à les partager avec le Parlement, afin de lui permettre de jouer un rôle consultatif plus important dans le processus de nomination; déplore qu’à ce jour, aucun progrès satisfaisant n’ait été accompli;
@@ -696,249 +985,269 @@
       <ins> rappelle l’importance du paragraphe 4 de la résolution du Parlement du 14 mars 2019 sur l’équilibre hommes-femmes des nominations dans les affaires économiques et monétaires de l’Union, par laquelle le Parlement s’engage à ne pas tenir compte des listes restreintes dont l’équilibre entre les hommes et les femmes n’est pas respecté;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">353</div>
+  <div class="against">216</div>
+  <div class="abstention">77</div>
+</span>
+
+  
+    
+    <a href="/voting/112450">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(353/646 * 100%)">353</div>
-  
-  
-    <div class="-" style="width: calc(216/646 * 100%)">216</div>
-  
-  
-    <div class="0" style="width: calc(77/646 * 100%)">77</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/112450">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°18 | 
+        
+            <article id="18">
+            <header>📝 Amendement n°18 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>42 bis. rappelle à Mme Christine Lagarde, récemment nommée à la présidence de la BCE, la décision et les recommandations conclues par le Médiateur européen dans l’adhésion de l’ancien président de la BCE, Mario Draghi, au «Groupe des Trente»; s’oppose à l’argument de la BCE selon lequel le maintien du dialogue entre acteurs concernés exige de participer à ces forums, y compris avec les les banques surveillées (BCE, Feedback on the input provided by the European Parliament as part of its resolution on the ECB Annual Report for 2016) [Retour sur les résultats fournis par le Parlement européen dans sa résolution sur le rapport annuel 2016 de la BCE, avril 2018]; invite la BCE à respecter les recommandations du Médiateur et à examiner soigneusement ses politiques intérieures afin d’éviter les conflits d’intérêts susceptibles de survenir à cause des pratiques de pantouflage ou de la participation des membres du bureau ou du conseil des gouverneurs de la BCE à des forums informels qui impliquent des discussions secrètes avec de hauts représentants du secteur privé;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">231</div>
+  <div class="against">396</div>
+  <div class="abstention">19</div>
+</span>
+
+  
+    
+    <a href="/voting/112452">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(231/646 * 100%)">231</div>
-  
-  
-    <div class="-" style="width: calc(396/646 * 100%)">396</div>
-  
-  
-    <div class="0" style="width: calc(19/646 * 100%)">19</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/112452">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°19 | 
+        
+            <article id="19">
+            <header>📝 Amendement n°19 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>3 bis. regrette que le pacte de stabilité et de croissance (PSC) demeure l’épine dorsale du cadre de gouvernance économique actuel de l’Union; souligne que, selon l’évaluation de la Commission, seuls dix pays, principalement ceux dont les taux d’endettement sont faibles, souhaitent respecter le pacte de stabilité et de croissance, en vertu des projets de budget pour 2019, ce qui met en relief les impasses et les problèmes à long terme du pacte;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">94</div>
+  <div class="against">456</div>
+  <div class="abstention">100</div>
+</span>
+
+  
+    
+    <a href="/voting/112434">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(94/650 * 100%)">94</div>
-  
-  
-    <div class="-" style="width: calc(456/650 * 100%)">456</div>
-  
-  
-    <div class="0" style="width: calc(100/650 * 100%)">100</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/112434">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°20 | 
+        
+            <article id="20">
+            <header>📝 Amendement n°20 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       26. est préoccupé par les risques liés au retard pris dans la mise en place de l’union bancaire et demande son achèvement rapide; 
   
 
   
-      <del>prend note </del>
+      <del>prend note</del>
   
 
   
-      <ins>se réjouit </ins>
+      <ins>se réjouit</ins>
   
 
   
-      des appels répétés de la BCE en faveur de l’établissement d’un système européen d’assurance des dépôts (SEAD) 
+       des appels répétés de la BCE en faveur de l’établissement d’un système européen d’assurance des dépôts (SEAD) 
   
 
   
-      <del>qui constituerait le </del>
+      <del>qui constituerait le</del>
   
 
   
-      <ins>en tant que </ins>
+      <ins>en tant que</ins>
   
 
   
-      troisième pilier de l’union bancaire;
+       troisième pilier de l’union bancaire;
   
 
   
       <ins> qui favoriserait la protection des déposants, renforcerait l’intégration financière et accroitrait la crédibilité; se félicite du choix de la BCE de mettre en place, dans la première phase du SEAD, un fonds centralisé ayant pour objet de doter le système de ressources financières solides et de faire en sorte que le cadre de gouvernance permette une prise de décision rapide et commune à toute l’Union;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
     
-    <article>
-    <header>📝 Amendement n°21 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="21">
+            <header>📝 Amendement n°21 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>27 bis. regrette les orientations de la BCE relatives à la réduction des prêts improductifs dans les États membres et la proposition législative de la Commission en la matière; déplore la pratique de plusieurs États membres consistant à vendre massivement des prêts hypothécaires improductifs privés à des fonds de capital-investissement, qui s’est traduite par un taux plus élevé de saisies de logements, et constate que plusieurs États membres ne parviennent pas à résoudre ce problème en adoptant des législations adéquates en matière de protection des consommateurs; demande l’instauration d’une protection juridique des emprunteurs hypothécaires au niveau de l’Union en matière de saisies;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">177</div>
+  <div class="against">316</div>
+  <div class="abstention">155</div>
+</span>
+
+  
+    
+    <a href="/voting/112446">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(177/648 * 100%)">177</div>
-  
-  
-    <div class="-" style="width: calc(316/648 * 100%)">316</div>
-  
-  
-    <div class="0" style="width: calc(155/648 * 100%)">155</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/112446">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°22 | 
+        
+            <article id="22">
+            <header>📝 Amendement n°22 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       32. invite la BCE à maintenir l’équilibre entre l’innovation 
@@ -952,97 +1261,101 @@
       financière (notamment technologie financière) et la stabilité financière;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">255</div>
+  <div class="against">369</div>
+  <div class="abstention">26</div>
+</span>
+
+  
+    
+    <a href="/voting/112447">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(255/650 * 100%)">255</div>
-  
-  
-    <div class="-" style="width: calc(369/650 * 100%)">369</div>
-  
-  
-    <div class="0" style="width: calc(26/650 * 100%)">26</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/112447">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°23 | 
+        
+            <article id="23">
+            <header>📝 Amendement n°23 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>36 bis. invite la BCE à publier les montants totaux des bénéfices réalisés par l’Eurosystème dans le cadre des accords sur les actifs financiers nets et du programme pour les marchés de titres (SMP), ainsi qu’une ventilation spécifique pour chaque État membre ayant fait l’objet d’achats au titre du SMP (Grèce, Irlande, Portugal, Espagne et Italie);</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">244</div>
+  <div class="against">372</div>
+  <div class="abstention">28</div>
+</span>
+
+  
+    
+    <a href="/voting/112448">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(244/644 * 100%)">244</div>
-  
-  
-    <div class="-" style="width: calc(372/644 * 100%)">372</div>
-  
-  
-    <div class="0" style="width: calc(28/644 * 100%)">28</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/112448">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°24 | 
+        
+            <article id="24">
+            <header>📝 Amendement n°24 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       42. rappelle que les désignations des membres du directoire doivent être préparées avec soin, en toute transparence et en collaboration avec le Parlement, dans le respect des traités; invite le Conseil à établir dorénavant des listes restreintes respectueuses de l’équilibre hommes/femmes pour toutes les vacances de postes et à les partager avec le Parlement, afin de lui permettre de jouer un rôle consultatif plus important dans le processus de nomination; déplore qu’à ce jour, aucun progrès satisfaisant n’ait été accompli;
@@ -1052,97 +1365,101 @@
       <ins> déplore l’absence persistante d’équilibre entre les hommes et les femmes parmi les gouverneurs européens; invite la BCE à recommander à la Commission de revoir les statuts du Système européen de banques centrales et de la Banque centrale européenne afin que l’équilibre hommes-femmes devienne obligatoire; invite les États membres à accorder une attention particulière à cette question lors de la nomination de leurs gouverneurs;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">295</div>
+  <div class="against">335</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/112451">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(295/641 * 100%)">295</div>
-  
-  
-    <div class="-" style="width: calc(335/641 * 100%)">335</div>
-  
-  
-    <div class="0" style="width: calc(11/641 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/112451">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°25 | 
+        
+            <article id="25">
+            <header>📝 Amendement n°25 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>42 bis. déplore l’attitude négative de la du Médiateur européen concernant l’appartenance du président de la BCE au «Groupe des Trente»; invite la BCE à mettre fin à l’appartenance du président au G30, à réexaminer les recommandations du Médiateur et à revoir soigneusement ses politiques internes afin de se protéger contre une éventuelle capture cognitive par le secteur financier;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">233</div>
+  <div class="against">402</div>
+  <div class="abstention">6</div>
+</span>
+
+  
+    
+    <a href="/voting/112453">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(233/641 * 100%)">233</div>
-  
-  
-    <div class="-" style="width: calc(402/641 * 100%)">402</div>
-  
-  
-    <div class="0" style="width: calc(6/641 * 100%)">6</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/112453">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°26 | 
+        
+            <article id="26">
+            <header>📝 Amendement n°26 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       44. souligne que la BCE doit rendre davantage et mieux compte de son action alors que ses missions se sont élargies depuis le début de la crise financière mondiale; demande une nouvelle fois que la BCE se montre plus transparente vis-à- vis du Parlement et lui rende davantage compte de son action; se déclare prêt, à cet effet, à améliorer le format du dialogue monétaire avec la présidente de la BCE; considère que parmi les mesures prises pour renforcer la transparence doivent au minimum figurer celles-ci:  – publication obligatoire des déclarations d’intérêts des membres du conseil des gouverneurs;  – désignation obligatoire de membres indépendants parmi les membres du comité d’audit et du comité d’éthique;  – adoption d’une nouvelle politique en matière de dénonciation des dysfonctionnements;  – établissement de lignes directrices et de règles de transparence claires et fixation de limites pour les rencontres avec les acteurs concernés;  – établissement d’exigences spécifiques en ce qui concerne les prises de    position de l’institution dans le cadre des programmes d’assistance financière ainsi que dans les enceintes multilatérales telles que le comité de Bâle;
@@ -1152,49 +1469,51 @@
       <ins>  – publication des procès-verbaux des réunions du conseil des gouverneurs, y compris les comptes rendus de réunions et les votes, dans un délai raisonnable de moins de trois ans;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">265</div>
+  <div class="against">374</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    
+    <a href="/voting/112454">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(265/648 * 100%)">265</div>
-  
-  
-    <div class="-" style="width: calc(374/648 * 100%)">374</div>
-  
-  
-    <div class="0" style="width: calc(9/648 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/112454">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°27 | 
+        
+            <article id="27">
+            <header>📝 Amendement n°27 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       23. est préoccupé par le fait que 62,1 % des achats d’obligations d’entreprises effectués par la BCE concernent des secteurs responsables de 58,5 % des émissions de gaz à effet de serre de la zone euro; invite la BCE à étudier l’incidence du programme d’achats d’actifs sur le changement climatique, et notamment celle du programme d’achat de titres du secteur des entreprises dans la perspective d’en renforcer le caractère social et environnemental; propose à cet égard d’instituer un cadre de coordination entre la BCE et la Banque européenne d’investissement, sans oublier InvestEU;
@@ -1204,102 +1523,273 @@
       <ins> invite la BCE à soutenir les efforts visant à aligner les opérations de la BEI sur les objectifs de l’accord de Paris et à consacrer 50 % des prêts de la BEI à l’action pour le climat et à la durabilité, notamment en augmentant ses achats d’obligations vertes émises par la BEI;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">281</div>
+  <div class="against">358</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/112444">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(281/649 * 100%)">281</div>
-  
-  
-    <div class="-" style="width: calc(358/649 * 100%)">358</div>
-  
-  
-    <div class="0" style="width: calc(10/649 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/112444">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°28 | 
+        
+            <article id="28">
+            <header>📝 Amendement n°28 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>18 bis. invite la BCE à saisir l’occasion de la prochaine révision du cadre de politique monétaire pour revoir son interprétation du principe de neutralité du marché, qui n’est ni une exigence légale ni une doctrine bancaire centrale;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">287</div>
+  <div class="against">307</div>
+  <div class="abstention">56</div>
+</span>
+
+  
+    
+    <a href="/voting/112439">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(287/650 * 100%)">287</div>
-  
-  
-    <div class="-" style="width: calc(307/650 * 100%)">307</div>
-  
-  
-    <div class="0" style="width: calc(56/650 * 100%)">56</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/112439">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
+        
     
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Ce rapport était l’occasion d’émettre des critiques sur la politique monétaire de la BCE, ses errances idéologiques et ses prises de liberté outrepassant régulièrement le cadre de son mandat. Il n’est en réalité qu’une ode sans réserve au fonctionnement et aux orientations de la BCE, sans le moindre recul ni la moindre lucidité sur les risques qu’entraînent le maintien des taux négatifs ou le quantitative easing .
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté contre ce texte.Ce rapport encourage la Banque centrale européenne à modifier ses politiques en fonction d’un «Pacte vert» sur le climat. Une telle proposition est contraire au principe d’indépendance de cette banque. Il élude également les conséquences néfastes des taux négatifs.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport : la BCE excède son mandat sur plusieurs points, en particulier si elle s’engageait dans une action de soutien au green deal : cela créerait un mélange des genres et empiéterait sur les compétences souveraines des États. Elle ne peut pas s’octroyer pour elle-même les compétences étatiques.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il exhorte la BCE à modifier ses politiques afin d’appliquer le Pacte vert de la Commission, ce qui me semble constituer une allégeance vis-à-vis de la Commission, contraire à l’indépendance de la banque. Il s’agit en outre de critères subjectifs qui devraient normalement être contrôlés par les États.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Chaque année le Parlement européen se prononce dans un rapport non législatif sur la politique de la Banque centrale européenne. Le rapport donne l’avis du Parlement sur la politique monétaire de la BCE.Si ce rapport soutient un objectif nouveau de prise en compte du dérèglement climatique dans les choix de politiques monétaires en citant notamment les critères environnementaux, sociaux et de gouvernance, s’il demande la mise en place par la BCE d’un nouveau cadre pour les lanceurs d’alerte, et la nécessité de tenir compte et de respecter les principes des banques coopératives dans la mise en œuvre de la politique monétaire, il n’en demeure pas moins problématique à plusieurs égards.Il réaffirme l’impératif de ne pas dévier de la politique classique pratiquée par la BCE concernant la stabilité des prix comme objectif premier de la banque. Dès lors il est en contradiction avec l’objectif affiché d’une meilleure prise en compte de l’enjeu climatique.L’actuel politique monétaire pratiquée en Europe est un facteur aggravant d’inégalités. Le climat et la question sociale doivent non seulement être nos priorités, mais l’Union européenne doit se donner les moyens de sa politique.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            Le Parlement émet chaque année un avis sur le rapport annuel de la BCE, portant sur l’année n-2. En réalité, il s’agit d’une occasion de commenter les dernières évolutions de la politique monétaire ainsi que d’exposer la position du Parlement sur la situation économique de la zone euro. En l’occurrence, ce rapport est descriptif mais prend également position sur la nature politique de l’euro, son caractère irréversible, la bonne gestion de la BCE, l’attachement à son indépendance, la nécessité de réformes structurelles etc.J’ai voté contre ce texte, du fait du rejet des amendements déposés par mes collègues. Nous avions en effet souligné le fait que la BCE excède son mandat sur plusieurs points, en particulier dans sa volonté de s’engager dans une action de soutien au green deal : cela créerait un mélange des genres et empiéterait sur les compétences souveraines des États. En outre, le rapport pèche par les aspects qu’il ne traite pas ou peu et qui sont pourtant au cœur des inquiétudes que nous pouvons avoir : les conséquences des taux négatifs sur les marchés immobiliers ou boursiers (bulles, spéculation, prises de risque excessives), sur la solvabilité de l’assurance-vie (fonds euros), sur la facilité de la dépense publique et ses conséquences à long terme.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport sur le rapport annuel de la BCE 2018. Le texte déplore la baisse de la croissance européenne en 2019, qui passe de 1,9 % à 1,1 % dans la zone euro et de 2,1 % à 1,4 % dans l’UE-27. Il souligne qu’une politique monétaire accommodante ne doit pas se substituer à des réformes structurelles. Enfin, il demande à la BCE de rester vigilante concernant la formation éventuelle d’une bulle du prix des actifs.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce rapport donne l’avis du Parlement sur la politique monétaire conduite par la Banque centrale européenne (BCE). Il convient de remarquer que ce rapport contient de nombreux éléments positifs : il appelle à une politique monétaire davantage écologique, à ce que la BCE applique les critères environnementaux, sociaux et de gouvernance, demande davantage de transparence etc. Toutefois, il a une faille majeure : il consacre et se félicite de l’indépendance de la BCE et de l’existence de son mandat unique et obsessionnel de lutte contre l’inflation... Cela même alors que l’inflation est particulièrement faible et qu’il faudrait plutôt une politique expansionniste en soutien à la relance écologique et sociale dont l’Europe a besoin ! Ce mandat absurde ne convient qu’à un seul État membre, l’Allemagne, et à une fraction seulement de sa population : ses retraités. Par ailleurs, je refuse de reconnaître que le pouvoir souverain de battre monnaie puisse continuer à être mené indépendamment de la souveraineté populaire. Il faut mettre un terme à l’indépendance de la BCE, la rendre responsable devant le Parlement, et changer son mandat : elle doit aider à limiter la hausse de la température mondiale, pas l’inflation ! Je m’abstiens sur ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            Rapporteur pour mon groupe politique sur le rapport annuel 2018 de la Banque centrale européenne, j’ai insisté, tout au long des négociations, pour que ce rapport soit strictement lié aux activités de la Banque centrale européenne. Il était très important de voir ce rapport bénéficier d’un large soutien lors du vote en plénière, car il est le premier document que nous transmettons, au nom du Parlement européen, à Christine Lagarde, la nouvelle Présidente de la Banque centrale européenne. Ces recommandations devront servir de base pour un dialogue fréquent avec la commission des affaires économiques et monétaires. Dans ce rapport, j’ai notamment été vigilante sur la mention des crypto-actifs et les risques qui y sont liés, notamment le blanchiment d’argent et les cyberattaques, et j’ai insisté sur l’indépendance de la BCE ainsi que sur son mandat unique, tel qu’inscrit dans les traités, à savoir maintenir la stabilité des prix.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il exhorte la BCE à modifier ses politiques afin d’appliquer le Pacte vert sur le climat de la Commission, ce qui nous semble être une allégeance vis-à-vis de la Commission, contraire à l’indépendance de la banque. Il s’agit en outre d’investissements sur des critères subjectifs, qui devraient normalement être contrôlés par les États. En outre, le rapport omet ou évoque excessivement peu les conséquences néfastes des taux négatifs (viabilité des fonds euros des assureurs-vie, spéculation boursière, bulles immobilières, accroissement des inégalités...).
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il appelle la Banque centrale européenne à modifier ses politiques afin d’appliquer le Pacte vert sur le climat de la Commission. Il s’agit d’investissements sur des critères subjectifs, qui devraient normalement être contrôlés par les États. En outre, le rapport omet les conséquences néfastes des taux négatifs (spéculation boursière, bulles immobilières, accroissement des inégalités, risque sur la viabilité des fonds euros des assureurs-vie).
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            La résolution demande naturellement de donner un chèque en blanc à la gestion de la BCE. Le verdissement de la politique de la BCE, accusée de soutenir les énergies fossiles au travers du programme d’achat d’obligations d’entreprises, est problématique. En soutenant le Green Deal, elle excéderait non seulement ses prérogatives en s’attaquant notamment à la souveraineté des États (le comble de l’ironie pour une institution très jalouse de son indépendance) mais aussi fragiliserait nos sources d’approvisionnement énergétique.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Le Parlement émet chaque année un avis sur le rapport annuel de la BCE, portant sur l’année n-2. C’est l’occasion de commenter les dernières évolutions de la politique monétaire ainsi que d’exposer la position du parlement sur la situation économique de la zone euro. Au mois de novembre 2019, Christine Lagarde a succédé à Mario Draghi à la tête de la BCE. Au mois de septembre dernier, ce dernier a relancé le programme dit de quantitative easing , à hauteur de 20 Mds € par mois, et a abaissé à -0,5% la facilité de dépôt. Cette politique maintient des taux d’intérêts négatifs qui créent des bulles d’actifs, baissent la rentabilité des banques et maintiennent en vie des entreprises peu rentables. Mme Lagarde a annoncé que la politique monétaire resterait très accommodante sur le moyen terme. Par ailleurs, elle a exhorté les pays présentant des excédents budgétaires à mener des politiques d’investissements ambitieuses. Elle a également lancé la révision stratégique, une première depuis 2003. Enfin, elle a lancé la verdisation de la politique de la BCE. La BCE excédant son mandat sur plusieurs points et notamment sur une action de soutien au green deal, j’ai décidé de voté contre ce texte.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-    
-    
 
+    <section>
     
     
-
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2129(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0016_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-02-12-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            
+                <p> – Madame la Présidente, il y a quelques mois, tout le monde applaudissait la nomination d’une femme à la tête de la Banque centrale européenne. Mais ne nous y trompons pas: c’est l’arbre qui cache la forêt, tant le sexisme règne encore en maître dans les institutions économiques européennes. </p>
+            
+                <p>à ceux qui en douteraient, j’ai amené ici quelques photos de ceux qui décident aujourd’hui de la gouvernance économique et monétaire de la zone euro. Ici, c’est le directoire de la BCE: deux femmes sur six personnes. Le conseil des gouverneurs de la Banque centrale européenne, encore mieux: deux femmes sur 25 personnes. La liste est encore longue et notre commission aux affaires économiques et monétaires ne fait pas mieux, avec seulement 11 femmes sur 60 membres.</p>
+            
+                <p>Il n’y aurait donc aucune femme assez compétente pour ces postes, comme a osé nous répondre un député de droite dans notre commission? Franchement, ce n’est pas sérieux, et une telle absence de parité est inacceptable. Il est temps que cela change, en prenant des mesures enfin contraignantes.</p>
+            
+                <p>Soyez-en sûrs, les femmes ne se laisseront plus intimider ni marginaliser. Nous avons toute notre place aux manettes de la gouvernance économique européenne et nous comptons bien la prendre.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            
+                <p> – Monsieur le Président, Madame la Présidente, Monsieur le Commissaire, le rapport annuel sur la Banque centrale européenne 2018 que nous voterons demain en séance plénière sera le premier document que nous vous transmettrons au nom du Parlement européen. J’espère que ces recommandations permettront de servir de base pour un dialogue fréquent avec notre commission des affaires économiques et monétaires.</p>
+            
+                <p>Dans ce rapport, nous évoquons notamment les enjeux auxquels seront confrontées nos économies, et donc la Banque centrale européenne, dans les années à venir. En janvier, à Davos, lors du Forum économique mondial, vous avez notamment évoqué la nécessité de renforcer la cyber-résilience en Europe. Dans le top 5 des risques mondiaux pour 2020, une cyberattaque de grande ampleur aurait des conséquences considérables pour l’économie européenne.</p>
+            
+                <p>Il est donc plus urgent que jamais de renouveler l’architecture de coopération européenne et internationale en la matière. Nous devons élaborer des stratégies communes et déployer des efforts coordonnés pour faire face aux risques créés par la transformation numérique.</p>
+            
+                <p>L’acceptation des risques auxquels nous sommes confrontés est une première étape, mais la prochaine doit être l’action. Nous devons garantir la résistance des infrastructures des marchés financiers et promouvoir la coopération en la matière entre les banques de la zone euro. Je sais, Madame Lagarde, pouvoir compter sur votre fermeté et votre implication pour relever ce défi.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197697</div>
+            
+            <header><b>Aurore LALUCQ</b> | Place publique</header>
+            
+                <p> – Monsieur le Président, je remercie Mme Lagarde d’être avec nous.</p>
+            
+                <p>Vous avez choisi, Madame, de poursuivre une politique monétaire dite d’assouplissement quantitatif pour soutenir l’activité économique, et nous sommes nombreux dans cette maison à avoir reçu cette annonce avec un certain soulagement car, du fait des égoïsmes nationaux et de l’idéologie dominante sur ce continent, nous n’avons malheureusement toujours pas de budget réel, ce qui est absolument incroyable et inconcevable pour la première puissance économique mondiale. Mais cette situation fait que beaucoup repose sur vos épaules et que votre politique doit être parfaite.</p>
+            
+                <p>Nous avons entendu énormément d’avancées dans votre discours, mais il manque encore un point, qui est celui de la spéculation. Sur ce point, je reste sur ma faim. Nous savons que les politiques d’assouplissement quantitatif ces dernières années ont certes soutenu l’économie réelle – il fallait le faire –, mais qu’elles ont aussi engendré une hypertrophie de la sphère financière, et je voudrais savoir ce que la Banque centrale européenne compte concrètement faire pour lutter contre la spéculation.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            
+                <p> –Monsieur le Président, Madame la Présidente, mes chers collègues, Madame, vous êtes connue pour faire preuve de sagesse en raison de votre habileté à gérer des intérêts contradictoires, un tableau qui est très flatteur, mais qui va être mis à rude épreuve à ce poste de présidente de la BCE, tout d’abord parce que la future revue de la politique monétaire, c’est un petit peu le serpent qui se mord la queue. Pour lutter contre la déflation et le chômage, votre prédécesseur, Mario Draghi, a adopté, en plus de la baisse des taux d’intérêt directeurs, des mesures non conventionnelles. Cette politique présente malheureusement les défauts de ses qualités: les taux d’intérêt négatifs sont nuisibles aux épargnants et favorisent l’émergence de bulles spéculatives, appelant une normalisation de cette politique monétaire, normalisation qui fragilise la reprise économique. Tout d’abord, comment comptez-vous sortir, entre guillemets, de cette impasse?</p>
+            
+                <p>Par ailleurs, en dépit de votre attachement à l’indépendance la plus totale de la BCE, vous avez déclaré vouloir faire du changement climatique un sujet prioritaire pour répondre aux attentes de la Commission. En somme, une BCE plus verte, mais surtout, il faut l’admettre, plus politisée. Une orientation qui risque pourtant d’outrepasser les statuts de la BCE en empiétant sur les compétences souveraines des États membres. Comment appréhendez-vous cette contradiction?</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197581</div>
+            
+            <header><b>Stéphanie YON-COURTIN</b> | Renaissance</header>
+            
+                <p> – Monsieur le Président, chers collègues, Madame la Présidente Lagarde, merci de votre présence parmi nous; merci, Monsieur le rapporteur, pour votre excellent rapport.</p>
+            
+                <p>Nous partageons, Madame, vos constats quant à une situation économique en faible croissance et aux nombreux défis qui sont à relever pour l’économie. Représentants directs des citoyens européens, nous constatons toutes ces inquiétudes sur nos territoires. La croissance modérée n’apporte finalement pas l’effet escompté sur les salaires, ni sur la consommation. Les prix du logement dans certaines régions augmentent de façon exponentielle. Plus globalement, le ralentissement de l’activité économique en Chine ou le Brexit risquent de perturber davantage l’économie.</p>
+            
+                <p>Dans cette période d’incertitude et de transition numérique et écologique, je me réjouis de votre initiative de lancer la révision de la stratégie de politique monétaire de la BCE, qui devra intégrer tous ces changements. De nombreux chantiers sont donc à prendre en compte dans cette feuille de route de la BCE, notamment la réalisation de vrais progrès – bien réels – en matière d’équilibre hommes-femmes dans la nomination aux postes à responsabilité; l’étude de la pertinence d’une monnaie numérique BCE, certes, mais également la surveillance de l’évolution des cryptomonnaies pour lutter plus efficacement contre le blanchiment d’argent dans le financement des territoires; et des efforts visant à conférer une vraie dimension internationale à l’euro et à renforcer son rôle de monnaie de réserve.</p>
+            
+                <p>Dans l’élaboration de cette stratégie, Madame, je me réjouis de la méthode de dialogue et d’ouverture que vous envisagez, conformément à l’engagement pris lors de votre première audition au Parlement. Je salue enfin, à ce titre, les consultations publiques que vous allez mener, dont la première fin mars à Bruxelles avec la société civile, et j’espère que nous y serons associés.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

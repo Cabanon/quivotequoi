@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>L&#39;Arctique: perspectives, problématiques et enjeux de sécurité</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>L&#39;Arctique: perspectives, problématiques et enjeux de sécurité</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(506/682 * 100%)">506</div>
-  
-  
-    <div class="-" style="width: calc(36/682 * 100%)">36</div>
+    <div class="for" style="width: calc(506/682 * 100%)">506</div>
   
   
-    <div class="0" style="width: calc(140/682 * 100%)">140</div>
+    <div class="against" style="width: calc(36/682 * 100%)">36</div>
+  
+  
+    <div class="abstention" style="width: calc(140/682 * 100%)">140</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(34/78 * 100%)">34</div>
+    <div class="for" style="width: calc(34/78 * 100%)">34</div>
   
   
-    <div class="-" style="width: calc(23/78 * 100%)">23</div>
+    <div class="against" style="width: calc(23/78 * 100%)">23</div>
   
   
-    <div class="0" style="width: calc(21/78 * 100%)">21</div>
+    <div class="abstention" style="width: calc(21/78 * 100%)">21</div>
   
 </div>
  
 </section>
-            <a href="/voting/136004">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/136004">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -116,20 +121,138 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2112(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0239_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-10-05-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       L. considérant que la fonte de la calotte glaciaire arctique et la hausse du niveau de la mer qui en découle auraient des conséquences graves pour la sécurité des êtres humains, de l’économie et de l’environnement; que la fonte de la calotte glaciaire au Groenland pourrait entraîner une hausse du niveau de la mer dans le monde allant jusqu’à 7,2 mètres, ce qui submergerait de nombreuses régions de la planète; que certaines populations 
@@ -140,63 +263,230 @@
   
 
   
-      subissent déjà les conséquences de la fonte des calottes 
+      subissent déjà les conséquences de la fonte des calottes polaires
   
 
   
-      <del>polaires et sont devenues des réfugiés écologiques, ce qui génère des flux migratoires de ces lieux vers des pays voisins;</del>
+      <del> et sont devenues des réfugiés écologiques, ce qui génère des flux migratoires de ces lieux vers des pays voisins</del>
   
 
   
-      <ins>polaires, ce qui génère des flux migratoires;</ins>
+      <ins>, ce qui génère des flux migratoires</ins>
   
 
   
-       que la fonte des glaces au Groenland a également une incidence sur la biodiversité;
+      ; que la fonte des glaces au Groenland a également une incidence sur la biodiversité;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">448</div>
+  <div class="against">229</div>
+  <div class="abstention">10</div>
+</span>
+
+  
     
-    <footer>
-        
-            
+    <a href="/voting/135775">📣 Vote nominal : voir le détail</a>
+  
 
-<div class="votes small">
-  
-    <div class="+" style="width: calc(448/687 * 100%)">448</div>
-  
-  
-    <div class="-" style="width: calc(229/687 * 100%)">229</div>
-  
-  
-    <div class="0" style="width: calc(10/687 * 100%)">10</div>
-  
-</div>
-
+</footer>
             
-                
-                
-                    
-                
-                <a href="/voting/135775">📣 Vote nominal : voir le détail</a>
-            
+            </article>
         
-    </footer>
-    </article>
     
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Derrière les bon sentiments écologistes mis en avant, ce texte, qui envisage une posture géopolitique illégitime de la part de l’Union dans l’Arctique se positionne clairement dans une position d’assujétissement vis-à-vis des États-Unis et de l’OTAN et fait preuve d’un flagrant manque de neutralité envers la Russie. Pour toutes ces raisons, j’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté contre ce texte.Le 20 mai 2021, la Russie a pris la présidence du Conseil de l’Arctique. Ce rapport intervient dans ce contexte, et si son objectif affiché a trait au renforcement de la stratégie européenne dans cette zone, son esprit est trop atlantiste.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            L’Arctique devient, en raison du réchauffement climatique, un océan navigable de plus en plus longtemps dans l’année, alors qu’il ne l’était qu’une courte période il y a encore quelques décennies. Il regorge de plus de ressources fossiles et a une position stratégique, au carrefour des mondes, à proximité de la Russie, du Canada, de l’Union et des États-Unis. Ce texte réaffirme l’importance stratégique et politique de l’Arctique pour l’Union, la nécessité d’accroître le rôle de l’Arctique dans l’élaboration des politiques de l’Union et insiste sur les conséquences du changement climatique dans la région. Je me suis donc naturellement positionné en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            L’Arctique est une zone géostratégique dont la stabilité a été garantie pendant des décennies par une gouvernance multilatérale et le respect du droit international. Néanmoins, elle devient depuis plusieurs années le théâtre des convoitises entre diverses puissances étrangères, notamment la Russie et la Chine, qui a l’ambition de devenir une puissance polaire.Aussi, je me réjouis que l’Union européenne mesure l’importance stratégique et politique de cette région en intégrant également les dimensions géopolitiques et géoéconomiques dans sa nouvelle politique arctique et qu’elle ne s’intéresse pas à cette région uniquement du point de vue des conséquences climatiques et environnementales, même si cela est aussi essentiel.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Ce texte démontre une nouvelle fois l’intention de l’Union de bâtir une solide soumission aux États-Unis et à l’OTAN pour peser sur l’arène géopolitique. La volonté mal cachée de Bruxelles de raviver les tensions avec la Russie continue à dominer la politique étrangère de l’Union. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car, derrière des bonnes intentions de façade concernant la préservation de la région Arctique, l’Union démontre une nouvelle fois sa volonté de renforcer son alliance avec les États-Unis et de durcir ses relations avec la Russie.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution portant sur l’Arctique et ses perspectives, problématiques et enjeux de sécurité. Ce texte souligne l’importance du rôle de l’Union en tant qu’acteur qui préserve une utilisation durable des ressources et protège l’avenir de l’Arctique. Par conséquent, le texte insiste sur la nécessité d’accroître le financement de l’Union dans le domaine de la recherche et du développement dans la région. Aussi, il soutient la résilience face aux pressions exercées par la Chine et d’autres acteurs qui ne privilégient pas des méthodes d’extraction durables dans l’Arctique et dispose ainsi que l’Union et les États-Unis doivent y garantir conjointement la sécurité.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            Ce rapport a pour ambition de définir la position européenne sur la politique à mener à l’égard de l’Arctique, région stratégique, aussi bien pour les routes commerciales qui la traversent que pour les ressources qu’elle contient. Il s’agit également d’un enjeu majeur pour la protection de l’environnement et pour la lutte contre le changement climatique. En votant en faveur de ce rapport, le Parlement européen reconnait de fait l’importance de cette zone et y définit ses priorités. Il est donc essentiel que l’Union, dont certains États membres disposent d’un intérêt stratégique direct dans cette région, dispose d’une vision claire. J’ai ainsi voté en faveur de ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations et les recommandations du Parlement européen sur la politique arctique de l’Union. Il rappelle à raison que le droit international doit constituer la base de tout engagement et coopération dans la région, alerte sur l’érosion sans précédent de la biodiversité et souligne les risques liés au dégel du permafrost en raison de l’accélération du dérèglement climatique. Il s’inscrit en revanche dans une logique de montée des tensions avec la Russie et appelle à renforcer la coopération avec les États-Unis au sein de l’OTAN dans la région. Je me suis donc abstenue sur ce texte qui établit des constats pertinents sur les enjeux écologiques liés à l’Arctique mais défend une stratégie d’alignement atlantiste de la diplomatie européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            L’Arctique fait partie des zones les plus précieuses et vulnérables sur Terre. Malheureusement, le pôle Nord est triplement menacé par le réchauffement climatique, les rivalités géopolitiques et les convoitises sur ses ressources. Ce rapport rappelle donc l’importance pour toutes les puissances impliquées dans la gouvernance de l’Arctique, y compris l’Union et ses États membres, d’agir pour maintenir une coopération internationale et régionale pacifique et intense, la recherche scientifique, la prospérité et de faibles tensions dans l’Arctique ainsi que pour faire face aux effets et conséquences catastrophiques du réchauffement climatique dans la région. La préservation de la culture et le respect des droits des peuples autochtones de la région arctique sont également un enjeu majeur souligné par ce rapport. En dépit de quelques passages discutables sur la Russie et la Chine, il s’agit d’un rapport équilibré et précis que je fais le choix de soutenir.
+        </article>
+    
+        <article>
+            <div class="hidden">197585</div>
+            
+            <header><b>Pierre KARLESKIND</b> | Renaissance</header>
+            J’ai voté pour ce rapport de la commission des affaires étrangères qui a pour objectif de présenter les enjeux liés à l’Arctique. Ce rapport aborde à la fois le changement climatique, l’exploitation des ressources stratégiques, la militarisation de cette région, le développement des voies navigables ou encore la protection des droits des peuples autochtones. Afin de garantir la stabilité de cette région, le rapport promeut la lutte contre le changement climatique et le développement de la coopération internationale comme fondement d’un Arctique sûr et stable. Il appelle également le Conseil de l’Arctique à accorder un statut d’observateur à l’Union.Le 25 juin 2021, l’accord visant à interdire la pêche non réglementée en haute mer dans l’océan Arctique central est entré en vigueur. Concrètement? Dix entités de la zone arctique dont la Norvège, la Russie ou encore la Chine ont convenu d’interdire la pêche commerciale et de mener des projets de recherche communs. La coordination internationale en Arctique est complexe et lente, mais elle est possible! La diplomatie scientifique est l’une de nos plus grandes forces.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Si les enjeux stratégiques et économiques sont cruciaux en Arctique, les exagérations habituelles de la rapporteure vers toujours plus d’atlantisme et d’intégration de la politique étrangère de l’Union à celle des États-Unis m’ont poussé à voter contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport car, si les enjeux stratégiques et économiques sont cruciaux en Arctique, la volonté du rapporteur d’aller vers toujours plus d’atlantisme et d’intégration de la politique étrangère de l’Union n’est pas dans l’intérêt de la France.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            L’Union tente de cacher ses intérêts géopolitiques dans la région derrière «de bonnes intentions» qui reposent sur la préservation de la région contre le changement climatique et ses incidences sur la sécurité et l’environnement. Ce texte démontre une nouvelle fois l’intention de l’Union de bâtir une alliance solide avec les États-Unis et l’OTAN pour peser sur l’arène géopolitique. La volonté mal cachée de Bruxelles de raviver les tensions avec la Russie continue à dominer la politique étrangère de l’Union. Le Parlement européen entend construire sa «coopération» avec la Russie en maintenant la politique de sanctions.J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport car derrière des bonnes intentions de façade concernant la préservation de la région arctique, l’Union démontre une nouvelle fois sa volonté de renforcer son alliance avec les États-Unis et de durcir ses relations avec la Russie.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            L’Union a alloué plus d’un milliard d’euros à la région Arctique durant la période 2007-2013 et autant durant la période 2014-2020, à partir des Fonds structurels et d’investissement européens. Cette politique régionale a pour objectif d’accroître la coopération avec les organisations régionales locales. Le Parlement européen poursuit cet objectif depuis sept années et vient enfin de prendre conscience de la nécessité de réajuster sa stratégie dans la zone. Certes, elle ne le reconnaît pas officiellement, mais cela se constate clairement dans la campagne de communication d’envergure lancée cette année autour de cette question. L’Union tente de cacher ses intérêts géopolitiques dans la région derrière «de bonnes intentions» qui reposent sur la préservation de la région face au changement climatique et à ses incidences sur la sécurité et l’environnement. Le texte démontre une nouvelle fois l’intention de l’Union de bâtir une alliance solide avec les États-Unis et l’OTAN pour peser sur l’arène géopolitique. La volonté mal cachée de Bruxelles de raviver les tensions avec la Russie continue à dominer la politique étrangère de l’Union. Le Parlement européen entend construire sa «coopération» avec la Russie en maintenant la politique de sanctions. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Le Parlement européen exprime ici l’espoir de consolider ses positions dans l’Arctique et marque sa volonté d’acquérir un statut digne de ses ambitions grandissantes au sein du Conseil de l’Arctique.Le texte fait part de ses inquiétudes quant à l’intérêt croissant de la Chine qui entend créer une route polaire de la soie pour le commerce dans la région dans le prolongement de son initiative «One Belt, One Road». L’Union reproche à Pékin d’organiser des missions d’exploration scientifique dans la région, de créer des centres de recherche et de développer 24 satellites d’observation polaire. Le Parlement souhaite «faire barrage» à l’alliance sino-russe dans la région.L’Union tente de cacher ses intérêts géopolitiques dans la région derrière «de bonnes intentions» qui reposent sur la préservation de la région contre le changement climatique et ses incidences sur la sécurité et l’environnement. En réalité, il s’agit d’atlantisme pur et dur.La volonté mal cachée de Bruxelles de raviver les tensions avec la Russie continue à dominer la politique étrangère de l’Union. Le Parlement européen entend construire sa «coopération» avec la Russie en maintenant la politique de sanctions.J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            L’Union tente de cacher ses intérêts géopolitiques dans la région derrière «de bonnes intentions» qui reposent sur la préservation de la région contre le changement climatique et ses incidences sur la sécurité et l’environnement. Le texte démontre sans surprise la volonté de l’Union de bâtir une alliance solide avec les États-Unis et l’OTAN pour peser sur l’arène géopolitique. La volonté mal dissimulée de Bruxelles de raviver les tensions avec la Russie continue à dominer la politique étrangère de l’Union. Le Parlement européen entend construire sa «coopération» avec la Russie en maintenant la politique de sanctions. J’ai voté contre.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2112(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0239_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-10-05-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197623</div>
+            
+            <header><b>Thierry MARIANI</b> | Rassemblement national</header>
+            
+                <p>Notre Parlement, malheureusement, ne sert pas à cela. Une fois de plus, nous servons à justifier l’investissement symbolique et militaire dans l’OTAN. L’intérêt de l’Union européenne est plutôt d’encourager nos nations à développer des relations stratégiques avec Pékin et Moscou dans cette région du monde, qui est l’une des dernières où nous avons encore un dialogue pacifique avec ces deux partenaires.</p>
+            
+                <p>Qui peut croire sérieusement que l’Union européenne est en situation de dicter la conduite des pays directement riverains de l’océan Arctique? Qui peut croire un seul instant que les nations auraient à gagner à passer par Bruxelles pour défendre leurs intérêts spécifiques dans cette région? Personne. Encore une fois, notre Parlement se distingue par un rapport tout à fait indifférent au principe de réalité. Ce n’est ni bon pour notre commerce, ni bon pour notre continent.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197585</div>
+            
+            <header><b>Pierre KARLESKIND</b> | Renaissance</header>
+            
+                <p> – Madame la Présidente, Monsieur le Commissaire, chers collègues, c’est en tant que président de la commission de la pêche que je viens étonnamment me réjouir de l’entrée en vigueur, il y a maintenant un petit peu plus de trois mois, de l’accord qui vise à interdire la pêche non réglementée en haute mer dans l’océan Arctique central.</p>
+            
+                <p>Concrètement, dix parties concernées, dont la Norvège, la Russie ou encore la Chine, sont convenues d’interdire la pêche commerciale et, surtout, de mener des projets de recherche en commun. Il y a une nécessité de coordination internationale parce qu’elle est complexe, elle est lente, mais c’est possible et elle existe déjà en grande partie, notamment sous l’impulsion des pays de l’Union européenne et de l’Union européenne elle-même. Il est nécessaire de rappeler, par exemple, le projet ARICE, qui met en commun des brise-glaces, ou Interact, qui met en place des stations de recherche.</p>
+            
+                <p>Il faut faire ce constat, chers collègues: la diplomatie scientifique est probablement une de nos grandes forces. Nous pouvons proposer un modèle de développement durable, évidemment, alors maintenant, prenons-en acte, agissons!</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">97236</div>
+            
+            <header><b>Marie TOUSSAINT</b> | Les Écologistes</header>
+            
+                <p> – Madame la Présidente, Monsieur le Commissaire, chers collègues, on ne peut pas venir ici, s’asseoir et parler de préserver l’Arctique sans prévoir de mettre fin immédiatement à l’exploitation des énergies fossiles.</p>
+            
+                <p>L’Arctique, c’est un écosystème unique au monde, avec des espèces marines menacées. L’Arctique, c’est un climatiseur de la planète. L’Arctique, c’est malheureusement aussi la cible d’entreprises avides de profits qui comptent, si nous les laissons faire, exploiter tant d’énergies fossiles que nous aurons consumé 22 % de notre budget carbone.</p>
+            
+                <p>L’Europe doit être à la hauteur, car elle a une véritable responsabilité dans la destruction en cours de l’Arctique et de la planète. Près de la moitié des entreprises qui convoitent aujourd’hui l’Arctique sont européennes et parmi elles, évidemment, la française Total Énergie, qui compte y accroître sa production de près de 30 %. Derrière, évidemment, des banques européennes, mais aussi des soutiens publics directs ou indirects des États, par exemple pour Arctic LNG 2.</p>
+            
+                <p>La marée noire en Californie nous le rappelle avec acuité: l’exploitation des énergies fossiles en mer et dans les pôles doit cesser tout de suite. Cela doit être central dans la stratégie que l’Europe compte développer en Arctique.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

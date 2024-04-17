@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Schéma de préférences tarifaires généralisées</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,80 +22,39 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Schéma de préférences tarifaires généralisées</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
-    <article>
-    <header>👍 Adoption du texte | 
-
-✅️ Adopté
-
-</header>
-    
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
-        <section>
-
-<div class="votes ">
-  
-    <div class="+" style="width: calc(561/568 * 100%)">561</div>
-  
-  
-    <div class="-" style="width: calc(5/568 * 100%)">5</div>
-  
-  
-    <div class="0" style="width: calc(2/568 * 100%)">2</div>
-  
-</div>
-</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
-        <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
-        
-        
-            <section>
-
-
-
-<div class="votes">
-  
-    <div class="+" style="width: calc(65/65 * 100%)">65</div>
-  
-  
-  
-</div>
- 
-</section>
-            <a href="/voting/158471">🗳 Voir le détail du vote</a>
-        
-    
-    </article>
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -107,31 +67,237 @@
     
         
         
-            <li>Coopération au développement</li>
-        
-    
-        
-        
             <li>Système de préférences tarifaires généralisées (SPG), règles d&#39;origine</li>
         
     
+        
+        
+            <li>Coopération au développement</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/0252(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/0252(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0267_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-10-05-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-10-05-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
+
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,124693,197694,197697,197698,204418,245018">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,204418,245018">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,124693">🇫🇷 Renaissance</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197626,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197626,197629,197615">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            . – J’ai voté en faveur de l’extension du système actuel, pendant la poursuite des négociations sur le futur dispositif.J’espère que l’inclusion d’une condition relative aux réadmissions de migrants sera incluse dans ledit dispositif.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Depuis 1971, la Communauté, devenue l’Union, accorde des préférences commerciales aux pays en développement dans le cadre de son système de préférences généralisées (SPG). Le règlement (UE) n° 978/2012 du Parlement européen et du Conseil prévoit l’application du SPG jusqu’au 31 décembre 2023. Ce texte prévoit de maintenir le règlement SPG actuel au-delà du 31 décembre 2023 et jusqu’au 31 décembre 2027. J’ai voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            . – Dans l&#39;optique d&#39;avoir un meilleur texte issu de la procédure ordinaire, j’ai choisi de voter en faveur de la prolongation des dispositions du règlement actuel.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            . – J’ai voté pour ce rapport car il appelle à prolonger l’application d’un texte efficace contribuant à l’importation à taux réduit ou nul des marchandises venant des pays en développement.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            . – J’ai voté en faveur de ce rapport sur le schéma de préférences tarifaires généralisées (SPG). Ce texte technique prolonge de 4 ans le cadre juridique applicable au SPG, qui bénéficie à 2 milliards de personnes et 60 pays, dans l’attente de sa réforme en profondeur, qui est toujours en cours de négociations.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            . – Ce rapport vise à approuver la prolongation du schéma de préférences tarifaires généralisées, qui établit des avantages commerciaux pour les pays en développement à travers des réductions tarifaires sur leurs exportations vers l’UE. Le schéma actuel arrive à échéance à la fin de l’année et sa révision est bloquée en trilogue en raison de désaccords persistants du Parlement européen et du Conseil. Il s’agit donc de trouver une solution temporaire en maintenant le cadre actuel pour éviter un impact négatif sur l’économie des pays en développement. J’ai donc voté pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Indépendant</header>
+            . – Je vote en faveur de ce texte négocié entre le Parlement et le Conseil qui renforce la protection des consommateurs face aux risques inhérents aux contrats conclus à distance, que ce soit par téléphone ou sur Internet. Il permet également de protéger les consommateurs face aux risques liés à l’arrivée de nouveaux produits financiers sur le marché. Cette mesure est d’autant plus importante dans un contexte d’inflation et de baisse du pouvoir d’achat, qui rendent les consommateurs plus vulnérables aux abus. L&#39;accord prévoit notamment des mesures pour la simplification du droit de rétractation et l&#39;ajout de dispositions sur la vente forcée des contrats conclus à distance, et l&#39;interdiction pour les prestataires de services financiers d&#39;induire les consommateurs en erreur ou de les pousser à faire des choix contraires à leurs intérêts. L&#39;accord maintient également la possibilité pour les États membres d&#39;imposer des règles nationales plus strictes.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté pour l&#39;extension du système actuel de préférences tarifaires généralisées afin de garantir la continuité et, en attendant, de poursuivre les négociations interinstitutionnelles en cours en espérant trouver un meilleur accord sur la révision de ce même règlement, notamment en ce qui concerne les réadmissions et les garanties pour les producteurs européens de riz.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            . – Les préférences tarifaires au niveau européen s&#39;appliquent jusqu&#39;au 31 décembre 2023. À moins qu&#39;un nouveau règlement remplaçant le règlement existant ne soit adopté avant cette date, le régime SPG standard et le régime SPG+ cesseront de s&#39;appliquer à partir du 1er janvier. Les importations en provenance des pays en développement seraient ainsi soumises aux droits de la nation la plus favorisée (NPF).La proposition relative à l&#39;extension du règlement SPG actuel n&#39;entraîne pas de coûts imputés au budget de l&#39;UE. Son application n’entraînerait également aucune perte de recettes douanières par rapport à la situation actuelle. À ce jour des négociations, il est tout à fait possible d’obtenir un accord satisfaisant sur les 2 points qui sont importants pour notre groupe: les sauvegardes automatiques pour le riz et l&#39;inscription du principe de réadmission qui est demandé par une majorité d&#39;états au Conseil.Dans ce contexte le texte doit être soutenu.J’ai donc voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté en faveur de ce texte dans le but d&#39;assurer la continuité du fonctionnement du système de schéma de préférences tarifaires généralisées au-delà du 31 décembre 2023 et éviter de multiples conséquences négatives. En outre, la proposition relative à l&#39;extension de ce règlement n&#39;entraîne pas de coûts imputés au budget de l&#39;UE.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b>Marina MESURE</b> | La France Insoumise</header>
+            Ce rapport propose de prolonger les préférences tarifaires accordées unilatéralement par l’UE aux pays en développement pour leurs exportations vers l’UE. Cet instrument de commerce international est un des seuls du genre à servir de levier au développement des États moins développés économiquement selon les standards capitalistes, là où les accords de libre-échange classiques favorisent les productions des pays les plus compétitifs et donc les plus avancés économiquement. J’ai donc sans hésitation voté pour ce rapport.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

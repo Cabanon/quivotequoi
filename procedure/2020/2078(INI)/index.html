@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Politique économique de la zone euro pour 2020</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Politique économique de la zone euro pour 2020</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(218/686 * 100%)">218</div>
-  
-  
-    <div class="-" style="width: calc(435/686 * 100%)">435</div>
+    <div class="for" style="width: calc(218/686 * 100%)">218</div>
   
   
-    <div class="0" style="width: calc(33/686 * 100%)">33</div>
+    <div class="against" style="width: calc(435/686 * 100%)">435</div>
+  
+  
+    <div class="abstention" style="width: calc(33/686 * 100%)">33</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,19 +88,20 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(23/77 * 100%)">23</div>
+    <div class="for" style="width: calc(23/77 * 100%)">23</div>
   
   
-    <div class="-" style="width: calc(54/77 * 100%)">54</div>
+    <div class="against" style="width: calc(54/77 * 100%)">54</div>
   
   
 </div>
  
 </section>
-            <a href="/voting/123176">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/123176">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -114,11 +119,6 @@
     
         
         
-            <li>Union économique</li>
-        
-    
-        
-        
             <li>Monnaie unique, euro, zone euro</li>
         
     
@@ -127,226 +127,357 @@
             <li>Union monétaire</li>
         
     
+        
+        
+            <li>Union économique</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2078(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0193_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-10-19-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>12 bis. se félicite de l’annonce, dans la stratégie annuelle pour une croissance durable, de l’intention de la Commission d’intégrer les objectifs des ODD dans le Semestre européen; demande l’intégration à part entière d’indicateurs et d’objectifs composites liés au bien-être et au développement durable dans le cycle annuel de surveillance et d’orientation économiques de l’Union; prend acte des travaux intéressants réalisés dans le cadre du rapport de prospective stratégique 2020 de la Commission, et notamment du concept de tableaux de bord de la résilience; propose de prendre en compte les travaux entrepris au niveau international, en particulier le rapport des Nations unies sur les indicateurs et le cadre de suivi des objectifs de développement durable, ainsi que le cadre d’évaluation du bien-être de l’Organisation de coopération et de développement économiques;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">279</div>
+  <div class="against">385</div>
+  <div class="abstention">30</div>
+</span>
+
+  
+    
+    <a href="/voting/119083">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(279/694 * 100%)">279</div>
-  
-  
-    <div class="-" style="width: calc(385/694 * 100%)">385</div>
-  
-  
-    <div class="0" style="width: calc(30/694 * 100%)">30</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/119083">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>6 bis. rejette le recours au mécanisme européen de stabilité (MES) car il n’apporte pas une réponse appropriée aux crises économiques dans la zone euro;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">119</div>
+  <div class="against">555</div>
+  <div class="abstention">17</div>
+</span>
+
+  
+    
+    <a href="/voting/119081">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(119/691 * 100%)">119</div>
-  
-  
-    <div class="-" style="width: calc(555/691 * 100%)">555</div>
-  
-  
-    <div class="0" style="width: calc(17/691 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/119081">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
+<p>
 
   
       <ins>36 bis. estime qu’il convient de créer le poste de ministre des finances de l’UE pour superviser le plan de relance Next Generation EU proposé et renforcer ainsi la responsabilité et la légitimité démocratiques de l’Union économique et monétaire; estime que cette création s’inscrit dans le droit fil tant de la communication de la Commission du 6 décembre 2017 intitulée «De nouvelles étapes en vue de l’achèvement de l’Union économique et monétaire européenne: feuille de route» que des résolutions du Parlement du 16 février 2017 sur l’amélioration du fonctionnement de l’Union européenne en mettant à profit le potentiel du traité de Lisbonne, du 16 février 2017 sur les évolutions et adaptations possibles de la structure institutionnelle actuelle de l’Union européenne1bis, du 16 février 2017 sur la capacité budgétaire de la zone euro1ter et du 13 février 2019 sur l’état du débat sur l’avenir de l’Europe1quater;  _______________  1quater Textes adoptés de cette date,</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Indépendant, Mouvement Démocrate)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">287</div>
+  <div class="against">392</div>
+  <div class="abstention">15</div>
+</span>
+
+  
+    
+    <a href="/voting/119092">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(287/694 * 100%)">287</div>
-  
-  
-    <div class="-" style="width: calc(392/694 * 100%)">392</div>
-  
-  
-    <div class="0" style="width: calc(15/694 * 100%)">15</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/119092">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
-
-  
-      8. se félicite des conclusions du Conseil européen en faveur d’un plan européen pour la relance et de l’initiative Next Generation EU21, qui devrait s’élever à 750 milliards d’euros, assortis de l’émission d’obligations par la Commission et de nouvelles ressources propres; rappelle toutefois l’appel du Parlement en faveur d’une dynamique d’investissement beaucoup plus forte pour faire face à la crise sanitaire, et considère que des mesures supplémentaires sont nécessaires pour éviter d’énormes disparités économiques et sociales et atteindre les objectifs sociaux et environnementaux à long terme de l’Union; 
-  
+<p>
 
   
-      <del>                                       </del>
+      8. se félicite des conclusions du Conseil européen en faveur d’un plan européen pour la relance et de l’initiative Next Generation EU21, qui devrait s’élever à 750 milliards d’euros, assortis de l’émission d’obligations par la Commission et de nouvelles ressources propres; rappelle toutefois l’appel du Parlement en faveur d’une dynamique d’investissement beaucoup plus forte pour faire face à la crise sanitaire, et considère que des mesures supplémentaires sont nécessaires pour éviter d’énormes disparités économiques et sociales et atteindre les objectifs sociaux et environnementaux à long terme de l’Union
   
 
   
-      <ins>fait remarquer que, conformément à l’instrument Next Generation EU, les 750 milliards d’euros de dettes de la Commission seront remboursés de trois façons possibles, la présidente de la Commission ayant exprimé sa préférence pour la mobilisation à l’avenir de nouvelles ressources propres de l’Union, telles qu’une taxe numérique, une taxe carbone aux frontières, un régime d’échange de droits d’émission étendu et un impôt sur les grandes entreprises multinationales; constate avec inquiétude qu’il sera difficile de trouver un tel niveau de nouvelles ressources propres sans modifier le traité et mettre fin au vote à    l’unanimité sur les questions fiscales au sein du Conseil, alors que de nombreuses propositions progressistes dans ce domaine ont été rejetées ou bloquées en raison de l’opposition de certains États membres que le Parlement a, par le passé, qualifié de paradis fiscaux; s’inquiète vivement de ce que les deux autres possibilités de remboursement pèseront sur les niveaux de dette publique des États membres et que le remboursement des sommes sera à la charge des budgets futurs de l’Union, obligeant soit à augmenter les contributions des États membres, soit à économiser sur le financement de certains programmes, ce qui signifie que les sommes consacrées à la relance s’ajouteront à la dette nationale des États membres ou amputeront d’autant les ressources et les services dont leurs citoyens bénéficient;</ins>
+      <del>;                                          </del>
   
 
   
-        _______________
+      <ins>; fait remarquer que, conformément à l’instrument Next Generation EU, les 750 milliards d’euros de dettes de la Commission seront remboursés de trois façons possibles, la présidente de la Commission ayant exprimé sa préférence pour la mobilisation à l’avenir de nouvelles ressources propres de l’Union, telles qu’une taxe numérique, une taxe carbone aux frontières, un régime d’échange de droits d’émission étendu et un impôt sur les grandes entreprises multinationales; constate avec inquiétude qu’il sera difficile de trouver un tel niveau de nouvelles ressources propres sans modifier le traité et mettre fin au vote à    l’unanimité sur les questions fiscales au sein du Conseil, alors que de nombreuses propositions progressistes dans ce domaine ont été rejetées ou bloquées en raison de l’opposition de certains États membres que le Parlement a, par le passé, qualifié de paradis fiscaux; s’inquiète vivement de ce que les deux autres possibilités de remboursement pèseront sur les niveaux de dette publique des États membres et que le remboursement des sommes sera à la charge des budgets futurs de l’Union, obligeant soit à augmenter les contributions des États membres, soit à économiser sur le financement de certains programmes, ce qui signifie que les sommes consacrées à la relance s’ajouteront à la dette nationale des États membres ou amputeront d’autant les ressources et les services dont leurs citoyens bénéficient;  </ins>
+  
+
+  
+      _______________
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">244</div>
+  <div class="against">364</div>
+  <div class="abstention">86</div>
+</span>
+
+  
+    
+    <a href="/voting/119082">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(244/694 * 100%)">244</div>
-  
-  
-    <div class="-" style="width: calc(364/694 * 100%)">364</div>
-  
-  
-    <div class="0" style="width: calc(86/694 * 100%)">86</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/119082">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       19. plaide en faveur d’une politique budgétaire contracyclique dans l’Union et ses États membres et de la réduction des ratios dette/PIB, ainsi que d’un budget national équilibré ou présentant de légers excédents au cours des périodes de croissance économique de l’Union, en vue de répondre efficacement aux défis futurs et de garantir la stabilité de la zone euro; invite toutefois instamment la Commission et le Conseil à ne pas répéter les erreurs du passé en réponse à la crise économique;
@@ -356,105 +487,113 @@
       <ins> se déclare préoccupé par le fait que, malgré les vives critiques à l’égard de la méthodologie et des conclusions de la théorie de l’«austérité expansionniste», la Commission y demeure fortement attachée depuis 2009; relève qu’il existe un grand nombre de données qui prouvent pourtant que l’austérité se traduit habituellement par une baisse de la croissance du PIB, une augmentation du chômage et un fléchissement de la demande; prend acte des conclusions du chef économiste du FMI en 2013 selon lesquelles à chaque dollar supprimé des budgets par les gouvernements correspond une réduction de la production économique de 1,50 USD; invite les institutions et les décideurs de l’Union à admettre que la réduction des dépenses publiques entraîne un effet    récessif sur l’économie, et à rejeter cette approche de la relance suite au confinement lié à la pandémie;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">269</div>
+  <div class="against">357</div>
+  <div class="abstention">67</div>
+</span>
+
+  
+    
+    <a href="/voting/119084">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(269/693 * 100%)">269</div>
-  
-  
-    <div class="-" style="width: calc(357/693 * 100%)">357</div>
-  
-  
-    <div class="0" style="width: calc(67/693 * 100%)">67</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/119084">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
-
-  
-      20. s’inquiète de l’incidence négative inégale mais non négligeable de la crise du coronavirus sur les déficits publics et la dette privée dans l’ensemble de la zone euro et de l’Union, en particulier dans les États membres qui avaient des niveaux élevés de dette publique avant les retombées de la pandémie, ce qui aggrave encore la situation des États membres déjà particulièrement touchés par la pandémie ou par l’importance préexistante de leur dette publique; appelle de ses vœux une solution qui garantisse la durabilité de la dette publique; 
-  
+<p>
 
   
-      <del>estime, dans ce contexte, que l’émission d’obligations de la Commission européenne constitue une étape importante dans la crise actuelle;</del>
+      20. s’inquiète de l’incidence négative inégale mais non négligeable de la crise du coronavirus sur les déficits publics et la dette privée dans l’ensemble de la zone euro et de l’Union, en particulier dans les États membres qui avaient des niveaux élevés de dette publique avant les retombées de la pandémie, ce qui aggrave encore la situation des États membres déjà particulièrement touchés par la pandémie ou par l’importance préexistante de leur dette publique; appelle de ses vœux une solution qui garantisse la durabilité de la dette publique; estime
   
 
   
-      <ins>estime qu’il convient donc d’introduire des obligations communes qui, au regard de leur structure, permettraient aux gouvernements, pour faire face à la crise sanitaire et économique provoquée par la COVID-19, de dépenser sans alourdir, aujourd&#39;hui comme demain, leur dette nationale et de maintenir les coûts d’emprunt à un niveau relativement bas, ou, ce qui est préférable, d’annuler la dette publique rachetée par la BCE au titre du programme d’achats d’urgence face à la pandémie ou d’amener la BCE à créditer les comptes nationaux au prorata de la population pour financer directement les dépenses liées à la pandémie;</ins>
+      <del>, dans ce contexte, que l’émission d’obligations de la Commission européenne constitue une étape importante dans la crise actuelle</del>
+  
+
+  
+      <ins> qu’il convient donc d’introduire des obligations communes qui, au regard de leur structure, permettraient aux gouvernements, pour faire face à la crise sanitaire et économique provoquée par la COVID-19, de dépenser sans alourdir, aujourd&#39;hui comme demain, leur dette nationale et de maintenir les coûts d’emprunt à un niveau relativement bas, ou, ce qui est préférable, d’annuler la dette publique rachetée par la BCE au titre du programme d’achats d’urgence face à la pandémie ou d’amener la BCE à créditer les comptes nationaux au prorata de la population pour financer directement les dépenses liées à la pandémie</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">87</div>
+  <div class="against">421</div>
+  <div class="abstention">186</div>
+</span>
+
+  
+    
+    <a href="/voting/119085">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(87/694 * 100%)">87</div>
-  
-  
-    <div class="-" style="width: calc(421/694 * 100%)">421</div>
-  
-  
-    <div class="0" style="width: calc(186/694 * 100%)">186</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/119085">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       21. considère comme essentiel que la révision du cadre de politique fiscale et économique de l’Union aux fins des recommandations par pays permette de proposer des solutions sur mesure pour répondre aux différents besoins des États membres; demande l’établissement de règles qui permettent à la politique budgétaire de réagir rapidement et à son gré aux chocs à court terme et de réduire les niveaux élevés de la dette publique conformément aux règles budgétaires dans un délai réaliste et raisonnable, tout en permettant un niveau suffisant d’investissements publics, des politiques fiscales durables et des recettes publiques stables, ainsi que la modernisation et le renforcement à long terme des infrastructures publiques;
@@ -464,280 +603,286 @@
       <ins> demande instamment à la Commission et au Conseil de ne pas revenir aux politiques d’austérité qui ont été mises en œuvre pour faire face à la crise financière mondiale et à la crise de la dette souveraine; relève que ces politiques préjudiciables sont inscrites dans les règles du pacte de stabilité et de croissance ainsi que dans le «six-pack» et le «two-pack», et qu’un changement législatif important s&#39;impose pour rompre avec ce cadre;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">262</div>
+  <div class="against">358</div>
+  <div class="abstention">74</div>
+</span>
+
+  
+    
+    <a href="/voting/119086">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(262/694 * 100%)">262</div>
-  
-  
-    <div class="-" style="width: calc(358/694 * 100%)">358</div>
-  
-  
-    <div class="0" style="width: calc(74/694 * 100%)">74</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/119086">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>24 bis. s’oppose au rôle dévolu au Semestre européen dans le cadre du plan de relance; relève que les recommandations par pays de la Commission au titre du pacte de stabilité et de croissance et de la procédure concernant les déséquilibres macroéconomiques ont régulièrement préconisé la réduction des dépenses publiques depuis 2011 et fait observer que les pensions, la prestation des soins de santé, la croissance des salaires, la sécurité de l’emploi et les allocations de chômage ont été particulièrement visées par la Commission; estime que les institutions de l’Union doivent abandonner ces priorités politiques; demande de dissocier entièrement le processus du Semestre européen du plan de relance;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">156</div>
+  <div class="against">506</div>
+  <div class="abstention">32</div>
+</span>
+
+  
+    
+    <a href="/voting/119087">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(156/694 * 100%)">156</div>
-  
-  
-    <div class="-" style="width: calc(506/694 * 100%)">506</div>
-  
-  
-    <div class="0" style="width: calc(32/694 * 100%)">32</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/119087">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
-
-  
-      25. soutient l’annonce par la Commission d’une révision, et en fonction des résultats, d’une adaptation du Semestre européen pour en faire un outil de coordination des mesures de relance; note que la procédure du semestre européen 
-  
+<p>
 
   
-      <del>devrait garantir le fonctionnement du processus de gouvernance économique dans l’Union, sur la base de la coordination des politiques budgétaires et économiques et,</del>
+      25. soutient l’annonce par la Commission d’une révision, et en fonction des résultats, d’une adaptation du Semestre européen pour en faire un outil de coordination des mesures de relance; note que la procédure du semestre européen devrait
   
 
   
-      <ins>devrait,</ins>
+      <del> garantir le fonctionnement du processus de gouvernance économique dans l’Union, sur la base de la coordination des politiques budgétaires et économiques et</del>
   
 
   
-       le cas échéant, tenir compte des objectifs de politique sociale et environnementale; est convaincu que cela doit englober le renforcement de la coordination des mesures relatives aux aides d’État ainsi que de politiques fiscales, sociales et de régulation des relations de travail pour éviter toute concurrence déloyale entre les États membres;
+      , le cas échéant, tenir compte des objectifs de politique sociale et environnementale; est convaincu que cela doit englober le renforcement de la coordination des mesures relatives aux aides d’État ainsi que de politiques fiscales, sociales et de régulation des relations de travail pour éviter toute concurrence déloyale entre les États membres;
   
 
   
       <ins> déplore que, depuis la mise en place du Semestre européen en 2011, les mesures spécifiques demandées par la Commission dans ses recommandations par pays visent à limiter la hausse des salaires, à augmenter l’âge minimum de la retraite, à privatiser les entreprises publiques, à couper dans les dépenses publiques de santé, à promouvoir un allongement du temps de travail, à compromettre la sécurité de l’emploi et à tailler dans les fonds consacrés aux services sociaux, mesures qui ont toutes contribué à affaiblir la capacité des États, des institutions et des individus à résister à la pandémie de COVID-19; souligne que la Commission se livre, dans le processus du Semestre    européen, à une ingérence importante dans des domaines de politique publique relevant, en vertu du traité FUE, de la compétence des États membres, tels que les retraites et la prestation de soins de santé;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">129</div>
+  <div class="against">552</div>
+  <div class="abstention">13</div>
+</span>
+
+  
+    
+    <a href="/voting/119088">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(129/694 * 100%)">129</div>
-  
-  
-    <div class="-" style="width: calc(552/694 * 100%)">552</div>
-  
-  
-    <div class="0" style="width: calc(13/694 * 100%)">13</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/119088">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>25 bis. demande instamment à la Commission et au Conseil, lors du processus de révision du cadre macroéconomique, de reconnaître que les conditions économiques en vigueur au sein de l’Union dans les années 1990 étaient sensiblement différentes de celles qui existent aujourd’hui; relève qu’en 1997, les taux d’intérêt des emprunts publics à long terme s’élevaient à environ 5 %, le ratio moyen dette publique/PIB dans l’Union se situait entre 65 et 70 %, la dette publique médiane parmi les onze premiers membres de la zone euro s’élevait à environ 60 % du PIB, les prévisions de taux de croissance du PIB étaient de 3 % par an et les prévisions d’inflation s’élevaient à 2 %; relève que, sur la base de ces conditions économiques, maintenir le ratio dette publique/PIB à 60 % au maximum exige que les gouvernements limitent leurs déficits budgétaires à 3 % du PIB; insiste sur le fait que tout nouvel objectif défini dans un futur cadre macroéconomique doit tenir compte des réalités économiques actuelles et s’appuyer sur des indicateurs de climat et de bien-être plutôt que sur des objectifs arbitraires de dette et de déficit;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">274</div>
+  <div class="against">361</div>
+  <div class="abstention">59</div>
+</span>
+
+  
+    
+    <a href="/voting/119090">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(274/694 * 100%)">274</div>
-  
-  
-    <div class="-" style="width: calc(361/694 * 100%)">361</div>
-  
-  
-    <div class="0" style="width: calc(59/694 * 100%)">59</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/119090">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
-
-  
-      34. invite la Commission à se pencher sur les nouvelles mesures proposées par les institutions internationales pour soutenir le financement d’une transition juste, capable d’atténuer les effets socio-économiques de la transition vers une économie neutre pour le climat, de favoriser la croissance durable, d’atténuer les coûts énormes liés à la reprise post-pandémie et de rétablir les finances publiques des États membres; demande aux dirigeants de l’Union et à la Commission de prendre des décisions audacieuses pour mettre en place de toute urgence un panier de nouvelles ressources propres incluant les revenus découlant des politiques de l’Union favorisant à la fois la mise en œuvre de la protection de l’environnement et le développement d’un marché unique équitable, durable et compétitif, et pour permettre le remboursement des prêts au titre de l’instrument Next Generation EU, dès le prochain CFP; rappelle que ces ressources propres devraient être mises en places dans les meilleurs délais, soit à partir de 2021 au plus tard, et devraient être permanentes; souligne à cet égard la position du Parlement dans sa résolution législative du 16 septembre 2020 sur le projet de décision du Conseil relative au système des ressources propres de l&#39;Union européenne introduisant de nouvelles catégories de    ressources propres25; 
-  
+<p>
 
   
-      <del>         </del>
+      34. invite la Commission à se pencher sur les nouvelles mesures proposées par les institutions internationales pour soutenir le financement d’une transition juste, capable d’atténuer les effets socio-économiques de la transition vers une économie neutre pour le climat, de favoriser la croissance durable, d’atténuer les coûts énormes liés à la reprise post-pandémie et de rétablir les finances publiques des États membres; demande aux dirigeants de l’Union et à la Commission de prendre des décisions audacieuses pour mettre en place de toute urgence un panier de nouvelles ressources propres incluant les revenus découlant des politiques de l’Union favorisant à la fois la mise en œuvre de la protection de l’environnement et le développement d’un marché unique équitable, durable et compétitif, et pour permettre le remboursement des prêts au titre de l’instrument Next Generation EU, dès le prochain CFP; rappelle que ces ressources propres devraient être mises en places dans les meilleurs délais, soit à partir de 2021 au plus tard, et devraient être permanentes; souligne à cet égard la position du Parlement dans sa résolution législative du 16 septembre 2020 sur le projet de décision du Conseil relative au système des ressources propres de l&#39;Union européenne introduisant de nouvelles catégories de    ressources propres25
   
 
   
-      <ins>demande instamment à la présidence allemande du Conseil de progresser rapidement dans la recherche d’un accord sur une taxe européenne sur les transactions financières, qui doit intégrer les produits dérivés, et de procéder à l’instauration immédiate au niveau de l’Union d’une taxe numérique sur les géants du secteur des nouvelles technologies, dès lors que les négociations au sein de l’OCDE sont enlisées;</ins>
+      <del>;            </del>
   
 
   
-        _______________  25 Textes adoptés de cette date,
+      <ins>; demande instamment à la présidence allemande du Conseil de progresser rapidement dans la recherche d’un accord sur une taxe européenne sur les transactions financières, qui doit intégrer les produits dérivés, et de procéder à l’instauration immédiate au niveau de l’Union d’une taxe numérique sur les géants du secteur des nouvelles technologies, dès lors que les négociations au sein de l’OCDE sont enlisées;  </ins>
+  
+
+  
+      _______________  25 Textes adoptés de cette date,
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">172</div>
+  <div class="against">348</div>
+  <div class="abstention">174</div>
+</span>
+
+  
+    
+    <a href="/voting/119091">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(172/694 * 100%)">172</div>
-  
-  
-    <div class="-" style="width: calc(348/694 * 100%)">348</div>
-  
-  
-    <div class="0" style="width: calc(174/694 * 100%)">174</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/119091">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°12 | 
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
-
-  
-      25. soutient l’annonce par la Commission d’une révision, et en fonction des résultats, d’une adaptation du Semestre européen pour en faire un outil de coordination des mesures de relance; note que la procédure du Semestre européen devrait 
-  
+<p>
 
   
-      <del>garantir </del>
+      25. soutient l’annonce par la Commission d’une révision, et en fonction des résultats, d’une adaptation du Semestre européen pour en faire un outil de coordination des mesures de relance; note que la procédure du Semestre européen devrait garantir
   
 
   
-      <ins>garantir, d’une part, </ins>
+      <del> </del>
+  
+
+  
+      <ins>, d’une part, </ins>
   
 
   
@@ -745,59 +890,195 @@
   
 
   
-      <del>le cas échéant, tenir compte des objectifs de politique sociale et environnementale;</del>
+      <del>le cas échéant, tenir compte des</del>
   
 
   
-      <ins>d’autre part, les objectifs de politique sociale et environnementale découlant des principes énoncés dans le pacte vert pour l’Europe, le socle européen des droits sociaux et les objectifs de développement durable;</ins>
+      <ins>d’autre part, les</ins>
   
 
   
-       est convaincu que cela doit englober le renforcement de la coordination des mesures relatives aux aides d’État ainsi que de politiques fiscales, sociales et de régulation des relations de travail pour éviter toute concurrence déloyale entre les États membres;
+       objectifs de politique sociale et environnementale
+  
+
+  
+      <ins> découlant des principes énoncés dans le pacte vert pour l’Europe, le socle européen des droits sociaux et les objectifs de développement durable</ins>
+  
+
+  
+      ; est convaincu que cela doit englober le renforcement de la coordination des mesures relatives aux aides d’État ainsi que de politiques fiscales, sociales et de régulation des relations de travail pour éviter toute concurrence déloyale entre les États membres;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(298/693 * 100%)">298</div>
-  
-  
-    <div class="-" style="width: calc(377/693 * 100%)">377</div>
-  
-  
-    <div class="0" style="width: calc(18/693 * 100%)">18</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/119089">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2078(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0193_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">298</div>
+  <div class="against">377</div>
+  <div class="abstention">18</div>
+</span>
+
   
+    
+    <a href="/voting/119089">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-10-19-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport instrumentalise la crise du Covid-19 pour justifier des propositions portant atteinte à la souveraineté des États sans revenir sur le dogme du libre-échange généralisé, dont la crise sanitaire a pourtant révélé le rôle dans la fragilisation de nos sociétés.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté contre car même si je partage le diagnostic que dresse ce texte, ses solutions sont aux antipodes du respect de la souveraineté des États, faisant de la crise sanitaire l’alibi tout trouvé à une marche en avant vers le fédéralisme européen.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car même s’il dresse des constats justes sur les conséquences du coronavirus, sur les inégalités budgétaires entre États ainsi que sur les conséquences sociales et sanitaires au sein de l’Union européenne, il propose des solutions contraires à la liberté et à la souveraineté des États.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Ce rapport s’inscrit dans le cycle du semestre européen, qui coordonne sur les six premiers mois de l’année les politiques économiques et budgétaires de l’Union, avant d’en surveiller la mise en oeuvre. Ce rapport marque la fin du cycle 2020 et aurait dû servir à annoncer le cycle 2021, mais la stratégie de ce dernier (Stratégie annuelle pour une croissance durable) a déjà été publiée en septembre, entre autres perturbations de calendrier engendrées par l’épidémie. Le texte arrive donc à contretemps, mais permet de revenir sur un certain nombre de points économiques et budgétaires soulignés par la crise. Pour résumer, le rapport adopte une ligne de réforme du semestre européen sous sa forme actuelle, et enjoint à développer le volet social des réformes, notamment sur le versant de l’emploi pour tenir compte de la crise. Ainsi, les Etats membres sont invités à investir dans les services publics, une nécessité que nous rappelle par exemple cruellement la pénurie de lits dans les hôpitaux ; le texte appelle aussi à tirer pleinement parti de la flexibilité budgétaire pour atténuer les effets de la crise. Certains points restent discutables, comme le fait de ne pas remettre en question l’économie sociale de marché, mais j’ai voté pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            Grâce à ce rapport, l’Union européenne souhaite démontrer sa détermination à agir avec efficacité, coordination et solidarité afin de contrer les conséquences néfastes du COVID19 dans chaque État. Si le rapport dresse des constats justes concernant les conséquences du COVID-19 sur les inégalités budgétaires, sociales et sanitaires entre États membres, il propose en revanche des solutions aux antipodes de la liberté et de la souveraineté des États. C’est un véritable coup de force contre l’indépendance des pays membres ! En effet, si le rapport propose des investissements publics avec le plan de relance et se félicite des dérogations budgétaires, il préserve la « règle d’or » issue du TCSG (Traité sur la stabilité, la coordination et la gouvernance pour limiter le recours à l’emprunt). De plus, le rapport mélange différentes notions comme déficit public, dette privée et publique et le numérique avec les choix des politiques fiscales, sanitaires ou sociales des Etats membres, ce qui nuit à la qualité du texte. Enfin, le rapport fait du marketing politique en se félicitant des objectifs démocratiques et écologiques mais sans régler le problème de fond de l’emploi, desservi par le libre-échangisme et le refus du protectionnisme. J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter l’analyse du parlement sur la mise en oeuvre du semestre européen, mécanisme de contrôle budgétaire de l’Union. Il n’émet aucune critique sur la pertinence des règles austéritaires imposées aux Etats membres, se félicite que le plan de relance européen soit conditionné au respect des recommandations économiques de la Commission et défend le retour rapide des objectifs en matière de réduction de déficit et de dette. J’ai donc voté contre ce texte, qui ne tire aucune leçon de la crise que nous traversons en défendant bec et ongles les dogmes néolibéraux qui nous ont pourtant menés dans l’impasse.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Cette résolution participe au fonctionnement du Semestre européen, et porte sur les politiques économiques menées au sein de la zone euro au cours de l’année 2020. Elle se félicite du prétendu plan de relance adopté par le Conseil européen et du fait qu&#39;il soit lié au semestre européen, et donc conditionné à la mise en œuvre de politiques de casse des services publics et de nos conquêtes sociales. Le rapport prend même la peine de rappeler qu’il ne faudrait surtout pas prolonger plus que nécessaire la suspension des règles budgétaires européennes. C’est absolument délirant ! Le semestre européen a servi d’instrument pour casser nos services publics, et notamment en matière de santé (pour rappel la Commission a demandé 63 fois aux États membres de diminuer leurs dépenses en matière de santé ou de privatiser certains services) ! Par ailleurs, comment défendre un retour à l’absurde règle des 3% alors que jamais nous n’avons eu autant besoin d’investir pour contrer la pandémie, l’urgence écologique et sociale ? Ce texte est mortifère dans ses intentions, je le rejette donc sans hésitation !
+        </article>
+    
+        <article>
+            <div class="hidden">197589</div>
+            
+            <header><b>Laurence FARRENG</b> | Mouvement Démocrate</header>
+            J&#39;ai voté en faveur de ce rapport, malheureusement rejeté lors du vote final du Parlement européen. Celui-ci portait sur les politiques économiques européennes et plus particulièrement le Semestre européen, cycle de coordination des politiques économiques des États membres. Par mon vote, je soutenais notamment le développement d&#39;indicateurs climatiques dans le cadre du Semestre européen, un alignement du Semestre avec le Green Deal ainsi que la création d&#39;un poste de Ministre des Finances de l&#39;Union européenne, qui aurait notamment été en charge de superviser la mise en place du plan de relance Next Generation EU. Je regrette fortement le rejet de ce rapport par les forces moins progressistes du Parlement européen.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            . – J&#39;ai voté contre ce texte qui prend le prétexte de la covid pour enlever encore des pans de souveraineté aux Etats-Nations.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            Ce rapport sur les politiques économiques de la zone euro en 2020 est un rapport annuel dans le cadre du Semestre européen. En raison de la pandémie de COVID-19, le rapport prend en compte l’incidence négative de la crise du coronavirus sur l’économie mondiale et évoque les exigences à court, moyen et long terme pour la reprise économique. Je crois fermement que le Semestre européen doit rester un instrument de convergence budgétaire et économique et que son processus ne doit pas être réorienté, c’est pourquoi je me suis opposée à ce rapport sur les politiques économiques de la zone euro en 2020 qui remettait en cause notre discipline budgétaire.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce rapport car il s&#39;agit d&#39;une ingérence dans les affaires internes des États en recommandant la mise en place de politiques fiscales, sanitaires ou sociales.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            J&#39;ai voté contre. Si le rapport dresse des constats justes concernant les conséquences de la COVID-19 sur les inégalités budgétaires, il propose des solutions aux antipodes de la liberté et de la souveraineté des États. Il semble établir un véritable coup de force contre l’indépendance des pays membres. Un coup de force justifié, en l’espèce, par la crise de la COVID-19. Le rapport poursuit sa logique destructrice d’emplois à travers le libre-échangisme et la lutte contre le protectionnisme.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            L’ensemble des règles rappelées dans ce texte sont les fondamentaux de l’UE depuis quelques années, notamment depuis la crise grecque. Il préserve en particulier, même dans le contexte actuel de crise économique, le postulat rigoriste marqué par la « règle d’or » issue du TCSG. Si les dérogations sont nombreuses dans les faits, le texte légitime malgré tout les règles préalables aux dérogations. Je m&#39;y suis donc opposé.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Considérant les conséquences liées au COVID-19, vues des recommandations plus ou moins respectées de politiques économiques formulées par le Semestre européen, le rapport propose d’ancrer fermement les principaux défis de la politique économique et financière de l’UE dans la gestion de la crise actuelle. Ainsi le rapport propose d’accentuer l’uniformisation et la coordination des politiques financières à l’échelle de l’UE concernant la politique climatique - durable et équitable - (Green Deal), ainsi qu’à la numérisation au sein de l’UE. Il convient, dans ce rapport, de jeter de nouvelles bases communes adaptées à l’après-crise. Ces principes permettront une conciliation entre le respect des règles budgétaires européennes et l’investissement public favorable à la relance économique. J’ai voté contre ce texte car si le rapport dresse des constats justes concernant les conséquences de la COVID-19 sur les inégalités budgétaires entre États, ainsi que sur les conséquences sociales et sanitaires au sein de l’Union européenne, il propose malheureusement des solutions aux antipodes de la liberté et de la souveraineté des États.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Ce rapport cerne bien les conséquences désastreuses de la pandémie du COVID19 sur les économies des États-membres.Cependant, le rapport met en valeur des solutions qui n’ont jamais fait leur preuve comme la « règle d’or », ainsi que des solutions qui sont une atteinte claire à la souveraineté de nos pays. Je m’oppose à toute solution économique qui passe par l’ingérence dans les affaires nationales. Aussi, le rapport choisi de camoufler la rigueur économique et son attaque contre la souveraineté des États par des mesurettes sur l’égalité des sexes et la protection de l’environnement.J’ai donc décidé de voter contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Prenant acte des effets, plus ou moins dévastateurs d’un pays membres à l’autre de la crise de la COVID-19, ce rapport propose, au nom de la solidarité, d’accentuer l’uniformisation et la coordination des politiques financières à l’échelle de l’UE. Le rapport dresse des constats justes sur les inégalités budgétaires entre États, les conséquences sociales et sanitaires au sein de l’Union de la Covid 19. Mais il propose des solutions contraires aux souverainetés nationales et s’apparente à un véritable coup de force contre l’indépendance de nos pays et nos libertés démocratiques. Enfin et ce n’est pas là son moindre défaut, ce rapport entérine la désastreuse fuite en avant ultra libre échangiste et antiprotectionniste de cette Union bruxelloise destructrice de nos emplois, de nos industries, de notre tissu entrepreneurial. En toute logique j’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            Bien que ce rapport dresse des constats justes concernant les conséquences de la COVID-19 sur les inégalités budgétaires entre États, ainsi que sur les répercussions sociales et sanitaires au sein de l’Union européenne, les solutions proposées menacent la liberté et la souveraineté des États. J’ai donc voté contre ce rapport, qui représente un véritable coup de force conte l’indépendance des États, justifié au nom de la crise de la COVID-19.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

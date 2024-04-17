@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Décharge 2020 : Bureau européen d&#39;appui en matière d&#39;asile (EASO)</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Décharge 2020 : Bureau européen d&#39;appui en matière d&#39;asile (EASO)</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(503/641 * 100%)">503</div>
-  
-  
-    <div class="-" style="width: calc(85/641 * 100%)">85</div>
+    <div class="for" style="width: calc(503/641 * 100%)">503</div>
   
   
-    <div class="0" style="width: calc(53/641 * 100%)">53</div>
+    <div class="against" style="width: calc(85/641 * 100%)">85</div>
+  
+  
+    <div class="abstention" style="width: calc(53/641 * 100%)">53</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,39 +88,24 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(48/66 * 100%)">48</div>
+    <div class="for" style="width: calc(48/66 * 100%)">48</div>
   
   
-    <div class="-" style="width: calc(18/66 * 100%)">18</div>
+    <div class="against" style="width: calc(18/66 * 100%)">18</div>
   
   
 </div>
  
 </section>
-            <a href="/voting/142222">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/142222">🗳 Voir le détail du vote</a>
         
     
     </article>
 
-    <article>
-    <header>👍 Adoption du texte | 
-
-✅️ Adopté
-
-</header>
-    
-        🖐 Vote à main levée
-    
-    </article>
 
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Etat et évolution de l&#39;Union</li>
-        
     
         
         
@@ -133,229 +122,545 @@
             <li>Contrôle budgétaire, décharge, exécution du budget</li>
         
     
+        
+        
+            <li>Etat et évolution de l&#39;Union</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2122(DEC)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0107_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-05-04-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       5. rappelle la conclusion formulée par la Cour pour l’exercice 2017 selon laquelle les procédures concernant le suivi des dépenses relatives à des voyages étaient de piètre qualité; se félicite que le Bureau 
   
 
   
-      <del>mène </del>
+      <del>mène</del>
   
 
   
-      <ins>ait mené </ins>
+      <ins>ait mené</ins>
   
 
   
-      une enquête interne à ce 
+       une enquête interne à ce sujet
   
 
   
-      <del>sujet; constate toutefois que cette question n’a pas encore été résolue; invite le Bureau à renforcer rapidement ses procédures de suivi des dépenses relatives à des voyages;</del>
+      <del>; constate toutefois que cette question n’a pas encore été résolue; invite le Bureau à renforcer rapidement ses procédures</del>
   
 
   
-      <ins>sujet, qui a également donné lieu à des conclusions de l’OLAF; note que ces conclusions font l’objet d’un suivi et d’un traitement juridique; relève que le Bureau a mis en place des procédures améliorées de suivi des dépenses relatives à des voyages au début de l’année 2020;</ins>
+      <ins>, qui a également donné lieu à des conclusions de l’OLAF; note que ces conclusions font l’objet d’un suivi et d’un traitement juridique; relève que le Bureau a mis en place des procédures améliorées</ins>
+  
+
+  
+       de suivi des dépenses relatives à des voyages
+  
+
+  
+      <ins> au début de l’année 2020</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°2 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       7. rappelle la recommandation de la Cour pour l’exercice 2018 selon laquelle il convenait que le Bureau mette en place un contrôle financier ex post efficace; constate 
   
 
   
-      <del>avec inquiétude que le suivi est toujours en cours; invite le Bureau à donner rapidement suite à cette recommandation;</del>
+      <del>avec inquiétude que le suivi est toujours en cours</del>
   
 
   
-      <ins>que le Bureau a mis en place deux types de contrôles ex post à la suite de cette recommandation; invite le Bureau à finaliser rapidement les processus en cours pour 2020 et 2021 et à informer sans délai l’autorité de décharge des résultats obtenus;</ins>
+      <ins>que le Bureau a mis en place deux types de contrôles ex post à la suite de cette recommandation</ins>
+  
+
+  
+      ; invite le Bureau à 
+  
+
+  
+      <del>donner</del>
+  
+
+  
+      <ins>finaliser</ins>
+  
+
+  
+       rapidement 
+  
+
+  
+      <del>suite à cette recommandation</del>
+  
+
+  
+      <ins>les processus en cours pour 2020 et 2021 et à informer sans délai l’autorité de décharge des résultats obtenus</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°3 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      15. constate avec inquiétude qu’en dépit de la conclusion de la Cour selon laquelle des progrès ont été accomplis pour attirer de nouveaux agents, le taux d’exécution de 78,96 % signifie que, pour la quatrième année consécutive, le Bureau n’a pas réussi à atteindre les objectifs fixés dans son tableau des effectifs; 
-  
+<p>
 
   
-      <del>se félicite de l’augmentation progressive du taux d’occupation du Bureau, et du fait que le Bureau prévoyait d’atteindre un taux d’exécution de 90 % de son tableau des effectifs à la fin </del>
+      15. constate avec inquiétude qu’en dépit de la conclusion de la Cour selon laquelle des progrès ont été accomplis pour attirer de nouveaux agents, le taux d’exécution de 78,96 % signifie que, pour la quatrième année consécutive, le Bureau n’a pas réussi à atteindre les objectifs fixés dans son tableau des effectifs;
   
 
   
-      <ins>relève qu’en 2020, 58 agents contractuels supplémentaires ont été recrutés, ce qui n’était pas prévu dans le tableau des effectifs; se félicite de l’augmentation progressive du taux d’occupation du Bureau, et du fait que le Bureau ait légèrement dépassé le taux d’exécution </ins>
+      <ins> relève qu’en 2020, 58 agents contractuels supplémentaires ont été recrutés, ce qui n’était pas prévu dans le tableau des effectifs;</ins>
   
 
   
-      de 2021; se félicite de la baisse du taux de rotation du personnel, qui est passé de 6,58 % en 2019 à 5,73 %
+       se félicite de l’augmentation progressive du taux d’occupation du Bureau, et du fait que le Bureau 
   
 
   
-      <ins> en 2020;</ins>
+      <del>prévoyait d’atteindre un</del>
+  
+
+  
+      <ins>ait légèrement dépassé le</ins>
+  
+
+  
+       taux d’exécution de 
+  
+
+  
+      <del>90 % de son tableau des effectifs à la fin de </del>
+  
+
+  
+      2021; se félicite de la baisse du taux de rotation du personnel, qui est passé de 6,58 % en 2019 à 5,73
+  
+
+  
+      <del> %</del>
+  
+
+  
+      <ins> % en 2020;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°4 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       18. rappelle la conclusion de la Cour pour l’exercice 2019 selon laquelle les procédures relatives à la sélection d&#39;experts externes et à la conclusion de contrats avec ces derniers étaient systématiquement dépourvues de piste d&#39;audit adéquate et les paiements effectués par la suite au titre de à ces contrats étaient irréguliers; 
   
 
   
-      <del>prend acte avec inquiétude de la conclusion de la Cour selon laquelle le suivi de la recommandation visant à remédier à ce problème est toujours en cours;</del>
+      <del>prend acte avec inquiétude de la conclusion de la Cour selon laquelle le suivi de la recommandation visant à remédier à ce problème est toujours</del>
   
 
   
-      <ins>note que le Bureau a mis en œuvre les recommandations de la Cour tout en publiant un nouvel appel à manifestation d’intérêt en 2020;</ins>
+      <ins>note que le Bureau a mis en œuvre les recommandations de la Cour tout en publiant un nouvel appel à manifestation d’intérêt</ins>
   
 
   
-       invite le Bureau à tenir l’autorité de décharge informée des progrès réalisés à cet égard;
+       en 
+  
+
+  
+      <del>cours</del>
+  
+
+  
+      <ins>2020</ins>
+  
+
+  
+      ; invite le Bureau à tenir l’autorité de décharge informée des progrès réalisés à cet égard;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°5 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       30. prend acte de la création d’une équipe de réaction à la COVID-19 au sein du Bureau, par décision de la directrice exécutive du 11 mars 2020, et de la réaction coordonnée au sein du Bureau face à la pandémie de COVID-19; 
   
 
   
-      <del>prend également acte avec inquiétude de l’observation de la Cour selon laquelle le Bureau n’avait pas finalisé ni adopté son plan de continuité des activités et </del>
+      <del>prend également acte avec inquiétude de l’observation de la Cour selon laquelle le Bureau n’avait pas finalisé ni adopté son plan de continuité des activités et</del>
   
 
   
-      <ins>souligne </ins>
+      <ins>souligne</ins>
   
 
   
-      que la taille et la complexité des opérations du Bureau ainsi que les événements récents tels que la pandémie de COVID-19 soulignent l’importance d’un tel plan, formalisé et actualisé; relève que le Bureau a approuvé son plan de continuité des activités le 31 mars 2021;
+       que la taille et la complexité des opérations du Bureau ainsi que les événements récents tels que la pandémie de COVID-19 soulignent l’importance d’un tel plan, formalisé et actualisé; relève que le Bureau a approuvé son plan de continuité des activités le 31 mars 2021;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2122(DEC)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0107_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
   
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-05-04-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – J’ai voté contre cette décharge : non seulement cette agence très politisée a tendance à favoriser l’immigration, mais en plus la Cour des comptes a relevé de nombreuses irrégularités pour un montant supérieur à un million d’euros.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre l&#39;octroi de la décharge, et contre la résolution.Je ne suis pas favorable à l&#39;augmentation des effectifs du bureau et au contrôle insuffisant des dépenses.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            . – J’ai voté en faveur de cette décharge budgétaire car le Bureau européen d’appui en matière d’asile, sur lequel le Parlement a statué, semble avoir fait preuve d’une bonne gestion financière. La Cour des comptes européenne n’a relevé aucune déficience notable des domaines liés aux ressources humaines et aux marchés publics pour le Bureau européen d’appui en matière d’asile.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre cette décharge car cette agence exerce une action politique en organisant la submersion migratoire de l’Europe.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Conformément aux traités, le Parlement dispose d&#39;un droit de contrôle annuel sur la légalité et la régularité des dépenses de fonctionnement des institutions et des agences. L&#39;objectif principal de la procédure de décharge est de garantir que les fonds publics sont utilisés de la meilleure manière possible.Cette agence créée en 2010 dans le but de contribuer à la mise en œuvre du régime d’asile européen commun vise à renforcer la coopération entre États membres dans ce domaine. Elle fournit son expertise et apporte son soutien aux États membres dont les régimes d’asile et d’accueil sont soumis à des pressions importantes.J’ai soutenu cette résolution puisque le Bureau européen d’appui en matière d’asile joue un rôle important dans la politique d’asile de l’Union en apportant son aide aux États membres qui le sollicitent pour sa solide expertise et ses ressources appréciables, qui sont au nombre de 8 depuis 2020.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de la décharge budgétaire du Bureau européen d’appui en matière d’asile (EASO) pour l’année 2020 et en faveur de la résolution politique qui l’accompagne. Le texte note que des paiements effectués en 2020 pour un montant total de 1 177 848 EUR ont été déclarés irréguliers parce qu’ils étaient liés à des erreurs de passation de marchés dans des procédures menées en 2016 et 2017. Il apprécie les efforts déployés par la direction actuelle du Bureau pour résilier ces contrats lorsque cela est possible ou pour réduire leur incidence financière future. Il constate que le Bureau a indiqué avoir exécuté un total de 5 313 paiements en 2020, contre 9 871 en 2019, dont 334 (6,29 %) ont été exécutés plus de 30 jours après la réception de la facture.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Le Bureau européen d’appui en matière d’asile a été remplacé par l’Agence de l&#39;Union européenne pour l&#39;asile. Elle constitue un centre d’expertise en matière d’asile et facilite, coordonne et renforce la coopération entre les États-membres sur tous les aspects de l’asile, contribuant ainsi à la mise en place du nouveau pacte sur la migration et l&#39;asile.Le rapport de la Cour des comptes souligne divers cas de mauvaise gestion, avec des procédures de recrutement douteuses ou encore plusieurs marchés attribués de façon irrégulière. Par ailleurs, le rôle de l’agence est politiquement contestable puisqu’elle n’agit pas comme un simple organe au service des États membres mais plutôt comme une agence pro-migrants, pressant pour l’accueil et la répartition des demandeurs d’asile au sein de l’UE.Pour toutes ces raisons, j’ai voté contre cette décharge.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre la décharge en faveur du Bureau européen d&#39;appui en matière d&#39;asile (désormais Agence de l’Union européenne pour l’asile). Ce bureau facilite, coordonne et renforce la coopération entre les États membres sur tous les aspects de l’asile, contribuant ainsi à la mise en place du nouveau pacte sur la migration et l&#39;asile.En plus des cas de mauvaise gestion, la décharge doit être refusée pour le rôle politisé de l’Agence, avec une action partisane sur la question des migrants et de l’asile.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

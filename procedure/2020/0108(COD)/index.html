@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Programme InvestEU</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,84 +22,39 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Programme InvestEU</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
-    <article>
-    <header>👍 Adoption du texte | 
-
-✅️ Adopté
-
-</header>
-    
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
-        <section>
-
-<div class="votes ">
-  
-    <div class="+" style="width: calc(480/686 * 100%)">480</div>
-  
-  
-    <div class="-" style="width: calc(142/686 * 100%)">142</div>
-  
-  
-    <div class="0" style="width: calc(64/686 * 100%)">64</div>
-  
-</div>
-</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
-        <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
-        
-        
-            <section>
-
-
-
-<div class="votes">
-  
-    <div class="+" style="width: calc(31/79 * 100%)">31</div>
-  
-  
-    <div class="-" style="width: calc(24/79 * 100%)">24</div>
-  
-  
-    <div class="0" style="width: calc(24/79 * 100%)">24</div>
-  
-</div>
- 
-</section>
-            <a href="/voting/124868">🗳 Voir le détail du vote</a>
-        
-    
-    </article>
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -111,110 +67,224 @@
     
         
         
-            <li>Politique régionale</li>
+            <li>Cohésion économique, sociale et territoriale</li>
         
     
         
         
-            <li>Cohésion économique, sociale et territoriale</li>
+            <li>Politique régionale</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/0108(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0203_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-03-08-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-11-11-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       (10) Afin de tenir compte de l’importance de lutter contre le changement climatique conformément aux engagements pris par l’Union de mettre en œuvre l’accord de Paris sur le changement climatique et les ODD, le programme InvestEU contribuera à la prise en considération des actions en faveur du climat et à la réalisation de l’objectif global 
   
 
   
-      <del>de 25 </del>
+      <del>de 25</del>
   
 
   
-      <ins>d’au moins 30 </ins>
+      <ins>d’au moins 30</ins>
   
 
   
-      % des dépenses du budget de l’UE consacrées aux objectifs en matière de climat. Les actions visant à atteindre ces objectifs climatiques devraient représenter 
+       % des dépenses du budget de l’UE consacrées aux objectifs en matière de climat. Les actions visant à atteindre ces objectifs climatiques devraient représenter 
   
 
   
-      <del>30 </del>
+      <del>30 % </del>
   
 
   
-      <ins>40 </ins>
-  
-
-  
-      % 
-  
-
-  
-      <ins>au moins </ins>
+      <ins>40 % au moins </ins>
   
 
   
       de l’enveloppe financière globale du programme InvestEU. Les actions pertinentes seront répertoriées au cours de la préparation et de la mise en œuvre du programme InvestEU puis réévaluées dans le cadre des évaluations et des processus de révision correspondants.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">333</div>
+  <div class="against">343</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/124799">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(333/687 * 100%)">333</div>
-  
-  
-    <div class="-" style="width: calc(343/687 * 100%)">343</div>
-  
-  
-    <div class="0" style="width: calc(11/687 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124799">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>(11) </ins>
@@ -225,15 +295,15 @@
   
 
   
-      <del>la réalisation de l’objectif climatique </del>
+      <del>la réalisation de l’objectif climatique</del>
   
 
   
-      <ins>l’intégration de la question climatique et, par conséquent, à la réalisation des objectifs environnementaux, climatiques et énergétiques de l’Union à court et à long terme, ainsi qu’à l’objectif global de neutralité climatique d’ici 2050 </ins>
+      <ins>l’intégration de la question climatique et, par conséquent, à la réalisation des objectifs environnementaux, climatiques et énergétiques de l’Union à court et à long terme, ainsi qu’à l’objectif global de neutralité climatique d’ici 2050</ins>
   
 
   
-      sera suivie au moyen d’un système de l’Union 
+       sera suivie au moyen d’un système de l’Union 
   
 
   
@@ -241,19 +311,19 @@
   
 
   
-      qui devra être spécialement élaboré par la Commission en collaboration avec les partenaires chargés de la mise en œuvre potentiels et en utilisant de manière appropriée les critères définis par le 
+      qui devra être spécialement élaboré par la Commission en collaboration avec les partenaires chargés de la mise en œuvre potentiels et en utilisant de manière appropriée les critères définis par le
   
 
   
-      <del>[règlement sur l’établissement d’un cadre pour favoriser les investissements durables25]</del>
+      <del> [règlement sur l’établissement d’un cadre pour favoriser les investissements durables25] </del>
   
 
   
-      <ins>établissant une taxinomie)</ins>
+      <ins> établissant une taxinomie) </ins>
   
 
   
-       permettant de déterminer si une activité économique est durable sur le plan environnemental. Le programme 
+      permettant de déterminer si une activité économique est durable sur le plan environnemental. Le programme 
   
 
   
@@ -261,212 +331,252 @@
   
 
   
-      mise en œuvre d’autres dimensions des ODD.
+      mise en œuvre d’autres dimensions des ODD
   
 
   
-      <del>      _________________</del>
+      <del>.      _________________</del>
+  
+
+  
+      <ins>.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">136</div>
+  <div class="against">545</div>
+  <div class="abstention">7</div>
+</span>
+
+  
+    
+    <a href="/voting/124802">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(136/688 * 100%)">136</div>
-  
-  
-    <div class="-" style="width: calc(545/688 * 100%)">545</div>
-  
-  
-    <div class="0" style="width: calc(7/688 * 100%)">7</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124802">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>La Commission européenne peut désigner un représentant, sans droit de vote, des partenaires sociaux européens, en ce qui concerne les salariés, à partir d’une proposition faite par l’une des organisations dont les représentants sont admis au comité consultatif.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">142</div>
+  <div class="against">507</div>
+  <div class="abstention">39</div>
+</span>
+
+  
+    
+    <a href="/voting/124783">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(142/688 * 100%)">142</div>
-  
-  
-    <div class="-" style="width: calc(507/688 * 100%)">507</div>
-  
-  
-    <div class="0" style="width: calc(39/688 * 100%)">39</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124783">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
-
-  
-      la Commission présente au Parlement européen et au Conseil un rapport intermédiaire d’évaluation indépendante du programme InvestEU, portant notamment sur l’utilisation de la garantie de l’Union, sur le respect des obligations du groupe BEI en vertu de l’article 10, paragraphe 1, points b) et c), sur l’attribution de la garantie de l’Union visée à l’article 12, paragraphes 4 et 5, sur la mise en œuvre de la plateforme de conseil InvestEU, sur les enveloppes allouées au titre de l’article 10, paragraphe 1, point d) i), et sur l’article 7, paragraphe 6. L’évaluation démontre en particulier comment la participation des partenaires chargés de la mise en œuvre et des partenaires consultatifs à la mise en œuvre du programme InvestEU a contribué à atteindre des objectifs du programme InvestEU ainsi que des objectifs d’action de l’Union, au regard notamment de la valeur ajoutée ainsi que de l’équilibre géographique et sectoriel des opérations de financement et d’investissement soutenues. Elle analyse également l’application de l’évaluation sous l’angle de la durabilité en vertu de l’article 7, paragraphe 3, et de la priorité accordée aux PME dans le cadre du volet «PME» prévu à l’article 7, paragraphe 1, point c).
-  
+<p>
 
   
-      <ins> Le cas échéant, le rapport intermédiaire est accompagné de    propositions législatives visant à modifier le présent règlement.</ins>
+      la Commission présente au Parlement européen et au Conseil un rapport intermédiaire d’évaluation indépendante du programme InvestEU, portant notamment sur l’utilisation de la garantie de l’Union, sur le respect des obligations du groupe BEI en vertu de l’article 10, paragraphe 1, points b) et c), sur l’attribution de la garantie de l’Union visée à l’article 12, paragraphes 4 et 5, sur la mise en œuvre de la plateforme de conseil InvestEU, sur les enveloppes allouées au titre de l’article 10, paragraphe 1, point d) i), et sur l’article 7, paragraphe 6. L’évaluation démontre en particulier comment la participation des partenaires chargés de la mise en œuvre et des partenaires consultatifs à la mise en œuvre du programme InvestEU a contribué à atteindre des objectifs du programme InvestEU ainsi que des objectifs d’action de l’Union, au regard notamment de la valeur ajoutée ainsi que de l’équilibre géographique et sectoriel des opérations de financement et d’investissement soutenues. Elle analyse également l’application de l’évaluation sous l’angle de la durabilité en vertu de l’article 7, paragraphe 3, et de la priorité accordée aux PME dans le cadre du volet «PME» prévu à l’article 7, paragraphe 1, point c
+  
+
+  
+      <del>).</del>
+  
+
+  
+      <ins>). Le cas échéant, le rapport intermédiaire est accompagné de    propositions législatives visant à modifier le présent règlement.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">161</div>
+  <div class="against">494</div>
+  <div class="abstention">33</div>
+</span>
+
+  
+    
+    <a href="/voting/124785">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(161/688 * 100%)">161</div>
-  
-  
-    <div class="-" style="width: calc(494/688 * 100%)">494</div>
-  
-  
-    <div class="0" style="width: calc(33/688 * 100%)">33</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124785">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       a) 
   
 
   
-      <del>à la compétitivité de l’Union, y compris la recherche, l’innovation et la numérisation;</del>
+      <del>à la compétitivité de l’Union, y compris la recherche, </del>
   
 
   
-      <ins>au développement et à la cohésion économique et territoriale au sein des États membres et entre eux, y compris au développement des secteurs primaire et secondaire et aux capacités de production, notamment en matière de recherche et développement, mais aussi à la solidité des infrastructures de transport locales, régionales, nationales et internationales, en veillant à ce que les fonds soient affectés à des investissements publics destinés à la fourniture de biens et de services publics, en particulier dans les secteurs de l’assainissement et de la gestion des déchets, des transports, des communications et de l’énergie;  Or. pt</ins>
+      <ins>au développement et à la cohésion économique et territoriale au sein des États membres et entre eux, y compris au développement des secteurs primaire et secondaire et aux capacités de production, notamment en matière de recherche et développement, mais aussi à la solidité des infrastructures de transport locales, régionales, nationales et internationales, en veillant à ce que les fonds soient affectés à des investissements publics destinés à la fourniture de biens et de services publics, en particulier dans les secteurs de </ins>
+  
+
+  
+      l’
+  
+
+  
+      <del>innovation</del>
+  
+
+  
+      <ins>assainissement</ins>
+  
+
+  
+       et 
+  
+
+  
+      <del>la numérisation;</del>
+  
+
+  
+      <ins>de la gestion des déchets, des transports, des communications et de l’énergie;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">128</div>
+  <div class="against">518</div>
+  <div class="abstention">42</div>
+</span>
+
+  
+    
+    <a href="/voting/124763">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(128/688 * 100%)">128</div>
-  
-  
-    <div class="-" style="width: calc(518/688 * 100%)">518</div>
-  
-  
-    <div class="0" style="width: calc(42/688 * 100%)">42</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124763">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       f) à la promotion de la cohésion 
@@ -480,1393 +590,1532 @@
       <ins>sociale , notamment à la promotion du travail assorti de droits et à l’accès universel à des services publics de qualité et au progrès social, en veillant à ce que les fonds soient affectés à des investissements publics destinés aux secteurs de l’éducation, de la santé et de la culture;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">125</div>
+  <div class="against">516</div>
+  <div class="abstention">47</div>
+</span>
+
+  
+    
+    <a href="/voting/124764">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(125/688 * 100%)">125</div>
-  
-  
-    <div class="-" style="width: calc(516/688 * 100%)">516</div>
-  
-  
-    <div class="0" style="width: calc(47/688 * 100%)">47</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124764">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>2 bis. Le programme InvestEU doit veiller à ce qu’au moins 50 % des investissements réalisés soient distribués selon des critères géographiques et de cohésion, afin que tous les États membres puissent bénéficier de ce fonds d’une manière inversement proportionnelle à leur niveau de développement social et économique.  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">64</div>
+  <div class="against">512</div>
+  <div class="abstention">112</div>
+</span>
+
+  
+    
+    <a href="/voting/124767">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(64/688 * 100%)">64</div>
-  
-  
-    <div class="-" style="width: calc(512/688 * 100%)">512</div>
-  
-  
-    <div class="0" style="width: calc(112/688 * 100%)">112</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124767">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
-
-  
-      (11) La contribution du Fonds InvestEU à la réalisation de l’objectif climatique sera suivie au moyen d’un système de l’Union qui devra être spécialement élaboré par la Commission en collaboration avec les partenaires chargés de la mise en œuvre 
-  
+<p>
 
   
-      <del>potentiels et en utilisant de manière appropriée les critères définis par le [règlement sur l’établissement d’un cadre pour favoriser les investissements durables25] permettant de déterminer si une activité économique est durable sur le plan environnemental.</del>
+      (11) La contribution du Fonds InvestEU à la réalisation de l’objectif climatique sera suivie au moyen d’un système de l’Union qui devra être spécialement élaboré par la Commission en collaboration avec les partenaires chargés de la mise en œuvre potentiels
   
 
   
-      <ins>potentiels.</ins>
+      <del> et en utilisant de manière appropriée les critères définis par le [règlement sur l’établissement d’un cadre pour favoriser les investissements durables25] permettant de déterminer si une activité économique est durable sur le plan environnemental</del>
   
 
   
-       Le programme InvestEU devrait également contribuer à la mise en œuvre d’autres dimensions des ODD.
+      . Le programme InvestEU devrait également contribuer à la mise en œuvre d’autres dimensions des ODD
   
 
   
-      <del>  __________________</del>
+      <del>.  __________________</del>
+  
+
+  
+      <ins>.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">147</div>
+  <div class="against">527</div>
+  <div class="abstention">14</div>
+</span>
+
+  
+    
+    <a href="/voting/124801">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(147/688 * 100%)">147</div>
-  
-  
-    <div class="-" style="width: calc(527/688 * 100%)">527</div>
-  
-  
-    <div class="0" style="width: calc(14/688 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124801">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
-
-  
-      (13) Les projets d’investissement bénéficiant d’un important soutien de l’Union, en particulier dans le domaine des infrastructures, devraient être examinés par le partenaire chargé de la mise en œuvre en vue d’établir s’ils ont une incidence environnementale, climatique ou sociale. Les projets d’investissement ayant une telle incidence devraient faire l’objet d’une évaluation de la durabilité conformément aux orientations que la Commission devra formuler en étroite coopération avec les partenaires chargés de la mise en œuvre potentiels dans le cadre du programme InvestEU. 
-  
+<p>
 
   
-      <del>Ces orientations devraient utiliser de manière appropriée les critères définis par le [règlement sur l’établissement d’un cadre pour favoriser les investissements durables] qui permettent de déterminer si une activité économique est durable sur le plan environnemental et conforme aux orientations mises au point pour d’autres programmes de l’Union. </del>
+      (13) Les projets d’investissement bénéficiant d’un important soutien de l’Union, en particulier dans le domaine des infrastructures, devraient être examinés par le partenaire chargé de la mise en œuvre en vue d’établir s’ils ont une incidence environnementale, climatique ou sociale. Les projets d’investissement ayant une telle incidence devraient faire l’objet d’une évaluation de la durabilité conformément aux orientations que la Commission devra formuler en étroite coopération avec les partenaires chargés de la mise en œuvre potentiels dans le cadre du programme InvestEU.
   
 
   
-      Conformément au principe de proportionnalité, ces orientations devraient contenir des dispositions adéquates pour éviter des charges administratives inutiles, et les projets d’une taille inférieure à un seuil défini dans les orientations devraient être exemptés de l’évaluation de la durabilité. Lorsque le partenaire chargé de la mise en 
+      <del> Ces orientations devraient utiliser de manière appropriée les critères définis par le [règlement sur l’établissement d’un cadre pour favoriser les investissements durables] qui permettent de déterminer si une activité économique est durable sur le plan environnemental et conforme aux orientations mises au point pour d’autres programmes de l’Union.</del>
   
 
   
-      <del>   </del>
+       Conformément au principe de proportionnalité, ces orientations devraient contenir des dispositions adéquates pour éviter des charges administratives inutiles, et les projets d’une taille inférieure à un seuil défini dans les orientations devraient être exemptés de l’évaluation de la durabilité. Lorsque le partenaire chargé de la mise en
   
 
   
-      œuvre conclut qu’il n’y a pas lieu de mener une évaluation de la durabilité, il devrait justifier cette décision auprès du comité d’investissement établi pour le Fonds InvestEU. Les opérations qui sont incompatibles avec la réalisation des objectifs climatiques ne devraient pas pouvoir bénéficier d’un soutien au titre du présent règlement.
+      <del>    œ</del>
+  
+
+  
+      <ins> œ</ins>
+  
+
+  
+      uvre conclut qu’il n’y a pas lieu de mener une évaluation de la durabilité, il devrait justifier cette décision auprès du comité d’investissement établi pour le Fonds InvestEU. Les opérations qui sont incompatibles avec la réalisation des objectifs climatiques ne devraient pas pouvoir bénéficier d’un soutien au titre du présent règlement.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">148</div>
+  <div class="against">522</div>
+  <div class="abstention">18</div>
+</span>
+
+  
+    
+    <a href="/voting/124804">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(148/688 * 100%)">148</div>
-  
-  
-    <div class="-" style="width: calc(522/688 * 100%)">522</div>
-  
-  
-    <div class="0" style="width: calc(18/688 * 100%)">18</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124804">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       (30) 
   
 
   
-      <del>Le programme InvestEU devrait également soutenir les financements afin de générer des investissements au profit des régions en transition juste.</del>
+      <del>Le</del>
   
 
   
-      <ins>Comme proposé dans le pacte vert pour l’Europe et dans le plan d’investissement du pacte vert pour l’Europe, un mécanisme pour une transition juste devrait être mis en place pour remédier aux difficultés sociales, économiques et environnementales liées à la réalisation de l’objectif climatique de l’Union et de son objectif de parvenir à la neutralité climatique d’ici à 2050. Ce mécanisme composé de trois piliers, dont un Fonds pour une transition juste (pilier 1), un dispositif spécifique pour une transition juste dans le cadre d’InvestEU (pilier 2) et une facilité de prêt au secteur public (pilier 3), serait axé sur les régions qui sont les plus affectées par la transition écologique et qui ont moins de capacités pour financer les investissements nécessaires. Ces investissements ne devraient pas être pris en considération lors des évaluations visant à déterminer si une zone géographique donnée présente une concentration excessive d’actions du programme. À ce titre, le programme InvestEU devrait également soutenir les financements afin de générer des investissements au profit des régions en transition juste et proposer aux régions concernées une assistance technique spécialisée par l’intermédiaire de la    plateforme de conseil InvestEU.</ins>
+      <ins>Comme proposé dans le pacte vert pour l’Europe et dans le plan d’investissement du pacte vert pour l’Europe, un mécanisme pour une transition juste devrait être mis en place pour remédier aux difficultés sociales, économiques et environnementales liées à la réalisation de l’objectif climatique de l’Union et de son objectif de parvenir à la neutralité climatique d’ici à 2050. Ce mécanisme composé de trois piliers, dont un Fonds pour une transition juste (pilier 1), un dispositif spécifique pour une transition juste dans le cadre d’InvestEU (pilier 2) et une facilité de prêt au secteur public (pilier 3), serait axé sur les régions qui sont les plus affectées par la transition écologique et qui ont moins de capacités pour financer les investissements nécessaires. Ces investissements ne devraient pas être pris en considération lors des évaluations visant à déterminer si une zone géographique donnée présente une concentration excessive d’actions du programme. À ce titre, le</ins>
+  
+
+  
+       programme InvestEU devrait également soutenir les financements afin de générer des investissements au profit des régions en transition juste
+  
+
+  
+      <ins> et proposer aux régions concernées une assistance technique spécialisée par l’intermédiaire de la    plateforme de conseil InvestEU</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">72</div>
+  <div class="against">607</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    
+    <a href="/voting/124806">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(72/688 * 100%)">72</div>
-  
-  
-    <div class="-" style="width: calc(607/688 * 100%)">607</div>
-  
-  
-    <div class="0" style="width: calc(9/688 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124806">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°12 | 
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       (64) Les règles financières horizontales adoptées par le Parlement européen et le Conseil sur la base de l’article 322 du traité sur le fonctionnement de l’Union européenne (TFUE) s’appliquent au présent règlement. Ces règles sont énoncées dans le règlement financier et fixent notamment les modalités d’établissement et d’exécution du budget au moyen de subventions, de marchés, de prix et d’exécution indirecte et organisent le contrôle de la responsabilité des acteurs financiers. Les règles adoptées sur la base de l’article 322 du TFUE concernent également 
   
 
   
-      <del>la protection du budget de l’Union en cas de défaillance généralisée de l’état de droit dans les États membres, étant donné que le respect de l’état de droit est une condition préalable essentielle à la bonne gestion financière et à un financement efficace de l’UE.</del>
+      <del>la protection du budget de l’Union en cas de défaillance généralisée de l’état de droit dans les États membres, étant donné que le respect de l’état de droit est une condition préalable essentielle à la bonne gestion financière et à un financement efficace de l’UE</del>
   
 
   
-      <ins>d’autres conditionnalités destinées à protéger le budget.</ins>
+      <ins>d’autres conditionnalités destinées à protéger le budget</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">148</div>
+  <div class="against">524</div>
+  <div class="abstention">16</div>
+</span>
+
+  
+    
+    <a href="/voting/124808">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(148/688 * 100%)">148</div>
-  
-  
-    <div class="-" style="width: calc(524/688 * 100%)">524</div>
-  
-  
-    <div class="0" style="width: calc(16/688 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124808">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
+        
+            <article id="13">
+            <header>📝 Amendement n°13 | 
 
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">ECR</div>
+                
+
+<p>
+
+  
+      g) à la relance durable
+  
+
+  
+      <ins>, axée sur l’économie</ins>
+  
+
+  
+       et inclusive de l’économie de l’Union
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>, en particulier des PME, </ins>
+  
+
+  
+      après la crise provoquée par la pandémie de COVID-19, en préservant et en renforçant ses chaînes de valeur stratégiques
+  
+
+  
+      <ins> existantes d’actifs corporels et incorporel, et en en développant de nouvelles</ins>
+  
+
+  
+      , ainsi qu’en maintenant et en consolidant les activités revêtant une importance stratégique pour l’Union en ce qui concerne les infrastructures critiques,
+  
+
+  
+      <ins> physiques ou virtuelles ou fondées sur la propriété intellectuelle,</ins>
+  
+
+  
+       les technologies critiques porteuses de changement, les innovations critiques révolutionnaires et les intrants essentiels pour les entreprises et les consommateurs.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ECR
     
     
-    <article>
-    <header>📝 Amendement n°14 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="14">
+            <header>📝 Amendement n°14 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       6. Parmi les investissements effectués dans le cadre du volet d’action «Infrastructures durables», les partenaires chargés de la mise en œuvre se fixent pour cible qu’au moins 
   
 
   
-      <del>60 </del>
+      <del>60</del>
   
 
   
-      <ins>55 </ins>
+      <ins>55</ins>
   
 
   
-      % des investissements contribuent à la réalisation des objectifs de l’Union en matière de climat et d’environnement.
+       % des investissements contribuent à la réalisation des objectifs de l’Union en matière de climat et d’environnement.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">149</div>
+  <div class="against">531</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/124778">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(149/688 * 100%)">149</div>
-  
-  
-    <div class="-" style="width: calc(531/688 * 100%)">531</div>
-  
-  
-    <div class="0" style="width: calc(8/688 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124778">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°15 | 
+        
+            <article id="15">
+            <header>📝 Amendement n°15 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE,GUE/NGL</div>
+                
 
-<section>
-
-  
-      (10) Afin de tenir compte de l’importance de lutter contre le changement climatique conformément aux engagements pris par l’Union de mettre en œuvre l’accord de Paris sur le changement 
-  
+<p>
 
   
-      <del>climatique et les </del>
+      (10) Afin de tenir compte de l’importance de lutter contre le changement climatique conformément aux engagements pris par l’Union de mettre en œuvre l’accord de Paris sur le changement climatique
   
 
   
-      <ins>climatique, de l’engagement de l’Union en faveur de la neutralité climatique à l’horizon 2050, ainsi que de la réalisation des objectifs actualisés pour 2030 conformément à la loi européenne sur le climat, à la stratégie de l’UE en faveur de la biodiversité à l’horizon 2030 et aux </ins>
+      <ins>, de l’engagement de l’Union en faveur de la neutralité climatique à l’horizon 2050, ainsi que de la réalisation des objectifs actualisés pour 2030 conformément à la loi européenne sur le climat, à la stratégie de l’UE en faveur de la biodiversité à l’horizon 2030</ins>
   
 
   
-      ODD, le programme InvestEU contribuera à la prise en considération des actions en faveur du climat et à la réalisation de l’objectif global 
+       et 
   
 
   
-      <del>de 25 </del>
+      <del>les</del>
   
 
   
-      <ins>d’au moins 30 </ins>
+      <ins>aux</ins>
   
 
   
-      % des dépenses du budget de l’UE consacrées aux objectifs en matière de 
+       ODD, le programme InvestEU contribuera à la prise en considération des actions en faveur du climat et à la réalisation de l’objectif global 
   
 
   
-      <del>climat.</del>
+      <del>de 25</del>
   
 
   
-      <ins>climat et d’au moins 10 % à l’objectif de biodiversité.</ins>
+      <ins>d’au moins 30</ins>
   
 
   
-       Les actions visant à atteindre ces objectifs climatiques 
+       % des dépenses du budget de l’UE consacrées aux objectifs en matière de climat
   
 
   
-      <ins>et environnementaux </ins>
+      <ins> et d’au moins 10 % à l’objectif de biodiversité</ins>
   
 
   
-      devraient représenter 
+      . Les actions visant à atteindre ces objectifs climatiques 
   
 
   
-      <del>30 </del>
+      <del>devraient représenter 30 % </del>
   
 
   
-      <ins>50 </ins>
-  
-
-  
-      % 
-  
-
-  
-      <ins>au moins </ins>
+      <ins>et environnementaux devraient représenter 50 % au moins </ins>
   
 
   
       de l’enveloppe financière globale du programme InvestEU. Les actions pertinentes seront répertoriées au cours de la préparation et de la mise en œuvre du programme InvestEU puis réévaluées dans le cadre des évaluations et des processus de révision correspondants.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+     et 
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">149</div>
+  <div class="against">524</div>
+  <div class="abstention">14</div>
+</span>
+
+  
+    
+    <a href="/voting/124798">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(149/687 * 100%)">149</div>
-  
-  
-    <div class="-" style="width: calc(524/687 * 100%)">524</div>
-  
-  
-    <div class="0" style="width: calc(14/687 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124798">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°16 | 
+        
+            <article id="16">
+            <header>📝 Amendement n°16 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      (11) La contribution du Fonds InvestEU à la réalisation de l’objectif climatique sera suivie au moyen d’un système de l’Union qui devra être spécialement élaboré par la 
-  
+<p>
 
   
-      <del>Commission </del>
+      (11) La contribution du Fonds InvestEU à la réalisation de l’objectif climatique sera suivie au moyen d’un système de l’Union qui devra être spécialement élaboré par la Commission
   
 
   
-      <ins>Commission, et conforme à la méthode harmonisée des banques multilatérales de développement visant à définir les actions climatiquess, </ins>
+      <del> </del>
   
 
   
-      en collaboration avec les partenaires chargés de la mise en œuvre potentiels et en utilisant de manière appropriée les critères définis par le [règlement sur l’établissement d’un cadre pour favoriser les investissements durables25] permettant de déterminer si une activité économique est durable sur le plan environnemental. Le programme InvestEU devrait également contribuer à la mise en œuvre d’autres dimensions des 
+      <ins>, et conforme à la méthode harmonisée des banques multilatérales de développement visant à définir les actions climatiquess, </ins>
   
 
   
-      <del>ODD.    </del>
+      en collaboration avec les partenaires chargés de la mise en œuvre potentiels et en utilisant de manière appropriée les critères définis par le [règlement sur l’établissement d’un cadre pour favoriser les investissements durables25] permettant de déterminer si une activité économique est durable sur le plan environnemental. Le programme InvestEU devrait également contribuer à la mise en œuvre d’autres dimensions des ODD
   
 
   
-      <ins>ODD et en particulier à l’égalité des sexes.</ins>
+      <del>.      </del>
   
 
   
-        _________________
+      <ins> et en particulier à l’égalité des sexes.  </ins>
+  
+
+  
+      _________________
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">149</div>
+  <div class="against">532</div>
+  <div class="abstention">6</div>
+</span>
+
+  
+    
+    <a href="/voting/124803">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(149/687 * 100%)">149</div>
-  
-  
-    <div class="-" style="width: calc(532/687 * 100%)">532</div>
-  
-  
-    <div class="0" style="width: calc(6/687 * 100%)">6</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124803">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°17 | 
+        
+            <article id="17">
+            <header>📝 Amendement n°17 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      (13) Les projets d’investissement bénéficiant d’un important soutien de l’Union, en particulier dans le domaine des infrastructures, devraient être examinés par le partenaire chargé de la mise en œuvre en vue d’établir s’ils ont une incidence environnementale, climatique ou 
-  
+<p>
 
   
-      <del>sociale.</del>
+      (13) Les projets d’investissement bénéficiant d’un important soutien de l’Union, en particulier dans le domaine des infrastructures, devraient être examinés par le partenaire chargé de la mise en œuvre en vue d’établir s’ils ont une incidence environnementale, climatique ou sociale
   
 
   
-      <ins>sociale, notamment sur l’égalité des sexes, la ségrégation professionnelle, l’égalité des chances et de traitement au travail.</ins>
+      <ins>, notamment sur l’égalité des sexes, la ségrégation professionnelle, l’égalité des chances et de traitement au travail</ins>
   
 
   
-       Les projets d’investissement ayant une telle incidence devraient faire l’objet d’une évaluation de la durabilité conformément aux orientations que la Commission devra formuler en étroite coopération avec les partenaires chargés de la mise en œuvre potentiels dans le cadre du programme InvestEU. Ces orientations devraient utiliser de manière appropriée les critères définis par le [règlement sur l’établissement d’un cadre pour favoriser les investissements durables] qui permettent de déterminer si une activité économique est durable sur le plan environnemental et conforme aux orientations mises au point pour d’autres programmes de l’Union. Conformément au principe de proportionnalité, ces orientations devraient contenir des dispositions adéquates pour éviter des charges administratives inutiles, et les projets d’une taille inférieure à un seuil 
+      . Les projets d’investissement ayant une telle incidence devraient faire l’objet d’une évaluation de la durabilité conformément aux orientations que la Commission devra formuler en étroite coopération avec les partenaires chargés de la mise en œuvre potentiels dans le cadre du programme InvestEU. Ces orientations devraient utiliser de manière appropriée les critères définis par le [règlement sur l’établissement d’un cadre pour favoriser les investissements durables] qui permettent de déterminer si une activité économique est durable sur le plan environnemental et conforme aux orientations mises au point pour d’autres programmes de l’Union. Conformément au principe de proportionnalité, ces orientations devraient contenir des dispositions adéquates pour éviter des charges administratives inutiles, et les projets d’une taille inférieure à un seuil
   
 
   
-      <ins>   </ins>
+      <del> </del>
   
 
   
-      défini dans les orientations devraient être exemptés de l’évaluation de la durabilité. Lorsque le partenaire chargé de la mise en 
+      <ins>    </ins>
   
 
   
-      <del>   </del>
+      défini dans les orientations devraient être exemptés de l’évaluation de la durabilité. Lorsque le partenaire chargé de la mise en
   
 
   
-      œuvre conclut qu’il n’y a pas lieu de mener une évaluation de la durabilité, il devrait justifier cette décision auprès du comité d’investissement établi pour le Fonds InvestEU. Les opérations qui sont incompatibles avec la réalisation des objectifs climatiques 
+      <del>    œ</del>
   
 
   
-      <del>ne devraient pas pouvoir bénéficier d’un soutien au titre du présent règlement.</del>
+      <ins> œ</ins>
   
 
   
-      <ins>et des objectifs environnementaux et qui ne respectent pas les critères définis dans la taxinomie de l’Union ni le principe consistant à ne pas causer de préjudice important, en particulier les activités liées à la production, à la distribution, au stockage, au transport ou à la combustion de combustibles fossiles, ne devraient pas pouvoir bénéficier d’un soutien au titre du présent règlement. Le changement climatique et la dégradation de l’environnement touchent les femmes de manière disproportionnée, mais elles sont sous-représentées dans le processus décisionnel relatif aux politiques d’atténuation du changement climatique. Il faut veiller à ce que les femmes et les autres groupes vulnérables soient pris en considération à tous les niveaux de décision, tant à l’échelle de l’Union qu’à l’échelle nationale.</ins>
+      uvre conclut qu’il n’y a pas lieu de mener une évaluation de la durabilité, il devrait justifier cette décision auprès du comité d’investissement établi pour le Fonds InvestEU. Les opérations qui sont incompatibles avec la réalisation des objectifs climatiques 
+  
+
+  
+      <del>ne devraient pas pouvoir bénéficier d’un soutien au titre du présent règlement</del>
+  
+
+  
+      <ins>et des objectifs environnementaux et qui ne respectent pas les critères définis dans la taxinomie de l’Union ni le principe consistant à ne pas causer de préjudice important, en particulier les activités liées à la production, à la distribution, au stockage, au transport ou à la combustion de combustibles fossiles, ne devraient pas pouvoir bénéficier d’un soutien au titre du présent règlement. Le changement climatique et la dégradation de l’environnement touchent les femmes de manière disproportionnée, mais elles sont sous-représentées dans le processus décisionnel relatif aux politiques d’atténuation du changement climatique. Il faut veiller à ce que les femmes et les autres groupes vulnérables soient pris en considération à tous les niveaux de décision, tant à l’échelle de l’Union qu’à l’échelle nationale</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">155</div>
+  <div class="against">522</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/124805">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(155/687 * 100%)">155</div>
-  
-  
-    <div class="-" style="width: calc(522/687 * 100%)">522</div>
-  
-  
-    <div class="0" style="width: calc(10/687 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124805">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°18 | 
+        
+            <article id="18">
+            <header>📝 Amendement n°18 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>4 bis. Afin de contribuer aux objectifs de l’Union en matière de climat et d’environnement, notamment à la transition vers la réalisation des objectifs de l’Union en matière de climat mis à jour pour 2030 et à la satisfaction de l’objectif de neutralité climatique de l’Union d’ici à 2050 conformément au [règlement (UE) 2020/XXX établissant le cadre requis pour parvenir à la neutralité climatique et modifiant le règlement climat)], et d’assurer la pleine conformité avec ceux-ci, au moins 50 % de l’enveloppe financière globale du programme InvestEU contribuent à la réalisation des objectifs de l’Union en matière de climat et d’environnement énoncés dans le règlement (UE).../... [législation européenne sur le climat].</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">149</div>
+  <div class="against">532</div>
+  <div class="abstention">7</div>
+</span>
+
+  
+    
+    <a href="/voting/124769">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(149/688 * 100%)">149</div>
-  
-  
-    <div class="-" style="width: calc(532/688 * 100%)">532</div>
-  
-  
-    <div class="0" style="width: calc(7/688 * 100%)">7</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124769">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°19 | 
+        
+            <article id="19">
+            <header>📝 Amendement n°19 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       a) un volet d’action «Infrastructures durables», qui recouvre l’investissement durable dans les domaines des transports, y compris 
   
 
   
-      <del>le transport multimodal,</del>
+      <del>le transport multimodal</del>
   
 
   
-      <ins>les infrastructures de transport multimodal facilitant le transfert modal,</ins>
+      <ins>les infrastructures de transport multimodal facilitant le transfert modal</ins>
   
 
   
-       la sécurité routière, notamment dans le cadre de l’objectif de l’Union de mettre fin d’ici à 2050 aux accidents de la route faisant des morts et des blessés graves, la rénovation et l’entretien des infrastructures routières et 
+      , la sécurité routière, notamment dans le cadre de l’objectif de l’Union de mettre fin d’ici à 2050 aux accidents de la route faisant des morts et des blessés graves, la rénovation et l’entretien des infrastructures routières et ferroviaires
   
 
   
-      <del>ferroviaires,</del>
+      <ins> et des voies navigables intérieures, l’extension des lignes ferroviaires, y compris pour les trains de nuit</ins>
   
 
   
-      <ins>ferroviaires et des voies navigables intérieures, l’extension des lignes ferroviaires, y compris pour les trains de nuit,</ins>
+      , de l’énergie, en particulier les énergies renouvelables, l’efficacité énergétique conformément au cadre pour l’énergie à l’horizon 2030, les projets de rénovation d’immeubles axée sur les économies d’énergie et l’intégration des bâtiments dans des systèmes énergétiques, numériques, de stockage et de transport connectés, de l’amélioration des niveaux d’interconnexion, de la connectivité et de l’accès numériques, y compris dans les zones rurales, de l’approvisionnement en matières premières et de leur transformation, de l’espace, des océans, des eaux, y compris des eaux intérieures, de la gestion des déchets conformément à la hiérarchie des déchets et à l’économie circulaire, de la nature et des autres infrastructures environnementales, du patrimoine culturel, du tourisme
   
 
   
-       de l’énergie, en particulier les énergies renouvelables, l’efficacité énergétique conformément au cadre pour l’énergie à l’horizon 2030, les projets de rénovation d’immeubles axée sur les économies d’énergie et l’intégration des bâtiments dans des systèmes énergétiques, numériques, de stockage et de transport connectés, de l’amélioration des niveaux d’interconnexion, de la connectivité et de l’accès numériques, y compris dans les zones rurales, de l’approvisionnement en matières premières et de leur transformation, de l’espace, des océans, des eaux, y compris des eaux intérieures, de la gestion des déchets conformément à la hiérarchie des déchets et à l’économie circulaire, de la nature et des autres infrastructures environnementales, du patrimoine culturel, du 
+      <del>, </del>
   
 
   
-      <del>tourisme,</del>
+      <ins> durable,    </ins>
   
 
   
-      <ins>tourisme durable,   </ins>
+      des équipements, des actifs mobiles, ainsi que du déploiement de technologies innovantes qui contribuent aux objectifs de résilience environnementale ou climatique ou de
   
 
   
-       des équipements, des actifs mobiles, ainsi que du déploiement de technologies innovantes qui contribuent aux objectifs de résilience environnementale ou climatique ou de 
+      <del>    </del>
   
 
   
-      <del>   </del>
+      <ins> </ins>
   
 
   
       durabilité sociale de l’Union et qui respectent les normes de durabilité environnementale ou sociale de l’Union;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">169</div>
+  <div class="against">474</div>
+  <div class="abstention">45</div>
+</span>
+
+  
+    
+    <a href="/voting/124771">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(169/688 * 100%)">169</div>
-  
-  
-    <div class="-" style="width: calc(474/688 * 100%)">474</div>
-  
-  
-    <div class="0" style="width: calc(45/688 * 100%)">45</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124771">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°20 | 
+        
+            <article id="20">
+            <header>📝 Amendement n°20 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      c) un volet d’action «PME», qui concerne la disponibilité et l’accessibilité des financements, en priorité pour les PME, y compris les PME innovantes et les PME actives dans les secteurs de la culture et de la création, ainsi que les petites entreprises de taille intermé
-  
+<p>
 
   
-      <del>diaire;</del>
+      c) un volet d’action «PME», qui concerne la disponibilité et l’accessibilité des financements, en priorité pour les PME, y compris les PME innovantes et les PME actives dans les secteurs de la culture et de la création, ainsi que les petites entreprises de taille intermédiaire
   
 
   
-      <ins>diaire, en accordant une attention particulière aux PME dirigées par des femmes;</ins>
+      <ins>, en accordant une attention particulière aux PME dirigées par des femmes</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">154</div>
+  <div class="against">472</div>
+  <div class="abstention">60</div>
+</span>
+
+  
+    
+    <a href="/voting/124772">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(154/686 * 100%)">154</div>
-  
-  
-    <div class="-" style="width: calc(472/686 * 100%)">472</div>
-  
-  
-    <div class="0" style="width: calc(60/686 * 100%)">60</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124772">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°21 | 
+        
+            <article id="21">
+            <header>📝 Amendement n°21 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>c bis) les technologies de mobilité durable, intelligente et automatisée et la logistique de tous les modes de transport, y des services de technologie de mobilité sans interruption et de billet direct;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">228</div>
+  <div class="against">427</div>
+  <div class="abstention">33</div>
+</span>
+
+  
+    
+    <a href="/voting/124840">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(228/688 * 100%)">228</div>
-  
-  
-    <div class="-" style="width: calc(427/688 * 100%)">427</div>
-  
-  
-    <div class="0" style="width: calc(33/688 * 100%)">33</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124840">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°22 | 
+        
+            <article id="22">
+            <header>📝 Amendement n°22 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      4. La Commission définit des orientations en matière de durabilité qui, conformément aux objectifs et normes environnementaux et sociaux de l’
-  
+<p>
 
   
-      <del>Union,</del>
+      4. La Commission définit des orientations en matière de durabilité qui, conformément aux objectifs et normes environnementaux et sociaux de l’Union
   
 
   
-      <ins>Union et en tenant particulièrement compte de la loi européenne sur le climat,</ins>
+      <ins> et en tenant particulièrement compte de la loi européenne sur le climat</ins>
   
 
   
-       permettent:
+      , permettent:
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">152</div>
+  <div class="against">528</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/124774">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(152/688 * 100%)">152</div>
-  
-  
-    <div class="-" style="width: calc(528/688 * 100%)">528</div>
-  
-  
-    <div class="0" style="width: calc(8/688 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124774">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°23 | 
+        
+            <article id="23">
+            <header>📝 Amendement n°23 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>d bis) de recenser les projets en contradiction avec la promotion de l’égalité des sexes et les principes d’intégration des questions d’égalité entre les hommes et les femmes et de la dimension hommes-femmes dans le processus budgétaire;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">158</div>
+  <div class="against">517</div>
+  <div class="abstention">13</div>
+</span>
+
+  
+    
+    <a href="/voting/124775">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(158/688 * 100%)">158</div>
-  
-  
-    <div class="-" style="width: calc(517/688 * 100%)">517</div>
-  
-  
-    <div class="0" style="width: calc(13/688 * 100%)">13</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124775">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°24 | 
+        
+            <article id="24">
+            <header>📝 Amendement n°24 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>4 bis. Seuls les projets répondant aux critères d’examen pertinents élaborés au en considération dans le calcul des contributions à ces objectifs de dépenses pour les objectifs climatiques et environnementaux.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">147</div>
+  <div class="against">529</div>
+  <div class="abstention">12</div>
+</span>
+
+  
+    
+    <a href="/voting/124776">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(147/688 * 100%)">147</div>
-  
-  
-    <div class="-" style="width: calc(529/688 * 100%)">529</div>
-  
-  
-    <div class="0" style="width: calc(12/688 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124776">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°25 | 
+        
+            <article id="25">
+            <header>📝 Amendement n°25 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       6. Parmi les investissements effectués dans le cadre du volet d’action «Infrastructures durables», les partenaires chargés de la mise en œuvre se fixent pour cible qu’au moins 
   
 
   
-      <del>60 </del>
+      <del>60</del>
   
 
   
-      <ins>80 </ins>
+      <ins>80</ins>
   
 
   
-      % des investissements contribuent à la réalisation des objectifs de l’Union en matière de climat et d’environnement.
+       % des investissements contribuent à la réalisation des objectifs de l’Union en matière de climat et d’environnement.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">135</div>
+  <div class="against">545</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/124777">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(135/688 * 100%)">135</div>
-  
-  
-    <div class="-" style="width: calc(545/688 * 100%)">545</div>
-  
-  
-    <div class="0" style="width: calc(8/688 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124777">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°26 | 
+        
+            <article id="26">
+            <header>📝 Amendement n°26 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>6 bis. Parmi les investissements effectués dans le cadre du volet des investissements européens stratégiques, les partenaires chargés de la mise en œuvre se fixent pour cible qu’au moins 65 % des investissements contribuent à la réalisation des objectifs de l’Union en matière de climat et d’environnement.  La Commission, conjointement avec les partenaires chargés de la mise en œuvre, s’efforce de veiller à ce que la part de la garantie de l’Union utilisée pour le volet d’action «Infrastructures durables» soit répartie de manière à assurer un équilibre entre les différents domaines visés au paragraphe 1, point e).</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">142</div>
+  <div class="against">536</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/124779">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(142/688 * 100%)">142</div>
-  
-  
-    <div class="-" style="width: calc(536/688 * 100%)">536</div>
-  
-  
-    <div class="0" style="width: calc(10/688 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124779">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°27 | 
+        
+            <article id="27">
+            <header>📝 Amendement n°27 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>(d bis) concordent avec la stratégie européenne d’égalité entre les hommes et notamment avec les principes d’intégration de la dimension de genre et de prise en compte des questions d’égalité hommes-femmes dans l’élaboration du budget, ainsi qu’avec les stratégies nationales d’égalité entre les hommes et les femmes, et reposent sur une évaluation de l’impact selon le genre.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">169</div>
+  <div class="against">500</div>
+  <div class="abstention">18</div>
+</span>
+
+  
+    
+    <a href="/voting/124781">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(169/687 * 100%)">169</div>
-  
-  
-    <div class="-" style="width: calc(500/687 * 100%)">500</div>
-  
-  
-    <div class="0" style="width: calc(18/687 * 100%)">18</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124781">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°28 | 
+        
+            <article id="28">
+            <header>📝 Amendement n°28 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       a) des projets soutenant le développement des infrastructures du réseau transeuropéen de transport (RTE-T), 
   
 
   
-      <del>y compris </del>
+      <del>y compris</del>
   
 
   
-      <ins>en privilégiant </ins>
+      <ins>en privilégiant</ins>
   
 
   
-      l’entretien et la sécurité des infrastructures, les nœuds urbains du RTE- T, les ports maritimes et intérieurs, les 
+       l’entretien et la sécurité des infrastructures, les nœuds urbains du RTE- T, les ports maritimes et intérieurs,
   
 
   
-      <del>aéroports, les </del>
+      <del> les aéroports,</del>
   
 
   
-      terminaux multimodaux et la connexion de ces terminaux multimodaux aux réseaux RTE-T, et les applications télématiques visées dans le règlement (UE) Conseil57;  _________________  Parlement européen et du Conseil du 11 décembre 2013 sur les orientations de l’Union pour le développement du réseau transeuropéen de transport et abrogeant la
+       les terminaux multimodaux et la connexion de ces terminaux multimodaux aux réseaux RTE-T, et les applications télématiques visées dans le règlement (UE) Conseil57;  _________________  Parlement européen et du Conseil du 11 décembre 2013 sur les orientations de l’Union pour le développement du réseau transeuropéen de transport et abrogeant la
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">128</div>
+  <div class="against">548</div>
+  <div class="abstention">12</div>
+</span>
+
+  
+    
+    <a href="/voting/124787">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(128/688 * 100%)">128</div>
-  
-  
-    <div class="-" style="width: calc(548/688 * 100%)">548</div>
-  
-  
-    <div class="0" style="width: calc(12/688 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124787">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°29 | 
+        
+            <article id="29">
+            <header>📝 Amendement n°29 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>f bis) des infrastructures cyclistes interurbaines en s’attachant particulièrement à assurer des connexions transfrontalières sécurisées pour les usagers de la route vulnérables et en créant, ainsi, des axes cyclables transnationaux au sein d’un réseau à l’échelle européenne;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">197</div>
+  <div class="against">478</div>
+  <div class="abstention">13</div>
+</span>
+
+  
+    
+    <a href="/voting/124788">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(197/688 * 100%)">197</div>
-  
-  
-    <div class="-" style="width: calc(478/688 * 100%)">478</div>
-  
-  
-    <div class="0" style="width: calc(13/688 * 100%)">13</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124788">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°30 | 
+        
+            <article id="30">
+            <header>📝 Amendement n°30 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      9. Le 
-  
+<p>
 
   
-      <del>tourisme.</del>
+      9. Le tourisme
   
 
   
-      <ins>tourisme, notamment au moyen d’investissements qui contribuent à la relance, à la compétitivité à long terme et à la durabilité du secteur et de ses chaînes de valeur en soutenant les opérations visant à promouvoir un tourisme durable, accessible, innovant et numérique, y compris dans les domaines de l’écotourisme, de l’agritourisme, du tourisme maritime, du tourisme culturel, du cyclo-tourisme et du tourisme ferroviaire.</ins>
+      <ins>, notamment au moyen d’investissements qui contribuent à la relance, à la compétitivité à long terme et à la durabilité du secteur et de ses chaînes de valeur en soutenant les opérations visant à promouvoir un tourisme durable, accessible, innovant et numérique, y compris dans les domaines de l’écotourisme, de l’agritourisme, du tourisme maritime, du tourisme culturel, du cyclo-tourisme et du tourisme ferroviaire</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">173</div>
+  <div class="against">508</div>
+  <div class="abstention">7</div>
+</span>
+
+  
+    
+    <a href="/voting/124789">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(173/688 * 100%)">173</div>
-  
-  
-    <div class="-" style="width: calc(508/688 * 100%)">508</div>
-  
-  
-    <div class="0" style="width: calc(7/688 * 100%)">7</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124789">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°31 | 
+        
+            <article id="31">
+            <header>📝 Amendement n°31 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       (12) les investissements liés à l’exploitation minière ou à l’extraction, à la transformation, à la distribution, au stockage ou à la combustion de 
@@ -1880,207 +2129,961 @@
       <ins>combustibles fossiles.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">164</div>
+  <div class="against">516</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/124791">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(164/688 * 100%)">164</div>
-  
-  
-    <div class="-" style="width: calc(516/688 * 100%)">516</div>
-  
-  
-    <div class="0" style="width: calc(8/688 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124791">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°35 | 
+        
+            <article id="35">
+            <header>📝 Amendement n°35 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>15 bis)les investissements dans les infrastructures aéroportuaires, sauf dans les régions ultrapériphériques;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">114</div>
+  <div class="against">561</div>
+  <div class="abstention">12</div>
+</span>
+
+  
+    
+    <a href="/voting/124795">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(114/687 * 100%)">114</div>
-  
-  
-    <div class="-" style="width: calc(561/687 * 100%)">561</div>
-  
-  
-    <div class="0" style="width: calc(12/687 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124795">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°36 | 
+        
+            <article id="36">
+            <header>📝 Amendement n°36 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>15 ter) les investissements dans l’expansion de la capacité des infrastructures autoroutières.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">112</div>
+  <div class="against">540</div>
+  <div class="abstention">35</div>
+</span>
+
+  
+    
+    <a href="/voting/124796">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(112/687 * 100%)">112</div>
-  
-  
-    <div class="-" style="width: calc(540/687 * 100%)">540</div>
-  
-  
-    <div class="0" style="width: calc(35/687 * 100%)">35</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124796">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
+        
     
+        
+        
+            <article id="38">
+            <header>📝 Amendement n°38 | 
 
-    
-    
+🚫 Annulé
 
-    
-    
+</header>
+            
+                <div class="hidden">ID</div>
+                
 
-    
-    
+<p>
 
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/0108(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0203_FR.html" target="_blank">📜 Texte et amendements</a></li>
+      (67) Les pays tiers qui sont membres de l’Espace économique européen (EEE) peuvent participer aux programmes de l’Union dans le cadre de la coopération établie au titre de l’accord EEE, qui prévoit la mise en œuvre de ces programmes au moyen d’une décision prise au titre de cet accord.
   
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-11-11-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+      <del> Les pays tiers peuvent également participer sur la base d’autres instruments juridiques.</del>
   
-</ul>
+
+  
+       Il convient d’introduire dans le présent règlement une disposition spécifique en vue d’accorder les droits et accès nécessaires permettant à l’ordonnateur compétent, à l’OLAF et à la Cour des comptes européenne d’exercer pleinement leurs compétences respectives.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="39">
+            <header>📝 Amendement n°39 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      b) à la croissance et à l’emploi dans l’économie de l’Union, à la durabilité de l’économie de l’Union et à sa dimension environnementale et climatique
+  
+
+  
+      <del> favorisant la réalisation des ODD et des objectifs de l’accord de Paris sur le changement climatique et la création d’emplois de qualité</del>
+  
+
+  
+      ;
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="40">
+            <header>📝 Amendement n°40 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      b) à la croissance et à l’emploi dans l’économie de l’Union, à la durabilité de l’économie de l’Union et à
+  
+
+  
+      <del> sa dimension environnementale et climatique favorisant la réalisation des ODD et des objectifs de l’accord de Paris sur le changement climatique et</del>
+  
+
+  
+       la création d’emplois de qualité;
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="42">
+            <header>📝 Amendement n°42 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      b) les pays en voie d’adhésion,
+  
+
+  
+      <del> les pays candidats et les candidats potentiels,</del>
+  
+
+  
+       conformément aux principes généraux et aux modalités et conditions générales applicables à leur participation aux programmes de l’Union établis dans les accords-cadres, les décisions de conseil d’association ou les accords similaires respectifs, et conformément aux conditions prévues dans les accords entre l’Union et ces pays;
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="45">
+            <header>📝 Amendement n°45 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      <del>xxx</del>
+  
+
+  
+      <ins>iv) bis.garantisse des conditions de réciprocité et la protection des atouts stratégiques des États membres de l’Union.</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="46">
+            <header>📝 Amendement n°46 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      b) un volet d’action «Recherche, innovation et numérisation», qui recouvre les activités de recherche, de développement de produits et d’innovation, le transfert de technologies et des résultats de la recherche vers le marché pour soutenir les catalyseurs du marché et la coopération entre entreprises,
+  
+
+  
+      <ins> le soutien à l’alphabétisation numérique,</ins>
+  
+
+  
+       la démonstration et le déploiement de solutions innovantes et le soutien au développement des entreprises innovantes, ainsi que la numérisation de l’industrie 
+  
+
+  
+      <del>européenne</del>
+  
+
+  
+      <ins>des États membres de l’Union</ins>
+  
+
+  
+      ;
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="47">
+            <header>📝 Amendement n°47 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      d) un volet d’action «Investissements sociaux et compétences», qui recouvre le microfinancement, le financement des entreprises sociales, l’économie sociale et 
+  
+
+  
+      <del>les</del>
+  
+
+  
+      <ins>des</ins>
+  
+
+  
+       mesures de promotion de l’égalité 
+  
+
+  
+      <del>des sexes</del>
+  
+
+  
+      <ins>hommes-femmes</ins>
+  
+
+  
+      , des compétences, de l’éducation, de la formation et des services connexes, 
+  
+
+  
+      <del>les</del>
+  
+
+  
+      <ins>des</ins>
+  
+
+  
+       infrastructures sociales (y compris les infrastructures de santé et d’enseignement, le logement social et le logement étudiant),
+  
+
+  
+      <ins> de</ins>
+  
+
+  
+       l’innovation sociale, 
+  
+
+  
+      <del>les</del>
+  
+
+  
+      <ins>des</ins>
+  
+
+  
+       soins de santé et de longue durée,
+  
+
+  
+      <ins> de</ins>
+  
+
+  
+       l’inclusion et l’accessibilité, 
+  
+
+  
+      <del>les</del>
+  
+
+  
+      <ins>des</ins>
+  
+
+  
+       activités culturelles et créatives 
+  
+
+  
+      <del>à visée sociale, et l’intégration des personnes vulnérables, y compris des ressortissants de pays tiers</del>
+  
+
+  
+      <ins>dans le but de faire connaître la culture européenne, et de l’intégration des citoyens européens vulnérables</ins>
+  
+
+  
+      ;
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="48">
+            <header>📝 Amendement n°48 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      a) les projets faisant intervenir des entités situées ou établies dans un ou plusieurs États membres et s
+  
+
+  
+      <del>&#39;étendant à un ou plusieurs pays tiers, dont les États en voie d’adhésion, les pays candidats et candidats potentiels, les pays relevant du champ d’application de la politique européenne de voisinage, les pays membres de l’EEE ou de l’AELE, à un pays ou territoire d’outre-mer figurant à l’annexe II du TFUE, ou à un pays tiers associé, qu’il existe ou non un partenaire dans ces pays tiers ou ces pays ou territoires d’outre-mer</del>
+  
+
+  
+      <ins>’étendant à un pays ou territoire d’outre-mer figurant à l’annexe II du traité FUE</ins>
+  
+
+  
+      ;
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="50">
+            <header>📝 Amendement n°50 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      3. Le Fonds InvestEU 
+  
+
+  
+      <del>peut soutenir des</del>
+  
+
+  
+      <ins>ne soutient que les</ins>
+  
+
+  
+       opérations de financement et d’investissement au profit de bénéficiaires finaux qui sont des entités légales établies dans 
+  
+
+  
+      <del>l’un quelconque des pays ou territoires suivants:</del>
+  
+
+  
+      <ins>un État membre.</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Dans le contexte de la crise socioéconomique due à la pandémie, ces fonds devraient pouvoir être employés pour soutenir à fond nos économies. Malheureusement, la dernière version du texte inclut des ambitions climatiques beaucoup trop élevées s’apparentant à un véritable carcan qui, dans les faits, nuira à la compétitivité de nos entreprises. Par ailleurs, de nombreuses dispositions permettent l’utilisation des fonds par les pays tiers, ce qui n’est pas acceptable. C’est pourquoi je me suis abstenu sur ce vote.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            Je me suis abstenue sur ce texte, qui inclut des ambitions climatiques trop élevées ainsi que trop de dispositions permettant l’utilisation des fonds par des pays tiers, ce qui n’est pas acceptable.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce texte est issu d’un accord interinstitutionnel sur le budget de l’Union post-2020. Le programme InvestEU est une part essentielle de la réponse européenne à la crise sanitaire. Il est nécessaire de mettre en place un financement de long terme pour soutenir une reprise durable après la crise sanitaire. Au total, environ 30 % des investissements de ce programme seront consacrés à l’atteinte des objectifs de l’Union en matière d’action climatique. J’ai voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Dans la situation actuelle de reprise, ces fonds semblent indispensables pour nos économies, pourtant la dernière version du texte inclut des ambitions climatiques trop élevées, ainsi que de nombreuses dispositions permettant l’utilisation des fonds par les pays tiers, ce qui n’est absolument pas acceptable. D’où mon abstention.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            Je me suis abstenu car, bien que ces fonds semblent indispensables actuellement pour nos économies, les ambitions climatiques du texte sont trop élevées.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Le programme InvestEU pour la période du prochain CFP 2021-2027 poursuit le Plan Juncker, qui visait à stimuler les investissements au sein de l’Union européenne, notamment dans les secteurs innovants et ceux touchés par les conséquences de la crise financière de 2008. L’objectif affiché est de rendre le financement des projets d’investissement en Europe plus simple, plus efficace et plus flexible. J’avais voté contre la première version de ce texte, car il ne prenait pas en compte les exigences liées à la lutte contre le changement climatique. Mais le texte adopté suite aux négociations en trilogue oriente davantage InvestEU vers la protection de l’environnement, le principe étant que tout investissement ne doit pas nuire au climat. On note également, avec satisfaction, qu’au moins 65 % du volet «infrastructures durables» devra être fléché sur le climat. Mais malgré ces ajouts notables, ce texte reste basé sur une garantie pour le secteur privé et non sur des subventions. Autrement dit, la puissance publique de supporter le risque, tandis que les investisseurs privés s’accaparent les profits. C’est pour cette raison que je me suis abstenu.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport relatif au programme InvestEU. Il s’agit d’un accord de trilogue au sujet de ce programme d’investissement européen. InvestEU sera doté de 26,2 milliards d’euros, dont 6,9 milliards en faveur des PME et 6,6 milliards pour la recherche. Au moins 30 % des fonds du programme contribueront à atteindre les objectifs de l’Union dans le domaine climatique.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à valider l’établissement du programme «Invest EU» dont l’objectif est de pallier le manque d’investissements dans certains secteurs (infrastructures, recherche, secteur social, etc.) à travers une garantie publique. Il prévoit un budget de 26,2 milliards d’euros censés permettre de générer 375 milliards d’euros d’investissements grâce à l’effet levier de la garantie apportée par l’Union européenne. Il inscrit en revanche un objectif climatique insuffisant («au moins 30 %») et conserve une logique de socialisation des risques et de privatisation des bénéfices au profit d’investisseurs privés. Je me suis donc abstenue sur ce texte afin de ne pas bloquer des investissements utiles en temps de crise tout en regrettant le manque d’ambition du programme et sa focalisation unique sur les investissements privés.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Le plan InvestEU est le successeur du plan Juncker. Comme son prédécesseur, ce plan est un artifice financier: les montants annoncés sont des montants anticipés sur l’effet levier que les sommes et garanties avancées par l’Union européenne permettraient d’entraîner de la part des investisseurs privés. Le plan Juncker avait été un échec retentissant. Il n’en ira pas autrement pour InvestEU. Il faut un réel plan de bifurcation écologique et sociale pour l’Union européenne en libérant les États du fardeau de la dette par son annulation par la Banque centrale européenne. La BCE doit pouvoir prêter directement aux États et ces derniers doivent pouvoir accorder des aides d’État à l’ensemble des secteurs stratégiques. Tout plan qui ne reposerait pas sur ces éléments est condamné à n’être qu’un coup d’épée dans l’eau. Néanmoins, des améliorations ayant été adoptées au cours des négociations sur ce programme, notamment en matière de lutte contre le changement climatique et de protection de la biodiversité, et ne souhaitant pas leur faire obstacle, je m’abstiens sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197589</div>
+            
+            <header><b>Laurence FARRENG</b> | Mouvement Démocrate</header>
+            J’ai voté en faveur de cet accord de trilogue sur le nouveau programme Invest EU, un programme d’investissement taillé pour la relance à long terme de notre économie. 26 milliards d’euros du budget européen vont servir de garantie pour des projets innovants et essentiels, et ainsi accroître la confiance des investisseurs privés et publics dans ces projets. En tout, on estime que ces 26 milliards vont amener un total de 400 milliards d’euros d’investissements. Les domaines d’investissements sont extrêmement variés, et répondent à la fois à l’urgence, comme le financement des PME touchées par la crise, la lutte contre la crise sanitaire (soutien aux hôpitaux), mais vont également financer des projets essentiels pour notre prospérité à moyen et long termes: financement de la recherche, d’infrastructures de transport durable, d’approvisionnement d’énergie sûre, investissements dans la lutte contre le changement climatique, projets liés aux nouvelles technologies de pointe (intelligence artificielle, robotique, etc.). Enfin, n’oublions pas non plus les investissements dans ce qui fait notre identité européenne: la protection de notre patrimoine culturel, l’éducation et les projets de cohésion sociale (logement sociaux, entreprises de l’ESS, infrastructures accessibles, etc.). C’est un programme nécessaire et pertinent, qui doit maintenant profiter à tous les acteurs concernés.
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            L’investissement constitue un axe prioritaire pour l’Union Européenne afin d’impulser une dynamique positive, dans ces temps de crise sanitaire et économique. Le programme InvestEU qui s’inscrit dans le cadre de l’instrument pour la relance NextGenerationEU, a pour ambition d’être un tremplin pour l’investissement dans l’avenir.Malgré mon point de vue fondamentalement favorable vis-à-vis de ce programme d’investissement, je me suis abstenu sur le vote de celui-ci.Bien que celui-ci soutienne des investissements durables, numériques et stratégiques, ce programme ne permet pas de financer l’énergie nucléaire, qui est pourtant une énergie bas carbone, et qui sera indispensable pour réaliser nos objectifs climatiques. Je regrette cette mise à l’écart qui ne reflète pas la place du nucléaire dans l’UE, utilisé par la moitié des pays européens, et dont dépendent de très nombreux emplois. J’estime que cette énergie devrait pleinement pouvoir bénéficier du soutien européen dans le cadre d’un mix énergétique certes, et doit être au cœur de notre réflexion énergétique, ce qui n’est malheureusement pas le cas dans le programme InvestEU.
+        </article>
+    
+        <article>
+            <div class="hidden">197551</div>
+            
+            <header><b>Stéphane BIJOUX</b> | Renaissance</header>
+            J’ai voté en faveur de l’accord en trilogue sur le programme InvestEU, qui permettra de soutenir fortement l’investissement des entreprises, notamment médicales, durant la période 2021-2027.Les entreprises pourront ainsi être aidées, grâce à un budget record de 26,2 milliards d’euros pour sept ans, dans leurs investissements stratégiques et les trésoreries des PME européennes pourront être soutenues. Ce programme est une réponse forte de l’Union européenne pour les entreprises de nos territoires dans un contexte sanitaire et économique qui reste préoccupant. Enfin, pour accélérer la transition écologique, 30 % des investissements devront soutenir le climat.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté en faveur de ce rapport qui acte l’accord obtenu entre le Parlement, la Commission et le Conseil pour un renforcement du programme InvestEU dans le cadre du plan de relance Next Generation EU. L’enveloppe sera augmentée de 400 millions d’euros pour un montant total de 26,2 milliards. Ce programme est un outil essentiel pour assurer un financement à long terme de nos entreprises européennes et soutenir les politiques de l’Union pour la reprise qui fera suite à la crise Covid. Il permettra notamment de faciliter la mise en œuvre des plans de relance nationaux tout en soutenant des secteurs stratégiques comme ceux du médical ou des PME. Les financements accordés au titre de ce programme refléteront les objectifs de l’Union de devenir une puissance verte et numérique. Ainsi, 6,6 milliards d’euros iront à la recherche, à l’innovation et à la digitalisation, 30 % des dépenses seront liées à la défense du climat et 10 % à la protection de la biodiversité.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai voté en faveur du rapport établissant le programme InvestEU 2021-2027 qui vise à stimuler l’investissement dans l’Union européenne. InvestEU se composera du Fonds InvestEU, de la plateforme de conseil InvestEU et du portail InvestEU. Le texte identifie quatre volets d’investissement, à savoir les infrastructures durables, la recherche, l’innovation et la numérisation, les PME et le secteur social. Le texte prévoit ainsi un volet de financement principalement pour les PME, notamment les PME innovantes et celles opérant dans les secteurs culturel et créatif. Bien qu’il n’y ait plus de volet spécifique, le règlement prévoit que des investissements stratégiques seront possibles sous les quatre volets précédents, afin de promouvoir les transitions verte et numérique, et l’autonomie stratégique de l’UE dans des secteurs clés.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Je me suis abstenu sur ce rapport, car si ce mécanisme de soutien européen à l’investissement est indispensable pour favoriser la reprise de nos économies, le texte inclut des ambitions climatiques trop élevées ainsi que de nombreuses dispositions permettant l’utilisation des fonds par des pays tiers, ce qui n’est absolument pas acceptable.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            Dans la situation actuelle de reprise, ces fonds semblent indispensables pour nos économies, pourtant la dernière version du texte inclut des ambitions climatiques trop élevées, ainsi que de nombreuses dispositions permettant l’utilisation des fonds par les pays tiers, ce qui n’est pas acceptable à mes yeux. Je me suis donc abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Je me suis abstenue, car bien que ces fonds semblent indispensables actuellement pour nos économies, les ambitions climatiques du texte sont trop élevées.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            En 2018, malgré l’amélioration de la situation économique générale, les nombreuses réformes structurelles entreprises par les États membres et les initiatives paneuropéennes telles que le plan Juncker, il subsiste un important déficit d’investissement dans l’UE. Pour continuer à remédier à ce problème, la Commission a proposé le programme InvestEU, qui est en effet la continuation du Plan pour les investissements «plan Juncker». Le programme InvestEU est un mécanisme de soutien à l’investissement pour la période 2021-2027. Il rassemblera divers instruments financiers de l’UE pour les politiques internes qui étaient auparavant soutenus par différents fonds et programmes du budget de l’UE. L’objectif du programme européen Invest proposé est de rassembler divers instruments financiers de l’UE pour les politiques internes qui sont actuellement soutenus par différents programmes et fonds du budget de l’UE. Dans la situation actuelle de reprise, ces fonds semblent indispensables pour nos économies, pourtant la dernière version du texte inclut des ambitions climatiques trop élevées, ainsi que de nombreuses dispositions permettant l’utilisation des fonds par les pays tiers, ce qui n’est absolument pas acceptable. Je me suis donc abstenue sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Le programme européen InvestEU rassemble divers instruments financiers de l’UE. Il souhaite créer un mécanisme unique de soutien à l’investissement de l’Union européenne pour l’action interne pour le cadre financier de 2021-2027. La garantie de l’Union européenne s’élèverait à 75,1 milliards d’euros, ce qui, selon la Commission, devrait se traduire par des investissements supplémentaires d’au moins 1 000 milliards d’euros dans toute l’Union européenne. Dans la situation actuelle de reprise, ces fonds semblent indispensables pour nos économies, cependant la dernière version du texte inclut des ambitions climatiques trop élevées, ainsi que les nombreuses dispositions permettant l’utilisation des fonds par les pays tiers, ce qui n’est absolument pas acceptable. J’ai préféré m’abstenir.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Avec les nombreuses réformes structurelles entreprises par les États membres et les initiatives paneuropéennes telles que le plan Juncker, il subsistait ces dernières années un important déficit d’investissement dans l’UE. Pour contribuer à remédier à ce problème, la Commission a proposé le programme InvestEU, un mécanisme de soutien à l’investissement pour la période 2021-2027. Il rassemblera divers instruments financiers de l’UE pour les politiques internes qui étaient auparavant soutenus par différents fonds et programmes du budget de l’UE. L’objectif est de soutenir des opérations de financement et d’investissement conformes aux objectifs de l’UE, en réduisant les risques liés aux projets et en réduisant l’encombrement des financements privés et publics chaque fois que l’allocation des ressources financières du marché n’est pas optimale. Il ne fait pas de doute que dans la situation actuelle, ces fonds semblent indispensables pour nos économies. Pour autant, la dernière version du texte inclut des ambitions climatiques trop élevées, et les nombreuses dispositions permettant l’utilisation des fonds par les pays tiers, ne sont pas acceptables de notre point de vue. Je me suis abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            L&#39;objectif du programme européen InvestEU est de rassembler divers instruments financiers actuellement soutenus par différents programmes et fonds du budget de l&#39;Union européenne, afin de créer un mécanisme unique de soutien à l&#39;investissement.Dans la situation actuelle, ce programme semble utile mais de nombreuses dispositions prévoient l’utilisation de ces fonds par des pays tiers. En outre, ce plan ne comportera pas d’investissements consacrés véritablement au développement de l’autonomie stratégique. Je me suis donc abstenue sur ce rapport.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">30482</div>
+            
+            <header><b>Younous OMARJEE</b> | La France Insoumise</header>
+            
+                <p> – Madame la Présidente, Monsieur le Commissaire, je tiens tout d’abord à féliciter les corapporteurs, mais je veux dire mon inquiétude. Mon inquiétude au regard de la cohésion. Cela a été dit, aucune répartition géographique n’a été prévue pour orienter les milliards d’investissements qui seront levés à travers InvestEU vers les entreprises des régions les moins développées d’Europe. C’est d’autant plus regrettable que les fonds et programmes créés sur la base de l’article 175 du traité doivent poursuivre, vous le savez, les objectifs de la cohésion. À présent, il faudra veiller, Monsieur Gentiloni, à ce qu’InvestEU aide effectivement, à travers le soutien aux entreprises, à réduire effectivement les fractures territoriales plutôt que de prendre le risque de les aggraver. Vous pouvez compter sur la commission du développement régional pour vous y aider. Et tout ceci pose tout de même la question de la cohérence de nos politiques communautaires, nous devons en permanence y veiller.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            
+                <p>As the EU flagship investment programme, InvestEU has a strong potential to kick-start the European economy and in particular to boost social investment and investment in human capital. This covers education and training, and the cultural and creative sectors. These sectors have been hard hit by the current COVID-19 crisis.</p>
+            
+                <p>In its opinion, the CULT Committee’s aim is looking to reinforce the position of the cultural and creative sectors as regards their access to financing through the InvestEU programme.</p>
+            
+                <p>The InvestEU programme should therefore support critical infrastructure, also in the audiovisual, media, cultural and creative sectors, through investment under the new fifth investment window, especially to support international distribution, competitiveness and innovation. </p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

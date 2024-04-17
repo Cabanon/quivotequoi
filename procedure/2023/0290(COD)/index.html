@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Sécurité des jouets</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,67 +22,39 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Sécurité des jouets</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
-    <article>
-    <header>👍 Adoption du texte | 
-
-✅️ Adopté
-
-</header>
-    
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
-        <section>
-
-<div class="votes ">
-  
-    <div class="+" style="width: calc(603/623 * 100%)">603</div>
-  
-  
-    <div class="-" style="width: calc(5/623 * 100%)">5</div>
-  
-  
-    <div class="0" style="width: calc(15/623 * 100%)">15</div>
-  
-</div>
-</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
-        <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
-        
-        
-            🔎 Vote introuvable
-        
-    
-    </article>
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -89,7 +62,22 @@
     
         
         
-            <li>Libre circulation des marchandises</li>
+            <li>Sécurité du consommateur </li>
+        
+    
+        
+        
+            <li>Cohésion économique, sociale et territoriale</li>
+        
+    
+        
+        
+            <li>Sécurité des produits et des services, responsabilité du fait du produit</li>
+        
+    
+        
+        
+            <li>Santé du consommateur </li>
         
     
         
@@ -104,7 +92,7 @@
     
         
         
-            <li>Cohésion économique, sociale et territoriale</li>
+            <li>Libre circulation des marchandises</li>
         
     
         
@@ -112,37 +100,146 @@
             <li>Marché intérieur, marché unique</li>
         
     
-        
-        
-            <li>Sécurité des produits et des services, responsabilité du fait du produit</li>
-        
+</ul>
+
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/0290(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2024-0044_FR.html" target="_blank">📜 Texte et amendements</a></li>
     
-        
-        
-            <li>Sécurité du consommateur </li>
-        
-    
-        
-        
-            <li>Santé du consommateur </li>
-        
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-03-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>🗃️ Données</h3>
 
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,124693,197694,197697,197698,204418,245018">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,204418,245018">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,124693">🇫🇷 Renaissance</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197626,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197626,197629,197615">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       (16) Les substances chimiques classées comme cancérogènes, mutagènes ou toxiques pour la reproduction (substances CMR), les substances chimiques qui affectent le système endocrinien, le système respiratoire ou qui sont toxiques pour un organe spécifique 
@@ -153,23 +250,23 @@
   
 
   
-      sont particulièrement nocives pour les enfants et 
+      sont particulièrement nocives pour les enfants
   
 
   
-      <ins>l’environnement, et </ins>
+      <ins> et l’environnement,</ins>
   
 
   
-      leur présence dans les jouets devrait être prise en compte de manière spécifique. Compte tenu du rôle essentiel du système endocrinien au cours du développement humain, une exposition précoce à des perturbateurs endocriniens pendant des périodes critiques comme la petite enfance, peut entraîner des effets indésirables même à de très faibles doses et affecter la santé à un stade ultérieur de la vie. Les sensibilisants respiratoires peuvent entraîner une augmentation de l’asthme infantile et les substances neurotoxiques sont particulièrement nocives pour le cerveau en développement des enfants, qui est intrinsèquement plus vulnérable aux lésions toxiques que le cerveau adulte. 
+       et leur présence dans les jouets devrait être prise en compte de manière spécifique. Compte tenu du rôle essentiel du système endocrinien au cours du développement humain, une exposition précoce à des perturbateurs endocriniens pendant des périodes critiques comme la petite enfance, peut entraîner des effets indésirables même à de très faibles doses et affecter la santé à un stade ultérieur de la vie. Les sensibilisants respiratoires peuvent entraîner une augmentation de l’asthme infantile et les substances neurotoxiques sont particulièrement nocives pour le cerveau en développement des enfants, qui est intrinsèquement plus vulnérable aux lésions toxiques que le cerveau adulte.
   
 
   
-      <ins>La persistance et la bioaccumulation entraînent une exposition continue et accentuent donc le risque d’effets   toxiques sont également mobiles dans l’environnement. </ins>
+      <ins> La persistance et la bioaccumulation entraînent une exposition continue et accentuent donc le risque d’effets   toxiques sont également mobiles dans l’environnement.</ins>
   
 
   
-      Les enfants devraient également être protégés de manière 
+       Les enfants devraient également être protégés de manière 
   
 
   
@@ -193,15 +290,15 @@
   
 
   
-      <del>Conseil.</del>
+      <del>Conseil</del>
   
 
   
-      <ins>Conseil33.</ins>
+      <ins>Conseil33</ins>
   
 
   
-       Afin de mieux protéger les enfants, qui constituent un que d’autres personnes, il y a lieu de compléter ce cadre juridique par des interdictions génériques dans les jouets 
+      . Afin de mieux protéger les enfants, qui constituent un que d’autres personnes, il y a lieu de compléter ce cadre juridique par des interdictions génériques dans les jouets 
   
 
   
@@ -209,319 +306,491 @@
   
 
   
-      dangereuses, telles que classées conformément au règlement (CE) 
+      dangereuses, telles que classées conformément au règlement (CE)
   
 
   
-      <del>Conseil33. Ces interdictions génériques </del>
+      <del> Conseil33. Ces interdictions génériques</del>
   
 
   
-      devraient s’appliquer aux substances CMR, aux perturbateurs 
+       devraient s’appliquer aux substances CMR, aux perturbateurs endocriniens
   
 
   
-      <del>endocriniens,</del>
+      <ins> qui affectent la santé humaine et l’environnement</ins>
   
 
   
-      <ins>endocriniens qui affectent la santé humaine et l’environnement,</ins>
+      , aux sensibilisants respiratoires et aux substances ciblant un organe spécifique
   
 
   
-       aux sensibilisants respiratoires et aux substances ciblant un organe spé
+      <del>, dès que ces substances sont classées</del>
   
 
   
-      <del>cifique, dès que ces substances sont classées </del>
+      <ins> ou qui sont mobiles, persistantes, bioaccumulables et toxiques qui remplissent les critères pour être classées comme dangereuses en vertu du d’assurer la</ins>
   
 
   
-      <ins>cifique ou qui sont mobiles, persistantes, bioaccumulables et toxiques qui remplissent les critères pour être classées comme dangereuses en vertu du d’assurer la </ins>
+       sécurité des jouets, les substances interdites devraient être acceptables à l’état de traces, mais uniquement si leur présence à de tels niveaux est technologiquement inévitable avec les bonnes pratiques de fabrication et si le jouet est sûr
   
 
   
-      sécurité des jouets, les substances interdites devraient être acceptables à l’état de traces, mais uniquement si leur présence à de tels niveaux est technologiquement inévitable avec les bonnes pratiques de fabrication et si le jouet est sûr.  
+      <del>.            </del>
   
 
   
-      <del>          _________________ </del>
+      <ins>.  </ins>
   
 
   
-      <ins>_________________  Parlement européen et du Conseil du 18 décembre 2006 concernant l’enregistrement, l’évaluation et   l’autorisation des substances chimiques, ainsi que les restrictions applicables à ces Commission ainsi que la directive </ins>
+      _________________  Parlement européen et du Conseil du 
   
 
   
-       Parlement européen et du Conseil du 16 décembre 2008 relatif à la classification, à l’étiquetage et à 
+      <del>16</del>
   
 
   
-      <del>  </del>
+      <ins>18</ins>
   
 
   
-      l’emballage des substances et des mélanges, modifiant et abrogeant 
+       décembre 
   
 
   
-      <del>les   Parlement européen et du Conseil du 18 décembre 2006 concernant l’enregistrement, l’évaluation et l’autorisation des substances chimiques, ainsi que les restrictions applicables à ces Commission ainsi que la directive</del>
+      <del>2008 relatif à la classification, à </del>
   
 
   
-      <ins>les</ins>
+      <ins>2006 concernant l’enregistrement, </ins>
+  
+
+  
+      l’
+  
+
+  
+      <del>étiquetage</del>
+  
+
+  
+      <ins>évaluation</ins>
+  
+
+  
+       et
+  
+
+  
+      <del> à</del>
+  
+
+  
+         l’
+  
+
+  
+      <del>emballage</del>
+  
+
+  
+      <ins>autorisation</ins>
+  
+
+  
+       des substances 
+  
+
+  
+      <del>et des mélanges, modifiant et abrogeant les   </del>
+  
+
+  
+      <ins>chimiques, ainsi que les restrictions applicables à ces Commission ainsi que la directive  </ins>
+  
+
+  
+      Parlement européen et du Conseil du 
+  
+
+  
+      <del>18</del>
+  
+
+  
+      <ins>16</ins>
+  
+
+  
+       décembre 
+  
+
+  
+      <del>2006 concernant l’enregistrement, </del>
+  
+
+  
+      <ins>2008 relatif à la classification, à </ins>
+  
+
+  
+      l’
+  
+
+  
+      <del>évaluation</del>
+  
+
+  
+      <ins>étiquetage</ins>
+  
+
+  
+       et
+  
+
+  
+      <ins> à</ins>
+  
+
+  
+       l’
+  
+
+  
+      <del>autorisation</del>
+  
+
+  
+      <ins>emballage</ins>
+  
+
+  
+       des substances 
+  
+
+  
+      <del>chimiques, ainsi que les restrictions applicables à ces Commission ainsi que la directive</del>
+  
+
+  
+      <ins>et des mélanges, modifiant et abrogeant les</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">409</div>
+  <div class="against">211</div>
+  <div class="abstention">2</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(409/622 * 100%)">409</div>
-  
-  
-    <div class="-" style="width: calc(211/622 * 100%)">211</div>
-  
-  
-    <div class="0" style="width: calc(2/622 * 100%)">2</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>(22 bis) Les substances d’alkyle perfluoré et polyfluoré (PFAS) constituent une grande famille composée d’origine anthropique. Depuis leur apparition à la fin des années 40, les PFAS ont été utilisées dans un éventail de plus en plus étendu de produits de consommation. L’exposition aux PFAS les plus étudiées a été associée à une série d’effets néfastes sur la santé, notamment des maladies thyroïdiennes, des lésions hépatiques, l’obésité, le diabète et une moindre réceptivité aux vaccinations de   routine, ainsi qu’à des risques accrus de cancer du sein, des reins et des testicules. Les jouets ne devraient contenir aucune substance d’alkyle perfluoré et polyfluoré (PFAS).</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
+        
+        
+            <article id="173">
+            <header>📝 Amendement n°173 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden"></div>
+                
+
+<p>
+
+  
+      6. La Commission est habilitée à adopter des actes délégués conformément à l’article 47 pour modifier la partie C de l’appendice de l’annexe II afin de permettre une certaine utilisation dans les jouets d’une substance ou d’un mélange spécifique interdit(e) en vertu de l’annexe II, partie III, point 4, ou de limiter une certaine utilisation qui a été autorisée.
+  
+
+  
+      <ins> Lorsqu’elle élabore de tels actes délégués, la Commission tient compte de la disponibilité de substances ou mélanges de substitution viables ainsi que de toute incidence négative éventuelle qu’un tel acte délégué pourrait avoir sur l’innovation et les fabricants concernés.</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    <article>
-    <header>📝 Amendement n°174 | 
+        
+        
+            <article id="174">
+            <header>📝 Amendement n°174 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       7. L’utilisation dans les jouets d’une substance ou d’un mélange interdit(e) en vertu de l’annexe II, partie III, point 4, 
   
 
   
-      <del>ne peut être </del>
+      <del>ne peut être</del>
   
 
   
-      <ins>points a), b), d ter), d quater), d quinquies) et d sexies), n’est </ins>
+      <ins>points a), b), d ter), d quater), d quinquies) et d sexies), n’est</ins>
   
 
   
-      autorisée que si toutes les conditions suivantes sont remplies:
+       autorisée que si toutes les conditions suivantes sont remplies:
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">365</div>
+  <div class="against">255</div>
+  <div class="abstention">4</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(365/624 * 100%)">365</div>
-  
-  
-    <div class="-" style="width: calc(255/624 * 100%)">255</div>
-  
-  
-    <div class="0" style="width: calc(4/624 * 100%)">4</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°175 | 
+        
+            <article id="175">
+            <header>📝 Amendement n°175 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      a) elle a été jugée sûre par l’Agence européenne des produits chimiques (ECHA)
-  
+<p>
 
   
-      <del>, notamment au regard de l’exposition, y compris l’exposition   globale provenant d’autres sources,</del>
+      a) elle a été jugée sûre par l’Agence européenne des produits chimiques (ECHA
   
 
   
-      <ins> en raison de l’absence de toute possibilité d’exposition dans des   conditions d’utilisation raisonnablement prévisibles, conformément à l’article 5, paragraphe 2, premier alinéa,</ins>
+      <del>), notamment au regard de l’exposition, y compris l’exposition   globale provenant d’autres sources</del>
   
 
   
-       en tenant particulièrement compte de la vulnérabilité des enfants;
+      <ins>) en raison de l’absence de toute possibilité d’exposition dans des   conditions d’utilisation raisonnablement prévisibles, conformément à l’article 5, paragraphe 2, premier alinéa</ins>
+  
+
+  
+      , en tenant particulièrement compte de la vulnérabilité des enfants;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°176 | 
+        
+        
+            <article id="176">
+            <header>📝 Amendement n°176 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>a bis)il est techniquement impossible de l’éliminer ou de la remplacer en modifiant la conception ou en ayant recours à d’autres matériaux ou composants sans aucun(e) de ces substances ou mélanges;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°177 | 
+        
+        
+            <article id="177">
+            <header>📝 Amendement n°177 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>7 bis.L’utilisation dans les jouets d’une substance ou d’un mélange interdit(e) en vertu de l’annexe II, partie III, point 4, points c), d), et d bis), n’est autorisée que si toutes les conditions suivantes sont remplies:  a) elle a été jugée sûre par l’ECHA, notamment au regard de l’exposition, y compris l’exposition globale provenant de toutes les sources potentielles, ainsi que de tout danger supplémentaire connu résultant de l’exposition combinée aux différents substances ou mélanges présents dans le jouet, et en tenant compte, en particulier, de la vulnérabilité des enfants;  b) il est techniquement impossible de l’éliminer ou de la remplacer en   modifiant la conception ou en ayant recours à d’autres matériaux ou composants sans aucun(e) de ces substances ou mélanges;  c) il ressort d’une analyse des solutions de remplacement réalisée par l’ECHA qu’il n’existe aucun(e) autre substance ou mélange de substitution adéquat(e);  d) l’utilisation de la substance ou du mélange n’est pas interdite dans les produits de consommation au titre du</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">354</div>
+  <div class="against">265</div>
+  <div class="abstention">3</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(354/622 * 100%)">354</div>
-  
-  
-    <div class="-" style="width: calc(265/622 * 100%)">265</div>
-  
-  
-    <div class="0" style="width: calc(3/622 * 100%)">3</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°183 | 
+        
+            <article id="183">
+            <header>📝 Amendement n°183 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       2. 
   
 
   
-      <del>Toute </del>
+      <del>Toute</del>
   
 
   
-      <ins>Sans préjudice du deuxième alinéa du présent paragraphe, toute </ins>
+      <ins>Sans préjudice du deuxième alinéa du présent paragraphe, toute</ins>
   
 
   
-      personne soumettant une demande d’évaluation en vertu du paragraphe 1 peut demander que certaines informations 
+       personne soumettant une demande d’évaluation en vertu du paragraphe 1 peut demander que certaines informations 
   
 
   
@@ -529,48 +798,51 @@
   
 
   
-      ne soient pas rendues 
+      ne soient pas rendues publiques
   
 
   
-      <del>publiques.</del>
+      <ins>, conformément à la législation de l’Union applicable</ins>
   
 
   
-      <ins>publiques, conformément à la législation de l’Union applicable.</ins>
-  
-
-  
-       La demande de confidentialité est accompagnée d’une justification de la raison pour laquelle la divulgation des informations pourrait porter préjudice aux intérêts commerciaux de la personne qui soumet la demande d’évaluation ou de toute autre partie concernée.
+      . La demande de confidentialité est accompagnée d’une justification de la raison pour laquelle la divulgation des informations pourrait porter préjudice aux intérêts commerciaux de la personne qui soumet la demande d’évaluation ou de toute autre partie concernée.
   
 
   
       <ins>  Les informations suivantes détenues par l’ECHA sont publiées gratuitement et sous une forme conviviale:  a) le nom de la personne morale qui   soumet la demande;  b) le nom de la substance ou du mélange faisant l’objet de la demande d’exemption;  c) le type de jouet ou de composant de jouet;  d) le cas échéant, le plan de substitution.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°187 | 
+        
+        
+            <article id="187">
+            <header>📝 Amendement n°187 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       2. L’ECHA peut demander à la personne soumettant la demande d’évaluation ou à tout tiers de présenter des informations supplémentaires dans un délai spécifié. L’ECHA prend également en compte toute information communiquée par des tiers.
@@ -580,149 +852,164 @@
       <ins> Lorsque l’ECHA le juge nécessaire pour définir une période de validité adéquate pour l’exemption, elle peut également demander à la personne qui soumet la demande d’évaluation de soumettre un plan de substitution.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°190 | 
+        
+        
+            <article id="190">
+            <header>📝 Amendement n°190 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       7. Aux fins de l’article 46, 
   
 
   
-      <del>paragraphe 7,</del>
+      <del>paragraphe</del>
   
 
   
-      <ins>paragraphes 7, 7 bis et 8,</ins>
+      <ins>paragraphes</ins>
   
 
   
-       la Commission peut demander un avis à l’ECHA sur la sécurité d’une substance ou d’un mélange spécifique dans les 
+       7,
   
 
   
-      <del>jouets, qui tient compte de l’exposition globale à la substance ou au mélange provenant d’autres sources et de la vulnérabilité des enfants.</del>
+      <ins> 7 bis et 8,</ins>
   
 
   
-      <ins>jouets.</ins>
+       la Commission peut demander un avis à l’ECHA sur la sécurité d’une substance ou d’un mélange spécifique dans les jouets
+  
+
+  
+      <del>, qui tient compte de l’exposition globale à la substance ou au mélange provenant d’autres sources et de la vulnérabilité des enfants</del>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">329</div>
+  <div class="against">283</div>
+  <div class="abstention">7</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(329/619 * 100%)">329</div>
-  
-  
-    <div class="-" style="width: calc(283/619 * 100%)">283</div>
-  
-  
-    <div class="0" style="width: calc(7/619 * 100%)">7</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°195 | 
+        
+            <article id="195">
+            <header>📝 Amendement n°195 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       1. Les jouets mis sur le marché en avant le … [OP: veuillez insérer la date correspondant au premier jour du mois suivant une période de 30 mois après la date d’entrée en vigueur du présent règlement] peuvent continuer à être mis à disposition sur le marché jusqu’au … [OP: veuillez insérer la date correspondant au premier jour du mois suivant une période de 
   
 
   
-      <del>42 </del>
+      <del>42</del>
   
 
   
-      <ins>50 </ins>
+      <ins>50</ins>
   
 
   
-      mois après la date d’entrée en vigueur du présent règlement].
+       mois après la date d’entrée en vigueur du présent règlement].
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">490</div>
+  <div class="against">117</div>
+  <div class="abstention">4</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(490/611 * 100%)">490</div>
-  
-  
-    <div class="-" style="width: calc(117/611 * 100%)">117</div>
-  
-  
-    <div class="0" style="width: calc(4/611 * 100%)">4</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°197 | 
+        
+            <article id="197">
+            <header>📝 Amendement n°197 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       2. Le chapitre VII du présent règlement s’applique mutatis mutandis au lieu des articles 42, 43 et 45 de la mis sur le marché conformément à cette directive avant le … [OP: veuillez insérer la date correspondant au premier jour du mois suivant une période de 30 mois après la date d’entrée en vigueur du présent règlement], y compris les jouets pour lesquels une procédure a déjà été engagée en vertu de l’article 42 ou 43 de la 
@@ -737,67 +1024,129 @@
   
 
   
-      <del>30 </del>
+      <del>30</del>
   
 
   
-      <ins>50 </ins>
+      <ins>50</ins>
   
 
   
-      mois après la date d’entrée en vigueur du présent règlement].
+       mois après la date d’entrée en vigueur du présent règlement].
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
+        
+        
+            <article id="198">
+            <header>📝 Amendement n°198 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden"></div>
+                
+
+<p>
+
+  
+      3. Les attestations d’examen UE de type délivrées conformément à l’article 20   jusqu’au … [
+  
+
+  
+      <del>OP: veuillez insérer la date correspondant au </del>
+  
+
+  
+      premier jour du mois suivant une période de 
+  
+
+  
+      <del>42</del>
+  
+
+  
+      <ins>50</ins>
+  
+
+  
+       mois après la date d’entrée en vigueur du présent règlement], sauf si elles expirent avant cette date.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    <article>
-    <header>📝 Amendement n°208 | 
+        
+        
+            <article id="208">
+            <header>📝 Amendement n°208 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      4. L’utilisation dans des 
-  
+<p>
 
   
-      <del>jouets de </del>
+      4. L’utilisation dans des jouets
   
 
   
-      <ins>jouets, des </ins>
+      <del> de</del>
   
 
   
-      composants de jouets ou 
+      <ins>, des</ins>
   
 
   
-      <del>de </del>
+       composants de jouets ou 
   
 
   
-      <ins>des </ins>
+      <del>de</del>
   
 
   
-      parties de jouets microstructurellement distinctes, de substances ou de mélanges 
+      <ins>des</ins>
+  
+
+  
+       parties de jouets microstructurellement distinctes, de substances ou de mélanges 
   
 
   
@@ -812,712 +1161,782 @@
       suivantes, est interdite:
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">335</div>
+  <div class="against">274</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(335/614 * 100%)">335</div>
-  
-  
-    <div class="-" style="width: calc(274/614 * 100%)">274</div>
-  
-  
-    <div class="0" style="width: calc(5/614 * 100%)">5</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°209 | 
+        
+            <article id="209">
+            <header>📝 Amendement n°209 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      b) perturbation endocrinienne de catégorie 1 ou 
-  
+<p>
 
   
-      <del>2;</del>
+      b) perturbation endocrinienne de catégorie 1 ou 2
   
 
   
-      <ins>2 pour la santé humaine et l’environnement;</ins>
+      <ins> pour la santé humaine et l’environnement</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°210 | 
+        
+        
+            <article id="210">
+            <header>📝 Amendement n°210 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>d bis)sensibilisant cutané de catégorie 1;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°211 | 
+        
+        
+            <article id="211">
+            <header>📝 Amendement n°211 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>d ter)persistant, bioaccumulable et toxique;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°212 | 
+        
+        
+            <article id="212">
+            <header>📝 Amendement n°212 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>d quater) très persistant, très bioaccumulable;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">340</div>
+  <div class="against">281</div>
+  <div class="abstention">4</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(340/625 * 100%)">340</div>
-  
-  
-    <div class="-" style="width: calc(281/625 * 100%)">281</div>
-  
-  
-    <div class="0" style="width: calc(4/625 * 100%)">4</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°213 | 
+        
+            <article id="213">
+            <header>📝 Amendement n°213 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>d quinquies) persistant, mobile et toxique;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°214 | 
+        
+        
+            <article id="214">
+            <header>📝 Amendement n°214 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>d sexies) très persistant, très mobile.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°215 | 
+        
+        
+            <article id="215">
+            <header>📝 Amendement n°215 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>4 bis)L’utilisation dans des jouets, des composants de jouets ou des parties de jouets microstructurellement distinctes de substances d’alkyle perfluoré et polyfluoré (PFAS) et de bisphénols est interdite. Les jouets destinés à l’usage d’enfants de moins de 36 mois ou les autres jouets destinés à être mis en bouche ne doivent contenir aucune substance parfumante.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
+        
+        
     
-    <article>
-    <header>📝 Amendement n°242 | 
+        
+        
+            <article id="242">
+            <header>📝 Amendement n°242 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       effet au ... [OP: veuillez insérer la date correspondant au premier jour du mois suivant une période de 
   
 
   
-      <del>30 </del>
+      <del>30</del>
   
 
   
-      <ins>54 </ins>
+      <ins>54</ins>
   
 
   
-      mois après la date d’entrée en vigueur du présent règlement].
+       mois après la date d’entrée en vigueur du présent règlement].
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    (🇫🇷 : Reconquête!)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">299</div>
+  <div class="against">314</div>
+  <div class="abstention">7</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(299/620 * 100%)">299</div>
-  
-  
-    <div class="-" style="width: calc(314/620 * 100%)">314</div>
-  
-  
-    <div class="0" style="width: calc(7/620 * 100%)">7</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°243 | 
+        
+            <article id="243">
+            <header>📝 Amendement n°243 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       1. Les jouets mis sur le marché en avant le … [OP: veuillez insérer la date correspondant au premier jour du mois suivant une période de 
   
 
   
-      <del>30 </del>
+      <del>30</del>
   
 
   
-      <ins>54 </ins>
+      <ins>54</ins>
   
 
   
-      mois après la date d’entrée en vigueur du présent règlement] peuvent continuer à être mis à disposition sur le marché jusqu’au … [OP: veuillez insérer la date correspondant au premier jour du mois suivant une période de 
+       mois après la date d’entrée en vigueur du présent règlement] peuvent continuer à être mis à disposition sur le marché jusqu’au … [OP: veuillez insérer la date correspondant au premier jour du mois suivant une période de 
   
 
   
-      <del>42 </del>
+      <del>42</del>
   
 
   
-      <ins>24 </ins>
+      <ins>24</ins>
   
 
   
-      mois après la date d’
+       mois après la date d’
   
 
   
-      <del>entrée en vigueur </del>
+      <del>entrée en vigueur</del>
   
 
   
-      <ins>application </ins>
+      <ins>application</ins>
   
 
   
-      du présent règlement].
+       du présent règlement].
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    (🇫🇷 : Reconquête!)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">297</div>
+  <div class="against">315</div>
+  <div class="abstention">6</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(297/618 * 100%)">297</div>
-  
-  
-    <div class="-" style="width: calc(315/618 * 100%)">315</div>
-  
-  
-    <div class="0" style="width: calc(6/618 * 100%)">6</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°244 | 
+        
+            <article id="244">
+            <header>📝 Amendement n°244 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       2. Le chapitre VII du présent règlement s’applique mutatis mutandis au lieu des articles 42, 43 et 45 de la directive le marché conformément à cette directive avant le… [OP: veuillez insérer la date correspondant au premier jour du mois suivant une période de 
   
 
   
-      <del>30 </del>
+      <del>30</del>
   
 
   
-      <ins>54 </ins>
+      <ins>54</ins>
   
 
   
-      mois après la date d’entrée en vigueur du présent règlement], y compris les jouets pour lesquels une procédure a déjà été engagée en vertu de l’article 42 ou 43 de la directive insérer la date correspondant au premier jour du mois suivant une période de 
+       mois après la date d’entrée en vigueur du présent règlement], y compris les jouets pour lesquels une procédure a déjà été engagée en vertu de l’article 42 ou 43 de la directive insérer la date correspondant au premier jour du mois suivant une période de 
   
 
   
-      <del>30 </del>
+      <del>30</del>
   
 
   
-      <ins>54 </ins>
+      <ins>54</ins>
   
 
   
-      mois après la date d’entrée en vigueur du présent règlement].
+       mois après la date d’entrée en vigueur du présent règlement].
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    (🇫🇷 : Reconquête!)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">300</div>
+  <div class="against">317</div>
+  <div class="abstention">6</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(300/623 * 100%)">300</div>
-  
-  
-    <div class="-" style="width: calc(317/623 * 100%)">317</div>
-  
-  
-    <div class="0" style="width: calc(6/623 * 100%)">6</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°245 | 
+        
+            <article id="245">
+            <header>📝 Amendement n°245 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       3. Les attestations d’examen UE de type délivrées conformément à l’article 20 jusqu’au … [OP: veuillez insérer la date correspondant au premier jour du mois suivant une période de 
   
 
   
-      <del>42 </del>
+      <del>42</del>
   
 
   
-      <ins>24 </ins>
+      <ins>24</ins>
   
 
   
-      mois après la date d’
+       mois après la date d’
   
 
   
-      <del>entrée en vigueur </del>
+      <del>entrée en vigueur</del>
   
 
   
-      <ins>application </ins>
+      <ins>application</ins>
   
 
   
-      du présent règlement], sauf si elles expirent avant cette date.
+       du présent règlement], sauf si elles expirent avant cette date.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    (🇫🇷 : Reconquête!)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">323</div>
+  <div class="against">295</div>
+  <div class="abstention">4</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(323/622 * 100%)">323</div>
-  
-  
-    <div class="-" style="width: calc(295/622 * 100%)">295</div>
-  
-  
-    <div class="0" style="width: calc(4/622 * 100%)">4</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°246 | 
+        
+            <article id="246">
+            <header>📝 Amendement n°246 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       Il est applicable à partir du … [OP: veuillez insérer la date correspondant au premier jour du mois suivant une période de 
   
 
   
-      <del>30 </del>
+      <del>30</del>
   
 
   
-      <ins>54 </ins>
+      <ins>54</ins>
   
 
   
-      mois après la date d’entrée en vigueur du présent règlement].
+       mois après la date d’entrée en vigueur du présent règlement].
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    (🇫🇷 : Reconquête!)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">301</div>
+  <div class="against">309</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(301/615 * 100%)">301</div>
-  
-  
-    <div class="-" style="width: calc(309/615 * 100%)">309</div>
-  
-  
-    <div class="0" style="width: calc(5/615 * 100%)">5</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°247 | 
+        
+            <article id="247">
+            <header>📝 Amendement n°247 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       (17) 
   
 
   
-      <del>Afin de fournir une flexibilité lorsque </del>
+      <del>Afin de fournir une flexibilité lorsque</del>
   
 
   
-      <ins>Lorsque </ins>
+      <ins>Lorsque</ins>
   
 
   
-      la sécurité des enfants n’est pas compromise et qu’il 
+       la sécurité des enfants n’est pas compromise et qu’il 
   
 
   
-      <del>est nécessaire de mettre certains jouets à disposition sur le marché,</del>
+      <del>est nécessaire de mettre certains jouets à disposition sur le marché</del>
   
 
   
-      <ins>n’existe aucune autre substance ni aucun autre mélange de substitution adéquat à disposition,</ins>
+      <ins>n’existe aucune autre substance ni aucun autre mélange de substitution adéquat à disposition</ins>
   
 
   
-       il 
+      , il 
   
 
   
-      <del>devrait </del>
+      <del>devrait</del>
   
 
   
-      <ins>pourrait </ins>
+      <ins>pourrait</ins>
   
 
   
-      être possible 
+       être possible 
   
 
   
-      <del>de déroger aux </del>
+      <del>de déroger aux</del>
   
 
   
-      <ins>d’exempter des </ins>
+      <ins>d’exempter des</ins>
   
 
   
-      interdictions génériques des substances 
+       interdictions génériques des substances 
   
 
   
-      <del>chimiques </del>
+      <del>chimiques</del>
   
 
   
-      <ins>et des mélanges </ins>
+      <ins>et des mélanges</ins>
   
 
   
-      dans les jouets. Les 
+       dans les jouets. Les 
   
 
   
-      <del>dérogations aux </del>
+      <del>dérogations aux</del>
   
 
   
-      <ins>exemptions des </ins>
+      <ins>exemptions des</ins>
   
 
   
-      interdictions génériques autorisant l’utilisation de substances interdites devraient être 
+       interdictions génériques autorisant l’utilisation de substances interdites devraient être
   
 
   
-      <ins>limitées dans le temps, </ins>
+      <ins> limitées dans le temps,</ins>
   
 
   
-      d’application générale et ne devraient être possibles que lorsque l’utilisation de la substance 
+       d’application générale et ne devraient être possibles que lorsque l’utilisation de la substance 
   
 
   
-      <del>concernée </del>
+      <del>concernée</del>
   
 
   
-      <ins>ou du mélange concerné </ins>
+      <ins>ou du mélange concerné</ins>
   
 
   
-      est considérée comme sûre pour les enfants, qu’il 
+       est considérée comme sûre pour les enfants, qu’il 
   
 
   
-      <del>n’existe </del>
+      <del>n’existe</del>
   
 
   
-      <ins>est techniquement impossible d’éliminer ou de remplacer ces substances interdites en modifiant la conception ou en ayant recours à d’autres </ins>
+      <ins>est techniquement impossible d’éliminer ou de remplacer ces substances interdites en modifiant la conception ou en ayant recours à d’autres</ins>
   
 
   
-      pas de solution de remplacement 
+       pas de solution de remplacement 
   
 
   
-      <del>commercialement viables </del>
+      <del>commercialement viables</del>
   
 
   
-      <ins>techniquement viable </ins>
+      <ins>techniquement viable</ins>
   
 
   
-      pour la substance 
+       pour la substance 
   
 
   
@@ -1537,159 +1956,189 @@
   
 
   
-      <del>L’évaluation de la sécurité de la substance dans les jouets </del>
+      <del>L’évaluation de la sécurité</del>
   
 
   
-      <ins>en vertu du de cette substance </ins>
+      <ins>en vertu du</ins>
   
 
   
-      devrait être effectuée par les comités scientifiques compétents de l’Agence européenne des produits chimiques (ECHA) afin d’assurer la cohérence et l’utilisation efficace des 
+       de 
   
 
   
-      <ins>   </ins>
+      <del>la</del>
   
 
   
-      ressources dans l’évaluation des 
+      <ins>cette</ins>
   
 
   
-      <del>substances</del>
+       substance 
   
 
   
-      <ins>substances et mélanges dans l’Union.</ins>
+      <del>dans les jouets </del>
+  
+
+  
+      devrait être effectuée par les comités scientifiques compétents de l’Agence européenne des produits chimiques (ECHA) afin d’assurer la cohérence et l’utilisation efficace des
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
+  
+
+  
+      ressources dans l’évaluation des substances
+  
+
+  
+      <ins> et mélanges dans l’Union.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission ENVI
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">356</div>
+  <div class="against">260</div>
+  <div class="abstention">3</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(356/619 * 100%)">356</div>
-  
-  
-    <div class="-" style="width: calc(260/619 * 100%)">260</div>
-  
-  
-    <div class="0" style="width: calc(3/619 * 100%)">3</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°248 | 
+        
+            <article id="248">
+            <header>📝 Amendement n°248 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      (21) Les valeurs limites existantes pour certaines substances chimiques et leurs méthodes d’essai correspondantes se sont révélées appropriées pour la protection des enfants en ce qui concerne ces substances et devraient être maintenues. La Commission devrait être habilitée à réviser ces valeurs limites si nécessaire, afin de les adapter aux nouvelles connaissances 
-  
+<p>
 
   
-      <del>scientifiques. Les valeurs limites pour l’arsenic, le cadmium, le chrome VI, le plomb, le mercure </del>
+      (21) Les valeurs limites existantes pour certaines substances chimiques et leurs méthodes d’essai correspondantes se sont révélées appropriées pour la protection des enfants en ce qui concerne ces substances et devraient être maintenues. La Commission devrait être habilitée à réviser ces valeurs limites si nécessaire, afin de les adapter aux nouvelles connaissances scientifiques
   
 
   
-      <ins>scientifiques, conformément au principe de précaution et à l’approche «Une seule santé». Les valeurs limites pour l’arsenic </ins>
+      <del>. Les valeurs limites pour l’arsenic, le cadmium, le chrome VI, le plomb, le mercure</del>
   
 
   
-      et l’étain organique, qui sont particulièrement toxiques et qui ne devraient, dès lors, pas être utilisés intentionnellement dans les jouets, devraient être fixées à des niveaux de moitié inférieurs à ceux considérés comme sûrs par l’organisme scientifique compétent, afin d’assurer que seules des traces compatibles avec de bonnes pratiques de fabrication soient présentes dans les jouets.
+      <ins>, conformément au principe de précaution et à l’approche «Une seule santé». Les valeurs limites pour l’arsenic</ins>
+  
+
+  
+       et l’étain organique, qui sont particulièrement toxiques et qui ne devraient, dès lors, pas être utilisés intentionnellement dans les jouets, devraient être fixées à des niveaux de moitié inférieurs à ceux considérés comme sûrs par l’organisme scientifique compétent, afin d’assurer que seules des traces compatibles avec de bonnes pratiques de fabrication soient présentes dans les jouets.
   
 
   
       <ins> L’utilisation du chrome VI, du cadmium, du mercure et du plomb, éléments hautement toxiques, ne devrait pas être autorisée dans les jouets, à moins que leur présence ne soit techniquement inévitable selon les bonnes pratiques de fabrication et que leurs résidus ne dépassent pas la limite de détection dans le matériau homogène.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission ENVI
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°249 | 
+        
+        
+            <article id="249">
+            <header>📝 Amendement n°249 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>(21 bis) Le plomb est un métal toxique naturellement présent qui peut provoquer un cancer du poumon, de l’estomac et du rein ou des tumeurs cérébrales chez les êtres humains. Il peut entrer dans l’eau potable lorsque des matériaux de plomberie contenant du plomb corrodent, en particulier lorsque l’eau présente une acidité élevée ou une faible teneur en minéraux qui corrode les tuyaux et les installations. La directive dispositions relatives à la teneur en plomb des eaux destinées à la consommation humaine. Il ne peut donc pas être exclu que les jouets produits avec de l’eau contiennent un minimum de résidus de plomb en raison de l’eau utilisée dans le processus de fabrication. Ces résidus devraient être considérés comme techniquement inévitables selon les bonnes pratiques de fabrication lorsqu’il n’est pas possible de les éliminer au moyen des méthodes de filtrage ou d’absorption disponibles.  _________________  Parlement européen et du Conseil du 16 décembre 2020 relative à la qualité des eaux destinées à la consommation    humaine (refonte), JO L 435</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission ENVI
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°250 | 
+        
+        
+            <article id="250">
+            <header>📝 Amendement n°250 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      (54) Les enfants sont exposés quotidiennement à un large éventail de substances chimiques différentes provenant de diverses 
-  
+<p>
 
   
-      <del>sources.</del>
+      (54) Les enfants sont exposés quotidiennement à un large éventail de substances chimiques différentes provenant de diverses sources
   
 
   
-      <ins>sources qui ont des effets négatifs par elles-mêmes ou dans un mélange, mais également par une exposition combinée.</ins>
+      <ins> qui ont des effets négatifs par elles-mêmes ou dans un mélange, mais également par une exposition combinée</ins>
   
 
   
-       Les connaissances sur l’incidence de l’effet de combinaison de ces substances chimiques ont beaucoup progressé. Cependant, la sécurité des substances chimiques est 
+      . Les connaissances sur l’incidence de l’effet de combinaison de ces substances chimiques ont beaucoup progressé. Cependant, la sécurité des substances chimiques est 
   
 
   
@@ -1697,23 +2146,31 @@
   
 
   
-      généralement estimée en évaluant des substances uniques et, dans certains cas, des mélanges réalisés intentionnellement pour des utilisations particulières. 
+      généralement estimée en évaluant des substances uniques et, dans certains cas, des mélanges réalisés intentionnellement pour des utilisations particulières.
   
 
   
-      <del>Afin d’assurer une protection maximale des enfants,</del>
+      <ins> Des efforts supplémentaires sont requis pour mieux comprendre les incidences des effets combinés des substances chimiques.</ins>
   
 
   
-      <ins>Des efforts supplémentaires sont requis pour mieux comprendre les incidences des effets combinés des substances chimiques. Afin d’assurer une protection maximale des enfants et de l’environnement en général,</ins>
+       Afin d’assurer une protection maximale des enfants
   
 
   
-       les substances les plus nocives devraient être interdites de façon générale dans les jouets afin de garantir que les enfants n’y soient pas exposés du fait des jouets. Les valeurs limites spécifiques pour les substances chimiques dans les jouets devraient tenir compte de l’exposition combinée à la même substance chimique provenant de différentes sources. En outre, les fabricants devraient être tenus d’effectuer une analyse des différents 
+      <ins> et de l’environnement en général</ins>
   
 
   
-      <ins>   </ins>
+      , les substances les plus nocives devraient être interdites de façon générale dans les jouets afin de garantir que les enfants n’y soient pas exposés du fait des jouets. Les valeurs limites spécifiques pour les substances chimiques dans les jouets devraient tenir compte de l’exposition combinée à la même substance chimique provenant de différentes sources. En outre, les fabricants devraient être tenus d’effectuer une analyse des différents
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
   
 
   
@@ -1725,11 +2182,15 @@
   
 
   
-      chimiques présentes dans le jouet, afin de s’assurer que les risques découlant d&#39;une 
+      chimiques présentes dans le jouet, afin de s’assurer que les risques découlant d&#39;une
   
 
   
-      <del>   </del>
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
@@ -1744,40 +2205,47 @@
       chimiques, en particulier au règlement et du Conseil; le présent règlement ne modifie pas les obligations concernant l’évaluation de la sécurité des substances chimiques ou des mélanges qui pourraient s’appliquer en vertu dudit règlement
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission ENVI
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°251 | 
+        
+        
+            <article id="251">
+            <header>📝 Amendement n°251 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      6. La Commission est habilitée à adopter des actes délégués conformément à l’article 47 pour modifier la partie C de l’appendice de l’annexe II afin de 
-  
+<p>
 
   
-      <del>permettre </del>
+      6. La Commission est habilitée à adopter des actes délégués conformément à l’article 47 pour modifier la partie C de l’appendice de l’annexe II afin de permettre
   
 
   
-      <ins>permettre, pendant une période précise, </ins>
+      <del> </del>
+  
+
+  
+      <ins>, pendant une période précise, </ins>
   
 
   
@@ -1788,288 +2256,318 @@
       <ins> Lors de l’évaluation des demandes d’exemption et de leur durée, la Commission tient compte de la disponibilité de solutions de remplacement et de toute incidence négative potentielle sur l’innovation. L’analyse des incidences globales de l’exemption suit, le cas échéant, une réflexion axée sur le cycle de vie. Six mois après l’entrée en vigueur du présent règlement, la Commission adopte des actes délégués conformément à l’article 47 afin de modifier la partie C de l’appendice de l’annexe II en ce qui concerne le nickel, afin de fixer la période de validité de l’exemption de l’interdiction générique prévue à l’annexe II, partie III, point 4, pour cette substance. La Commission justifie toute exemption accordée et met ces informations à disposition du public de manière    facilement accessible et conviviale.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission ENVI
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">344</div>
+  <div class="against">266</div>
+  <div class="abstention">16</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(344/626 * 100%)">344</div>
-  
-  
-    <div class="-" style="width: calc(266/626 * 100%)">266</div>
-  
-  
-    <div class="0" style="width: calc(16/626 * 100%)">16</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°252 | 
+        
+            <article id="252">
+            <header>📝 Amendement n°252 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>7 ter. Les exemptions de l’interdiction générale prévues aux paragraphes 7 et 7 bis sont limitées dans le temps. La période de validité de chaque exemption fait l’objet d’un réexamen et peut être renouvelée au cas par cas pour chaque substance ou mélange.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission ENVI
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">357</div>
+  <div class="against">254</div>
+  <div class="abstention">4</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(357/615 * 100%)">357</div>
-  
-  
-    <div class="-" style="width: calc(254/615 * 100%)">254</div>
-  
-  
-    <div class="0" style="width: calc(4/615 * 100%)">4</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°254 | 
+        
+            <article id="254">
+            <header>📝 Amendement n°254 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>et 4.4;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission ENVI
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">306</div>
+  <div class="against">289</div>
+  <div class="abstention">13</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(306/608 * 100%)">306</div>
-  
-  
-    <div class="-" style="width: calc(289/608 * 100%)">289</div>
-  
-  
-    <div class="0" style="width: calc(13/608 * 100%)">13</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°255 | 
+        
+            <article id="255">
+            <header>📝 Amendement n°255 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. Les jouets ne doivent pas contenir de chrome VI, de cadmium, de mercure, ni de plomb, sauf si leur présence est techniquement inévitable selon les bonnes pratiques de fabrication et ne dépasse pas la limite de détection dans le matériau homogène.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission ENVI
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">392</div>
+  <div class="against">210</div>
+  <div class="abstention">21</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(392/623 * 100%)">392</div>
-  
-  
-    <div class="-" style="width: calc(210/623 * 100%)">210</div>
-  
-  
-    <div class="0" style="width: calc(21/623 * 100%)">21</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°256 | 
+        
+            <article id="256">
+            <header>📝 Amendement n°256 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       2. L’utilisation de nitrosamines et de substances nitrosables est interdite dans 
   
 
   
-      <del>les jouets destinés à des enfants de moins de 36 mois et dans les autres jouets destinés à être mis en bouche si la migration de ces substances est égale ou supérieure à </del>
+      <ins>tous </ins>
   
 
   
-      <ins>tous les jouets. La migration de ces substances contenues dans des jouets, des composants de jouets ou des parties microstructurellement distinctes ne doit pas dépasser </ins>
+      les jouets
   
 
   
-      0,01 mg/kg pour les nitrosamines et à 0,1 mg/kg pour les substances nitrosables.
+      <del> destinés à des enfants de moins de 36 mois et dans les autres jouets destinés à être mis en bouche si la migration de ces substances est égale ou supérieure à</del>
+  
+
+  
+      <ins>. La migration de ces substances contenues dans des jouets, des composants de jouets ou des parties microstructurellement distinctes ne doit pas dépasser</ins>
+  
+
+  
+       0,01 mg/kg pour les nitrosamines et à 0,1 mg/kg pour les substances nitrosables.
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission ENVI
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">344</div>
+  <div class="against">247</div>
+  <div class="abstention">32</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(344/623 * 100%)">344</div>
-  
-  
-    <div class="-" style="width: calc(247/623 * 100%)">247</div>
-  
-  
-    <div class="0" style="width: calc(32/623 * 100%)">32</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
+        
     
-
+        
+        
     
-    
-
-    
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°259 | 
+        
+        
+            <article id="259">
+            <header>📝 Amendement n°259 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D,Verts/ALE,GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>d bis) lorsque le jouet intègre un système d’intelligence artificielle (IA) tel que défini dans le règlement [législation sur l’IA] ou lorsque le système d’IA est lui- même un jouet. Dans ces cas, les systèmes d’IA sont toujours considérés comme des composants de sécurité du jouet.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
+    , 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+     et 
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">295</div>
+  <div class="against">316</div>
+  <div class="abstention">12</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(295/623 * 100%)">295</div>
-  
-  
-    <div class="-" style="width: calc(316/623 * 100%)">316</div>
-  
-  
-    <div class="0" style="width: calc(12/623 * 100%)">12</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
+        
     
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-    
-    
 
+    <section>
     
     
-
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/0290(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2024-0044_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-03-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

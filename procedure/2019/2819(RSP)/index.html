@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Résolution sur l’importance de la mémoire européenne pour l’avenir de l’Europe</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Résolution sur l’importance de la mémoire européenne pour l’avenir de l’Europe</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(535/653 * 100%)">535</div>
-  
-  
-    <div class="-" style="width: calc(66/653 * 100%)">66</div>
+    <div class="for" style="width: calc(535/653 * 100%)">535</div>
   
   
-    <div class="0" style="width: calc(52/653 * 100%)">52</div>
+    <div class="against" style="width: calc(66/653 * 100%)">66</div>
+  
+  
+    <div class="abstention" style="width: calc(52/653 * 100%)">52</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(54/65 * 100%)">54</div>
+    <div class="for" style="width: calc(54/65 * 100%)">54</div>
   
   
-    <div class="-" style="width: calc(4/65 * 100%)">4</div>
+    <div class="against" style="width: calc(4/65 * 100%)">4</div>
   
   
-    <div class="0" style="width: calc(7/65 * 100%)">7</div>
+    <div class="abstention" style="width: calc(7/65 * 100%)">7</div>
   
 </div>
  
 </section>
-            <a href="/voting/108774">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/108774">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -106,12 +111,12 @@
     
         
         
-            <li>Libertés fondamentales, droits de l&#39;homme, démocratie, état de droit en général</li>
+            <li>Relations extérieures de l&#39;Union</li>
         
     
         
         
-            <li>Relations extérieures de l&#39;Union</li>
+            <li>Libertés fondamentales, droits de l&#39;homme, démocratie, état de droit en général</li>
         
     
         
@@ -121,87 +126,315 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2819(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/RC-9-2019-0097_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2019-09-19-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
-
-  
-      19. invite instamment les États membres à veiller au respect des dispositions de la décision-cadre du 
-  
+<p>
 
   
-      <del>Conseil et à </del>
+      19. invite instamment les États membres à veiller au respect des dispositions de la décision-cadre du Conseil
   
 
   
-      <ins>Conseil, afin de </ins>
+      <del> et à</del>
   
 
   
-      lutter contre les organisations qui diffusent des discours de haine et sèment la violence dans l’espace public et en 
+      <ins>, afin de</ins>
   
 
   
-      <del>ligne;</del>
+       lutter contre les organisations qui diffusent des discours de haine et sèment la violence dans l’espace public et en ligne
   
 
   
-      <ins>ligne et d’interdire véritablement les groupes néonazis et néofascistes ainsi que toute autre fondation ou association qui exalte et glorifie le nazisme ou le fascisme, tout en respectant l’ordre juridique national et la compétence nationale en la matière;</ins>
+      <ins> et d’interdire véritablement les groupes néonazis et néofascistes ainsi que toute autre fondation ou association qui exalte et glorifie le nazisme ou le fascisme, tout en respectant l’ordre juridique national et la compétence nationale en la matière</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(538/650 * 100%)">538</div>
-  
-  
-    <div class="-" style="width: calc(42/650 * 100%)">42</div>
-  
-  
-    <div class="0" style="width: calc(70/650 * 100%)">70</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2819(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/RC-9-2019-0097_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">538</div>
+  <div class="against">42</div>
+  <div class="abstention">70</div>
+</span>
+
   
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2019-09-19-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Je me suis abstenue sur cette resolution qui confisque à son profit la mémoire de la Seconde Guerre mondiale, présente une orientation ouvertement russophobe (malgré les 20 millions de Russes morts), s’affiche pro-minorités sexuelles et porte en lui une forme d’impérialisme des valeurs ouvertement agressif contre tout ce qui n’entre pas dans le prisme idéologique de la Commission.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté pour cette résolution car elle condamne les deux totalitarismes que furent le nazisme et le communisme soviétique.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution sur l&#39;importance de la mémoire européenne pour l&#39;avenir de l&#39;Europe. L’année 2019 marque les 80 ans de la Seconde Guerre Mondiale qui profondément marqué notre territoire européen. Elle marque également les 80 ans du Pacte germano-soviétique. Dans ce contexte, le texte rappelle que les régimes communistes et nazi sont responsables de massacres, de génocide, de déportations, de pertes en vies humaines et de privations de liberté d’une ampleur sans précédent dans l’histoire de l’humanité, qui auront à jamais marqué le XXe siècle. Il condamne toute démonstration et toute propagation d’idéologies totalitaires, telles que le nazisme et le stalinisme, dans l’Union européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Cette résolution manipule l’Histoire de la seconde guerre mondiale en réécrivant les facteurs déclencheurs du conflit et en occultant le rôle joué par l’URSS aux côtés des alliés dans la défaite de l’Allemagne nazie. Elle multiplie les amalgames dangereux en cherchant à assimiler idéologies “communiste” et “nazie”. Elle instrumentalise la question pourtant fondamentale de la transmission de la Mémoire du génocide des juifs européens ainsi que celle de l’ensemble des victimes des régimes totalitaires. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            Alors que l’année 2019 marque le 80ème anniversaire du début de la Seconde Guerre mondiale, j’ai apporté mon soutien à la résolution sur l’importance de la mémoire européenne pour l’avenir de l’Europe.Se souvenir du passé pour mieux construire l’avenir de l’Union européenne est essentiel. Par ce texte, nous condamnons à nouveau les crimes des régimes totalitaires et autoritaires du passé. Outre cette culture mémorielle, il est fondamental d’intensifier notre lutte contre les discours de haine et la violence dans les espaces publics, mais également en ligne.
+        </article>
+    
+        <article>
+            <div class="hidden">197686</div>
+            
+            <header><b>Julie LECHANTEUX</b> | Rassemblement national</header>
+            Vote pour: je suis contre toute forme de totalitarisme. Seul hic, la résolution commune fait peu de cas du rôle majeur de la Russie dans la victoire de la Seconde guerre mondiale.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            Cette résolution intervient à l’occasion du 80ème anniversaire du déclenchement de la Seconde Guerre Mondiale.Il s’agit ici de rappeler les causes de la Seconde guerre mondiale (en l’occurrence le pacte germano-soviétique), de condamner les totalitarismes, d’honorer ses nombreuses victimes et de pratiquer un devoir de mémoire. J&#39;ai voté pour cette résolution.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            
+                <p> – Monsieur le Président, cette résolution partiale ne fait en tout cas pas honneur à la mémoire des victimes du totalitarisme. Tout d&#39;abord, il est évident que le souvenir du dernier conflit mondial est aujourd&#39;hui détourné à des fins politiques, faute pour l&#39;Union européenne de pouvoir asseoir sa légitimité sur un quelconque soutien populaire. </p>
+            
+                <p>Quoi de plus opportun, en effet, alors que d&#39;élection en élection, le rejet des peuples s&#39;affirme, que de se raccrocher à la légende rose d&#39;une Union européenne gage de paix sur le continent. En réalité, les Européens doivent leur libération, non pas à une camarilla de fonctionnaires bruxellois, mais aux États-Unis, et, pour reprendre les propos du général de Gaulle, à la Russie éternelle. </p>
+            
+                <p>Le déni de l&#39;Histoire qui transpire à chaque ligne de ce texte n&#39;effacera jamais le sang des quelque 20 millions de Russes sacrifiés pour que l&#39;Europe vive. Ainsi, cette résolution relève des mêmes réécritures de l&#39;Histoire qu&#39;elle prétend dénoncer comme propres aux régimes dictatoriaux, un constat qui nous interpelle quant à la nature de cette Union dont la dérive autoritaire devient de plus en plus évidente.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            
+                <p>Ce devoir de mémoire pèse particulièrement sur l’Europe, le continent qui les a enfantés. Il faut transmettre le souvenir des horreurs passées pour éviter qu’elles ne se reproduisent.</p>
+            
+                <p>Je mets toutefois en garde le Parlement européen contre la tentation qui consisterait à les instrumentaliser pour attaquer la Russie d’aujourd’hui. La Russie a coupé les ponts avec l’Union soviétique depuis 1991 et est devenue un État respectable, qui mérite d’être traité en partenaire plutôt qu’en ennemi.</p>
+            
+                <p>Je mets enfin en garde le Parlement européen contre une autre tentation qui consisterait à opérer un amalgame odieux entre les nazis d’hier et les populistes d’aujourd’hui. Les eurodéputés du Rassemblement national dénoncent avec force ce misérable stratagème probablement inspiré par de puissants lobbies, dont l’un des buts est de diaboliser la lutte contre la submersion migratoire. Mais nous ne faiblirons pas, nous continuerons à nous battre contre la propagande immigrationniste, notamment lorsqu’elle s’incarne, comme en France, dans un livret de 32 pages distribué aux enfants des écoles. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197589</div>
+            
+            <header><b>Laurence FARRENG</b> | Mouvement Démocrate</header>
+            
+                <p> – Madame la Présidente, cette résolution sur la mémoire européenne soulève la question du Patrimoine européen et des lieux de mémoire.</p>
+            
+                <p>Nous voulons célébrer la mémoire européenne, et pour cela, nous avons besoin de lieux. Les musées, les monuments aux morts, les mémoriaux sont autant de sites qui font la géographie de notre mémoire. Notre Union a le devoir de les entretenir, de les protéger, de les valoriser, afin que les citoyens puissent se référer à des lieux et des sites concrets, afin aussi que ceux-ci continuent d’inspirer notre action et d’être transmis aux jeunes générations, par des moyens de communication adaptés, modernes et intégrés à nos programmes éducatifs nationaux.</p>
+            
+                <p>Les initiatives existent, comme le Label du patrimoine européen ou les Journées européennes du patrimoine, qui ont lieu ce week-end. Mais il nous faut plus de volontarisme dans la protection de ces monuments qui, en rappelant les tragédies du passé, fondent nos droits et nos valeurs. À l’heure où l’on constate une inquiétante résurgence des mouvements extrémistes, les mémoires européennes doivent inspirer l’avenir de l’Europe, de manière visible et vivante.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            
+                <p> – Madame la Présidente, chers collègues, le devoir de mémoire est, comme son nom l&#39;indique, un devoir pour nous, députés européens. Cela donne du sens au travail que l&#39;on fait, et cela permet de comprendre où nous voulons aller. Les racines, c&#39;est ce qui permet à un arbre de pousser haut et fort. Pour cela, nous devons nous donner des moyens financiers.</p>
+            
+                <p>Le précédent programme, «L&#39;Europe pour les citoyens», a démontré son efficacité et sa valeur ajoutée, avec 200 millions d&#39;euros consacrés aux actions de terrain liées à la mémoire. Si la Commission européenne veut vraiment promouvoir le devoir de mémoire, Monsieur le Commissaire, elle doit s&#39;en donner les moyens financiers. Dans le prochain cadre budgétaire pluriannuel, la Commission doit soutenir les montants proposés par le Parlement pour le nouveau programme mémoriel «Droits et valeurs».</p>
+            
+                <p>À ce jour, le compte n&#39;y est pas. La Commission a divisé par deux le budget «mémoire» proposé par le Parlement. Il faut réagir!</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

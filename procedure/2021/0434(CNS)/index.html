@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Fiscalité: règles visant à empêcher l&#39;utilisation abusive des entités écrans à des fins fiscales</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,80 +22,39 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Fiscalité: règles visant à empêcher l&#39;utilisation abusive des entités écrans à des fins fiscales</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
-    <article>
-    <header>👍 Adoption du texte | 
-
-✅️ Adopté
-
-</header>
-    
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
-        <section>
-
-<div class="votes ">
-  
-    <div class="+" style="width: calc(637/645 * 100%)">637</div>
-  
-  
-    <div class="-" style="width: calc(2/645 * 100%)">2</div>
-  
-  
-    <div class="0" style="width: calc(6/645 * 100%)">6</div>
-  
-</div>
-</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
-        <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
-        
-        
-            <section>
-
-
-
-<div class="votes">
-  
-    <div class="+" style="width: calc(74/74 * 100%)">74</div>
-  
-  
-  
-</div>
- 
-</section>
-            <a href="/voting/151562">🗳 Voir le détail du vote</a>
-        
-    
-    </article>
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -102,31 +62,299 @@
     
         
         
-            <li>Fiscalité</li>
-        
-    
-        
-        
             <li>Marché intérieur, marché unique</li>
         
     
+        
+        
+            <li>Fiscalité</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/0434(CNS)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/0434(CNS)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0293_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-01-17-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-01-17-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
+
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            Comme le révélaient encore il y a peu les Pandora papers, les sociétés-écrans sont utilisées régulièrement par des entreprises ou de riches particuliers pour contourner l’impôt. Afin de remédier à cela, la Commission européenne propose, dans sa directive, un test de substance, afin de s’assurer que les entités créées correspondent bien à une activité économique réelle. Une liste de critères et d’évaluation est ainsi proposée, et si la société ne passe pas ce test, des sanctions administratives et pécuniaires sont prévues.Globalement, le test proposé ici correspond à l’idée que nous nous faisons de l’équité fiscale, c’est pourquoi j’ai soutenu ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            . – Ce texte établit des règles visant à prévenir l’utilisation abusive des entités écrans à des fins de planification fiscale agressive ou d’évasion fiscale. Il établit des indicateurs de substance commerciale minimale pour les entreprises des États membres et introduit des règles de traitement fiscal si les entreprises ne satisfont pas aux indicateurs. Favorable aux mesures portées par ce texte luttant contre l’évasion et la fraude fiscale, j’ai voté pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Les sociétés écran sont un véhicule très courant de l’évasion et de l’optimisation fiscale agressive que je combats. Les directives anti blanchiment ont notamment amélioré la transparence en rendant obligatoire la connaissance des bénéficiaires ultimes de ces structures.L’idée d’un test de substance assorti de sanctions des sociétés fictives entre dans ma conception de la nécessaire équité fiscale. C’est pourquoi j’ai soutenu ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté pour ce rapport car il vise à encadrer plus efficacement les sociétés écran, qui ne servent en général qu’à dissimuler des évasions fiscales. Il est essentiel de renforcer la transparence et la justice fiscale au sein de l’UE.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            . – J’ai voté en faveur de ce rapport relatif aux règles visant à empêcher l&#39;utilisation abusive des entités écrans à des fins fiscales. Le texte introduit des indicateurs de substance minimale pour les entreprises des États membres et des règles de traitement fiscal pour les entreprises qui n’atteignent pas ces indicateurs. L’objectif est de restreindre, pour les entreprises comme pour les particuliers, les possibilités de recours à des sociétés écrans pour dissimuler des flux financiers ou des actifs à l’administration fiscale.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à donner l’avis du Parlement européen sur un projet de directive dont l’objectif est d’empêcher l&#39;utilisation abusive de sociétés écrans à des fins d’évasion fiscale. Elle permettra notamment aux Etats de sanctionner certaines de ces sociétés sans substance économique réelle utilisées uniquement pour diminuer l&#39;impôt payé. J’ai donc voté pour ce texte qui constitue un premier pas pour mieux lutter contre l’évasion fiscale, tout en regrettant qu’il se limite aux sociétés écrans basées dans l&#39;Union européenne, inclut de trop nombreuses exemptions et laisse une marge de manœuvre trop grande aux Etats membres alors même que certains sont des paradis fiscaux.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            . – J’ai voté pour ce texte afin de lutter contre les sociétés écrans qui permettent aux entreprises réalisant des bénéfices dans l’UE d’échapper à l’impôt et donc à une fiscalité juste. Une loi européenne ne suffirait pas à mettre fin au phénomène mais contribuera à le contrôler.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté en faveur de ce rapport visant à règlementer l’utilisation d’entités écrans et en éviter l’utilisation abusive à des fins fiscales. Au travers de ce vote, nous avons souligné la nécessité de renforcer les capacités des États à lancer des audits et gérer les informations fiscales en leur possession. En parallèle, nous avons acté le besoin de renforcer les sanctions contre les entités contrevenantes, en leur refusant notamment la délivrance d’un certificat de résidence fiscale et en appliquant les sanctions aux actifs des sociétés écrans. Ce vote constitue un signal politique fort en faveur d’une fiscalité européenne mieux réglementée.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai voté en faveur du rapport sur l’établissement de règles visant à prévenir l&#39;utilisation abusive d&#39;entités fictives à des fins fiscales, qui répond à une demande de longue date du Parlement européen concernant une action de l&#39;Union européenne pour contrer l&#39;utilisation abusive de sociétés écrans à des fins fiscales.Les sociétés écrans sont des entités juridiques sans substance commerciale ni activité économique, souvent utilisées à des fins de planification fiscale agressive ou d&#39;évasion fiscale. Le texte vise à mettre en place des indicateurs de substance minimale pour les entreprises des États membres et des règles concernant le traitement fiscal des entreprises qui ne satisfont pas à ces indicateurs. La directive devrait s’appliquer à toutes les entreprises qui sont considérées comme des résidents fiscaux et qui peuvent recevoir un certificat de résidence fiscale dans un État membre.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Les sociétés écran sont un véhicule courant de l&#39;optimisation ou de l&#39;évasion fiscale. Leur but est essentiellement de contourner l&#39;impôt et elles sont localisées dans des pays à la législation la plus souple.Afin de les combattre, il est proposé de s&#39;assurer que certaines entités présentant le risque d&#39;être utilisées à cette fin répondent bien à un but économique via un test de substance (nombre de salariés effectifs, dirigeant réel, etc).Les entreprises concernées devront transmettre ces informations à leur administration fiscale, qui l&#39;échangera avec ses homologues de l&#39;UE.Si ce test laisse deviner que l&#39;existence d&#39;une société répond au but d&#39;éluder l&#39;impôt, elle se verra priver d&#39;effet fiscal et pourra entrainer des sanctions financières.J’ai donc voté pour ce texte car il vient compléter les législations existantes et devrait permettre à la France de mieux lutter contre l&#39;évasion fiscale.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            . – J’ai voté en faveur de ce texte, qui vient compléter les législations existantes et devrait permettre de mieux lutter contre l&#39;évasion fiscale. Afin de combattre l’utilisation de sociétés écrans à des fins fiscales, il est proposé de s&#39;assurer que certaines entités présentant le risque d&#39;être utilisées à cette fin répondent bien à un but économique via un test de substance (nombre de salariés effectifs, dirigeant réel, etc). Les entreprises concernées devront transmettre ces informations à leur administration fiscale, qui l&#39;échangera avec ses homologues de l&#39;UE. Si ce test laisse deviner que l&#39;existence d&#39;une société répond au but d&#39;éluder l&#39;impôt, elle se verra priver d&#39;effet fiscal et pourra entrainer des sanctions financières.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            L’utilisation de sociétés écran, y compris à l’intérieur de l’UE, permet à de nombreuses entreprises ou de riches particuliers d’éluder l’impôt. Les révélations des Pandora papers ont à nouveau mis en lumière de tels abus, souvent promus par les divers cabinets de conseil. La Commission a présenté une directive visant à s’assurer que les entités ainsi crées correspondent bien à une activité économique réelle, et non au seul but d’éluder l’impôt. Pour ce faire, elle propose d’introduire un test de substance afin de s’en assurer et de priver d’effet fiscal les montages qui ne passeront pas ce test, tout en prévoyant la possibilité de sanctions pécuniaires.Ici, l’idée d’un test de substance assorti de sanctions des sociétés fictives entre dans notre conception de la nécessaire équité fiscale. Il reste que les entreprises écrans résident en dehors de l’UE ne relèvent pas du champ d’application de la directive et que certains Etats membres se montrent peu coopératifs en pratique sur ces sujets, rendant souhaitable de poursuivre la pression à l’international afin que le recours à des entités de complaisance à des fins répréhensibles soit réellement neutralisé.Pour toutes ces raisons, j’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b></b> | </header>
+            Ce rapport législatif propose de réguler fiscalement les entités écrans. Les sociétés écrans sont des « coquilles vides » qui permettent à des entreprises et des particuliers de ne pas payer d’impôts sur leurs revenus et leur capital, mais aussi de blanchir de l’argent. L’objet de ce texte est donc de s’attaquer à la fraude et à l’optimisation fiscale. Payer sa juste part d’impôts est, au-delà d’une exigence de justice sociale, un impératif pour le financement des services publics. Malgré des faiblesses, notamment concernant la latitude laissée aux États membres pour définir si les sociétés considérées sont bien des sociétés écrans, ce texte constitue une étape importante vers plus de justice fiscale en Europe. Une clause de revoyure ambitieuse permettra de discuter et d’améliorer le texte dans un second temps. J’ai donc voté pour ce rapport.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            
+                <p> – Monsieur le Président, «Dieu se rit des hommes qui pleurent sur les effets des causes qu’ils chérissent». Je répète souvent cette phrase, ici, de Bossuet, mais les faits sont là, ils sont têtus: l’Union européenne ne sait pas lutter, l’Union européenne ne lutte pas contre l’évasion fiscale. </p>
+            
+                <p>Il faudrait déjà en finir avec le modèle mondialiste, mais vous refusez de le faire. L’échec de la politique des listes noires ou grises en est un exemple cruel et patent. Ce système n’a pas empêché les multinationales ou autres spécialistes de l’évasion fiscale de s’enrichir considérablement. En revanche, c’est très bien de s’acharner sur les classes moyennes, sur nos PME, sur nos TPE, sur nos artisans, à qui l’on demande toujours de payer plus. Nous devons autre chose à nos concitoyens que de leur léguer l’injustice fiscale généralisée, alors qu’ils paient au prix fort les erreurs de Bruxelles: crise énergétique, inflation, baisse du pouvoir d’achat, délocalisations, chômage. </p>
+            
+                <p>Oui, établir ou faire appliquer une réglementation pour prévenir l’usage des compagnies fantômes à des fins d’évasion fiscale demande du courage et de la détermination. Oui, parce que nous devons renforcer la transparence, la justice et la démocratie au sein de l’Union européenne; nous le devons à nos compatriotes car chacun doit contribuer à l’effort commun. Les sociétés-écrans et les spéculateurs aussi. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197697</div>
+            
+            <header><b>Aurore LALUCQ</b> | Place publique</header>
+            
+                <p> – Monsieur le Président, Madame la Commissaire, chers collègues, l’évasion fiscale est une industrie. Sa patrie, ce sont les paradis fiscaux. Son peuple, ce sont les ploutocrates, les oligarques, ceux qui ont déjà tout, probablement trop, même, mais qui veulent toujours plus, ou plutôt qui ne veulent pas partager et qui ne se sentent redevables de rien. Son arme, ce sont les sociétés-écrans, ces sociétés fictives qui permettent de cacher les transactions – c’est là leur ADN et leur seul but –, des sociétés qui ont permis des choses assez aberrantes, comme le fait qu’une île anglo-normande soit devenue le premier producteur de bananes au monde, ou encore que l’île Maurice soit devenue le premier investisseur en Inde. </p>
+            
+                <p>On sait que les sociétés fictives servent à protéger les criminels et à permettre l’évasion fiscale. Ce qu’il faut retenir, c’est qu’elles servent surtout à ce qu’une partie des élites fasse en toute discrétion sécession, avec les conséquences démocratiques que l’on sait. Cette directive est extrêmement bienvenue, et ce pour des raisons démocratiques, pas uniquement économiques. On nous avait dit que c’était impossible – parce que, évidemment, à chaque fois qu’il y a de l’argent en jeu, c’est toujours impossible –, on l’a fait. </p>
+            
+                <p>Maintenant, la prochaine étape, c’est d’enterrer réellement les sociétés-écrans et surtout de réguler leurs intermédiaires. On compte sur la Commission européenne, sur le Parlement, et aussi sur le Conseil, pour qu’il ne bloque pas. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197577</div>
+            
+            <header><b>Gilles BOYER</b> | Horizons</header>
+            
+                <p>Une réponse européenne forte était attendue, et avant d’inviter le monde entier à l’exemplarité nous devons évidemment nous en approcher nous-mêmes. Nous saluons donc, dans notre rapport et en général, la proposition de la Commission de directive «Unshell», qui permettra une action coordonnée et ambitieuse. </p>
+            
+                <p>Dans le rapport qui sera voté demain, notre Parlement insiste pour que cet outil soit juridiquement et techniquement opérationnel, et nous appelons ensuite le Conseil à adopter rapidement la directive.</p>
+            
+                <p>Nous sommes dans un domaine où l’inventivité et la rapidité des fraudeurs est infinie. Face à cette inventivité et à cette rapidité, nous devons agir, avec diligence et avec créativité. C’est ce que nous essayons de faire. C’est vrai que parfois notre action administrative n’avance pas au même rythme que la créativité de ceux qui cherchent à contourner les règles. </p>
+            
+                <p>Nous sommes attendus : les citoyens européens nous attendent sur la lutte contre l’évasion fiscale, sur une concurrence loyale, entre les entreprises européennes d’abord, et aussi entre les entreprises européennes et mondiales ensuite. Ce sera l’objet de votre initiative SAFE, dont vous avez parlé et qui sera très importante. Et ce sera très important que, évidemment, tous ensemble, le Conseil, la Commission et le Parlement jouent tous leur rôle pour que nous soyons au rendez vous. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">204420</div>
+            
+            <header><b>Claude GRUFFAT</b> | Les Écologistes</header>
+            
+                <p> – Monsieur le Président, Madame la Commissaire, chers collègues, une société, c’est une entreprise avec des bureaux, des ordinateurs, des salariés, une stratégie et des gens qui se parlent. Une société-écran, c’est une petite boîte aux lettres qui sert à dissimuler l’identité de son détenteur. </p>
+            
+                <p>Depuis 2020, deux tiers des richesses produites ont été captées par 1 % des plus riches. Les sociétés-écrans jouent un rôle central pour les rendre encore plus riches, toujours moins responsables et moins visibles. Alors, je suis content qu’en miroir aux inégalités aux riches devenant ultra-riches, nous puissions nous accorder sur la fin de ce système. </p>
+            
+                <p>Avant de crier victoire, j’aimerais rappeler que ces textes sont votés à l’unanimité des États membres, dont certains ont fait de ce genre de société leur gagne-pain. Comme par hasard, le Luxembourg est bien loti: malgré ses 55 000 sociétés-écrans, contrôlées par 90 % de propriétaires étrangers, il pourra continuer à pénaliser l’Europe entière par son comportement déloyal. </p>
+            
+                <p>Payer des impôts n’est pas une option, c’est un pilier dans nos sociétés. Sans baisse significative des inégalités, nous ne pourrons espérer éradiquer l’extrême pauvreté. Alors souhaitons-nous un bon niveau de vie convenable et refusons de laisser augmenter de nouveau la richesse d’une poignée. </p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

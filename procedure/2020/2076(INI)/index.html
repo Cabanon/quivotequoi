@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Une nouvelle stratégie industrielle pour l’Europe</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Une nouvelle stratégie industrielle pour l’Europe</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(486/697 * 100%)">486</div>
-  
-  
-    <div class="-" style="width: calc(109/697 * 100%)">109</div>
+    <div class="for" style="width: calc(486/697 * 100%)">486</div>
   
   
-    <div class="0" style="width: calc(102/697 * 100%)">102</div>
+    <div class="against" style="width: calc(109/697 * 100%)">109</div>
+  
+  
+    <div class="abstention" style="width: calc(102/697 * 100%)">102</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(50/79 * 100%)">50</div>
+    <div class="for" style="width: calc(50/79 * 100%)">50</div>
   
   
-    <div class="-" style="width: calc(28/79 * 100%)">28</div>
+    <div class="against" style="width: calc(28/79 * 100%)">28</div>
   
   
-    <div class="0" style="width: calc(1/79 * 100%)">1</div>
+    <div class="abstention" style="width: calc(1/79 * 100%)">1</div>
   
 </div>
  
 </section>
-            <a href="/voting/125367">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/125367">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -116,21 +121,312 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2076(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2076(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0197_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-11-23-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-11-23-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – L’UE se voudrait pionnière dans l’industrie décarbonée du futur mais ne veut pas commencer à protéger son marché. De plus, la « réindustrialisation » proposée serait harmonisée et pilotée par Bruxelles, et ce alors que la centralisation a démontré toutes ses limites dans la crise du Covid. Il est évident que le résultat sera une baisse de compétitivité de nos entreprises face à une mondialisation sauvage qui ne respectera pas nos normes. Ce texte démontre que le RN a raison depuis 30 ans sur la question industrielle, le marché ouvert et les délocalisations, mais je veux rester lucide face aux solutions proposées par nos adversaires : si ceux-ci se mettent à parler comme nous, c’est bien pour continuer à imposer leurs propres idées, pourtant responsables de la situation actuelle, sans éveiller la colère des peuples. Sans remise en cause du libre-échange, cela restera sans effet. J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce texte.La stratégie présentée dans ce texte s&#39;appuie sur la dette contractée dans le cadre du plan de relance et pousse à un transfert de compétences accru en faveur de l&#39;Union européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce texte met l’accent sur deux priorités fondamentales en matière de politique industrielle: la réussite de la transition écologique et numérique de notre tissu industriel et la résilience et le développement de l’autonomie stratégique de l’Union. L&#39;autonomie stratégique ne doit pas être un vain mot. Pour la mettre en œuvre, il faudra cibler des secteurs stratégiques précis qui touchent à la sûreté des États et à la sécurité de nos concitoyens (santé, défense, espace, agroalimentaire, etc.). Le texte ici présenté va dans ce sens, je me suis donc prononcé en sa faveur.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre cette nouvelle stratégie industrielle pour l’Europe car elle ne remet pas en cause les incohérences de l’UE sur la question. La mondialisation des échanges et le remplacement de l’économie réelle par une économie financière ultra-libérale ont provoqué l’effondrement massif de nos capacités industrielles. Les délocalisations qui en ont découlé sont directement imputables aux choix des dirigeants européens, qui cherchent aujourd’hui à nous faire croire qu’ils règleront le problème grâce à la dette contractée pour la relance. Ce sera donc aux contribuables français de payer le prix des mauvaises politiques imposées par l’UE.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Ce rapport présente la stratégie industrielle européenne. C’est en soi une nouvelle d’importance, pour des institutions européennes jusqu’ici obsédées par la concurrence et dévotes du laisser-faire marchand. Mais l’emprise croissante de la Chine, l’agressivité économique des USA et surtout la crise sanitaire ont changé la donne. Le politique doit reprendre la main, sous peine de voir l’industrie européenne inéluctablement décliner. Les orientations retenues donnent la priorité à la transformation numérique et à la transition écologique, en ligne avec le programme de la Commission. Le texte réhabilite même des mots considérés il y a peu comme sacrilèges : « relocalisations », « relance », « défense commerciale »... En misant beaucoup (trop ?) sur le numérique et ses futurs développements, il tente de donner plus de consistance à l’idée de « souveraineté européenne », laquelle est en effet fort malmenée par le pouvoir démesuré des GAFA. Mais cette inflexion lexicale, dont on espère une traduction concrète rapide, ne bouleverse pas pour autant de fond en comble le credo libéral du bloc centriste et conservateur aux commandes de l’Europe, qui fait par exemple l’impasse sur le dumping social intra européen, lui aussi propagateur de déclin des industries, notamment françaises. Abstention.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            L’UE est confrontée à un dilemme dans ce dossier : d’un côté elle revendique l’avant-garde de l’industrie du futur (décarbonée et répondant aux engagements des accords de Paris), d’un autre elle souhaite s’affranchir des graves conséquences qu’ont provoqué la mondialisation des échanges (délocalisations organisées, division internationale du travail). D’abord, on constate que ces deux objectifs sont largement incompatibles, puisque les objectifs climatiques à court termes nous imposent la désindustrialisation, et qu’on ne peut pas protéger ce qui reste d’industrie européenne en conservant la zone économique la plus ouverte du monde. Ensuite, cette stratégie s’appuie globalement sur la dette contractée pour la relance européenne (qui justifiera plus tard des ressources propres à l’UE, car il faudra bien faire semblant de rembourser nos créanciers), mais aussi sur la « grande réinitialisation » post-Covid qui veut annihiler toutes initiatives nationales au profit d’une décentralisation pilotée depuis Bruxelles, imposant à tous le triptyque : « digitalisation, rationalisation, et harmonisation », comprendre : « augmentation du pouvoir des GAFAM, restrictions des libertés publiques et de la liberté d’entreprendre, augmentation de la concurrence mondiale et des migrations). J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport sur une nouvelle stratégie industrielle pour l’Europe. Le texte appelle l’Union et les États membres à soutenir la recapitalisation des entreprises dans le cadre du plan de relance. Il souligne que dans le contexte du COVID, de nombreux secteurs, à l’instar du tourisme et de l’aérien, devront bénéficier plus longtemps du régime spécial des aides d’État. Il préconise l’adoption d’un système d’indicateurs de performance clés pour évaluer l’efficacité des instruments mis au point par l’Union.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            La crise économique et sociale générée par le Covid-19 appelle à la mise en place d’une stratégie commune à l’échelle européenne. La stratégie proposée par l’Union européenne se base sur le rapport d’initiative du comité sur l’industrie, la recherche et l’énergie (ITRE) concernant la nouvelle stratégie à long terme pour l&#39;avenir industriel de l&#39;Union européenne, qui aborde la reprise et la résilience de notre économie, et vise à renforcer notre autonomie stratégique. Dans ce contexte, la Commission européenne a par la suite publié sa propre communication en mars 2020, établissant la compétitivité mondiale, y compris l&#39;égalité des conditions de concurrence, la neutralité climatique de l&#39;UE d&#39;ici 2050 et le façonnement de l&#39;avenir numérique de l&#39;UE comme les trois grandes priorités de l’Union européenne, et identifiant 14 écosystèmes avec leurs chaînes de valeur stratégiques correspondantes. J’ai décidé de voter en faveur de ce texte, qui établit nos priorités et nos actions dans notre réponse commune à la crise économique générée par le Covid-19.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les propositions du Parlement européen sur la refonte de la stratégie industrielle de l’Union. Il défend la logique des partenariats publics privés, refuse toute bifurcation écologique coordonnée et tout objectif climatique contraignant pour les entreprises, soutient la multiplication des accords de libre-échange et ignore l’impact environnemental du développement dérégulé du numérique. J’ai donc voté contre ce texte, qui ne tire aucune leçon des crises auxquelles nous faisons face, tant en matière d’urgence écologique et sociale que de souveraineté et de relocalisation.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            La question abordée par ce rapport me tient tout particulièrement à cœur. En effet, il y est question de stratégie industrielle. Sans industries, il est impossible de réaliser la bifurcation écologique : il faudra produire énormément d’acier pour pouvoir construire éoliennes et panneaux solaires. Les industries nécessitent et font vivre les services publics : en effet, il n’y a pas de puissance industrielle digne de ce nom sans un réseau de transport public de qualité, sans enseignement public professionnel, sans une production d’énergie gérée par le public. Et au cœur des industries se trouvent les travailleurs : ce sont eux qui possèdent les compétences techniques et qui produisent la richesse. Il faudra s’appuyer sur leurs savoirs pour planifier la décarbonation de nos industries par une révolution de nos procès de production. Les défis ne manquent pas. Malheureusement, ce rapport n’y répond pas et préfère parler de la compétitivité des start-ups. Pire, à l’heure où une usine comme celle de Bridgestone à Béthune ferme en France du fait de la concurrence déloyale au sein de l’Union, ce rapport n’a pas un mot à ce sujet. Bref, ce rapport est une occasion manquée que je déplore. Je vote donc contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197589</div>
+            
+            <header><b>Laurence FARRENG</b> | Mouvement Démocrate</header>
+            J&#39;ai voté en faveur de ce rapport ambitieux, dont la rédaction a été fortement modifiée par la crise sanitaire que nous traversons. Les points défendus par la délégation Renaissance dont je fais partie sont repris dans ce rapport : une transition durable et verte, autonomie européenne stratégique, soutien aux PME et à l&#39;innovation, investissements verts avec le respect de la taxonomie, ou encore l&#39;importance de la dimension sociale.
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            Ce rapport d’initiative donne la vision du Parlement Européen pour la nouvelle stratégie industrielle qui sera présentée par la Commission Européenne en mars 2021. La relance de l’industrie européenne est une de mes priorités. En tant que rapporteur pour le groupe Renew Europe sur ce texte, j’ai défendu des mesures visant à renforcer la souveraineté industrielle et l’autonomie stratégique européenne. La relocalisation en Europe de certaines de chaines de valeurs stratégiques et la réindustrialisation des territoires est au cœur de nos préoccupations.Cette stratégie devra soutenir l’ensemble des entreprises européennes dans leur transition écologique et digitale. Ce texte jouera un rôle fondamentalement important, en particulier compte tenu de l’impact de la crise de la COVID 19 pour l’industrie européenne. Enfin, nous avons souligné l’importance d’y inclure un socle social solide, protégeant et encourageant la création d’emplois sur notre continent.Les mesures contenues dans ce rapport permettront d’opérer la transition prévue dans le pacte vert en faveur d’une industrie décarbonée, faiblement émettrice et capable d’optimiser l’utilisation des ressources disponibles. Cela passera par un soutien accru à l’innovation et la recherche et développement. Finalement ce rapport appelle la Commission Européenne à prendre des mesures ambitieuses pour le soutien des PME, acteurs clés pour le dynamisme industriel européen.
+        </article>
+    
+        <article>
+            <div class="hidden">197585</div>
+            
+            <header><b>Pierre KARLESKIND</b> | Renaissance</header>
+            J’ai soutenu ce rapport : il faut donner à l’Union européenne les bases pour développer une stratégie industrielle européenne répondant aux objectifs affichés dans le Green Deal. La politique industrielle a un rôle à jouer dans la transition verte et durable, l’autonomie stratégique, l’innovation, le soutien aux petites et moyennes entreprises et vise également à soutenir les entreprises européennes dans la crise économique liée au COVID19. En effet, la stratégie propose d’assouplir temporairement les règles concernant les aides d’État. Je soutiens ce rapport car il participe à soutenir les acteurs de l’industrie européenne directement en leur offrant une protection renforcée et des allègements législatifs à court terme, tout en leur fixant un cadre à plus long terme pour les inciter à investir et entamer la transition vers un modèle industriel plus respectueux de l’environnement.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Cette stratégie s&#39;appuie globalement sur la dette contractée pour la relance européenne, mais aussi sur la grande réinitialisation post-Covid qui veut annihiler toutes initiatives nationales au profit d&#39;une décentralisation pilotée depuis Bruxelles.
+        </article>
+    
+        <article>
+            <div class="hidden">197536</div>
+            
+            <header><b>Nathalie COLIN-OESTERLÉ</b> | Les centristes</header>
+            J’ai voté en faveur du rapport Calenda qui répond à la proposition de la Commission européenne de mettre en place une nouvelle stratégie industrielle pour l’Europe conforme à l’objectif de neutralité d’ici 2050 au plus tard. Il souligne le soutien à la double transition écologique et numérique tout en maintenant et en créant des emplois de qualité. Par mon vote, j’invite la Commission européenne à soutenir les programmes européens et nationaux encourageant l’augmentation des capitaux propres des entreprises et à faciliter la relance. Nous demandons également à la Commission européenne de stimuler la demande intérieure et la croissance à long terme de l’Union en attirant davantage d’investissements, dans la recherche et l’innovation, dans le développement de nouvelles technologies durables et numériques. Cela permettra non seulement de limiter la délocalisation mais aussi de favoriser la réimplantation des industries européennes, notamment dans le domaine pharmaceutique, tout en préservant un marché ouvert. Il s’agit là d’un plan ambitieux qui permettra de palier aux effets de la COVID-19. Ce rapport tourné vers l’avenir présente un message fort en espoirs et ambitions pour bâtir une véritable économie circulaire.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté en faveur de ce rapport sur la stratégie industrielle pour l’Europe. Ce rapport appelle à ce que l’industrie européenne contribue à la transition verte et durable, et cela ne saurait se passer d’un soutien nécessaire de l’UE à la recherche et l’innovation européenne. L’Union européenne doit également renforcer son industrie afin d’atteindre l’autonomie stratégique du continent. Aussi, la taxonomie (la « grammaire » européenne en matière d’investissements verts et durable) doit être pleinement mobilisée pour accélérer la transition écologique, mais c’est sans oublier la dimension sociale qui est pleinement reflétée dans ce rapport du Parlement. Enfin, le Parlement demande que l’UE continue d’apporter un soutien aux PME, maillon essentiel de l’industrie européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai voté en faveur du rapport sur la nouvelle stratégie industrielle pour l’Europe dans lequel nous exprimons la position du Parlement européen en vue de sa révision qui aura lieu l’année prochaine. Nous devons adopter une stratégie globale européenne, redoubler d’efforts pour permettre la reprise et favoriser la résilience de notre économie. Je soutiens particulièrement les dispositions du texte rappelant la nécessité de garantir l’autonomie stratégique de l’Union européenne, alors que nous traversons une grave crise sanitaire, ceci afin d’assurer une compétitivité mondiale de l’industrie européenne. Alors que nous faisons face à une concurrence internationale parfois déloyale, nous devons agir contre les rachats d’entreprises européennes de secteurs stratégiques par des entreprises publiques ou liées à un gouvernement de pays tiers.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre cette proposition de résolution car elle prévoit globalement un financement grâce à la dette contractée pour la relance européenne, laquelle justifiera bientôt de nouveaux impôts, et veut annihiler toutes initiatives nationales au profit d’une décentralisation pilotée depuis Bruxelles.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            Cette stratégie s’appuie globalement sur la dette contractée pour la relance européenne (qui justifiera plus tard les ressources propres, car il faudra bien rembourser nos créanciers !), mais aussi sur la « grande réinitialisation » post-Covid qui veut annihiler toutes initiatives nationales au profit d’un grand pilotage depuis Bruxelles (qui imposera à tous ,les réformes &quot;nécessaires&quot;).
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            La « stratégie industrielle » proposée ici s’appuie globalement sur la dette contractée pour le plan de relance européen, qui justifiera in fine la création de nouvelles ressources propres, dont les contribuables européens porteront le fardeau. De plus, ce texte cherche à escamoter les initiatives nationales, pourtant indispensables à la réindustrialisation du continent, au profit d’une stratégie pilotée depuis Bruxelles. Ce pilotage supranational de la politique industrielle s’inscrit à l’opposé de tous les modèles industriels qui s’avèrent efficaces au XXIe siècle.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – J’ai voté contre ce texte qui défend une stratégie s’appuyant sur la dette contractée pour la relance européenne et qui souhaite annihiler toutes initiatives nationales en faveur d’une décentralisation téléguidée par Bruxelles.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            La commission de l’industrie, de la recherche et de l’énergie a adopté un rapport d’initiative sur une nouvelle stratégie industrielle pour l’Europe. Le rapport souligne que l’UE a besoin d’une nouvelle stratégie industrielle conforme à l’objectif de neutralité climatique d’ici 2050 au plus tard, en vue de soutenir la double transition écologique et numérique tout en maintenant et en créant des emplois de qualité. La stratégie a également pour but de renforcer le leadership mondial de l’Europe et réduire la dépendance de l’Union à l’égard d’autres parties du monde dans les chaînes de valeur stratégiques en évitant la délocalisation des industries européennes tout en préservant un marché ouvert. L’UE est confrontée à un double dilemme dans ce dossier, elle revendique l’avant-garde de l’industrie du futur, décarbonée, et répondant aux engagements utopistes fixés par les accords de Paris ; et dans le même temps, elle souhaite s’affranchir des graves conséquences qu’ont provoqué la mondialisation des échanges. J’ai voté contre ce rapport car ces deux objectifs sont largement incompatibles, puisque les objectifs climatiques à court termes nous imposent la désindustrialisation, et qu’on ne peut pas protéger ce qui reste d’industrie européenne en conservant l’attitude d’une zone économique la plus ouverte du monde.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Le rapport souligne que l’Union européenne a besoin d’une nouvelle stratégie industrielle conforme à l’objectif de neutralité climatique d’ici 2050 au plus tard, en vue de soutenir la double transition écologique et numérique tout en maintenant et en créant des emplois de qualité. L’UE est confrontée à un double dilemme dans ce dossier, elle revendique l’avant-garde de l’industrie du futur, décarbonée, et répondant aux engagements utopistes fixés par les accords de Paris ; et dans le même temps elle souhaite s’affranchir des graves conséquences qu’ont provoqué la mondialisation des échanges, celles qui découlent du mondialisme.D’abord on constate que ces deux objectifs sont largement incompatibles, puisque les objectifs climatiques à court termes nous imposent la désindustrialisation, et qu’on ne peut pas protéger ce qui reste d’industrie européenne en conservant l’attitude d’une zone économique la plus ouverte du monde. Ensuite, cette stratégie s’appuie globalement sur la dette contractée pour la relance européenne (qui justifiera plus tard les ressources propres. Face à l’incohérence de ce texte j’ai préféré émettre un vote contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Ce rapport est emblématique de la volonté de la Commission de parvenir à la quadrature du cercle dans sa définition d’une nouvelle stratégie industrielle répondant aux dogmes utopistes des accords de Paris. Elle porte l’objectif de neutralité climatique appuyée sur une double transition écologique et numérique créant idéalement des emplois qualitatifs, toutes choses qui renforceraient la position mondiale de l’Europe. Mais si cette stratégie entend diminuer la dépendance de l’Union en évitant les délocalisations industrielles, il est assené qu’il s’agit de préserver le modèle d’un marché ouvert à tous les vents de la mondialisation des échanges. Il est totalement irréaliste de vouloir protéger ce qui reste d’industrie européenne en restant la zone économique la plus ouverte du monde. L’objectif implicite de cette « grande réinitialisation » est d’éliminer toutes initiatives nationales au profit d’une décentralisation pilotée depuis Bruxelles avec pour corollaire une augmentation du pouvoir des GAFAM, une restriction des libertés publiques et de la liberté d’entreprendre, une augmentation de la concurrence mondiale et des migrations. J’ai voté contre.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
+
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

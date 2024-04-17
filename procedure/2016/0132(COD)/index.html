@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Règlement Eurodac</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,36 +22,43 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Règlement Eurodac</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Etat et évolution de l&#39;Union</li>
-        
     
         
         
@@ -64,12 +72,12 @@
     
         
         
-            <li>Espace de liberté, de sécurité et de justice</li>
+            <li>Etat et évolution de l&#39;Union</li>
         
     
         
         
-            <li>Libre circulation et intégration des ressortissants des pays-tiers</li>
+            <li>Agences et organes de l&#39;Union</li>
         
     
         
@@ -79,22 +87,190 @@
     
         
         
-            <li>Agences et organes de l&#39;Union</li>
+            <li>Espace de liberté, de sécurité et de justice</li>
+        
+    
+        
+        
+            <li>Libre circulation et intégration des ressortissants des pays-tiers</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2016/0132(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2016/0132(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-8-2017-0212_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+        
+        
+    
+        
+        
+    
+        
+        
+            <article id="159">
+            <header>📝 Amendement n°159 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      (10) Afin d’aider les États membres à surmonter les difficultés liées au non- respect du processus de relevé d’empreintes, le présent règlement permet également, en dernier ressort, la comparaison d’une image faciale sans les empreintes digitales, lorsqu’il est impossible de relever les empreintes du ressortissant de pays tiers ou de l’apatride parce que l’extrémité de ses doigts est endommagée, intentionnellement ou non, ou amputée.
+  
+
+  
+      <ins> Dans certaines situations exceptionnelles, des tests osseux pour l’évaluation de l’âge pourraient également être prévus par le droit national.</ins>
+  
+
+  
+       Les États membres devraient épuiser toutes les tentatives de relevé des empreintes digitales de la personne concernée avant de pouvoir effectuer une comparaison à l’aide d’une image faciale uniquement, lorsque les motifs pour ne pas respecter le processus de relevé d’empreintes ne sont pas liés à l’état de l’extrémité des doigts de cette personne. Lorsque l’image faciale est utilisée en combinaison avec les données dactyloscopiques, cela permet de réduire le nombre d’empreintes digitales enregistrées tout en garantissant le même résultat quant
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
+  
+
+  
+      à l’exactitude de l’identification.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
+
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Les implications des activités de pêche chinoises sur les pêcheries de l’Union et la voie à suivre</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Les implications des activités de pêche chinoises sur les pêcheries de l’Union et la voie à suivre</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(573/614 * 100%)">573</div>
-  
-  
-    <div class="-" style="width: calc(11/614 * 100%)">11</div>
+    <div class="for" style="width: calc(573/614 * 100%)">573</div>
   
   
-    <div class="0" style="width: calc(30/614 * 100%)">30</div>
+    <div class="against" style="width: calc(11/614 * 100%)">11</div>
+  
+  
+    <div class="abstention" style="width: calc(30/614 * 100%)">30</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,19 +88,20 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(69/70 * 100%)">69</div>
+    <div class="for" style="width: calc(69/70 * 100%)">69</div>
   
   
-    <div class="-" style="width: calc(1/70 * 100%)">1</div>
+    <div class="against" style="width: calc(1/70 * 100%)">1</div>
   
   
 </div>
  
 </section>
-            <a href="/voting/159016">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/159016">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -114,21 +119,292 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2148(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2148(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0282_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-10-17-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-10-17-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197615">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197629">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté pour ce texte, qui vise à défendre l’Union européenne contre une concurrence déloyale et à renforcer la lutte contre la pêche illicite, non déclarée et non réglementée.En pratique, ce rapport d’initiative propose de consolider les partenariats de coopération entre l’Union européenne et les pays tiers, afin de préserver les ressources halieutiques.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Il s’agit d’un rapport qui dénonce le manque de transparence de la plus grande flotte de pêche au monde et les pratiques de pêche illégales perpétrées dans tous les océans, mais aussi les revendications territoriales chinoises en Mer de Chine méridionale, et le rôle de la flotte de pêche chinoise pour s’approprier les eaux convoitées. Ce texte demande plus de transparence sur les accords de pêche entre la Chine et les États tiers, et demande de renforcer les instruments internationaux de lutte contre la pêche illégale. Enfin il est demandé davantage de contrôle des importations (de produits de la pêche, de l’aquaculture, de farines et huiles de poisson). Afin de mieux protéger le secteur de la pêche européenne, j’ai voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            J’ai fermement soutenu ce rapport qui vise à protéger les ressources halieutiques, la souveraineté alimentaire, la protection de la pêche européenne (et donc de nos pêcheurs) et enfin, qui vise à poursuivre un dialogue approfondi avec la Chine.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté pour ce rapport car il vise à protéger nos ressources de pêche en ouvrant un dialogue avec la Chine, afin de l’encourager à s’engager dans des pratiques de pêche plus durables.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            J’ai voté en faveur de ce rapport qui met en avant des grands axes stratégiques pour répondre aux implications des opérations de pêche chinoise. Le rapport sur les implications des opérations de pêche chinoises sur la pêche européenne et la voie à suivre à des objectifs de transparences plus importants et demande notamment la coordination des systèmes de données et la possibilité de disposer des données exactes et complètes et d’informations transparentes sur la localisation, l’origine et l’activité des navires de pêche. Par ailleurs, ce rapport vise à défendre l’Union européenne contre des pratiques commerciales injustes. Autrement dit, il demande aux États-membre une application stricte de la législation européenne en ce qui concerne le système de déclaration des captures et de traçabilité. Et encourage la Chine et les pays avec lesquels elle a signé des accords de pêche à renforcer leurs capacités de contrôle, de détection, de prévention et de réponse aux incidents de pêche. Ce rapport tend également à la protection des ressources halieutiques, les droits de l’homme et la souveraineté alimentaire et a pour objectif d’assurer la continuité du dialogue entre la Chine et l’Union.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution sur les implications des activités de pêche chinoises sur les pêcheries de l’Union et la voie à suivre. Le texte dénonce le manque de transparence de la flotte chinoise, plus grande flotte de pêche au monde, et ses pratiques de pêche illégales perpétrées dans tous les océans. Il demande davantage de contrôle des importations de produits de la pêche, de l’aquaculture, de farines et huiles de poisson, et encourage l&#39;augmentation de la production aquacole européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations et les recommandations du Parlement européen sur les implications des activités de pêche chinoises sur les activités de pêche européennes. Elle appelle à davantage de transparence sur la localisation, le volume et l’activité des pêches chinoises et demande que la Chine ratifie les traités internationaux sur la pêche illicite, non déclarée et non réglementée. Elle alerte également sur le dumping social et environnemental chinois et la nécessité pour l’Europe de se prémunir contre cette concurrence déloyale. J’ai donc voté pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197551</div>
+            
+            <header><b>Stéphane BIJOUX</b> | Renaissance</header>
+            J’ai voté pour le rapport sur les implications des activités de pêche chinoises sur les pêcheries de l’Union, porté par mon collègue Pierre KARLESKIND. Ce texte défend nos pêcheurs européens et propose des solutions d’avenir pour notre politique en matière de pêche. Il fixe quatre priorités : plus de transparence, c’est-à-dire mieux connaître les pêcheries des flottes chinoises et les conditions dans lesquelles elles sont réalisées; plus de protection de notre filière de la pêche européenne, c’est-à-dire combattre la pêche illégale, les pratiques commerciales injustes et porter des exigences de traçabilité plus strictes pour les produits que nous importons dans l’UE; plus de protection des ressources halieutiques et plus de dialogue avec la Chine pour une pêche plus durable, afin de préserver la sécurité alimentaire liée à la pêche; enfin, une meilleure protection des droits humains dans les opérations de pêcherie.Ce rapport rappelle aussi que la pêche est une composante essentielle du projet de puissance de la Chine et un défi géostratégique majeur pour l’Union européenne, en particulier dans les régions ultrapériphériques où les pêcheurs sont particulièrement exposés aux opérations de surpêche ou de pêche illégale.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Ce rapport poursuit trois objectifs que nous soutenons: défendre l’Union européenne contre la concurrence commerciale déloyale, renforcer la lutte contre la pêche non règlementée et non déclarée, et protéger les ressources halieutiques, protéger la souveraineté alimentaire. Je l’ai donc voté!
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Les activités de pêches chinoises impactent le secteur de la pêche de l’Union européenne. Le rapport propose donc de «défendre l’Union européenne contre la concurrence commerciale déloyale, de renforcer la lutte contre la pêche INN et de protéger les ressources halieutiques, les droits de l’homme et la souveraineté alimentaire».Dans le cadre de la lutte contre la pêche INN et de la protection de la filière de la pêche européenne, il était nécessaire et urgent de proposer une réglementation afin d’obliger la Chine à s’engager dans la voie d’une pêche plus transparente, plus durable et mieux réglementée.La souveraineté alimentaire et la protection de la pêche européenne (et donc de nos pêcheurs) est cruciale.J’ai donc voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Ce rapport d’initiative porte sur les implications des activités de pêches chinoises sur les pêcheries de l’Union. Il propose de «défendre l’Union européenne contre la concurrence commerciale déloyale, de renforcer la lutte contre la pêche illégale non réglementée non déclarée et de protéger les ressources halieutiques, les droits de l’homme et la souveraineté alimentaire». Ce rapport vise à protéger les ressources halieutiques, la souveraineté alimentaire, la protection de la pêche européenne (et donc de nos pêcheurs) et enfin, il vise à poursuivre un dialogue approfondi avec la Chine. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté en faveur de ce rapport qui vise à protéger les ressources halieutiques, la souveraineté alimentaire, la protection de la pêche européenne (et donc de nos pêcheurs) et, enfin, qui vise à poursuivre un dialogue approfondi avec la Chine.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b>Marina MESURE</b> | La France Insoumise</header>
+            Ce rapport a pour objet les implications des opérations de pêche chinoises sur la pêche européenne. Il souligne le besoin de davantage de transparence sur les activités de pêche de la Chine et note l’absence de chiffres officiels fiables sur la pêche chinoise, notamment la taille de la flotte, la localisation et l’activité des navires de pêche. Il demande à la Commission de mettre un terme à l’utilisation de pavillons de complaisance, souhaite un accès public aux informations sur la propriété effective des bateaux de pêche et recommande d’améliorer le système de recensement des navires engagés dans des activités de pêche illégales. Enfin, il rappelle qu’il est primordial de protéger les ressources halieutiques et que l’intensité des activités de la flotte chinoise tend à l’épuisement des ressources. Enfin, le rapport souligne sa forte préoccupation en ce qui concerne les conditions de travail à bord de certains navires chinois et invite la Chine à ratifier la convention de l’OIT sur le travail dans la pêche. Ainsi, en raison de la pertinence des points soulevés par le rapport et la nécessité de protéger l’environnement marin et les travailleurs de tous les pays, j’ai décidé de voter en faveur de ce rapport.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197505</div>
+            
+            <header><b>Catherine CHABAUD</b> | Mouvement Démocrate</header>
+            
+                <p> – Madame la Présidente, tout d’abord, je tiens à remercier mon collègue Pierre Karleskind d’avoir porté ce rapport. À l’heure où nous renforçons nos exigences vis-à-vis de nos pêcheurs au travers du règlement sur le contrôle des pêches, il est urgent d’alerter sur les dérives de la pêche industrielle chinoise: pas de traçabilité, pas de transparence dans les accords, des usines de farines de poisson, etc. –  Pierre, tu as déjà un peu tout évoqué. </p>
+            
+                <p>C’est aussi la Chine qui, avec la Russie, refuse de donner sa voix pour la création d’aires marines protégées en Antarctique. Or, nous n’atteindrons jamais les objectifs de développement durable et de gestion durable sans la Chine. </p>
+            
+                <p>Alors, il y a peut-être de l’espoir malgré tout. Je veux croire qu’il y a moyen d’appeler les autorités chinoises à coopérer et à mettre en œuvre les engagements internationaux. C’est en effet la Chine qui, lors de sa coprésidence de la COP15 pour la biodiversité, a permis, avec l’Union européenne, d’atteindre des objectifs ambitieux, et elle encore qui, le mois dernier, a cosigné le traité sur la haute mer. </p>
+            
+                <p>Alors, j’ose espérer qu’elle comprenne que l’océan est notre bien commun, et qu’il faut le préserver. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197585</div>
+            
+            <header><b>Pierre KARLESKIND</b> | Renaissance</header>
+            
+                <p>Or, de nombreux rapports gouvernementaux ou d’organisations non gouvernementales pointent un certain nombre de pratiques qui posent question: des cas de pêche illégale – nous étions avec la commission PECH en Équateur, où nous avons été confrontés aux soucis que cela causait –, des cas de pratiques telles que le prélèvement des ailerons de requins ou l’extinction des outils de positionnement, pratiques illégales ou prédatrices qui mettent en jeu la sécurité alimentaire de certains pays côtiers – nous étions aussi avec la commission PECH au Sénégal –, et puis des cas de travail forcé.</p>
+            
+                <p>À ce titre, l’enquête internationale publiée la semaine dernière par le projet Outlaw Ocean sur ces pratiques, à terre comme en mer, doit attirer notre attention. La Chine n’a ratifié ni la Convention concernant le travail dans le secteur de la pêche de l’Organisation internationale du travail ni l’accord relatif aux mesures du ressort de l’État du port de la FAO. Alors, bien sûr, la Chine a fait des progrès. D’ailleurs, depuis que nous avons rédigé le rapport, la Chine a ratifié l’accord sur les subventions à la pêche de l’OMC. Mais cela dit, Monsieur le Commissaire, j’ai une question à vous poser: pouvez-vous m’assurer que les produits de la mer qui sont à cette heure sur la table des Européens – ils sont en train de les manger – ne sont pas issus d’une entreprise chinoise pratiquant le travail forcé en mer ou à terre ou la pêche illégale? </p>
+            
+                <p>Nous avons certes des instruments, dans l’Union européenne: le règlement contre la pêche illicite, non déclarée et non réglementée et le règlement établissant un régime mondial de sanctions en matière de droits de l’homme – c’était en 2020 que nous les avons adoptés –, mais ils ne sont visiblement pas suffisants. Il nous faut renforcer, à travers trois axes – la transparence, la traçabilité et le contrôle –, notre capacité à les mettre en œuvre. </p>
+            
+                <p>La transparence: selon le gouvernement chinois il y a 2 900 navires de longue distance hauturiers, selon la FAO il y en a 17 000. Combien sont-ils? Où sont-ils? Combien de subventions? Et qui fait quoi dans les eaux des pays avec lesquels nous-mêmes nous avons des accords de pêche? À qui appartiennent ces navires? Nous étions au Sénégal confrontés à cette pêche industrielle dont les capitaux sont chinois mais les pavillons sénégalais. </p>
+            
+                <p>La traçabilité: nous venons d’évoquer le règlement contre la pêche illicite, non déclarée et non réglementée, extrêmement important. Nous avons le système CATCH, qui permet la numérisation et la traçabilité – ç’a été un combat de mon groupe autour de tout ce travail, et je remercie la rapporteure, Clara Aguilera, pour le travail qu’elle a accompli sur cette question de la traçabilité. </p>
+            
+                <p>Le contrôle, toujours: cela n’a pas de sens d’imposer à nos pêcheurs des critères de contrôle drastiques si le reste du monde vit dans la loi de la jungle. Or, il nous faut – et c’est le sens de notre rapport, de nos propositions dans le rapport – encourager les actions des États membres (comme avec le projet Pescao, qui a été réalisé dans le golfe de Guinée), qui pourraient mobiliser leur flotte de contrôle de marine nationale en marge des actions de lutte contre la piraterie. </p>
+            
+                <p>Enfin, je dirais qu’il faut malgré tout et avant tout coopérer avec la Chine. C’est le sens, d’ailleurs, du partenariat que nous avons formé avec Pékin et au sujet duquel j’aurais aimé avoir un compte rendu du commissaire Sinkevičius – mais j’imagine, Monsieur le Commissaire Hahn, que c’est vous qui allez nous le faire. Coopérer pour mettre en place des plans de gestion dans les pays où nous pêchons ensemble, dans les eaux où nous pêchons ensemble, pour protéger la ressource, pour protéger nos pêcheurs, dans une concurrence juste. Enfin il nous faut coopérer avec la Chine pour la pousser à ratifier les conventions que j’ai évoquées sur le travail en mer et sur la lutte contre la pêche illégale. </p>
+            
+                <p>Alors, cela suffira-t-il? Non. Il est probable qu’il faille mentionner aussi, pour avancer plus loin, au-delà de ce rapport, le vote qui a eu lieu ce jour même au sein de la commission conjointe IMCO-INTA sur la création d’un instrument contraignant spécifique pour lutter contre les produits issus du travail forcé – cela devra s’appliquer à la pêche, aussi. </p>
+            
+                <p>Je finirai par la chose suivante: il faut aussi que les entreprises européennes fassent du ménage chez elles. C’est là le sens de la directive sur le devoir de vigilance des entreprises que nous avons adoptée. Sur l’ensemble de la chaîne de valeur, elles vont devoir faire le travail de vérifier effectivement si la lutte contre la pêche illégale et la lutte contre le travail forcé font partie des éléments qui sont particulièrement regardés. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197506</div>
+            
+            <header><b>Caroline ROOSE</b> | Les Écologistes</header>
+            
+                <p> – Madame la Présidente, saviez-vous qu’une partie du poisson issu du travail forcé des Ouïghours en Chine finit dans nos assiettes? C’est ce que suspecte la dernière enquête du projet Outlaw Ocean. Voilà des années que les autorités chinoises ont mis en place des transferts de main-d’œuvre d’Ouïghours vers les régions industrielles, où se trouvent des usines de transformation des produits de la mer. Ces produits se retrouvent, en bout de chaîne, dans les supermarchés d’Europe ou des États—Unis. </p>
+            
+                <p>Au moins dix grandes entreprises de produits de la mer en Chine ont utilisé plus de un millier de travailleurs ouïghours depuis 2018. Une main d’œuvre que la Chine opprime, exploite, interne, torture; les audits internationaux et autres certifications n’arrivent pas à détecter ce travail forcé, et certains poissons sont même estampillés «pêche durable». Or, ces produits de la mer alimentent des usines en Europe qui approvisionnent, à leur tour, de grandes marques et des supermarchés. Certains produits se retrouvent dans nos hôpitaux ou encore dans les cantines de la Commission. </p>
+            
+                <p>Je salue le fait que le rapport vise à accroître la traçabilité des produits importés. Les Verts ont également œuvré pour que la législation sur l’interdiction d’importation des produits issus du travail forcé mette fin à cette situation. </p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
+
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

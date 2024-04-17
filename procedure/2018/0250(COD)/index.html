@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Fonds pour la sécurité intérieure 2021–2027</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Fonds pour la sécurité intérieure 2021–2027</h2>
-
 
 
 
@@ -50,32 +62,30 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+        <i>Demandé par 
+
+
+</i>
+        <hr>
+    
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(132/694 * 100%)">132</div>
-  
-  
-    <div class="-" style="width: calc(558/694 * 100%)">558</div>
+    <div class="for" style="width: calc(132/694 * 100%)">132</div>
   
   
-    <div class="0" style="width: calc(4/694 * 100%)">4</div>
+    <div class="against" style="width: calc(558/694 * 100%)">558</div>
+  
+  
+    <div class="abstention" style="width: calc(4/694 * 100%)">4</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             🔎 Vote introuvable
@@ -83,14 +93,10 @@
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Espace de liberté, de sécurité et de justice</li>
-        
     
         
         
@@ -102,23 +108,226 @@
             <li>Coopération policière, judiciaire et douanière en général</li>
         
     
+        
+        
+            <li>Espace de liberté, de sécurité et de justice</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2018/0250(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2018/0250(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0221_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-07-06-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-07-06-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
+
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b></b> | </header>
+            . – Ce Fonds se concentre sur le soutien à la coopération interétatique en matière de sécurité intérieure. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b></b> | </header>
+            J&#39;ai voté contre l&#39;amendement de rejet, et ai donc soutenu ce texte. En effet, il s&#39;agit d&#39;un fonds utile, puisqu&#39;il porte sur la coopération interétatique en matière de sécurité intérieure.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b></b> | </header>
+            Même si ce fonds inclut le Parquet public européen, soutenant de fait une nouvelle juridiction bien que seule une partie des États membres prennent part à l’EPPO ; et que ce fonds pourra financer des « formations anti-racistes », qui sont souvent des séances de rééducation au politiquement correct, j’ai approuvé ce texte dans la mesure où les enjeux concernant la sécurité de nos compatriotes et des Européens en général sont prioritaires.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b></b> | </header>
+            J&#39;ai voté pour la création de ce Fonds car il permettra de renforcer la coopération entre Etats membres de l&#39;UE en matière de sécurité intérieure.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b></b> | </header>
+            Ce fonds pour la sécurité intérieure existait déjà. Il se composait de deux volets : un centré sur la sécurité intérieure – coopération policière, lutte contre la criminalité transfrontalière, systèmes sécuritaires – et un autre dédié aux frontières extérieures et à la politique de visas. Ce Fonds se concentre désormais sur le soutien à la coopération interétatique en matière de sécurité intérieure. J’ai bien évidemment voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b></b> | </header>
+            J’ai voté en faveur de ce rapport relatif au fonds de sécurité intérieure (FSI) pour la période 2021-2027. Le budget du FSI s&#39;élèvera à 1,931 milliard d&#39;euros et servira 3 objectifs principaux : l&#39;échange d&#39;informations, les opérations conjointes transfrontalières et le renforcement des capacités actuelles. Le FSI favorisera la coopération entre les services répressifs et les services de renseignement dans la lutte contre le terrorisme et la criminalité organisée pour renforcer la sécurité de l’Union et de ses citoyens.
+        </article>
+    
+        <article>
+            <div class="hidden">30482</div>
+            
+            <header><b></b> | </header>
+            . – Cette proposition de règlement établit la période, fixe les objectifs et le budget du fonds pour la sécurité intérieure. Ce fonds vise à renforcer la sécurité au sein de l’Union européenne, notamment par un meilleur échange d’informations entre les services de sécurités ou encore par la mise en œuvre d’opérations conjointes transfrontalières. Ce fonds pour la sécurité intérieure vise par ailleurs à renforcer la prévention et la lutte contre le crime organisé. L’accord inter-institutionnel qui a été trouvé a permis d’accroître le budget de ce fonds, pour arriver à un montant d’environ 2 milliards d’euros. J’ai voté contre l’amendement de rejet dans la mesure où ce fonds permet d’assurer de manière plus efficace la sécurité intérieure de l’Union européenne et de lutter contre le terrorisme et le crime organisé.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b></b> | </header>
+            Ce rapport vise à interpeller la Commission et le Conseil afin d’accélérer l’adoption du système européen de gestion du trafic ferroviaire (ERTMS). Il rappelle la nécessité de mettre en place ce dispositif qui permettra d’harmoniser les pratiques, d’apporter plus de sécurité aux passagers et personnels roulants, et de faciliter la circulation des trains d’un espace ferroviaire à l’autre. J’ai donc voté pour ce texte qui va dans le sens d’un renforcement de l’offre de transport ferroviaire, qui est un outil clef dans la lutte contre le dérèglement climatique.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b></b> | </header>
+            Ce Fonds se concentre sur le soutien à la coopération interétatique en matière de sécurité intérieure.Contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b></b> | </header>
+            J’ai voté en faveur du rapport sur le Fonds pour la sécurité intérieure (FSI), qui a pour mission de garantir un niveau de sécurité élevé sur le territoire de l’Union européenne. Le volet « frontières extérieures et visas » du Fonds visera à assurer une liberté de circulation des citoyens européens tout en accentuant la lutte contre le terrorisme et la grande criminalité aux frontières de l’Union européenne. Un contrôle strict et uniformisé aux frontières sera donc assuré pour mieux protéger nos concitoyens. La lutte contre l’immigration clandestine sera aussi une priorité du Fonds pour la sécurité intérieure. D’autre part, le volet sur la Coopération policière, prévention et répression de la criminalité, gestion des crises sera chargé de lutter contre la criminalité organisée, l’endiguement du terrorisme ainsi que la cyber-sécurité. Avec une enveloppe globale de 1,7 milliard d’euros pour la période 2021-2027, le Fonds pour la sécurité intérieure permettra de renforcer la résilience des États membres de l’Union européenne face aux crimes et à l’insécurité.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b></b> | </header>
+            Ce Fonds se concentre sur le soutien à la coopération interétatique en matière de sécurité intérieure. J&#39;ai voté en faveur de ce fonds car ce type de coopération a déjà prouvé son utilité.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b></b> | </header>
+            . – J’ai voté en faveur de ce fond de soutien à la coopération interétatique en matière de sécurité intérieure. Les enjeux de sécurité des Français, et des Européens, sont prioritaires pour nous.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b></b> | </header>
+            Ce fonds existait déjà en se composant de deux volets, un centré sur la sécurité intérieure – coopération policière, lutte contre la criminalité transfrontalière, systèmes sécuritaires – et un autre dédié aux frontières extérieures et à la politique de visas. Ce second volet est désormais indépendant (rapport Fajon pour la gestion intégrée des frontières). Dorénavant focalisé sur la sécurité intérieure de l’UE, ce fonds doté de 1,931 milliards d’euros soutiendra les États membres et les agences utiles dans ce cadre. Les enjeux concernant la sécurité de nos compatriotes et des Européens sont prioritaires. Ce Fonds se concentre sur le soutien à la coopération interétatique en matière de sécurité intérieure. J’ai donc voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b></b> | </header>
+            Ce fonds existait déjà en se composant de deux volets, un centré sur la sécurité intérieure – coopération policière, lutte contre la criminalité transfrontalière, systèmes sécuritaires – et un autre dédié aux frontières extérieures et à la politique de visas. Ce second volet est désormais indépendant (rapport Fajon pour la gestion intégrée des frontières). Dorénavant focalisé sur la sécurité intérieure de l’UE, ce fonds doté de 1,931 milliards d’euros soutiendra les États membres et les agences utiles dans ce cadre. Il financera notamment la coopération interétatique en matière policière et judiciaire (agences Europol, Eurojust, Observatoire européen des drogues et toxicomanies). L’autre objectif est d’assurer l’interopérabilité des systèmes informatiques de l’UE concernant la sécurité et l’immigration (SIS, SIV, ECRIS, SEE, Eurodac, eu-LISA...) ; des installations liées à la sécurité tels que des portiques d’aéroport modernes et des équipements pour les forces de police nationales.Malgré quelques bémols, les enjeux concernant la sécurité de nos compatriotes et des Européens sont cependant prioritaires, c’est pourquoi j’ai voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b></b> | </header>
+            Focalisé désormais sur la sécurité intérieure de l’UE, ce fonds est doté de 1,931 milliards d’euros. Il financera notamment la coopération interétatique en matière policière, judiciaire et des services d’intelligence (agences Europol, Eurojust…) ; l’interopérabilité des systèmes informatiques de l’UE concernant la sécurité et l’immigration (SIS, SIV, ECRIS, SEE, Eurodac, eu-LISA...) ; le Collège européen de police (agence CEPOL), qui rassemble des hauts fonctionnaires des États membres pour les préparer à la coopération transfrontalière ; des installations liées à la sécurité tels que des portiques d’aéroport modernes et des équipements pour les forces de police nationales. Malgré quelques bémols (ce fonds pourra notamment servir à financer des « formations anti-racistes », qui sont souvent des séances de rééducation au politiquement correct), les enjeux concernant la sécurité de nos compatriotes et des Européens sont prioritaires, j’ai donc voté pour.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

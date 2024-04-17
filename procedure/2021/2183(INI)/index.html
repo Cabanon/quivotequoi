@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Mise en œuvre de la politique de sécurité et de défense commune - rapport annuel 2021</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Mise en œuvre de la politique de sécurité et de défense commune - rapport annuel 2021</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(369/689 * 100%)">369</div>
-  
-  
-    <div class="-" style="width: calc(197/689 * 100%)">197</div>
+    <div class="for" style="width: calc(369/689 * 100%)">369</div>
   
   
-    <div class="0" style="width: calc(123/689 * 100%)">123</div>
+    <div class="against" style="width: calc(197/689 * 100%)">197</div>
+  
+  
+    <div class="abstention" style="width: calc(123/689 * 100%)">123</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,30 +88,26 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(35/77 * 100%)">35</div>
+    <div class="for" style="width: calc(35/77 * 100%)">35</div>
   
   
-    <div class="-" style="width: calc(41/77 * 100%)">41</div>
+    <div class="against" style="width: calc(41/77 * 100%)">41</div>
   
   
-    <div class="0" style="width: calc(1/77 * 100%)">1</div>
+    <div class="abstention" style="width: calc(1/77 * 100%)">1</div>
   
 </div>
  
 </section>
-            <a href="/voting/139905">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/139905">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Relations extérieures de l&#39;Union</li>
-        
     
         
         
@@ -119,539 +119,699 @@
             <li>Politique étrangère et de sécurité commune (PESC)</li>
         
     
+        
+        
+            <li>Relations extérieures de l&#39;Union</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2183(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0358_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-02-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | Partie 1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(573/674 * 100%)">573</div>
-  
-  
-    <div class="-" style="width: calc(43/674 * 100%)">43</div>
-  
-  
-    <div class="0" style="width: calc(58/674 * 100%)">58</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139748">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°1 | Partie 2 | 
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(497/673 * 100%)">497</div>
-  
-  
-    <div class="-" style="width: calc(113/673 * 100%)">113</div>
-  
-  
-    <div class="0" style="width: calc(63/673 * 100%)">63</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139749">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°1 | Partie 3 | 
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | Partie 3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(501/674 * 100%)">501</div>
-  
-  
-    <div class="-" style="width: calc(114/674 * 100%)">114</div>
-  
-  
-    <div class="0" style="width: calc(59/674 * 100%)">59</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139750">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>78bis. estime que la conclusion du pacte de sécurité trilatéral AUKUS s’est effectuée de manière déloyale à l&#39;encontre d&#39;un des États membres de l’Union; dénonce cette attitude qui nuira durablement à la coopération entre les États-Unis et l’Union européenne, présente dans la région et dont les intérêts ont été délibérément ignorés par les pays signataires du pacte;  Or. fr</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">57</div>
+  <div class="against">559</div>
+  <div class="abstention">71</div>
+</span>
+
+  
+    
+    <a href="/voting/139221">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(57/687 * 100%)">57</div>
-  
-  
-    <div class="-" style="width: calc(559/687 * 100%)">559</div>
-  
-  
-    <div class="0" style="width: calc(71/687 * 100%)">71</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139221">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       4. 
   
 
   
-      <del>insiste sur l’importance de l’étayer au moyen de l’analyse à 360 degrés des menaces; souligne que la boussole stratégique doit être la réponse ambitieuse de l’Union à cette analyse, dont les conclusions doivent faire régulièrement l’objet d’un réexamen réaliste aux fins de l’élaboration d’un mécanisme permanent d’évaluation des menaces et de consultation parlementaire;</del>
+      <del>insiste sur l’importance de l’étayer au moyen de l’analyse à 360 degrés des menaces; souligne que la boussole stratégique doit être la réponse ambitieuse de l’Union à cette analyse, dont les conclusions doivent faire régulièrement l’objet d’un réexamen réaliste aux fins de l’élaboration d’un mécanisme permanent d’évaluation des menaces et de consultation parlementaire</del>
   
 
   
-      <ins>déplore que ni les députés des parlements nationaux ni les députés au Parlement européen n’aient accès au fondement de la boussole stratégique, à savoir l’analyse à 360 degrés des menaces, et que le contrôle démocratique et la participation des parlements ne soient donc pas possibles;</ins>
+      <ins>déplore que ni les députés des parlements nationaux ni les députés au Parlement européen n’aient accès au fondement de la boussole stratégique, à savoir l’analyse à 360 degrés des menaces, et que le contrôle démocratique et la participation des parlements ne soient donc pas possibles</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">97</div>
+  <div class="against">477</div>
+  <div class="abstention">114</div>
+</span>
+
+  
+    
+    <a href="/voting/139189">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(97/688 * 100%)">97</div>
-  
-  
-    <div class="-" style="width: calc(477/688 * 100%)">477</div>
-  
-  
-    <div class="0" style="width: calc(114/688 * 100%)">114</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139189">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>9 bis. rappelle que la facilité européenne pour la paix (FEP) finance les opérations militaires de l’Union ainsi que les fournitures d’armes, ce qui a pour effet d’alimenter les conflits et les exportations d’armes au lieu de les prévenir; refuse la poursuite des méthodes militaires et demande instamment que les causes profondes des conflits soient traitées au moyen de mesures diplomatiques et pacifiques de résolution des conflits; déplore la création de la FEP en 2020 et demande qu’il y soit mis un terme immédiatement;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">57</div>
+  <div class="against">604</div>
+  <div class="abstention">27</div>
+</span>
+
+  
+    
+    <a href="/voting/139192">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(57/688 * 100%)">57</div>
-  
-  
-    <div class="-" style="width: calc(604/688 * 100%)">604</div>
-  
-  
-    <div class="0" style="width: calc(27/688 * 100%)">27</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139192">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       34. 
   
 
   
-      <del>salue la capacité de coopération des armées européennes au service des citoyens dans le cadre de la lutte contre la pandémie en 2020; estime que la précieuse contribution des forces armées pendant la pandémie de COVID-19 a montré l’importance de l’utilisation des moyens et capacités militaires des États membres à l’appui du mécanisme de protection civile de l’Union;</del>
+      <del>salue la capacité de coopération des armées européennes au service des citoyens dans le cadre de la lutte contre la pandémie en 2020; estime que la précieuse contribution des forces armées pendant la pandémie de COVID-19 a montré l’importance de l’utilisation des moyens et capacités militaires des États membres à l’appui du mécanisme de protection civile de l’Union</del>
   
 
   
-      <ins>estime que la lutte contre la pandémie en 2020 a mis en évidence le manque criant de personnel de santé et de capacités civiles de réaction aux catastrophes;</ins>
+      <ins>estime que la lutte contre la pandémie en 2020 a mis en évidence le manque criant de personnel de santé et de capacités civiles de réaction aux catastrophes</ins>
   
 
   
-       engage l’Union et les États membres à 
+      ; engage l’Union et les États membres à 
   
 
   
-      <del>examiner </del>
+      <del>examiner</del>
   
 
   
-      <ins>envisager </ins>
+      <ins>envisager</ins>
   
 
   
-      sérieusement 
+       sérieusement 
   
 
   
-      <del>et à exploiter pleinement les modalités précises de mise en œuvre de l’article 44 du traité UE afin de permettre à l’Union de réagir de manière rapide, efficace et suffisamment souple aux crises sécuritaires avec une forte dimension collective de l’Union, notamment en permettant qu’une opération ad hoc en cours menée par un groupe d’États membres puisse recevoir un mandat de l’Union a posteriori; se félicite du rôle positif de mutualisation et de coordination joué par les forces aériennes durant la pandémie de COVID-19, en particulier pour ce qui est des transferts sanitaires et de la livraison de matériel entre les États membres, ainsi que des synergies créées avec les infrastructures et les moyens mis en place par les alliés de l’OTAN pour les ponts aériens et le transport de matériel essentiel; salue en particulier le rôle joué    par le commandement européen du transport aérien (EATC) dans l’évacuation et le transfert de patients et la livraison de matériel médical pendant la pandémie; encourage de manière générale la mobilité aérienne militaire, et notamment le transport, le ravitaillement en vol et l’évacuation sanitaire aérienne en Europe, gages d’efficacité et d’efficience des efforts de transport aérien militaire en Europe; invite, à cet égard, les États membres à envisager le développement conjoint de ces équipements de défense stratégique et prône la création d’une unité militaire d’urgence de l’Union dans le but de faciliter l’utilisation transfrontière des capacités logistiques militaires pour faire face aux situations d’urgence, afin de renforcer la coordination, les synergies et la solidarité dans l’apport d’aide aux opérations de soutien civil;</del>
+      <del>et à exploiter pleinement les modalités précises de mise en œuvre de l’article 44 du traité UE afin de permettre à l’Union de réagir de manière rapide, efficace et suffisamment souple aux crises sécuritaires avec une forte dimension collective de l’Union, notamment en permettant qu’une opération ad hoc en cours menée par un groupe d’États membres puisse recevoir un mandat de l’Union a posteriori; se félicite du rôle positif de mutualisation et de coordination joué par les forces aériennes durant la pandémie de COVID-19, en particulier pour ce qui est des transferts sanitaires et de la livraison de matériel entre les États membres, ainsi que des synergies créées avec les infrastructures et les moyens mis en place par les alliés de l’OTAN pour les ponts aériens et le transport de matériel essentiel; salue en particulier le rôle joué    par le commandement européen du transport aérien (EATC) dans l’évacuation et le transfert de patients et la livraison de matériel médical pendant la pandémie; encourage de manière générale la mobilité aérienne militaire, et notamment le transport, le ravitaillement en vol et l’évacuation sanitaire aérienne en Europe, gages d’efficacité et d’efficience des efforts de transport aérien militaire en Europe; invite, à cet égard, les États membres à envisager le développement conjoint de ces équipements de défense stratégique et prône la création d’une unité militaire d’urgence de l’Union dans le but de faciliter l’utilisation transfrontière des capacités logistiques militaires pour faire face aux situations d’urgence, afin de renforcer la coordination, les synergies et la solidarité dans l’apport d’aide aux opérations de soutien civil</del>
   
 
   
-      <ins>un renforcement sensible des capacités de protection civile, pour réagir non seulement aux pandémies, mais aussi aux catastrophes liées ou non au changement climatique; demande à cet égard qu’au lieu de compter sur le volontariat ou le bénévolat, on mette en place un contingent permanent de professionnels de la protection civile et des secours en cas de catastrophe; rejette toute nouvelle fusion de moyens, d’infrastructures ou d’opérations civils et militaires dans le cadre de la réaction aux catastrophes;</ins>
+      <ins>un renforcement sensible des capacités de protection civile, pour réagir non seulement aux pandémies, mais aussi aux catastrophes liées ou non au changement climatique; demande à cet égard qu’au lieu de compter sur le volontariat ou le bénévolat, on mette en place un contingent permanent de professionnels de la protection civile et des secours en cas de catastrophe; rejette toute nouvelle fusion de moyens, d’infrastructures ou d’opérations civils et militaires dans le cadre de la réaction aux catastrophes</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">47</div>
+  <div class="against">565</div>
+  <div class="abstention">76</div>
+</span>
+
+  
+    
+    <a href="/voting/139199">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(47/688 * 100%)">47</div>
-  
-  
-    <div class="-" style="width: calc(565/688 * 100%)">565</div>
-  
-  
-    <div class="0" style="width: calc(76/688 * 100%)">76</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139199">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>40 bis. fait remarquer que la région indopacifique est en passe aujourd’hui de devenir la première zone économique mondiale; rappelle dès lors qu’il est d’autant plus important d’entreprendre des démarches diplomatiques plutôt que de suivre des logiques militaires, comme dans le cas de la stratégie de l’Union pour la coopération dans la région indopacifique; souligne qu’une action militaire ne fera qu’intensifier la dangereuse course à l’armement avec la Chine; observe que les revendications territoriales de la Chine sont rejetées et que le motif avancé de ce rejet est la protection d’un «ordre fondé sur des règles»; rappelle à cet égard que le Royaume-Uni, avec l’aide des États-Unis et l’approbation de l’Union, viole le droit international dans la même région avec la base militaire «Diego Garcia»; insiste sur la nécessité de résoudre tous les différends territoriaux existants de manière pacifique et dans le respect de la charte des Nations unies;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">33</div>
+  <div class="against">604</div>
+  <div class="abstention">51</div>
+</span>
+
+  
+    
+    <a href="/voting/139204">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(33/688 * 100%)">33</div>
-  
-  
-    <div class="-" style="width: calc(604/688 * 100%)">604</div>
-  
-  
-    <div class="0" style="width: calc(51/688 * 100%)">51</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139204">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       47. 
   
 
   
-      <del>appelle </del>
+      <del>appelle</del>
   
 
   
-      <ins>engage </ins>
+      <ins>engage</ins>
   
 
   
-      l’Union à 
+       l’Union à 
   
 
   
-      <del>se doter d’une stratégie spatiale de défense afin de garantir à tout moment l’accès autonome et sans entrave de l’Union et de ses États membres à leurs moyens spatiaux; insiste sur la nécessité de promouvoir l’émergence d’une culture stratégique européenne commune en matière de sécurité et de défense dans le domaine spatial, de réduire les dépendances stratégiques et d’améliorer la gouvernance opérationnelle des programmes spatiaux européens dans l’optique de parvenir, à terme, à l’autonomie stratégique dans tous les autres domaines; soutient les initiatives visant à faire avancer la politique spatiale de l’Union, notamment l’ambitieux nouveau programme spatial de l’Union, lequel doit chercher à protéger les moyens spatiaux actuels et antérieurs de l’Europe; encourage l’Union à consolider sa connaissance de la situation et ses capacités d’appui en matière de renseignement géospatial en renforçant ses capacités d’expertise via le Centre satellitaire de l’Union européenne (CSUE), ainsi que celles des États membres, afin de faire le lien entre la PSDC et le programme spatial de l’UE par l’intermédiaire de Galileo, notamment le PRS et Copernicus, d’exploiter les    possibilités d’investissement (au titre d’Horizon Europe et du FED, en particulier) et d’explorer d’autres synergies possibles entre l’espace et la défense (y compris au regard des capacités); insiste sur l’importance pour l’Union de disposer d’un accès autonome à l’espace et de ses propres lanceurs;</del>
+      <del>se doter d’une stratégie spatiale de défense afin de garantir à tout moment l’accès autonome et sans entrave de l’Union et de ses États membres à leurs moyens spatiaux; insiste sur</del>
   
 
   
-      <ins>lancer et à soutenir la démilitarisation de l’espace extra-atmosphérique, par exemple en continuant de développer et de mettre en œuvre le traité dit sur l’espace extra- atmosphérique et la résolution des Nations unies sur la prévention d’une course aux armements dans l’espace extra-atmosphérique; appelle de ses vœux l’utilisation et l’exploration purement civiles de l’espace extra-atmosphérique;</ins>
+      <ins>lancer et à soutenir</ins>
   
 
   
-       insiste pour que l’Union montre la voie en faveur d’un renforcement du droit international de l’espace, domaine de plus en plus contesté; invite l’Union et les États membres à promouvoir activement les initiatives internationales relatives au désarmement dans l’espace;
+       la 
+  
+
+  
+      <del>nécessité</del>
+  
+
+  
+      <ins>démilitarisation</ins>
+  
+
+  
+       de 
+  
+
+  
+      <del>promouvoir </del>
+  
+
+  
+      l’
+  
+
+  
+      <del>émergence d’une culture stratégique européenne commune</del>
+  
+
+  
+      <ins>espace extra-atmosphérique, par exemple</ins>
+  
+
+  
+       en 
+  
+
+  
+      <del>matière</del>
+  
+
+  
+      <ins>continuant</ins>
+  
+
+  
+       de 
+  
+
+  
+      <del>sécurité</del>
+  
+
+  
+      <ins>développer</ins>
+  
+
+  
+       et de 
+  
+
+  
+      <del>défense dans le domaine spatial, de réduire les dépendances stratégiques et d’améliorer la gouvernance opérationnelle des programmes spatiaux européens dans l’optique de parvenir, à terme, à l’autonomie stratégique dans tous les autres domaines; soutient les initiatives visant à faire avancer la politique spatiale de l’Union, notamment l’ambitieux nouveau programme spatial de l’Union, lequel doit chercher à protéger les moyens spatiaux actuels et antérieurs de l’Europe; encourage l’Union à consolider sa connaissance de la situation et ses capacités d’appui en matière de renseignement géospatial en renforçant ses capacités d’expertise via le Centre satellitaire de l’Union européenne (CSUE), ainsi que celles des États membres, afin de faire le lien entre la PSDC et le programme spatial de l’UE par l’intermédiaire de Galileo, notamment le PRS et Copernicus, d’exploiter les    possibilités d’investissement (au titre d’Horizon Europe et du FED, en particulier) et d’explorer d’autres synergies possibles entre</del>
+  
+
+  
+      <ins>mettre en œuvre le traité dit sur l’espace extra- atmosphérique et la résolution des Nations unies sur la prévention d’une course aux armements dans l’espace extra-atmosphérique; appelle de ses vœux</ins>
+  
+
+  
+       l’
+  
+
+  
+      <del>espace</del>
+  
+
+  
+      <ins>utilisation</ins>
+  
+
+  
+       et 
+  
+
+  
+      <del>la défense (y compris au regard des capacités); insiste sur l’importance pour l’Union de disposer d’un accès autonome à l’espace et de ses propres lanceurs</del>
+  
+
+  
+      <ins>l’exploration purement civiles de l’espace extra-atmosphérique</ins>
+  
+
+  
+      ; insiste pour que l’Union montre la voie en faveur d’un renforcement du droit international de l’espace, domaine de plus en plus contesté; invite l’Union et les États membres à promouvoir activement les initiatives internationales relatives au désarmement dans l’espace;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">61</div>
+  <div class="against">589</div>
+  <div class="abstention">37</div>
+</span>
+
+  
+    
+    <a href="/voting/139208">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(61/687 * 100%)">61</div>
-  
-  
-    <div class="-" style="width: calc(589/687 * 100%)">589</div>
-  
-  
-    <div class="0" style="width: calc(37/687 * 100%)">37</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139208">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>57 bis. rejette le FED, qui va favoriser le renforcement des filières industrielles européennes dans le domaine de l’équipement militaire et de l’armement avec une logique de programmation pluriannuelle, car il viole l’article 41, paragraphe 2, du traité UE et doit donc être considéré comme illégal; s’oppose à une militarisation accrue de l’Union et à la création d’une union militaire, ainsi qu’au soutien continu au secteur de la défense et de l’armement;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">50</div>
+  <div class="against">577</div>
+  <div class="abstention">61</div>
+</span>
+
+  
+    
+    <a href="/voting/139210">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(50/688 * 100%)">50</div>
-  
-  
-    <div class="-" style="width: calc(577/688 * 100%)">577</div>
-  
-  
-    <div class="0" style="width: calc(61/688 * 100%)">61</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139210">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       74. appelle à soutenir le renforcement et la protection de l’architecture de maîtrise des armements en Europe, dans un contexte d’érosion progressive marqué par le retrait des États-Unis et de la Russie du traité «Ciel ouvert»; appelle à soutenir et à renforcer activement les régimes de désarmement et les enceintes compétentes en la matière, et ce à tous égards: universalisation, appui à la mise en œuvre, soutien politique et institutionnel, et appui financier; appelle l’Union à porter une attention particulière aux risques CBRN dans le contexte de l’Organisation pour l’interdiction des armes chimiques, et met notamment l’accent sur le régime de prohibition et les obligations conventionnelles posées par la convention sur l’interdiction des armes chimiques (CIAC) et sur la lutte contre l’impunité;
@@ -661,141 +821,157 @@
       <ins> invite l’Union à soutenir activement le traité sur l’interdiction des armes nucléaires (TPNW ) et à œuvrer en faveur de sa mise en œuvre et de sa ratification par les États membres de l’Union;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">183</div>
+  <div class="against">487</div>
+  <div class="abstention">18</div>
+</span>
+
+  
+    
+    <a href="/voting/139218">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(183/688 * 100%)">183</div>
-  
-  
-    <div class="-" style="width: calc(487/688 * 100%)">487</div>
-  
-  
-    <div class="0" style="width: calc(18/688 * 100%)">18</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139218">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
-
-  
-      43. condamne les actes de malveillance perpétrés contre des États membres, tels que les attaques 
-  
+<p>
 
   
-      <del>hybrides qui instrumentalisent la migration;</del>
+      43. condamne les actes de malveillance perpétrés contre des États membres, tels que les attaques hybrides
   
 
   
-      <ins>hybrides;</ins>
+      <del> qui instrumentalisent la migration</del>
   
 
   
-       invite l’Union et les États membres à améliorer leurs capacités de détection des menaces hybrides; insiste pour que l’Union et les États membres réagissent de manière résolue et coordonnée à toute cyberactivité malveillante, illégale ou déstabilisatrice en mettant pleinement en œuvre les instruments de l’UE, en coordination avec ses partenaires; invite les États membres à améliorer leurs capacités nationales en matière de cyberdéfense; invite l’Union à œuvrer pour la création d’un instrument juridique pour réagir aux menaces hybrides et à se doter de vastes cybercapacités englobant des réseaux et des dispositifs de communication et de partage d’informations sûrs, la formation et les exercices, y compris dans le cadre de projets CSP, et usant dûment de la boîte à outils cyberdiplomatique de l’UE; préconise de réexaminer d’urgence le cadre stratégique de cyberdéfense afin de consolider les capacités de prévention, d’imputation, de dissuasion et de réaction de l’Union et de ses États membres grâce au renforcement de leur position, de leur connaissance de la situation, de leurs outils et de leurs procédures; souligne que toutes les institutions de l’Union et tous les États 
+      ; invite l’Union et les États membres à améliorer leurs capacités de détection des menaces hybrides; insiste pour que l’Union et les États membres réagissent de manière résolue et coordonnée à toute cyberactivité malveillante, illégale ou déstabilisatrice en mettant pleinement en œuvre les instruments de l’UE, en coordination avec ses partenaires; invite les États membres à améliorer leurs capacités nationales en matière de cyberdéfense; invite l’Union à œuvrer pour la création d’un instrument juridique pour réagir aux menaces hybrides et à se doter de vastes cybercapacités englobant des réseaux et des dispositifs de communication et de partage d’informations sûrs, la formation et les exercices, y compris dans le cadre de projets CSP, et usant dûment de la boîte à outils cyberdiplomatique de l’UE; préconise de réexaminer d’urgence le cadre stratégique de cyberdéfense afin de consolider les capacités de prévention, d’imputation, de dissuasion et de réaction de l’Union et de ses États membres grâce au renforcement de leur position, de leur connaissance de la situation, de leurs outils et de leurs procédures; souligne que toutes les institutions de l’Union et tous les États
   
 
   
-      <del>   </del>
+      <del>    </del>
   
 
   
-      membres de l’Union doivent davantage 
+      <ins> </ins>
   
 
   
-      <ins>   </ins>
+      membres de l’Union doivent davantage
   
 
   
-      coopérer à tous les niveaux pour élaborer une stratégie de cybersécurité, dont l’objet principal devrait être de renforcer encore la résilience et de développer la coopération et des cybercapacités civiles et militaires communes plus efficaces et solides à l’échelon national afin de faire face aux enjeux persistants en matière de sécurité; salue, à cet égard, la politique de cyberdéfense européenne annoncée dans le discours sur l’état de l’Union de 2021; se félicite du renforcement de la coopération entre les États membres dans le domaine de la cyberdéfense dans le cadre de la CSP, au regard notamment des équipes d’intervention rapide en cas d’incident informatique; rappelle que la réussite des missions et des opérations de l’Union dépend de plus en plus d’un accès ininterrompu à un cyberespace sécurisé et nécessite par conséquent des cybercapacités opérationnelles solides et résilientes ainsi que des réponses appropriées aux attaques contre les installations, les missions et les opérations militaires; reconnaît que la cyberdéfense est, dans une certaine mesure, plus efficace si elle est assortie de moyens et de dispositifs offensifs, dont la mise en œuvre doit toutefois être conforme au droit international; s’inquiète que l’Union et ses États membres soient tributaires d’outils étrangers pour garantir leur cybersécurité; souligne qu’il convient de développer la culture de la cybersécurité au sein des entités publiques et privées européennes, notamment grâce à l’introduction de cours et de programmes de formation spécifiques; note l’important travail de formation réalisé par le Collège européen de sécurité et de défense (CESD) sur la cyberdéfense et se félicite, à cet égard, de la création de la plateforme de formation, d’entraînement, d’exercices et d’évaluation dans le domaine du cyber; souligne que le CESD devrait bénéficier d’un financement structurel de l’Union afin de pouvoir contribuer davantage au développement 
+      <del> </del>
   
 
   
-      <del>   </del>
+      <ins>    </ins>
   
 
   
-      des compétences en matière de 
+      coopérer à tous les niveaux pour élaborer une stratégie de cybersécurité, dont l’objet principal devrait être de renforcer encore la résilience et de développer la coopération et des cybercapacités civiles et militaires communes plus efficaces et solides à l’échelon national afin de faire face aux enjeux persistants en matière de sécurité; salue, à cet égard, la politique de cyberdéfense européenne annoncée dans le discours sur l’état de l’Union de 2021; se félicite du renforcement de la coopération entre les États membres dans le domaine de la cyberdéfense dans le cadre de la CSP, au regard notamment des équipes d’intervention rapide en cas d’incident informatique; rappelle que la réussite des missions et des opérations de l’Union dépend de plus en plus d’un accès ininterrompu à un cyberespace sécurisé et nécessite par conséquent des cybercapacités opérationnelles solides et résilientes ainsi que des réponses appropriées aux attaques contre les installations, les missions et les opérations militaires; reconnaît que la cyberdéfense est, dans une certaine mesure, plus efficace si elle est assortie de moyens et de dispositifs offensifs, dont la mise en œuvre doit toutefois être conforme au droit international; s’inquiète que l’Union et ses États membres soient tributaires d’outils étrangers pour garantir leur cybersécurité; souligne qu’il convient de développer la culture de la cybersécurité au sein des entités publiques et privées européennes, notamment grâce à l’introduction de cours et de programmes de formation spécifiques; note l’important travail de formation réalisé par le Collège européen de sécurité et de défense (CESD) sur la cyberdéfense et se félicite, à cet égard, de la création de la plateforme de formation, d’entraînement, d’exercices et d’évaluation dans le domaine du cyber; souligne que le CESD devrait bénéficier d’un financement structurel de l’Union afin de pouvoir contribuer davantage au développement
   
 
   
-      <ins>   </ins>
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
+  
+
+  
+      des compétences en matière de
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
   
 
   
       cyberdéfense dans l’Union, au vu notamment du besoin accru en experts informatiques de haut niveau; reconnaît l’importance croissante des capacités de cyber-renseignement et des capacités informatisées de renseignement; souligne que celles-ci représentent des menaces pour tous les États membres et les institutions de l’Union; exhorte toutes les institutions de l’Union et tous ses États membres à poursuivre l’amélioration des cybertechnologies et des technologies informatisées et continue d’encourager la coopération autour de ces progrès technologiques; recommande d’explorer les possibilités de favoriser le renforcement des cybercapacités de nos partenaires, par exemple en étendant le mandat des missions de formation de l’Union aux questions de cyberdéfense ou en lançant des missions de cybersécurité civiles; accueille favorablement l’imposition de sanctions contre les auteurs russes, chinois et nord-coréens de cyberattaques, notamment WannaCry, NotPetya et Operation Cloud Hopper;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">252</div>
+  <div class="against">404</div>
+  <div class="abstention">31</div>
+</span>
+
+  
+    
+    <a href="/voting/139205">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(252/687 * 100%)">252</div>
-  
-  
-    <div class="-" style="width: calc(404/687 * 100%)">404</div>
-  
-  
-    <div class="0" style="width: calc(31/687 * 100%)">31</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139205">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°12 | 
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       62. invite les États membres de l’Union 
@@ -809,637 +985,675 @@
       à faire en sorte que leurs budgets de défense nationaux représentent au moins 2 % de leur PIB;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">327</div>
+  <div class="against">315</div>
+  <div class="abstention">44</div>
+</span>
+
+  
+    
+    <a href="/voting/139214">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(327/686 * 100%)">327</div>
-  
-  
-    <div class="-" style="width: calc(315/686 * 100%)">315</div>
-  
-  
-    <div class="0" style="width: calc(44/686 * 100%)">44</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139214">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°14 | 
+        
+            <article id="14">
+            <header>📝 Amendement n°14 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
-
-  
-      96. sera particulièrement attentif à ce que la spécificité des questions militaires soit mieux prise en compte dans le droit de l’Union européenne; rappelle, à cet effet, que le Parlement est favorable à la préservation du statut de l’armée, qui répond aux exigences très spécifiques du métier de militaire et constitue un gage d’efficacité des forces armées dans chacun des États membres; préconise de préserver les moyens d’intervention des services de renseignement, 
-  
+<p>
 
   
-      <del>car ils ne peuvent assumer leur mission de protection de la sécurité nationale sans conserver un accès à des données de connexion communiquées dans leur intégralité, à titre préventif, pendant une durée suffisante, </del>
+      96. sera particulièrement attentif à ce que la spécificité des questions militaires soit mieux prise en compte dans le droit de l’Union européenne; rappelle, à cet effet, que le Parlement est favorable à la préservation du statut de l’armée, qui répond aux exigences très spécifiques du métier de militaire et constitue un gage d’efficacité des forces armées dans chacun des États membres; préconise de préserver les moyens d’intervention des services de renseignement,
   
 
   
-      sous le contrôle des tribunaux nationaux et dans le respect de la convention européenne des droits de l’homme; prend acte de l’adoption par le Conseil de l’orientation générale sur le ciel unique européen; rappelle la nécessité de préserver la souveraineté des États membres et la liberté d’action des forces armées européennes; rappelle, au regard de la prestation de services, les impératifs de sécurité nationale liés à la fiabilité et à l’intégrité des données ainsi qu’à l’accès à celles-ci, et insiste sur le fait que l’introduction dans la réglementation de l’Union de clauses de sauvegarde liées au 
+      <del> car ils ne peuvent assumer leur mission de protection de la sécurité nationale sans conserver un accès à des données de connexion communiquées dans leur intégralité, à titre préventif, pendant une durée suffisante,</del>
   
 
   
-      <del>   </del>
+       sous le contrôle des tribunaux nationaux et dans le respect de la convention européenne des droits de l’homme; prend acte de l’adoption par le Conseil de l’orientation générale sur le ciel unique européen; rappelle la nécessité de préserver la souveraineté des États membres et la liberté d’action des forces armées européennes; rappelle, au regard de la prestation de services, les impératifs de sécurité nationale liés à la fiabilité et à l’intégrité des données ainsi qu’à l’accès à celles-ci, et insiste sur le fait que l’introduction dans la réglementation de l’Union de clauses de sauvegarde liées au
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
       domaine militaire devrait permettre de répondre à ce double enjeu;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">252</div>
+  <div class="against">404</div>
+  <div class="abstention">30</div>
+</span>
+
+  
+    
+    <a href="/voting/139230">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(252/686 * 100%)">252</div>
-  
-  
-    <div class="-" style="width: calc(404/686 * 100%)">404</div>
-  
-  
-    <div class="0" style="width: calc(30/686 * 100%)">30</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139230">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°15 | 
+        
+            <article id="15">
+            <header>📝 Amendement n°15 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>43 bis. condamne vigoureusement l’instrumentalisation de la migration par certains États; s’inquiète du fait que l’Union soit devenue vulnérable face à de telles attaques en mettant en œuvre sa «Wilkommenspolitik» depuis 2015;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">147</div>
+  <div class="against">524</div>
+  <div class="abstention">13</div>
+</span>
+
+  
+    
+    <a href="/voting/139206">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(147/684 * 100%)">147</div>
-  
-  
-    <div class="-" style="width: calc(524/684 * 100%)">524</div>
-  
-  
-    <div class="0" style="width: calc(13/684 * 100%)">13</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139206">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°16 | 
+        
+            <article id="16">
+            <header>📝 Amendement n°16 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      82. se félicite de la signature de l’accord de coopération stratégique militaire et de défense entre la Grèce et la France, qui constitue une évolution 
-  
+<p>
 
   
-      <del>positive sur la voie de l’autonomie stratégique européenne et de la création d’une Union européenne de la défense authentique et opérationnelle;</del>
+      82. se félicite de la signature de l’accord de coopération stratégique militaire et de défense entre la Grèce et la France, qui constitue une évolution positive
   
 
   
-      <ins>positive; souligne que les projets de défense commune ont toujours été fondés sur la coopération transnationale; refuse toute dérive fédéraliste dans ce domaine telle qu’envisagée par la Commission;</ins>
+      <del> sur la voie de l’autonomie stratégique européenne et de la création d’une Union européenne de la défense authentique et opérationnelle</del>
   
 
   
-       invite à une coopération renforcée avec les pays partenaires de la Méditerranée dans la lutte contre l’extrémisme et le terrorisme, le trafic d’armes et la traite d’êtres humains;
+      <ins>; souligne que les projets de défense commune ont toujours été fondés sur la coopération transnationale; refuse toute dérive fédéraliste dans ce domaine telle qu’envisagée par la Commission</ins>
+  
+
+  
+      ; invite à une coopération renforcée avec les pays partenaires de la Méditerranée dans la lutte contre l’extrémisme et le terrorisme, le trafic d’armes et la traite d’êtres humains;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">139</div>
+  <div class="against">524</div>
+  <div class="abstention">12</div>
+</span>
+
+  
+    
+    <a href="/voting/139224">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(139/675 * 100%)">139</div>
-  
-  
-    <div class="-" style="width: calc(524/675 * 100%)">524</div>
-  
-  
-    <div class="0" style="width: calc(12/675 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139224">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°17 | 
+        
+            <article id="17">
+            <header>📝 Amendement n°17 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       91. rappelle 
   
 
   
-      <del>le rôle joué par le haut représentant de l’Union pour les affaires étrangères et la politique de sécurité; invite les États membres à évaluer la réforme de la procédure de prise de décision, notamment de l’article 31 du traité UE, qui étend le vote à la majorité qualifiée à la politique étrangère et de sécurité de l’Union dans les domaines liés à la PSDC, ainsi qu’à envisager la mise en œuvre pleine et entière des clauses passerelles et du champ d’application des articles renforçant la solidarité et l’assistance mutuelle de l’Union en cas de crise;</del>
+      <del>le rôle joué par le haut représentant de l’Union pour les affaires étrangères et la politique de sécurité; invite les États membres à évaluer la réforme de la procédure de prise de décision, notamment de l’article 31 du traité UE, qui étend le vote à la majorité qualifiée à la politique étrangère et de sécurité de l’Union dans les domaines liés à la PSDC, ainsi qu’à envisager la mise en œuvre pleine et entière des clauses passerelles et du champ d’application des articles renforçant la solidarité et l’assistance mutuelle de l’Union en cas de crise</del>
   
 
   
-      <ins>que les traités prévoient la possibilité d’améliorer les procédures décisionnelles; souligne toutefois qu’afin de préserver la souveraineté des États membres, l’unanimité doit rester la règle dans les procédures décisionnelles du Conseil pour ce qui est des questions de politique étrangère et de sécurité; estime que les intérêts nationaux des États membres sont très différents en raison des réalités géopolitiques et que ces intérêts ne peuvent être préservés que par l’unanimité, étant donné que tout système de vote à la majorité porte en lui le risque d’ignorer et de saper les intérêts nationaux vitaux;</ins>
+      <ins>que les traités prévoient la possibilité d’améliorer les procédures décisionnelles; souligne toutefois qu’afin de préserver la souveraineté des États membres, l’unanimité doit rester la règle dans les procédures décisionnelles du Conseil pour ce qui est des questions de politique étrangère et de sécurité; estime que les intérêts nationaux des États membres sont très différents en raison des réalités géopolitiques et que ces intérêts ne peuvent être préservés que par l’unanimité, étant donné que tout système de vote à la majorité porte en lui le risque d’ignorer et de saper les intérêts nationaux vitaux</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">151</div>
+  <div class="against">504</div>
+  <div class="abstention">29</div>
+</span>
+
+  
+    
+    <a href="/voting/139227">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(151/684 * 100%)">151</div>
-  
-  
-    <div class="-" style="width: calc(504/684 * 100%)">504</div>
-  
-  
-    <div class="0" style="width: calc(29/684 * 100%)">29</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139227">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°18 | 
+        
+            <article id="18">
+            <header>📝 Amendement n°18 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       F. considérant que la complexification croissante des menaces est liée au développement technologique, à la numérisation des sociétés et à l’intégration des économies internationales; qu’en conséquence se multiplient les menaces hybrides combinant des moyens militaires et/ou non militaires tels que la désinformation, 
   
 
   
-      <del>le chantage migratoire,</del>
+      <del>le chantage migratoire</del>
   
 
   
-      <ins>l&#39;instrumentalisation de la migration,</ins>
+      <ins>l&#39;instrumentalisation de la migration</ins>
   
 
   
-       les cyberattaques ou les pressions économiques qui vont à l’encontre des intérêts et valeurs européens et représentent un péril croissant pour la sécurité de l’Union, ses entreprises, ses services publics et ses citoyens;
+      , les cyberattaques ou les pressions économiques qui vont à l’encontre des intérêts et valeurs européens et représentent un péril croissant pour la sécurité de l’Union, ses entreprises, ses services publics et ses citoyens;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">308</div>
+  <div class="against">343</div>
+  <div class="abstention">36</div>
+</span>
+
+  
+    
+    <a href="/voting/139232">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(308/687 * 100%)">308</div>
-  
-  
-    <div class="-" style="width: calc(343/687 * 100%)">343</div>
-  
-  
-    <div class="0" style="width: calc(36/687 * 100%)">36</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139232">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°19 | 
+        
+            <article id="19">
+            <header>📝 Amendement n°19 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       H. considérant que la communauté internationale, et notamment l’Union européenne, a pris des engagements envers le Sahel, et en particulier le Mali; que la junte malienne a fait 
   
 
   
-      <del>des déclarations quant à sa disposition à faire appel à une société de sécurité privée russe </del>
+      <del>des déclarations quant à sa disposition à faire appel à une société de sécurité privée russe</del>
   
 
   
-      <ins>appel à des instructeurs militaires russes et à des mercenaires liés au groupe Wagner et qu’elle les a déjà fait intervenir </ins>
+      <ins>appel à des instructeurs militaires russes et à des mercenaires liés au groupe Wagner et qu’elle les a déjà fait intervenir</ins>
   
 
   
-      pour participer à des activités militaires au Mali; que cette société a perpétré des atrocités partout où elle est intervenue;
+       pour participer à des activités militaires au Mali; que cette société a perpétré des atrocités partout où elle est intervenue;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">609</div>
+  <div class="against">43</div>
+  <div class="abstention">34</div>
+</span>
+
+  
+    
+    <a href="/voting/139234">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(609/686 * 100%)">609</div>
-  
-  
-    <div class="-" style="width: calc(43/686 * 100%)">43</div>
-  
-  
-    <div class="0" style="width: calc(34/686 * 100%)">34</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139234">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°20 | 
+        
+            <article id="20">
+            <header>📝 Amendement n°20 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      - à des menaces nouvelles et évolutives émanant d’acteurs étatiques et non étatiques dans un monde multipolaire, telles que le terrorisme, la montée de l’autoritarisme, des menaces hybrides prenant la forme de moyens de guerre hybrides tels que les cyberattaques, 
-  
+<p>
 
   
-      <del>ainsi que l’instrumentalisation des migrations, </del>
+      - à des menaces nouvelles et évolutives émanant d’acteurs étatiques et non étatiques dans un monde multipolaire, telles que le terrorisme, la montée de l’autoritarisme, des menaces hybrides prenant la forme de moyens de guerre hybrides tels que les cyberattaques,
   
 
   
-      la désinformation et les ingérences étrangères, qui ont brouillé les frontières entre la guerre et la paix, les menaces croissantes pesant sur les ressources naturelles et la sécurité énergétique, mais aussi le changement climatique;
+      <del> ainsi que l’instrumentalisation des migrations,</del>
+  
+
+  
+       la désinformation et les ingérences étrangères, qui ont brouillé les frontières entre la guerre et la paix, les menaces croissantes pesant sur les ressources naturelles et la sécurité énergétique, mais aussi le changement climatique;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">149</div>
+  <div class="against">529</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    
+    <a href="/voting/139184">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(149/687 * 100%)">149</div>
-  
-  
-    <div class="-" style="width: calc(529/687 * 100%)">529</div>
-  
-  
-    <div class="0" style="width: calc(9/687 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139184">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°21 | 
+        
+            <article id="21">
+            <header>📝 Amendement n°21 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      - à un voisinage toujours 
-  
+<p>
 
   
-      <del>instable, tant à l’Est qu’au Sud;</del>
+      - à un voisinage toujours instable
   
 
   
-      <ins>instable au Sud et très instable à l’Est;</ins>
+      <del>, tant à l’Est qu’au Sud</del>
+  
+
+  
+      <ins> au Sud et très instable à l’Est</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">120</div>
+  <div class="against">523</div>
+  <div class="abstention">44</div>
+</span>
+
+  
+    
+    <a href="/voting/139185">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(120/687 * 100%)">120</div>
-  
-  
-    <div class="-" style="width: calc(523/687 * 100%)">523</div>
-  
-  
-    <div class="0" style="width: calc(44/687 * 100%)">44</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139185">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°22 | 
+        
+            <article id="22">
+            <header>📝 Amendement n°22 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       10. déplore l’action des putschistes au Mali; est profondément préoccupé par la présence insuffisante des services essentiels de l’État sur le territoire du Mali et au Sahel en général; exprime sa profonde inquiétude face à la dégradation sécuritaire dans la région; est vivement préoccupé par les rapports du secrétaire général des Nations unies qui font état de graves violations passées et en cours des droits de l’homme et de graves violations du droit international humanitaire, notamment de crimes de guerre présumés, commises par des groupes armés, dont des groupes terroristes, les forces armées maliennes et d’autres forces armées du G5 Sahel; regrette profondément l’impunité en la matière et souligne que ces crimes commis actuellement nuisent également aux efforts européens et internationaux visant à instaurer un environnement sûr et sécurisé et à combattre les groupes armés et les terroristes; fait observer que des acteurs hostiles interviennent toujours plus dans une région vitale pour notre sécurité et pourraient mettre à mal l’objectif commun de l’Union et du Mali, à savoir instaurer la sécurité humaine, la paix, la stabilité et le développement durable dans le pays, où d’autres acteurs qui ne partagent pas nécessairement les mêmes 
   
 
   
-      <del>principes éthiques </del>
+      <del>principes éthiques</del>
   
 
   
-      <ins>normes, valeurs et principes    internationaux et universels </ins>
+      <ins>normes, valeurs et principes    internationaux et universels</ins>
   
 
   
-      que l’Union et ses États 
+       que l’Union et ses États
   
 
   
-      <del>   </del>
+      <del>    </del>
   
 
   
-      membres entendent combler les lacunes en matière de capacités, en faisant fi des normes internationales en matière d’état de 
+      <ins> </ins>
   
 
   
-      <del>droit ou du droit des conflits armés;</del>
+      membres entendent combler les lacunes en matière de capacités, en faisant fi des normes internationales en matière d’état de droit
   
 
   
-      <ins>droit, du droit humanitaire international et du droit international en matière de droits de l’homme;</ins>
+      <del> ou du droit des conflits armés</del>
   
 
   
-       se déclare vivement préoccupé par l’influence grandissante des sociétés militaires privées étrangères et par les projets éventuels du gouvernement malien d’entamer une coopération avec une société militaire privée russe, le groupe Wagner, proche du Kremlin, pour la formation de ses forces armées; fait remarquer qu’une telle coopération est incompatible avec la coopération de l’Union dans les domaines de la sécurité et de la défense, notamment avec l’EUTM Mali, et que l’Union devrait donc réévaluer son engagement au Mali; Demande instamment aux autorités maliennes en place de s’abstenir de conclure tout contrat avec le groupe Wagner et de ne pas autoriser son personnel à entrer sur le territoire malien; insiste, de manière plus générale, sur la nécessité de suivre de près les actions des sociétés militaires et de sécurité privées qui étendent leur influence à l’échelle mondiale dans des régions vulnérables, notamment en Afrique, en Amérique latine et en Europe orientale, et rappelle qu’il importe de tenir le Parlement informé de la situation;
+      <ins>, du droit humanitaire international et du droit international en matière de droits de l’homme</ins>
+  
+
+  
+      ; se déclare vivement préoccupé par l’influence grandissante des sociétés militaires privées étrangères et par les projets éventuels du gouvernement malien d’entamer une coopération avec une société militaire privée russe, le groupe Wagner, proche du Kremlin, pour la formation de ses forces armées; fait remarquer qu’une telle coopération est incompatible avec la coopération de l’Union dans les domaines de la sécurité et de la défense, notamment avec l’EUTM Mali, et que l’Union devrait donc réévaluer son engagement au Mali; Demande instamment aux autorités maliennes en place de s’abstenir de conclure tout contrat avec le groupe Wagner et de ne pas autoriser son personnel à entrer sur le territoire malien; insiste, de manière plus générale, sur la nécessité de suivre de près les actions des sociétés militaires et de sécurité privées qui étendent leur influence à l’échelle mondiale dans des régions vulnérables, notamment en Afrique, en Amérique latine et en Europe orientale, et rappelle qu’il importe de tenir le Parlement informé de la situation;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">202</div>
+  <div class="against">472</div>
+  <div class="abstention">13</div>
+</span>
+
+  
+    
+    <a href="/voting/139193">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(202/687 * 100%)">202</div>
-  
-  
-    <div class="-" style="width: calc(472/687 * 100%)">472</div>
-  
-  
-    <div class="0" style="width: calc(13/687 * 100%)">13</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139193">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°23 | 
+        
+            <article id="23">
+            <header>📝 Amendement n°23 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>16 bis. plaide instamment pour un large débat public sur l’intervention de l’Union au Mozambique et demande à l’Union de s’engager en faveur d’une approche intégrée effective qui tienne compte des causes profondes des troubles dans le Cabo Delgado; rappelle les déplacements forcés par les forces de sécurité, les inégalités importantes, les régions négligées par le gouvernement central, les luttes pour les ressources naturelles, la corruption massive et les nombreuses violations de divers droits dont il est fait état; note que le fait que les bénéfices tirés de l’exploitation des ressources naturelles ne sont pas redistribués à l’échelon local joue un rôle important dans les troubles et déplore le rôle joué par le projet d’exploitation de gaz naturel mené par des entreprises implantées dans l’Union;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">148</div>
+  <div class="against">515</div>
+  <div class="abstention">24</div>
+</span>
+
+  
+    
+    <a href="/voting/139194">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(148/687 * 100%)">148</div>
-  
-  
-    <div class="-" style="width: calc(515/687 * 100%)">515</div>
-  
-  
-    <div class="0" style="width: calc(24/687 * 100%)">24</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139194">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°24 | 
+        
+            <article id="24">
+            <header>📝 Amendement n°24 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       18. salue l’engagement sans équivoque du Conseil en faveur de l’opération EUFOR Althea affiché dans ses conclusions du 18 octobre 2021; souligne que l’opération avait été renouvelée en 2020, avec un mandat recentré sur le soutien aux autorités de Bosnie‑Herzégovine en vue de maintenir un environnement sûr et sécurisé, engagement confirmé dans le troisième examen stratégique de l’opération présenté en juin 2021; rappelle que cette mission a posé les jalons de la paix, de la stabilisation et de l’intégration européenne de la Bosnie-Herzégovine et qu’elle joue toujours un rôle essentiel pour la sécurité et la stabilité de la Bosnie-Herzégovine et de la région; rappelle que l’expérience et les enseignements tirés de cette mission sont précieux pour l’ensemble des missions et opérations militaires et civiles actuelles et futures de la PSDC; s’inquiète des 
@@ -1450,35 +1664,19 @@
   
 
   
-      actions anticonstitutionnelles et sécessionnistes du membre serbe de la présidence de la Bosnie-Herzégovine, Milorad Dodik, qui mettraient à mal l’accord de paix de Dayton et, partant, la sécurité et la paix dans l’ensemble de la région; souligne qu’une capacité de renforcement transhorizon suffisante doit encore être maintenue afin de permettre une réaction rapide en cas de détérioration 
+      actions anticonstitutionnelles et sécessionnistes du membre serbe de la présidence de la Bosnie-Herzégovine, Milorad Dodik, qui mettraient à mal l’accord de paix de Dayton et, partant, la sécurité et la paix dans l’ensemble de la région; souligne qu’une capacité de renforcement transhorizon suffisante doit encore être maintenue afin de permettre une réaction rapide en cas de détérioration
   
 
   
-      <ins>de la </ins>
+      <del>    </del>
   
 
   
-         
+      <ins> </ins>
   
 
   
-      <del>de la </del>
-  
-
-  
-      situation sur le plan de la sécurité; souligne que cette mission pourrait être étayée par des canaux d’information et de communication sécurisés vers les capitales des États membres et par l’amélioration des capacités de collecte et d’analyse du renseignement de source 
-  
-
-  
-      <del>ouverte;</del>
-  
-
-  
-      <ins>ouverte, et qu&#39;il faut encore renforcer les capacités militaires et déployer immédiatement une force militaire de dissuasion dans le district de Brčko;</ins>
-  
-
-  
-       insiste sur l’importance de poursuivre l’activité secondaire de déminage et la formation collective des forces armées de Bosnie-
+      de la
   
 
   
@@ -1486,468 +1684,530 @@
   
 
   
+      <ins>    </ins>
+  
+
+  
+      situation sur le plan de la sécurité; souligne que cette mission pourrait être étayée par des canaux d’information et de communication sécurisés vers les capitales des États membres et par l’amélioration des capacités de collecte et d’analyse du renseignement de source ouverte
+  
+
+  
+      <ins>, et qu&#39;il faut encore renforcer les capacités militaires et déployer immédiatement une force militaire de dissuasion dans le district de Brčko</ins>
+  
+
+  
+      ; insiste sur l’importance de poursuivre l’activité secondaire de déminage et la formation collective des forces armées de Bosnie
+  
+
+  
+      <del>- </del>
+  
+
+  
+      <ins>-</ins>
+  
+
+  
       Herzégovine; prie instamment les États membres d’honorer leurs engagements en matière de constitution des forces pour l’opération Althea; se réjouit de la participation de l’Ukraine à la mission Althea; met en exergue l’importance de la coopération entre l’Union européenne et l’OTAN dans les Balkans occidentaux, notamment dans le cadre de la mission EUFOR Althea, dont le quartier général d’opération est situé au Grand Quartier général des Puissances alliées en Europe (SHAPE) grâce aux arrangements «Berlin Plus»;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">202</div>
+  <div class="against">418</div>
+  <div class="abstention">67</div>
+</span>
+
+  
+    
+    <a href="/voting/139195">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(202/687 * 100%)">202</div>
-  
-  
-    <div class="-" style="width: calc(418/687 * 100%)">418</div>
-  
-  
-    <div class="0" style="width: calc(67/687 * 100%)">67</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139195">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°25 | 
+        
+            <article id="25">
+            <header>📝 Amendement n°25 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      22. encourage le déploiement de membres de la mission d’assistance de l’Union européenne pour une gestion intégrée des frontières en Libye (EUBAM Libya) à Tripoli, d’où la mission mènera ses activités; propose que cette mission, menée en vue d’aider les autorités libyennes, dans le domaine de la gestion des frontières, à démanteler les réseaux criminels organisés impliqués dans 
-  
+<p>
 
   
-      <del>le trafic de migrants, </del>
+      22. encourage le déploiement de membres de la mission d’assistance de l’Union européenne pour une gestion intégrée des frontières en Libye (EUBAM Libya) à Tripoli, d’où la mission mènera ses activités; propose que cette mission, menée en vue d’aider les autorités libyennes, dans le domaine de la gestion des frontières, à démanteler les réseaux criminels organisés impliqués dans
   
 
   
-      la traite des êtres humains et le terrorisme, continue d’explorer, dans le cadre d’une stratégie régionale, les possibilités de soutien au développement, sous l’égide de l’Union, des capacités de gestion des frontières des États du Sahel, en lien avec les missions de la PSDC au Sahel (en particulier l’EUCAP Sahel Niger); est préoccupé par le sort des 
+      <del> le trafic de migrants,</del>
   
 
   
-      <del>migrants, des demandeurs d’asile </del>
+       la traite des êtres humains et le terrorisme, continue d’explorer, dans le cadre d’une stratégie régionale, les possibilités de soutien au développement, sous l’égide de l’Union, des capacités de gestion des frontières des États du Sahel, en lien avec les missions de la PSDC au Sahel (en particulier l’EUCAP Sahel Niger); est préoccupé par le sort des migrants
   
 
   
-      <ins>migrants </ins>
+      <del>, des demandeurs d’asile</del>
   
 
   
-      et des réfugiés en Libye; demande que les autorités et milices libyennes ferment les centres de détention des migrants;
+       et des réfugiés en Libye; demande que les autorités et milices libyennes ferment les centres de détention des migrants;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">121</div>
+  <div class="against">557</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    
+    <a href="/voting/139196">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(121/687 * 100%)">121</div>
-  
-  
-    <div class="-" style="width: calc(557/687 * 100%)">557</div>
-  
-  
-    <div class="0" style="width: calc(9/687 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139196">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°26 | 
+        
+            <article id="26">
+            <header>📝 Amendement n°26 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>23 bis. déplore le partage d’informations entre IRINI et Frontex depuis la conclusion de l’accord de travail du 15 janvier 2021 dotant l’Union de moyens militaires pour détecter et repousser les migrants, lequel risque fort de contribuer au refoulement;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">144</div>
+  <div class="against">515</div>
+  <div class="abstention">28</div>
+</span>
+
+  
+    
+    <a href="/voting/139197">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(144/687 * 100%)">144</div>
-  
-  
-    <div class="-" style="width: calc(515/687 * 100%)">515</div>
-  
-  
-    <div class="0" style="width: calc(28/687 * 100%)">28</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139197">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°27 | 
+        
+            <article id="27">
+            <header>📝 Amendement n°27 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      29. est très préoccupé par la faible constitution de forces pour les opérations et missions, et demande instamment aux États membres d’y remédier dans les plus brefs délais; invite instamment l’Union et ses États membres à doter les missions et opérations de la PSDC du personnel, de la formation et des capacités dont elles ont besoin pour accomplir leur mandat et se montrer plus réactives et plus résilientes dans des conditions moins favorables; met en avant, à cet égard, le projet CSP «Noyau opérationnel de réaction aux crises» actuellement en discussion, qui vise à améliorer le processus de constitution de forces; regrette en même temps que, jusqu’à présent, seuls six États membres participent à ce projet CSP; invite le Conseil et la Commission à exploiter pleinement la facilité européenne pour la paix et les possibilités de 
-  
+<p>
 
   
-      <del>financement sur le budget de l’Union prévues par les traités afin de faciliter la constitution de forces ainsi que les déploiements militaires;</del>
+      29. est très préoccupé par la faible constitution de forces pour les opérations et missions, et demande instamment aux États membres d’y remédier dans les plus brefs délais; invite instamment l’Union et ses États membres à doter les missions et opérations de la PSDC du personnel, de la formation et des capacités dont elles ont besoin pour accomplir leur mandat et se montrer plus réactives et plus résilientes dans des conditions moins favorables; met en avant, à cet égard, le projet CSP «Noyau opérationnel de réaction aux crises» actuellement en discussion, qui vise à améliorer le processus de constitution de forces; regrette en même temps que, jusqu’à présent, seuls six États membres participent à ce projet CSP; invite le Conseil et la Commission à exploiter pleinement la facilité européenne pour la paix et les possibilités de financement
   
 
   
-      <ins>financement, conformément à l’article 41, paragraphe 2, du traité UE;</ins>
+      <del> sur le budget de l’Union prévues par les traités afin de faciliter la constitution de forces ainsi que les déploiements militaires</del>
   
 
   
-       encourage la participation de pays tiers aux missions et opérations de la PSDC dans le respect des intérêts et des valeurs européens; 
+      <ins>, conformément à l’article 41, paragraphe 2, du traité UE</ins>
   
 
   
-      <del>Considère que </del>
+      ; encourage la participation de pays tiers aux missions et opérations de la PSDC dans le respect des intérêts et des valeurs européens; 
   
 
   
-      <ins>considèreque </ins>
+      <del>Considère que</del>
   
 
   
-      cette participation devrait être élargie quand et où cela est approprié;
+      <ins>considèreque</ins>
+  
+
+  
+       cette participation devrait être élargie quand et où cela est approprié;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">106</div>
+  <div class="against">512</div>
+  <div class="abstention">69</div>
+</span>
+
+  
+    
+    <a href="/voting/139198">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(106/687 * 100%)">106</div>
-  
-  
-    <div class="-" style="width: calc(512/687 * 100%)">512</div>
-  
-  
-    <div class="0" style="width: calc(69/687 * 100%)">69</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139198">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°28 | 
+        
+            <article id="28">
+            <header>📝 Amendement n°28 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       35. 
   
 
   
-      <del>appuiel’</del>
+      <del>appuiel</del>
   
 
   
-      <ins>appuie l’</ins>
+      <ins>appuie l</ins>
   
 
   
-      ambition, portée par le VP/HR, de créer un corps d’intervention rapide, fort d’un contingent terrestre de composantes aériennes, maritimes et de forces spéciales, mobilisable en cas d’urgence sécuritaire; rappelle que l’Union manque aujourd’hui du savoir-faire et des capacités terrestres, maritimes et aériennes nécessaires pour mener des opérations de première intervention afin de rétablir la sécurité sur un théâtre d’opérations; estime qu’il serait judicieux et essentiel que, dans un premier temps, les États membres conviennent, dans le cadre de la boussole stratégique, des circonstances qui rendraient nécessaire la mobilisation d’une telle force, et qu’ils s’accordent sur un ou plusieurs scénarios opérationnels, y compris pour les cas de figure où les délais sont extrêmement courts; rappelle toutefois qu’en plus de 15 ans d’existence, les groupements tactiques de l’Union n’ont jamais été utilisés, notamment en raison de l’absence de consensus politique entre les États membres et de la complexité de la mise en œuvre et du financement, alors que l’occasion de les déployer s’est présentée à plusieurs reprises; rappelle la nécessité de rendre ces groupements opérationnels en menant régulièrement des exercices de terrain; déplore le manque d’intérêt des États membres pour ces groupements    tactiques, tant sur le plan politique que pratique; déplore qu’un seul groupement, conduit par l’Italie, fût opérationnel en 2021; s’inquiète de la faiblesse de la planification stratégique pour 2022 et 2023 et réclame sa révision; engage les États membres à renforcer leur engagement en faveur des capacités militaires de l’Union; insiste pour que le concept d’un corps d’intervention rapide apporte une valeur ajoutée par rapport aux groupements tactiques de l’Union; invite dès lors le Conseil et la Commission à évaluer en profondeur, à examiner et à développer les possibilités de mise en place d’une force stationnée en permanence et dont les membres s’entraînent ensemble; 
+      ’ambition, portée par le VP/HR, de créer un corps d’intervention rapide, fort d’un contingent terrestre de composantes aériennes, maritimes et de forces spéciales, mobilisable en cas d’urgence sécuritaire; rappelle que l’Union manque aujourd’hui du savoir-faire et des capacités terrestres, maritimes et aériennes nécessaires pour mener des opérations de première intervention afin de rétablir la sécurité sur un théâtre d’opérations; estime qu’il serait judicieux et essentiel que, dans un premier temps, les États membres conviennent, dans le cadre de la boussole stratégique, des circonstances qui rendraient nécessaire la mobilisation d’une telle force, et qu’ils s’accordent sur un ou plusieurs scénarios opérationnels, y compris pour les cas de figure où les délais sont extrêmement courts; rappelle toutefois qu’en plus de 15 ans d’existence, les groupements tactiques de l’Union n’ont jamais été utilisés, notamment en raison de l’absence de consensus politique entre les États membres et de la complexité de la mise en œuvre et du financement, alors que l’occasion de les déployer s’est présentée à plusieurs reprises; rappelle la nécessité de rendre ces groupements opérationnels en menant régulièrement des exercices de terrain; déplore le manque d’intérêt des États membres pour ces groupements    tactiques, tant sur le plan politique que pratique; déplore qu’un seul groupement, conduit par l’Italie, fût opérationnel en 2021; s’inquiète de la faiblesse de la planification stratégique pour 2022 et 2023 et réclame sa révision; engage les États membres à renforcer leur engagement en faveur des capacités militaires de l’Union; insiste pour que le concept d’un corps d’intervention rapide apporte une valeur ajoutée par rapport aux groupements tactiques de l’Union; invite dès lors le Conseil et la Commission à évaluer en profondeur, à examiner et à développer les possibilités de mise en place d’une force stationnée en permanence et dont les membres s’entraînent ensemble;
   
 
   
-      <del>estime que ce nouveau corps d’intervention rapide devrait soit être le fruit d’une réforme ambitieuse des groupements tactiques, soit remplacer complètement ces derniers afin d’éviter de nouveaux doublons capacitaires dans la PSDC de l’Union; </del>
+      <del> estime que ce nouveau corps d’intervention rapide devrait soit être le fruit d’une réforme ambitieuse des groupements tactiques, soit remplacer complètement ces derniers afin d’éviter de nouveaux doublons capacitaires dans la PSDC de l’Union;</del>
   
 
   
-      partage le niveau d’ambition affiché par le VP/HR en matière de robustesse des outils militaires de l’Union, 
+       partage le niveau d’ambition affiché par le VP/HR en matière de robustesse des outils militaires de l’Union, 
   
 
   
-      <del>et en particulier des instruments ad hoc;</del>
+      <del>et</del>
   
 
   
-      <ins>au regard notamment de la nécessité de mettre en place des capacités multinationales permanentes et fiables;</ins>
+      <ins>au regard notamment de la nécessité de mettre</ins>
   
 
   
-       engage le Conseil et le SEAE à étudier la meilleure façon d’articuler le déploiement des groupements tactiques de l’Union 
+       en 
   
 
   
-      <del>ou </del>
+      <del>particulier</del>
   
 
   
-      <ins>et </ins>
+      <ins>place</ins>
   
 
   
-      du nouveau corps d’intervention rapide, la mise en œuvre de l’article 44 du traité UE et la composante opérationnelle encore inexploitée de la CSP; attend de l’articulation de ces éléments qu’elle permette à l’Union et à ses États membres de réagir rapidement et efficacement aux crises dans son voisinage avec des moyens militaires et de mener à bien les missions énoncées à l’article 43, paragraphe 1, du traité UE, également connues sous le nom de missions de Petersberg;
+       des 
+  
+
+  
+      <del>instruments ad hoc</del>
+  
+
+  
+      <ins>capacités multinationales permanentes et fiables</ins>
+  
+
+  
+      ; engage le Conseil et le SEAE à étudier la meilleure façon d’articuler le déploiement des groupements tactiques de l’Union 
+  
+
+  
+      <del>ou</del>
+  
+
+  
+      <ins>et</ins>
+  
+
+  
+       du nouveau corps d’intervention rapide, la mise en œuvre de l’article 44 du traité UE et la composante opérationnelle encore inexploitée de la CSP; attend de l’articulation de ces éléments qu’elle permette à l’Union et à ses États membres de réagir rapidement et efficacement aux crises dans son voisinage avec des moyens militaires et de mener à bien les missions énoncées à l’article 43, paragraphe 1, du traité UE, également connues sous le nom de missions de Petersberg;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">133</div>
+  <div class="against">493</div>
+  <div class="abstention">61</div>
+</span>
+
+  
+    
+    <a href="/voting/139201">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(133/687 * 100%)">133</div>
-  
-  
-    <div class="-" style="width: calc(493/687 * 100%)">493</div>
-  
-  
-    <div class="0" style="width: calc(61/687 * 100%)">61</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139201">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°29 | 
+        
+            <article id="29">
+            <header>📝 Amendement n°29 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      37. approuve la création de la facilité européenne pour la paix (FEP) en 2020; rappelle que la FEP donnera à l’Union les moyens de répondre plus rapidement et plus efficacement aux enjeux actuels en matière de sécurité et, partant, qu’elle soit rapidement rendue opérationnelle; souligne que les équipements, y compris les équipements létaux, s’il y a lieu, et les formations nécessaires doivent être déployés dans les théâtres d’opération concernés en tenant compte de l’équilibre géographique de la facilité, dans le plein respect des huit critères de la position commune 944, des droits de l’homme et du droit humanitaire, et sous réserve d’une évaluation préalable détaillée des risques, d’une surveillance constante par l’Union de la fourniture de technologies militaires à des acteurs des pays tiers et de dispositions efficaces en matière de 
-  
+<p>
 
   
-      <del>transparence;</del>
+      37. approuve la création de la facilité européenne pour la paix (FEP) en 2020; rappelle que la FEP donnera à l’Union les moyens de répondre plus rapidement et plus efficacement aux enjeux actuels en matière de sécurité et, partant, qu’elle soit rapidement rendue opérationnelle; souligne que les équipements, y compris les équipements létaux, s’il y a lieu, et les formations nécessaires doivent être déployés dans les théâtres d’opération concernés en tenant compte de l’équilibre géographique de la facilité, dans le plein respect des huit critères de la position commune 944, des droits de l’homme et du droit humanitaire, et sous réserve d’une évaluation préalable détaillée des risques, d’une surveillance constante par l’Union de la fourniture de technologies militaires à des acteurs des pays tiers et de dispositions efficaces en matière de transparence
   
 
   
-      <ins>transparence, telles que la publication d&#39;une liste détaillée des équipements militaires fournis aux pays partenaires dans le cadre de la facilité;</ins>
+      <ins>, telles que la publication d&#39;une liste détaillée des équipements militaires fournis aux pays partenaires dans le cadre de la facilité</ins>
   
 
   
-       précise que le SEAE doit assurer une surveillance rigoureuse et garantir la traçabilité et le bon usage du matériel livré à nos partenaires au titre de la FEP, en tenant compte de la démarche holistique adoptée par la FEP; souligne que la FEP ne concerne pas uniquement la fourniture d’équipements à des partenaires, mais 
+      ; précise que le SEAE doit assurer une surveillance rigoureuse et garantir la traçabilité et le bon usage du matériel livré à nos partenaires au titre de la FEP, en tenant compte de la démarche holistique adoptée par la FEP; souligne que la FEP ne concerne pas uniquement la fourniture d’équipements à des partenaires, mais
   
 
   
-      <ins>   </ins>
+      <del> </del>
   
 
   
-      qu’elle constitue également une possibilité de financement des coûts communs d’opérations militaires relevant de la 
+      <ins>    </ins>
   
 
   
-      <del>   </del>
+      qu’elle constitue également une possibilité de financement des coûts communs d’opérations militaires relevant de la
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
       PSDC, qui devrait être utilisée dans la mesure nécessaire; s’engage à veiller à la cohérence et à la complémentarité entre les missions et opérations PSDC, l’IVCDCI et la FEP; plaide une nouvelle fois pour la création d’une division administrative au sein du SEAE pour gérer ce nouvel instrument; insiste sur la nécessité d’utiliser la boussole stratégique pour élaborer une vision claire de la manière dont les États membres souhaitent utiliser la FEP à court, à moyen et long terme;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">301</div>
+  <div class="against">378</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/139202">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(301/687 * 100%)">301</div>
-  
-  
-    <div class="-" style="width: calc(378/687 * 100%)">378</div>
-  
-  
-    <div class="0" style="width: calc(8/687 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139202">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°30 | 
+        
+            <article id="30">
+            <header>📝 Amendement n°30 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       39. estime que l’instrumentalisation des flux migratoires aux frontières extérieures orientales de l’Union associée à des campagnes de désinformation 
   
 
   
-      <del>constituent une forme de guerre hybride combinée visant </del>
+      <del>constituent une forme de guerre hybride combinée visant</del>
   
 
   
-      <ins>visent </ins>
+      <ins>visent</ins>
   
 
   
-      à intimider et à déstabiliser l’Union; invite l’Union à élaborer les moyens législatifs appropriés afin d’instaurer les garanties nécessaires pour réagir et répondre efficacement à l’instrumentalisation de la migration à des fins politiques par des pays tiers, assurer une protection efficace des frontières extérieures de l’Union ainsi que des droits de l’homme et de la dignité humaine et adopter des mesures de prévention des entrées irrégulières; réaffirme sa solidarité avec la Lettonie, la Lituanie et la Pologne face à l’instrumentalisation de la migration opérée par le régime de Loukachenko et le Kremlin pour déstabiliser l’Union;
+       à intimider et à déstabiliser l’Union; invite l’Union à élaborer les moyens législatifs appropriés afin d’instaurer les garanties nécessaires pour réagir et répondre efficacement à l’instrumentalisation de la migration à des fins politiques par des pays tiers, assurer une protection efficace des frontières extérieures de l’Union ainsi que des droits de l’homme et de la dignité humaine et adopter des mesures de prévention des entrées irrégulières; réaffirme sa solidarité avec la Lettonie, la Lituanie et la Pologne face à l’instrumentalisation de la migration opérée par le régime de Loukachenko et le Kremlin pour déstabiliser l’Union;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">125</div>
+  <div class="against">524</div>
+  <div class="abstention">38</div>
+</span>
+
+  
+    
+    <a href="/voting/139203">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(125/687 * 100%)">125</div>
-  
-  
-    <div class="-" style="width: calc(524/687 * 100%)">524</div>
-  
-  
-    <div class="0" style="width: calc(38/687 * 100%)">38</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139203">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°31 | 
+        
+            <article id="31">
+            <header>📝 Amendement n°31 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       57. salue les progrès réalisés sur la voie de la création de capacités militaires européennes dans le cadre du programme européen de développement industriel dans le domaine de la défense (PEDID) et de l’action préparatoire sur la recherche en matière de défense (PADR) par le renforcement de la base industrielle et technologique de défense européenne (BITDE), indispensable à l’autonomie stratégique; souligne l’importance d’une BITDE forte, compétitive et innovante, couplée à l’émergence d’un marché européen des équipements de défense qui respecte pleinement les règles du marché intérieur et la position commune de l’Union sur les exportations d’armes; appelle la Commission à tirer des leçons concrètes de ces instruments pour le FED dans la perspective de résultats opérationnels; se félicite de l’adoption du règlement FED et des règles claires qu’il contient; rappelle le caractère hautement sensible et stratégique de la recherche en matière de défense, tant pour la compétitivité industrielle que pour l’autonomie stratégique de l’Union; considère qu’il est indispensable, pour préserver la compétitivité de la BITDE, de soutenir l’accès de ses entreprises aux financements bancaires et non bancaires; souligne que la production de défense est,    en grande partie, à double usage et qu’elle bénéficie au domaine civil;
@@ -1957,116 +2217,124 @@
       <del> invite la Commission à veiller à ce que le label écologique européen, en même temps qu’il encourage l’industrie à être plus respectueuse de l’environnement, préserve la compétitivité de l’industrie européenne de défense, eu égard notamment au fait que celle-ci joue un rôle important dans l’autonomie stratégique de l’Union;</del>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">197</div>
+  <div class="against">367</div>
+  <div class="abstention">123</div>
+</span>
+
+  
+    
+    <a href="/voting/139209">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(197/687 * 100%)">197</div>
-  
-  
-    <div class="-" style="width: calc(367/687 * 100%)">367</div>
-  
-  
-    <div class="0" style="width: calc(123/687 * 100%)">123</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139209">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°32 | 
+        
+            <article id="32">
+            <header>📝 Amendement n°32 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>57 bis. préconise d’instaurer un cadre qui associe le Parlement de manière effective au processus d’élaboration des programmes de travail annuels et pluriannuels du FED; rappelle que les exportations d’armements des États membres de l’Union doivent être pleinement conformes aux critères établis par la position commune sur les exportations d’armements et les critères du traité sur le commerce des armes (TCA) et ne doivent pas être déterminées par les politiques d’exportation de pays tiers;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">155</div>
+  <div class="against">391</div>
+  <div class="abstention">141</div>
+</span>
+
+  
+    
+    <a href="/voting/139211">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(155/687 * 100%)">155</div>
-  
-  
-    <div class="-" style="width: calc(391/687 * 100%)">391</div>
-  
-  
-    <div class="0" style="width: calc(141/687 * 100%)">141</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139211">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°33 | 
+        
+            <article id="33">
+            <header>📝 Amendement n°33 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       60. 
   
 
   
-      <del>déplore la réduction des montants affectés au FED et à la mobilité militaire dans le cadre du CFP, qui rend d’autant plus nécessaire la cohérence entre les initiatives de défense de l’Union (CSP, EACD, FED et MIE); souligne à cet égard </del>
+      <del>déplore la réduction des montants affectés au FED et à la mobilité militaire dans le cadre du CFP, qui rend d’autant plus nécessaire la cohérence entre les initiatives de défense de l’Union (CSP, EACD, FED et MIE); souligne à cet égard</del>
   
 
   
-      <ins>souligne </ins>
+      <ins>souligne</ins>
   
 
   
-      le rôle de l’Agence européenne de défense (AED); rappelle les conclusions du premier EACD et, en particulier, l’importance d’accroître la cohérence entre les projets européens de hiérarchisation des capacités et les processus nationaux de planification, notamment à long terme, afin de répondre véritablement aux besoins des forces armées; invite le Conseil et la Commission à intégrer plus avant les recommandations de l’EACD dans les prochains programmes de travail du FED et dans les projets de la CSP, afin d’accroître la cohérence entre ces instruments; rappelle, à cet égard, la responsabilité en dernier ressort des États membres au regard de la réalisation de l’objectif de cohérence des capacités européennes, notamment dans les domaines recensés par le rapport EACD; rappelle également l’importance des engagements pris par les États membres, dans des contextes divers, en vue de maintenir le rythme soutenu des investissements de défense et d’exploiter les possibilités offertes par le FED de 
+       le rôle de l’Agence européenne de défense (AED); rappelle les conclusions du premier EACD et, en particulier, l’importance d’accroître la cohérence entre les projets européens de hiérarchisation des capacités et les processus nationaux de planification, notamment à long terme, afin de répondre véritablement aux besoins des forces armées; invite le Conseil et la Commission à intégrer plus avant les recommandations de l’EACD dans les prochains programmes de travail du FED et dans les projets de la CSP, afin d’accroître la cohérence entre ces instruments; rappelle, à cet égard, la responsabilité en dernier ressort des États membres au regard de la réalisation de l’objectif de cohérence des capacités européennes, notamment dans les domaines recensés par le rapport EACD; rappelle également l’importance des engagements pris par les États membres, dans des contextes divers, en vue de maintenir le rythme soutenu des investissements de défense et d’exploiter les possibilités offertes par le FED de
   
 
   
-      <del>   </del>
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
@@ -2078,19 +2346,23 @@
   
 
   
-      qu’il est essentiel de disposer d’un niveau adéquat de ressources financières, humaines et matérielles 
+      qu’il est essentiel de disposer d’un niveau adéquat de ressources financières, humaines et matérielles
   
 
   
-      <ins>et d’efficacité </ins>
+      <ins> et d’efficacité</ins>
   
 
   
-      pour garantir que l’Union a les moyens et les capacités de promouvoir la 
+       pour garantir que l’Union a les moyens et les capacités de promouvoir la
   
 
   
-      <ins>   </ins>
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
   
 
   
@@ -2101,109 +2373,113 @@
       <del> appelle de ses vœux une augmentation du budget du FED après 2027;</del>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">158</div>
+  <div class="against">451</div>
+  <div class="abstention">78</div>
+</span>
+
+  
+    
+    <a href="/voting/139212">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(158/687 * 100%)">158</div>
-  
-  
-    <div class="-" style="width: calc(451/687 * 100%)">451</div>
-  
-  
-    <div class="0" style="width: calc(78/687 * 100%)">78</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139212">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°35 | 
+        
+            <article id="35">
+            <header>📝 Amendement n°35 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       65. souligne que le FED doit favoriser la 
   
 
   
-      <del>développement </del>
+      <del>développement</del>
   
 
   
-      <ins>réforme </ins>
+      <ins>réforme</ins>
   
 
   
-      et la consolidation de filières industrielles européennes et l’émergence de champions industriels européens, et soutenir la compétitivité des PME grâce à une logique de programmation pluriannuelle englobant l’élaboration de feuille de route en matière de technologies et de capacités afin d’assurer la prévisibilité indispensable aux projets complexes à long terme et de tirer profit des synergies entre le civil et la défense; insiste donc sur la nécessité d’établir des synergies avec différentes politiques de l’Union, et notamment Horizon Europe et le programme spatial européen, afin de permettre une concentration efficace des ressources du FED sur les questions militaires stricto sensu; salue le plan d’action de la Commission européenne pour les synergies entre industries civiles, de défense et de l’espace, qui encourage l’innovation dans le domaine des biens à double usage; invite l’Union et la Commission à prendre systématiquement en compte, dans l’ensemble de ses politiques, la contribution de la BITDE à l’autonomie stratégique de l’Union; invite également la Commission à présenter une stratégie industrielle spécifique pour la BITDE;
+       et la consolidation de filières industrielles européennes et l’émergence de champions industriels européens, et soutenir la compétitivité des PME grâce à une logique de programmation pluriannuelle englobant l’élaboration de feuille de route en matière de technologies et de capacités afin d’assurer la prévisibilité indispensable aux projets complexes à long terme et de tirer profit des synergies entre le civil et la défense; insiste donc sur la nécessité d’établir des synergies avec différentes politiques de l’Union, et notamment Horizon Europe et le programme spatial européen, afin de permettre une concentration efficace des ressources du FED sur les questions militaires stricto sensu; salue le plan d’action de la Commission européenne pour les synergies entre industries civiles, de défense et de l’espace, qui encourage l’innovation dans le domaine des biens à double usage; invite l’Union et la Commission à prendre systématiquement en compte, dans l’ensemble de ses politiques, la contribution de la BITDE à l’autonomie stratégique de l’Union; invite également la Commission à présenter une stratégie industrielle spécifique pour la BITDE;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">105</div>
+  <div class="against">527</div>
+  <div class="abstention">55</div>
+</span>
+
+  
+    
+    <a href="/voting/139215">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(105/687 * 100%)">105</div>
-  
-  
-    <div class="-" style="width: calc(527/687 * 100%)">527</div>
-  
-  
-    <div class="0" style="width: calc(55/687 * 100%)">55</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139215">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°37 | 
+        
+            <article id="37">
+            <header>📝 Amendement n°37 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       70. demande à l’Union de prendre la tête des efforts mondiaux visant à mettre en place un cadre réglementaire global pour le développement et l’utilisation des armes fondées sur l’IA; invite le HR/VP, les États membres et le Conseil européen à adopter une position commune sur les systèmes d’armes autonomes garantissant un véritable contrôle humain des fonctions critiques des systèmes d’armes; insiste sur la nécessité d’engager des négociations internationales en vue de la mise en place d’un instrument juridiquement contraignant interdisant les armes entièrement autonomes; soutient les travaux 
@@ -2225,472 +2501,506 @@
       <ins>dans les enceintes internationales.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">92</div>
+  <div class="against">542</div>
+  <div class="abstention">53</div>
+</span>
+
+  
+    
+    <a href="/voting/139217">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(92/687 * 100%)">92</div>
-  
-  
-    <div class="-" style="width: calc(542/687 * 100%)">542</div>
-  
-  
-    <div class="0" style="width: calc(53/687 * 100%)">53</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139217">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°38 | 
+        
+            <article id="38">
+            <header>📝 Amendement n°38 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>75 bis. rappelle les obligations qui incombent aux États membres en vertu des régimes de contrôle, de non- prolifération et de désarmement et réaffirme son adhésion sans réserve à ces régimes; insiste sur la nécessité et l’obligation de prendre des mesures effectives pour parvenir au désarmement nucléaire; réaffirme que la paix et la sécurité internationales ne peuvent être renforcées que dans un monde exempt d’armes nucléaires, et qu’une guerre nucléaire ne peut pas être gagnée et qu’elle ne doit jamais être déclenchée; demande instamment à l’Union, à ses États membres et à l’OTAN d’œuvrer à l’élaboration d’un programme d’action ambitieux pour préserver et renforcer le contrôle des armements, le désarmement et la non-prolifération à l’échelon international, afin d’avancer sur la voie de la réduction et de l’élimination des arsenaux nucléaires au niveau mondial; invite l’Union et ses États membres à adopter une démarche constructive à l’égard du traité sur l’interdiction des armes nucléaires en devenant, à tout le moins, observateurs;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">182</div>
+  <div class="against">467</div>
+  <div class="abstention">38</div>
+</span>
+
+  
+    
+    <a href="/voting/139219">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(182/687 * 100%)">182</div>
-  
-  
-    <div class="-" style="width: calc(467/687 * 100%)">467</div>
-  
-  
-    <div class="0" style="width: calc(38/687 * 100%)">38</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139219">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°39 | 
+        
+            <article id="39">
+            <header>📝 Amendement n°39 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>75 ter. réaffirme son soutien continu au plan d’action global commun (JCPoA), qui constitue le meilleur moyen de garantir la non-prolifération en Iran; se félicite de la reprise des pourparlers et demande à toutes les parties de se conformer à nouveau à toutes les exigences applicables; demande à l’Union de veiller à ce que toutes les parties respectent les obligations découlant de la Convention sur les armes chimiques, et de lutter contre l’impunité; demande à l’Union et à ses États membres d’œuvrer à la conclusion d’un protocole à la Convention sur les armes biologiques établissant les mécanismes de vérification à adopter;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">387</div>
+  <div class="against">247</div>
+  <div class="abstention">53</div>
+</span>
+
+  
+    
+    <a href="/voting/139220">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(387/687 * 100%)">387</div>
-  
-  
-    <div class="-" style="width: calc(247/687 * 100%)">247</div>
-  
-  
-    <div class="0" style="width: calc(53/687 * 100%)">53</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139220">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°40 | 
+        
+            <article id="40">
+            <header>📝 Amendement n°40 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>79 bis. demande à l’Union et à l’OTAN de s’engager à inclure les droits du personnel militaire dans les accords qu’ils concluent; souligne qu&#39;il convient de mettre l’accent sur la dimension sociale et humaine des forces armées, et d’inscrire ce sujet à l’ordre du jour des discussions menées par l’Union et l’OTAN, le cas échéant, en vue de réviser ou d’étendre les actions conjointes convenues; estime qu&#39;il importe, en vue promouvoir la diversité et l’inclusion dans les forces armées, de protéger les libertés et les droits fondamentaux du personnel militaire, notamment le droit d’association, afin de veiller à ce que les questions de droit du travail, d’égalité homme-femme et de droits des personnes LGBTIQ soient abordées lors des réunions à venir entre l’UE et l’OTAN;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">132</div>
+  <div class="against">400</div>
+  <div class="abstention">155</div>
+</span>
+
+  
+    
+    <a href="/voting/139222">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(132/687 * 100%)">132</div>
-  
-  
-    <div class="-" style="width: calc(400/687 * 100%)">400</div>
-  
-  
-    <div class="0" style="width: calc(155/687 * 100%)">155</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139222">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°41 | 
+        
+            <article id="41">
+            <header>📝 Amendement n°41 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>79 ter. souligne qu&#39;il convient que l’Union et l’OTAN facilitent l’exercice du droit de créer et de rejoindre une organisation de représentation du personnel qui défendent les droits du travail du personnel militaire;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">142</div>
+  <div class="against">389</div>
+  <div class="abstention">156</div>
+</span>
+
+  
+    
+    <a href="/voting/139223">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(142/687 * 100%)">142</div>
-  
-  
-    <div class="-" style="width: calc(389/687 * 100%)">389</div>
-  
-  
-    <div class="0" style="width: calc(156/687 * 100%)">156</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139223">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°42 | 
+        
+            <article id="42">
+            <header>📝 Amendement n°42 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      96. sera particulièrement attentif à ce que la spécificité des questions militaires soit mieux prise en compte dans le droit de l’Union européenne; rappelle, à cet effet, que le Parlement est favorable à la préservation du statut de l’armée, qui répond aux exigences très spécifiques du métier de militaire et constitue un gage d’efficacité des forces armées dans chacun des États membres; 
-  
+<p>
 
   
-      <del>préconise de préserver les moyens d’intervention des services de renseignement, car ils ne peuvent assumer leur mission de protection de la sécurité nationale sans conserver un accès à des données de connexion communiquées dans leur intégralité, à titre préventif, pendant une durée suffisante, sous le contrôle des tribunaux nationaux et dans le respect de la convention européenne des droits de l’homme; </del>
+      96. sera particulièrement attentif à ce que la spécificité des questions militaires soit mieux prise en compte dans le droit de l’Union européenne; rappelle, à cet effet, que le Parlement est favorable à la préservation du statut de l’armée, qui répond aux exigences très spécifiques du métier de militaire et constitue un gage d’efficacité des forces armées dans chacun des États membres;
   
 
   
-      prend acte de l’adoption par le Conseil de l’orientation générale sur le ciel unique européen; rappelle la nécessité de préserver la souveraineté des États membres et la liberté d’action des forces armées européennes; rappelle, au regard de la prestation de services, les impératifs de sécurité nationale liés à la fiabilité et à l’intégrité des données ainsi qu’à l’accès à celles-ci, et insiste sur le fait que l’introduction dans la réglementation de l’Union de clauses de sauvegarde liées au 
+      <del> préconise de préserver les moyens d’intervention des services de renseignement, car ils ne peuvent assumer leur mission de protection de la sécurité nationale sans conserver un accès à des données de connexion communiquées dans leur intégralité, à titre préventif, pendant une durée suffisante, sous le contrôle des tribunaux nationaux et dans le respect de la convention européenne des droits de l’homme;</del>
   
 
   
-      <del>   </del>
+       prend acte de l’adoption par le Conseil de l’orientation générale sur le ciel unique européen; rappelle la nécessité de préserver la souveraineté des États membres et la liberté d’action des forces armées européennes; rappelle, au regard de la prestation de services, les impératifs de sécurité nationale liés à la fiabilité et à l’intégrité des données ainsi qu’à l’accès à celles-ci, et insiste sur le fait que l’introduction dans la réglementation de l’Union de clauses de sauvegarde liées au
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
       domaine militaire devrait permettre de répondre à ce double enjeu;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">251</div>
+  <div class="against">424</div>
+  <div class="abstention">12</div>
+</span>
+
+  
+    
+    <a href="/voting/139229">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(251/687 * 100%)">251</div>
-  
-  
-    <div class="-" style="width: calc(424/687 * 100%)">424</div>
-  
-  
-    <div class="0" style="width: calc(12/687 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139229">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°43 | 
+        
+            <article id="43">
+            <header>📝 Amendement n°43 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
-
-  
-      A. considérant qu’en 2020, la pandémie de COVID-
-  
+<p>
 
   
-      <del>19 </del>
+      A. considérant qu’en 2020, la pandémie de COVID-19
   
 
   
-      <ins>19, qui est apparue à Wuhan, en Chine, </ins>
+      <del> </del>
+  
+
+  
+      <ins>, qui est apparue à Wuhan, en Chine, </ins>
   
 
   
       a mis en lumière la montée des périls planétaires et la vulnérabilité de l’Union en raison de ses dépendances extérieures; que la pandémie a élargi la notion de sécurité et d’autonomie stratégique à des préoccupations sanitaires, technologiques et économiques;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">137</div>
+  <div class="against">508</div>
+  <div class="abstention">41</div>
+</span>
+
+  
+    
+    <a href="/voting/139231">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(137/686 * 100%)">137</div>
-  
-  
-    <div class="-" style="width: calc(508/686 * 100%)">508</div>
-  
-  
-    <div class="0" style="width: calc(41/686 * 100%)">41</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139231">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°44 | 
+        
+            <article id="44">
+            <header>📝 Amendement n°44 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>G bis. considérant que la concentration de forces russes sur le territoire et aux frontières de l’Ukraine résultant des demandes du Kremlin pourrait, à moins d’être contrecarrée, déboucher sur un retour des sphères d’influence en Europe et faire avorter les ambitions des partenaires orientaux de l’Union, comme l’Ukraine et la Géorgie, de rejoindre l’OTAN;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">315</div>
+  <div class="against">207</div>
+  <div class="abstention">154</div>
+</span>
+
+  
+    
+    <a href="/voting/139233">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(315/676 * 100%)">315</div>
-  
-  
-    <div class="-" style="width: calc(207/676 * 100%)">207</div>
-  
-  
-    <div class="0" style="width: calc(154/676 * 100%)">154</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139233">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°45 | 
+        
+            <article id="45">
+            <header>📝 Amendement n°45 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. condamne résolument le déploiement militaire russe sur le territoire et aux frontières de l’Ukraine, ainsi que la demande du Kremlin de mettre un terme à l’expansion de l’OTAN et de revoir l’architecture de sécurité européenne fondée un concept obsolète de «sphères d’influence»; souligne que tout pays démocratique est libre de choisir ses alliances et, à cet égard, soutient résolument les aspirations pro- occidentales de l’Ukraine et de la Géorgie, y compris leur adhésion à l’OTAN et leur future adhésion à l’Union;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">281</div>
+  <div class="against">215</div>
+  <div class="abstention">180</div>
+</span>
+
+  
+    
+    <a href="/voting/139186">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(281/676 * 100%)">281</div>
-  
-  
-    <div class="-" style="width: calc(215/676 * 100%)">215</div>
-  
-  
-    <div class="0" style="width: calc(180/676 * 100%)">180</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139186">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°46 | 
+        
+            <article id="46">
+            <header>📝 Amendement n°46 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
-
-  
-      2. relève que l’année 2020 a été dominée par la pandé
-  
+<p>
 
   
-      <del>miede COVID-19 </del>
+      2. relève que l’année 2020 a été dominée par la 
   
 
   
-      <ins>mie de COVID-19, qui est apparue à Wuhan, en Chine, </ins>
+      <del>pandémiede</del>
+  
+
+  
+      <ins>pandémie de</ins>
+  
+
+  
+       COVID-19
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>, qui est apparue à Wuhan, en Chine, </ins>
   
 
   
@@ -2698,87 +3008,89 @@
   
 
   
-      <del>son autonomie stratégique globale </del>
+      <del>son autonomie stratégique globale</del>
   
 
   
-      <ins>ses capacités globales </ins>
+      <ins>ses capacités globales</ins>
   
 
   
-      en tant qu’acteur international, mais aussi sa capacité et sa volonté de décider et d’agir de manière autonome, 
+       en tant qu’acteur international, mais aussi sa capacité et sa volonté de décider et d’agir de manière autonome, 
   
 
   
-      <del>le cas échéant,</del>
+      <del>le cas échéant</del>
   
 
   
-      <ins>si nécessaire,</ins>
+      <ins>si nécessaire</ins>
   
 
   
-       dans les affaires de politique étrangère, de sécurité et de défense, et de réévaluer sa dépendance à l’égard d’acteurs qui ne partagent pas les mêmes valeurs; réaffirme la nécessité pour l’Union de renforcer également son autonomie en matière de soins de santé;
+      , dans les affaires de politique étrangère, de sécurité et de défense, et de réévaluer sa dépendance à l’égard d’acteurs qui ne partagent pas les mêmes valeurs; réaffirme la nécessité pour l’Union de renforcer également son autonomie en matière de soins de santé;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">103</div>
+  <div class="against">534</div>
+  <div class="abstention">50</div>
+</span>
+
+  
+    
+    <a href="/voting/139187">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(103/687 * 100%)">103</div>
-  
-  
-    <div class="-" style="width: calc(534/687 * 100%)">534</div>
-  
-  
-    <div class="0" style="width: calc(50/687 * 100%)">50</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139187">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°47 | 
+        
+            <article id="47">
+            <header>📝 Amendement n°47 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
-
-  
-      3. salue le lancement des travaux sur la boussole stratégique, exercice inédit de réflexion stratégique, qui devraient se terminer en mars 2022; souligne que l’élaboration de la boussole stratégique constitue un point de départ pour la mise en œuvre d’une défense européenne 
-  
+<p>
 
   
-      <del>commune, conformément aux dispositions de l’article 42, paragraphe 2, du traité UE, et pour la définition de la PSDC, et qu’elle devrait être une étape majeure vers une véritable Union européenne de la défense qui tiennecompte de la situation constitutionnelle spécifique de certains </del>
+      3. salue le lancement des travaux sur la boussole stratégique, exercice inédit de réflexion stratégique, qui devraient se terminer en mars 2022; souligne que l’élaboration de la boussole stratégique constitue un point de départ pour la mise en œuvre d’une défense européenne commune
   
 
   
-      <ins>commune fondée sur un renforcement des moyens de défense des </ins>
+      <del>, conformément aux dispositions de l’article 42, paragraphe 2, du traité UE, et pour la définition de la PSDC, et qu’elle devrait être une étape majeure vers une véritable Union européenne de la défense qui tiennecompte de la situation constitutionnelle spécifique de certains</del>
   
 
   
-      États membres; considère que la boussole stratégique devrait renforcer la cohésion dans le domaine de la sécurité et de la défense; souligne que, dans un monde très multipolaire caractérisé par une concurrence accrue entre les superpuissances, le poids combiné de l’Union peut 
+      <ins> fondée sur un renforcement des moyens de défense des</ins>
+  
+
+  
+       États membres; considère que la boussole stratégique devrait renforcer la cohésion dans le domaine de la sécurité et de la défense; souligne que, dans un monde très multipolaire caractérisé par une concurrence accrue entre les superpuissances, le poids combiné de l’Union peut 
   
 
   
@@ -2786,148 +3098,144 @@
   
 
   
-      contribuer à la sécurité des États membres et 
+      contribuer à la sécurité des États membres et
   
 
   
-      <del>qu’une politique de défense solide de l’Union est nécessaire afin qu’elle dispose des moyens nécessaires pour </del>
+      <del> qu’une politique de défense solide de l’Union est nécessaire afin qu’elle dispose des moyens nécessaires pour œuvrer efficacement en faveur de la paix, de la sécurité humaine, de la démocratie et du développement durable; insiste sur le fait qu’une Union européenne de la défense s’inscrirait dans l’objectif affirmé de l’Union d’atteindre    une autonomie stratégique; relève que, dans ce contexte, </del>
   
 
   
-      œuvrer efficacement en faveur de la paix, de la sécurité humaine, de la démocratie et du développement durable; 
+      <ins> œuvrer efficacement en faveur de la paix, de la sécurité humaine, de la démocratie et du développement durable; relève que </ins>
   
 
   
-      <del>insiste sur le fait qu’une Union européenne de la défense s’inscrirait dans l’objectif affirmé de l’Union d’atteindre    une autonomie stratégique; relève que, dans ce contexte, </del>
+      la réponse aux défis auxquels l’Union et ses États membres sont confrontés en matière de sécurité extérieure réside avant tout dans l’affirmation et la mise en œuvre concrète des capacités permettant une meilleure appréciation des situations de crise, une prise de décision plus rapide et une action plus ferme lorsque les circonstances l’exigent,
   
 
   
-      <ins>relève que </ins>
+      <del> de manière autonome le cas échéant,</del>
   
 
   
-      la réponse aux défis auxquels l’Union et ses États membres sont confrontés en matière de sécurité extérieure réside avant tout dans l’affirmation et la mise en œuvre concrète des capacités permettant une meilleure appréciation des situations de crise, une prise de décision plus rapide et une action plus ferme lorsque les circonstances l’exigent, 
+       afin de défendre les intérêts et les valeurs de l’Union, tout en respectant les alliances et les
   
 
   
-      <del>de manière autonome le cas échéant, </del>
+      <del> partenariats</del>
   
 
   
-      afin de défendre les intérêts et les valeurs de l’Union, tout en respectant les alliances et les 
+      <ins>    partenariats, notamment avec l’OTAN</ins>
   
 
   
-      <del>partenariats;</del>
+      ; fait observer que cela renforcerait la cohérence de l’Union en matière de sécurité et de défense;
   
 
   
-      <ins>   partenariats, notamment avec l’OTAN;</ins>
+      <del> estime qu’il est urgent de mettre en place une véritable Union européenne de la sécurité et de la défense qui englobe tous les aspects, instruments, budgets et capacités sécuritaires à la fois militaires et civils, ainsi que l’ensemble du cycle des conflits, de la prévention à la stabilisation post- conflit, qui repose sur une notion de la sécurité humaine qui soit moderne, progressiste et forte et qui réponde aux exigences de sécurité des citoyens de l’Union et des populations locales ainsi que de sécurité et de stabilité des institutions étatiques;</del>
   
 
   
-       fait observer que cela renforcerait la cohérence de l’Union en matière de sécurité et de défense; 
-  
-
-  
-      <del>estime qu’il est urgent de mettre en place une véritable Union européenne de la sécurité et de la défense qui englobe tous les aspects, instruments, budgets et capacités sécuritaires à la fois militaires et civils, ainsi que l’ensemble du cycle des conflits, de la prévention à la stabilisation post- conflit, qui repose sur une notion de la sécurité humaine qui soit moderne, progressiste et forte et qui réponde aux exigences de sécurité des citoyens de l’Union et des populations locales ainsi que de sécurité et de stabilité des institutions étatiques; </del>
-  
-
-  
-      demande instamment à l’Union de renforcer ses capacités institutionnelles en matière de prévention des conflits, de médiation, de dialogue et de désamorçage;
+       demande instamment à l’Union de renforcer ses capacités institutionnelles en matière de prévention des conflits, de médiation, de dialogue et de désamorçage;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">95</div>
+  <div class="against">529</div>
+  <div class="abstention">63</div>
+</span>
+
+  
+    
+    <a href="/voting/139188">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(95/687 * 100%)">95</div>
-  
-  
-    <div class="-" style="width: calc(529/687 * 100%)">529</div>
-  
-  
-    <div class="0" style="width: calc(63/687 * 100%)">63</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139188">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°48 | 
+        
+            <article id="48">
+            <header>📝 Amendement n°48 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>6 bis. invite la Commission à financer des barrières physiques aux frontières extérieures de l’Union afin d’empêcher l’entrée illégale de migrants, comme l’ont demandé 12 États membres;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">186</div>
+  <div class="against">489</div>
+  <div class="abstention">12</div>
+</span>
+
+  
+    
+    <a href="/voting/139190">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(186/687 * 100%)">186</div>
-  
-  
-    <div class="-" style="width: calc(489/687 * 100%)">489</div>
-  
-  
-    <div class="0" style="width: calc(12/687 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139190">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°49 | 
+        
+            <article id="49">
+            <header>📝 Amendement n°49 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       9. souligne que toute livraison d’armes dans le cadre de la facilité européenne pour la paix doit se faire dans le plein respect de la position commune de l’Union sur les exportations d’armes, du droit international relatif aux droits de l’homme et du droit humanitaire, et être assortie de dispositions rigoureuses en matière de transparence;
@@ -2937,221 +3245,327 @@
       <ins> préconise de recourir dans toute la mesure du possible à la facilité européenne pour la paix pour aider l’Ukraine à faire face au déploiement militaire russe sur son territoire et à ses frontières;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">296</div>
+  <div class="against">365</div>
+  <div class="abstention">16</div>
+</span>
+
+  
+    
+    <a href="/voting/139191">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(296/677 * 100%)">296</div>
-  
-  
-    <div class="-" style="width: calc(365/677 * 100%)">365</div>
-  
-  
-    <div class="0" style="width: calc(16/677 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139191">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°50 | 
+        
+            <article id="50">
+            <header>📝 Amendement n°50 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>43 bis. déplore que la Commission finance des ateliers de cirque pour l&#39;intégration des migrants non accompagnés1 bis, mais qu’elle ne finance pas la mise en place de barrières physiques aux frontières au motif qu’elle estime que celles-ci ne constituent pas «le moyen le plus efficace d&#39;améliorer la gestion des frontières»1 ter; invite la Commission à réexaminer d&#39;urgence sa position sur le financement des barrières aux frontières et des spectacles de clowns;  ____________  1bis ://www.migrationsverket.se/Andra-aktorer/EU- fonder/Beviljade-projekt/Flikar/Asyl/Cirkus-for- hopp-och-styrka.html  1 ter Réponse de la commissaire Johansson à la https://www.europarl.europa.eu/doceo/document/</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">147</div>
+  <div class="against">509</div>
+  <div class="abstention">22</div>
+</span>
+
+  
+    
+    <a href="/voting/139207">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(147/678 * 100%)">147</div>
-  
-  
-    <div class="-" style="width: calc(509/678 * 100%)">509</div>
-  
-  
-    <div class="0" style="width: calc(22/678 * 100%)">22</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139207">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°51 | 
+        
+            <article id="51">
+            <header>📝 Amendement n°51 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       90. se félicite que la direction générale de l’industrie de la défense et de l’espace (DG DEFIS) soit opérationnelle; se félicite de l’annonce d’un sommet européen de la défense au début de 2022, ainsi que du fait que le président du Conseil européen ait déclaré que 2022 sera l’année de la défense européenne; 
   
 
   
-      <del>table sur le fait que ces deux initiatives donneront un nouvel élan au développement ultérieur de l’Union européenne de la défense; invite les citoyens, les universitaires, les organisations de la société civile et le secteur privé à faire part, dans le cadre de la Conférence sur l’avenir de l’Europe, de leurs attentes sur l’architecture de la PSDC, la paix, la défense, le programme en matière de sécurité, la boussole stratégique et le rôle de l’Union sur la scène internationale; invite les institutions de l’Union à tenir compte de ces attentes en les traduisant en propositions et en actions concrètes; souligne qu’il importe d’améliorer les outils dont dispose la société civile pour garantir sa participation effective à l’élaboration et au contrôle de la politique de défense; appelle à la création d’une commission «sécurité et défense» à part entière au Parlement européen ainsi qu’à </del>
+      <del>table sur le fait que ces deux initiatives donneront un nouvel élan au développement ultérieur de l’Union européenne de la défense; invite les citoyens, les universitaires, les organisations de la société civile et le secteur privé à faire part, dans le cadre de la Conférence sur l’avenir de l’Europe, de leurs attentes sur l’architecture de la PSDC, la paix, la défense, le programme en matière de sécurité, la boussole stratégique et le rôle de l’Union sur la scène internationale; invite les institutions de l’Union à tenir compte de ces attentes en les traduisant en propositions et en actions concrètes; souligne qu’il importe d’améliorer les outils dont dispose la société civile pour garantir sa participation effective à l’élaboration et au contrôle de la politique de défense; appelle à la création d’une commission «sécurité et défense» à part entière au Parlement européen ainsi qu’à</del>
   
 
   
-      <ins>s’interroge sur la représentativité de la Conférence sur l’avenir de l’Europe et souligne l’écart entre les sondages d’opinion et les idées les plus populaires sur la plateforme numérique; doute de la nécessité d’une commission «sécurité et défense» à part entière au Parlement européen, étant donné que le Parlement n’est pas compétent dans ce domaine en vertu des traités, et rejette </ins>
+      <ins>s’interroge sur la représentativité de la Conférence sur l’avenir de l’Europe et souligne l’écart entre les sondages d’opinion et les idées les plus populaires sur la plateforme numérique; doute de la nécessité d’une commission «sécurité et défense» à part entière au Parlement européen, étant donné que le Parlement n’est pas compétent dans ce domaine en vertu des traités, et rejette</ins>
   
 
   
-      la formalisation d’un Conseil des ministres de la défense de l’Union;
+       la formalisation d’un Conseil des ministres de la défense de l’Union;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">155</div>
+  <div class="against">494</div>
+  <div class="abstention">37</div>
+</span>
+
+  
+    
+    <a href="/voting/139226">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(155/686 * 100%)">155</div>
-  
-  
-    <div class="-" style="width: calc(494/686 * 100%)">494</div>
-  
-  
-    <div class="0" style="width: calc(37/686 * 100%)">37</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139226">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°52 | 
+        
+            <article id="52">
+            <header>📝 Amendement n°52 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
-
-  
-      95. insiste sur l’importance de l’interconnexion effective des différentes structures de gouvernance de l’Union (Commission, SEAE, AED, etc.) et sur la nécessité de favoriser de bonnes relations avec le Parlement européen, 
-  
+<p>
 
   
-      <del>seul organe représentant les citoyens de l’Union, </del>
+      95. insiste sur l’importance de l’interconnexion effective des différentes structures de gouvernance de l’Union (Commission, SEAE, AED, etc.) et sur la nécessité de favoriser de bonnes relations avec le Parlement européen,
   
 
   
-      conformément aux dispositions applicables des traités;
+      <del> seul organe représentant les citoyens de l’Union,</del>
+  
+
+  
+       conformément aux dispositions applicables des traités;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">142</div>
+  <div class="against">529</div>
+  <div class="abstention">16</div>
+</span>
+
+  
+    
+    <a href="/voting/139228">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(142/687 * 100%)">142</div>
-  
-  
-    <div class="-" style="width: calc(529/687 * 100%)">529</div>
-  
-  
-    <div class="0" style="width: calc(16/687 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139228">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
+        
     
+        
+        
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – En mettant sur un pied d’égalité la menace terroriste et les guerres hybrides, ce rapport prône une Europe de la défense qui serait un pas de plus vers le fédéralisme. De plus, la différence entre cette hypothétique défense européenne et l’OTAN est particulièrement floue. Si nous devions avoir une armée européenne, autant qu’elle soit vraiment nôtre et pas alignée sur une autre puissance. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté contre ce texte, qui préconise, encore et toujours, l’impossible «Europe de la défense», avec comme unique boussole, une orientation atlantiste.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car son objectif irréaliste d’une défense commune dessert l’intérêt de la France. De trop grandes disparités militaires et diplomatiques existent en effet entre les États membres de l’Union, ce qui rend illusoire une éventuelle coopération en matière de défense. D’autre part et surtout, la France est une puissance nucléaire qui a les moyens de jouer un rôle de premier plan sur la scène internationale sans avoir besoin de s’inféoder à une organisation étrangère.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            Je me suis abstenue sur ce rapport annuel relatif à la mise en œuvre de la politique étrangère et de défense commune (PESD). Le texte contenait des dispositions intéressantes, par exemple dans le domaine de la coopération des armées européennes au service des populations dans le cadre de la pandémie de COVID-19. Il contenait toutefois des dispositions problématiques, en demandant par exemple la fermeture des camps de migrants en Libye, ce qui aurait pour effet de renforcer la vague d’immigration illégale qui frappe l’Union et ses États membres. Je ne pouvais donc le soutenir.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations et les recommandations du Parlement européen sur la politique de sécurité et de défense commune. Il s’inscrit dans une vision atlantiste des relations internationales en multipliant les références à l’OTAN qu’il considère comme le pilier de toute stratégie de sécurité et de défense européenne. Il prône par ailleurs le passage à la majorité qualifiée sur ces domaines qui relèvent pourtant de la souveraineté la plus essentielle des États. J’ai donc voté contre ce texte qui prône un affaiblissement de l’indépendance des États européens en matière de politique étrangère et de défense au profit d’une affiliation aux intérêts des États-Unis.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce rapport porte sur la politique de sécurité et de défense commune (PSDC), en d’autres termes la prétendue Europe de la défense, qui n’est rien d’autre que l’Europe de la guerre. Sans surprise, ce rapport demande la mise en place d’une Union de la sécurité et de la défense dotée d’un corps d’intervention rapide, ainsi que le renforcement des structures de commandement de l’Union, en particulier l’état-major et la capacité militaire de planification et de conduite. Le renforcement d’une telle Europe de la guerre, résolument alignée sur la politique étrangère des États-Unis d’Amérique, est de fort mauvais augure. Nous devons à tous prix éviter de participer à la course à la confrontation entretenue par les États-Unis face à ses principaux rivaux géopolitiques. La France doit garder une politique étrangère et de défense indépendante afin d’être la voix de la paix, du non-alignement et du désarmement. Je vote donc contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197589</div>
+            
+            <header><b>Laurence FARRENG</b> | Mouvement Démocrate</header>
+            J&#39;ai soutenu, mercredi 16 février, ce rapport portant sur la politique de sécurité et de défense commune pour l&#39;année 2021. Ce rapport donne l&#39;occasion au Parlement européen de donner son avis et ses recommandations sur la conduite de la PSDC tout au long de l&#39;année dernière. Plus particulièrement, il met en avant nos inquiétudes quant à la fragilisation de la stabilité dans notre voisinage et à l&#39;augmentation des menaces hybrides dans l&#39;Union. De plus, le rapport formule les attentes des députés relatives à la boussole stratégique de l&#39;Union européenne, qui doit orienter les efforts géopolitiques de l&#39;Union dans le monde et surtout porter une ambition collective entre nos États membres pour répondre à des défis sécuritaires mondiaux.
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            En adoptant ce rapport sur la politique de sécurité et de défense commune (PSDC) de l&#39;Union européenne, nous rappelons que l’Union doit parler d&#39;une seule et même voix. Face à l&#39;instabilité croissante dans le monde, à la montée de l&#39;autoritarisme et des attaques hybrides, l&#39;Union européenne doit pouvoir assurer sa propre défense, en partenariat avec ses pays alliés.Il est également important que la politique étrangère de l&#39;Union soit plus unie et lisible. A ce titre, il serait bon que les États membres n&#39;usent plus de leur veto lors de votes sur la politique étrangère.Nous saluons le lancement des travaux sur la boussole stratégique, véritable «livre blanc» de la défense européenne, qui doit constituer une étape majeure vers une véritable Union européenne de la défense.
+        </article>
+    
+        <article>
+            <div class="hidden">197551</div>
+            
+            <header><b>Stéphane BIJOUX</b> | Renaissance</header>
+            Dans le contexte de conflits grandissants dans le voisinage européen et de la multiplication des menaces hybrides qui pèsent sur l’Union européenne, j’ai soutenu ce rapport de ma collègue Nathalie Loiseau sur la mise en œuvre de la politique de sécurité et de défense commune. Ce texte défend notamment l’adoption d’une «Boussole stratégique» européenne, la création d’une capacité de réaction rapide commune ou encore le renforcement du pilier européen de l’OTAN. Il réaffirme nos ambitions pour la constitution d’une véritable défense européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté avec mes collègues du groupe Renew en faveur de cet ambitieux rapport de Nathalie Loiseau. Celui-ci constitue un bilan des missions et opérations civiles et militaires de la PSDC et formule les attentes du Parlement européen quant à la boussole stratégique qui devrait être adoptée fin mars sous la présidence française de l’Union européenne. Le rapport soutient la mise en place d’une capacité de réaction rapide de l’Union susceptible d’intervenir en cas de crise. En matière de résilience de l’Union, le rapport préconise un accroissement des moyens de cyber défense, une capacité de réponse collective et solidaire aux attaques hybrides. Enfin, en matière de partenariat, le rapport propose d’approfondir le dialogue UE-OTAN. Avec ce rapport, l’Europe avance enfin sur sa défense commune et son indépendance stratégique.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport car la politique européenne de sécurité et de défense telle que promue par Nathalie Loiseau, qui vise à créer une impossible Europe de la défense en se fondant sur une vision stratégique uniquement atlantiste, est aux antipodes des évolutions actuelles vers un monde multipolaire.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            La politique de défense et de sécurité commune est une partie intégrante de la politique étrangère et de sécurité commune de l’Union européenne. Depuis le traité de Lisbonne, cette politique a évolué vers une volonté de mise en place d’un organe de coordination et de coopération des États membres en matière de défense et de sécurité, dissimulant mal son appétit fédéraliste grandissant. La politique de sécurité et de défense commune est victime de deux faiblesses congénitales: l’hétérogénéité des intérêts des nations et la grande disparité de leurs forces militaires et diplomatiques. Elle est victime d’un mensonge fondamental, l’hypothétique volonté des États membres de conformer leur politique à un ensemble supranational, et doit donc vivre de mensonges en surjouant les crises et en inventant constamment des ennemis. Or, toute volonté d’autonomie stratégique de l’Union, idée déjà sujette à caution, ne peut venir que d’un questionnement profond sur notre dépendance à l’OTAN, les conséquences géopolitiques et sécuritaires des élargissements successifs et l’absence de solidarité européenne réelle dans les vraies menaces pour notre continent (Proche-Orient, relations avec la Turquie, Sahel). J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            La politique de défense et de sécurité commune (PSDC) est une partie intégrante de la politique étrangère et de sécurité commune de l’Union européenne.Chaque année, un rapport sur sa mise en œuvre est présenté au Parlement européen afin d’en effectuer le bilan et de lancer des perspectives de son application l’année suivante.Depuis le traité de Lisbonne, cette politique a évolué vers une volonté de mise en place d’un organe de coordination et de coopération des États membres en matière de défense et de sécurité, dissimulant mal son appétit fédéraliste grandissant.La politique de sécurité et de défense commune est victime de deux faiblesses: l’hétérogénéité des intérêts des nations et la grande disparité de leurs forces militaires et diplomatiques.Elle est victime d’un mensonge fondamental, l’hypothétique volonté des États membres de conformer leur politique à un ensemble supranational, et doit donc vivre de mensonges en surjouant les crises et en inventant constamment des ennemis.Or, toute volonté d’autonomie stratégique de l’Union ne peut venir que d’un questionnement profond sur notre dépendance à l’OTAN, les conséquences géopolitiques et sécuritaires des élargissements successifs et l’absence de solidarité européenne réelle dans les vraies menaces pour notre continent (Proche-Orient, relations avec la Turquie, Sahel).Je vote contre ce rapport.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-    
-    
 
+    <section>
     
     
-
-    
-    
-
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2183(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0358_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-02-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

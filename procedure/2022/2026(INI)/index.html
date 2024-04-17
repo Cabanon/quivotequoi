@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Vers l’égalité des droits pour les personnes handicapées</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Vers l’égalité des droits pour les personnes handicapées</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(526/619 * 100%)">526</div>
-  
-  
-    <div class="-" style="width: calc(10/619 * 100%)">10</div>
+    <div class="for" style="width: calc(526/619 * 100%)">526</div>
   
   
-    <div class="0" style="width: calc(83/619 * 100%)">83</div>
+    <div class="against" style="width: calc(10/619 * 100%)">10</div>
+  
+  
+    <div class="abstention" style="width: calc(83/619 * 100%)">83</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             🔎 Vote introuvable
@@ -83,9 +87,15 @@
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
+    
+        
+        
+            <li>Cohésion économique, sociale et territoriale</li>
+        
     
         
         
@@ -97,28 +107,313 @@
             <li>Politique sociale, charte et protocole social</li>
         
     
-        
-        
-            <li>Cohésion économique, sociale et territoriale</li>
-        
+</ul>
+
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2026(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0284_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-12-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>🗃️ Données</h3>
 
-    Aucun amendement
+<section class="tabs">
+    
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2026(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0284_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-12-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                            <option value="RE,197511">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197683,197629,197615">🇫🇷 Reconquête!</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Reconquête!</header>
+            . – J’ai voté contre ce rapport qui évoque un sujet important et apporte quelques idées intéressantes, mais qui dérive dans l’exagération, la politisation et le hors-sujet. Le texte réclame par exemple une politique de quotas, fait l’apologie de «l’intersectionnalité» ou demande la ratification par tous les États membres de la convention d’Istanbul.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            Alors que j’ai systématiquement soutenu l’ensemble des rapports sur la question du handicap, celui-ci déroge à la règle dans la mesure où l’instrumentalisation qui est faite de ce sujet important n’est pas tolérable. En effet, en y ajoutant les mentions sur les migrants et l’ensemble des lubies soutenues par l’extrême gauche, je ne peux pas accepter cette démarche indécente. J’ai privilégié l’abstention tout de même pour marquer mon soutien en dépit du rapport en tant que tel. Les sujets importants ne méritent pas qu’on en use ainsi pour faire avancer le calendrier politique du wokisme au niveau européen.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce rapport vise à renouveler le cadre social, juridique et politique des droits des personnes handicapées ainsi qu’à mieux lutter contre les stéréotypes et discriminations dont ils peuvent faire l’objet. Le texte appelle à un système favorisant davantage la participation sociale, à l’extension des avantages de la carte européenne d’invalidité et à l’obligation pour tous les États membres d’appliquer certaines règles relatives notamment à l’inclusion dans les établissements d’enseignement général et à l’accès aux soins de santé. Il demande également à la Commission d’élaborer un cadre juridique pour les entreprises inclusives ainsi que de réviser la directive sur l’égalité en matière d’emploi. Partageant les orientations et ambitions de ce texte, je me suis prononcé en sa faveur.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            Les situations de handicap concernent des millions de personnes en Europe et il est temps de renouveler l’approche européenne pour garantir une participation sociale et un accès au marché du travail pour ces personnes. Garantir ces droits passe par une lutte contre les stéréotypes et la discrimination, ainsi qu’un accès aux soins privilégié. Améliorer les conditions de travail, de soin, et de vie en général de toutes les personnes en situation de handicap en Europe, c’est aussi intégrer une grande population dans la vie économique de l’Union et enrichir nos démocraties. Je n’ai pas hésité à voter en faveur de ce texte qui vise à revoir l’utilisation des fonds de l’Union vers une Europe inclusive et accessible.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Je me suis abstenue sur ce texte car, en dépit de ses avancées, il se caractérise par beaucoup de références progressistes, notamment sur le thème de l’intersectionnalité, dont je considère qu’il est utilisé ici à dessein pour politiser la question du handicap.
+        </article>
+    
+        <article>
+            <div class="hidden">22858</div>
+            
+            <header><b>Fabienne KELLER</b> | Renaissance</header>
+            Je salue l’adoption de ce rapport, qui fait le point sur les droits des personnes handicapées, identifiant ainsi les principaux manquements, lacunes et obstacles en Europe. Pour y remédier, nous soutenons l&#39;égalité des chances, notamment concernant la participation à la vie politique et publique. Nous demandons l’accélération de la reconnaissance mutuelle du statut de personne handicapée entre les États membres, afin de garantir leur liberté de circulation. Nous appelons également à la promotion des établissements inclusifs d’enseignement général et la garantie des soins de santé accessibles et de qualité. Enfin, la sensibilisation des jeunes au handicap est un point clé afin d’endiguer la discrimination et les discours de haine dans l’Union.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            Je me suis abstenu sur ce rapport. Je partage évidemment le constat qu’il établit: il est nécessaire de mieux intégrer les personnes handicapées dans notre société, en particulier dans le monde de l’entreprise. Malheureusement, le rapport politise la question du handicap en encourageant des concepts progressistes nébuleux, comme l’«intersectionnalité».
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté pour cette résolution relative à l’égalité des droits pour les personnes handicapées. Le texte formule une série de recommandations en vue de promouvoir l&#39;intégration, dans tous les domaines de la vie, des 87 millions de personnes handicapées de nos sociétés européennes. Il suggère par exemple la mise en place d’une carte européenne du handicap reconnue dans tous les États membres, pour permettre aux personnes handicapées de faire plus facilement valoir leurs droits.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            L’Union européenne compte environ 87 millions de personnes présentant une forme de handicap. Le rapport que nous avons adopté invite la Commission et les États membres à prendre des mesures pour faciliter l’accès à une éducation inclusive et de qualité pour tous et tout au long de la vie. Créer un cadre du marché du travail inclusif est également une priorité afin que les personnes présentant un handicap aient accès à des emplois durables et de qualité. C’est pourquoi j’ai voté en faveur de ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les propositions du Parlement européen en faveur de l’égalité des droits pour les personnes en situation de handicap. Il demande notamment d’améliorer l’accessibilité des lieux publics, la participation au marché du travail, la lutte contre les discriminations, et l’intégration de la question du handicap dans l’ensemble des politiques publiques. J’ai donc voté pour ce texte qui invite l’Union européenne et les États membres à agir de manière ambitieuse et dans l’ensemble des domaines en faveur de l’égalité des personnes en situation de handicap.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Reconquête!</header>
+            . – J’ai voté contre ce rapport qui évoque un sujet important et apporte quelques idées intéressantes, mais qui dérive dans l’exagération, la politisation et le hors-sujet. Le texte réclame par exemple une politique de quotas, fait l’apologie de «l’intersectionnalité» ou demande la ratification par tous les États membres de la convention d’Istanbul.
+        </article>
+    
+        <article>
+            <div class="hidden">197576</div>
+            
+            <header><b>Sylvie BRUNET</b> | Mouvement Démocrate</header>
+            J’ai voté en faveur de ce rapport d’initiative, qui rappelle la nécessité de prendre pleinement en compte les droits de toutes les personnes handicapées, ainsi que la nécessité d&#39;éradiquer la discrimination et les discours de haine à leur encontre.Le texte est un appel fort pour une mise en œuvre complète et effective de chaque article de la Convention relative aux Droits des Personnes Handicapées de l’ONU.Les droits et l&#39;inclusion dans la communauté de toutes les personnes handicapées en Europe ne peuvent être pleinement garantis que par des politiques et des législations élaborées aux niveaux national, régional et local, guidées par les normes européennes. C’est pourquoi il était important de soutenir ce rapport, qui liste des conseils et des recommandations pour les États membres.
+        </article>
+    
+        <article>
+            <div class="hidden">197536</div>
+            
+            <header><b>Nathalie COLIN-OESTERLÉ</b> | Les centristes</header>
+            . – Ce rapport vise à renouveler le cadre social, juridique et politique des droits des personnes handicapées ainsi qu’à mieux lutter contre les stéréotypes et discriminations dont ils peuvent faire l’objet. Le texte appelle à un système favorisant davantage la participation sociale, à l’extension des avantages de la carte européenne d’invalidité et à l’obligation pour tous les États membres d’appliquer certaines règles relatives notamment à l’inclusion dans les établissements d’enseignement général et à l’accès aux soins de santé. J&#39;avais déposé un amendement, repris dans le texte adopté, demandant à ce que les États membres garantissent le droit à l&#39;éducation de tous les enfants handicapés en veillant à ce qu&#39;ils aient un égal accès à un enseignement inclusif et de qualité, depuis la petite enfance jusqu&#39;à l&#39;adolescence, grâce notamment à la mise en place d&#39;infrastructures adaptées et de formations spécialisées à destination du personnel enseignant et accompagnant.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            En 2022, au sein de l’Union européenne, 7 % des personnes de plus de 16 ans ont un handicap grave. Il est indispensable que l’Union soit à la hauteur des besoins que nos citoyens atteints de handicap ont en termes de soins et de qualité de vie à travers nos États. Le rapport demande notamment que les États membres garantissent la continuité des soins et de l’accompagnement des enfants handicapés après la scolarité, afin de faciliter leurs transitions vers le marché du travail et pour leur capacité à vivre en autonomie. De même, le rapport demande de mettre en place des programmes nationaux et européens de formation pour les personnes handicapées pour mieux garantir leur insertion dans le marché du travail. J’ai donc voté en faveur de ce rapport intitulé «Vers l’égalité des droits pour les personnes handicapées» qui vise non seulement à assurer et à promouvoir les droits des personnes handicapées, mais également à améliorer les soins que peuvent recevoir ces personnes notamment vis-à-vis de la désinstitutionalisation des soins, à faciliter leurs déplacements au sein de l’Union et à mettre en place une carte d’invalidité qui soit valable à l’échelle européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Je me suis abstenu sur ce texte car, en dépit de ses avancées, il se caractérise par beaucoup de références progressistes, notamment sur le thème de l’intersectionnalité, dont nous considérons qu’il est utilisé ici à dessein pour politiser la question du handicap.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Malgré de belles propositions, j’ai été obligée de m’abstenir, car ce texte se caractérise par beaucoup de références progressistes, notamment sur le thème de l’intersectionnalité, dont nous considérons qu’il est utilisé ici à dessein pour politiser la question du handicap.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Dans ce rapport est affirmé le droit des personnes en situation de handicap à vivre de la manière la plus indépendante possible et à être mieux intégrées socialement.Le rapport demande à ce que la transition entreprise vers un système plus intégrateur et participatif pour les personnes en situation de handicap s’inscrive dans les axes retenus dans la Stratégie européenne en faveur des personnes handicapées, notamment le projet de carte européenne unique d’invalidité. De longs développements sont consacrés aux stéréotypes et discriminations dont souffrent les personnes en situation de handicap. En particulier, est préconisée la mise en place d’un cadre juridique européen en faveur d’entreprises inclusives, pour sécuriser le parcours professionnel des personnes handicapées et garantir leur maintien dans des emplois permanents.En dépit de ses avancées, ce texte se caractérise par beaucoup de références progressistes, notamment sur le thème de l’intersectionnalité. Elle est utilisée à dessein pour politiser la question du handicap.Je me suis donc abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b></b> | </header>
+            Le rapport a pour objet l’égalité des droits pour les personnes en situation de handicap et évoque plusieurs mesures afin d’avancer en ce sens. Tout d’abord, il demande à la Commission et aux États membres de prendre des mesures afin de garantir le droit des personnes en situation de handicap à vivre de manière autonome et à recevoir des services communautaires appropriés. Le rapport rappelle également la nécessité de renforcer la participation des personnes en situation de handicap et de leurs organisations représentatives dans le processus décisionnel et de prendre des mesures urgentes pour éliminer les restrictions à leur capacité juridique. Il déclare que la carte européenne d’invalidité devrait être un système obligatoire à l’échelle de l’Union.Enfin, le rapport propose des mesures pour faciliter l’accès à une éducation de qualité pour tous les élèves en situation de handicap. Le rapport invite également l’Union et les États membres à garantir que toutes les personnes en situation de handicap puissent voter et se porter candidates aux élections. Ainsi, c’est pour toutes ces raisons que j’ai décidé de voter en faveur de ce rapport.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197527</div>
+            
+            <header><b>Anne-Sophie PELLETIER</b> | La France Insoumise</header>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197527</div>
+            
+            <header><b>Anne-Sophie PELLETIER</b> | La France Insoumise</header>
+            
+                <p>Ce rapport a été fait avec beaucoup d’enthousiasme, parce que j’ai voulu remettre l’individu au centre. Comment met-on l’individu au centre? Simplement en l’écoutant et en écoutant ses besoins. Ce rapport a été fait sur la base de la convention des Nations unies pour les personnes en situation de handicap, et je me suis appuyée, Madame Dalli, sur votre stratégie. S’il est vrai qu’il est encore trop tôt pour avoir une véritable analyse d’impact, ces objectifs sont ambitieux et nous pouvons aller encore plus loin. </p>
+            
+                <p>Je tiens en tout cas à féliciter certains États membres dans leur engagement pour la désinstitutionnalisation des personnes en situation de handicap. Je n’aurai pas mes quatre minutes, parce que j’ai pris plus de deux minutes à parler en langue des signes. Je vais donc être brève: il faut aller plus loin et demander une véritable législation antidiscrimination dans l’Union. Une directive existe, mais elle est bloquée au Conseil depuis 2008. Quatorze ans déjà que le Parlement avait pris position, et depuis, rien. Il a toujours mieux à faire que de s’occuper des plus vulnérables.</p>
+            
+                <p>Vous ne nous entendiez pas? Nous allons crier plus fort. Nous allons changer d’approche, et au lieu de demander le déblocage, nous demandons à la Commission une mise à jour de la directive européenne sur l’égalité de traitement. Je demande ici, comme mon collègue Younous Omarjee l’a déjà fait, que la langue des signes internationale ainsi que la langue «facile à lire et à comprendre» soient mises en place. En effet, si nous voulons parler véritablement d’inclusion des personnes en situation de handicap dans la vie publique et politique, alors ici au Parlement européen, nous devons y mettre les moyens. </p>
+            
+                <p>Que dire de plus? Demander l’arrêt de la stérilisation forcée, l’arrêt de l’institutionnalisation et l’arrêt du financement de ces institutions par l’Union européenne. Une personne en situation de handicap doit pouvoir décider par elle-même de l’endroit où elle veut vivre et du soutien qu’elle veut recevoir.</p>
+            
+                <p>En parlant de soutien, il faut là aussi que l’Union mette en place des aides communautaires afin que chaque personne en situation de handicap ne soit plus laissée au bord de la route et que chaque enfant en situation de handicap puisse avoir un transport pour aller à l’école. Je remercie M. Cañas d’être dans l’hémicycle aujourd’hui. Il faut que chaque personne en situation de handicap puisse bénéficier d’un travail. Ici au Parlement, ou à la Commission, ou dans nos institutions, combien de personnes en situation de handicap, visible ou invisible, sont embauchées? </p>
+            
+                <p>Parlons des aidants familiaux, ces gens qui consacrent leur temps, leur vie et leur amour à accompagner leurs proches dans le handicap. Pensons à eux et apportons-leur aussi tout notre soutien. Il faut réfléchir à une politique triangulaire qui puisse prendre en compte à la fois les personnes en situation de handicap, le personnel socio-éducatif et les parents aidants. Permettez-moi, à ce titre, de penser à une femme en situation de handicap qui s’appelle Odile Maurin et qui n’a pas eu accès à la justice. Là aussi, les droits fondamentaux sont bafoués, piétinés, foulés au pied tous les jours. </p>
+            
+                <p>Je n’ai pas pu dire tout ce que je voulais dire, mais je l’ai dit autrement, comme un certain nombre de personnes en situation de handicap s’expriment, et je suis fière de l’avoir dit autrement, moins fière que l’on m’ait arrêtée en cours de route. Je serai ravie d’entendre ce que mes collègues et la Commission auront à dire de ce rapport. Je voudrais remercier une femme qui s’appelle Céline Boussié et qui a dénoncé pendant dix ans la maltraitance des enfants en situation de handicap dans les instituts médico-éducatifs. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197527</div>
+            
+            <header><b>Anne-Sophie PELLETIER</b> | La France Insoumise</header>
+            
+                <p>C’est le temps des remerciements, et je voudrais remercier tous mes collègues rapporteurs fictifs, ainsi que les collègues des commissions PETI, EMPL et CULT, qui nous ont apporté beaucoup de bonnes opinions et remarques, qui ont été importantes pour nous. C’est depuis que je suis arrivée ici, en 2019, que je me suis dit: j’aurai un rapport sur les personnes en situation de handicap, parce que dans un temps pas si ancien, je m’occupais de personnes en situation de handicap. Je pense que nous sommes tous différents, que nous sommes tous uniques, et que finalement c’est de la différence que naît la mixité, et que c’est de la mixité que naît la société. Il est donc important qu’ici au Parlement, nous portions une voix forte pour qu’il y ait une véritable égalité des droits fondamentaux pour les personnes en situation de handicap. </p>
+            
+                <p>Je vous renouvelle, Madame Dalli, nos demandes et nos ambitions, pour que plus jamais, dans aucun État membre, il n’y ait une inégalité entre des citoyens. Le validisme existe, et aujourd’hui, nous nous rendons compte que ce validisme fait que nous pensons pour les personnes en situation de handicap, que nous agissons pour les personnes en situation de handicap, et que trop peu souvent nous leur laissons la voix, la voix des oubliés. Alors, j’espère en tout cas qu’avec ce rapport, ici dans ce Parlement, j’aurai réussi à redonner de la voix aux personnes en situation de handicap, de la voix à ces oubliés. </p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

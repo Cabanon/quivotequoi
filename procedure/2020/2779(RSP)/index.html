@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Résolution sur la situation en Biélorussie</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Résolution sur la situation en Biélorussie</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(574/693 * 100%)">574</div>
-  
-  
-    <div class="-" style="width: calc(37/693 * 100%)">37</div>
+    <div class="for" style="width: calc(574/693 * 100%)">574</div>
   
   
-    <div class="0" style="width: calc(82/693 * 100%)">82</div>
+    <div class="against" style="width: calc(37/693 * 100%)">37</div>
+  
+  
+    <div class="abstention" style="width: calc(82/693 * 100%)">82</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,19 +88,20 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(56/79 * 100%)">56</div>
+    <div class="for" style="width: calc(56/79 * 100%)">56</div>
   
   
-    <div class="-" style="width: calc(23/79 * 100%)">23</div>
+    <div class="against" style="width: calc(23/79 * 100%)">23</div>
   
   
 </div>
  
 </section>
-            <a href="/voting/117273">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/117273">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -119,128 +124,250 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2779(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/RC-9-2020-0271_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-09-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. demande instamment à l’Union européenne et à ses institutions de promouvoir les relations avec la Biélorussie, dans le respect des principes de la charte des Nations unies et du droit international, y compris le respect de sa souveraineté, de son indépendance et de son intégrité territoriale, et à s’abstenir de soutenir ou de mener des politiques ayant pour but l’ingérence, la déstabilisation ou l’agression à l’encontre d’autres États et d’autres peuples, en particulier la Biélorussie et le peuple biélorusse;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">112</div>
+  <div class="against">564</div>
+  <div class="abstention">14</div>
+</span>
+
+  
+    
+    <a href="/voting/117102">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(112/690 * 100%)">112</div>
-  
-  
-    <div class="-" style="width: calc(564/690 * 100%)">564</div>
-  
-  
-    <div class="0" style="width: calc(14/690 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117102">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       P. considérant que, le 27 août, le président de la Fédération de Russie a déclaré soutenir les autorités biélorusses dans leur répression de la contestation civique légitime en proposant le déploiement de forces de police spéciales; considérant que M. Loukachenko a annoncé, le 21 août, que les journalistes en grève et démissionnaires des médias d’État seraient remplacés par de soi-disant spécialistes russes des médias; considérant que la 
   
 
   
-      <del>Russie, la Chine et la Turquie </del>
+      <del>Russie, la Chine et la Turquie</del>
   
 
   
-      <ins>Fédération de Russie, qui est liée à la Biélorussie à travers leur appartenance commune à la Communauté des États indépendants (CEI) dans une relation bilatérale étroite entre les deux pays souverains, mais aussi la Turquie et la Chine </ins>
+      <ins>Fédération de Russie, qui est liée à la Biélorussie à travers leur appartenance commune à la Communauté des États indépendants (CEI) dans une relation bilatérale étroite entre les deux pays souverains, mais aussi la Turquie et la Chine</ins>
   
 
   
-      ont été parmi les premiers États à féliciter M. Loukachenko pour sa victoire électorale frauduleuse;
+       ont été parmi les premiers États à féliciter M. Loukachenko pour sa victoire électorale frauduleuse;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">73</div>
+  <div class="against">532</div>
+  <div class="abstention">85</div>
+</span>
+
+  
+    
+    <a href="/voting/117111">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(73/690 * 100%)">73</div>
-  
-  
-    <div class="-" style="width: calc(532/690 * 100%)">532</div>
-  
-  
-    <div class="0" style="width: calc(85/690 * 100%)">85</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117111">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       7. invite la Commission, le VP/HR et le Conseil à apporter leur aide 
@@ -254,413 +381,443 @@
       à l’opposition démocratique biélorusse, y compris au Conseil de coordination dirigé par Svetlana Tikhanovskaïa;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">15</div>
+  <div class="against">648</div>
+  <div class="abstention">26</div>
+</span>
+
+  
+    
+    <a href="/voting/117103">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(15/689 * 100%)">15</div>
-  
-  
-    <div class="-" style="width: calc(648/689 * 100%)">648</div>
-  
-  
-    <div class="0" style="width: calc(26/689 * 100%)">26</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117103">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
-
-  
-      8. exprime sa gratitude pour le courage des femmes biélorusses, emmenées par Svetlana Tikhanovskaïa, Veronika Tsepkalo et Maria Kolesnikova, et de leurs partisans, qui ont largement contribué à exprimer et à défendre les revendications légitimes du peuple biélorusse; constate que de nombreux Biélorusses considèrent Svetlana Tikhanovskaïa comme le vainqueur de l’élection pré
-  
+<p>
 
   
-      <del>sidentielle et comme la présidente élue de la Biélorussie;</del>
+      8. exprime sa gratitude pour le courage des femmes biélorusses, emmenées par Svetlana Tikhanovskaïa, Veronika Tsepkalo et Maria Kolesnikova, et de leurs partisans, qui ont largement contribué à exprimer et à défendre les revendications légitimes du peuple biélorusse; constate que de nombreux Biélorusses considèrent Svetlana Tikhanovskaïa comme le vainqueur de l’élection présidentielle
   
 
   
-      <ins>sidentielle;</ins>
+      <del> et comme la présidente élue de la Biélorussie</del>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">192</div>
+  <div class="against">442</div>
+  <div class="abstention">55</div>
+</span>
+
+  
+    
+    <a href="/voting/117104">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(192/689 * 100%)">192</div>
-  
-  
-    <div class="-" style="width: calc(442/689 * 100%)">442</div>
-  
-  
-    <div class="0" style="width: calc(55/689 * 100%)">55</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117104">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
-
-  
-      14. soutient fermement les sanctions imposées par l’Union aux personnes responsables de la falsification des résultats de l’élection et de la répression en Biélorussie, y compris Alexandre Loukachenko; demande au Conseil d’appliquer sans délai, et en étroite coordination avec les partenaires internationaux, des sanctions élargies et efficaces à l’encontre de tous les responsables biélorusses de la fraude électorale, des violences et des actes de répression en Biélorussie; invite le Conseil à suivre l’exemple des États baltes, qui ont inscrit Loukachenko sur leur liste de sanctions, et à élargir le groupe de personnes visées par les sanctions initialement proposé à un nombre important de hauts fonctionnaires et de fonctionnaires de rang intermédiaire ainsi qu’à des entrepreneurs connus pour leur soutien au régime ou pour avoir licencié leurs employés en raison de leur participation à des grèves; invite le VP/HR et le Conseil à étudier la possibilité d’y faire figurer les citoyens russes directement impliqués dans le soutien au régime   Loukachenko en Bié
-  
+<p>
 
   
-      <ins>lorussie à travers des actes de répression ou de violence à l’encontre de manifestants pacifiques en Bié</ins>
+      14. soutient fermement les sanctions imposées par l’Union aux personnes responsables de la falsification des résultats de l’élection et de la répression en Biélorussie, y compris Alexandre Loukachenko; demande au Conseil d’appliquer sans délai, et en étroite coordination avec les partenaires internationaux, des sanctions élargies et efficaces à l’encontre de tous les responsables biélorusses de la fraude électorale, des violences et des actes de répression en Biélorussie; invite le Conseil à suivre l’exemple des États baltes, qui ont inscrit Loukachenko sur leur liste de sanctions, et à élargir le groupe de personnes visées par les sanctions initialement proposé à un nombre important de hauts fonctionnaires et de fonctionnaires de rang intermédiaire ainsi qu’à des entrepreneurs connus pour leur soutien au régime ou pour avoir licencié leurs employés en raison de leur participation à des grèves; invite le VP/HR et le Conseil à étudier la possibilité d’y faire figurer les citoyens russes directement impliqués dans le soutien au régime   Loukachenko en 
   
 
   
-      lorussie;
+      <ins>Biélorussie à travers des actes de répression ou de violence à l’encontre de manifestants pacifiques en </ins>
+  
+
+  
+      Biélorussie;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">30</div>
+  <div class="against">614</div>
+  <div class="abstention">45</div>
+</span>
+
+  
+    
+    <a href="/voting/117105">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(30/689 * 100%)">30</div>
-  
-  
-    <div class="-" style="width: calc(614/689 * 100%)">614</div>
-  
-  
-    <div class="0" style="width: calc(45/689 * 100%)">45</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117105">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
-
-  
-      16. demande instamment au SEAE et à la Commission de préparer un réexamen complet de leur politique à l’égard de la Biélorussie, en vue de soutenir la population biélorusse et ses aspirations démocratiques, ainsi que la société civile, les défenseurs des droits de l’homme, les syndicats indépendants et les médias indépendants; demande une augmentation du soutien financier de l’Union à la société civile biélorusse, en même temps que le gel de tout transfert de fonds de l’Union au profit du gouvernement biélorusse actuel ou de projets contrôlés par l’É
-  
+<p>
 
   
-      <del>tat et que l’arrêt des prêts de la BEI, de la BERD et d’autres prêts au régime actuel;</del>
+      16. demande instamment au SEAE et à la Commission de préparer un réexamen complet de leur politique à l’égard de la Biélorussie, en vue de soutenir la population biélorusse et ses aspirations démocratiques, ainsi que la société civile, les défenseurs des droits de l’homme, les syndicats indépendants et les médias indépendants; demande une augmentation du soutien financier de l’Union à la société civile biélorusse, en même temps que le gel de tout transfert de fonds de l’Union au profit du gouvernement biélorusse actuel ou de projets contrôlés par l’État
   
 
   
-      <ins>tat;</ins>
+      <del> et que l’arrêt des prêts de la BEI, de la BERD et d’autres prêts au régime actuel</del>
   
 
   
-       prie instamment l’Union d’organiser une conférence des donateurs pour la Biélorussie démocratique, réunissant les 
+      ; prie instamment l’Union d’organiser une conférence des donateurs pour la Biélorussie démocratique, réunissant
   
 
   
-      <del>institutions financières internationales, les pays du G7, les </del>
+      <del> les institutions financières internationales, les pays du G7,</del>
   
 
   
-      États membres et les institutions de l’Union, ainsi que d’autres 
+       les États membres et les institutions de l’Union, ainsi que d’autres 
   
 
   
-      <del>partenaires disposés </del>
+      <del>partenaires disposés</del>
   
 
   
-      <ins>institutions internationales disposées </ins>
+      <ins>institutions internationales disposées</ins>
   
 
   
-      à promettre une enveloppe financière de plusieurs milliards d’euros 
+       à promettre une enveloppe financière de plusieurs milliards d’euros 
   
 
   
-      <del>pour soutenir les futurs efforts de réforme et la restructuration de l’économie;</del>
+      <del>pour soutenir les futurs efforts de réforme et la restructuration de l’économie</del>
   
 
   
-      <ins>en guise de subvention destinée au peuple biélorusse pour soutenir la réforme socio-écologique et la restructuration de l’économie biélorusse, laquelle doit être examinée par le Parlement biélorusse nouvellement élu   sous tous les aspects de son utilisation au profit des citoyens biélorusses;</ins>
+      <ins>en guise de subvention destinée au peuple biélorusse pour soutenir la réforme socio-écologique et la restructuration de l’économie biélorusse, laquelle doit être examinée par le Parlement biélorusse nouvellement élu   sous tous les aspects de son utilisation au profit des citoyens biélorusses</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">29</div>
+  <div class="against">643</div>
+  <div class="abstention">17</div>
+</span>
+
+  
+    
+    <a href="/voting/117106">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(29/689 * 100%)">29</div>
-  
-  
-    <div class="-" style="width: calc(643/689 * 100%)">643</div>
-  
-  
-    <div class="0" style="width: calc(17/689 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117106">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>17 bis. appelle de ses vœux la transparence et un contrôle étroit des 53 millions d’EUR supplémentaires annoncés par la présidente von der Leyen en faveur de la Biélorussie de manière que ce financement serve uniquement à favoriser le dialogue politique entre toutes les parties prenantes politiques et sociales en vue de surmonter l’actuelle crise politique du pays;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">144</div>
+  <div class="against">513</div>
+  <div class="abstention">33</div>
+</span>
+
+  
+    
+    <a href="/voting/117107">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(144/690 * 100%)">144</div>
-  
-  
-    <div class="-" style="width: calc(513/690 * 100%)">513</div>
-  
-  
-    <div class="0" style="width: calc(33/690 * 100%)">33</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117107">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       19. encourage les États membres de l’Union à faciliter et à accélérer 
   
 
   
-      <del>la mise en place d’un corridor humanitaire et les procédures d’obtention de visa pour les personnes qui fuient </del>
+      <del>la mise en place d’un corridor humanitaire et les procédures d’obtention de visa</del>
   
 
   
-      <ins>les démarches concrètes pour les personnes qui sont contraintes de fuir </ins>
+      <ins>les démarches concrètes</ins>
   
 
   
-      la Biélorussie pour des motifs politiques, ainsi que pour celles qui ont besoin de soins médicaux à la suite de violences qu’elles ont subies, et à apporter tout le soutien et l’assistance nécessaires à ces personnes et à leurs familles; invite la Commission à accélérer le déploiement de l’aide financière de l’Union pour soutenir la société civile et les victimes de la répression, et à dégager davantage de ressources pour leur apporter une aide physique, psychologique et matérielle;
+       pour les personnes qui 
+  
+
+  
+      <del>fuient</del>
+  
+
+  
+      <ins>sont contraintes de fuir</ins>
+  
+
+  
+       la Biélorussie pour des motifs politiques, ainsi que pour celles qui ont besoin de soins médicaux à la suite de violences qu’elles ont subies, et à apporter tout le soutien et l’assistance nécessaires à ces personnes et à leurs familles; invite la Commission à accélérer le déploiement de l’aide financière de l’Union pour soutenir la société civile et les victimes de la répression, et à dégager davantage de ressources pour leur apporter une aide physique, psychologique et matérielle;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">188</div>
+  <div class="against">425</div>
+  <div class="abstention">76</div>
+</span>
+
+  
+    
+    <a href="/voting/117108">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(188/689 * 100%)">188</div>
-  
-  
-    <div class="-" style="width: calc(425/689 * 100%)">425</div>
-  
-  
-    <div class="0" style="width: calc(76/689 * 100%)">76</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117108">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
-
-  
-      29. demande une nouvelle fois au Conseil d’établir un mécanisme de sanctions global, efficace et rapide à l’échelle de l’Union 
-  
+<p>
 
   
-      <ins>(sur le modèle de la loi Magnitski) </ins>
+      29. demande une nouvelle fois au Conseil d’établir un mécanisme de sanctions global, efficace et rapide à l’échelle de l’Union
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins> (sur le modèle de la loi Magnitski) </ins>
   
 
   
       qui permettrait, sans plus attendre, de cibler tout individu, acteur étatique ou non étatique et toute autre entité responsable de graves violations des droits de l’homme ou impliquée dans de telles violations;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">361</div>
+  <div class="against">307</div>
+  <div class="abstention">21</div>
+</span>
+
+  
+    
+    <a href="/voting/117110">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(361/689 * 100%)">361</div>
-  
-  
-    <div class="-" style="width: calc(307/689 * 100%)">307</div>
-  
-  
-    <div class="0" style="width: calc(21/689 * 100%)">21</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117110">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       24. souligne qu’il importe de lutter contre toute propagation en Biélorussie de la désinformation au sujet de l’Union, de ses États membres et de ses institutions, et contre toute propagation au sein de l’Union de la désinformation à propos de la situation en Biélorussie, ainsi que contre d’autres formes de menaces hybrides provenant de tiers; met en garde le régime contre toute tentative de faire diversion en ciblant les minorités nationales, religieuses, ethniques ou autres, afin de détourner l’attention de la société de la fraude électorale et des manifestations massives et de la répression qui ont suivi;
@@ -670,48 +827,159 @@
       <ins> condamne le fait que le chef de l’Église catholique de Biélorussie, l’archevêque Tadeusz Kondrusiewicz, ne soit pas autorisé à retourner dans le pays;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(479/688 * 100%)">479</div>
-  
-  
-    <div class="-" style="width: calc(172/688 * 100%)">172</div>
-  
-  
-    <div class="0" style="width: calc(37/688 * 100%)">37</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117109">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    ECR
     
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2779(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/RC-9-2020-0271_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">479</div>
+  <div class="against">172</div>
+  <div class="abstention">37</div>
+</span>
+
   
+    
+    <a href="/voting/117109">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-09-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197494</div>
+            
+            <header><b>Nathalie LOISEAU</b> | Renaissance</header>
+            
+                <p>Je voudrais saluer ici l’engagement du président français, Emmanuel Macron, au nom de la France mais aussi de l’Europe tout entière, qui prouve au peuple libanais qu’il n’est pas seul. Plus que quiconque, notre Parlement doit entendre les aspirations de ce peuple libanais en colère, qui sait ce qu’il veut et surtout ce qu’il ne veut plus. Le peuple libanais n’en peut plus de la corruption qui gangrène le pays. Il faut une enquête internationale et indépendante sur l’explosion du port de Beyrouth et il faut mettre fin à l’impunité. Non seulement l’aide européenne doit aller aux populations qu’elle soutient, mais nous devons aussi insister pour que l’organe libanais de lutte contre la corruption devienne enfin opérationnel.</p>
+            
+                <p>Par ailleurs, il nous faudra bien un jour nous pencher sur les biens libanais mal acquis qui dorment dans les banques européennes. Nous ne pourrons pas continuer à regarder ailleurs. Le peuple libanais n’en peut plus d’être représenté par une classe politique qui n’a d’autres combats que celui de sa propre survie et de ses propres privilèges. Sa société civile fait preuve de dynamisme et de courage et doit pouvoir se faire entendre. Notre devoir est de l’aider. Nous devrions ainsi soutenir techniquement et financièrement la mise en place d’une plateforme de consultation nationale.</p>
+            
+                <p>Le Liban est beaucoup plus qu’un petit pays à l’est de la Méditerranée. Le Liban a toujours été une promesse: celle d’une réconciliation entre les confessions et les communautés du Proche Orient, celle d’une société libre, éduquée et prospère. La survie de cette promesse et sa victoire sur les forces qui veulent l’étouffer dépendent beaucoup de nous.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197623</div>
+            
+            <header><b>Thierry MARIANI</b> | Rassemblement national</header>
+            
+                <p>S’il n’est donc pas nouveau de voir la société biélorusse s’émouvoir des résultats et du déroulement des élections, ce qui constitue un véritable changement c’est l’ampleur et la détermination de ces manifestations. Faut-il écouter la colère de ces manifestants? Oui, bien sûr. Faut-il profiter de leur colère pour essayer de manipuler certains esprits? Je ne le pense pas. L’Union européenne doit éviter un nouveau Maïdan en Biélorussie. Le triste sort de l’Ukraine, depuis cet épisode influencé depuis l’étranger, prouve suffisamment que c’est par le seul dialogue que nous arriverons à rétablir la justice et le calme au sein de ce pays. Oui, il faut éviter la violence. Oui, il faut que les personnes arrêtées soient libérées. Mais aidons plutôt la Biélorussie à entamer un véritable dialogue national entre les différentes parties. C’est à mon avis le seul moyen de progresser et de ramener le calme dans ce pays.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197623</div>
+            
+            <header><b>Thierry MARIANI</b> | Rassemblement national</header>
+            
+                <p>Oui, bien sûr, nous souhaitons tous le rétablissement de M. Navalny. Oui, nous souhaitons avant tout une enquête indépendante et attendons avant de savoir qui est le véritable coupable.</p>
+            
+                <p>Quand j’écoute, dans cet hémicycle, certains diabolisent la Russie à longueur de journée et connaissent déjà les résultats de l’enquête avant même qu’elle n’ait commencé. Certains, ensuite, sont des fauteurs de guerre qui n’ont même pas attendu une journée pour réclamer de nouvelles sanctions contre la Russie. Ces nostalgiques de la guerre froide veulent utiliser tous les drames pour recommencer un affrontement Est-Ouest.</p>
+            
+                <p>Mais les devins et les fauteurs de guerre ont oublié une chose: la Russie est signataire de la convention sur les armes chimiques. Le Novitchok fait partie des substances intégrées au protocole de l’OIAC depuis l’année dernière. L’enquête internationale est donc prévue dans le droit international, sauf que le droit dispose que la première enquête soit d’abord menée par la Russie qui, jusqu’à preuve du contraire, est un État souverain.</p>
+            
+                <p>La Russie n’est ni en dessous ni au-dessus du droit international. Les fauteurs de guerre et les devins du Parlement européen non plus. Attendons les résultats d’une véritable enquête.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197534</div>
+            
+            <header><b>François-Xavier BELLAMY</b> | Les Républicains</header>
+            
+                <p> – Monsieur le Président, depuis le 4 août, le Liban vit, après cette explosion, une succession d’incendies. Nous n’avons pas le droit de nous résigner à ce que cette date marque l’entrée en agonie de ce pays chéri de l’Europe et de la France.</p>
+            
+                <p>L’Europe doit tout faire, d’abord pour garantir la neutralité du Liban, pays martyr de tous les conflits qui traversent la région. Cela suppose de pousser enfin le Hezbollah à accepter le désarmement des milices prévu dans les conventions de l’ONU, qui permettra à ce pays de retrouver sa souveraineté en se débarrassant des ingérences étrangères.</p>
+            
+                <p>L’Europe doit enfin sanctionner les membres de cette classe politique corrompue qui ont bradé la souveraineté de leur pays. Il faut passer des paroles aux actes aujourd’hui et la lutte contre la corruption et le traçage des aides européennes doivent enfin devenir une réalité efficace.</p>
+            
+                <p>Enfin, l’Europe doit exiger cette enquête internationale qui permettra de connaître les vrais coupables de cette explosion dévastatrice et des crimes qu’elle a causés. C’est la paix aujourd’hui au Liban ou le chaos au Proche-Orient. Souvenons-nous qu’Europe est née dans ce pays, nous raconte la mythologie.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197543</div>
+            
+            <header><b>Bernard GUETTA</b> | Renaissance</header>
+            
+                <p> – Monsieur le Président, je voudrais m’adresser au président russe pour lui dire: vous avez le choix Monsieur Poutine, mais faites le bon.</p>
+            
+                <p>Vous pouvez bien sûr arracher un accord d’union à un Loukachenko aux abois et intégrer ainsi la Biélorussie à la Russie, mais vous ne feriez alors que perdre ce pays comme vous avez perdu l’Ukraine en annexant la Crimée. Ne faites pas cela, Monsieur le président. Ne le faites pas, parce que les Biélorusses ne veulent pas rompre avec votre pays, parce que l’OTAN n’ambitionne pas de s’élargir grâce à cette crise, parce que tous les pays de l’Union européenne souhaitent un compromis à Minsk et parce que vous vous grandiriez et grandiriez la Russie en devenant faiseur de paix en Biélorussie. Par ce geste, Monsieur Poutine, vous jetteriez les bases d’une coopération entre l’Union européenne et la Fédération de Russie et changeriez le cours d’une trop longue histoire de défiance et de conflits. Il est encore temps, Monsieur Poutine, mais ce bon choix, faites-le et vite.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197543</div>
+            
+            <header><b>Bernard GUETTA</b> | Renaissance</header>
+            
+                <p>Pour le régime russe, rien ne va plus. À l’Est, les manifestations de Khabarovsk ne cessent pas, tandis qu’à l’Ouest, chaque dimanche, la Biélorussie descend dans la rue pour exiger sa liberté. Tandis que les cours du pétrole s’écroulent et que les caisses se vident, le niveau de vie dégringole en Russie et même en Syrie. M. Poutine se retrouve bien seul depuis que le clan Assad se fractionne et que la théocratie iranienne perd pied. Alors ce régime a peur car Victor Hugo le disait: «rien n’est plus imminent que l’impossible». La Pologne communiste n’avait pas vu Solidarité venir, M. Loukachenko n’avait pas senti la colère monter autour de lui et tout peut arriver dans ce magasin de poudre que devient la Russie.</p>
+            
+                <p>Alors, oui, M. Poutine, vous avez raison d’avoir peur et, avant qu’il ne soit trop tard, avant que des troubles ne gagnent votre pays et ne vous acculent à pire encore que cet empoisonnement, facilitez un compromis en Biélorussie, retirez-vous d’Ukraine, rendez sa liberté au peuple russe, laissez-le respirer plutôt que de lui faire pleurer l’un après l’autre les meilleurs et les plus courageux de ses enfants, M. Navalny empoisonné et tous vos opposants disparus.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197511</div>
+            
+            <header><b>Salima YENBOU</b> | Les Écologistes</header>
+            
+                <p>Beaucoup d’ONG, pas seulement libanaises d’ailleurs, se plaignent que les aides internationales n’atteignent souvent pas les personnes qui en ont vraiment besoin, mais disparaissent dans les poches d’élites corrompues. Certaines ONG nous suggèrent ainsi d’associer à ces aides des garanties concrètes pour combattre la corruption et soutenir les demandes de réformes. Que pensez-vous de cela? En effet, tant que des réformes n’ont pas lieu, le risque de catastrophes, comme l’incendie qui a détruit des équipements d’aide de la Croix-Rouge, ne sera pas derrière nous. Nous devons aider les Libanais à tailler ce joyau brut d’Orient en se débarrassant de la corruption et à construire sa démocratie et sa liberté.</p>
+            
+                <p>Je souligne que la plupart des Libanais semblent satisfaits et reconnaissants de la forte implication du président français. Je vous demande alors: où est l’Europe dans tout cela? Quel rôle joue ou ne joue-t-elle pas au Liban? Comment l’Europe peut-elle accompagner les réformes?</p>
+            
+                <p>Le président du Conseil européen, Charles Michel, s’est rendu à Beyrouth le 8 août et le commissaire européen à la gestion des crises, Janez Lenarčič, le 12 septembre. Monsieur Borrell, quand allez-vous vous rendre au Liban? Quand la présidente de la Commission européenne, Mme von der Leyen, a-t-elle prévu de se rendre au Liban, dont Fairuz chantait [phrase en arabe], le «Liban digne et son peuple battant» auprès duquel nous nous devons d’être?</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            
+                <p> – Monsieur le Président, nous ne pouvons que nous réjouir de voir aujourd’hui le Liban à l’ordre du jour de nos débats parlementaires, tant les images du 4 août dernier ont affecté le monde.</p>
+            
+                <p>Forte de son amitié et de ses liens historiques, la France a été la première à apporter son soutien au peuple libanais dans cette tragédie humanitaire et économique. Il est désormais dans notre intérêt à tous de veiller à ce que le Liban, carrefour de toutes les tensions politico-religieuses, ne sombre dans une crise qui sèmerait les graines d’une nouvelle guerre civile.</p>
+            
+                <p>Le quartier chrétien de Beyrouth, cœur battant de la ville, n’est plus qu’un amas de ruines: c’est là un symbole qu’il nous faut considérer. Alors que dans tout le Moyen-Orient, les minorités chrétiennes sont plus menacées que jamais, la paix et la stabilité d’un pays où elles bénéficient d’une relative tolérance sont plus que jamais vitales.</p>
+            
+                <p>Nous savons que l’Union européenne éprouve la plus grande gêne à invoquer ses racines mais la France a ici une mission imposée par son histoire et avec laquelle elle ne saurait rompre sans se trahir: protéger les chrétiens d’Orient. Le soutien économique et logistique que nous devons offrir au Liban ne se discute pas. Il doit être à la hauteur de l’histoire et constitue, je n’en doute pas, un sujet sur lequel nous serons probablement tous enfin d’accord.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

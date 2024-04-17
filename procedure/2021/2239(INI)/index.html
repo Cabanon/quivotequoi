@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Le plan d’action de l’UE sur l’agriculture biologique</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Le plan d’action de l’UE sur l’agriculture biologique</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(611/630 * 100%)">611</div>
-  
-  
-    <div class="-" style="width: calc(14/630 * 100%)">14</div>
+    <div class="for" style="width: calc(611/630 * 100%)">611</div>
   
   
-    <div class="0" style="width: calc(5/630 * 100%)">5</div>
+    <div class="against" style="width: calc(14/630 * 100%)">14</div>
+  
+  
+    <div class="abstention" style="width: calc(5/630 * 100%)">5</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,17 +88,18 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(64/64 * 100%)">64</div>
+    <div class="for" style="width: calc(64/64 * 100%)">64</div>
   
   
   
 </div>
  
 </section>
-            <a href="/voting/142009">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/142009">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -107,12 +112,12 @@
     
         
         
-            <li>Politique et économies agricoles</li>
+            <li>Phytosanitaire, phytopharmacie, agriculture biologique, agro-génétique: généralités</li>
         
     
         
         
-            <li>Phytosanitaire, phytopharmacie, agriculture biologique, agro-génétique: généralités</li>
+            <li>Politique et économies agricoles</li>
         
     
         
@@ -122,223 +127,791 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2239(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0126_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-05-03-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">113892,204420,197506,96740,97236,96750,197512,197503,96868,197574,197531,96743,124693,197694,96952,197697,197698,197521,197533,197529,30482</div>
+                
 
-<section>
-
-  
-      1. se félicite de la communication de la Commission sur un plan d’action en faveur du développement de la production biologique, de l’objectif d’accroître la surface agricole de l’UE consacrée à l’agriculture biologique 
-  
+<p>
 
   
-      <ins>pour la porter à 25 % </ins>
+      1. se félicite de la communication de la Commission sur un plan d’action en faveur du développement de la production biologique, de l’objectif d’accroître la surface agricole de l’UE consacrée à l’agriculture biologique
   
 
   
-      d’ici à 2030 par le développement de l’offre et de la demande, et de la reconnaissance par la Commission de l’agriculture biologique comme l’un des principaux éléments de la transition de l’Union vers des systèmes alimentaires plus durables, recourant à des pratiques agricoles plus durables, utilisant plus efficacement les sources d’énergie 
+      <ins> pour la porter à 25 %</ins>
   
 
   
-      <ins>   </ins>
+       d’ici à 2030 par le développement de l’offre et de la demande, et de la reconnaissance par la Commission de l’agriculture biologique comme l’un des principaux éléments de la transition de l’Union vers des systèmes alimentaires plus durables, recourant à des pratiques agricoles plus durables, utilisant plus efficacement les sources d’énergie
   
 
   
-      renouvelables, garantissant des normes 
+      <del> </del>
   
 
   
-      <del>   </del>
+      <ins>    </ins>
+  
+
+  
+      renouvelables, garantissant des normes
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
       plus élevées en matière de bien-être animal et contribuant à garantir des revenus plus élevés aux agriculteurs européens;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  des députés
+  
+    dont 
     
+      François ALFONSI (R&amp;PS), 
     
-    <article>
-    <header>📝 Amendement n°2 | 
+      Karima DELLI (EELV), 
+    
+      Younous OMARJEE (LFI), 
+    
+      Michèle RIVASI (EELV), 
+    
+      Sylvie GUILLAUME (PS), 
+    
+      Yannick JADOT (EELV), 
+    
+      Eric ANDRIEU (PS), 
+    
+      Pascal DURAND (RE), 
+    
+      Manon AUBRY (LFI), 
+    
+      Benoît BITEAU (EELV), 
+    
+      Manuel BOMPARD (LFI), 
+    
+      Damien CARÊME (EELV), 
+    
+      Leila CHAIBI (LFI), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Raphaël GLUCKSMANN (PP), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Pierre LARROUTUROU (ND), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Marie TOUSSAINT (EELV) et 
+    
+      Claude GRUFFAT (EELV)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">113892,204420,197506,96740,97236,96750,197512,197503,96868,197574,197531,96743,124693,197694,96952,197697,197698,197521,197533,197529,30482,204420,197506,96740,97236,96750,197512,197500,96868,197574,197531,96743,124693,197694,96952,197697,197698,204418,197521,197533,197529,30482</div>
+                
 
-<section>
+<p>
 
   
       <ins>22 bis. se félicite de la déclaration de la Communication, selon laquelle l’agriculture biologique devrait rester le modèle en vue de la protection du bien- être animal et devrait comprendre une garantie donnée au consommateur que les animaux ont été bien traités tout au long de la chaîne et que leurs besoins et comportements naturels ont été respectés, que ce soit dans l’exploitation ou pendant le transport, afin de garantir que toute douleur, détresse ou souffrance évitable est épargnée aux animaux, y compris lors de la mise à mort; invite la Commission à    développer plus avant les règles relatives à l’élevage, à la mutilation, au transport et à la mise à mort dans le cadre de la production biologique, notamment à la lumière de ses travaux sur l’étiquetage en matière de bien-être animal;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  des députés
+  
+    dont 
     
+      François ALFONSI (R&amp;PS), 
     
-    <article>
-    <header>📝 Amendement n°3 | 
+      Karima DELLI (EELV), 
+    
+      Younous OMARJEE (LFI), 
+    
+      Michèle RIVASI (EELV), 
+    
+      Sylvie GUILLAUME (PS), 
+    
+      Yannick JADOT (EELV), 
+    
+      Eric ANDRIEU (PS), 
+    
+      Pascal DURAND (RE), 
+    
+      Manon AUBRY (LFI), 
+    
+      Benoît BITEAU (EELV), 
+    
+      Manuel BOMPARD (LFI), 
+    
+      Damien CARÊME (EELV), 
+    
+      Leila CHAIBI (LFI), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Raphaël GLUCKSMANN (PP), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Pierre LARROUTUROU (ND), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV), 
+    
+      Marie TOUSSAINT (EELV), 
+    
+      Claude GRUFFAT (EELV) et 
+    
+      Nora MEBAREK (PS)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">113892,204420,197506,96740,97236,96750,197512,197503,96868,197574,197531,96743,124693,197694,96952,197697,197698,197521,197533,197529,30482,204420,197506,96740,97236,96750,197512,197500,96868,197574,197531,96743,124693,197694,96952,197697,197698,204418,197521,197533,197529,30482,204420,197506,96740,97236,96750,197512,197500,96868,197574,197531,96743,124693,96952,197697,197698,204418,197521,197533,197529</div>
+                
 
-<section>
-
-  
-      28. souligne le rôle que doivent jouer les supermarchés et les différentes chaînes d’approvisionnement alimentaire dans la promotion et dans le soutien du logo biologique de l’Union; attend les futures initiatives de la Commission visant à mieux orienter les consommateurs dans leur choix de denrées alimentaires grâce à des campagnes d’étiquetage, de promotion et d’information, 
-  
+<p>
 
   
-      <ins>ainsi qu’à un régime d’étiquetage nutritionnel et environnemental, envisagé par la Commission, </ins>
+      28. souligne le rôle que doivent jouer les supermarchés et les différentes chaînes d’approvisionnement alimentaire dans la promotion et dans le soutien du logo biologique de l’Union; attend les futures initiatives de la Commission visant à mieux orienter les consommateurs dans leur choix de denrées alimentaires grâce à des campagnes d’étiquetage, de promotion et d’information,
   
 
   
-      fondées sur des bases scientifiques solides, indépendantes et opérationnelles et sur des méthodologies 
+      <ins> ainsi qu’à un régime d’étiquetage nutritionnel et environnemental, envisagé par la Commission,</ins>
   
 
   
-      <ins>   </ins>
+       fondées sur des bases scientifiques solides, indépendantes et opérationnelles et sur des méthodologies
   
 
   
-      complètes et cohérentes; constate qu’un étiquetage obligatoire indiquant l’origine de tous les produits alimentaires dans l’UE 
+      <del> </del>
   
 
   
-      <del>   </del>
+      <ins>    </ins>
+  
+
+  
+      complètes et cohérentes; constate qu’un étiquetage obligatoire indiquant l’origine de tous les produits alimentaires dans l’UE
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
       est susceptible d’accroître sensiblement la transparence et la traçabilité, et ainsi de lutter contre la fraude et les méthodes de production illégales, ainsi que de renforcer la confiance des consommateurs;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  des députés
+  
+    dont 
     
+      François ALFONSI (R&amp;PS), 
     
-    <article>
-    <header>📝 Amendement n°4 | 
+      Karima DELLI (EELV), 
+    
+      Younous OMARJEE (LFI), 
+    
+      Michèle RIVASI (EELV), 
+    
+      Sylvie GUILLAUME (PS), 
+    
+      Yannick JADOT (EELV), 
+    
+      Eric ANDRIEU (PS), 
+    
+      Pascal DURAND (RE), 
+    
+      Manon AUBRY (LFI), 
+    
+      Benoît BITEAU (EELV), 
+    
+      Manuel BOMPARD (LFI), 
+    
+      Damien CARÊME (EELV), 
+    
+      Leila CHAIBI (LFI), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Raphaël GLUCKSMANN (PP), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Pierre LARROUTUROU (ND), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV), 
+    
+      Marie TOUSSAINT (EELV), 
+    
+      Claude GRUFFAT (EELV) et 
+    
+      Nora MEBAREK (PS)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">113892,204420,197506,96740,97236,96750,197512,197503,96868,197574,197531,96743,124693,197694,96952,197697,197698,197521,197533,197529,30482,204420,197506,96740,97236,96750,197512,197500,96868,197574,197531,96743,124693,197694,96952,197697,197698,204418,197521,197533,197529,30482,204420,197506,96740,97236,96750,197512,197500,96868,197574,197531,96743,124693,96952,197697,197698,204418,197521,197533,197529,204420,197506,96740,97236,96750,197512,197500,96868,197574,197531,96743,124693,197694,197697,197698,204418,197521,197533,197529,30482</div>
+                
 
-<section>
+<p>
 
   
       <ins>31 bis. demande à la Commission de créer un réseau d’acteurs publics participant à l’introduction de produits biologiques dans les cantines publiques afin de favoriser le partage d’expériences, notamment en matière de procédures de passation de marchés publics, de rassembler des données dans une base de données commune et de promouvoir des régimes sains, durables et accessibles pour les enfants scolarisés et pour tous les résidents de l’Union;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  des députés
+  
+    dont 
     
+      François ALFONSI (R&amp;PS), 
     
-    <article>
-    <header>📝 Amendement n°5 | 
+      Karima DELLI (EELV), 
+    
+      Younous OMARJEE (LFI), 
+    
+      Michèle RIVASI (EELV), 
+    
+      Sylvie GUILLAUME (PS), 
+    
+      Yannick JADOT (EELV), 
+    
+      Eric ANDRIEU (PS), 
+    
+      Pascal DURAND (RE), 
+    
+      Manon AUBRY (LFI), 
+    
+      Benoît BITEAU (EELV), 
+    
+      Manuel BOMPARD (LFI), 
+    
+      Damien CARÊME (EELV), 
+    
+      Leila CHAIBI (LFI), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Raphaël GLUCKSMANN (PP), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Pierre LARROUTUROU (ND), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV), 
+    
+      Marie TOUSSAINT (EELV), 
+    
+      Claude GRUFFAT (EELV) et 
+    
+      Nora MEBAREK (PS)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">113892,204420,197506,96740,97236,96750,197512,197503,96868,197574,197531,96743,124693,197694,96952,197697,197698,197521,197533,197529,30482,204420,197506,96740,97236,96750,197512,197500,96868,197574,197531,96743,124693,197694,96952,197697,197698,204418,197521,197533,197529,30482,204420,197506,96740,97236,96750,197512,197500,96868,197574,197531,96743,124693,96952,197697,197698,204418,197521,197533,197529,204420,197506,96740,97236,96750,197512,197500,96868,197574,197531,96743,124693,197694,197697,197698,204418,197521,197533,197529,30482,204420,197506,96740,97236,96750,197512,197500,96868,197574,197531,96743,124693,197694,96952,197697,197698,204418,197521,197533,197529,30482</div>
+                
 
-<section>
+<p>
 
   
       <ins>57 bis. rappelle qu’il est nécessaire d’opérer un changement des habitudes de consommation à l’échelle de toute la population en faveur de produits, de régimes alimentaires et de modes de vie plus sains, y compris d’une consommation accrue de produits végétaux ou d’origine végétale cultivés de façon durable et au niveau local, tels que des fruits et des légumes de saison et des grains entiers, ainsi que de remédier à la surconsommation de viandes, d’aliments ultra-transformés et de produits dont la teneur en sucre, en sel et en gras est    élevée, ce qui bénéficierait également à l’environnement et au bien-être animal;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(237/631 * 100%)">237</div>
-  
-  
-    <div class="-" style="width: calc(328/631 * 100%)">328</div>
-  
-  
-    <div class="0" style="width: calc(66/631 * 100%)">66</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
-        
-    </footer>
-    </article>
+      François ALFONSI (R&amp;PS), 
     
+      Karima DELLI (EELV), 
+    
+      Younous OMARJEE (LFI), 
+    
+      Michèle RIVASI (EELV), 
+    
+      Sylvie GUILLAUME (PS), 
+    
+      Yannick JADOT (EELV), 
+    
+      Eric ANDRIEU (PS), 
+    
+      Pascal DURAND (RE), 
+    
+      Manon AUBRY (LFI), 
+    
+      Benoît BITEAU (EELV), 
+    
+      Manuel BOMPARD (LFI), 
+    
+      Damien CARÊME (EELV), 
+    
+      Leila CHAIBI (LFI), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Raphaël GLUCKSMANN (PP), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Pierre LARROUTUROU (ND), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV), 
+    
+      Marie TOUSSAINT (EELV), 
+    
+      Claude GRUFFAT (EELV) et 
+    
+      Nora MEBAREK (PS)
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2239(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0126_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">237</div>
+  <div class="against">328</div>
+  <div class="abstention">66</div>
+</span>
+
   
+    🤖 Vote électronique
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-05-03-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Contrairement aux ambitions démesurées de la Commission, ce texte encourage, sans les contraindre, les États membres à accroître les efforts en faveur de la production biologique. Les outils proposés restent volontaires et accessibles à chaque État, quels que soient les niveaux internes de développement de l’agriculture bio. Sa critique du libre-échange mondialisé et son soutien aux filières courtes et locales va dans le sens de notre idée du localisme. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté pour ce plan d’action.Ce texte vise à encourager l’agriculture biologique, les outils proposés restant, toutefois, déployables sur une base uniquement volontaire par les États membres.Le soutien aux circuits courts va évidemment dans le sens de ce que je défends.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce rapport d’initiative vise à assurer le développement plus large de la production biologique dans l’Union européenne. Ce label engageant les producteurs sur la qualité de leurs produits et la conformité de leurs procédés de production avec des enjeux de santé et d’écologie est un gage de qualité désormais bien connu par nos concitoyens. Il convient toutefois de rappeler que l’agriculture dite conventionnelle (c’est à dire non biologique) ne peut être systématiquement réduite à une production qui serait irrespectueuse de la santé des consommateurs et de l’environnement. Ce rapport reconnaissant ce point et portant des objectifs et ambitions louables, j’ai voté en sa faveur.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Il est évident que l’agriculture biologique présente de nombreux avantages pour l’environnement comme pour le consommateur. J’encourage le développement de la production et de la consommation de produits bio. Il est nécessaire que les mesures proposées soient réalistes et cohérentes, en particulier lorsqu’elles touchent à un secteur aussi stratégique que celui de l’alimentation. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">22858</div>
+            
+            <header><b>Fabienne KELLER</b> | Renaissance</header>
+            Nous avons voté un rapport sur le plan d’action de la Commission pour le développement de l’agriculture biologique.Ce texte équilibré soutient le développement de l’agriculture biologique tout en respectant la capacité du marché à absorber la production. Il souligne l’hétérogénéité des situations entre les différents États européens et encourage les États à développer leurs propres stratégies à l’échelle nationale ou régionale. Le Parlement européen enjoint la Commission d’apporter un soutien financier suffisant à la production. Nous soutenons ainsi l’action de l’Union européenne en faveur de la protection de l’environnement, conformément aux objectifs du pacte vert pour l’Europe.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté pour ce rapport car je soutiens le développement de l’agriculture biologique, vertueuse pour les producteurs, pour la santé des consommateurs et pour la planète.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            L’agriculture biologique détient un rôle clef dans la transition de nos systèmes alimentaires vers des systèmes plus durables.Je pense que la croissance de ce secteur agricole doit être soutenue activement par les pouvoirs publics, qui doivent être au centre de la planification écologique.Aujourd’hui, la surface agricole biologique dans l’UE est d’environ 10 % et devrait atteindre seulement 15 % en 2030 si nous ne visons pas un développement plus ambitieux de l’agriculture biologique européenne. J’ai voté en faveur de ce rapport, qui souligne l’importance d’une planification nationale et régionale, demande un budget adéquat de la PAC pour la production biologique, insiste sur la nécessité des contrôles pour garantir l’efficacité du label agriculture biologique, déplore les effets négatifs des accords de libre-échange par rapport aux normes de production agricole, de protection de l’environnement et du bien-être animal et invite les États membres à soutenir davantage l’expansion des circuits courts, locaux et saisonniers.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution relative à un plan d’action de l’UE pour l’agriculture biologique. Le texte appelle à développer davantage ce type d’agriculture, qui représente aujourd’hui en moyenne 8,5 % des surfaces cultivées européennes, avec des grandes disparités entre États membres (de 0,5 % à 25 %). Il recommande de concentrer les moyens au bénéfice des États membres les plus en retard. Il suggère de mener des campagnes de communication pour stimuler la demande des consommateurs et de mettre en place un étiquetage clair pour garantir leur confiance.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            Le plan d’action vise à encourager une augmentation sensible de la part de l’agriculture biologique dans l’UE, en incitant les agriculteurs à se convertir à l’agriculture biologique et en élargissant l’accessibilité des aliments biologiques. Actuellement, environ 8,5 % de la surface agricole de l’UE est consacrée à l’agriculture biologique. L’objectif de la Commission est d’atteindre 25 % d’ici à 2030. Le rapport ne fait pas état de cet objectif chiffré et vise une approche plus pragmatique et réaliste basée sur la demande des consommateurs. De plus, le texte du Parlement n’oppose pas agriculture biologique et conventionnelle, car nous avons en effet besoin de ces deux types d’agriculture, afin d’assurer notre sécurité alimentaire et des denrées de qualité accessible à tous. C’est pourquoi j’ai voté en faveur de ce plan d’action et me réjouis de son adoption à une très large majorité.
+        </article>
+    
+        <article>
+            <div class="hidden">197536</div>
+            
+            <header><b>Nathalie COLIN-OESTERLÉ</b> | Les centristes</header>
+            . – J’ai voté en faveur du rapport d’initiative relatif à un plan d’action pour le développement de la production biologique dans l’Union européenne. Il vise à assurer le développement plus large de cette production dans l’Union européenne. Ce plan est prévu dans le cadre de la stratégie «De la ferme à l’assiette». Actuellement, 8,5 % de la surface agricole de l’UE est consacrée à l’agriculture biologique. Les chiffres varient largement d’un État membre à l’autre (entre 25 % et 0,5 %) et peuvent également être assez variables d’une région à l’autre au sein d’un même État. En France la part de la production biologique s’élèverait à environ 9,5 % de notre production agricole totale.Il s’agit dans l’ensemble d’un rapport équilibré, qui néanmoins ne condamne pas la production conventionnelle. Il n’existe pas de politique environnementale valable sans le concours des agriculteurs.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            Depuis 2019, la superficie totale de l’Union européenne consacrée à l’agriculture biologique a augmenté pour atteindre 13,8 millions d’hectares et représente ainsi aujourd’hui 8.5 % de la superficie agricole totale de l’Union, dont la valeur du marché des produits a plus que doublé depuis 2010. J’ai voté en faveur du rapport sur le plan d’action pour l’agriculture biologique, qui s’inscrit sous l’égide du Pacte vert européen, dont l’objectif est de favoriser le développement de l’agriculture biologique par la loi du marché. J’ai soutenu les apports notables de ce texte en matière de bien-être animal, à l’instar de l’incitation à augmenter la part de l’agriculture biologique de l’Union européenne. À cette fin, et pour pallier les coûts de production plus élevés pour nos agriculteurs, j’ai défendu les mesures du texte demandant à ce que les prix sur le marché et l’aide directe soient suffisants pour récupérer ces coûts de manière à permettre aux agriculteurs de bénéficier de revenus décents. Enfin, j’ai soutenu la proposition d’inclure les produits biologiques dans les programmes du Fonds européen d’aide aux plus démunis, afin de garantir l’accès à ces produits pour tous les citoyens.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – J’ai voté en faveur de ce texte car je souhaite soutenir le développement de la production et de la consommation de produits bio qui présentent de nombreux avantages pour l’environnement et le consommateur. Malheureusement, les mesures proposées pour la protection de l’environnement et de l’agriculture biologique sont souvent irréalistes, m’empêchant ainsi de les soutenir. Il est important que les mesures qui touchent un domaine aussi stratégique que l’alimentation soit les plus cohérentes possible.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            L’agriculture biologique est l’objet d’importantes disparités au sein de l’UE: en 2020, 14,9 millions d’hectares étaient cultivés en bio, soit 9,2 % de la superficie agricole totale. La France est la première productrice avec 2,5 millions d’hectares, soit 8,8 % de sa production globale. 26,5 % des terres sont consacrées au bio en Autriche, contre 0,6 % à Malte et 1,6 % en Irlande. Ce rapport d’initiative est la réponse du Parlement européen au plan d’action pour le développement de la production biologique dans l’UE, publié le 25 mars 2021 par la Commission. Ce dernier impose en particulier l’objectif de 25 % de bio dans l’UE d’ici 2030. Il est évident que l’agriculture biologique présente de nombreux avantages pour l’environnement comme pour le consommateur. Il convient cependant d’éviter un double écueil: ne pas imposer l’augmentation d’une production que le marché ne pourrait absorber, du fait notamment du prix élevé pour le consommateur final, et ne pas imposer aux États membres des objectifs trop contraignants, dans un contexte où l’urgence est plutôt à l’augmentation des rendements agricoles plutôt qu’à leur diminution. Néanmoins, nous ne pouvons que soutenir la volonté d’encourager le développement de la production et de la consommation de produits bio. J’ai donc voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            L’agriculture biologique est l’objet d’importantes disparités au sein de l’UE: en 2020, 14,9 millions d’hectares étaient cultivés en bio, soit 9,2 % de la superficie agricole totale. La France est la première productrice avec 2,5 millions d’hectares, soit 8,8 % de sa production globale.Il est évident que l’agriculture biologique présente de nombreux avantages pour l’environnement comme pour le consommateur. Nous ne pouvons que soutenir la volonté d’encourager le développement de la production et de la consommation de produits bio.Cela permettra de clarifier dans le même temps notre opposition très tranchée envers les stratégies environnementales de la Commission: nous ne sommes pas contre la protection de l’environnement ou contre l’agriculture biologique, nous demandons simplement que les mesures proposées soient réalistes et cohérentes, en particulier lorsqu’elles touchent à un secteur aussi stratégique que celui de l’alimentation.Pour toutes ces raisons, j’ai voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            . – L’agriculture biologique présente sans conteste de nombreux avantages pour l’environnement comme pour le consommateur. Nous ne pouvons que soutenir la volonté d’encourager le développement de la production et de la consommation de produits bio, nous demandons simplement que les mesures proposées soient réalistes et cohérentes, en particulier lorsqu’elles touchent à un secteur aussi stratégique que celui de l’alimentation! J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            Actuellement 9 % de la surface agricole européenne est cultivée en agriculture biologique, avec de fortes disparités entre les États. Dans ce rapport équilibré, chaque État est invité à se doter d’un plan national, définissant ses propres ambitions, les producteurs seront soutenus dans leur conversion et le contrôle des importations renforcés.Ce rapport défend et promeut le bio sans imposer d’objectifs européens démesurés à l’heure où certains producteurs sont contraints de jeter leur production, non absorbée par le marché, du fait notamment du prix élevé pour le consommateur.Je ne peux que soutenir la volonté d’encourager le développement de la production et de la consommation de produits de nos pays issus de l’agriculture biologique, les mesures prônées par ce rapport sont réalistes et cohérentes et j’ai donc voté en faveur de ce rapport.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">113892</div>
+            
+            <header><b>Eric ANDRIEU</b> | Parti socialiste</header>
+            
+                <p> – Madame la Présidente, Monsieur le Commissaire, nous le savons tous, le développement de l’agriculture biologique est un enjeu majeur pour l’avenir de l’agriculture européenne. C’est le moyen de véritablement réduire l’utilisation des pesticides et de répondre aux enjeux de santé humaine. C’est également le moyen de contribuer à la vitalité sociale et économique de la ruralité et de progresser en matière de bien-être animal.</p>
+            
+                <p>Le rapport que nous voterons demain est tout à fait équilibré et soutient l’ambition affichée par la Commission et je tiens ici à remercier la rapporteure Simone Schmiedtbauer. Mais si ce rapport voté en commission soutient l’objectif d’augmentation des surfaces en agriculture bio d’ici 2030, il ne pointe pas le chiffre de 25 % mentionné par la Commission et il nous semblait important de produire un amendement, ne serait-ce que pour évaluer le bienfait des politiques publiques à l’avenir.</p>
+            
+                <p>Je veux également rappeler avec force que réduire la moitié de l’usage des pesticides d’ici 2030 n’est pas un saut dans le vide, les alternatives comme le biocontrôle se développent et les centres de recherche les plus en pointe sur le sujet considèrent que la fin des pesticides de synthèse est atteignable d’ici 2050, à condition qu’on s’en donne les moyens et qu’on maintienne fermement le cap, ce qui est le cas dans ce rapport.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            
+                <p> – Madame la Présidente, Monsieur le Commissaire, chers collègues, je voudrais d’abord remercier ma collègue, Simone Schmiedtbauer, pour ce rapport qui était un travail d’équilibriste, mais elle a bien relevé le défi, encourageant la production biologique, mais tout en ayant une approche pragmatique. </p>
+            
+                <p>Et c’est ce qu’il faut aujourd’hui, du pragmatisme. Lorsqu’on se fixe des objectifs pour développer la production biologique, il faut surtout s’assurer qu’il y ait un marché en face. Et on voit bien dans un certain nombre de pays membres, c’est le cas chez moi en France, qu’il y a un véritable problème avec la production biologique car le coût est plus important. C’est notamment le cas dans le secteur du lait: les producteurs ont beaucoup de mal à écouler leur production et à trouver des débouchés. C’est notre responsabilité d’être attentifs à ce point-là parce que nous emmenons les agriculteurs vers des investissements colossaux. Donc, il faut être sûr que derrière, il puisse y avoir une rentabilité et une demande.</p>
+            
+                <p>En assurant le développement plus large des marchés publics écologiques, ce rapport propose de très bonnes solutions. Bravo!</p>
+            
+                <p>Je voudrais également saluer le fait que le rapport n’oppose pas l’agriculture biologique et l’agriculture plus conventionnelle, qui elle aussi fait beaucoup d’efforts pour se renouveler. Je crois que ça doit être salué. Nous avons déjà l’agriculture la plus exigeante en Europe.</p>
+            
+                <p>Et enfin, je voudrais insister sur la nécessité de travailler à des chaînes d’approvisionnements locales, parce que ça aussi, c’est une piste à explorer, et pour l’alimentation et pour l’environnement.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">204420</div>
+            
+            <header><b>Claude GRUFFAT</b> | Les Écologistes</header>
+            
+                <p>Le vote de cette semaine sur le plan d’action pour l’agriculture biologique est donc une belle opportunité de redresser la barre. Contrairement aux industriels et aux financiers, je pense, comme le commissaire Timmermans, qu’il y a urgence à produire mieux, et certainement pas à produire plus, pour assurer la souveraineté alimentaire de l’Europe comme dans le monde. </p>
+            
+                <p>C’est pourquoi, j’ai déposé plusieurs amendements afin que le texte final reste fidèle aux objectifs du pacte vert et de la stratégie «De la ferme à la fourchette». Parmi ceux-ci, l’objectif de 25 % de surfaces agricoles en bio dans l’Union européenne d’ici 2030 et, comme vous l’avez souligné tout à l’heure, Monsieur le Commissaire, la création d’outils pour faire des collectivités des acteurs de la transition agricole et alimentaire par l’outil de la commande publique, pour les cantines par exemple.</p>
+            
+                <p>La catastrophe agricole n’est pas une fatalité: envoyons un signal fort pour la souveraineté des paysans, de l’environnement et de notre santé.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

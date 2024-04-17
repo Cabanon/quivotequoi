@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Agence de l’Union européenne pour l’asile</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,36 +22,43 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Agence de l’Union européenne pour l’asile</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Etat et évolution de l&#39;Union</li>
-        
     
         
         
@@ -59,7 +67,7 @@
     
         
         
-            <li>Espace de liberté, de sécurité et de justice</li>
+            <li>Agences et organes de l&#39;Union</li>
         
     
         
@@ -74,22 +82,272 @@
     
         
         
-            <li>Agences et organes de l&#39;Union</li>
+            <li>Etat et évolution de l&#39;Union</li>
+        
+    
+        
+        
+            <li>Espace de liberté, de sécurité et de justice</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2016/0131(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2016/0131(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-8-2016-0392_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-11-11-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b></b> | </header>
+            J&#39;ai voté contre ce texte.Sous couvert d&#39;efficacité, la création de cette agence (qui succédera à l&#39;actuel Bureau européen d&#39;appui en matière d&#39;asile, mais avec des compétences élargies) vise évidemment à imposer encore davantage aux États membres un droit de regard de l&#39;Union européenne sur leurs décisions en matière d&#39;asile.
+        </article>
+    
+        <article>
+            <div class="hidden">96952</div>
+            
+            <header><b></b> | </header>
+            J&#39;ai voté en faveur du règlement établissant la nouvelle agence de l&#39;UE pour l&#39;asile qui disposera de pouvoirs opérationnels et techniques accrus pour favoriser une meilleure mise en œuvre des règles européennes sur l&#39;asile, y compris des garanties de protection des demandeurs d&#39;asile.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b></b> | </header>
+            J’ai voté contre la création de cette agence qui s’avère être pour les institutions européennes, sous couvert d’efficacité et de meilleure collaboration entre États membres en matière d’asile, un ‘cheval de Troie’ supplémentaire dans l’action des États membres en matière d’asile et d’immigration.
+        </article>
+    
+        <article>
+            <div class="hidden">22858</div>
+            
+            <header><b></b> | </header>
+            Je salue l’adoption des accords conclus entre le Parlement européen et le Conseil concernant la transformation du Bureau européen d’appui en matière d’asile en une Agence de l’Union européenne pour l’asile à part entière. Avec l’augmentation de ses prérogatives et de son rôle sur le terrain, cette réforme était nécessaire.Après cinq ans de négociations je me réjouis que cette transformation soit adoptée. Désormais, l’Agence pourra :- Déployer du personnel sur le terrain rapidement, pour soutenir les États,- Établir une réserve de 500 experts nationaux prêts à être déployés en cas de pression migratoire,- Renforcer ses missions de formation pour les agents nationaux,- Établir un Officier droits fondamentaux pour assurer le respect des droits dans les activités de l’Agence,- Mettre en place des agents de liaison dans les États membres et les pays tiers,- Renforcer le soutien opérationnel aux pays tiers de transit ou d’origine des migrations.Je me félicite de la création de cette Agence européenne pour l’asile qui concrétise ainsi l’une des propositions fortes du programme de notre délégation Renaissance.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b></b> | </header>
+            J’ai voté contre ce rapport car il propose de créer une nouvelle agence de l’UE qui sera responsable des questions d’asile. Cela réduira encore davantage les possibilités d’action des États membres contre la submersion migratoire, ce qui est inacceptable.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b></b> | </header>
+            Je me suis abstenue sur ce rapport relatif à l’Agence de l’Union européenne pour l’asile (EASO). Cet accord de trilogue contenait des dispositions intéressantes pour accroître le mandat de l’Agence et lui permettre ainsi de mieux appuyer les États membres qui sont en première ligne face aux crises migratoires. Mais il comportait paradoxalement des passages susceptibles de renforcer ces crises, par exemple en faisant de l’EASO l’Agence en charge de superviser la répartition des migrants dans les États membres, ou encore de promouvoir la création de nouvelles voies d’immigration légale, mesures auxquelles je suis profondément opposée car elles représentent de véritables appels d’air à l’immigration illégale. Je ne pouvais donc soutenir ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b></b> | </header>
+            Ce rapport vise à modifier le règlement encadrant l’action de l’agence européenne pour l’asile afin d’élargir son mandat de compétences et de renforcer ses pouvoirs. Il ne clarifie malheureusement pas l’orientation politique de cette institution, dont nous redoutons qu’elle ne serve une nouvelle réduction des droits des demandeurs d’asile au sein de l’Union à travers notamment son rôle accru dans la définition des pays tiers dits &quot;sûrs&quot;. Je me suis donc abstenue sur ce texte qui ne lève pas nos inquiétudes sur le risque d’instrumentalisation de l’agence au service de politiques niant les droits des exilés.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b></b> | </header>
+            Ce rapport entérine la création de la nouvelle Agence de l’Union européenne pour l’asile qui succède au Bureau européen d’appui à l’asile. L’Agence a pour mission de venir en aide aux États membres sur le terrain par le biais d&#39;un effectif de 500 experts devant aider notamment à l’identification et à l’enregistrement des ressortissants de pays tiers ou encore soutenir les autorités nationales dans le traitement de la procédure d’asile, y compris dans des situations de crise, de relocalisation ou de réinstallation. L’Agence doit également développer des normes opérationnelles, des analyses, des lignes directrices ainsi que des formations sur les sujets liés à l’asile. La création de cette Agence pourrait être une première étape vers une politique d’accueil concertée au niveau européen, respectueuse du droit international en la matière et à même de garantir le respect des droits fondamentaux des personnes. Malheureusement sur ce dernier point, et au vu de l’expérience mitigée du Bureau européen d’appui à l’asile, je considère que toutes les garanties ne sont pas réunies. Je préfère donc m’abstenir sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b></b> | </header>
+            La création de cette agence est un énième moyen pour les institutions européennes, sous couvert d&#39;efficacité et de meilleure collaboration entre Etats membres en matière d&#39;asile, de placer ces derniers sous une forme de tutelle politique, aux sens organique et philosophique du terme, qui aura surtout pour effet de restreindre un peu plus encore un champ d&#39;action qui leur est déjà de plus en plus limité.Contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197551</div>
+            
+            <header><b></b> | </header>
+            J’ai soutenu ce rapport qui achève la création d’une véritable agence européenne pour l’asile. Dotée de compétences étendues et de moyens renforcés, cette agence sera essentielle pour assurer à la fois une prise en charge efficace et respectueuse des droits fondamentaux pour les demandeurs d’asile en Europe, et une meilleure protection de nos frontières extérieures. Sa mise en place concrétise aussi un de nos engagements de campagne.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b></b> | </header>
+            La création de cette agence est un énième moyen pour les institutions européennes, sous couvert d’efficacité et de meilleure collaboration entre États membres en matière d’asile, de placer ces derniers sous une forme de tutelle politique, aux sens organique et philosophique du terme, qui concrètement aura surtout pour effet de restreindre un peu plus encore un champ d’action qui leur est déjà de plus en plus limité. Ainsi, la mention des « droits fondamentaux » revient 70 fois dans le texte, ceux-ci faisant l’objet d’un « officier » spécialement dédié à leur respect ‘à tous les étages’ et d’un mécanisme spécifique de plainte dans le cas contraire. Ceci est un ‘cheval de Troie’ supplémentaire dans l’action des États membres en matière d’asile.J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b></b> | </header>
+            En 2016, la Commission européenne a présenté sept propositions législatives visant à améliorer le fonctionnement du régime d&#39;asile européen commun, dont une relative à l&#39;Agence de l&#39;UE pour l&#39;asile. En 2018, la Commission européenne a présenté une proposition modifiée de règlement relatif à l&#39;Agence, puis, en 2020, est revenue à sa proposition de 2016. Cette agence vise à améliorer le fonctionnement du régime d&#39;asile européen commun en fournissant une assistance opérationnelle et technique renforcée aux États membres qui en ont besoin dans le traitement des demandes d&#39;asile, et en contribuant à une plus grande convergence dans l&#39;évaluation des demandes de protection internationale. La nouvelle législation prétend aussi renforcer le soutien apporté à la coopération entre les États membres et avec les pays tiers, et contribuer ainsi à la dimension extérieure mondiale de l&#39;UE. La création de cette agence est un énième moyen pour les institutions européennes, sous couvert d’efficacité et de meilleure collaboration en matière d’asile, de placer ces derniers sous une forme de tutelle politique, aux sens organique et philosophique, qui concrètement aura surtout pour effet de restreindre un peu plus encore un champ d’action qui leur est déjà de plus en plus limité. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b></b> | </header>
+            En 2016, la Commission européenne a présenté sept propositions législatives visant à améliorer le fonctionnement du régime d&#39;asile européen commun, dont une relative à l&#39;Agence de l&#39;UE pour l&#39;asile. Celles-ci, et notamment cette dernière mesure qui fait l’objet du présent rapport, ont été négociées entre le Conseil et le Parlement qui sont parvenus à un large accord politique en 2017. Dans les faits, la création de cette agence est un énième moyen pour les institutions européennes, sous couvert d’efficacité et de meilleure collaboration entre États membres en matière d’asile, de placer ces derniers sous une forme de tutelle politique, qui aura pour effet de restreindre un peu plus encore un champ d’action qui leur est déjà de plus en plus limité. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b></b> | </header>
+            L’Agence de l’UE pour l’asile a officiellement pour objectif d’améliorer le fonctionnement du régime d&#39;asile européen commun en assistant notamment les États dans le traitement des demandes d’asile.La création de cette agence place davantage les États membres sous la tutelle de l’UE en matière d’asile.Nous pensons que les Etats doivent davantage garder la main en la matière et que la politique d’asile ne doit pas être une filière d’immigration imposée par l’UE. J’ai donc voté contre ce texte.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b></b> | </header>
+            
+                <p>La création de cette Agence européenne pour l’asile, que vous appelez de vos vœux, n’aura qu’un résultat: envoyer un nouveau signal de faiblesse et de laxisme, celui d’une Europe dont les portes sont grandes ouvertes. Lucides, plusieurs dirigeants d’États membres vous mettent en garde: il ne faut pas reproduire les erreurs de 2015. Depuis six ans, ce sont cinq millions de demandeurs d’asile qui ont déferlé sur notre continent, l’équivalent en nombre d’habitants de la région Grand Est, quasiment la population du Danemark. Le Danemark, parlons-en, voilà un pays à prendre en exemple! Copenhague a déjà retiré l’asile à des réfugiés prétendument syriens, puisque rien ne s’oppose désormais à ce qu’ils rentrent chez eux.</p>
+            
+                <p>Ce dont nous avons besoin, ce n’est pas d’une Agence pour l’asile, mais d’une agence organisant de manière humaine, bien sûr, mais efficace, le retour vers leur pays d’origine de tous ceux qui n’ont rien à faire en Europe.</p>
+            
+                <p>Votre pacte européen sur la migration et l’asile est au point mort. Pour être à la hauteur des défis, il faut faire preuve de courage, comme en Lituanie: détention pour les migrants arrivés clandestinement qui n’ont pas déposé de demande légale d’asile; comme en Hongrie: construction d’un mur aux frontières terrestres extérieures de l’Union européenne; comme au Danemark: retour chez eux des migrants dont le pays n’est plus en guerre. Quant à la Biélorussie, il faut des sanctions diplomatiques et économiques avec les pays qui refusent de reprendre leurs migrants ou qui nous menacent. L’objectif doit être clair: tarir les flux migratoires et stopper la ruée vers l’Europe.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">96952</div>
+            
+            <header><b></b> | </header>
+            
+                <p> – Monsieur le Président, l’Union européenne va enfin avoir une authentique Agence pour l’asile. Je souhaite féliciter ma collègue et camarade Elena Yoncheva pour l’excellent résultat obtenu dans un domaine toujours très délicat dans les relations avec les États membres.</p>
+            
+                <p>Au moment où se déroulent, avec un peu de difficulté, les négociations du pacte sur l’asile et la migration, cet accord permet de donner un autre éclairage sur le champ de la migration et de l’asile, qui ne saurait se limiter à la gestion des frontières extérieures et des retours. À cet égard, la comparaison entre Frontex, qui va recruter 10 000 garde-côtes, et le Bureau européen d’appui pour l’asile (EASO), tel qu’il s’appelait avant, avec ses 500 experts, frôlait l’indécence. Il était donc temps de créer une véritable agence, avec des ressources humaines et financières suffisantes pour soutenir la mise en œuvre de la politique d’asile et l’accueil.</p>
+            
+                <p>Toutefois, ce n’est évidemment pas qu’une question, certes très importante, de budget et de ressources humaines. L’EASO travaillait depuis longtemps aux limites de son mandat, nonobstant un besoin croissant de soutien par les États membres. Je veux citer deux nouvelles tâches nécessaires pour le changement tangible qu’elles apporteront sur le terrain.</p>
+            
+                <p>En premier lieu, cette agence pourra approfondir et formaliser son engagement dans la répartition et la réinstallation des demandeurs d’asile et des réfugiés. C’est une avancée très opportune dans le contexte de la situation afghane récente et du forum de haut niveau sur leur protection qui doit avoir lieu cet après-midi.</p>
+            
+                <p>Ensuite, elle devra également surveiller la mise en œuvre des politiques d’asile dans les États membres, ce qui devrait les obliger à améliorer les conditions d’accueil et à respecter les droits fondamentaux des demandeurs d’asile. Cette mesure est essentielle pour changer la situation à nos frontières et mettre fin au refoulement.</p>
+            
+                <p>Cette nouvelle agence rend possible une réforme positive du régime d’asile européen, car elle est la preuve que nous pouvons miser sur une solidarité significative et un soutien pratique aux États membres.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197574</div>
+            
+            <header><b></b> | </header>
+            
+                <p> – Monsieur le Président, nous, les Verts européens, réclamions depuis longtemps la création d’une véritable Agence européenne pour l’asile. Que son mandat n’entre pas en vigueur dès son adoption est par contre lourd de sens.</p>
+            
+                <p>Le manichéisme des politiques migratoires européennes est de plus en plus indigeste. Les États membres sont toujours pressés de mettre en œuvre les législations restrictives, mais ils exigent des délais lorsqu’il s’agit de protéger les droits fondamentaux des exilés. On double le budget de Frontex, malgré les nombreux faits qui lui sont reprochés, mais les États membres négocient jusqu’au bout de minables délais pour la mise en place d’un responsable des droits fondamentaux et d’un mécanisme de plaintes.</p>
+            
+                <p>Forte avec les faibles, faible avec les forts: voici donc la devise de l’Union européenne et de ses États membres. En France, c’est militariser à outrance la frontière avec le Royaume-Uni; laisser survivre dans des conditions indignes entre 1 000 et 1 500 personnes, en majorité des familles, à Calais et Grande-Synthe; harceler, humilier et dépouiller des enfants, des femmes, des hommes; Human Rights Watch dénonce ces conditions une fois de plus dans un rapport ce matin même. En Italie, c’est condamner à quinze ans de prison Mimmo Lucano, l’ancien maire de Riace, qui a voué ses mandats à un accueil digne des exilés, quand un militant d’extrême droite qui a tiré, lui, sur des exilés est condamné à douze ans seulement. Au Danemark, c’est confisquer les biens des réfugiés à leur arrivée dans le pays; c’est offrir des barbelés coupants à la Lituanie pour sa clôture anti-migrants. En Pologne, c’est déclarer l’état d’urgence à la frontière pour mettre une chape de plomb sur un scandale humanitaire et humain: des exilés laissés à l’abandon, sans nourriture, sans abri. Déjà six morts. Combien encore avant que l’Union européenne n’agisse fermement?</p>
+            
+                <p>Si c’est ça, la solidarité européenne, on s’en passera, merci bien. Vous pensez flatter vos électorats, vous ne faites qu’attiser la haine. En France, en Italie, dans toute l’Europe, les citoyens, les bénévoles, les associations sont scandalisés. Ils me le disent, ils nous interpellent. Ils ont honte, moi aussi.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
+
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

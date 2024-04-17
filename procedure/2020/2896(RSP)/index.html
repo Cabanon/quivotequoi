@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Résolution sur la nécessité d’une formation du Conseil sur l’égalité des genres</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Résolution sur la nécessité d’une formation du Conseil sur l’égalité des genres</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(505/688 * 100%)">505</div>
-  
-  
-    <div class="-" style="width: calc(146/688 * 100%)">146</div>
+    <div class="for" style="width: calc(505/688 * 100%)">505</div>
   
   
-    <div class="0" style="width: calc(37/688 * 100%)">37</div>
+    <div class="against" style="width: calc(146/688 * 100%)">146</div>
+  
+  
+    <div class="abstention" style="width: calc(37/688 * 100%)">37</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(54/78 * 100%)">54</div>
+    <div class="for" style="width: calc(54/78 * 100%)">54</div>
   
   
-    <div class="-" style="width: calc(23/78 * 100%)">23</div>
+    <div class="against" style="width: calc(23/78 * 100%)">23</div>
   
   
-    <div class="0" style="width: calc(1/78 * 100%)">1</div>
+    <div class="abstention" style="width: calc(1/78 * 100%)">1</div>
   
 </div>
  
 </section>
-            <a href="/voting/126258">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/126258">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -121,164 +126,288 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2896(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/B-9-2020-0402_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-12-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       <ins>– vu sa résolution du 19 juin 2020 sur les manifestations contre le racisme après la mort de George Floyd1bis,  _______________________  1bis Textes adoptés de cette date,</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">525</div>
+  <div class="against">143</div>
+  <div class="abstention">26</div>
+</span>
+
+  
+    
+    <a href="/voting/125851">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(525/694 * 100%)">525</div>
-  
-  
-    <div class="-" style="width: calc(143/694 * 100%)">143</div>
-  
-  
-    <div class="0" style="width: calc(26/694 * 100%)">26</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125851">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       <ins>E bis. considérant qu’une perspective intersectionnelle est nécessaire pour parvenir à l’égalité; que la création d’une formation du Conseil sur des dimensions plus larges de l’égalité et de la discrimination intersectionnelle est également nécessaire;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">293</div>
+  <div class="against">388</div>
+  <div class="abstention">13</div>
+</span>
+
+  
+    
+    <a href="/voting/125852">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(293/694 * 100%)">293</div>
-  
-  
-    <div class="-" style="width: calc(388/694 * 100%)">388</div>
-  
-  
-    <div class="0" style="width: calc(13/694 * 100%)">13</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125852">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. rappelle sa position du 19 juin 2020 relative à la création d’une formation du Conseil consacrée à l’égalité, qui pourrait englober les questions d’égalité des genres ainsi que d’autres sujets liés à la discrimination et à la diversité;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">295</div>
+  <div class="against">388</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/125849">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(295/694 * 100%)">295</div>
-  
-  
-    <div class="-" style="width: calc(388/694 * 100%)">388</div>
-  
-  
-    <div class="0" style="width: calc(11/694 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125849">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       5. demande au Conseil et au Conseil européen d’instaurer une formation du Conseil sur l’égalité des genres 
@@ -292,48 +421,215 @@
       afin de faciliter l’intégration des questions d’égalité des genres dans toutes les politiques et toute la législation de l’Union;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(300/694 * 100%)">300</div>
-  
-  
-    <div class="-" style="width: calc(378/694 * 100%)">378</div>
-  
-  
-    <div class="0" style="width: calc(16/694 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125850">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2896(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/B-9-2020-0402_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">300</div>
+  <div class="against">378</div>
+  <div class="abstention">16</div>
+</span>
+
   
+    
+    <a href="/voting/125850">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-12-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce texte qui porte atteinte à la souveraineté des États, tout en se faisant l&#39;écho de serpents de mer du discours féministe actuels, qui ne relèvent pas selon moi de priorités en matière d&#39;amélioration de la condition féminine.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce texte car il se sert de la juste cause de l’égalité entre les hommes et les femmes pour imposer des concepts idéologiques tels que le genre ou le racialisme. Les auteurs estiment que pour faire progresser l’égalité, il est nécessaire de mettre en place une formation spécialisée au niveau du Conseil pour y réunir les ministres et chefs d’États sur ces sujets.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Cette résolution vise à la création d’une formation du Conseil consacrée à l’égalité des genres. Cette formation permettrait aux ministres et secrétaires d’État chargés de ces questions de se rencontrer afin de renforcer la prise en compte de l’égalité des genres dans les politiques de l’Union européenne, en même temps que de créer une coopération et un échange de bonnes pratiques entre les États membres. J’ai naturellement soutenu cette initiative.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution sur la nécessité d’une formation du Conseil sur l’égalité des genres. Le texte demande au Conseil d&#39;envisager la création d&#39;une formation spécialisée sur l&#39;égalité des sexes, étant donné qu&#39;une telle réunion est aujourd’hui simplement informelle dans le cadre &quot;Emploi et affaires sociales&quot;. Je suis favorable à un dialogue politique au plus haut niveau sur les questions d&#39;égalité des sexes.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Cette résolution vise à promouvoir la création d’une formation du Conseil aux enjeux de l’égalité des genres, réunissant les ministres et secrétaires d’État chargés de ces questions au sein de chaque État membre. Elle rappelle la persistance des discriminations qui touchent les femmes dans tous les secteurs de la société, souligne l’absence de parité dans les instances de décision européennes et insiste sur la nécessité d’intégrer la dimension de genre dans l’ensemble des politiques de l’UE. J’ai donc voté pour ce texte qui défend une meilleure prise en compte de la question de l’égalité entre les femmes et les hommes au sein de l’Union européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Cette résolution vise à la création d’une formation du Conseil consacrée à l’égalité des genres, puisque les discriminations envers les femmes sont un problème à l’échelle de toute l’Union européenne. Ce texte insiste sur le signal politique fort qu’enverrait la mise en place de rencontres entre les ministres et secrétaires d’État chargés de ces questions. Une telle formation permettrait également de renforcer la cohérence ainsi que la prise en compte de l’égalité des genres dans les stratégies et politiques de l’Union européenne. De plus, il s’agirait de renforcer la coopération entre les États membres et de créer un échange de bonnes pratiques en ce sens. Cette résolution en profite aussi pour faire un état des lieux des discriminations et inégalités qui persistent et sur lesquelles une telle formation pourrait agir. Il s’agit d’une bonne avancée institutionnelle en faveur de l’égalité entre les genres. Je vote donc en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197589</div>
+            
+            <header><b>Laurence FARRENG</b> | Mouvement Démocrate</header>
+            J&#39;ai voté en faveur de ce texte, à l’initiative de ma délégation Renaissance, sur la nécessité d’une formation du Conseil dédiée à l’égalité des genres. Nous demandons au Conseil européen d’amender la liste des formations du Conseil afin de rassembler les ministres chargés de l&#39;égalité des genres dans un forum formel dédié, pour leur permettre de se rencontrer régulièrement, de légiférer et de renforcer le dialogue et la coopération sur le sujet de l&#39;égalité femmes-hommes. Je n&#39;ai pas voté en faveur de certains amendements demandant l&#39;ouverture de ce forum à d&#39;autres discriminations, qui, je l&#39;estime, méritent une instance ad hoc elles aussi.
+        </article>
+    
+        <article>
+            <div class="hidden">197585</div>
+            
+            <header><b>Pierre KARLESKIND</b> | Renaissance</header>
+            À ce jour, le Conseil de l’UE ne dispose pas de formation dédiée à l’égalité. Les ministres à l’égalité de chaque État membre se réunissent de manière informelle, mais n’ont pas d’espace de discussion formel et institutionnalisé au niveau européen.Pour faire avancer l’égalité des genres, j’ai soutenu cette résolution initiée par la délégation Renaissance, et qui appelle à créer une formation du Conseil spécifique sur l’égalité entre les hommes et les femmes. J’aurais pour ma part préféré que nous appelions à un «Conseil à l’égalité», au sens large, qui inclue également les sujets de discriminations, notamment contre les personnes LGBTI, j’ai donc voté en faveur de trois amendements en ce sens. Mais une formation du Conseil sur l’égalité entre les hommes et les femmes serait déjà un premier pas prometteur et nécessaire, à l’heure où les droits des femmes sont remis en question et menacés par certains gouvernements en Europe.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Sur le fond, la résolution relaie les lubies des féministes et porte atteinte à la souveraineté. Sur la forme, elle consiste à voir le Parlement signifier au Conseil la façon dont il doit s&#39;organiser.
+        </article>
+    
+        <article>
+            <div class="hidden">197576</div>
+            
+            <header><b>Sylvie BRUNET</b> | Mouvement Démocrate</header>
+            J’ai voté en faveur de notre résolution sur la nécessité d’une formation du Conseil sur l’égalité des genres. Alors que le Parlement européen comprend une commission sur les droits des femmes et l’égalité des genres, et qu’une commissaire européenne est en charge d’un portefeuille dédié à l’égalité, le Conseil de l’Union européenne ne dispose pas d’un forum institutionnel pour débattre de ces questions. Notre demande est simple: amender la liste des formations du Conseil afin de permettre aux ministres et secrétaires d’État chargés de l’égalité des genres de se réunir. Cette formation du Conseil dédiée à l’égalité des genres permettrait de renforcer le dialogue et la coopération sur ces sujets, d’adopter une approche cohérente et coordonnée et de débloquer les négociations sur les principaux dossiers au niveau européen. À titre d’exemple, la directive «Women on Boards» concernant l’amélioration de l’équilibre entre les femmes et les hommes dans les conseils d’administration est bloquée au Conseil depuis sept ans. Je suis convaincue que ce fort signal politique contribuera à réduire les écarts entre États membres et à harmoniser la protection des droits des femmes et de l’égalité des genres en Europe grâce à une approche intersectionnelle.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté en faveur de cette résolution déposée conjointement par plusieurs groupes politiques à l’initiative du groupe Renew. Il s’agit de demander au Conseil d’étendre sa liste de formats de réunion afin de permettre des rencontres régulières entre les ministres européens en charge des questions d’égalité des genres. Alors que les violences faites aux femmes ont augmenté en 2020 et que l’égalité salariale est encore loin d’être acquise, il est impératif de dialoguer à l’échelle européenne et de construire une réponse efficace et coordonnée entre les États membres.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            J’ai voté contre cette résolution pour des raisons de fond et de forme.Sur le fond: si elle évoque à juste titre la nécessité de lutter contre la violence faite aux femmes, on y trouve surtout toutes les obsessions de la gauche. On y demande la mise en place de quotas dans les conseils d’administration et de faire ratifier la convention d’Istanbul qui porte atteinte à la souveraineté des États membres; les références aux problématiques intersectionnelles sont légion, notamment pour les femmes «racisées».Sur la forme: le sujet de l’égalité hommes-femmes est une juste cause souvent instrumentalisée par le Parlement européen qui multiplie les gesticulations en la matière. Le Parlement n’a pas à intimer au Conseil, organe représentant les États membres, ce qu’il doit faire. De plus, j’estime que ces questions sociétales doivent dépendre des États et que ce n’est pas à l’Union européenne de s’immiscer dans ces problématiques.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Le texte relaie les théories folles des féministes et indigénistes, il ne vise pas à améliorer les conditions de certaines femmes mais de répondre à un agenda politique d’extrême gauche. Le texte porte en plus gravement atteinte aux souverainetés nationales. J’ai donc voté contre ce texte délirant. Mais j’ai appuyé par mon vote la résolution alternative de l’ECR qui est bien plus pragmatique.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            La résolution commune estime que pour faire progresser l’égalité hommes-femmes par des décisions «au plus haut niveau politique», le Conseil doit se doter d’une formation spécialisée en la matière réunissant les ministres et secrétaires d’État compétents. Dans cette résolution, on évoque à juste titre la nécessité de lutter contre la violence faite aux femmes ou de faciliter leur accès au marché du travail. Le texte demande de garantir les droits sexuels et génésiques et de faire ratifier la convention d’Istanbul, ce qui porte atteinte à la souveraineté des États membres. Les références aux problématiques intersectionnelles sont nombreuses, notamment, pour les femmes «racisées». J’ai voté contre ce texte car le sujet de l’égalité hommes-femmes est une juste cause mais qui demeure instrumentalisée par le Parlement européen.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            La résolution d’ECR, très courte, parle essentiellement de la forme. Après avoir souligné l’importance de l’égalité hommes-femmes, elle rappelle qu’il n’y a pas nécessairement besoin de ce type de formation du Conseil pour défendre cette cause. Elle précise que le Conseil et les États membres ne peuvent être contraints d&#39;aligner leurs structures organisationnelles sur celles de la Commission et du Parlement, et qu’ils doivent être libres de décider de leur propre structure organisationnelle et de leurs configurations de travail politique. J’ai donc décidé de d’émettre un vote pour cette résolution.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Les signataires de la résolution majoritaire (de la droite libérale européiste à l’extrême gauche) affirment que le Conseil doit se doter d’une formation spécialisée pour faire progresser l’égalité hommes-femmes par des décisions «au plus haut niveau politique», réunissant les ministres et secrétaires d’État compétents. Nous sommes bien évidemment d’accord sur la nécessité évoquée ici de faciliter l’accès des femmes au marché du travail et de lutter contre les violences dont elles sont victimes. Hélas, cette résolution est surtout l’occasion d’exposer les lubies des lobbies extrémistes féministes. Outre les nombreuses références aux femmes «racisées» aux luttes «intersectionnelles», on retrouve les revendications de la gauche hors-sol comme une garantie des droits sexuels et génésiques, la ratification de la convention d’Istanbul, ce qui porte atteinte à la souveraineté des États membres, l’exigence de quotas dans les conseils d’administration, la résorption du «gender pay gap» qui défend une vision manichéenne du travail des femmes qui devient un objectif en soi...J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre cette résolution où le Parlement européen outrepasse ses compétences en enjoignant le Conseil de créer une formation spécifique sur l’égalité entre les hommes et les femmes. Le Conseil, qui représente les États souverains, peut bien sûr choisir de constituer une telle formation, mais il doit le faire en fonction de son agenda et de ses besoins.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197531</div>
+            
+            <header><b>Gwendoline DELBOS-CORFIELD</b> | Les Écologistes</header>
+            
+                <p> – Madame la Présidente, en 2020, dans cette Union européenne, dans un pays, le droit à l’avortement n’existe quasiment plus. Dans d’autres États membres, les différences entre femmes et hommes sont encore institutionnalisées. Et de manière générale, dans tous nos pays, les inégalités entre femmes et hommes sont encore immenses.</p>
+            
+                <p>Quand ces femmes qui vivent en Europe sont immigrées, enfants d’immigrés, considérées comme immigrées, quand elles n’ont pas la peau de couleur blanche, quand elles ne sont pas hétérosexuelles, quand elles n’ont pas la bonne religion, quand elles sont handicapées, quand elles sont pauvres, quand elles sont fragiles, alors elles subissent encore plus d’inégalités, d’injustices et de discriminations.</p>
+            
+                <p>Réunir de manière officielle des ministres dans une formation sur l’égalité des genres serait une manière de donner une réelle importance à ces questions d’inégalités et de les traiter avec l’importance qu’elles méritent – autant que les questions commerciales, industrielles, financières, économiques, environnementales. Si on y ajoute l’approche intersectionnelle, alors peut-être nous donnerons-nous réellement les moyens d’agir sur ces questions. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197547</div>
+            
+            <header><b>Irène TOLLERET</b> | Renaissance</header>
+            
+                <p>Aujourd’hui, plus personne n’applaudit à 20 heures, plus personne n’ose parler du monde d’après, trop conscient que le monde de «pendant» va durer. Simone de Beauvoir l’avait pourtant prédit dès 1949: il suffirait d’une crise économique pour que les droits des femmes soient remis en question. Nous y sommes: 75 % des pertes d’emplois sont féminines, les violences domestiques ont été multipliées par trois, sans compter la charge mentale due au confinement, au télétravail et à la fermeture des écoles. Et nous assistons même, dans notre Union, à un recul des droits sur l’avortement. </p>
+            
+                <p>L’Europe est-elle à la hauteur? La réponse est non. L’Union européenne n’a toujours pas ratifié la Convention d’Istanbul, la directive sur la présence des femmes dans les conseils d’administration est bloquée au Conseil depuis sept ans, la directive sur la transparence salariale a été reportée. Le Parlement n’est pas en reste: c’est la troisième fois que nous trahissons notre propre résolution sur l’égalité de genre dans les nominations des affaires économiques et monétaires. </p>
+            
+                <p>Il est temps de faire de l’égalité un point central de l’agenda politique de l’Union. C’est pourquoi nous demandons la création d’un conseil à l’égalité de genre. Ce petit pas pour le Conseil est un grand pas pour l’égalité. Nous le devons à nos mères, à nos filles et à toutes les inconnues en première ligne, que je vous propose d’applaudir à nouveau.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197499</div>
+            
+            <header><b>Chrysoula ZACHAROPOULOU</b> | Renaissance</header>
+            
+                <p> – Madame la Commissaire, l’année 2020 restera dans l’histoire, marquée par une crise sanitaire inédite. Des femmes et des hommes sont en première ligne, nous les remercions. L’Union européenne a aussi su se dépasser: la naissance de l’Europe de la santé, la première loi sur le climat, un plan de relance historique. Mais nous avons aussi un autre devoir vis-à-vis des prochaines générations: assurer l’égalité des genres dans les 27 pays. </p>
+            
+                <p>Madame la Commissaire, nous partageons votre agenda politique ambitieux pour les droits des femmes et pour l’égalité des genres. Mais tous les États membres, bons comme mauvais élèves, doivent désormais s’engager. </p>
+            
+                <p>Travaillons ensemble, apprenons le meilleur de chacun: c’est ça, l’esprit du pacte Simone Veil que nous portons. C’est ça, l’esprit de l’Union européenne. En 2021, ayons le courage de construire ce conseil à l’égalité. Nous, ici, nous l’avons. Le Conseil doit l’avoir aussi.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

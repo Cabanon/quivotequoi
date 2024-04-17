@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Budget général 2021: toutes sections</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Budget général 2021: toutes sections</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(471/689 * 100%)">471</div>
-  
-  
-    <div class="-" style="width: calc(102/689 * 100%)">102</div>
+    <div class="for" style="width: calc(471/689 * 100%)">471</div>
   
   
-    <div class="0" style="width: calc(116/689 * 100%)">116</div>
+    <div class="against" style="width: calc(102/689 * 100%)">102</div>
+  
+  
+    <div class="abstention" style="width: calc(116/689 * 100%)">116</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(48/79 * 100%)">48</div>
+    <div class="for" style="width: calc(48/79 * 100%)">48</div>
   
   
-    <div class="-" style="width: calc(23/79 * 100%)">23</div>
+    <div class="against" style="width: calc(23/79 * 100%)">23</div>
   
   
-    <div class="0" style="width: calc(8/79 * 100%)">8</div>
+    <div class="abstention" style="width: calc(8/79 * 100%)">8</div>
   
 </div>
  
 </section>
-            <a href="/voting/124733">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/124733">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -111,366 +116,498 @@
     
         
         
-            <li>Budget de l&#39;Union</li>
+            <li>Budget 2021</li>
         
     
         
         
-            <li>Budget 2021</li>
+            <li>Budget de l&#39;Union</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/1998(BUD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0206_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-11-11-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>-1. considère que les mesures adoptées jusqu’à présent par l’UE sont loin d’apporter une réponse adéquate à l’ampleur des problèmes découlant de l’aggravation de la situation économique et sociale et des conséquences de la COVID-19; souligne que les impasses successives dans la définition des mesures à mettre en œuvre, qui persistent tant dans la préparation du cadre financier 2021 et dans le «Fonds pour la relance», révèlent de profondes contradictions au sein de l’Union, ainsi que le manque de solidarité effective, dans la mesure où des réductions sont proposées dans des domaines budgétaires importants, tels que celui de la «cohésion économique et sociale»; met en garde contre le fait que plusieurs des mesures proposées, outre le fait qu’elles soient insuffisantes et temporaires, sont fondées sur une logique d’endettement – s’ajoutant à une dette qui est déjà insoutenable et qui s’aggrave – ou d’anticipation de l’utilisation des fonds à venir, tout en étant associées à de fortes contraintes, qui tendront à exacerber les asymétries, les inégalités et les relations de dépendance;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">85</div>
+  <div class="against">547</div>
+  <div class="abstention">52</div>
+</span>
+
+  
+    
+    <a href="/voting/124361">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(85/684 * 100%)">85</div>
-  
-  
-    <div class="-" style="width: calc(547/684 * 100%)">547</div>
-  
-  
-    <div class="0" style="width: calc(52/684 * 100%)">52</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124361">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>5 bis. demande la création d’une dérogation à l’article 123 du traité FUE, laquelle donnera la possibilité aux États membres d’obtenir un financement direct de la Banque centrale européenne (BCE), notamment par l’achat direct de titres de la dette publique nationale, en évitant l’intermédiation actuelle des marchés financiers, les attaques spéculatives sur la dette souveraine et les profits sur le capital financier, qui réduisent les recettes que les États pourraient obtenir par une vente directe de titres de la dette à la BCE;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">134</div>
+  <div class="against">542</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/124363">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(134/684 * 100%)">134</div>
-  
-  
-    <div class="-" style="width: calc(542/684 * 100%)">542</div>
-  
-  
-    <div class="0" style="width: calc(8/684 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124363">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>5 ter. demande la renégociation des dettes publiques, de leurs délais, intérêts et montants, de manière à ce que les ressources de la dette puissent être réorientées vers les mesures économiques et sociales urgentes et nécessaires prises dans les États membres;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">73</div>
+  <div class="against">564</div>
+  <div class="abstention">47</div>
+</span>
+
+  
+    
+    <a href="/voting/124364">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(73/684 * 100%)">73</div>
-  
-  
-    <div class="-" style="width: calc(564/684 * 100%)">564</div>
-  
-  
-    <div class="0" style="width: calc(47/684 * 100%)">47</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124364">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>5 quater. considère que la situation socio-économique actuelle a montré, une fois de plus, que le pacte de stabilité et de croissance et tous les autres instruments liés à la gouvernance économique ne servent pas les intérêts des États membres ni de leurs peuples; demande par conséquent l’abrogation du pacte de stabilité, de la législation sur la gouvernance économique («six-pack» et «two-pack») et du Semestre européen, du traité budgétaire et de tous les mécanismes limitant et conditionnant la marge de manœuvre des États membres dans la promotion de l’investissement public, le financement des services publics et de leurs fonctions sociales, la stimulation de l’activité économique, en particulier dans les secteurs productifs, l’appropriation et le contrôle public des secteurs stratégiques de l’économie et, de manière générale, la réponse à la situation économique et sociale qui a été aggravée par les conséquences de la COVID-19, afin que la «flexibilité» désormais autorisée par l&#39;UE ne soit pas payée encore davantage par les travailleurs et les citoyens, comme ce fut le cas après la crise de 2008 ;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">87</div>
+  <div class="against">533</div>
+  <div class="abstention">64</div>
+</span>
+
+  
+    
+    <a href="/voting/124365">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(87/684 * 100%)">87</div>
-  
-  
-    <div class="-" style="width: calc(533/684 * 100%)">533</div>
-  
-  
-    <div class="0" style="width: calc(64/684 * 100%)">64</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124365">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>5 quinquies. considère que la situation socio-économique actuelle a montré, une fois de plus, que l’euro prive les États des instruments monétaires, financiers, de change et, dans une large mesure, budgétaires permettant de promouvoir un développement qui tienne compte de leurs réalités nationales et des réponses nécessaires aux problèmes économiques et sociaux qui sont apparus; demande la mise en place d’un programme à l’échelle de l’UE pour encadrer une sortie négociée des pays qui décident de quitter la monnaie unique et de retrouver la souveraineté monétaire, notamment en récupérant la capacité de leur banque centrale nationale d’émettre de la monnaie, et d’agir en tant que prêteur en dernier ressort, en mesure de financer l’État et de ménager une certaine marge de manœuvre face au chantage des marchés financiers. Ce programme doit également prévoir des aides à la sortie de la zone euro et, le cas échéant, des compensations pour les préjudices causés par le maintien dans l’euro;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">65</div>
+  <div class="against">594</div>
+  <div class="abstention">25</div>
+</span>
+
+  
+    
+    <a href="/voting/124366">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(65/684 * 100%)">65</div>
-  
-  
-    <div class="-" style="width: calc(594/684 * 100%)">594</div>
-  
-  
-    <div class="0" style="width: calc(25/684 * 100%)">25</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124366">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>7 bis. estime que, pour réagir de manière adéquate à la gravité de la situation socio- économique des États membres – qui continue de se détériorer en raison des conséquences de la COVID-19 – il est nécessaire d’augmenter sensiblement le budget de l’Union, ainsi que de renforcer sa fonction redistributive en faveur de la promotion d’une convergence effective du progrès économique et social entre les États membres, notamment en soutenant les secteurs productifs et l’emploi assorti de droits, au moyen de subventions (plutôt que de prêts) aux États membres;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">240</div>
+  <div class="against">389</div>
+  <div class="abstention">55</div>
+</span>
+
+  
+    
+    <a href="/voting/124370">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(240/684 * 100%)">240</div>
-  
-  
-    <div class="-" style="width: calc(389/684 * 100%)">389</div>
-  
-  
-    <div class="0" style="width: calc(55/684 * 100%)">55</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124370">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>9 bis. demande que l’exécution du budget de l’UE soit assouplie, que la Commission fasse passer des fonds d’une gestion centralisée à une gestion partagée avec les États membres, que les instruments de la politique de cohésion soient renforcés et que les États membres soient libres de réaffecter les ressources entre les fonds, les postes budgétaires et les priorités en fonction de leurs besoins économiques et sociaux, de manière à supprimer les objectifs de concentration thématique ainsi que toute conditionnalité macroéconomique et/ou politique fixée par l’UE; invite la Commission européenne à exclure du calcul du déficit budgétaire les investissements publics liés à la mise en œuvre des fonds de l’Union;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">81</div>
+  <div class="against">529</div>
+  <div class="abstention">74</div>
+</span>
+
+  
+    
+    <a href="/voting/124371">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(81/684 * 100%)">81</div>
-  
-  
-    <div class="-" style="width: calc(529/684 * 100%)">529</div>
-  
-  
-    <div class="0" style="width: calc(74/684 * 100%)">74</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124371">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       33. fait sien l’avis de la Commission, qui prévoit que, dans le cadre de la relance à la suite de l’épidémie de COVID-19, la lutte contre la pauvreté extrême, et en particulier contre la pauvreté des enfants, prendra de plus en plus d’importance dans les années à venir; insiste par conséquent pour qu’une ligne budgétaire séparée relevant du FSE + soit créée pour la garantie européenne pour l’enfance, avec pour 2021;
@@ -480,49 +617,51 @@
       <ins> rappelle l’importance d’un Fonds européen d’aide aux plus démunis (FEAD) suffisant, notamment dans le contexte de la pandémie de COVID-19;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">361</div>
+  <div class="against">302</div>
+  <div class="abstention">20</div>
+</span>
+
+  
+    
+    <a href="/voting/124378">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(361/683 * 100%)">361</div>
-  
-  
-    <div class="-" style="width: calc(302/683 * 100%)">302</div>
-  
-  
-    <div class="0" style="width: calc(20/683 * 100%)">20</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124378">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       58. insiste sur l’importance d’une définition progressive de la politique de sécurité et de défense commune de l’Union; souligne qu’il est crucial de renforcer la coopération européenne en matière de défense, car elle permet non seulement à l’Europe et à ses citoyens d’être mieux protégés, mais également de réduire les coûts;
@@ -532,120 +671,124 @@
       <del> suggère d’accroître les financements en faveur du Fonds européen de la défense, afin de soutenir pleinement la mise en œuvre d’une base industrielle de défense innovante et compétitive qui contribuera à assurer l’autonomie stratégique nécessaire de l’Union;</del>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">225</div>
+  <div class="against">443</div>
+  <div class="abstention">15</div>
+</span>
+
+  
+    
+    <a href="/voting/124386">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(225/683 * 100%)">225</div>
-  
-  
-    <div class="-" style="width: calc(443/683 * 100%)">443</div>
-  
-  
-    <div class="0" style="width: calc(15/683 * 100%)">15</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124386">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>4 bis. souligne que les États membres doivent encore résoudre de nombreux problèmes, notamment en ce qui concerne l’atténuation des effets de la pandémie de COVID-19, et est convaincu que les citoyens de l’Union s’attendent à ce que le budget 2021 soit plus efficace, plus transparent et davantage axé sur les résultats, qu’il prévoie des réductions concrètes, surtout, mais pas seulement, des dépenses administratives, et qu’il garantisse un emploi efficace et responsable des deniers du contribuable; souligne également la nécessité d’évaluer correctement les fonds qui pourraient être mieux gérés au niveau national afin de garantir le plein respect du principe de subsidiarité; déplore le manque de souplesse du Parlement face à la position du Conseil, laquelle, au contraire, demeure pragmatique compte tenu de la conjoncture économique;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">109</div>
+  <div class="against">524</div>
+  <div class="abstention">49</div>
+</span>
+
+  
+    
+    <a href="/voting/124362">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(109/682 * 100%)">109</div>
-  
-  
-    <div class="-" style="width: calc(524/682 * 100%)">524</div>
-  
-  
-    <div class="0" style="width: calc(49/682 * 100%)">49</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124362">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°12 | 
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      13. 
-  
+<p>
 
   
-      <del>relève qu’il importe de veiller à doter les agences de l’Union de ressources financières suffisantes et de capacités adaptées en matière de ressources humaines afin qu’elles puissent remplir leur mandat, mener à bien leurs missions et réagir au mieux aux conséquences de la pandémie de COVID-19; </del>
+      13.
   
 
   
-      insiste sur la nécessité d’une coordination et de synergies 
+      <del> relève qu’il importe de veiller à doter les agences de l’Union de ressources financières suffisantes et de capacités adaptées en matière de ressources humaines afin qu’elles puissent remplir leur mandat, mener à bien leurs missions et réagir au mieux aux conséquences de la pandémie de COVID-19;</del>
   
 
   
-      <del>adapté</del>
+       insiste sur la nécessité d’une coordination et de synergies 
   
 
   
-      <ins>approprié</ins>
+      <del>adaptées</del>
   
 
   
-      es entre les agences afin d’accroître l’efficacité de leur travail, en particulier en cas de convergence des objectifs stratégiques spécifiques, ce afin de permettre l’emploi 
+      <ins>appropriées</ins>
+  
+
+  
+       entre les agences afin d’accroître l’efficacité de leur travail, en particulier en cas de convergence des objectifs stratégiques spécifiques, ce afin de permettre l’emploi 
   
 
   
@@ -656,97 +799,101 @@
       efficace des deniers publics; insiste pour que la Commission garantisse une répartition optimale du personnel entre ses directions générales, en tenant compte des besoins urgents et des priorités à long terme liées à la réponse à la crise de la COVID-19 et au pacte vert pour l’Europe;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">97</div>
+  <div class="against">567</div>
+  <div class="abstention">18</div>
+</span>
+
+  
+    
+    <a href="/voting/124372">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(97/682 * 100%)">97</div>
-  
-  
-    <div class="-" style="width: calc(567/682 * 100%)">567</div>
-  
-  
-    <div class="0" style="width: calc(18/682 * 100%)">18</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124372">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°13 | 
+        
+            <article id="13">
+            <header>📝 Amendement n°13 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>24 bis. souligne que les confinements imposés par les gouvernements pour lutter contre la deuxième vague de COVID-19 seront particulièrement lourds de conséquences pour le secteur du tourisme;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">133</div>
+  <div class="against">504</div>
+  <div class="abstention">42</div>
+</span>
+
+  
+    
+    <a href="/voting/124375">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(133/679 * 100%)">133</div>
-  
-  
-    <div class="-" style="width: calc(504/679 * 100%)">504</div>
-  
-  
-    <div class="0" style="width: calc(42/679 * 100%)">42</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124375">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°14 | 
+        
+            <article id="14">
+            <header>📝 Amendement n°14 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       30. rappelle que le secteur de la culture et de la création est l’un des plus touchés par la pandémie de COVID-19; réclame des solutions et des financements adéquats afin d’atténuer les pertes importantes et continues subies par ce secteur en raison de la fermeture inattendue de salles au cours de la crise;
@@ -756,569 +903,617 @@
       <del> propose dès lors d’augmenter sensiblement les lignes budgétaires concernées du programme «Europe créative» afin de soutenir les secteurs touchés par la crise;</del>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">90</div>
+  <div class="against">532</div>
+  <div class="abstention">59</div>
+</span>
+
+  
+    
+    <a href="/voting/124377">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(90/681 * 100%)">90</div>
-  
-  
-    <div class="-" style="width: calc(532/681 * 100%)">532</div>
-  
-  
-    <div class="0" style="width: calc(59/681 * 100%)">59</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124377">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°15 | 
+        
+            <article id="15">
+            <header>📝 Amendement n°15 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       35. 
   
 
   
-      <del>souligne que le programme «Citoyens, égalité, droits et valeurs» joue un rôle crucial pour protéger et promouvoir les droits et les valeurs inscrits dans les traités et dans la charte des droits fondamentaux de l’Union européenne; insiste sur le fait que des crédits supplémentaires sont nécessaires pour chaque volet, notamment pour le volet Daphné, qui vise à lutter contre la violence à l’égard des femmes, ainsi que pour le volet promouvant l’engagement des citoyens et leur participation à la vie de l’Union;</del>
+      <del>souligne que le programme «Citoyens, égalité, droits et valeurs» joue un rôle crucial pour protéger et promouvoir les droits et les valeurs inscrits dans les traités et dans la charte des droits fondamentaux de l’Union européenne; insiste sur le fait que des crédits supplémentaires sont nécessaires pour chaque volet, notamment pour</del>
   
 
   
-      <ins>estime qu’il est opportun de maintenir le programme Daphné, dans la mesure où il comporte une valeur ajoutée par rapport aux programmes nationaux;</ins>
+      <ins>estime qu’il est opportun de maintenir</ins>
+  
+
+  
+       le 
+  
+
+  
+      <del>volet</del>
+  
+
+  
+      <ins>programme</ins>
+  
+
+  
+       Daphné, 
+  
+
+  
+      <del>qui vise à lutter contre la violence à l’égard des femmes, ainsi que pour le volet promouvant l’engagement des citoyens et leur participation à la vie de l’Union</del>
+  
+
+  
+      <ins>dans la mesure où il comporte une valeur ajoutée par rapport aux programmes nationaux</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">64</div>
+  <div class="against">542</div>
+  <div class="abstention">73</div>
+</span>
+
+  
+    
+    <a href="/voting/124379">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(64/679 * 100%)">64</div>
-  
-  
-    <div class="-" style="width: calc(542/679 * 100%)">542</div>
-  
-  
-    <div class="0" style="width: calc(73/679 * 100%)">73</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124379">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°16 | 
+        
+            <article id="16">
+            <header>📝 Amendement n°16 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>47 bis. insiste sur les nouvelles problématiques auxquelles se trouvera confronté le secteur agricole, notamment en raison des accords de libre-échange conclus par l’Union avec des pays tiers;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">114</div>
+  <div class="against">527</div>
+  <div class="abstention">38</div>
+</span>
+
+  
+    
+    <a href="/voting/124382">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(114/679 * 100%)">114</div>
-  
-  
-    <div class="-" style="width: calc(527/679 * 100%)">527</div>
-  
-  
-    <div class="0" style="width: calc(38/679 * 100%)">38</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124382">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°17 | 
+        
+            <article id="17">
+            <header>📝 Amendement n°17 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      55. souligne qu’il est primordial de prévoir un financement et des effectifs suffisants pour toutes les agences opérant dans les domaines de la migration, de l’asile et de la gestion des frontiè
-  
+<p>
 
   
-      <del>res; réclame des ressources humaines supplémentaires pour l’Agence de l’Union européenne pour la gestion opérationnelle des systèmes d’information à grande échelle au sein de l’espace de liberté, de sécurité et de justice (eu-LISA) ainsi que pour le Bureau européen d’appui en matière d’asile (EASO), qui en aura besoin pour mener à bien ses opérations sur le terrain, déployer ses activités de formation et d’analyse, et mettre en place son cadre de gouvernance; demande des ressources financières et humaines supplémentaires pour l’Agence européenne de garde- frontières et de garde-côtes (Frontex);</del>
+      55. souligne qu’il est primordial de prévoir un financement et des effectifs suffisants pour toutes les agences opérant dans les domaines de la migration, de l’asile et de la gestion des frontières
   
 
   
-      <ins>res, à condition que les ressources soient affectées au rapatriement et à la sécurité des frontières;</ins>
+      <del>; réclame des ressources humaines supplémentaires pour l’Agence de l’Union européenne pour la gestion opérationnelle des systèmes d’information à grande échelle au sein de l’espace de liberté, de sécurité et de justice (eu-LISA) ainsi que pour le Bureau européen d’appui en matière d’asile (EASO), qui en aura besoin pour mener à bien ses opérations sur le terrain, déployer ses activités de formation et d’analyse, et mettre en place son cadre de gouvernance; demande des ressources financières et humaines supplémentaires pour l’Agence européenne de garde- frontières et de garde-côtes (Frontex);</del>
+  
+
+  
+      <ins>, à condition que les ressources soient affectées au rapatriement et à la sécurité des frontières;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">93</div>
+  <div class="against">545</div>
+  <div class="abstention">42</div>
+</span>
+
+  
+    
+    <a href="/voting/124383">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(93/680 * 100%)">93</div>
-  
-  
-    <div class="-" style="width: calc(545/680 * 100%)">545</div>
-  
-  
-    <div class="0" style="width: calc(42/680 * 100%)">42</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124383">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°18 | 
+        
+            <article id="18">
+            <header>📝 Amendement n°18 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>55 bis. souligne l’échec des politiques européennes pour empêcher les flux migratoires et la traite d’êtres humains; fait de nouveau part de ses inquiétudes quant au rôle joué par les instruments tels que le Fonds pour la sécurité intérieure et le Fonds «Asile, migration et intégration» dans la gestion des effets de la crise des réfugiés et des migrants;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">101</div>
+  <div class="against">545</div>
+  <div class="abstention">34</div>
+</span>
+
+  
+    
+    <a href="/voting/124384">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(101/680 * 100%)">101</div>
-  
-  
-    <div class="-" style="width: calc(545/680 * 100%)">545</div>
-  
-  
-    <div class="0" style="width: calc(34/680 * 100%)">34</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124384">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°19 | 
+        
+            <article id="19">
+            <header>📝 Amendement n°19 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      66. attire l’attention sur les défis persistants dans le voisinage oriental et méridional de l’
-  
+<p>
 
   
-      <del>Union, dont le budget spécifique doit donc être renforcé, ainsi que sur l’importance de doter l’Office de secours et de travaux des Nations unies pour les réfugiés de Palestine dans le Proche-Orient d’un soutien financier accru pour remplir son mandat, compte tenu des besoins croissants des réfugiés palestiniens et de l’investissement que cela représente en faveur de la stabilité et du développement dans la région;</del>
+      66. attire l’attention sur les défis persistants dans le voisinage oriental et méridional de l’Union
   
 
   
-      <ins>Union;</ins>
+      <del>, dont le budget spécifique doit donc être renforcé, ainsi que sur l’importance de doter l’Office de secours et de travaux des Nations unies pour les réfugiés de Palestine dans le Proche-Orient d’un soutien financier accru pour remplir son mandat, compte tenu des besoins croissants des réfugiés palestiniens et de l’investissement que cela représente en faveur de la stabilité et du développement dans la région</del>
   
 
   
-       rappelle qu’il importe de mettre en place des relations stables et une coopération étroite 
+      ; rappelle qu’il importe de mettre en place des relations stables et une coopération étroite 
   
 
   
-      <del>entre l’Union européenne et </del>
+      <del>entre l’Union européenne et</del>
   
 
   
-      <ins>avec </ins>
+      <ins>avec</ins>
   
 
   
-      l’Afrique et estime qu’il convient de consacrer des ressources financières suffisantes au développement de ce continent, ce qui contribuerait, entre autres, à atténuer les causes profondes de des migrations forcées;
+       l’Afrique et estime qu’il convient de consacrer des ressources financières suffisantes au développement de ce continent, ce qui contribuerait, entre autres, à atténuer les causes profondes de des migrations forcées;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">114</div>
+  <div class="against">507</div>
+  <div class="abstention">59</div>
+</span>
+
+  
+    
+    <a href="/voting/124389">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(114/680 * 100%)">114</div>
-  
-  
-    <div class="-" style="width: calc(507/680 * 100%)">507</div>
-  
-  
-    <div class="0" style="width: calc(59/680 * 100%)">59</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124389">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°20 | 
+        
+            <article id="20">
+            <header>📝 Amendement n°20 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      69. dénonce les violations continues perpétrées par la Turquie contre le droit international et contre 
-  
+<p>
 
   
-      <del>le droit, </del>
+      69. dénonce les violations continues perpétrées par la Turquie contre le droit international et contre
   
 
   
-      les principes et les valeurs 
+      <del> le droit,</del>
   
 
   
-      <del>de l’Union; exige que le financement des réformes politiques en Turquie soit exclusivement consacré à la promotion du dialogue et au soutien de la société civile, des acteurs non étatiques et des relations entre les personnes, tant que le pays n’aura pas enregistré d’avancées en matière de démocratie, d’état de droit et de droits de l’homme;</del>
+       les principes et les valeurs 
   
 
   
-      <ins>démocratiques; demande de cesser immédiatement tout financement en faveur de la Turquie;</ins>
+      <del>de l’Union; exige que le financement des réformes politiques en Turquie soit exclusivement consacré à la promotion du dialogue et au soutien de la société civile, des acteurs non étatiques et des relations entre les personnes, tant que le pays n’aura pas enregistré d’avancées en matière de démocratie, d’état de droit et de droits de l’homme</del>
   
 
   
-       condamne fermement les provocations de la Turquie à l’encontre de la Grèce et de Chypre et ses violations répétées de leur souveraineté;
+      <ins>démocratiques; demande de cesser immédiatement tout financement en faveur de la Turquie</ins>
+  
+
+  
+      ; condamne fermement les provocations de la Turquie à l’encontre de la Grèce et de Chypre et ses violations répétées de leur souveraineté;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">107</div>
+  <div class="against">568</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    
+    <a href="/voting/124390">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(107/680 * 100%)">107</div>
-  
-  
-    <div class="-" style="width: calc(568/680 * 100%)">568</div>
-  
-  
-    <div class="0" style="width: calc(5/680 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124390">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°21 | 
+        
+            <article id="21">
+            <header>📝 Amendement n°21 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>69 bis. demande un arrêt immédiat des négociations d’adhésion de l’Union avec la Turquie ainsi que le blocage de tous les financements accordés au titre de l’instrument d’aide de préadhésion (IAP) et des financements de la BEI;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">107</div>
+  <div class="against">533</div>
+  <div class="abstention">40</div>
+</span>
+
+  
+    
+    <a href="/voting/124391">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(107/680 * 100%)">107</div>
-  
-  
-    <div class="-" style="width: calc(533/680 * 100%)">533</div>
-  
-  
-    <div class="0" style="width: calc(40/680 * 100%)">40</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124391">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°22 | 
+        
+            <article id="22">
+            <header>📝 Amendement n°22 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
-
-  
-      39. regrette vivement que la Commission n’ait toujours pas donné suite à la demande du Parlement de procéder à une révision complète de la ligne budgétaire «Actions multimédia», notamment en ce qui concerne le contrat- cadre avec Euronews; décide de mettre sa dotation budgétaire en réserve jusqu’à ce que la Commission ait apporté une réponse aux inquiétudes soulevées par la Cour des comptes; remarque toutefois que la Cour des comptes ne relève aucun manquement d’Euronews aux obligations contractuelles qui lui incombent au titre du cadre actuel en matière de communication d’informations;
-  
+<p>
 
   
-      <ins> réaffirme son soutien à la diffusion d’informations impartiales sur les affaires de l’Union; fait observer qu’Euronews est diffusée dans 67 % des ménages de l’Union et du Royaume-Uni, ce qui permet chaque jour à des millions d’Européens d’être informés sur les affaires de l’Union; relève en outre que le récent «audit indépendant de la performance des actions financées au titre de la ligne budgétaire consacrée aux actions multimédias» indique que le «monopole de fait» d’Euronews est dû à sa «forte perspective européenne et transfrontalière dans sa couverture médiatique, aussi bien financée par l’Union que non financée par l’Union, ainsi qu’à son grand nombre de langues,    au public touché et à son profil numérique dans de nombreux pays européens»; souligne par conséquent la gravité de mettre en réserve le budget alloué à Euronews et invite toutes les parties à coopérer pour éviter cette situation à tout prix.</ins>
+      39. regrette vivement que la Commission n’ait toujours pas donné suite à la demande du Parlement de procéder à une révision complète de la ligne budgétaire «Actions multimédia», notamment en ce qui concerne le contrat- cadre avec Euronews; décide de mettre sa dotation budgétaire en réserve jusqu’à ce que la Commission ait apporté une réponse aux inquiétudes soulevées par la Cour des comptes; remarque toutefois que la Cour des comptes ne relève aucun manquement d’Euronews aux obligations contractuelles qui lui incombent au titre du cadre actuel en matière de communication d’informations
+  
+
+  
+      <del>;</del>
+  
+
+  
+      <ins>; réaffirme son soutien à la diffusion d’informations impartiales sur les affaires de l’Union; fait observer qu’Euronews est diffusée dans 67 % des ménages de l’Union et du Royaume-Uni, ce qui permet chaque jour à des millions d’Européens d’être informés sur les affaires de l’Union; relève en outre que le récent «audit indépendant de la performance des actions financées au titre de la ligne budgétaire consacrée aux actions multimédias» indique que le «monopole de fait» d’Euronews est dû à sa «forte perspective européenne et transfrontalière dans sa couverture médiatique, aussi bien financée par l’Union que non financée par l’Union, ainsi qu’à son grand nombre de langues,    au public touché et à son profil numérique dans de nombreux pays européens»; souligne par conséquent la gravité de mettre en réserve le budget alloué à Euronews et invite toutes les parties à coopérer pour éviter cette situation à tout prix.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">212</div>
+  <div class="against">429</div>
+  <div class="abstention">42</div>
+</span>
+
+  
+    
+    <a href="/voting/124380">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(212/683 * 100%)">212</div>
-  
-  
-    <div class="-" style="width: calc(429/683 * 100%)">429</div>
-  
-  
-    <div class="0" style="width: calc(42/683 * 100%)">42</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124380">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°23 | 
+        
+            <article id="23">
+            <header>📝 Amendement n°23 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       6. rappelle sa position selon laquelle de prise en compte des questions du changement climatique et de la biodiversité devraient aller au-delà des niveaux de dépenses ciblés fixés dans son rapport intermédiaire; vise, par conséquent, à atteindre un niveau de dépenses en faveur de la biodiversité 
   
 
   
-      <del>d’au moins </del>
+      <del>d’au moins</del>
   
 
   
-      <ins>de </ins>
+      <ins>de</ins>
   
 
   
-      10 % et à faire en sorte que le niveau des dépenses consacrées à l’intégration de la lutte contre le changement climatique soit 
+       10 % et à faire en sorte que le niveau des dépenses consacrées à l’intégration de la lutte contre le changement climatique soit 
   
 
   
-      <del>d’au moins </del>
+      <del>d’au moins</del>
   
 
   
-      <ins>de </ins>
+      <ins>de</ins>
   
 
   
-      30 % pour 2021; réitère sa demande en faveur d’un concept d’intégration de la dimension de genre qui rassemble des informations sexospécifiques sur les objectifs, les intrants, les réalisations et les résultats, y compris les engagements de financement en faveur de l’égalité entre les hommes et les femmes et la méthode de suivi et de déclaration des dépenses en faveur de l’égalité entre les hommes et les femmes;
+       30 % pour 2021; réitère sa demande en faveur d’un concept d’intégration de la dimension de genre qui rassemble des informations sexospécifiques sur les objectifs, les intrants, les réalisations et les résultats, y compris les engagements de financement en faveur de l’égalité entre les hommes et les femmes et la méthode de suivi et de déclaration des dépenses en faveur de l’égalité entre les hommes et les femmes;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">262</div>
+  <div class="against">378</div>
+  <div class="abstention">44</div>
+</span>
+
+  
+    
+    <a href="/voting/124367">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(262/684 * 100%)">262</div>
-  
-  
-    <div class="-" style="width: calc(378/684 * 100%)">378</div>
-  
-  
-    <div class="0" style="width: calc(44/684 * 100%)">44</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124367">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°25 | 
+        
+            <article id="25">
+            <header>📝 Amendement n°25 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       7. demande une nouvelle fois à la Commission d’établir des critères d’éligibilité clairs pour une nouvelle méthode rigoureuse et complète pour les dépenses liées au climat et à la biodiversité, sous la forme 
@@ -1333,184 +1528,182 @@
   
 
   
-      application du principe de «ne pas causer de préjudice significatif» 
+      application du principe de «ne pas causer de préjudice significatif»
   
 
   
-      <del>visé à </del>
+      <del> visé à</del>
   
 
   
-      afin de garantir que l’Union respecte 
+       afin de garantir que l’Union respecte ses
   
 
   
-      <del>ses engagements au titre de l’accord de Paris et de son appel à l’élimination progressive des subventions indirectes aux combustibles fossiles et à l’interdiction des subventions directes à ces combustibles dans l’ensemble du budget de l’Union;</del>
-  
-
-  
-      <ins>ses</ins>
+      <del> engagements au titre de l’accord de Paris et de son appel à l’élimination progressive des subventions indirectes aux combustibles fossiles et à l’interdiction des subventions directes à ces combustibles dans l’ensemble du budget de l’Union;</del>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">285</div>
+  <div class="against">369</div>
+  <div class="abstention">30</div>
+</span>
+
+  
+    
+    <a href="/voting/124369">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(285/684 * 100%)">285</div>
-  
-  
-    <div class="-" style="width: calc(369/684 * 100%)">369</div>
-  
-  
-    <div class="0" style="width: calc(30/684 * 100%)">30</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124369">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°26 | 
+        
+            <article id="26">
+            <header>📝 Amendement n°26 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
-
-  
-      20. souligne le rôle crucial du mécanisme pour l’interconnexion en Europe dans la promotion du développement d’un réseau transeuropéen performant et de l’interconnectivité entre les États membres, en particulier les États membres qui soutiennent une mobilité durable et transfrontalière ainsi que le transfert modal, 
-  
+<p>
 
   
-      <del>dans le but de réduire les émissions de gaz à effet de serre de 60 % d’ici à 2030, </del>
+      20. souligne le rôle crucial du mécanisme pour l’interconnexion en Europe dans la promotion du développement d’un réseau transeuropéen performant et de l’interconnectivité entre les États membres, en particulier les États membres qui soutiennent une mobilité durable et transfrontalière ainsi que le transfert modal,
   
 
   
-      de soutenir les projets énergétiques et de transport dans le cadre de la transition vers une économie neutre pour le climat et de garantir la sécurité d’approvisionnement, en tenant compte de la situation particulière des régions insulaires et périphériques européennes, et en insistant sur la nécessité d’une transition numérique, y compris le perfectionnement et la reconversion des travailleurs de l’Union; propose dès lors des augmentations importantes;
+      <del> dans le but de réduire les émissions de gaz à effet de serre de 60 % d’ici à 2030,</del>
+  
+
+  
+       de soutenir les projets énergétiques et de transport dans le cadre de la transition vers une économie neutre pour le climat et de garantir la sécurité d’approvisionnement, en tenant compte de la situation particulière des régions insulaires et périphériques européennes, et en insistant sur la nécessité d’une transition numérique, y compris le perfectionnement et la reconversion des travailleurs de l’Union; propose dès lors des augmentations importantes;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">311</div>
+  <div class="against">358</div>
+  <div class="abstention">15</div>
+</span>
+
+  
+    
+    <a href="/voting/124373">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(311/684 * 100%)">311</div>
-  
-  
-    <div class="-" style="width: calc(358/684 * 100%)">358</div>
-  
-  
-    <div class="0" style="width: calc(15/684 * 100%)">15</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124373">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°27 | 
+        
+            <article id="27">
+            <header>📝 Amendement n°27 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
-
-  
-      28. souligne qu’il est urgent d’allouer des ressources supplémentaires au programme «L’UE pour la santé», qui contribue notamment à répondre aux importants besoins structurels identifiés pendant la crise de la COVID‑19, en définissant des domaines d’action prioritaires, tels que l’amélioration des systèmes de santé nationaux, la réduction des inégalités en matière de santé ou la disponibilité et le caractère abordable des médicaments et d’autres produits nécessaires en cas de 
-  
+<p>
 
   
-      <del>crise; insiste sur la nécessité de garantir la prestation permanente et en temps utile, ainsi que l’accessibilité et la sécurité, des services relevant de la santé et des droits sexuels et génésiques,</del>
+      28. souligne qu’il est urgent d’allouer des ressources supplémentaires au programme «L’UE pour la santé», qui contribue notamment à répondre aux importants besoins structurels identifiés pendant la crise de la COVID‑19, en définissant des domaines d’action prioritaires, tels que l’amélioration des systèmes de santé nationaux, la réduction des inégalités en matière de santé ou la disponibilité et le caractère abordable des médicaments et d’autres produits nécessaires en cas de crise
   
 
   
-      <ins>crise,</ins>
+      <del>; insiste sur la nécessité de garantir la prestation permanente et en temps utile, ainsi que l’accessibilité et la sécurité, des services relevant de la santé et des droits sexuels et génésiques</del>
   
 
   
-       et de renforcer, entre autres, la politique de l’Union de lutte contre le cancer;
+      , et de renforcer, entre autres, la politique de l’Union de lutte contre le cancer;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">219</div>
+  <div class="against">413</div>
+  <div class="abstention">52</div>
+</span>
+
+  
+    
+    <a href="/voting/124376">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(219/684 * 100%)">219</div>
-  
-  
-    <div class="-" style="width: calc(413/684 * 100%)">413</div>
-  
-  
-    <div class="0" style="width: calc(52/684 * 100%)">52</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124376">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°28 | 
+        
+            <article id="28">
+            <header>📝 Amendement n°28 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <del>58. insiste sur l’importance d’une définition progressive de la politique de sécurité et de défense commune de l’Union; souligne qu’il est crucial de renforcer la coopération européenne en matière de défense, car elle permet non seulement à l’Europe et à ses citoyens d’être mieux protégés, mais également de réduire les coûts; suggère d’accroître les financements en faveur du Fonds européen de la défense, afin de soutenir pleinement la mise en œuvre d’une base industrielle de défense innovante et compétitive qui contribuera à assurer l’autonomie stratégique nécessaire de l’Union;</del>
@@ -1520,157 +1713,163 @@
       <ins>(Ne concerne pas la version française.)</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">483</div>
+  <div class="against">186</div>
+  <div class="abstention">13</div>
+</span>
+
+  
+    
+    <a href="/voting/124387">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(483/682 * 100%)">483</div>
-  
-  
-    <div class="-" style="width: calc(186/682 * 100%)">186</div>
-  
-  
-    <div class="0" style="width: calc(13/682 * 100%)">13</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124387">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°29 | 
+        
+            <article id="29">
+            <header>📝 Amendement n°29 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       20. souligne le rôle crucial du mécanisme pour l’interconnexion en Europe dans la promotion du développement d’un réseau transeuropéen performant et de l’interconnectivité entre les États membres, en particulier les États membres qui soutiennent une mobilité durable et transfrontalière ainsi que le transfert modal, dans le but de réduire les émissions de gaz à effet de serre de 
   
 
   
-      <del>60 </del>
+      <del>60</del>
   
 
   
-      <ins>65 </ins>
+      <ins>65</ins>
   
 
   
-      % d’ici à 2030, de soutenir les projets énergétiques et de transport dans le cadre de la transition vers une économie neutre pour le climat et de garantir la sécurité d’approvisionnement, en tenant compte de la situation particulière des régions insulaires et périphériques européennes, et en insistant sur la nécessité d’une transition numérique, y compris le perfectionnement et la reconversion des travailleurs de l’Union; propose dès lors des augmentations importantes;
+       % d’ici à 2030, de soutenir les projets énergétiques et de transport dans le cadre de la transition vers une économie neutre pour le climat et de garantir la sécurité d’approvisionnement, en tenant compte de la situation particulière des régions insulaires et périphériques européennes, et en insistant sur la nécessité d’une transition numérique, y compris le perfectionnement et la reconversion des travailleurs de l’Union; propose dès lors des augmentations importantes;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">249</div>
+  <div class="against">406</div>
+  <div class="abstention">29</div>
+</span>
+
+  
+    
+    <a href="/voting/124374">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(249/684 * 100%)">249</div>
-  
-  
-    <div class="-" style="width: calc(406/684 * 100%)">406</div>
-  
-  
-    <div class="0" style="width: calc(29/684 * 100%)">29</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124374">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°30 | 
+        
+            <article id="30">
+            <header>📝 Amendement n°30 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>43 bis. décide de renforcer l’instrument d’appui technique afin d’aider les autorités et gouvernements au niveau local, régional et national à améliorer leur capacité à concevoir, à élaborer et à mettre en œuvre des réformes, y compris au moyen d’échanges de bonnes pratiques, des processus et des méthodes appropriés et une gestion des ressources humaines plus efficace et efficiente;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">176</div>
+  <div class="against">482</div>
+  <div class="abstention">25</div>
+</span>
+
+  
+    
+    <a href="/voting/124381">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(176/683 * 100%)">176</div>
-  
-  
-    <div class="-" style="width: calc(482/683 * 100%)">482</div>
-  
-  
-    <div class="0" style="width: calc(25/683 * 100%)">25</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124381">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°31 | 
+        
+            <article id="31">
+            <header>📝 Amendement n°31 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       58. insiste sur l’importance d’une définition progressive de la politique de sécurité et de défense commune de l’Union;
@@ -1680,166 +1879,482 @@
       <del> souligne qu’il est crucial de renforcer la coopération européenne en matière de défense, car elle permet non seulement à l’Europe et à ses citoyens d’être mieux protégés, mais également de réduire les coûts; suggère d’accroître les financements en faveur du Fonds européen de la défense, afin de soutenir pleinement la mise en œuvre d’une base industrielle de défense innovante et compétitive qui contribuera à assurer l’autonomie stratégique nécessaire de l’Union;</del>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">212</div>
+  <div class="against">447</div>
+  <div class="abstention">24</div>
+</span>
+
+  
+    
+    <a href="/voting/124385">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(212/683 * 100%)">212</div>
-  
-  
-    <div class="-" style="width: calc(447/683 * 100%)">447</div>
-  
-  
-    <div class="0" style="width: calc(24/683 * 100%)">24</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124385">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°32 | 
+        
+            <article id="32">
+            <header>📝 Amendement n°32 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      74. décide de ne pas rétablir, à ce stade, les montants réduits par le Conseil à la rubrique 
-  
+<p>
 
   
-      <del>7;</del>
+      74. décide de ne pas rétablir, à ce stade, les montants réduits par le Conseil à la rubrique 7
   
 
   
-      <ins>7, exception faite du nécessaire renforcement de la DG ENV, afin de garantir la bonne mise en œuvre du pacte vert;</ins>
+      <ins>, exception faite du nécessaire renforcement de la DG ENV, afin de garantir la bonne mise en œuvre du pacte vert</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">253</div>
+  <div class="against">409</div>
+  <div class="abstention">21</div>
+</span>
+
+  
+    
+    <a href="/voting/124392">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(253/683 * 100%)">253</div>
-  
-  
-    <div class="-" style="width: calc(409/683 * 100%)">409</div>
-  
-  
-    <div class="0" style="width: calc(21/683 * 100%)">21</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124392">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°33 | 
+        
+            <article id="33">
+            <header>📝 Amendement n°33 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      75. regrette profondément que la Commission n’ait toujours pas répondu à l’appel du Parlement en faveur d’un accès complet aux contrats et aux informations concernant le contrat relatif à la vaccination contre la COVID-19 couvert par le projet de budget 
-  
+<p>
 
   
-      <del>rectificatif</del>
+      75. regrette profondément que la Commission n’ait toujours pas répondu à l’appel du Parlement en faveur d’un accès complet aux contrats et aux informations concernant le contrat relatif à la vaccination contre la COVID-19 couvert par le projet de budget rectificatif
   
 
   
-      <ins>rectificatif d’accorder à l’autorité budgétaire l’accès au contrat relatif à la vaccination contre la COVID-19 avant la fin 2020;</ins>
+      <ins> d’accorder à l’autorité budgétaire l’accès au contrat relatif à la vaccination contre la COVID-19 avant la fin 2020;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">394</div>
+  <div class="against">238</div>
+  <div class="abstention">51</div>
+</span>
+
+  
+    
+    <a href="/voting/124393">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(394/683 * 100%)">394</div>
-  
-  
-    <div class="-" style="width: calc(238/683 * 100%)">238</div>
-  
-  
-    <div class="0" style="width: calc(51/683 * 100%)">51</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124393">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
+        
     
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Quelques aspects présentés peuvent sembler séduisants : plus de fonds pour la relance, pour la biodiversité, pour les jeunes et les chômeurs, pour le développement durable... Mais, concrètement, ces fonds ne suffisent jamais parce qu’ils sont mal utilisés, mal ventilés : manque de transparence, de suivi et d’évaluation, aucune anticipation non plus dans leur gestion. De nombreuses lignes ne sont pas acceptables, notamment concernant l’accueil des migrants, l’aide à la Turquie, l’instrument de préadhésion, la défense européenne, le programme Erasmus+ (qui vient d’être renforcé, tandis qu’il faut anticiper la baisse des voyages en 2021), les dépenses administratives, les montants alloués aux agences extérieures sans résultat concret et le service européen pour l’action extérieure.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre cette résolution.Certes, plus de fonds seraient disponibles pour la relance, la biodiversité et pour la lutte contre la précarité. Mais le manque de transparence qui caractérise généralement leur mise en oeuvre risque d&#39;en annuler le bénéfice.Je m&#39;oppose totalement aux lignes budgétaires consacrées à l&#39;accueil des migrants, à l&#39;aide à la Turquie et à l&#39;instrument d&#39;aide de préadhésion.
+        </article>
+    
+        <article>
+            <div class="hidden">96747</div>
+            
+            <header><b>Arnaud DANJEAN</b> | Les Républicains</header>
+            Le budget 2021 est le premier du nouveau cadre financier pluriannuel. Pour répondre aux enjeux économiques, sanitaires et sécuritaires auxquels la France et l’Europe sont confrontées, des financements ambitieux sont nécessaires. Nous nous félicitons à ce titre des dispositions appelant à renforcer le soutien pour la santé, l’agriculture ou la protection des frontières. Mais la situation actuelle devrait aussi nous obliger, plus que jamais, à concentrer les financements européens là où ils apportent une réelle valeur ajoutée, tout en rationalisant certaines dépenses administratives et institutionnelles. En proposant une augmentation de l’ensemble des rubriques pour un total de quinze milliards d’euros, le texte de la résolution fait malheureusement l’impasse sur cet impératif. La résolution mentionne par ailleurs la création ou le renforcement de certains dispositifs dont la plus-value pose question. Elle manque enfin de fermeté vis-à-vis de la Turquie, alors que nous exigeons la fin immédiate des financements dont le pays bénéficie au titre de la pré-adhésion.Dans ce contexte et alors que la contribution française au budget de l’Union devrait atteindre un niveau record en 2021, nous avons choisi de nous abstenir sur le vote final de cette résolution.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Le budget 2021 est le premier du nouveau cadre financier pluriannuel. Pour répondre aux enjeux économiques, sanitaires et sécuritaires auxquels la France et l’Europe sont confrontées, des financements ambitieux sont nécessaires. Nous nous félicitons à ce titre des dispositions appelant à renforcer le soutien pour la santé, l’agriculture ou la protection des frontières. Mais la situation actuelle devrait aussi nous obliger, plus que jamais, à concentrer les financements européens là où ils apportent une réelle valeur ajoutée, tout en rationalisant certaines dépenses administratives et institutionnelles. En proposant une augmentation de l’ensemble des rubriques pour un total de quinze milliards d’euros, le texte de la résolution fait malheureusement l’impasse sur cet impératif. La résolution mentionne par ailleurs la création ou le renforcement de certains dispositifs dont la plus-value pose question. Elle manque enfin de fermeté vis-à-vis de la Turquie, alors que nous exigeons la fin immédiate des financements dont le pays bénéficie encore, de manière inexplicable, au titre de la pré-adhésion qui n’a plus lieu d’être. Dans ce contexte et alors que la contribution française au budget de l’Union devrait atteindre un niveau record en 2021, nous avons choisi de nous abstenir sur le vote final de cette résolution.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            Je me suis abstenu sur la résolution du Parlement européen sur le budget 2021 car j’estime que les demandes, bien que justifiées à certains égards, seraient intenables pour le contribuable français qui serait le plus sollicité pour financer les 15 milliards d’euros supplémentaires préconisés par rapport au projet de budget actuellement sur la table.En outre, tandis que cette résolution ne dit rien sur la continuation des aides financières à la Turquie et ne propose pas d’augmentation du Fonds d’aide aux plus démunis qui est pourtant mis à rude épreuve par la pandémie, elle insiste en revanche sur la nécessité d’augmenter considérablement les financements de Frontex dans le but d’en faire prioritairement une agence de recherche et de sauvetage des migrants en mer. Il y a une volonté des groupes de gauche au Parlement de changer radicalement de paradigme en faisant de Frontex une agence de gestion des flux migratoires et de soutien aux migrants plutôt qu’une agence de contrôle aux frontières extérieures de l’Union. C’est une approche que je ne partage naturellement pas.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce budget de l’Union européenne pour l’année 2021 car de nombreux éléments ne sont pas acceptables : budgets trop importants attribués à l’accueil des migrants, à l’aide à la Turquie, aux instruments d’adhésion à l’UE, à la défense européenne... De plus, rien n’est prévu pour régler les problèmes de mauvaise gestion et de manque de transparence du budget précédent.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Le budget 2021 est le premier de l’après-Covid. Il doit donc atténuer les effets de la crise économique consécutive à la crise sanitaire. À cet effet, les axes retenus sont déterminants, en particulier la relance par le Pacte vert (lutte contre le changement climatique, transition énergétique...), la transformation numérique (interconnectivité, intelligence artificielle...) qui compteront pour beaucoup dans le plan « Next Generation EU ». Dans l’immédiat, les programmes structurants de l’Union européenne comme Erasmus, Horizon Europe ou InvestEU, méritent une attention plus appuyée, car ils concourent à notre prospérité, notre bien-être et notre compétitivité en favorisant la culture, la science, la recherche et l’innovation. Le texte met également l’accent sur les travaux d’infrastructures (transports, espace avec Galileo et Copernicus...) ainsi que sur le soutien aux entreprises, notamment les PME et parmi elles celles appartenant aux secteurs les plus durement touchés par la crise du Covid, comme le tourisme. La résolution insiste sur la nécessité de s’assurer que les États-membres dépenseront les crédits conformément à ces grandes orientations, tout en promouvant une conditionnalité démocratique forte. Le respect de l’état de droit, des libertés fondamentales, la lutte contre les discriminations doivent devenir des conditions nécessaires pour prétendre aux crédits européens. Vote pour
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            Comme chaque année, le Parlement européen vote le budget général de l’UE, tel que proposé par le Conseil. De 15 milliards d’EUR plus élevé que la proposition du Conseil, le rapport propose de renforcer le financement des priorités du Parlement, entre autres : lutte contre le changement climatique, énergie, interconnectivité numérique et des transports, espace, PME, tourisme, sécurité, migration, droits fondamentaux et action extérieure... Si quelques aspects présentés peuvent sembler séduisants : plus de fonds pour la relance, pour la biodiversité, pour les jeunes et les chômeurs, pour le développement durable, etc., concrètement, ces fonds ne suffisent jamais parce qu’ils sont mal utilisés, mal ventilés : manque de transparence, de suivi et d’évaluation, aucune anticipation non plus dans la gestion de ces fonds.J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            Je me suis abstenue sur cette résolution relative au budget général de l’Union européenne pour l’exercice 2021. Le texte contenait des dispositions intéressantes, telle que l’appel à soutenir rapidement et directement les PME confrontées au COVID. Mais le texte contenait aussi des dispositions controversées. Favorable à lutter contre l’immigration illégale et contre tous les dispositifs susceptibles de créer un appel d’air incontrôlable, je n’ai pas soutenu la création d’un fonds européen pour la recherche et le sauvetage des migrants en mer, considérant qu’il inciterait les passeurs à continuer leurs sinistres activités, alors qu’il convient de décourager les migrants candidats à un départ au risque de leur vie. Je ne pouvais donc approuver ce texte. À titre de précision, j’ai voté des amendements exigeant qu’un terme soit mis aux négociations d’adhésion de la Turquie, ainsi qu’à tout versement de fonds européens à cet État tiers.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            Le budget 2021 est le premier du nouveau cadre financier pluriannuel. Pour répondre aux enjeux économiques, sanitaires et sécuritaires auxquels la France et l’Europe sont confrontées, des financements ambitieux sont nécessaires. Nous nous félicitons à ce titre des dispositions appelant à renforcer le soutien pour la santé, l’agriculture ou la protection des frontières. Mais la situation actuelle devrait aussi nous obliger, plus que jamais, à concentrer les financements européens là où ils apportent une réelle valeur ajoutée, tout en rationalisant certaines dépenses administratives et institutionnelles. En proposant une augmentation de l’ensemble des rubriques pour un total de quinze milliards d’euros, le texte de la résolution fait malheureusement l’impasse sur cet impératif. La résolution mentionne par ailleurs la création ou le renforcement de certains dispositifs dont la plus-value pose question. Elle manque enfin de fermeté vis-à-vis de la Turquie, alors que nous exigeons la fin immédiate des financements dont le pays bénéficie au titre de la pré-adhésion. Dans ce contexte et alors que la contribution française au budget de l’Union devrait atteindre un niveau record en 2021, nous avons choisi de nous abstenir sur le vote final de cette résolution.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Cette résolution présente la position du Parlement européen sur l’élaboration du budget 2021. Elle recommande notamment d’augmenter les enveloppes accordées à des programmes utiles (Cohésion, Recherche, Santé, Fonds de transition juste, etc.) et insiste sur la nécessité de mettre en place de nouvelles ressources propres pour le financer. J’ai donc voté pour ce texte qui adopte une position ambitieuse face au Conseil et aux États radins pour défendre un budget européen à la hauteur de l’urgence écologique et sociale.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce budget annuel est voté avant d&#39;avoir le budget pluriannuel, le fameux cadre financier pluriannuel (CFP). Ce budget présente des avancées dans de nombreux domaines avec notamment une augmentation du budget substantielle (de l’ordre de 15 milliards d’euros) fléchée à hauteur de 30% pour la lutte contre le changement climatique et 10% en faveur de la protection de la biodiversité, et la création de nouvelles ressources propres. Il s’agit donc d’une bonne première étape dans les négociations budgétaires. Je vote donc en sa faveur.
+        </article>
+    
+        <article>
+            <div class="hidden">197589</div>
+            
+            <header><b>Laurence FARRENG</b> | Mouvement Démocrate</header>
+            Jeudi 12 novembre, j&#39;ai approuvé le projet de budget de l&#39;Union européenne pour l&#39;année 2021. Premier budget de ce nouveau cadre financier pluriannuel 2021-2027, nous demandons qu&#39;il soit doté de 182 milliards d&#39;euros de crédits d&#39;engagement, c&#39;est-à-dire 15 milliards d&#39;euros supplémentaires par rapport à ce qu&#39;avait prévu la Commission européenne. Par la résolution politique qui accompagne ce projet de budget, le Parlement veut favoriser une croissance &quot;juste, inclusive et durable&quot; au service d&#39;un objectif de convergence socioéconomique. Ce vote sera suivi d&#39;environ 3 semaines de négociations avec le Conseil, afin que le budget final soit prêt pour le début de l&#39;année 2021.
+        </article>
+    
+        <article>
+            <div class="hidden">197585</div>
+            
+            <header><b>Pierre KARLESKIND</b> | Renaissance</header>
+            J’ai voté en faveur de ce rapport parce que je veux une Union européenne qui puisse agir pour ses citoyens. J’ai soutenu ce rapport pour le budget 2021 qui prévoit 15 milliards d’euros en plus que la proposition initiale de la Commission européenne. En adoptant ce rapport, je m’engage pour la recherche et l’innovation, la santé, l’état de droit et Erasmus+. Ces renforcements sont complémentaires des mesures phares de la législature : le Green Deal et la transition numérique. Il me parait important de doter l’Europe de fonds financiers à la hauteur des défis qu’elle entend relever. Je salue notamment le travail de mon collègue Olivier Chastel.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce budget, qui comporte des apsects non acceptables, notamment concernant l’accueil des migrants, l’aide à la Turquie, l’instrument de la Pré-accession, la défense européenne, le programme Erasmus+ (qui vient d’être renforcé, tandis qu’il faut anticiper la baisse des voyages en 2021), les dépenses administratives, les montants alloués aux agences extérieures sans résultat concret, ou encore le Service Européen de l’Action Extérieure.
+        </article>
+    
+        <article>
+            <div class="hidden">197576</div>
+            
+            <header><b>Sylvie BRUNET</b> | Mouvement Démocrate</header>
+            J’ai soutenu la position du Parlement européen sur le budget de l’Union européenne pour 2021. Nous avons fixé son montant global à près de 182 milliards d’euros en crédits d’engagement, soit une augmentation d’environ 15 milliards par rapport à la proposition faite par la Commission européenne. Il est fondamental que ce budget vise en premier lieu à atténuer les conséquences de la pandémie de COVID-19 ainsi qu’à soutenir la relance en se fondant sur le pacte vert européen et la transformation numérique. C’est de cette manière que nous pourrons promouvoir une croissance équitable, inclusive et durable, la création d’emplois de qualité et la convergence socio-économique au sein de l’Union. Par ailleurs, nous plaidons pour un concept d’intégration de la dimension de genre permettant de suivre les engagements de financement et les dépenses en faveur de l’égalité entre les femmes et les hommes. Je regrette néanmoins qu’une majorité du Parlement européen ne se soit pas dégagée en faveur d’un budget plus important pour le FSE+ et la garantie européenne pour l’enfance alors que les conséquences économiques et sociales de la crise sont particulièrement dramatiques pour nos concitoyens les plus vulnérables.
+        </article>
+    
+        <article>
+            <div class="hidden">197536</div>
+            
+            <header><b>Nathalie COLIN-OESTERLÉ</b> | Les centristes</header>
+            Je me suis abstenue sur le vote final de la résolution sur le budget 2021. Le budget 2021 est le premier du nouveau cadre financier pluriannuel. Pour répondre aux enjeux économiques, sanitaires et sécuritaires auxquels la France et l’Europe sont confrontées, des financements ambitieux sont nécessaires. Nous nous félicitons à ce titre des dispositions appelant à renforcer le soutien pour la santé, l’agriculture ou la protection des frontières. Mais la situation actuelle devrait aussi nous obliger, plus que jamais, à concentrer les financements européens là où ils apportent une réelle valeur ajoutée, tout en rationalisant certaines dépenses administratives et institutionnelles. En proposant une augmentation de l’ensemble des rubriques pour un total de quinze milliards d’euros, le texte de la résolution fait malheureusement l’impasse sur cet impératif. Aussi, sur la question des financements dont bénéficie la Turquie au titre de la pré-adhésion, j&#39;exige la fin des financements directs et indirects adressés au gouvernement turc. L&#39;hypocrisie doit cesser. Seule la société civile turque est légitime à percevoir des fonds européens.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté en faveur de ce rapport, qui vise à donner la vision du Parlement européen sur la proposition de budget du Conseil pour l’année à venir. Suite à de fortes coupes de la part du Conseil, le rapport appelle à accroitre le budget pour certains programmes. De nombreuses priorités de la délégation Renaissance ont d’ailleurs été reprises, appelant à augmenter le budget pour la recherche et l&#39;innovation, la santé, l&#39;état de droit et Erasmus+. Le rapport contient également de nombreuses références aux mesures phares de l’agenda européen, notamment sur le Green Deal et la transition numérique.J’ai également voté en faveur d’un amendement qui vise à accorder à l’autorité budgétaire l’accès aux contrats d’achat des vaccins contre la COVID-19, avant la fin 2020 par la Commission européenne. En effet, ces contrats doivent être passés en toute transparence ; il s’agit d’une question de confiance envers nos institutions européennes. Enfin, j’ai voté en faveur d’un amendement visant à rappeler le rôle essentiel du Fonds européen d’aide aux plus démunis (FEAD) dans l’objectif de lutte contre la pauvreté.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            Le budget 2021 est le premier du nouveau cadre financier pluriannuel. Pour répondre aux enjeux économiques, sanitaires et sécuritaires auxquels la France et l’Europe sont confrontées, des financements ambitieux sont nécessaires. Nous nous félicitons à ce titre des dispositions appelant à renforcer le soutien pour la santé, l’agriculture ou la protection des frontières. Mais la situation actuelle devrait aussi nous obliger, plus que jamais, à concentrer les financements européens là où ils apportent une réelle valeur ajoutée, tout en rationalisant certaines dépenses administratives et institutionnelles. En proposant une augmentation de l’ensemble des rubriques pour un total de quinze milliards d’euros, le texte de la résolution fait malheureusement l’impasse sur cet impératif. La résolution mentionne par ailleurs la création ou le renforcement de certains dispositifs dont la plus-value pose question. Dans ce contexte et alors que la contribution française au budget de l’Union devrait atteindre un niveau record en 2021, nous avons choisi de nous abstenir sur le vote final de cette résolution.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il augmente des fonds qui sont mal utilisés ou mal ventilés avec un manque de transparence, de suivi et d’évaluation. De plus, il augmente des budgets avec lesquels nous sommes en désaccord : l’accueil des migrants, l’aide à la Turquie, l’instrument de la Pré-accession, la Défense européenne et le Service Européen de l’Action Extérieure par exemple.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            J’ai voté contre cette proposition de budget car l’emploi de celui-ci est annoncé comme servant de nombreuses causes auxquelles je suis opposée comme l’accueil des migrants clandestins ou l’aide à la Turquie. De plus, même lorsque les causes recherchées sont acceptables ce budget est constamment dilapidé dans des procédures de dépense inefficientes.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Comme chaque année, le Parlement européen vote le budget général de l’UE, tel que proposé par le Conseil. Il s’agit en réalité de deux votes : concernant les lignes budgétaires spécifiques (uniquement des montants), et concernant la résolution Budgétaire. Les rapporteurs proposent un budget qui s’élève à 181 762 377 716 EUR, avec une augmentation de 15 016 195 740 EUR par rapport à la proposition du Conseil. Le rapport souligne l&#39;objectif principal du budget 2021 qui devrait permettre d&#39;atténuer les effets de la pandémie de COVID-19 avec le soutien de la relance fondée sur le &quot;Green Deal&quot; européen et la transformation numérique, afin de promouvoir une croissance équitable, inclusive et durable, la création d&#39;emplois de qualité et la convergence socio-économique. Malgré des points séduisants comme des fonds supplémentaires pour la relance, pour la biodiversité ou pour les jeunes, ces fonds ne suffisent jamais parce qu’ils sont mal utilisés ou mal ventilés. J’ai voté contre ce budget car de nombreuses lignes sont inacceptables, concernant l’accueil des migrants, l’aide à la Turquie, l’instrument de la Pré-accession, la défense européenne, le programme Erasmus+, les dépenses administratives, les montants alloués aux agences extérieures sans résultat concret ou le Service Européen de l’Action Extérieure.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Comme chaque année, le Parlement européen vote le budget général de l’UE, tel que proposé par le Conseil. Il s’agit en réalité de deux votes: concernant les lignes budgétaires spécifiques et concernant la résolution budgétaire. Les rapporteurs proposent le budget qui s’élève à 181 762 377 716 EUR, avec une augmentation de 15 016 195 740 EUR par rapport à la proposition du Conseil. Quelques textes présentés peuvent être positifs: plus de fonds pour la relance, pour la biodiversité, pour les jeunes et les chômeurs et pour le développement durable. Cependant, de nombreuses lignes sont inacceptables, notamment concernant l’accueil des migrants, l’aide à la Turquie et l’instrument de préadhésion. Les rapporteurs prévoient aussi le financement des priorités du Parlement dans les domaines de la migration et de la gestion des frontières, en particulier le Fonds pour la gestion intégrée des frontières et le Fonds d&#39;asile et de migration. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Le rapport invite à renforcer les priorités décrétées par le Parlement : changement climatique, énergie, interconnectivité numérique et des transports, espace, PME, tourisme, sécurité, migration, droits fondamentaux, action extérieure... À cette fin, il est prévu ainsi un financement desdites priorités, soit des niveaux de dépenses d&#39;au moins 10 % en faveur de la biodiversité et d&#39;au moins 30 % pour le climat en 2021. Seraient concernés aussi par cet effort financier les domaines de la migration et de la gestion des frontières. Quelques aspects envisagés ici peuvent sembler légitimes, comme les moyens accrus proposés pour la relance, la biodiversité, le développement durable, ou en faveur des jeunes et des chômeurs. Cependant le problème réside dans les mauvaises utilisation et anticipation dans la gestion de ces fonds, pour ne rien dire de leur manque de transparence et d’évaluation. Nous sommes aussi en désaccord notamment avec l’accueil des migrants, l’aide à la Turquie, l’instrument de préadhésion, la défense européenne, le renforcement d’Erasmus+ en cette période de Covid, les dépenses administratives, les montants alloués aux agences extérieures, le Service européen pour l’action extérieure... J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport sur le budget général de l’UE pour l’exercice 2021, qui propose une augmentation de plus de 15 milliards d’euros, car bien que certains fonds puissent paraître attrayants en ce qui concerne, entre autres, le développement durable, la biodiversité, les jeunes, le chômage et la relance, ces derniers sont souvent mal utilisés et répartis, et finissent par être insuffisant. D’autre part, l’attribution de certains fonds, notamment concernant l’aide à la Turquie et à l’accueil des migrants, la défense européenne, les dépenses administratives, etc. ne sont pas acceptables.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-    
-    
 
+    <section>
     
     
-
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/1998(BUD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0206_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-11-11-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+        <article>
+            <div class="hidden">30482</div>
+            
+            <header><b>Younous OMARJEE</b> | La France Insoumise</header>
+            
+                <p>Nous rappelons aussi la contribution tout à fait essentielle de la politique de cohésion dans les réponses d’urgence qui ont déjà bénéficié aux régions d’Europe, à travers les règlements CRII et CRII Plus que nous avons adoptés ici, en plénière, pour l’utilisation des fonds ESI en réaction à la pandémie. Nous relevons aussi que la mise en place de ces mesures entraînera un besoin accru de crédits de paiement, dont il faudra tenir compte dans le budget pour l’exercice 2021 si nous voulons, Monsieur le Commissaire Hahn, que tous les projets engagés soit payés.</p>
+            
+                <p>Nous nous félicitons également de la création du programme REACT-EU, qui mettra des fonds supplémentaires à la disposition du FEDER, ainsi que du FSE et du FEADER. Nous arrivons quasiment au terme du trilogue en cours sur REACT-EU. Nous aurons un trilogue d’accord final la semaine prochaine, les délais sont tenus et des fonds REACT-EU pourront ainsi se déployer en temps et en heure.</p>
+            
+                <p>Enfin, nous considérons que l’instrument de relance de l’Union européenne est une étape importante vers une relance équitable et durable. Toutefois, nous redoutons, compte tenu des libertés accordées aux États membres, que les objectifs de cohésion, et notamment de réduction des fractures territoriales, ne soient perdus en cours de route.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197585</div>
+            
+            <header><b>Pierre KARLESKIND</b> | Renaissance</header>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197698</div>
+            
+            <header><b>Pierre LARROUTUROU</b> | Nouvelle Donne</header>
+            
+                <p>Face à des gouvernements qui ne voulaient pas lâcher un euro, l’équipe qui a négocié pour le Parlement européen a obtenu 2 milliards de plus. Merci à Margarida et a toute l’équipe. Bravo, c’est vraiment bien. Mais, en conscience, nous savons tous que ce budget n’est pas à la hauteur. </p>
+            
+                <p>Monsieur le Commissaire européen chargé du budget, cher Johannes, Madame la Secrétaire d’État, chère Bettina, chers collègues, je suis vraiment persuadé que, dans les semaines qui viennent, il est encore possible de compléter ce budget – je dis bien compléter, non pas le renégocier, compléter ce budget pour être à la hauteur, pour donner plus de moyens à la santé, au climat et à l’emploi. </p>
+            
+                <p>Si nous étions dans une période de stabilité, si tout allait bien, je dirais bravo, merci, et j’arrêterais ma grève de la faim. Mais nous savons tous que nous devons faire face à trois crises historiques, à trois crises d’une ampleur jamais vue. </p>
+            
+                <p>Pour faire face à la crise sanitaire, il faut immédiatement plus de moyens pour les hôpitaux, il faut plus de moyens pour la recherche, pour trouver de nouveaux vaccins, pour prévenir les prochaines pandémies.</p>
+            
+                <p>Pour faire face à la crise sociale, il y a 18 mois, Ursula von der Leyen disait: nous allons vers une nouvelle crise économique et pour éviter une flambée du chômage, il faudra permettre à tous les États membres de développer le </p>
+            
+                <p>Pour faire face à la crise écologique, certains pensent que, avec la crise économique, l’évolution du CO2 s’est calmée. Hélas, c’est faux. Les feux de forêt en 2020 ont atteint un niveau jamais vu. Les feux de forêts en Australie: 440 morts – 440 morts en Australie dans les feux de forêt! Les feux de forêts en Sibérie, en Amérique, font que 2020 va être la pire année pour l’évolution du CO2. Certes, le CO2 est directement lié à l’activité économique ralentie, mais globalement, ça va être une des pires années, donc on ne peut pas attendre pour agir pour le climat. </p>
+            
+                <p>Il faut agir avec force. L’humanité n’a plus le temps pour les politiques des petits pas. L’humanité veut qu’on arrête les rustines, il est temps de proposer pour l’Europe une nouvelle donne. Nous le savons tous, mes amis, l’Europe est à la croisée des chemins. Nous avons tous conscience que le mélange de la crise sociale, de la crise climatique et de la crise sanitaire peut nous amener à l’effondrement. On le disait l’autre jour en commission des budgets, avec la crise de 1929, l’Europe a sombré dans la barbarie, et nous savons tous que la crise actuelle est pire que la crise de 29. Et nous ne sommes pas, collectivement, à la hauteur.</p>
+            
+                <p>Mais avec la règle de l’unanimité, je pense qu’il était impossible de faire mieux, notre équipe de négociation a fait le maximum. La règle de l’unanimité, c&#39;est impossible de continuer comme ça. Avec l’unanimité, c’est le plus stupide, le plus égoïste, le plus aveugle face aux dangers du moyen terme, qui peut bloquer toute négociation. Aucun groupe humain ne fonctionne avec l’unanimité – ni un club de foot, ni une chorale, ni une entreprise, ni un parlement démocratique. L’unanimité, c’est la paralysie. </p>
+            
+                <p>C’est pour cela que, dans le rapport que nous allons adopter cette semaine sur le financement du pacte vert, nous disons qu’il faut sortir de l’unanimité et relancer par une coopération renforcée, sans tarder, la négociation sur la taxe sur les transactions financières, avec 10 ou 15 pays. On ne peut pas, au nom de l’unanimité, bloquer des moyens pour la santé ou pour le climat.</p>
+            
+                <p>Dans ce rapport, nous demandons qu’on accélère cette coopération renforcée pour une taxe sur les transactions financières qui rapporterait 57 milliards, c’est marqué dans le rapport. Le Parlement veut la vraie taxe sur les transactions financières, pas la toute petite.</p>
+            
+                <p>Oui mes amis, il est temps d’inventer du neuf! Si on veut éviter le chaos dans les 10 ou les 15 ans qui viennent, il est temps de proposer une nouvelle donne pour l’Europe. Nouvelle donne: c’est le nom de mon parti en France, en référence au New Deal de Roosevelt. Et quand Mme von der Leyen parle d’un Green New Deal, c’est évidemment une référence au New Deal de Roosevelt. Mais pour Roosevelt, ce n’était pas seulement de beaux discours. </p>
+            
+                <p>Roosevelt s’est donné les moyens de créer des millions d’emplois, il a triplé le budget fédéral. Il a triplé le budget fédéral et voulait un budget à l’équilibre. C’est pour ça qu’il crée un impôt sur les millionnaires, qu&#39;il instaure un impôt sur les bénéfices des grandes entreprises. Les banquiers sont furieux et disent que Roosevelt est un communiste qui va tuer l’Amérique. Mais Roosevelt tient bon, il n’a pas tué l’Amérique. Au contraire, au moment où l’Europe allait vers la barbarie, Roosevelt a sauvé la cohésion sociale et sauvé la démocratie, et les États-Unis ont pu aider l’Europe ensuite. Donc, oui, quand on a une vraie ambition, on a un vrai budget. </p>
+            
+                <p>Quelle est, aujourd’hui, notre ambition, quels sont les moyens que nous nous donnons? J’aimerais ici, avec Bettina Hagedorn – vous représentez le Conseil des chefs d’État et de gouvernement – j’aimerais m’adresser à Mme Merkel et à M. Macron. </p>
+            
+                <p>Madame Merkel et Monsieur Macron, par votre déclaration du 18 mai, vous avez vraiment eu un effet de catalyse, un effet catalyseur. Vous avez proposé un plan très courageux: 500 milliards de dettes communes pour un plan de relance. Évidemment, au début, il y a quatre pays qui ont dit non, non, jamais. Mais deux mois après, la dynamique était tellement forte que tout le monde était d’accord pour un plan de presque 400 milliards d’investissements. C’était impossible, mais vous l’avez fait, et le Parlement vous en remercie.</p>
+            
+                <p>De même, si nous voulons trouver les moyens pour avoir plus d’argent pour les hôpitaux, pour le climat, pour la recherche, pour l’emploi, il est encore possible de trouver de nouvelles ressources. Il est possible de lancer très vite – ça fait neuf ans qu’on en parle, ça fait neuf ans que la directive est sur la table, ça fait neuf ans qu’on a fait l’étude d’impact qui montre que c’est possible –, il est possible de créer très vite une taxe les transactions financières avec les pays qui le veulent. Montrez, Madame Merkel et Monsieur Macron, que votre engagement est sérieux. </p>
+            
+                <p>Madame Merkel, vous voulez absolument un accord sur le climat, un accord ambitieux le 10 et le 11 décembre, et vous avez totalement raison. Cela fait 25 ans que vous vous intéressez au climat – c’était déjà vous qui, à Berlin, aviez accueilli le premier sommet sur le climat, il y a 25 ans. Mais le seul moyen pour avoir un vrai accord ambitieux les 10 et 11 décembre, c’est de débloquer des financements, sinon beaucoup de pays vont bloquer l’accord sur le climat, et c’est dramatique.</p>
+            
+                <p>Dans le mois qui vient, le Parlement européen propose plein de ressources propres, mais la seule qui est techniquement prête, je le répète (1 200 pages d’étude d’impact), la seule que le Parlement soutient et que de plus en plus de pays soutiennent – la Pologne, la Belgique y étaient hostiles il y a cinq ans et sont maintenant d’accord –, c’est la taxe sur les transactions financières.</p>
+            
+                <p>Mes amis, l’humanité n’a plus le temps pour des politiques de petits pas. Les climatologues nous disent que l’année 2020 est bien pire que ce qu’ils pensaient. Le dérèglement climatique est en train de s’effondrer et la crise sociale peut nous mener à une crise démocratique. Nous ne savons pas quels sont les pays qui seront encore démocratiques dans cinq ou dix ans si on continue comme ça.</p>
+            
+                <p>Il est temps de prendre des initiatives fortes. En mai 1950, Adenauer et Schuman, pour éviter la guerre, prennent une initiative historique. Schuman dit: «La paix mondiale ne saurait être préservée sans des efforts créateurs, à la mesure des dangers qui la menacent.» Voilà pourquoi l’Allemagne et la France proposent à leurs voisins une initiative limitée mais décisive.</p>
+            
+                <p>Une initiative limitée mais décisive, c’est mettre ensemble le charbon et l’acier. Cela faisait des décennies qu’on se faisait la guerre, et en deux semaines seulement, en deux semaines, Schuman et Adenauer ont décidé de mettre ensemble le charbon et l’acier. Adenauer a dit: «Ce fut le plus beau jour de ma vie, j’ai vu le ciel s’ouvrir devant moi.»</p>
+            
+                <p>Mes amis, je pense qu’on a fait un gros travail pour négocier le budget actuel et qu’il est urgent de le compléter, pour avoir des ressources nouvelles pour le climat, la santé, l’emploi.</p>
+            
+                <p>Madame Merkel, vous êtes une grande européenne, il est temps de prendre une initiative limitée mais décisive: l’Europe est née avec le charbon et l’acier, elle peut renaître avec un projet climat, santé et emploi financé par une taxe sur la spéculation. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            
+                <p>Beaucoup a déjà été dit aujourd’hui, je n’irai pas dans le détail de ces renforcements supplémentaires espérés dans ce texte. Je me contenterai de rappeler que la Commission – Monsieur le Commissaire, vous l’avez rappelé – rectifiera sa proposition sur la base de l’accord trouvé hier. Et, indubitablement, il devra y avoir des ajustements.</p>
+            
+                <p>Au-delà des chiffres, l’important c’est, ce sera le message politique que nous enverrons: quelles priorités pour l’Union en 2021? L’Union qui souffrira encore des effets de la pandémie.</p>
+            
+                <p>Personnellement, je pense qu’il faut un budget qui se concentre sur la relance, une relance intelligente, verte, numérique et solidaire. C’est cette relance qui nous ramènera la prospérité et qui protégera les plus vulnérables d’entre nous. Alors, oui pour mettre le paquet sur la santé et la recherche et l’innovation. Nos économies ne s’en porteront que mieux et nos emplois pourront ainsi être démultipliés. Mais où trouver l’argent?</p>
+            
+                <p>Moins de TVA, nos droits douanes ont diminué à cause du ralentissement de nos échanges commerciaux et, il faut le dire, à cause des 5,5 milliards que nous laissons aux États membres pour faire le job, pour remplir de la paperasse, contrôler les marchandises, un job bien trop grassement payé, sans aucun doute. Mais il faut ce qu’il faut pour acheter le consentement à l’Europe de certains chefs d’État et de gouvernement.</p>
+            
+                <p>Résultat, pour 2021, nous devrons encore faire la manche auprès des États pour ajuster nos finances. Heureusement, chers amis, tout cela sera bientôt de l’histoire ancienne. Notre combat collectif pour la création de nouvelles recettes a été décisif. Elles seront créées, nous aurons demain un mécanisme d’ajustement carbone aux frontières, une taxe sur les géants du numérique, une taxe sur les transactions financières.</p>
+            
+                <p>Pierre n’est plus là mais je l’invite à travailler ensemble pour que cette taxe arrive à bon port. Ces ressources propres, une fois créées, permettront à l’Union de s’assumer en responsabilité. C’est la vision que je porte, que nous portons et que nous porterons jusqu’au bout. Merci Pierre, merci Olivier pour ce travail de longue haleine.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197629</div>
+            
+            <header><b>Maxette PIRBAKAS</b> | Rassemblement national</header>
+            
+                <p> – Monsieur le Président, en tant que députée des outre-mer, je tenais, ce jour, à m’exprimer sur la situation des cinq territoires des DOM français à travers le budget général de l’Union européenne.</p>
+            
+                <p>Je constate que le Parlement européen continue de dépenser, chaque année, des millions d’euros dans la construction de nouveaux bâtiments, finance des États qui appellent au boycott de nos produits français, comme par exemple la Turquie ou la Jordanie, ce qui pénalise nos agriculteurs français.</p>
+            
+                <p>Je vous rappelle que certains de mes compatriotes ultramarins sont encore en grande difficulté pour accéder à l’eau potable en 2020, à ce jour, au sein même de l’Union européenne!</p>
+            
+                <p>Sur le programme d’options spécifiques à l’éloignement et à l’insularité, c’est-à-dire le POSEI, j’appelle la Commission européenne et le Conseil à ne pas diminuer ce programme, qui s’élève aujourd’hui à 280 millions d’euros annuels pour la France. J’attire votre attention sur le fait que le POSEI maintient l’équilibre entre la distance, l’insularité et les coûts supplémentaires qui incombent à une île. Il nous permet de financer de grands projets de politique agricole locale et nationale, afin de garantir une souveraineté alimentaire pour nos îles et nos régions.</p>
+            
+                <p>Concernant le fonds européen pour les affaires maritimes et la pêche, le FEAMP, il faut que la proposition visant à instaurer un plafond de 50 % du plan de compensation des surcoûts – à laquelle la France est aussi opposée – soit rejetée, car sinon ce seraient des aides directes en moins à destination des marins pêcheurs ultramarins.</p>
+            
+                <p>Il ne faut pas oublier non plus que la politique de cohésion de l’Union a un but: réduire les inégalités régionales et sociales au sein de l’Union européenne. Alors, il serait temps d’agir concrètement pour nos îles et nos régions françaises, aller vers plus de simplification administrative, de flexibilité, d’accessibilité pour chaque aide européenne pour nos territoires.</p>
+            
+                <p>Aujourd’hui, le tournant écologique que certains essaient de donner au budget de l’Union européenne doit découler vers de grandes politiques de relocalisation et de protection des filières, comme les filières agricoles, de la pêche ou de l’artisanat. Il faut que ce budget s’oriente vers la défense de la pêche traditionnelle, de l’agriculture familiale, qu’il aille vers plus d’identification géographique protégée mais aussi vers plus de protectionnisme intelligent et moins de traités de libre-échange, qui pénalisent nos agriculteurs.</p>
+            
+                <p>Nous savons aujourd’hui que l’Europe est déjà un continent très écologique, très propre, avec de nombreux secteurs innovants. Alors, pourquoi continuons-nous à mettre des bâtons dans les roues de nos agriculteurs, de nos pêcheurs et de tous ceux qui participent à notre économie et qui nous nourrissent?</p>
+            
+                <p>Ensemble, allons vers une Europe au service des nations, des territoires qui la composent, à commencer par les régions ultrapériphériques, ces territoires lointains qui font rayonner l’Europe...</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197503</div>
+            
+            <header><b>David CORMAND</b> | Les Écologistes</header>
+            
+                <p>Le message que je souhaite adresser, c’est qu’il est urgent de ne plus attendre en matière de transition écologique. Nous savons qu’il nous reste une dizaine d’années pour agir et changer les choses, alors il est temps d’accélérer.</p>
+            
+                <p>Dans ce budget, il y a des avancées qui sont très positives de ce point de vue-là, avec les 30 % climat, 10 % biodiversité, avec aussi l’idée, évidemment, de ne pas utiliser les pourcentages restants du budget pour détruire ce que l’on met en œuvre avec les critères climat et les critères biodiversité. C’est l’un des sujets sur lesquels nous serons amenés à continuer de débattre.</p>
+            
+                <p>Dire également que, dans ce rapport, il y a ce pourcentage de 60 % qui s’inscrit dans la logique des 60 % de baisse des rejets de gaz à effet de serre à échéance 2030, rappeler que c’est 65 % qu’il faudrait, c’est l’esprit de l’amendement que j&#39;ai présenté. Également augmenter le budget de la direction générale environnement du Parlement pour pousser et travailler sur la transition écologique.</p>
+            
+                <p>Et puis, dans la logique de transparence, nous avons parlé du budget qui va être nécessaire pour le vaccin COVID. Un amendement a été proposé également pour qu’il y ait de la transparence dans ces méga-contrats, c’est très important.</p>
+            
+                <p>Pour conclure, dire que nous nous inscrivons donc dans cette volonté d’urgence à agir. Les &quot;plus tard&quot; d’aujourd’hui seront les &quot;trop tard&quot; de demain si nous n’agissons pas maintenant. L’administration du président Biden, qui vient d’être élu, a un projet de 2 000 milliards de dollars pour la transition verte. Nous sommes très loin du compte et il faut donc bien cibler les dépenses qui sont les nôtres.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

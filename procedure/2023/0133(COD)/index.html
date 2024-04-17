@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Brevets essentiels liés à une norme</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,84 +22,39 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Brevets essentiels liés à une norme</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
-    <article>
-    <header>👍 Adoption du texte | 
-
-✅️ Adopté
-
-</header>
-    
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
-        <section>
-
-<div class="votes ">
-  
-    <div class="+" style="width: calc(454/615 * 100%)">454</div>
-  
-  
-    <div class="-" style="width: calc(83/615 * 100%)">83</div>
-  
-  
-    <div class="0" style="width: calc(78/615 * 100%)">78</div>
-  
-</div>
-</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
-        <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
-        
-        
-            <section>
-
-
-
-<div class="votes">
-  
-    <div class="+" style="width: calc(42/66 * 100%)">42</div>
-  
-  
-    <div class="-" style="width: calc(8/66 * 100%)">8</div>
-  
-  
-    <div class="0" style="width: calc(16/66 * 100%)">16</div>
-  
-</div>
- 
-</section>
-            <a href="/voting/165167">🗳 Voir le détail du vote</a>
-        
-    
-    </article>
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -106,7 +62,7 @@
     
         
         
-            <li>Politiques communautaires</li>
+            <li>Normalisation, norme et marque CE/UE, certification, conformité</li>
         
     
         
@@ -116,12 +72,12 @@
     
         
         
-            <li>Normalisation, norme et marque CE/UE, certification, conformité</li>
+            <li>Politiques communautaires</li>
         
     
         
         
-            <li>Recherche et développement technologique et espace</li>
+            <li>Propriété industrielle, brevet européen et communautaire, dessin et modèle</li>
         
     
         
@@ -131,133 +87,276 @@
     
         
         
-            <li>Propriété industrielle, brevet européen et communautaire, dessin et modèle</li>
+            <li>Recherche et développement technologique et espace</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/0133(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2024-0016_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-02-28-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,124693,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,124693">🇫🇷 Renaissance</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197626,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197626,197629,197615">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°16 | 
+        
+        
+            <article id="16">
+            <header>📝 Amendement n°16 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      (13) Le centre de compétence 
-  
+<p>
 
   
-      <del>devrait créer et administrer un registre électronique et une base de données </del>
+      (13) Le centre de compétence devrait
   
 
   
-      <ins>devrait, d’une part, créer et administrer un registre </ins>
+      <del> </del>
   
 
   
-      électronique contenant des informations détaillées sur les BEN en vigueur dans un ou plusieurs États 
+      <ins>, d’une part, </ins>
   
 
   
-      <del>membres, y compris les résultats des contrôles du caractère essentiel, les avis, les rapports, la jurisprudence disponible dans le monde, les règles relatives aux BEN dans les pays tiers, et les résultats d’études portant spécifiquement sur les BEN. Afin de sensibiliser les PME à la question de l’octroi des licences pour les BEN et de faciliter ce processus pour celles-ci, le centre de compétence devrait leur offrir une assistance. La création et l’administration d’un système de contrôles relatifs au caractère essentiel et de procédures de détermination de la redevance agrégée et des conditions FRAND par le centre de compétence devraient inclure des actions d’amélioration continue du système et des procédures, notamment au moyen de nouvelles technologies. Conformément à cet objectif, le centre de compétence devrait mettre en place des procédures de formation des évaluateurs du caractère  essentiel et des conciliateurs pour leur permettre de donner leur avis sur la redevance agrégée ainsi que sur la détermination des conditions FRAND, et devrait encourager ceux-ci à adopter des pratiques uniformes.</del>
+      créer et administrer un registre électronique 
   
 
   
-      <ins>membres. Le registre électronique devrait servir de répertoire fondamental et être le principal point de référence des utilisateurs en fournissant gratuitement des informations de base sur les BEN. Le centre de compétence devrait, d’autre part, créer et administrer également une base de données électronique fournissant des informations facilement accessibles dans le cadre d’un ensemble de données plus étendu et plus complet, dont l’accès pourrait être soumis au paiement d’une redevance raisonnable et proportionnée. Les autorités publiques, y compris les juridictions, devraient avoir accès gratuitement aux informations contenues dans la base de données. Les établissements universitaires devraient également pouvoir demander d’avoir accès gratuitement aux informations dans certaines conditions. Le registre électronique et la base de données électronique devraient présenter un niveau élevé de sécurité juridique.</ins>
+      <del>et une base de données électronique </del>
+  
+
+  
+      contenant des informations détaillées sur les BEN en vigueur dans un ou plusieurs États membres
+  
+
+  
+      <del>, y compris les résultats des contrôles du caractère essentiel, les avis, les rapports, la jurisprudence disponible dans le monde, les règles relatives aux BEN dans les pays tiers, et les résultats d’études portant spécifiquement sur les BEN. Afin de sensibiliser les PME à la question de l’octroi des licences pour les BEN et de faciliter ce processus pour celles-ci, le centre de compétence devrait leur offrir une assistance. La création et l’administration d’un système de contrôles relatifs au caractère essentiel et de procédures de détermination de la redevance agrégée et des conditions FRAND par le centre de compétence devraient inclure des actions d’amélioration continue du système et des procédures, notamment au moyen de nouvelles technologies. Conformément à cet objectif, le centre de compétence devrait mettre en place des procédures de formation des évaluateurs du caractère  essentiel et des conciliateurs pour leur permettre de donner leur avis sur la redevance agrégée ainsi que sur la détermination des conditions FRAND, et devrait encourager ceux-ci à adopter des pratiques uniformes</del>
+  
+
+  
+      <ins>. Le registre électronique devrait servir de répertoire fondamental et être le principal point de référence des utilisateurs en fournissant gratuitement des informations de base sur les BEN. Le centre de compétence devrait, d’autre part, créer et administrer également une base de données électronique fournissant des informations facilement accessibles dans le cadre d’un ensemble de données plus étendu et plus complet, dont l’accès pourrait être soumis au paiement d’une redevance raisonnable et proportionnée. Les autorités publiques, y compris les juridictions, devraient avoir accès gratuitement aux informations contenues dans la base de données. Les établissements universitaires devraient également pouvoir demander d’avoir accès gratuitement aux informations dans certaines conditions. Le registre électronique et la base de données électronique devraient présenter un niveau élevé de sécurité juridique</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">497</div>
+  <div class="against">88</div>
+  <div class="abstention">22</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(497/607 * 100%)">497</div>
-  
-  
-    <div class="-" style="width: calc(88/607 * 100%)">88</div>
-  
-  
-    <div class="0" style="width: calc(22/607 * 100%)">22</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°18 | 
+        
+            <article id="18">
+            <header>📝 Amendement n°18 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       (14) Le centre de compétence devrait être soumis aux règles de l’Union en matière  d’accès aux documents et de protection des données. Ses tâches devraient être conçues de façon à accroître la transparence en mettant les informations existantes pertinentes pour les BEN à la disposition de toutes les parties prenantes de manière centralisée et systématique. Il 
   
 
   
-      <del>conviendra </del>
+      <del>conviendra</del>
   
 
   
-      <ins>conviendrait </ins>
+      <ins>conviendrait</ins>
   
 
   
-      donc de trouver un équilibre entre le libre accès du public aux informations de base et la nécessité de financer le fonctionnement du centre de compétence.
+       donc de trouver un équilibre entre le libre accès du public aux informations de base et la nécessité de financer le fonctionnement du centre de compétence.
   
 
   
       <del> Afin de couvrir les frais de maintenance, une taxe d’enregistrement devra être exigée pour l’accès aux informations détaillées contenues dans la base de données, telles que les résultats des éventuels contrôles relatifs au caractère essentiel et les rapports de détermination des conditions FRAND non confidentiels.</del>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°28 | 
+        
+        
+            <article id="28">
+            <header>📝 Amendement n°28 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       (24) Afin de garantir davantage encore la qualité du registre et d’éviter le surenregistrement, des contrôles relatifs au caractère essentiel doivent également être effectués de manière aléatoire par des évaluateurs indépendants 
@@ -271,128 +370,153 @@
       sélectionnés selon des critères objectifs à déterminer par la Commission. Un seul BEN d’une même famille de brevets doit être soumis à un contrôle du caractère essentiel.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°29 | 
+        
+        
+            <article id="29">
+            <header>📝 Amendement n°29 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       (26) 
   
 
   
-      <del>Les </del>
+      <del>Les</del>
   
 
   
-      <ins>Avant l’enregistrement de leurs brevets, les titulaires de BEN peuvent demander volontairement au centre de compétence que leurs BEN soient soumis à un contrôle relatif au caractère essentiel. Après l’enregistrement, les </ins>
+      <ins>Avant l’enregistrement de leurs brevets, les titulaires de BEN peuvent demander volontairement au centre de compétence que leurs BEN soient soumis à un contrôle relatif au caractère essentiel. Après l’enregistrement, les</ins>
   
 
   
-      titulaires de BEN ou les utilisateurs peuvent également désigner chaque année jusqu’à 100 BEN enregistrés qui seront soumis à un contrôle relatif au caractère essentiel. Si les BEN présélectionnés sont jugés essentiels, les titulaires de BEN peuvent utiliser cette information lors des négociations et en tant que preuve devant les tribunaux, sans préjudice du droit d’un utilisateur de contester en justice le caractère essentiel d’un BEN enregistré. Les BEN sélectionnés n’ont aucune incidence sur le processus d’échantillonnage, puisque l’échantillon est sélectionné parmi l’ensemble des BEN enregistrés de chaque titulaire de BEN. Si un BEN présélectionné et un BEN sélectionné pour l’échantillon sont 
+       titulaires de BEN ou les utilisateurs peuvent également désigner chaque année jusqu’à 100 BEN enregistrés qui seront soumis à un contrôle relatif au caractère essentiel. Si les BEN présélectionnés sont jugés essentiels, les titulaires de BEN peuvent utiliser cette information lors des négociations et en tant que preuve devant les tribunaux, sans préjudice du droit d’un utilisateur de contester en justice le caractère essentiel d’un BEN enregistré. Les BEN sélectionnés n’ont aucune incidence sur le processus d’échantillonnage, puisque l’échantillon est sélectionné parmi l’ensemble des BEN enregistrés de chaque titulaire de BEN. Si un BEN présélectionné et un BEN sélectionné pour l’échantillon sont
   
 
   
-      <ins> </ins>
+      <del> </del>
+  
+
+  
+      <ins>  </ins>
   
 
   
       identiques, un seul contrôle du caractère essentiel doit être effectué. Les contrôles relatifs au caractère essentiel ne doivent pas être répétés sur des BEN de la même famille de brevets.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°30 | 
+        
+        
+            <article id="30">
+            <header>📝 Amendement n°30 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      (27) Les appréciations du caractère essentiel des BEN effectuées par une entité indépendante avant l’entrée en vigueur du règlement, par exemple dans le cadre de communautés de brevets, ainsi que les procédures de détermination du caractère essentiel par des autorités judiciaires doivent être consignées dans le registre. Ces BEN ne doivent pas être soumis à un nouveau contrôle du caractère essentiel après présentation au centre de compétence des preuves pertinentes à l’appui des informations figurant dans le 
-  
+<p>
 
   
-      <del>registre.</del>
+      (27) Les appréciations du caractère essentiel des BEN effectuées par une entité indépendante avant l’entrée en vigueur du règlement, par exemple dans le cadre de communautés de brevets, ainsi que les procédures de détermination du caractère essentiel par des autorités judiciaires doivent être consignées dans le registre. Ces BEN ne doivent pas être soumis à un nouveau contrôle du caractère essentiel après présentation au centre de compétence des preuves pertinentes à l’appui des informations figurant dans le registre
   
 
   
-      <ins>registre sauf si l’évaluateur a des raisons objectives de penser, sur la base de preuves suffisantes, que le contrôle antérieur relatif au caractère essentiel était inexact. Les titulaires de BEN ou les communautés de brevets devraient également pouvoir procéder à l’appréciation du caractère essentiel des BEN après l’entrée en vigueur du présent règlement.</ins>
+      <ins> sauf si l’évaluateur a des raisons objectives de penser, sur la base de preuves suffisantes, que le contrôle antérieur relatif au caractère essentiel était inexact. Les titulaires de BEN ou les communautés de brevets devraient également pouvoir procéder à l’appréciation du caractère essentiel des BEN après l’entrée en vigueur du présent règlement</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°31 | 
+        
+        
+            <article id="31">
+            <header>📝 Amendement n°31 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       (29) Le centre de compétence doit publier les résultats des contrôles relatifs au caractère essentiel, qu’ils soient positifs ou négatifs, dans le registre et dans la base de  données. Les résultats des contrôles relatifs au caractère essentiel ne sont pas juridiquement contraignants. Par conséquent, tout litige ultérieur concernant le caractère essentiel 
   
 
   
-      <del>doit </del>
+      <del>doit</del>
   
 
   
-      <ins>devrait pouvoir </ins>
+      <ins>devrait pouvoir</ins>
   
 
   
-      être porté devant la juridiction compétente. Les résultats des contrôles relatifs au caractère essentiel, qu’ils soient demandés par un titulaire de BEN ou fondés sur un échantillon, peuvent toutefois être utilisés pour démontrer le caractère essentiel des BEN en question 
+       être porté devant la juridiction compétente. Les résultats des contrôles relatifs au caractère essentiel, qu’ils soient demandés par un titulaire de BEN ou fondés sur un échantillon, peuvent toutefois être utilisés pour démontrer le caractère essentiel des BEN en question 
   
 
   
@@ -403,52 +527,47 @@
       dans le cadre de négociations ou de communautés de brevets et devant les tribunaux.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°49 | 
+        
+        
+            <article id="49">
+            <header>📝 Amendement n°49 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      (46) Les PME peuvent être concernées par l’octroi de licences pour les BEN à la fois en tant que titulaires de BEN et en tant qu’
-  
+<p>
 
   
-      <del>utilisateurs.</del>
+      (46) Les PME peuvent être concernées par l’octroi de licences pour les BEN à la fois en tant que titulaires de BEN et en tant qu’utilisateurs
   
 
   
-      <ins>utilisateurs de BEN.</ins>
+      <ins> de BEN</ins>
   
 
   
-       S’il existe actuellement peu de PME titulaires de 
-  
-
-  
-      <ins> </ins>
-  
-
-  
-      BEN, les gains 
+      . S’il existe actuellement peu de PME titulaires de
   
 
   
@@ -456,19 +575,35 @@
   
 
   
+      <ins>  </ins>
+  
+
+  
+      BEN, les gains
+  
+
+  
+      <del>  </del>
+  
+
+  
+      <ins> </ins>
+  
+
+  
       d’efficacité produits grâce au présent règlement devraient 
   
 
   
-      <del>néanmoins </del>
+      <del>néanmoins</del>
   
 
   
-      <ins>également </ins>
+      <ins>également</ins>
   
 
   
-      faciliter l’octroi de licences pour leurs BEN. Des conditions supplémentaires sont nécessaires pour réduire la charge financière pesant sur ces PME, comme des réductions 
+       faciliter l’octroi de licences pour leurs BEN. Des conditions supplémentaires sont nécessaires pour réduire la charge financière pesant sur ces PME, comme des réductions 
   
 
   
@@ -476,19 +611,15 @@
   
 
   
-      des taxes d’administration et des réductions potentielles de taxes pour les contrôles relatifs au caractère essentiel et la conciliation, en plus de l’assistance et de la formation 
+      des taxes d’administration et des réductions potentielles de taxes pour les contrôles relatifs au caractère essentiel et la conciliation, en plus de l’assistance et de la formation gratuites
   
 
   
-      <del>gratuites.</del>
+      <ins>, afin qu’elles soient mieux à même d’intervenir sur des questions relatives aux BEN mais aussi dans l’élaboration de normes</ins>
   
 
   
-      <ins>gratuites, afin qu’elles soient mieux à même d’intervenir sur des questions relatives aux BEN mais aussi dans l’élaboration de normes.</ins>
-  
-
-  
-       Les BEN des micro et petites entreprises 
+      . Les BEN des micro et petites entreprises 
   
 
   
@@ -511,88 +642,106 @@
       <ins> Dans ce contexte, il importe de veiller à ce que les PME et les start-up bénéficient d’un guichet unique mis en place par le centre de compétence, qui recense les preneurs et les donneurs de licence concernés pour les PME et qui les conseille gratuitement sur les BEN. À cette fin, le centre de compétence devrait mettre en place une plateforme d’assistance en matière d’octroi de licences pour les BEN à l’intention des PME et des start-up, qui pourrait aussi, sous certaines conditions, fournir une assistance en matière de soutien judiciaire, comme la mise à disposition, à titre gracieux, d’un représentant légal au cours des procédures judiciaires.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°52 | 
+        
+        
+            <article id="52">
+            <header>📝 Amendement n°52 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       (47) Afin de compléter certains éléments non essentiels du présent règlement, il convient de déléguer à la Commission le pouvoir d’adopter des actes, conformément à l’article 290 du traité sur le fonctionnement de l’Union, en ce qui  concerne les éléments à consigner dans le registre ou la détermination des normes existantes pertinentes ou les 
   
 
   
-      <del>cas d’utilisation </del>
+      <del>cas d’utilisation</del>
   
 
   
-      <ins>applications </ins>
+      <ins>applications</ins>
   
 
   
-      de normes ou de parties de normes pour lesquelles la Commission établit que l’octroi de licences à des conditions FRAND n’entraîne aucune difficulté ou inefficience significative. Il importe particulièrement que la Commission procède aux consultations appropriées durant son travail préparatoire, y compris au niveau des experts, et que ces consultations soient menées conformément aux principes définis dans l’accord interinstitutionnel du 13 avril 2016 «Mieux légiférer»44. En particulier, pour assurer leur égale participation à la préparation des actes délégués, le Parlement européen et le Conseil reçoivent tous les documents au même moment que les experts des États membres, et leurs experts ont systématiquement accès aux réunions des groupes d’experts de la Commission traitant de la préparation des actes délégués.  __________________
+       de normes ou de parties de normes pour lesquelles la Commission établit que l’octroi de licences à des conditions FRAND n’entraîne aucune difficulté ou inefficience significative. Il importe particulièrement que la Commission procède aux consultations appropriées durant son travail préparatoire, y compris au niveau des experts, et que ces consultations soient menées conformément aux principes définis dans l’accord interinstitutionnel du 13 avril 2016 «Mieux légiférer»44. En particulier, pour assurer leur égale participation à la préparation des actes délégués, le Parlement européen et le Conseil reçoivent tous les documents au même moment que les experts des États membres, et leurs experts ont systématiquement accès aux réunions des groupes d’experts de la Commission traitant de la préparation des actes délégués.  __________________
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°54 | 
+        
+        
+            <article id="54">
+            <header>📝 Amendement n°54 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       2. Le présent règlement s’applique aux brevets 
   
 
   
-      <del>qui </del>
+      <del>qui</del>
   
 
   
-      <ins>en vigueur dans un ou plusieurs États membres et dont un titulaire de BEN prétend qu’ils </ins>
+      <ins>en vigueur dans un ou plusieurs États membres et dont un titulaire de BEN prétend qu’ils</ins>
   
 
   
-      sont essentiels à une 
+       sont essentiels à une
   
 
   
-      <ins> </ins>
+      <del> </del>
+  
+
+  
+      <ins>  </ins>
   
 
   
@@ -600,268 +749,355 @@
   
 
   
-      <del>devant lequel le  titulaire de BEN a pris </del>
+      <del>devant lequel</del>
   
 
   
-      <ins>après l’entrée en vigueur du présent règlement, que le titulaire de BEN ait pris ou non </ins>
+      <ins>après l’entrée en vigueur du présent règlement, que</ins>
   
 
   
-      l’engagement d’octroyer des licences d’utilisation de ses BEN à des conditions équitables, raisonnables et non discriminatoires (FRAND)
+       le
   
 
   
-      <del> et qui n’est pas soumis à une politique de propriété intellectuelle d’octroi sans redevance,   a) après l’entrée en vigueur du présent règlement, à l’exception des cas prévus au paragraphe 3;  b) avant l’entrée en vigueur du présent règlement, conformément à l’article 66.</del>
+      <del>  </del>
   
 
   
-      <ins>.</ins>
+      <ins> </ins>
+  
+
+  
+      titulaire de BEN 
+  
+
+  
+      <del>a</del>
+  
+
+  
+      <ins>ait</ins>
+  
+
+  
+       pris 
+  
+
+  
+      <ins>ou non </ins>
+  
+
+  
+      l’engagement d’octroyer des licences d’utilisation de ses BEN à des conditions équitables, raisonnables et non discriminatoires (FRAND
+  
+
+  
+      <del>) et qui n’est pas soumis à une politique de propriété intellectuelle d’octroi sans redevance,   a) après l’entrée en vigueur du présent règlement, à l’exception des cas prévus au paragraphe 3;  b) avant l’entrée en vigueur du présent règlement, conformément à l’article 66.</del>
+  
+
+  
+      <ins>).</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°55 | 
+        
+        
+            <article id="55">
+            <header>📝 Amendement n°55 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       3. Les articles 17 et 18 et l’article 34, paragraphe 1, ne s’appliquent pas 
   
 
   
-      <del>aux BEN dans la mesure où ils sont mis en œuvre pour les cas d’utilisation déterminés par la Commission conformément au paragraphe 4.</del>
+      <del>aux BEN dans la mesure où ils sont mis en œuvre pour les cas d’utilisation déterminés par la Commission conformément au paragraphe 4</del>
   
 
   
-      <ins>s’il existe des éléments suffisants démontrant que les négociations en vue de l’octroi de licences pour les BEN à des conditions FRAND n’entraîneront pas de difficultés ou d’inefficiences significatives affectant le fonctionnement du marché intérieur en ce qui concerne les applications déterminées de certaines normes ou parties de normes. Ces applications, normes et parties de normes sont déterminées conformément à la procédure énoncée à l’article 65 ter.</ins>
+      <ins>s’il existe des éléments suffisants démontrant que les négociations en vue de l’octroi de licences pour les BEN à des conditions FRAND n’entraîneront pas de difficultés ou d’inefficiences significatives affectant le fonctionnement du marché intérieur en ce qui concerne les applications déterminées de certaines normes ou parties de normes. Ces applications, normes et parties de normes sont déterminées conformément à la procédure énoncée à l’article 65 ter</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°56 | 
+        
+        
+            <article id="56">
+            <header>📝 Amendement n°56 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       4. 
   
 
   
-      <del>Lorsqu’il existe des éléments suffisants démontrant, eu égard à des cas d’utilisation déterminés de certaines  normes ou parties de normes, que les négociations en vue de l’octroi de licences pour les BEN à des conditions FRAND n’entraîneront pas de difficultés ou d’inefficiences significatives affectant le fonctionnement du marché intérieur, la Commission, après un processus de consultation approprié, par voie d’un acte délégué conformément à l’article 67, établit une liste desdits cas d’utilisation, normes ou parties de normes, aux fins du paragraphe 3.</del>
+      <del>Lorsqu’il existe des éléments suffisants démontrant, eu égard à des cas d’utilisation déterminés de certaines  normes ou parties de normes, que les négociations en vue de l’octroi de licences pour les BEN à des conditions FRAND n’entraîneront pas de difficultés ou d’inefficiences significatives affectant le fonctionnement du marché intérieur, la Commission, après un processus de consultation approprié, par voie d’un acte délégué conformément à l’article 67, établit une liste desdits cas d’utilisation, normes ou parties de normes, aux fins du paragraphe 3</del>
   
 
   
-      <ins>Sans préjudice du paragraphe 2, le présent règlement s’applique également aux brevets en vigueur dans un ou  plusieurs États membres et dont un titulaire de BEN prétend qu’ils sont essentiels à une norme ayant été publiée par un organisme d’élaboration de normes avant l’entrée en vigueur du présent règlement, lorsque le fonctionnement du marché intérieur est gravement affecté en raison de difficultés ou d’inefficiences significatives dans l’octroi de licences pour des BEN pour certaines applications, normes ou parties de normes. Ces applications, normes et parties de normes sont déterminées conformément à la procédure énoncée à l’article 65 ter.</ins>
+      <ins>Sans préjudice du paragraphe 2, le présent règlement s’applique également aux brevets en vigueur dans un ou  plusieurs États membres et dont un titulaire de BEN prétend qu’ils sont essentiels à une norme ayant été publiée par un organisme d’élaboration de normes avant l’entrée en vigueur du présent règlement, lorsque le fonctionnement du marché intérieur est gravement affecté en raison de difficultés ou d’inefficiences significatives dans l’octroi de licences pour des BEN pour certaines applications, normes ou parties de normes. Ces applications, normes et parties de normes sont déterminées conformément à la procédure énoncée à l’article 65 ter</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°67 | 
+        
+        
+            <article id="67">
+            <header>📝 Amendement n°67 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       16) «famille de brevets», un ensemble de 
   
 
   
-      <del>documents </del>
+      <del>documents</del>
   
 
   
-      <ins>demandes </ins>
+      <ins>demandes</ins>
   
 
   
-      de brevets 
+       de brevets 
   
 
   
-      <del>portant sur la même invention et dont les membres ont les mêmes priorités;</del>
+      <del>portant sur la même invention et dont les membres ont les mêmes priorités</del>
   
 
   
-      <ins>qui ont au moins une priorité en commun, y compris le ou les documents de priorité eux-mêmes;</ins>
+      <ins>qui ont au moins une priorité en commun, y compris le ou les documents de priorité eux-mêmes</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°76 | 
+        
+        
+            <article id="76">
+            <header>📝 Amendement n°76 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       f) administration d’une procédure de 
   
 
   
-      <del>détermination de la redevance agrégée;</del>
+      <del>détermination de la redevance agrégée</del>
   
 
   
-      <ins>facilitation des accords relatifs à la redevance agrégée et d’une procédure de détermination de cette redevance conformément aux articles 17 et 18;</ins>
+      <ins>facilitation des accords relatifs à la redevance agrégée et d’une procédure de détermination de cette redevance conformément aux articles 17 et 18</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">500</div>
+  <div class="against">108</div>
+  <div class="abstention">3</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(500/611 * 100%)">500</div>
-  
-  
-    <div class="-" style="width: calc(108/611 * 100%)">108</div>
-  
-  
-    <div class="0" style="width: calc(3/611 * 100%)">3</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°91 | 
+        
+            <article id="91">
+            <header>📝 Amendement n°91 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       c) 
   
 
   
-      <del>des informations </del>
+      <del>des informations</del>
   
 
   
-      <ins>toute information </ins>
+      <ins>toute information</ins>
   
 
   
-      indiquant si un contrôle relatif au caractère essentiel ou une évaluation par les pairs ont été effectués 
+       indiquant si un contrôle relatif au caractère essentiel ou une évaluation par les pairs ont été effectués et
   
 
   
-      <del>et une référence au résultat;</del>
+      <del> une référence au résultat</del>
   
 
   
-      <ins>et, sauf si cela n’est pas possible en raison de restrictions contractuelles convenues par les parties, une référence au  résultat de ce contrôle;</ins>
+      <ins>, sauf si cela n’est pas possible en raison de restrictions contractuelles convenues par les parties, une référence au  résultat de ce contrôle</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°107 | 
+        
+        
+            <article id="107">
+            <header>📝 Amendement n°107 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       b) un 
@@ -872,44 +1108,67 @@
   
 
   
-      contrôle relatif au caractère essentiel réalisé 
+      contrôle relatif au caractère essentiel réalisé
   
 
   
-      <del>avant le [JO: prière d’insérer la date = 24 mois à compter de l’entrée en vigueur du présent règlement] par un évaluateur indépendant dans le contexte d’une communauté,</del>
+      <del> avant le [JO: prière d’insérer la date = 24 mois à compter de l’entrée en vigueur du présent règlement]</del>
   
 
   
-      <ins>par un évaluateur indépendant dans le contexte, par exemple, d’une communauté de brevets,</ins>
+       par un évaluateur indépendant dans le contexte
   
 
   
-       mentionnant le numéro d’enregistrement du BEN, l’identité de la communauté de brevets et de son administrateur, ainsi que l’évaluateur.
+      <del> </del>
+  
+
+  
+      <ins>, par exemple, </ins>
+  
+
+  
+      d’une communauté
+  
+
+  
+      <ins> de brevets</ins>
+  
+
+  
+      , mentionnant le numéro d’enregistrement du BEN, l’identité de la communauté de brevets et de son administrateur, ainsi que l’évaluateur.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°129 | 
+        
+        
+            <article id="129">
+            <header>📝 Amendement n°129 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       1. Les titulaires de BEN en vigueur dans un ou plusieurs États membres pour lesquels des engagements FRAND ont été pris 
@@ -924,104 +1183,114 @@
   
 
   
-      <del>aux </del>
+      <del>aux</del>
   
 
   
-      <ins>à tous les </ins>
+      <ins>à tous les</ins>
   
 
   
-      BEN pertinents pour une norme.
+       BEN pertinents pour une norme.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°138 | 
+        
+        
+            <article id="138">
+            <header>📝 Amendement n°138 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      6. Si les demandes de participation concernent des titulaires de BEN représentant collectivement une part estimée à au moins 20 % de l’ensemble des BEN liés à la 
-  
+<p>
 
   
-      <del>norme, et </del>
+      6. Si les demandes de participation concernent des titulaires de BEN représentant collectivement une part estimée à au moins 20 % de l’ensemble des BEN liés à la norme
   
 
   
-      <ins>norme ou </ins>
+      <del>, et</del>
   
 
   
-      des utilisateurs détenant collectivement au moins 10 % de part de marché pertinente dans l’Union ou au moins 10 
+      <ins> ou</ins>
   
 
   
-      <del>PME,</del>
+       des utilisateurs détenant collectivement au moins 10 % de part de marché pertinente dans l’Union ou au moins 10 PME
   
 
   
-      <ins>PME ou start-up,</ins>
+      <ins> ou start-up</ins>
   
 
   
-       le centre de compétence désigne un comité de trois conciliateurs sélectionnés sur la liste possédant 
+      , le centre de compétence désigne un comité de trois conciliateurs sélectionnés sur la liste possédant 
   
 
   
-      <del>les qualifications adéquates </del>
+      <del>les qualifications adéquates</del>
   
 
   
-      <ins>l’expérience adéquate </ins>
+      <ins>l’expérience adéquate</ins>
   
 
   
-      dans le domaine technologique pertinent.
+       dans le domaine technologique pertinent.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°157 | 
+        
+        
+            <article id="157">
+            <header>📝 Amendement n°157 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <del>1. Un BEN qui n’est pas enregistré dans le délai fixé à l’article 20, paragraphe 3, n’est pas opposable en relation avec l’application de la norme pour laquelle un enregistrement est requis dans une juridiction compétente d’un État membre, à compter du délai fixé à l’article 20, paragraphe 3, jusqu’à son inscription dans le registre.</del>
@@ -1031,160 +1300,204 @@
       <ins>supprimé</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°158 | 
+        
+        
+            <article id="158">
+            <header>📝 Amendement n°158 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       2. Un titulaire de BEN qui n’a pas enregistré ses BEN dans le délai fixé à l’article 20, paragraphe 3, n’est pas en droit 
   
 
   
-      <del>de percevoir des redevances ou de  réclamer des dommages-intérêts pour </del>
+      <del>de percevoir des redevances ou de  réclamer des dommages-intérêts pour</del>
   
 
   
-      <ins>d’intenter une action en </ins>
+      <ins>d’intenter une action en</ins>
   
 
   
-      contrefaçon 
+       contrefaçon
   
 
   
-      <ins> </ins>
+      <del> </del>
+  
+
+  
+      <ins>  </ins>
   
 
   
       desdits BEN en relation avec l’application de la norme pour laquelle l’enregistrement est requis, à compter du délai fixé à l’article 20, paragraphe 3, jusqu’à leur inscription dans le registre.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°167 | 
+        
+        
+            <article id="167">
+            <header>📝 Amendement n°167 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      1. Le centre de compétence administre un système de contrôles relatifs au caractère essentiel, qui garantit que ceux-ci sont effectués de manière 
-  
+<p>
 
   
-      <ins>transparente, </ins>
+      1. Le centre de compétence administre un système de contrôles relatifs au caractère essentiel, qui garantit que ceux-ci sont effectués de manière
   
 
   
-      objective et impartiale et que la confidentialité des informations obtenues est garantie.
+      <ins> transparente,</ins>
+  
+
+  
+       objective et impartiale et que la confidentialité des informations obtenues est garantie.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°173 | 
+        
+        
+            <article id="173">
+            <header>📝 Amendement n°173 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      4. L’évaluateur examine dûment toute information fournie par le titulaire de 
-  
+<p>
 
   
-      <del>BEN.</del>
+      4. L’évaluateur examine dûment toute information fournie par le titulaire de BEN
   
 
   
-      <ins>BEN ou par les parties prenantes conformément à la procédure prévue à l’article 30.</ins>
+      <ins> ou par les parties prenantes conformément à la procédure prévue à l’article 30</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°217 | 
+        
+        
+            <article id="217">
+            <header>📝 Amendement n°217 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       2. Lorsqu’une procédure parallèle a été engagée par une partie avant ou pendant la détermination des conditions FRAND, le 
   
 
   
-      <del>conciliateur ou, lorsque celui ou celle-</del>
+      <del>conciliateur</del>
   
 
   
-      <ins>comité de conciliateurs ou, lorsque celui- </ins>
+      <ins>comité de conciliateurs</ins>
+  
+
+  
+       ou, lorsque celui
+  
+
+  
+      <del> ou celle-</del>
+  
+
+  
+      <ins>- </ins>
   
 
   
@@ -1192,188 +1505,216 @@
   
 
   
-      <del>(e)</del>
+      <del>(e), </del>
   
 
   
-      , le centre de compétence, met un terme à la détermination des conditions FRAND sur demande de l’autre partie.
+      <ins>, </ins>
+  
+
+  
+      le centre de compétence, met un terme à la détermination des conditions FRAND sur demande de l’autre partie.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°254 | 
+        
+        
+            <article id="254">
+            <header>📝 Amendement n°254 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>Article 65 bis  Demande motivée présentée à la Commission  Un titulaire ou un utilisateur de BEN peut présenter une demande motivée à la Commission afin de déterminer si:  a) les négociations en vue de l’octroi de licences pour les BEN à des conditions FRAND n’entraînent pas de difficultés ou d’inefficiences significatives affectant le fonctionnement du marché intérieur en ce qui concerne des applications déterminées de certaines normes ou parties de normes, dans un délai d’un mois à compter de la publication de la norme par l’organisme d’élaboration de normes;  b) le fonctionnement du marché intérieur est gravement faussé en raison de difficultés ou d’inefficiences significatives dans l’octroi de licences pour l’utilisation de BEN pour des applications existantes particulières de normes ou de parties de normes, dans un délai de 12 mois à compter de l’entrée en vigueur du présent règlement.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°255 | 
+        
+        
+            <article id="255">
+            <header>📝 Amendement n°255 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>Article 65 ter  Actes délégués relatifs à de nouvelles normes  1. Dans un délai de quatre mois à compter de la réception de la demande visée au paragraphe 1, la Commission est habilitée à adopter des actes délégués, conformément à l’article 67 et après un processus de consultation approprié associant toutes les parties prenantes  concernées, ainsi qu’à établir une liste des applications, des normes ou des parties de celles-ci pour lesquelles les négociations en vue de l’octroi de licences pour les BEN à des conditions FRAND n’entraînent pas de difficultés ou d’inefficiences significatives affectant le fonctionnement du marché intérieur.  2. La Commission réexamine la liste visée au paragraphe 1 une fois par an afin de déterminer s’il y a lieu de la mettre à jour.  3. La procédure prévue au présent article n’a pas d’incidence sur les délais fixés aux articles 17 et 18.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°256 | 
+        
+        
+            <article id="256">
+            <header>📝 Amendement n°256 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>Article 65 quater  Actes délégués relatifs à des normes existantes  1. La Commission consulte en bonne et due forme les parties prenantes concernées.  2. Après examen de l’ensemble des éléments de preuve et des avis d’expert, la Commission est habilitée à adopter un acte délégué conformément à l’article 67 afin d’établir une liste déterminant quelles applications existantes de normes ou de parties de normes peuvent être notifiées conformément au paragraphe 1 ou au paragraphe 2 de l’article 66. La Commission détermine également, dans ledit acte délégué, quelles exigences en matière de procédures, de notification et de publication prévues dans le présent règlement s’appliquent à ces normes existantes, à des parties de celles-ci ou aux applications pertinentes. L’acte délégué est adopté au plus tard le ... [JO:  prière d’insérer la date correspondant à 18 mois après l’entrée en vigueur du présent règlement]. La Commission vérifie une fois par an si la liste doit être mise à jour.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°257 | 
+        
+        
+            <article id="257">
+            <header>📝 Amendement n°257 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      1. Jusqu’au [JO: prière d’insérer la date = 28 mois à compter de l’entrée en vigueur du présent règlement], les titulaires de brevets essentiels à des normes publiées avant l’entrée en vigueur du présent règlement (ci-après les «normes existantes»), pour lesquelles des engagements FRAND ont été 
-  
+<p>
 
   
-      <del>pris,</del>
+      1. Jusqu’au [JO: prière d’insérer la date = 28 mois à compter de l’entrée en vigueur du présent règlement], les titulaires de brevets essentiels à des normes publiées avant l’entrée en vigueur du présent règlement (ci-après les «normes existantes»), pour lesquelles des engagements FRAND ont été pris
   
 
   
-      <ins>pris ou non,</ins>
+      <ins> ou non</ins>
   
 
   
-       peuvent, en vertu des articles 14, 15 et 17, notifier au centre de compétence des normes ou parties de normes existantes qui seront déterminées dans l’acte délégué conformément 
+      , peuvent, en vertu des articles 14, 15 et 17, notifier au centre de compétence des normes ou parties de normes existantes qui seront déterminées dans l’acte délégué conformément 
   
 
   
-      <del>au paragraphe 4.</del>
+      <del>au paragraphe 4</del>
   
 
   
-      <ins>à l’article 65 quater.</ins>
+      <ins>à l’article 65 quater</ins>
   
 
   
-       Les exigences relatives aux procédures relatives à la notification et à la publication prévues dans le présent règlement s’appliquent mutatis mutandis.
+      . Les exigences relatives aux procédures relatives à la notification et à la publication prévues dans le présent règlement s’appliquent mutatis mutandis.
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">455</div>
+  <div class="against">133</div>
+  <div class="abstention">4</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(455/592 * 100%)">455</div>
-  
-  
-    <div class="-" style="width: calc(133/592 * 100%)">133</div>
-  
-  
-    <div class="0" style="width: calc(4/592 * 100%)">4</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°258 | 
+        
+            <article id="258">
+            <header>📝 Amendement n°258 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <del>4. Lorsque le fonctionnement du marché intérieur est gravement affecté en raison d’inefficiences dans l’octroi de licences d’utilisation des BEN, la Commission, après un processus de consultation approprié, par voie d’un acte délégué conformément à l’article 67, détermine quelles normes existantes, quelles parties de normes existantes ou  quels cas d’utilisation pertinents peuvent être notifiés conformément au paragraphe 1 ou au paragraphe 2, ou peuvent faire l’objet d’une demande d’avis d’expert conformément au paragraphe 3. L’acte délégué détermine également quelles exigences en matière de procédures, de notification et de publication prévues dans le présent règlement s’appliquent à ces normes existantes. L’acte délégué est adopté au plus tard le [JO: prière d’insérer la date = 18 mois à compter de l’entrée en vigueur du présent règlement].</del>
@@ -1383,29 +1724,36 @@
       <ins>supprimé</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°259 | 
+        
+        
+            <article id="259">
+            <header>📝 Amendement n°259 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       2. Le pouvoir d’adopter des actes délégués visé à l’article 
@@ -1423,29 +1771,36 @@
       est conféré à la Commission pour une durée indéterminée à compter de la date d’entrée en vigueur du présent règlement.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°260 | 
+        
+        
+            <article id="260">
+            <header>📝 Amendement n°260 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       3. La délégation de pouvoir visée à l’article 
@@ -1460,15 +1815,11 @@
   
 
   
-      peut être révoquée à tout moment par le Parlement européen ou le Conseil. La décision de révocation met fin à la délégation de pouvoir qui y est précisée. La révocation prend effet le jour suivant celui de la publication de ladite décision au Journal officiel de l’Union 
+      peut être révoquée à tout moment par le Parlement européen ou le Conseil. La décision de révocation met fin à la délégation de pouvoir qui y est précisée. La révocation prend effet le jour suivant celui de la publication de ladite décision au Journal officiel de l’Union
   
 
   
-      <del> </del>
-  
-
-  
-      européenne ou à une 
+      <del>  </del>
   
 
   
@@ -1476,48 +1827,60 @@
   
 
   
+      européenne ou à une
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>  </ins>
+  
+
+  
       date ultérieure qui est précisée dans ladite décision. Elle ne porte pas atteinte à la validité des actes délégués déjà en vigueur.
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">410</div>
+  <div class="against">194</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(410/612 * 100%)">410</div>
-  
-  
-    <div class="-" style="width: calc(194/612 * 100%)">194</div>
-  
-  
-    <div class="0" style="width: calc(8/612 * 100%)">8</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°261 | 
+        
+            <article id="261">
+            <header>📝 Amendement n°261 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       6. Un acte délégué adopté en vertu de l’article 
@@ -1535,657 +1898,1727 @@
       n’entre en vigueur que si le Parlement européen ou le Conseil n’a pas exprimé d’objections dans un délai de deux mois à compter de la notification de cet acte au Parlement européen et au Conseil ou si, avant l’expiration de ce délai, le Parlement européen et le Conseil ont tous deux informé la Commission de leur intention de ne pas exprimer d’objections. Ce délai est prolongé de deux mois à l’initiative du Parlement européen ou du Conseil.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°269 | 
+        
+        
+            <article id="269">
+            <header>📝 Amendement n°269 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      (47) Afin de compléter certains éléments non essentiels du présent règlement, il convient de déléguer à la Commission le pouvoir d’adopter des actes, conformément à l’article 290 du traité sur le fonctionnement de l’Union, en ce qui concerne les éléments à consigner dans le 
-  
+<p>
 
   
-      <del>registre ou la détermination des normes existantes pertinentes ou les cas d’utilisation de normes ou de parties de normes pour lesquelles la Commission établit que l’octroi de licences à des conditions FRAND n’entraîne aucune difficulté ou inefficience significative.</del>
+      (47) Afin de compléter certains éléments non essentiels du présent règlement, il convient de déléguer à la Commission le pouvoir d’adopter des actes, conformément à l’article 290 du traité sur le fonctionnement de l’Union, en ce qui concerne les éléments à consigner dans le registre
   
 
   
-      <ins>registre.</ins>
+      <del> ou la détermination des normes existantes pertinentes ou les cas d’utilisation de normes ou de parties de normes pour lesquelles la Commission établit que l’octroi de licences à des conditions FRAND n’entraîne aucune difficulté ou inefficience significative</del>
   
 
   
-       Il importe particulièrement que la Commission procède aux consultations appropriées durant son travail préparatoire, y compris au niveau des experts, et que ces consultations soient menées conformément aux principes définis dans l’accord interinstitutionnel du 13 avril 2016 «Mieux légiférer»44. En particulier, pour assurer leur égale participation à la préparation des actes délégués, le Parlement européen et le Conseil reçoivent tous les documents au même moment que les experts des États membres, et leurs experts ont systématiquement accès aux réunions des groupes d’experts de la Commission traitant de la préparation des actes délégués.  
+      . Il importe particulièrement que la Commission procède aux consultations appropriées durant son travail préparatoire, y compris au niveau des experts, et que ces consultations soient menées conformément aux principes définis dans l’accord interinstitutionnel du 13 avril 2016 «Mieux légiférer»44. En particulier, pour assurer leur égale participation à la préparation des actes délégués, le Parlement européen et le Conseil reçoivent tous les documents au même moment que les experts des États membres, et leurs experts ont systématiquement accès aux réunions des groupes d’experts de la Commission traitant de la préparation des actes délégués
   
 
   
-      <ins>       </ins>
+      <del>.  </del>
+  
+
+  
+      <ins>.         </ins>
   
 
   
       _________________
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°270 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="270">
+            <header>📝 Amendement n°270 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      (48) Afin de garantir l’uniformité des conditions de mise en œuvre des dispositions pertinentes du présent règlement, il convient de conférer des pouvoirs d’exécution à la Commission afin qu’elle adopte les conditions détaillées applicables à la sélection des évaluateurs et des conciliateurs, ainsi que le règlement de procédure et le code de conduite des évaluateurs et des conciliateurs. La Commission doit également adopter les règles techniques applicables à la sélection d’un échantillon de BEN pour les contrôles relatifs au caractère essentiel et la méthode de réalisation de ces contrôles par les évaluateurs et les pairs évaluateurs. La Commission doit également déterminer les éventuels droits administratifs applicables à ses services en relation avec les tâches prévues au titre du présent règlement et les droits relatifs aux services fournis par les évaluateurs, les experts et les conciliateurs, les dérogations à ceux-ci et les méthodes de paiement et, le cas échéant, les adapter. 
-  
+<p>
 
   
-      <del>La Commission doit également déterminer les normes ou les parties de en vigueur du présent règlement et pour lesquelles des BEN peuvent être enregistrés. </del>
+      (48) Afin de garantir l’uniformité des conditions de mise en œuvre des dispositions pertinentes du présent règlement, il convient de conférer des pouvoirs d’exécution à la Commission afin qu’elle adopte les conditions détaillées applicables à la sélection des évaluateurs et des conciliateurs, ainsi que le règlement de procédure et le code de conduite des évaluateurs et des conciliateurs. La Commission doit également adopter les règles techniques applicables à la sélection d’un échantillon de BEN pour les contrôles relatifs au caractère essentiel et la méthode de réalisation de ces contrôles par les évaluateurs et les pairs évaluateurs. La Commission doit également déterminer les éventuels droits administratifs applicables à ses services en relation avec les tâches prévues au titre du présent règlement et les droits relatifs aux services fournis par les évaluateurs, les experts et les conciliateurs, les dérogations à ceux-ci et les méthodes de paiement et, le cas échéant, les adapter.
   
 
   
-      Ces compétences doivent être exercées en conformité avec le règlement 
+      <del> La Commission doit également déterminer les normes ou les parties de en vigueur du présent règlement et pour lesquelles des BEN peuvent être enregistrés.</del>
   
 
   
-      <ins>(UE) Conseil45.    </ins>
+       Ces compétences doivent être exercées en conformité avec le règlement
   
 
   
-         
+      <del>    et du Conseil45.  </del>
   
 
   
-      <del>et du Conseil45.</del>
+      <ins> (UE) Conseil45.         </ins>
   
 
   
-        _________________  Parlement européen et du Conseil du 16 février 2011 établissant les règles et principes généraux relatifs aux modalités de contrôle par les États membres de l’exercice des compétences d’exécution par p. 13).
+      _________________  Parlement européen et du Conseil du 16 février 2011 établissant les règles et principes généraux relatifs aux modalités de contrôle par les États membres de l’exercice des compétences d’exécution par p. 13).
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°273 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="273">
+            <header>📝 Amendement n°273 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      1. Jusqu’au [JO: prière d’insérer la date = 28 mois à compter de l’entrée en vigueur du présent règlement], les titulaires de brevets essentiels à des normes publiées avant l’entrée en vigueur du présent règlement (ci-après les «normes existantes»), pour lesquelles des engagements FRAND ont été 
-  
+<p>
 
   
-      <del>pris,</del>
+      1. Jusqu’au [JO: prière d’insérer la date = 28 mois à compter de l’entrée en vigueur du présent règlement], les titulaires de brevets essentiels à des normes publiées avant l’entrée en vigueur du présent règlement (ci-après les «normes existantes»), pour lesquelles des engagements FRAND ont été pris
   
 
   
-      <ins>pris ou non,</ins>
+      <ins> ou non</ins>
   
 
   
-       peuvent, en vertu des articles 14, 15 et 17, notifier au centre de compétence des normes ou parties de normes 
+      , peuvent, en vertu des articles 14, 15 et 17, notifier au centre de compétence des normes ou parties de normes existantes
   
 
   
-      <del>existantes qui seront déterminées dans l’acte délégué conformément au paragraphe 4.</del>
+      <del> qui seront déterminées dans l’acte délégué conformément au paragraphe 4</del>
   
 
   
-      <ins>existantes.</ins>
-  
-
-  
-       Les exigences relatives aux procédures relatives à la notification et à la publication prévues dans le présent règlement s’appliquent mutatis mutandis.
+      . Les exigences relatives aux procédures relatives à la notification et à la publication prévues dans le présent règlement s’appliquent mutatis mutandis.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°274 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="274">
+            <header>📝 Amendement n°274 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      2. Jusqu’au [JO: prière d’insérer la date = 28 mois à compter de l’entrée en vigueur du présent règlement], les utilisateurs d’une norme publiée avant l’entrée en vigueur du présent règlement, pour laquelle un engagement FRAND a été pris, peuvent, en vertu de l’article 14, paragraphe 4, notifier au centre de compétence des normes ou parties de normes 
-  
+<p>
 
   
-      <del>existantes qui seront déterminées dans l’acte délégué conformément au paragraphe 4.</del>
+      2. Jusqu’au [JO: prière d’insérer la date = 28 mois à compter de l’entrée en vigueur du présent règlement], les utilisateurs d’une norme publiée avant l’entrée en vigueur du présent règlement, pour laquelle un engagement FRAND a été pris, peuvent, en vertu de l’article 14, paragraphe 4, notifier au centre de compétence des normes ou parties de normes existantes
   
 
   
-      <ins>existantes.</ins>
+      <del> qui seront déterminées dans l’acte délégué conformément au paragraphe 4</del>
   
 
   
-       Les exigences relatives aux procédures relatives à la notification et à la publication prévues dans le présent règlement s’appliquent mutatis mutandis.
+      . Les exigences relatives aux procédures relatives à la notification et à la publication prévues dans le présent règlement s’appliquent mutatis mutandis.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°275 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="275">
+            <header>📝 Amendement n°275 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      3. Jusqu’au [JO: prière d’insérer la date = 30 mois à compter de l’entrée en vigueur du présent règlement], un titulaire de BEN ou un utilisateur peut demander un avis d’expert en vertu de l’article 18 concernant des brevets essentiels à une norme ou à des parties d’une norme 
-  
+<p>
 
   
-      <del>existante, qui sera déterminée dans l’acte délégué conformément au paragraphe 4.</del>
+      3. Jusqu’au [JO: prière d’insérer la date = 30 mois à compter de l’entrée en vigueur du présent règlement], un titulaire de BEN ou un utilisateur peut demander un avis d’expert en vertu de l’article 18 concernant des brevets essentiels à une norme ou à des parties d’une norme existante
   
 
   
-      <ins>existante.</ins>
+      <del>, qui sera déterminée dans l’acte délégué conformément au paragraphe 4</del>
   
 
   
-       Les exigences et procédures prévues à l’article 18 s’appliquent mutatis mutandis.
+      . Les exigences et procédures prévues à l’article 18 s’appliquent mutatis mutandis.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°279 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="276">
+            <header>📝 Amendement n°276 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      2. Le pouvoir d’adopter des actes délégués visé à l’article 
+  
+
+  
+      <del>1er, paragraphe 4, à l’article 4, paragraphe 5, et à l’article 66, paragraphe 4</del>
+  
+
+  
+      <ins>4, paragraphe 5</ins>
+  
+
+  
+      , est conféré à la Commission pour une durée indéterminée à compter de la date d’entrée en vigueur du présent règlement.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="277">
+            <header>📝 Amendement n°277 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      3. La délégation de pouvoir visée à l’article 
+  
+
+  
+      <del>1er, paragraphe 4, à l’article 4, paragraphe 5, et à l’article 66, paragraphe 4</del>
+  
+
+  
+      <ins>4, paragraphe 5</ins>
+  
+
+  
+      , peut être révoquée à tout moment par le Parlement européen ou le Conseil. La décision de révocation met fin à la délégation de pouvoir qui y est précisée. La révocation prend effet le jour suivant celui de la publication de ladite décision au Journal officiel de l’Union européenne ou à une date ultérieure qui est précisée dans ladite décision. Elle ne porte pas atteinte à la validité des actes délégués déjà en vigueur.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="278">
+            <header>📝 Amendement n°278 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      6. Un acte délégué adopté en vertu de l’article 
+  
+
+  
+      <del>1er, paragraphe 4, de l’article 4, paragraphe 5, et de l’article 66, paragraphe 4</del>
+  
+
+  
+      <ins>4, paragraphe 5</ins>
+  
+
+  
+      , n’entre en vigueur que si le Parlement européen ou le Conseil n’a pas exprimé d’objections dans un délai de deux mois à compter de la notification de cet acte au Parlement européen et au Conseil ou si, avant l’expiration de ce délai, le Parlement européen et le Conseil ont tous deux informé la Commission de leur intention de ne pas exprimer d’objections. Ce délai est prolongé de deux mois à l’initiative du Parlement européen ou du Conseil.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="279">
+            <header>📝 Amendement n°279 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">249284,5565,190774</div>
+                
 
-<section>
+<p>
 
   
       <ins>(1 bis) L’application de conditions d’octroi des licences pour les transferts de technologie devrait être autorisée uniquement lorsque des cas avérés de défaillance du marché ont été recensés.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  des députés
+  
+    dont 
     
+      Geoffroy DIDIER (LR), 
     
-    <article>
-    <header>📝 Amendement n°291 | 
+      Brice HORTEFEUX (LR) et 
+    
+      Laurence SAILLIET (LR)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="281">
+            <header>📝 Amendement n°281 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">249284,5565,190774,24594,249284,5565,190774,249284,5565,190774,197536</div>
+                
+
+<p>
+
+  
+      (13) Le centre de compétence devrait créer et administrer un registre électronique et une base de données électronique contenant des informations détaillées sur les BEN en vigueur dans un ou plusieurs États membres,
+  
+
+  
+      <del> y compris les résultats des contrôles du caractère essentiel,</del>
+  
+
+  
+       les avis, les rapports, la jurisprudence disponible dans le monde, les règles relatives aux BEN dans les pays tiers, et les résultats d’études portant spécifiquement sur les BEN. Afin de sensibiliser les PME à la question de l’octroi des licences pour les BEN et de faciliter ce processus pour celles-ci, le centre de compétence devrait leur offrir une assistance. La création et l’administration 
+  
+
+  
+      <del>d’un système de contrôles relatifs au caractère essentiel et </del>
+  
+
+  
+      de procédures de détermination de la redevance agrégée et des conditions FRAND par le centre de compétence devraient inclure des actions d’amélioration continue du système et des procédures, notamment au moyen de nouvelles technologies. Conformément à cet objectif, le centre de compétence
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
+  
+
+  
+      devrait mettre en place des procédures de formation des 
+  
+
+  
+      <del>évaluateurs du caractère essentiel et des </del>
+  
+
+  
+      conciliateurs pour leur permettre de donner leur avis sur la
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
+  
+
+  
+      redevance agrégée ainsi que sur la détermination des conditions FRAND, et devrait encourager ceux-ci à adopter des pratiques uniformes.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
+    
+      Geoffroy DIDIER (LR), 
+    
+      Anne SANDER (LR), 
+    
+      Brice HORTEFEUX (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Laurence SAILLIET (LR)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="291">
+            <header>📝 Amendement n°291 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">249284,5565,24594,96747,197536,249284,5565,190774,197536,249284,5565,24594,96747,197536</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. Le présent règlement s’applique uniquement aux brevets qui sont en vigueur après l&#39;entrée en vigueur du présent règlement.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Geoffroy DIDIER (LR), 
+    
+      Anne SANDER (LR), 
+    
+      Arnaud DANJEAN (LR), 
+    
+      Brice HORTEFEUX (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Laurence SAILLIET (LR)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">165</div>
+  <div class="against">419</div>
+  <div class="abstention">20</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(165/604 * 100%)">165</div>
-  
-  
-    <div class="-" style="width: calc(419/604 * 100%)">419</div>
-  
-  
-    <div class="0" style="width: calc(20/604 * 100%)">20</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
+        
+            <article id="296">
+            <header>📝 Amendement n°296 | 
 
-    
-    
-    <article>
-    <header>📝 Amendement n°307 | 
-
-❌️ Rejeté
+🚫 Annulé
 
 </header>
-    
-        
+            
+                <div class="hidden">249284,5565,24594,96747,197536,249284,5565,190774,197536,249284,5565,24594,96747,197536,249284,5565,24594,96747,197536,249284,5565,190774,197536,249284,5565,190774,197536,249284,5565,190774,197536,249284,5565,24594,96747,197536</div>
+                
 
-<section>
-
-  
-      a) l’administration des enregistrements de 
-  
+<p>
 
   
-      <del>BEN, des contrôles relatifs au caractère essentiel </del>
+      4. Lorsqu’il existe des éléments suffisants démontrant, eu égard à des cas d’utilisation déterminés de certaines normes ou parties de normes, que les négociations en vue de l’octroi de licences pour les BEN à des conditions FRAND n’entraîneront pas de difficultés ou d’inefficiences significatives affectant le fonctionnement du marché intérieur, la Commission
   
 
   
-      <ins>BEN </ins>
+      <del>, </del>
   
 
   
-      et des procédures de conciliation conformément au présent règlement;
+      <ins> établit, d’ici au [JO: veuillez insérer la date correspondant à 24 mois à compter de la date d’entrée en vigueur du présent règlement] et </ins>
+  
+
+  
+      après un processus de consultation approprié, par voie d’un acte délégué conformément à l’article 67,
+  
+
+  
+      <del> établit</del>
+  
+
+  
+       une liste desdits cas d’utilisation, normes ou parties de normes
+  
+
+  
+      <del>, aux fins du paragraphe 3</del>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  des députés
+  
+    dont 
     
+      Geoffroy DIDIER (LR), 
     
-    <article>
-    <header>📝 Amendement n°311 | 
+      Anne SANDER (LR), 
+    
+      Arnaud DANJEAN (LR), 
+    
+      Brice HORTEFEUX (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Laurence SAILLIET (LR)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="299">
+            <header>📝 Amendement n°299 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">249284,5565,24594,96747</div>
+                
+
+<p>
+
+  
+      c) des informations indiquant si un contrôle relatif au caractère essentiel 
+  
+
+  
+      <del>ou une évaluation par les pairs ont été effectués et une référence au résultat</del>
+  
+
+  
+      <ins>a été effectué par une juridiction compétente d’un État membre et une référence au résultat s’il s’agit d’un jugement définitif</ins>
+  
+
+  
+      ;
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
+    
+      Anne SANDER (LR), 
+    
+      Arnaud DANJEAN (LR), 
+    
+      Brice HORTEFEUX (LR) et 
+    
+      Laurence SAILLIET (LR)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="304">
+            <header>📝 Amendement n°304 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">249284,5565,24594,96747,249284,5565,190774,197536,249284,5565,190774,197536,249284,5565,24594,190774,96747,197536,249284,5565,190774,197536,249284,5565,190774,197536</div>
+                
+
+<p>
+
+  
+      b) un contrôle relatif au caractère essentiel réalisé
+  
+
+  
+      <del> avant le [JO: prière d’insérer la date = 24 mois à compter de l’entrée en vigueur du présent règlement]</del>
+  
+
+  
+       par un évaluateur indépendant dans le contexte
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>, par exemple, </ins>
+  
+
+  
+      d’une communauté
+  
+
+  
+      <ins> de brevets</ins>
+  
+
+  
+      , mentionnant le numéro d’enregistrement du BEN, l’identité de la communauté de brevets et de son administrateur, ainsi que l’évaluateur.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
+    
+      Geoffroy DIDIER (LR), 
+    
+      Anne SANDER (LR), 
+    
+      Arnaud DANJEAN (LR), 
+    
+      Brice HORTEFEUX (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Laurence SAILLIET (LR)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="307">
+            <header>📝 Amendement n°307 | 
 
 ❌️ Rejeté
 
 </header>
+            
+                <div class="hidden">249284,5565,24594,96747,249284,5565,190774,197536,249284,5565,190774,197536,249284,5565,24594,190774,96747,197536,249284,5565,190774,197536,249284,5565,190774,197536,249284,5565,24594,190774,197536,249284,5565,190774,197536,249284,5565,24594,96747,197536</div>
+                
+
+<p>
+
+  
+      a) l’administration des enregistrements de BEN
+  
+
+  
+      <del>, des contrôles relatifs au caractère essentiel</del>
+  
+
+  
+       et des procédures de conciliation conformément au présent règlement;
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
+    
+      Geoffroy DIDIER (LR), 
+    
+      Anne SANDER (LR), 
+    
+      Arnaud DANJEAN (LR), 
+    
+      Brice HORTEFEUX (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Laurence SAILLIET (LR)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
         
+        
+            <article id="311">
+            <header>📝 Amendement n°311 | 
 
-<section>
+❌️ Rejeté
+
+</header>
+            
+                <div class="hidden">249284,5565,24594,96747,197536,249284,5565,24594,96747,197536,249284,5565,24594,190774,197536</div>
+                
+
+<p>
 
   
       6. Si les demandes de participation concernent 
   
 
   
-      <del>des titulaires de BEN représentant collectivement une part estimée à au moins 20 % de l’ensemble des BEN liés à la norme, et des utilisateurs détenant collectivement au moins 10 % de part de marché pertinente dans l’Union ou au moins 10 PME,</del>
+      <del>des titulaires de BEN représentant collectivement une part estimée à au moins 20 % de l’ensemble des BEN liés à la norme, et des utilisateurs détenant collectivement au moins 10 % de part de marché pertinente dans l’Union ou au moins 10 PME</del>
   
 
   
-      <ins>toute combinaison de cinq titulaires de BEN ou utilisateurs,</ins>
+      <ins>toute combinaison de cinq titulaires de BEN ou utilisateurs</ins>
   
 
   
-       le centre de compétence désigne un comité de trois conciliateurs sélectionnés sur la liste possédant les qualifications adéquates dans le domaine technologique pertinent.
+      , le centre de compétence désigne un comité de trois conciliateurs sélectionnés sur la liste possédant les qualifications adéquates dans le domaine technologique pertinent.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  des députés
+  
+    dont 
     
+      Geoffroy DIDIER (LR), 
     
-    <article>
-    <header>📝 Amendement n°312 | 
+      Anne SANDER (LR), 
+    
+      Arnaud DANJEAN (LR), 
+    
+      Brice HORTEFEUX (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Laurence SAILLIET (LR)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="312">
+            <header>📝 Amendement n°312 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">249284,5565,24594,96747,197536,249284,5565,24594,96747,197536,249284,5565,24594,190774,197536,249284,5565,24594,96747</div>
+                
 
-<section>
-
-  
-      2. Une telle demande peut être introduite à tout 
-  
+<p>
 
   
-      <del>moment, excepté entre la sélection du BEN à des fins de contrôle du caractère essentiel conformément à l’article 29 et la publication du résultat du contrôle relatif au caractère essentiel dans le registre et la base de données en vertu de l’article 33, paragraphe 1.</del>
+      2. Une telle demande peut être introduite à tout moment
   
 
   
-      <ins>moment.</ins>
+      <del>, excepté entre la sélection du BEN à des fins de contrôle du caractère essentiel conformément à l’article 29 et la publication du résultat du contrôle relatif au caractère essentiel dans le registre et la base de données en vertu de l’article 33, paragraphe 1</del>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  des députés
+  
+    dont 
     
+      Geoffroy DIDIER (LR), 
     
-    <article>
-    <header>📝 Amendement n°315 | 
+      Anne SANDER (LR), 
+    
+      Arnaud DANJEAN (LR), 
+    
+      Brice HORTEFEUX (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Laurence SAILLIET (LR)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="315">
+            <header>📝 Amendement n°315 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">249284,5565,24594,96747,197536,249284,5565,24594,96747,197536,249284,5565,24594,190774,197536,249284,5565,24594,96747,249284,5565,190774,197536,249284,5565,24594,96747,249284,5565,190774,197536</div>
+                
 
-<section>
-
-  
-      b) les procédures visées aux articles 
-  
+<p>
 
   
-      <del>17, 18, 31 et 32 et au titre </del>
+      b) les procédures visées aux articles 17
   
 
   
-      <ins>17 et 18 et aux titres V et </ins>
+      <del>, 18, 31</del>
   
 
   
-      VI.
+       et 
+  
+
+  
+      <del>32</del>
+  
+
+  
+      <ins>18</ins>
+  
+
+  
+       et 
+  
+
+  
+      <del>au titre</del>
+  
+
+  
+      <ins>aux titres V et</ins>
+  
+
+  
+       VI.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  des députés
+  
+    dont 
     
+      Geoffroy DIDIER (LR), 
     
-    <article>
-    <header>📝 Amendement n°322 | 
+      Anne SANDER (LR), 
+    
+      Arnaud DANJEAN (LR), 
+    
+      Brice HORTEFEUX (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Laurence SAILLIET (LR)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="321">
+            <header>📝 Amendement n°321 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">249284,5565,24594,96747,197536,249284,5565,190774,197536,249284,5565,24594,96747,197536</div>
+                
+
+<p>
+
+  
+      2. Lorsqu’une procédure parallèle a été engagée par une partie avant ou pendant la détermination des conditions FRAND, le 
+  
+
+  
+      <del>conciliateur</del>
+  
+
+  
+      <ins>comité de conciliateurs</ins>
+  
+
+  
+       ou, lorsque celui
+  
+
+  
+      <del> ou celle</del>
+  
+
+  
+      -ci n’a pas été désigné
+  
+
+  
+      <del>(e), </del>
+  
+
+  
+      <ins>, </ins>
+  
+
+  
+      le centre de compétence, met un terme à la détermination des conditions FRAND sur demande de l’
+  
+
+  
+      <del>autre partie</del>
+  
+
+  
+      <ins>une des parties</ins>
+  
+
+  
+      .
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
+    
+      Geoffroy DIDIER (LR), 
+    
+      Anne SANDER (LR), 
+    
+      Arnaud DANJEAN (LR), 
+    
+      Brice HORTEFEUX (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Laurence SAILLIET (LR)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="322">
+            <header>📝 Amendement n°322 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">249284,5565,24594,96747,197536,249284,5565,190774,197536,249284,5565,24594,96747,197536,249284,5565,190774,197536</div>
+                
 
-<section>
-
-  
-      2. Si les montants demandés ne sont pas intégralement payés dans les dix jours à compter de la date de la demande, le centre de compétence peut le notifier à la partie en défaut et lui donner la possibilité de procéder au paiement requis dans les [cinq] jours. Dans le cas d’
-  
+<p>
 
   
-      <del>une redevance agrégée ou d’</del>
+      2. Si les montants demandés ne sont pas intégralement payés dans les dix jours à compter de la date de la demande, le centre de compétence peut le notifier à la partie en défaut et lui donner la possibilité de procéder au paiement requis dans les [cinq] jours. Dans le cas d’une 
   
 
   
-      une détermination des conditions FRAND, il transmet une copie de la demande à l’autre partie.
+      <del>redevance agrégée ou d’une </del>
+  
+
+  
+      détermination des conditions FRAND, il transmet une copie de la demande à l’autre partie.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  des députés
+  
+    dont 
     
+      Geoffroy DIDIER (LR), 
     
-    <article>
-    <header>📝 Amendement n°327 | 
+      Anne SANDER (LR), 
+    
+      Arnaud DANJEAN (LR), 
+    
+      Brice HORTEFEUX (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Laurence SAILLIET (LR)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="324">
+            <header>📝 Amendement n°324 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">249284,5565,24594,96747,197536,249284,5565,190774,197536,249284,5565,24594,96747,197536,249284,5565,190774,197536,249284,5565,24594,190774,197536,249284,5565,24594,197536,190774</div>
+                
+
+<p>
+
+  
+      2. Le pouvoir d’adopter des actes délégués visé à l’article 1er, 
+  
+
+  
+      <del>paragraphe 4, à l’article 4, paragraphe 5</del>
+  
+
+  
+      <ins>paragraphes 2 et 4</ins>
+  
+
+  
+      , et à l’article 
+  
+
+  
+      <del>66</del>
+  
+
+  
+      <ins>4</ins>
+  
+
+  
+      , paragraphe 
+  
+
+  
+      <del>4</del>
+  
+
+  
+      <ins>5</ins>
+  
+
+  
+      , est conféré à la Commission pour une durée indéterminée à compter de la date d’entrée en vigueur du présent règlement.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
+    
+      Geoffroy DIDIER (LR), 
+    
+      Anne SANDER (LR), 
+    
+      Arnaud DANJEAN (LR), 
+    
+      Brice HORTEFEUX (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Laurence SAILLIET (LR)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="325">
+            <header>📝 Amendement n°325 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">249284,5565,24594,96747,197536,249284,5565,190774,197536,249284,5565,24594,96747,197536,249284,5565,190774,197536,249284,5565,24594,190774,197536,249284,5565,24594,197536,190774,249284,5565,190774,197536</div>
+                
+
+<p>
+
+  
+      3. La délégation de pouvoir visée à l’article 1er, 
+  
+
+  
+      <del>paragraphe 4, à l’article 4, paragraphe 5</del>
+  
+
+  
+      <ins>paragraphes 2 et 4</ins>
+  
+
+  
+      , et à l’article 
+  
+
+  
+      <del>66</del>
+  
+
+  
+      <ins>4</ins>
+  
+
+  
+      , paragraphe 
+  
+
+  
+      <del>4</del>
+  
+
+  
+      <ins>5</ins>
+  
+
+  
+      , peut être révoquée à tout moment par le Parlement européen ou le Conseil. La décision de révocation met fin à la délégation de pouvoir qui y est précisée. La révocation prend effet le jour suivant celui de la publication de ladite décision au Journal officiel de l’Union européenne ou à une date ultérieure qui est précisée dans ladite décision. Elle ne porte pas atteinte à la validité des actes délégués déjà en vigueur.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
+    
+      Geoffroy DIDIER (LR), 
+    
+      Anne SANDER (LR), 
+    
+      Arnaud DANJEAN (LR), 
+    
+      Brice HORTEFEUX (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Laurence SAILLIET (LR)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="326">
+            <header>📝 Amendement n°326 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">249284,5565,24594,96747,197536,249284,5565,190774,197536,249284,5565,24594,96747,197536,249284,5565,190774,197536,249284,5565,24594,190774,197536,249284,5565,24594,197536,190774,249284,5565,190774,197536,249284,5565,190774,197536</div>
+                
+
+<p>
+
+  
+      6. Un acte délégué adopté en vertu de l’article 1er, 
+  
+
+  
+      <del>paragraphe 4, de l’article 4, paragraphe 5</del>
+  
+
+  
+      <ins>paragraphes 2 et 4</ins>
+  
+
+  
+      , et de l’article 
+  
+
+  
+      <del>66</del>
+  
+
+  
+      <ins>4</ins>
+  
+
+  
+      , paragraphe 
+  
+
+  
+      <del>4</del>
+  
+
+  
+      <ins>5</ins>
+  
+
+  
+      , n’entre en vigueur que si le Parlement européen ou le Conseil n’a pas exprimé d’objections dans un délai de deux mois à compter de la notification de cet acte au Parlement européen et au Conseil ou si, avant l’expiration de ce délai, le Parlement européen et le Conseil ont tous deux informé la Commission de leur intention de ne pas exprimer d’objections. Ce délai est prolongé de deux mois à l’initiative du Parlement européen ou du Conseil.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
+    
+      Geoffroy DIDIER (LR), 
+    
+      Anne SANDER (LR), 
+    
+      Arnaud DANJEAN (LR), 
+    
+      Brice HORTEFEUX (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Laurence SAILLIET (LR)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="327">
+            <header>📝 Amendement n°327 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">249284,5565,24594,96747,197536,249284,5565,190774,197536,249284,5565,24594,96747,197536,249284,5565,190774,197536,249284,5565,24594,190774,197536,249284,5565,24594,197536,190774,249284,5565,190774,197536,249284,5565,190774,197536,249284,5565,24594,96747,197536</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. Au plus tard ... [veuillez insérer la date correspondant à six mois après l’entrée en vigueur du présent règlement], la Commission crée un groupe d’experts des parties prenantes composé d’experts externes indépendants et d’une représentation équilibrée de toutes les parties intéressées, y compris les titulaires et les utilisateurs de BEN et les PME. Le groupe d’experts des parties prenantes est chargé d’évaluer l’incidence du présent règlement sur l’écosystème européen et mondial de la propriété intellectuelle et de l’innovation et sur la compétitivité européenne ainsi que la compatibilité du présent règlement avec les accords de l’OMC. Le groupe d’experts des parties prenantes formule son évaluation et ses recommandations dans un rapport adressé à la Commission au plus tard... [veuillez insérer la date correspondant à 12 mois après l’entrée en vigueur du présent règlement] et tous les trois ans par la suite. Ce rapport est également rendu public.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Geoffroy DIDIER (LR), 
+    
+      Anne SANDER (LR), 
+    
+      Arnaud DANJEAN (LR), 
+    
+      Brice HORTEFEUX (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Laurence SAILLIET (LR)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
+        
     
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-    
-    
 
+    <section>
     
     
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-    
-    
-
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/0133(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2024-0016_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-02-28-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

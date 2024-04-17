@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Résolution sur le nouveau cadre financier pluriannuel, les ressources propres et le plan de relance</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Résolution sur le nouveau cadre financier pluriannuel, les ressources propres et le plan de relance</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(505/693 * 100%)">505</div>
-  
-  
-    <div class="-" style="width: calc(119/693 * 100%)">119</div>
+    <div class="for" style="width: calc(505/693 * 100%)">505</div>
   
   
-    <div class="0" style="width: calc(69/693 * 100%)">69</div>
+    <div class="against" style="width: calc(119/693 * 100%)">119</div>
+  
+  
+    <div class="abstention" style="width: calc(69/693 * 100%)">69</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,19 +88,20 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(56/79 * 100%)">56</div>
+    <div class="for" style="width: calc(56/79 * 100%)">56</div>
   
   
-    <div class="-" style="width: calc(23/79 * 100%)">23</div>
+    <div class="against" style="width: calc(23/79 * 100%)">23</div>
   
   
 </div>
  
 </section>
-            <a href="/voting/114514">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/114514">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -104,7 +109,7 @@
     
         
         
-            <li>Etat et évolution de l&#39;Union</li>
+            <li>Financement du budget, ressources propres</li>
         
     
         
@@ -114,216 +119,462 @@
     
         
         
-            <li>Financement du budget, ressources propres</li>
+            <li>Etat et évolution de l&#39;Union</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2631(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/B-9-2020-0158_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-05-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. estime que les conclusions du Conseil européen maintiennent un degré d’incertitude indéniable quant à une réponse efficace et appropriée aux besoins des États membres; est d’avis que toutes les propositions doivent aboutir à une augmentation réelle et substantielle des fonds alloués aux pays dont les économies sont les plus faibles et contribuer véritablement à réduire les asymétries qui se sont accentuées au cours des deux dernières décennies; considère que le «plan de relance» annoncé ne peut prendre le pas sur les politiques, les instruments et les moyens financiers nécessaires pour assurer une convergence effective dans le progrès économique et social entre les États membres, mais doit, au contraire, être subordonné à cet objectif;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">65</div>
+  <div class="against">576</div>
+  <div class="abstention">46</div>
+</span>
+
+  
+    
+    <a href="/voting/114130">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(65/687 * 100%)">65</div>
-  
-  
-    <div class="-" style="width: calc(576/687 * 100%)">576</div>
-  
-  
-    <div class="0" style="width: calc(46/687 * 100%)">46</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/114130">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>6 bis. estime qu’une réponse adéquate à la situation économique et sociale actuelle, aggravée dans le contexte de l’épidémie, exige:  a) que le budget de l’UE soit renforcé, moyennant le renforcement de sa fonction redistributive afin de favoriser une véritable convergence en matière de progrès économique et social entre les États membres – fonds structurels et d’investissement et fonds de cohésion – et de soutenir les secteurs productifs et l’emploi assortis de droits, au moyen de subventions (au lieu de prêts) consenties aux États membres;  b) que soient supprimés les postes liés à l’interventionnisme et à l’action extérieure (à l’exception de l’aide publique au développement), aux programmes de militarisation, à la propagande institutionnelle, à la mutualisation de la sécurité et du contrôle et de la surveillance des frontières, entre autres, afin de concentrer ces fonds sur l’aide aux États membres et la convergence effective dans le progrès économique et social;  c) que le budget de l’UE soit assoupli, que la Commission fasse passer des fonds    d’une gestion centralisée à une gestion partagée avec les États membres, que les instruments de la politique de cohésion soient renforcés et que les États membres soient libres de réaffecter les ressources entre les fonds, les postes budgétaires et les priorités en fonction de leurs besoins économiques et sociaux, de manière à supprimer les objectifs de concentration thématique ainsi que toute conditionnalité macroéconomique et/ou politique fixée par l’UE;  d) que les taux maximums de cofinancement de l’Union européenne soient portés à 100 %, moyennant une avance et non un remboursement des dépenses, et ce dans toutes les actions visant à combattre la pandémie de COVID-19 et à surmonter ses conséquences économiques et sociales;  e) que soit élaboré un budget de réserve qui soit valable pour au moins un an à partir de janvier 2021 et prévoie le doublement des ressources par rapport aux crédits d’engagement de l’année en cours, compte tenu de l’impasse dans laquelle pourraient se trouver les négociations du prochain cadre financier ce budget doit être souple et concentrer les ressources sur les instruments de la politique de cohésion et les aides aux secteurs productifs et aux emplois assortis de droits dans les États membres;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">23</div>
+  <div class="against">638</div>
+  <div class="abstention">26</div>
+</span>
+
+  
+    
+    <a href="/voting/114134">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(23/687 * 100%)">23</div>
-  
-  
-    <div class="-" style="width: calc(638/687 * 100%)">638</div>
-  
-  
-    <div class="0" style="width: calc(26/687 * 100%)">26</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/114134">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>8 bis. demande la coopération des États pour l&#39;instauration d’impôts sur le capital, comme la taxe sur les transactions financières et la taxe sur les multinationales du numérique, sur la base du principe selon lequel les bénéfices doivent être imposés dans le pays où ils sont générés, les recettes devant être reversées aux budgets nationaux; rejette la création d’impôts de l’Union;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">85</div>
+  <div class="against">564</div>
+  <div class="abstention">38</div>
+</span>
+
+  
+    
+    <a href="/voting/114137">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(85/687 * 100%)">85</div>
-  
-  
-    <div class="-" style="width: calc(564/687 * 100%)">564</div>
-  
-  
-    <div class="0" style="width: calc(38/687 * 100%)">38</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/114137">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>22 bis. demande instamment la mise en place d’un programme à l’échelle de l’Union pour encadrer une sortie négociée des pays qui décident de quitter la monnaie unique et de retrouver leur souveraineté monétaire, y compris la capacité de leur Banque centrale nationale d’émettre de la monnaie, afin de jouer le rôle de prêteur en dernier ressort, capable de financer l’État et d’offrir une marge de manœuvre face au chantage exercé par les marchés financiers. Ce programme, qui vise à encadrer une sortie négociée de la zone euro, doit également prévoir des aides et des compensations pour les dommages causés par le maintien dans la zone euro, même s’il ne doit pas dépendre de ces fonds pour son existence et son fonctionnement;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(68/687 * 100%)">68</div>
-  
-  
-    <div class="-" style="width: calc(561/687 * 100%)">561</div>
-  
-  
-    <div class="0" style="width: calc(58/687 * 100%)">58</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/114147">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2631(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/B-9-2020-0158_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">68</div>
+  <div class="against">561</div>
+  <div class="abstention">58</div>
+</span>
+
   
+    
+    <a href="/voting/114147">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-05-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">30482</div>
+            
+            <header><b>Younous OMARJEE</b> | La France Insoumise</header>
+            
+                <p> – Monsieur le Président, nous ne pouvons, pour notre débat, faire l’impasse sur la décision de la Cour constitutionnelle allemande qui s’arroge, ni plus ni moins, le droit de se substituer à la Cour de justice de l’Union européenne. Cette décision est d’une gravité extrême.</p>
+            
+                <p>Aucun peuple européen ne peut accepter de se voir dicter le droit européen par la Cour constitutionnelle d’un autre État membre. Est-ce que demain, pour chaque acte de l’Union, il nous faudra attendre 27 arrêts de 27 cours nationales? Accepter cela, je vous le dis, mes chers collègues, c’est acter le début de la fin de l’Union.</p>
+            
+                <p>L’Europe a besoin d’un grand plan de relance et de solidarité tourné vers la cohésion. Elle a aussi besoin d’une banque centrale européenne, véritablement européenne, et non d’une banque qu’on veut soumettre à l&#39;</p>
+            
+                <p>Cette pression mise par cet arrêt, avant le Conseil européen, pour en réalité limiter le champ du plan de relance, est insupportable. Elle ne peut être acceptée par personne – pas même d’ailleurs par Angela Merkel qui doit sortir des ambiguïtés actuelles.</p>
+            
+                <p>Et c’est pourquoi nous appelons le Conseil européen à balayer d’un revers de main cet arrêt et à faire prévaloir la solidarité et la cohésion, comme le demande la résolution commune que je soutiendrai.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197623</div>
+            
+            <header><b>Thierry MARIANI</b> | Rassemblement national</header>
+            
+                <p> – Monsieur le Président, ce mois d’avril 2020 fut le mois des larmes: l’Europe était unie par la mort. En Lombardie comme en Belgique, en Espagne comme en Alsace, les Européens parlaient d’une seule voix: en effet, ils pleuraient tous. Et pendant ce temps, ils attendaient la voix de l’Europe.</p>
+            
+                <p>Le 24 avril, le Conseil concluait par la bouche de Charles Michel, je cite: «nous nous sommes félicités de la feuille de route commune pour la relance». Une déclaration qui peut paraître indécente alors que, partout, le chômage, la misère, l’extrême pauvreté sont à l’ordre du jour, sans plan de relance sérieux. 500 milliards d’euros pour la relance, c’est quatre fois moins qu’aux États-Unis mais c’est surtout, à cette heure-ci, aucune précision, comme l’ont développé les orateurs avant moi: on attend toujours le programme clair de la Commission.</p>
+            
+                <p>Cette feuille de route, qu’est-ce que c’est? Des fonds spéciaux avec leur administration et leur bureaucratie. Nous ne doutons pas que certains auront leur utilité mais la méthode péchera toujours. Elle péchera car elle maquille des fonds redirigés en fonds nouveaux. Elle péchera, car elle n’aura jamais la flexibilité nécessaire. Elle péchera car elle aura été pensée par les mêmes esprits qui ont enfermé l’Union européenne dans cette technocratie.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197534</div>
+            
+            <header><b>François-Xavier BELLAMY</b> | Les Républicains</header>
+            
+                <p> – Monsieur le Président, toute crise agit toujours comme un révélateur, et celle-ci n’aura pas échappé à la règle. L’Union européenne ressort de cette expérience avec l’évidence de ses fragilités.</p>
+            
+                <p>Aujourd’hui, il nous faut réagir. Et pour cela, mettre en œuvre les moyens d’une authentique solidarité. Mais cela suppose, je le crois, dans ce débat sur le budget et sur le plan de relance, de commencer par s’interroger sur les fins avant de considérer les moyens.</p>
+            
+                <p>Nous agitons beaucoup de grands mots et beaucoup de grands chiffres. Mais à quoi peut servir l’argent déployé par l’Union européenne? Où est-il vraiment attendu? Comment pouvons-nous être utiles? C’est la question que, je crois, nous devons commencer par nous poser dans le débat qui nous attend.</p>
+            
+                <p>Il faut aussi que nous puissions réagir vite et, de ce point de vue-là, je m’étonne que nous consacrions tant de temps à parler du MFF alors que nous sommes attendus sur un plan de relance urgent.</p>
+            
+                <p>Quel chef d’entreprise, aujourd’hui, prétend pouvoir construire un plan de stratégie sur sept ans, alors que nous sommes encore dans la confusion totale que crée cette crise sur l’économie européenne?</p>
+            
+                <p>Enfin, chers collègues, nous serons attendus demain pour construire une Union européenne qui repense son rapport à la mondialisation. Et c’est cela l’enjeu de long terme sur lequel nous devons travailler: construire une Europe dans laquelle nous pourrons de nouveau produire ce dont nous avons besoin, construire une Europe dans laquelle il sera possible pour les pays européens de donner des masques à leurs infirmières et des remèdes à leurs malades. </p>
+            
+                <p>Voilà, chers collègues, ce sur quoi nous sommes attendus. C’est un défi majeur pour l’avenir de l’Europe tout entière et j’espère que nous serons à la hauteur de ce défi. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197698</div>
+            
+            <header><b>Pierre LARROUTUROU</b> | Nouvelle Donne</header>
+            
+                <p> – Monsieur le Président, Madame von der Leyen, en trois jours seulement, près d’un million de citoyens ont déjà signé la lettre d’Avaaz qui dit qu’ils comptent sur vous pour réussir ce budget «climat et emploi».</p>
+            
+                <p>Comme rapporteur du budget, je pense que l’une des solutions pour avoir un budget très ambitieux, c’est de créer une taxe sur les transactions financières. Quand j’ai acheté ce téléphone, j’ai payé une TVA à 19 %. Dix-neuf. Pour les produits alimentaires fondamentaux, la TVA est à seulement 5,5 %. Mais même les familles les plus pauvres doivent payer 5,5 % pour contribuer à l’effort collectif. Par contre, ceux qui achètent des actions sur les marchés financiers payent 0,0 %. Zéro virgule zéro. Parce qu’ils sont plus pauvres que les plus pauvres? Non, évidemment.</p>
+            
+                <p>Il est urgent de créer une taxe sur les transactions financières. Déjà en 2011, la Commission Barroso avait proposé ce projet, qui peut aujourd’hui créer 57 milliards d’euros. Le texte est rédigé, il n’y a plus qu’à avancer politiquement. Malgré le Brexit, malgré la crise, une taxe sur les transactions financières peut rapporter 57 milliards d’euros. Alors, qu’attendons-nous? Ce serait dix fois plus que la taxe numérique. Madame von der Leyen, il est temps de mettre la finance au service de la vie. Il est temps que les marchés financiers contribuent à un pacte «climat et emploi».</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197687</div>
+            
+            <header><b>Philippe OLIVIER</b> | Rassemblement national</header>
+            
+                <p> – Monsieur le Président, je voudrais évoquer un sujet tabou dans cette grande maison qu’est le Parlement: la décision de la Cour constitutionnelle allemande du 5 mai d’exiger de la BCE de justifier ses décisions au regard des traités européens.</p>
+            
+                <p>Je ne veux pas entrer ici dans un débat financier, ni même juridique. Je voudrais m’en tenir aux principes que soulève cette décision, que dis-je, cet ultimatum.</p>
+            
+                <p>Avec cette tradition spécifique qui consacre en Allemagne le pouvoir des juges, les magistrats de Karlsruhe ont agi comme des lanceurs d’alerte souverainistes. Ils sont venus réaffirmer que l’UE n’est pas un État fédéral et que les États restent maîtres des traités et de leurs intérêts nationaux.</p>
+            
+                <p>Comme si de rien n’était, la Commission a mécaniquement réaffirmé la prééminence du droit européen sur le droit national. «Comme si de rien n’était»: c’est comme cela que pourrait se résumer le comportement de l’UE, qui s’affaire à l’adhésion du Kosovo ou de la Macédoine lorsque la crise sanitaire tourne au drame en Italie. Vous êtes comme le chauffeur à contresens sur l’autoroute, qui continue à toute allure en ignorant les appels de phares qui viennent d’en face.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197508</div>
+            
+            <header><b>Stéphane SÉJOURNÉ</b> | Renaissance</header>
+            
+                <p> – Monsieur le Président, chers collègues, je reste un peu sur ma faim par rapport à la présentation de la présidente de la Commission et aux propositions qu’elle nous a formulées.</p>
+            
+                <p>Le mois dernier, chers collègues, le Parlement européen adoptait largement une résolution pour répondre à la COVID. Nous avions pris nos responsabilités. Nous avons fait de la solidarité une condition, d’ailleurs essentielle, pour que l’Union européenne soit à la hauteur des enjeux et puisse venir en aide à tous les Européens.</p>
+            
+                <p>Cette solidarité est une exigence. Dans ce même hémicycle, je m’étais d’ailleurs félicité de la qualité de cette résolution, parce que le Parlement européen avait écouté le peuple européen, parce que nous offrions des solutions clés en main au Conseil. Je n’ai pas retrouvé dans le discours de la présidente les dispositions que nous avions déjà proposées lors de la dernière résolution. C’est sous le principe de la solidarité que nous avions placé cette résolution, et que nous plaçons d’ailleurs celle-là aussi. Le Conseil s’est accordé là-dessus. Mais je voulais rappeler une phrase de Robert Schuman, que tout le monde cite ici: l’Europe est une affaire de solidarité, certes, mais c’est une affaire de solidarité de fait.</p>
+            
+                <p>La solidarité de fait, chers amis, c’est soutenir aussi les États membres les plus touchés par le coronavirus, quoi qu’en disent d’ailleurs les juges nationaux. Ce sont des prêts, ce sont des transferts. Je n’ai pas totalement compris aujourd’hui le discours de la présidente.</p>
+            
+                <p>La solidarité de fait, c’est un plan de relance et de transition qui soit à la hauteur des attentes, avec des </p>
+            
+                <p>La solidarité de fait, ce sont des nouvelles ressources propres. Je n’ai pas non plus beaucoup d’explications sur ce qui va être fait autour de ces nouvelles ressources propres.</p>
+            
+                <p>Je voudrais dire au Conseil et à la Commission: n’ayez pas la main qui tremble. Il ne faut pas avoir la main qui tremble maintenant. Nous sommes observés par nos collègues nationaux, nos parlementaires nationaux, mais aussi notre population nationale. Ce Parlement a conscience que les choses ne sont pas faciles, qu’il va falloir travailler à des solutions. Mais dans cet hémicycle, nous savons aussi que l’Histoire est un juge implacable et que souvent, elle retient les faiblesses et la trahison, et j’espère... </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197503</div>
+            
+            <header><b>David CORMAND</b> | Les Écologistes</header>
+            
+                <p> – Chers amis, vous le savez, nous le savons, la question budgétaire n’est jamais une question purement comptable. Elle est avant tout politique. Mais en temps de crise, la question budgétaire devient davantage encore la question qui détermine toutes les autres. Face à la pandémie, l’impuissance politique de l’Europe a un nom. C’est l’absence de ressources propres qui nous lie les mains. N’étant pas maîtres de nos recettes, nous ne sommes pas maîtres de nos actions.</p>
+            
+                <p>Aucun parlementaire de notre assemblée ne devrait consentir à une telle dépossession démocratique. L’Europe ne peut pas demeurer un nain budgétaire et fiscal. Nous devons impérativement nous doter de ressources propres, c’est-à-dire en réalité nous armer politiquement pour faire face aux défis de la période que sont l’urgence climatique, la crise sociale et la nécessaire transformation de notre économie. Nous avons besoin de ressources propres pour financer un plan de reconstruction, comme pour rétablir la justice fiscale, en taxant notamment les transactions financières et les émissions de carbone.</p>
+            
+                <p>L’Union européenne a-t-elle vocation à exister sur la scène mondiale en se dotant des moyens de financer une transition juste et solidaire? Sans ressources propres, la réponse restera non.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

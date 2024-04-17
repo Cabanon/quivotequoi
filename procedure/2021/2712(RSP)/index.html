@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Résolution sur la situation en Afghanistan</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Résolution sur la situation en Afghanistan</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(610/683 * 100%)">610</div>
-  
-  
-    <div class="-" style="width: calc(34/683 * 100%)">34</div>
+    <div class="for" style="width: calc(610/683 * 100%)">610</div>
   
   
-    <div class="0" style="width: calc(39/683 * 100%)">39</div>
+    <div class="against" style="width: calc(34/683 * 100%)">34</div>
+  
+  
+    <div class="abstention" style="width: calc(39/683 * 100%)">39</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,28 +88,24 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(72/77 * 100%)">72</div>
+    <div class="for" style="width: calc(72/77 * 100%)">72</div>
   
   
   
-    <div class="0" style="width: calc(5/77 * 100%)">5</div>
+    <div class="abstention" style="width: calc(5/77 * 100%)">5</div>
   
 </div>
  
 </section>
-            <a href="/voting/133935">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/133935">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Situation politique des pays-tiers, conflits régionaux et locaux</li>
-        
     
         
         
@@ -117,369 +117,518 @@
             <li>Politique étrangère et de sécurité commune (PESC)</li>
         
     
+        
+        
+            <li>Situation politique des pays-tiers, conflits régionaux et locaux</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2712(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/RC-9-2021-0324_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-06-07-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>A bis. considérant que vingt années se sont écoulées depuis les bombardements et l’invasion illégale de l’Afghanistan par les États-Unis et le Royaume-Uni et l’occupation de l’Afghanistan par l’OTAN, qui ont fait d’innombrables victimes, entraîné des déplacements massifs, paralysé l’économie, favorisé la prolifération du trafic de drogue, renforcé le pouvoir des chefs de guerre et des milices armées et entraîné une militarisation générale de la société; qu’il en résulte une situation où aucun pouvoir souverain ne gouverne réellement le pays et où les factions politiques et armées entretiennent chacune des liens avec des puissances étrangères, dont elles dépendent souvent pour leur financement et leurs conseils;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">61</div>
+  <div class="against">607</div>
+  <div class="abstention">19</div>
+</span>
+
+  
+    
+    <a href="/voting/133767">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(61/687 * 100%)">61</div>
-  
-  
-    <div class="-" style="width: calc(607/687 * 100%)">607</div>
-  
-  
-    <div class="0" style="width: calc(19/687 * 100%)">19</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/133767">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>B bis. considérant que la participation des femmes au gouvernement reste limitée; que les rares femmes présentes au gouvernement ont été victimes d’intimidation, de harcèlement et de discrimination; que les femmes n’ont pas accès aux mêmes ressources bureautiques que leurs collègues masculins et qu’elles se voient souvent refuser la possibilité de faire des heures supplémentaires et d’être payées en conséquence; que les femmes n’ont pas non plus la possibilité d’accéder aux postes de décision et que les attaques dont elles sont victimes lorsqu’elles travaillent au service du gouvernement font rarement l’objet d’une enquête, les auteurs de ces attaques restant impunis; qu’avant l’intervention des États-Unis et la montée en puissance des moudjahidines dans les années 1970 et 1980, les femmes afghanes, à l’époque où le Parti démocratique du peuple d’Afghanistan était au pouvoir, jouissaient de libertés comparables à celles des femmes de l’Union européenne; que, depuis lors, les droits des femmes ont considérablement régressé;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">56</div>
+  <div class="against">550</div>
+  <div class="abstention">79</div>
+</span>
+
+  
+    
+    <a href="/voting/133768">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(56/685 * 100%)">56</div>
-  
-  
-    <div class="-" style="width: calc(550/685 * 100%)">550</div>
-  
-  
-    <div class="0" style="width: calc(79/685 * 100%)">79</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/133768">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>C bis. considérant que l’«approche globale» de l’OTAN a échoué et que l’aide au développement a fini par être subordonnée à des objectifs politiques et militaires; que cette approche peut avoir pour effet d’impliquer certains acteurs de la société civile dans le conflit, car les rebelles les considèrent comme partie au conflit;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">62</div>
+  <div class="against">607</div>
+  <div class="abstention">18</div>
+</span>
+
+  
+    
+    <a href="/voting/133769">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(62/687 * 100%)">62</div>
-  
-  
-    <div class="-" style="width: calc(607/687 * 100%)">607</div>
-  
-  
-    <div class="0" style="width: calc(18/687 * 100%)">18</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/133769">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>D bis. considérant que, peu avant l’invasion de 2001, les dirigeants afghans avaient interdit la production d’opium et avaient presque réussi à mener à bien un programme d’éradication dans le cadre duquel ils offraient aux agriculteurs des subventions pour qu’ils cessent de produire de l’opium; que, juste après l’invasion, les niveaux de production ont augmenté de façon spectaculaire; que la majeure partie de cette production était sous le contrôle direct des chefs de guerre combattant aux côtés du gouvernement américain et soutenus par celui-ci; qu’en 2018, l’Afghanistan était à l’origine de 82 % de la production mondiale d’opium selon les données de l’ONU; que le trafic d’opiacés aggrave l’instabilité et la sédition et finance les groupes terroristes en Afghanistan;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">51</div>
+  <div class="against">607</div>
+  <div class="abstention">29</div>
+</span>
+
+  
+    
+    <a href="/voting/133770">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(51/687 * 100%)">51</div>
-  
-  
-    <div class="-" style="width: calc(607/687 * 100%)">607</div>
-  
-  
-    <div class="0" style="width: calc(29/687 * 100%)">29</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/133770">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>1. dénonce la longue histoire des interventions militaires illégales et ratées de l’OTAN qui ont entraîné tant de destructions, de déstabilisations, de déplacements et de morts en Asie occidentale et en Afrique du Nord en particulier, renforçant souvent au passage les forces extrémistes; appelle à la dissolution de l’OTAN, au démantèlement du complexe militaro-industriel et à la promotion de relations diplomatiques avec nos voisins basées sur le respect mutuel, les faits et le droit international;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">35</div>
+  <div class="against">636</div>
+  <div class="abstention">16</div>
+</span>
+
+  
+    
+    <a href="/voting/133764">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(35/687 * 100%)">35</div>
-  
-  
-    <div class="-" style="width: calc(636/687 * 100%)">636</div>
-  
-  
-    <div class="0" style="width: calc(16/687 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/133764">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>26 bis. déclare que la politique étrangère et la politique de défense ne sont pas des compétences légitimes de l’Union européenne; estime que ces compétences sont proportionnelles à l’exercice de la souveraineté, qui ne peut revenir qu’aux États membres individuellement; demande la modification des traités afin de supprimer la base juridique de la politique étrangère et de sécurité commune et de la politique de sécurité et de défense commune, de qualifier explicitement le projet de politique étrangère de l’Union européenne d’erreur historique et d’interdire explicitement à l’administration de l’Union européenne de s’arroger des fonctions de politique étrangère;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">72</div>
+  <div class="against">600</div>
+  <div class="abstention">15</div>
+</span>
+
+  
+    
+    <a href="/voting/133766">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(72/687 * 100%)">72</div>
-  
-  
-    <div class="-" style="width: calc(600/687 * 100%)">600</div>
-  
-  
-    <div class="0" style="width: calc(15/687 * 100%)">15</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/133766">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       9. 
   
 
   
-      <del>déplore </del>
+      <del>déplore</del>
   
 
   
-      <ins>relève </ins>
+      <ins>relève</ins>
   
 
   
-      qu’avant de signer la déclaration commune sur la coopération en matière de migration, la Commission n’ait pas soumis la déclaration au Parlement et que celui-ci n’ait donc pas eu la possibilité d’exprimer un avis à son sujet; demande à la Commission de réaliser une évaluation de l’impact que la déclaration commune sur la coopération en matière de migration a sur les droits de l’homme;
+       qu’avant de signer la déclaration commune sur la coopération en matière de migration, la Commission n’ait pas soumis la déclaration au Parlement et que celui-ci n’ait donc pas eu la possibilité d’exprimer un avis à son sujet; demande à la Commission de réaliser une évaluation de l’impact que la déclaration commune sur la coopération en matière de migration a sur les droits de l’homme;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(273/687 * 100%)">273</div>
-  
-  
-    <div class="-" style="width: calc(403/687 * 100%)">403</div>
-  
-  
-    <div class="0" style="width: calc(11/687 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/133765">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2712(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/RC-9-2021-0324_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">273</div>
+  <div class="against">403</div>
+  <div class="abstention">11</div>
+</span>
+
   
+    
+    <a href="/voting/133765">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-06-07-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

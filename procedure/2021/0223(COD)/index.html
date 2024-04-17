@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Déploiement d’une infrastructure pour carburants alternatifs</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,82 +22,39 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Déploiement d’une infrastructure pour carburants alternatifs</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
-    <article>
-    <header>👍 Adoption du texte | 
-
-✅️ Adopté
-
-</header>
-    
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
-        <section>
-
-<div class="votes ">
-  
-    <div class="+" style="width: calc(485/630 * 100%)">485</div>
-  
-  
-    <div class="-" style="width: calc(65/630 * 100%)">65</div>
-  
-  
-    <div class="0" style="width: calc(80/630 * 100%)">80</div>
-  
-</div>
-</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
-        <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
-        
-        
-            <section>
-
-
-
-<div class="votes">
-  
-    <div class="+" style="width: calc(55/73 * 100%)">55</div>
-  
-  
-  
-    <div class="0" style="width: calc(18/73 * 100%)">18</div>
-  
-</div>
- 
-</section>
-            <a href="/voting/149082">🗳 Voir le détail du vote</a>
-        
-    
-    </article>
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -104,22 +62,7 @@
     
         
         
-            <li>Politiques communautaires</li>
-        
-    
-        
-        
-            <li>Politique de l&#39;énergie</li>
-        
-    
-        
-        
             <li>Politique des transports en général</li>
-        
-    
-        
-        
-            <li>Industrie pétrolière, carburants</li>
         
     
         
@@ -132,89 +75,166 @@
             <li>Transport routier de personnes et de marchandises</li>
         
     
+        
+        
+            <li>Industrie pétrolière, carburants</li>
+        
+    
+        
+        
+            <li>Politiques communautaires</li>
+        
+    
+        
+        
+            <li>Politique de l&#39;énergie</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/0223(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0234_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-07-11-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-10-19-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      (4) Les initiatives ReFuelEU Aviation48 et FuelEU Maritime49 devraient stimuler la production et l’utilisation de carburants alternatifs durables dans les transports aériens et maritimes. Si les exigences en matière d’utilisation de carburants durables d’aviation peuvent s’appuyer dans une large mesure sur l’infrastructure de ravitaillement existante, des investissements sont nécessaires pour la fourniture d’électricité aux aéronefs en stationnement. 
-  
+<p>
 
   
-      <ins>En outre, les États membres et la Commission devraient évaluer l’état actuel et l’évolution future du marché de l’hydrogène pour l’aviation et prévoir une étude de faisabilité sur le déploiement de l’infrastructure pertinente pour alimenter les aéronefs, y compris, le cas échéant, un plan de déploiement de l’infrastructure pour les carburants alternatifs dans les aéroports, en particulier pour la recharge des avions en hydrogène et en électricité. </ins>
+      (4) Les initiatives ReFuelEU Aviation48 et FuelEU Maritime49 devraient stimuler la production et l’utilisation de carburants alternatifs durables dans les transports aériens et maritimes. Si les exigences en matière d’utilisation de carburants durables d’aviation peuvent s’appuyer dans une large mesure sur l’infrastructure de ravitaillement existante, des investissements sont nécessaires pour la fourniture d’électricité aux aéronefs en stationnement.
   
 
   
-      L’initiative FuelEU Maritime fixe des exigences, notamment en ce qui concerne l’utilisation de l’alimentation électrique à quai, qui ne peuvent être satisfaites que si un niveau adéquat d’alimentation électrique à quai est 
+      <ins> En outre, les États membres et la Commission devraient évaluer l’état actuel et l’évolution future du marché de l’hydrogène pour l’aviation et prévoir une étude de faisabilité sur le déploiement de l’infrastructure pertinente pour alimenter les aéronefs, y compris, le cas échéant, un plan de déploiement de l’infrastructure pour les carburants alternatifs dans les aéroports, en particulier pour la recharge des avions en hydrogène et en électricité.</ins>
   
 
   
-      <ins> </ins>
-  
-
-  
-      déployé dans les ports du RTE-T. Toutefois, ces initiatives ne comportent pas de dispositions relatives à l’infrastructure requise pour les carburants, qui est une condition préalable à la réalisation des objectifs poursuivis.  
-  
-
-  
-      <del>            </del>
-  
-
-  
-      __________________
-  
- 
-</section>
-
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
-
-✅️ Adopté
-
-</header>
-    
-        
-
-<section>
-
-  
-      (7) 
-  
-
-  
-      <del>Le GNL va probablement conserver sa place </del>
-  
-
-  
-      <ins>L’utilisation durable du gaz naturel liquéfié (GNL) n’est pas compatible avec l’objectif de neutralité climatique de l’Union. Par conséquent, le GNL utilisé  dans le transport maritime devrait être supprimé au plus vite et remplacé par des alternatives plus durables. Néanmoins, à court terme, le GNL va probablement jouer un rôle de transition </ins>
-  
-
-  
-      dans le transport maritime, où il n’existe actuellement aucune technologie de propulsion à émissions nulles qui soit 
+       L’initiative FuelEU Maritime fixe des exigences, notamment en ce qui concerne l’utilisation de l’alimentation électrique à quai, qui ne peuvent être satisfaites que si un niveau adéquat d’alimentation électrique à quai est
   
 
   
@@ -222,39 +242,74 @@
   
 
   
-      économiquement viable. Selon la communication sur la stratégie de mobilité durable et intelligente, les navires de mer à émissions nulles seront prêts à être commercialisés d’ici 
+      <ins>  </ins>
   
 
   
-      <del>2030. La reconversion de la flotte devrait se faire progressivement en raison de la longue durée de vie des navires.</del>
+      déployé dans les ports du RTE-T. Toutefois, ces initiatives ne comportent pas de dispositions relatives à l’infrastructure requise pour les carburants, qui est une condition préalable à la réalisation des objectifs poursuivis
   
 
   
-      <ins>2030, et des projets de ce type sont déjà en cours. À cet égard, il convient d’encourager les nouveaux développements, qui devraient faire l’objet d’un suivi et de rapports précis. La reconversion de la flotte devrait se faire progressivement en raison de la longue durée de vie des navires. Compte tenu du rôle de transition joué par le GNL, la disponibilité des infrastructures de soutage du GNL dans les ports devrait être déterminée par la demande, notamment en ce qui concerne les nouveaux investissements publics.</ins>
+      <del>.              </del>
   
 
   
-       Contrairement au transport maritime, dans le cas de la navigation intérieure, où les bateaux sont généralement plus petits et les distances plus courtes, les technologies de propulsion à émissions nulles, comme l’hydrogène et l’électricité, 
+      <ins>.  </ins>
   
 
   
-      <ins>arrivent à maturité et </ins>
+      __________________
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
+
+✅️ Adopté
+
+</header>
+            
+                <div class="hidden"></div>
+                
+
+<p>
+
+  
+      (7) 
   
 
   
-      devraient pénétrer plus rapidement sur les marché
+      <del>Le GNL va probablement conserver sa place</del>
   
 
   
-      <del>s.</del>
+      <ins>L’utilisation durable du gaz naturel liquéfié (GNL) n’est pas compatible avec l’objectif de neutralité climatique de l’Union. Par conséquent, le GNL utilisé  dans le transport maritime devrait être supprimé au plus vite et remplacé par des alternatives plus durables. Néanmoins, à court terme, le GNL va probablement jouer un rôle de transition</ins>
   
 
   
-      <ins>s; elles pourraient jouer un rôle important pour le transport maritime en augmentant l’ampleur des solutions de propulsion à émissions nulles.</ins>
+       dans le transport maritime, où il n’existe actuellement aucune technologie de propulsion à émissions nulles qui soit
   
 
   
-       Le GNL ne devrait plus jouer un rôle important dans ce secteur. La décarbonation par mélange ou par remplacement des carburants destinés aux transports tels que le GNL doit aller croissant, en utilisant, par exemple, du biométhane liquéfié (bioGNL) ou des carburants gazeux de synthèse renouvelables et bas carbone. Ces carburants décarbonés peuvent être utilisés dans les mêmes infrastructures que les carburants gazeux fossiles, permettant ainsi 
+      <del>  </del>
   
 
   
@@ -262,455 +317,336 @@
   
 
   
+      économiquement viable. Selon la communication sur la stratégie de mobilité durable et intelligente, les navires de mer à émissions nulles seront prêts à être commercialisés d’ici 2030
+  
+
+  
+      <del>. La reconversion de la flotte devrait se faire progressivement en raison de la longue durée de vie des navires</del>
+  
+
+  
+      <ins>, et des projets de ce type sont déjà en cours. À cet égard, il convient d’encourager les nouveaux développements, qui devraient faire l’objet d’un suivi et de rapports précis. La reconversion de la flotte devrait se faire progressivement en raison de la longue durée de vie des navires. Compte tenu du rôle de transition joué par le GNL, la disponibilité des infrastructures de soutage du GNL dans les ports devrait être déterminée par la demande, notamment en ce qui concerne les nouveaux investissements publics</ins>
+  
+
+  
+      . Contrairement au transport maritime, dans le cas de la navigation intérieure, où les bateaux sont généralement plus petits et les distances plus courtes, les technologies de propulsion à émissions nulles, comme l’hydrogène et l’électricité,
+  
+
+  
+      <ins> arrivent à maturité et</ins>
+  
+
+  
+       devraient pénétrer plus rapidement sur les marchés
+  
+
+  
+      <ins>; elles pourraient jouer un rôle important pour le transport maritime en augmentant l’ampleur des solutions de propulsion à émissions nulles</ins>
+  
+
+  
+      . Le GNL ne devrait plus jouer un rôle important dans ce secteur. La décarbonation par mélange ou par remplacement des carburants destinés aux transports tels que le GNL doit aller croissant, en utilisant, par exemple, du biométhane liquéfié (bioGNL) ou des carburants gazeux de synthèse renouvelables et bas carbone. Ces carburants décarbonés peuvent être utilisés dans les mêmes infrastructures que les carburants gazeux fossiles, permettant ainsi
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>  </ins>
+  
+
+  
       une transition progressive vers les carburants décarbonés.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°12 | 
+        
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>(11 ter) La Commission devrait revoir, si nécessaire, les objectifs fixés dans le présent règlement pour les infrastructures de recharge électrique destinées respectivement aux véhicules utilitaires légers et aux véhicules utilitaires lourds afin de s’assurer de leur conformité avec les exigences définies dans les règlements de l’Union relatifs aux normes de performance en matière d’émissions de CO applicables respectivement aux
 2 véhicules utilitaires légers et aux véhicules utilitaires lourds.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°45 | Partie 1 | 
+        
+        
+            <article id="45">
+            <header>📝 Amendement n°45 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°45 | Partie 2 | 
+        
+            <article id="45">
+            <header>📝 Amendement n°45 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(356/642 * 100%)">356</div>
-  
-  
-    <div class="-" style="width: calc(281/642 * 100%)">281</div>
-  
-  
-    <div class="0" style="width: calc(5/642 * 100%)">5</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°50 | 
+        
+            <article id="50">
+            <header>📝 Amendement n°50 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>(40 bis) Tandis que seuls 56 % environ du réseau ferroviaire européen existant sont électrifiés, les trains fonctionnant à l’électricité représentent plus de 80 % du total des trains-kilomètres parcourus.  nombre de trains diesel en service aujourd’hui: étant donné qu’ils sont dépendants des combustibles fossiles, ils génèrent des émissions de gaz à effet de serre et de la pollution atmosphérique. Il est donc nécessaire et urgent de poursuivre le déploiement de l’infrastructure pour carburants alternatifs dans le secteur ferroviaire afin d’assurer l’abandon des trains fonctionnant aux combustibles fossiles, et garantir ainsi que tous les secteurs des transports jouent leur rôle dans la transition vers une économie neutre sur le plan climatique. Par conséquent, il y a lieu que le présent règlement fixe des objectifs concrets. Différentes technologies sont mises à la disposition du secteur ferroviaire afin d’abandonner les trains diesel, notamment l’électrification directe, les trains à batterie et les applications de l’hydrogène, lorsque l’électrification directe d’un segment n’est pas possible pour des raisons de rentabilité du service. Le développement de ces technologies implique le déploiement d’une infrastructure de recharge et de ravitaillement adaptée au sein des États membres. Avant de procéder à son déploiement, les États membres devraient étudier soigneusement quels sont les meilleurs emplacements pour cette infrastructure et, en particulier, envisager un déploiement dans les pôles multimodaux et les nœuds urbains. Il convient de tenir pleinement compte du principe de primauté de l’efficacité énergétique dans les décisions de planification et d’investissement.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">353</div>
+  <div class="against">261</div>
+  <div class="abstention">19</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/149341">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(353/633 * 100%)">353</div>
-  
-  
-    <div class="-" style="width: calc(261/633 * 100%)">261</div>
-  
-  
-    <div class="0" style="width: calc(19/633 * 100%)">19</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149341">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°59 | Partie 1 | 
+        
+            <article id="59">
+            <header>📝 Amendement n°59 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(353/639 * 100%)">353</div>
-  
-  
-    <div class="-" style="width: calc(283/639 * 100%)">283</div>
-  
-  
-    <div class="0" style="width: calc(3/639 * 100%)">3</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149343">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°59 | Partie 2 | 
+        
+            <article id="59">
+            <header>📝 Amendement n°59 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(355/630 * 100%)">355</div>
-  
-  
-    <div class="-" style="width: calc(274/630 * 100%)">274</div>
-  
-  
-    <div class="0" style="width: calc(1/630 * 100%)">1</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149344">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°59 | Partie 3 | 
+        
+            <article id="59">
+            <header>📝 Amendement n°59 | Partie 3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(322/634 * 100%)">322</div>
-  
-  
-    <div class="-" style="width: calc(306/634 * 100%)">306</div>
-  
-  
-    <div class="0" style="width: calc(6/634 * 100%)">6</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149345">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°59 | Partie 4 | 
+        
+            <article id="59">
+            <header>📝 Amendement n°59 | Partie 4 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(326/639 * 100%)">326</div>
-  
-  
-    <div class="-" style="width: calc(311/639 * 100%)">311</div>
-  
-  
-    <div class="0" style="width: calc(2/639 * 100%)">2</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149346">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°59 | Partie 5 | 
+        
+            <article id="59">
+            <header>📝 Amendement n°59 | Partie 5 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(347/629 * 100%)">347</div>
-  
-  
-    <div class="-" style="width: calc(280/629 * 100%)">280</div>
-  
-  
-    <div class="0" style="width: calc(2/629 * 100%)">2</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149347">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°60 | Partie 1 | 
+        
+            <article id="60">
+            <header>📝 Amendement n°60 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°60 | Partie 2 | 
+        
+            <article id="60">
+            <header>📝 Amendement n°60 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(359/640 * 100%)">359</div>
-  
-  
-    <div class="-" style="width: calc(242/640 * 100%)">242</div>
-  
-  
-    <div class="0" style="width: calc(39/640 * 100%)">39</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°73 | 
+        
+            <article id="73">
+            <header>📝 Amendement n°73 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>37 bis) «système d’air préconditionné», un système fixe ou mobile installé dans un aéroport qui fournit une alimentation externe en air conditionné pour refroidir, ventiler ou chauffer les cabines des aéronefs en stationnement;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°80 | 
+        
+        
+            <article id="80">
+            <header>📝 Amendement n°80 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      57) «navire à quai»
-  
+<p>
 
   
-      <del>,</del>
+      57) «navire à quai
   
 
   
-      <ins>:</ins>
+      <del>», </del>
   
 
   
-       un navire 
+      <ins>»: </ins>
+  
+
+  
+      un navire 
   
 
   
@@ -721,563 +657,544 @@
       <ins>qui est amarré en sécurité à quai dans un port membre lors d’opérations de chargement et de déchargement, d’opérations d’embarquement et de débarquement de passagers ou d’une simple escale, y compris lorsqu’il n’est pas engagé dans des opérations liées à la cargaison ou aux passagers;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°98 | 
+        
+        
+            <article id="98">
+            <header>📝 Amendement n°98 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis.Sans préjudice du paragraphe 1, deuxième alinéa, point (a), les États membres veillent au déploiement d’objectifs de puissance minimale des infrastructures de recharge au niveau national suffisante pour:  - 3 % du parc total de véhicules utilitaires légers au 31 décembre 2027;  - 5 % du parc total de véhicules utilitaires légers au 31 décembre 2030;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">485</div>
+  <div class="against">124</div>
+  <div class="abstention">13</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/149354">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(485/622 * 100%)">485</div>
-  
-  
-    <div class="-" style="width: calc(124/622 * 100%)">124</div>
-  
-  
-    <div class="0" style="width: calc(13/622 * 100%)">13</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149354">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°100 | 
+        
+            <article id="100">
+            <header>📝 Amendement n°100 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       i) au plus tard le 31 décembre 2025, chaque parc de recharge fournit une puissance de sortie d’au moins 
   
 
   
-      <del>300 </del>
+      <del>300</del>
   
 
   
-      <ins>600 </ins>
+      <ins>600</ins>
   
 
   
-      kW et comprend au moins une station de recharge d’une puissance de sortie individuelle d’au moins 
+       kW et comprend au moins une station de recharge d’une puissance de sortie individuelle d’au moins 
   
 
   
-      <del>150 </del>
+      <del>150</del>
   
 
   
-      <ins>300 </ins>
+      <ins>300</ins>
   
 
   
-      kW;
+       kW;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">495</div>
+  <div class="against">135</div>
+  <div class="abstention">9</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/149356">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(495/639 * 100%)">495</div>
-  
-  
-    <div class="-" style="width: calc(135/639 * 100%)">135</div>
-  
-  
-    <div class="0" style="width: calc(9/639 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149356">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°101 | 
+        
+            <article id="101">
+            <header>📝 Amendement n°101 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       ii) au plus tard le 31 décembre 2030, chaque parc de recharge fournit une puissance de sortie d’au moins 
   
 
   
-      <del>600 </del>
+      <del>600</del>
   
 
   
-      <ins>900 </ins>
+      <ins>900</ins>
   
 
   
-      kW et comprend au moins deux stations de recharge d’une puissance de sortie individuelle d’au moins 
+       kW et comprend au moins deux stations de recharge d’une puissance de sortie individuelle d’au moins 
   
 
   
-      <del>150 </del>
+      <del>150</del>
   
 
   
-      <ins>350 </ins>
+      <ins>350</ins>
   
 
   
-      kW;
+       kW;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">488</div>
+  <div class="against">134</div>
+  <div class="abstention">12</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/149357">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(488/634 * 100%)">488</div>
-  
-  
-    <div class="-" style="width: calc(134/634 * 100%)">134</div>
-  
-  
-    <div class="0" style="width: calc(12/634 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149357">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°104 | Partie 1 | 
+        
+            <article id="104">
+            <header>📝 Amendement n°104 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°104 | Partie 2 | 
+        
+            <article id="104">
+            <header>📝 Amendement n°104 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°110 | 
+        
+            <article id="110">
+            <header>📝 Amendement n°110 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       i) au plus tard le 31 décembre 2025, chaque parc de recharge fournit une comprend au moins 
   
 
   
-      <del>une station </del>
+      <del>une station</del>
   
 
   
-      <ins>deux stations </ins>
+      <ins>deux stations</ins>
   
 
   
-      de recharge d’une puissance de sortie individuelle d’au moins 
+       de recharge d’une puissance de sortie individuelle d’au moins 
   
 
   
-      <del>350 </del>
+      <del>350</del>
   
 
   
-      <ins>800 </ins>
+      <ins>800</ins>
   
 
   
-      kW;
+       kW;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">484</div>
+  <div class="against">146</div>
+  <div class="abstention">11</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/149361">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(484/641 * 100%)">484</div>
-  
-  
-    <div class="-" style="width: calc(146/641 * 100%)">146</div>
-  
-  
-    <div class="0" style="width: calc(11/641 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149361">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°111 | 
+        
+            <article id="111">
+            <header>📝 Amendement n°111 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       ii) au plus tard le 31 décembre 2030, chaque parc de recharge fournit une comprend au moins 
   
 
   
-      <del>deux </del>
+      <del>deux</del>
   
 
   
-      <ins>quatre </ins>
+      <ins>quatre</ins>
   
 
   
-      stations de recharge d’une puissance de sortie individuelle d’au moins 
+       stations de recharge d’une puissance de sortie individuelle d’au moins 
   
 
   
-      <del>350kW;</del>
+      <del>350kW</del>
   
 
   
-      <ins>800kW;</ins>
+      <ins>800kW</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">473</div>
+  <div class="against">144</div>
+  <div class="abstention">10</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/149362">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(473/627 * 100%)">473</div>
-  
-  
-    <div class="-" style="width: calc(144/627 * 100%)">144</div>
-  
-  
-    <div class="0" style="width: calc(10/627 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149362">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°112 | 
+        
+            <article id="112">
+            <header>📝 Amendement n°112 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       i) au plus tard le 31 décembre 2030, chaque parc de recharge fournit une comprend au moins une station de recharge d’une puissance de sortie individuelle d’au moins 
   
 
   
-      <del>350kW;</del>
+      <del>350kW</del>
   
 
   
-      <ins>800 kW;</ins>
+      <ins>800 kW</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">478</div>
+  <div class="against">142</div>
+  <div class="abstention">12</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/149363">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(478/632 * 100%)">478</div>
-  
-  
-    <div class="-" style="width: calc(142/632 * 100%)">142</div>
-  
-  
-    <div class="0" style="width: calc(12/632 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149363">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°113 | 
+        
+            <article id="113">
+            <header>📝 Amendement n°113 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       ii) au plus tard le 1er décembre 2035, chaque parc de recharge fournit une comprend au moins deux stations de recharge d’une puissance de sortie individuelle d’au moins 
   
 
   
-      <del>350 </del>
+      <del>350</del>
   
 
   
-      <ins>800 </ins>
+      <ins>800</ins>
   
 
   
-      kW;
+       kW;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">474</div>
+  <div class="against">140</div>
+  <div class="abstention">12</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/149364">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(474/626 * 100%)">474</div>
-  
-  
-    <div class="-" style="width: calc(140/626 * 100%)">140</div>
-  
-  
-    <div class="0" style="width: calc(12/626 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149364">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°117 | 
+        
+            <article id="117">
+            <header>📝 Amendement n°117 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>c bis)au plus tard le 31 décembre 2030, chaque aire de stationnement sûre et sécurisée soit équipée d’au moins quatre stations de recharge réservées aux véhicules utilitaires lourds et fournissant une puissance de sortie d’au moins 100 kW, qui permettent d’effectuer des recharges intelligentes et bidirectionnelles;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">485</div>
+  <div class="against">136</div>
+  <div class="abstention">16</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/149366">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(485/637 * 100%)">485</div>
-  
-  
-    <div class="-" style="width: calc(136/637 * 100%)">136</div>
-  
-  
-    <div class="0" style="width: calc(16/637 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149366">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°118 | 
+        
+            <article id="118">
+            <header>📝 Amendement n°118 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       d) au plus tard le 31 décembre 2025, chaque nœud urbain soit équipé de points de recharge ouverts au public, réservés aux véhicules utilitaires lourds et fournissant une puissance de sortie cumulée d’au 
@@ -1292,692 +1209,674 @@
   
 
   
-      <del>150 </del>
+      <del>150</del>
   
 
   
-      <ins>350 </ins>
+      <ins>350</ins>
   
 
   
-      kW;
+       kW;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">484</div>
+  <div class="against">138</div>
+  <div class="abstention">11</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/149367">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(484/633 * 100%)">484</div>
-  
-  
-    <div class="-" style="width: calc(138/633 * 100%)">138</div>
-  
-  
-    <div class="0" style="width: calc(11/633 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149367">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°119 | 
+        
+            <article id="119">
+            <header>📝 Amendement n°119 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       e) au plus tard le 31 décembre 2030, chaque nœud urbain soit équipé de points de recharge ouverts au public, réservés aux véhicules utilitaires lourds et fournissant une puissance de sortie cumulée d’au de recharge d’une puissance de sortie individuelle d’au moins 
   
 
   
-      <del>150 </del>
+      <del>150</del>
   
 
   
-      <ins>350 </ins>
+      <ins>350</ins>
   
 
   
-      kW.
+       kW.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">484</div>
+  <div class="against">137</div>
+  <div class="abstention">12</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/149368">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(484/633 * 100%)">484</div>
-  
-  
-    <div class="-" style="width: calc(137/633 * 100%)">137</div>
-  
-  
-    <div class="0" style="width: calc(12/633 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149368">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°148 | Partie 1 | 
+        
+            <article id="148">
+            <header>📝 Amendement n°148 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°148 | Partie 2 | 
+        
+            <article id="148">
+            <header>📝 Amendement n°148 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°149 | 
+        
+            <article id="149">
+            <header>📝 Amendement n°149 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       Les États membres veillent à ce que, sur leur territoire, un nombre minimal de stations de ravitaillement en hydrogène ouvertes au public soient mises en place au plus tard le 31 décembre 
   
 
   
-      <del>2030.</del>
+      <del>2030</del>
   
 
   
-      <ins>2027.</ins>
+      <ins>2027</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">392</div>
+  <div class="against">233</div>
+  <div class="abstention">14</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/149372">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(392/639 * 100%)">392</div>
-  
-  
-    <div class="-" style="width: calc(233/639 * 100%)">233</div>
-  
-  
-    <div class="0" style="width: calc(14/639 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149372">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°150 | 
+        
+            <article id="150">
+            <header>📝 Amendement n°150 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       À cette fin, les États membres veillent à ce que, au plus tard le 31 décembre 
   
 
   
-      <del>2030,</del>
+      <del>2030</del>
   
 
   
-      <ins>2027,</ins>
+      <ins>2027</ins>
   
 
   
-       des stations de ravitaillement en hydrogène ouvertes au public, d’une capacité minimale de 2 t/jour et équipées d’un distributeur d’au moins 700 bars, soient déployées à un intervalle maximal de 
+      , des stations de ravitaillement en hydrogène ouvertes au public, d’une capacité minimale de 2 t/jour et équipées d’un distributeur d’au moins 700 bars, soient déployées à un intervalle maximal de 
   
 
   
-      <del>150 </del>
+      <del>150</del>
   
 
   
-      <ins>100 </ins>
+      <ins>100</ins>
   
 
   
-      km le long du réseau central du RTE-T et du réseau global du RTE-T. L’hydrogène liquide est mis à disposition dans des stations de ravitaillement ouvertes au public déployées à un intervalle maximal de 
+       km le long du réseau central du RTE-T et du réseau global du RTE-T. L’hydrogène liquide est mis à disposition dans des stations de ravitaillement ouvertes au public déployées à un intervalle maximal de 
   
 
   
-      <del>450 </del>
+      <del>450</del>
   
 
   
-      <ins>400 </ins>
+      <ins>400</ins>
   
 
   
-      km.
+       km.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">399</div>
+  <div class="against">230</div>
+  <div class="abstention">9</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/149401">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(399/638 * 100%)">399</div>
-  
-  
-    <div class="-" style="width: calc(230/638 * 100%)">230</div>
-  
-  
-    <div class="0" style="width: calc(9/638 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149401">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°151 | 
+        
+            <article id="151">
+            <header>📝 Amendement n°151 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       Les États membres veillent à ce que, au plus tard le 31 décembre 
   
 
   
-      <del>2030,</del>
+      <del>2030</del>
   
 
   
-      <ins>2027,</ins>
+      <ins>2027</ins>
   
 
   
-       au moins une station de ravitaillement en hydrogène ouverte au public soit déployée dans chaque nœud urbain. Une analyse du lieu idéal pour ces stations de ravitaillement est effectuée; elle prend notamment en considération le déploiement de ces stations dans des pôles multimodaux où d’autres modes de transport pourraient également être intégrés.
+      , au moins une station de ravitaillement en hydrogène ouverte au public soit déployée dans chaque nœud urbain. Une analyse du lieu idéal pour ces stations de ravitaillement est effectuée; elle prend notamment en considération le déploiement de ces stations dans des pôles multimodaux où d’autres modes de transport pourraient également être intégrés.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">390</div>
+  <div class="against">233</div>
+  <div class="abstention">14</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/149373">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(390/637 * 100%)">390</div>
-  
-  
-    <div class="-" style="width: calc(233/637 * 100%)">233</div>
-  
-  
-    <div class="0" style="width: calc(14/637 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149373">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°153 | 
+        
+            <article id="153">
+            <header>📝 Amendement n°153 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       2. Les États membres voisins 
   
 
   
-      <del>veillent </del>
+      <del>veillent</del>
   
 
   
-      <ins>prennent les mesures nécessaires pour veiller </ins>
+      <ins>prennent les mesures nécessaires pour veiller</ins>
   
 
   
-      à ce que l’intervalle maximal visé au paragraphe 1, deuxième alinéa, ne soit pas dépassé pour les tronçons transfrontaliers du réseau central du RTE-T et du réseau global du RTE-T.
+       à ce que l’intervalle maximal visé au paragraphe 1, deuxième alinéa, ne soit pas dépassé pour les tronçons transfrontaliers du réseau central du RTE-T et du réseau global du RTE-T.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°162 | Partie 1 | 
+        
+        
+            <article id="162">
+            <header>📝 Amendement n°162 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°162 | Partie 2 | 
+        
+            <article id="162">
+            <header>📝 Amendement n°162 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°162 | Partie 3 | 
+        
+            <article id="162">
+            <header>📝 Amendement n°162 | Partie 3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°164 | Partie 1 | 
+        
+            <article id="164">
+            <header>📝 Amendement n°164 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°164 | Partie 2 | 
+        
+            <article id="164">
+            <header>📝 Amendement n°164 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°165 | 
+        
+            <article id="165">
+            <header>📝 Amendement n°165 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>a bis)les escales estimées à moins de deux heures à quai mais lorsque le navire a été empêché de partir dans ce laps de temps en raison d’événements qui ne pouvaient pas être prévus lors de son entrée dans le port et qui étaient clairement en dehors du contrôle ou de la responsabilité de l’exploitant;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°166 | 
+        
+        
+            <article id="166">
+            <header>📝 Amendement n°166 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>c bis)plusieurs courtes escales, ne dépassant pas la limite de temps visée au point a), effectuées pour charger et décharger à différents quais dans le même port.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°167 | 
+        
+        
+            <article id="167">
+            <header>📝 Amendement n°167 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      3. Lorsque les ports maritimes du réseau central du RTE-T et du réseau global du RTE-T sont situés sur une île 
-  
+<p>
 
   
-      <ins>ou dans une région ultrapériphérique visée à l’article 349 du traité FUE, </ins>
+      3. Lorsque les ports maritimes du réseau central du RTE-T et du réseau global du RTE-T sont situés sur une île
   
 
   
-      qui n’est pas directement raccordée au réseau électrique, le paragraphe 1 ne s’applique pas tant qu’un tel raccordement n’a pas été achevé ou qu’il n’existe pas suffisamment de capacité produite localement à partir de sources d’énergie propres.
+      <ins> ou dans une région ultrapériphérique visée à l’article 349 du traité FUE,</ins>
+  
+
+  
+       qui n’est pas directement raccordée au réseau électrique, le paragraphe 1 ne s’applique pas tant qu’un tel raccordement n’a pas été achevé ou qu’il n’existe pas suffisamment de capacité produite localement à partir de sources d’énergie propres.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°168 | 
+        
+        
+            <article id="168">
+            <header>📝 Amendement n°168 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>3 bis.Sans préjudice du paragraphe 3, le paragraphe 1 ne s’applique pas au territoire de Ceuta et Melilla jusqu’à ce qu’une connexion électrique le raccordant directement au réseau électrique du continent, ou à celui d’un pays voisin, ait été établie ou qu’il existe une capacité suffisante de production locale à partir de sources d’énergie propres.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°170 | 
+        
+        
+            <article id="170">
+            <header>📝 Amendement n°170 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      Objectifs pour l’approvisionnement en 
-  
+<p>
 
   
-      <del>GNL </del>
+      Objectifs pour l’approvisionnement en GNL
   
 
   
-      <ins>GNL, en ammoniac et en hydrogène </ins>
+      <ins>, en ammoniac et en hydrogène</ins>
   
 
   
-      dans les ports maritimes
+       dans les ports maritimes
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">606</div>
+  <div class="against">13</div>
+  <div class="abstention">20</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/149406">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(606/639 * 100%)">606</div>
-  
-  
-    <div class="-" style="width: calc(13/639 * 100%)">13</div>
-  
-  
-    <div class="0" style="width: calc(20/639 * 100%)">20</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149406">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°171 | 
+        
+            <article id="171">
+            <header>📝 Amendement n°171 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      1. Les États membres veillent à ce qu’un nombre approprié de points de ravitaillement en 
-  
+<p>
 
   
-      <del>GNL </del>
+      1. Les États membres veillent à ce qu’un nombre approprié de points de ravitaillement en GNL
   
 
   
-      <ins>GNL, en ammoniac et en hydrogène </ins>
+      <ins>, en ammoniac et en hydrogène</ins>
   
 
   
-      soient mis en place dans les ports maritimes du réseau central du RTE-
+       soient mis en place dans les ports maritimes du réseau central du RTE
   
 
   
-      <ins> </ins>
+      <del>-</del>
+  
+
+  
+      <ins>- </ins>
   
 
   
@@ -1992,49 +1891,46 @@
       permettre la circulation des navires de mer sur l’ensemble du réseau central du RTE-T au plus tard le 1er janvier 2025. Les États membres coopèrent avec les États membres voisins lorsque cela est nécessaire pour assurer une couverture adéquate du réseau central du RTE-T.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">602</div>
+  <div class="against">20</div>
+  <div class="abstention">17</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/149407">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(602/639 * 100%)">602</div>
-  
-  
-    <div class="-" style="width: calc(20/639 * 100%)">20</div>
-  
-  
-    <div class="0" style="width: calc(17/639 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149407">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°172 | 
+        
+            <article id="172">
+            <header>📝 Amendement n°172 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       2. Les États membres désignent dans leurs cadres d’action nationaux les ports maritimes du réseau central du RTE-T qui devront donner accès aux points de ravitaillement 
@@ -2049,36 +1945,47 @@
   
 
   
-      <del>des évolutions et besoins réels du marché.</del>
+      <del>des évolutions et besoins réels du marché</del>
   
 
   
-      <ins>du développement des ports, des points de ravitaillement en GNL existants et des évolutions et besoins réels du marché, sans oublier leurs obligations quant à l’objectif de neutralité climatique de l’Union.</ins>
+      <ins>du développement des ports, des points de ravitaillement en GNL existants et des évolutions et besoins réels du marché, sans oublier leurs obligations quant à l’objectif de neutralité climatique de l’Union</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°173 | 
+        
+        
+            <article id="173">
+            <header>📝 Amendement n°173 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       1. Les États membres veillent à ce que les entités gestionnaires d’aéroports 
@@ -2092,378 +1999,348 @@
       de tous les aéroports du réseau central et du réseau global du RTE-T assurent la fourniture d’électricité aux aéronefs en stationnement:
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°174 | Partie 1 | 
+        
+        
+            <article id="174">
+            <header>📝 Amendement n°174 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(512/635 * 100%)">512</div>
-  
-  
-    <div class="-" style="width: calc(88/635 * 100%)">88</div>
-  
-  
-    <div class="0" style="width: calc(35/635 * 100%)">35</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149415">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°174 | Partie 2 | 
+        
+            <article id="174">
+            <header>📝 Amendement n°174 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(382/631 * 100%)">382</div>
-  
-  
-    <div class="-" style="width: calc(218/631 * 100%)">218</div>
-  
-  
-    <div class="0" style="width: calc(31/631 * 100%)">31</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149416">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°175 | 
+        
+            <article id="175">
+            <header>📝 Amendement n°175 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>2 bis.Par dérogation au paragraphe 1, points a) et b), lorsque les aéroports du réseau central du RTE-T ou du réseau global du RTE-T sont situés sur une île qui n’est pas directement raccordée au réseau électrique ou dans une région ultrapériphérique, ce paragraphe ne s’applique pas tant qu’un tel raccordement n’a pas été réalisé ou qu’il n’existe pas suffisamment de capacité produite localement à partir de sources d’énergie propres, ou si les coûts sont disproportionnés par rapport aux avantages, notamment aux avantages pour l’environnement.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°176 | 
+        
+        
+            <article id="176">
+            <header>📝 Amendement n°176 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>2 ter. Les États membres veillent à ce que les entités gestionnaires d’aéroports et les prestataires de services d’assistance en escale des aéroports du réseau central du RTE-T fournissent des systèmes d’air préconditionné.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">357</div>
+  <div class="against">262</div>
+  <div class="abstention">20</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(357/639 * 100%)">357</div>
-  
-  
-    <div class="-" style="width: calc(262/639 * 100%)">262</div>
-  
-  
-    <div class="0" style="width: calc(20/639 * 100%)">20</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°177 | 
+        
+            <article id="177">
+            <header>📝 Amendement n°177 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>Article 12 bis  Objectifs en matière d’infrastructures pour les lignes ferroviaires  1. Les États membres assurent la mise en place d’une infrastructure suffisante permettant l’installation de lignes ferroviaires en vue d’atteindre les [règlement pour le développement du réseau du RTE-T].  2. Lorsque l’électrification directe des lignes ferroviaires n’est pas possible, y compris pour des raisons liées au rapport coût-efficacité du service, les États membres veillent à la mise en place d’un nombre approprié de stations de recharge pour les trains à batterie, et de stations de ravitaillement en hydrogène pour les trains. À cette fin, ils s’assurent du déploiement, le long du réseau principal et du réseau global du RTE-T, de stations de recharge pour les trains à batterie et de stations de ravitaillement en hydrogène pour les trains dans chaque sens de circulation au sein des zones pour lesquelles l’électrification n’est pas prévue par le pour le développement du réseau du RTE- T].  3. Les États membres veillent à ce que, lorsque des décisions au sujet des infrastructures à déployer pour se conformer au paragraphe 2 sont prises, le principe de primauté de l’efficacité énergétique soit pleinement pris en considération.  4. Avant le déploiement, les États membres procèdent à une analyse visant à déterminer le meilleur emplacement pour ces stations. Ce faisant, les États membres envisagent, en particulier, le déploiement de stations dans les nœuds urbains et les pôles multimodaux où d’autres modes de  transport pourraient également être intégrés.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">357</div>
+  <div class="against">239</div>
+  <div class="abstention">43</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/149387">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(357/639 * 100%)">357</div>
-  
-  
-    <div class="-" style="width: calc(239/639 * 100%)">239</div>
-  
-  
-    <div class="0" style="width: calc(43/639 * 100%)">43</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149387">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°180 | 
+        
+            <article id="180">
+            <header>📝 Amendement n°180 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>a bis)une évaluation des modalités de mise en œuvre des mesures dans le plein respect du principe de primauté de l’efficacité énergétique; les États membres indiquent dans quelle mesure ils appliquent le principe de primauté de l’efficacité énergétique lorsqu’ils prennent des décisions de planification et d’investissement en rapport avec le déploiement d’infrastructures de recharge et de ravitaillement en carburants alternatifs;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">376</div>
+  <div class="against">246</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(376/627 * 100%)">376</div>
-  
-  
-    <div class="-" style="width: calc(246/627 * 100%)">246</div>
-  
-  
-    <div class="0" style="width: calc(5/627 * 100%)">5</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°196 | 
+        
+            <article id="196">
+            <header>📝 Amendement n°196 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>l bis) un plan de déploiement comprenant les objectifs et le financement nécessaire pour les systèmes d’air préconditionné dans les aéroports du réseau central du RTE-T, ainsi qu’une étude de faisabilité sur le déploiement de l’infrastructure fixe ou mobile pertinente;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">370</div>
+  <div class="against">256</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(370/631 * 100%)">370</div>
-  
-  
-    <div class="-" style="width: calc(256/631 * 100%)">256</div>
-  
-  
-    <div class="0" style="width: calc(5/631 * 100%)">5</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°228 | 
+        
+            <article id="228">
+            <header>📝 Amendement n°228 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>4 ter. La Commission fait rapport au Parlement européen et au Conseil, au plus tard le 1er janvier 2030, et tous les cinq ans jusqu’en 2050, sur les résultats d’une évaluation approfondie des effets macroéconomiques agrégés des règlements qui composent le paquet «Ajustement à l’objectif 55»1 bis, en insistant sur les effets sur la compétitivité de l’Union, la création d’emplois, les frais de transport de marchandises, le pouvoir d’achat des ménages et l’ampleur des fuites de carbone.  _________________  1 bis Communication de la Commission</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">397</div>
+  <div class="against">236</div>
+  <div class="abstention">6</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/149390">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(397/639 * 100%)">397</div>
-  
-  
-    <div class="-" style="width: calc(236/639 * 100%)">236</div>
-  
-  
-    <div class="0" style="width: calc(6/639 * 100%)">6</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149390">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°230 | 
+        
+            <article id="230">
+            <header>📝 Amendement n°230 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       2. Lorsqu’il ressort du rapport visé au paragraphe 1 du présent article ou de toute information dont dispose la Commission qu’un État membre risque de ne pas atteindre ses objectifs nationaux tels que visés à l’article 3, paragraphe 1, la Commission 
   
 
   
-      <del>peut émettre </del>
+      <del>peut émettre</del>
   
 
   
-      <ins>émet </ins>
+      <ins>émet</ins>
   
 
   
-      un constat à cet effet et demander à l’État membre concerné de prendre des mesures correctives pour atteindre les objectifs nationaux. Dans les trois mois suivant la réception du constat de la Commission, l’État membre concerné notifie à la Commission les mesures correctives qu’il prévoit de mettre en œuvre pour atteindre les objectifs fixés à l’article 3, paragraphe 1. Les mesures correctives 
+       un constat à cet effet et demander à l’État membre concerné de prendre des mesures correctives pour atteindre les objectifs nationaux. Dans les trois mois suivant la réception du constat de la Commission, l’État membre concerné notifie à la Commission les mesures correctives qu’il prévoit de mettre en œuvre pour atteindre les objectifs fixés à l’article 3, paragraphe 1. Les mesures correctives
+  
+
+  
+      <del>  </del>
+  
+
+  
+      <ins> </ins>
+  
+
+  
+      s’accompagnent d’actions
   
 
   
@@ -2471,11 +2348,7 @@
   
 
   
-      s’accompagnent d’actions 
-  
-
-  
-      <ins> </ins>
+      <ins>  </ins>
   
 
   
@@ -2486,336 +2359,205 @@
       <ins> Si la Commission constate que les mesures correctives ne sont pas satisfaisantes, elle envisage de prendre les mesures nécessaires à l’égard de cet État membre. Les mesures sont proportionnées, appropriées et conformes aux traités de l’Union.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">496</div>
+  <div class="against">129</div>
+  <div class="abstention">10</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/149391">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(496/635 * 100%)">496</div>
-  
-  
-    <div class="-" style="width: calc(129/635 * 100%)">129</div>
-  
-  
-    <div class="0" style="width: calc(10/635 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149391">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°231 | 
+        
+            <article id="231">
+            <header>📝 Amendement n°231 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>2 bis.La Commission informe dûment le Parlement européen et le Conseil de toute décision prise conformément au paragraphe 2 et rend ces décisions publiques, conformément au</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">583</div>
+  <div class="against">43</div>
+  <div class="abstention">3</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/149392">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(583/629 * 100%)">583</div>
-  
-  
-    <div class="-" style="width: calc(43/629 * 100%)">43</div>
-  
-  
-    <div class="0" style="width: calc(3/629 * 100%)">3</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149392">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°260 | Partie 1 | 
+        
+            <article id="260">
+            <header>📝 Amendement n°260 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(345/637 * 100%)">345</div>
-  
-  
-    <div class="-" style="width: calc(289/637 * 100%)">289</div>
-  
-  
-    <div class="0" style="width: calc(3/637 * 100%)">3</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149444">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°260 | Partie 2 | 
+        
+            <article id="260">
+            <header>📝 Amendement n°260 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(345/626 * 100%)">345</div>
-  
-  
-    <div class="-" style="width: calc(276/626 * 100%)">276</div>
-  
-  
-    <div class="0" style="width: calc(5/626 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149445">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°260 | Partie 3 | 
+        
+            <article id="260">
+            <header>📝 Amendement n°260 | Partie 3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(355/635 * 100%)">355</div>
-  
-  
-    <div class="-" style="width: calc(275/635 * 100%)">275</div>
-  
-  
-    <div class="0" style="width: calc(5/635 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149446">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°261 | Partie 1 | 
+        
+            <article id="261">
+            <header>📝 Amendement n°261 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(567/640 * 100%)">567</div>
-  
-  
-    <div class="-" style="width: calc(27/640 * 100%)">27</div>
-  
-  
-    <div class="0" style="width: calc(46/640 * 100%)">46</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149442">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°261 | Partie 2 | 
+        
+            <article id="261">
+            <header>📝 Amendement n°261 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(498/634 * 100%)">498</div>
-  
-  
-    <div class="-" style="width: calc(122/634 * 100%)">122</div>
-  
-  
-    <div class="0" style="width: calc(14/634 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149443">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°274 | 
+        
+            <article id="274">
+            <header>📝 Amendement n°274 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>9.3 a)Spécification technique pour les stations de recharge électrique et les installations de ravitaillement en hydrogène pour le transport ferroviaire.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">396</div>
+  <div class="against">221</div>
+  <div class="abstention">18</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(396/635 * 100%)">396</div>
-  
-  
-    <div class="-" style="width: calc(221/635 * 100%)">221</div>
-  
-  
-    <div class="0" style="width: calc(18/635 * 100%)">18</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°275 | 
+        
+            <article id="275">
+            <header>📝 Amendement n°275 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>11 ter La Commission devrait revoir, si nécessaire, les objectifs fixés dans le présent règlement pour les infrastructures de recharge électrique destinées aux véhicules utilitaires légers et aux véhicules utilitaires lourds respectivement, afin de s’assurer de leur conformité avec les exigences définies dans les règlements de l’Union relatifs aux normes de performance en matière d’émissions de CO pour les véhicules
@@ -2823,920 +2565,1098 @@
 2 et les véhicules utilitaires légers neufs] entraînaient une baisse importante des ventes des véhicules utilitaires légers neufs et d’occasion dans l’Union, les objectifs du présent règlement devraient être revus à la hausse. La possession de voitures particulières ou de camionnettes doit rester abordable et possible pour tous en Europe et ne pas devenir un privilège de la minorité des plus aisés.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">255</div>
+  <div class="against">372</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/149420">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(255/638 * 100%)">255</div>
-  
-  
-    <div class="-" style="width: calc(372/638 * 100%)">372</div>
-  
-  
-    <div class="0" style="width: calc(11/638 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149420">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°276 | 
+        
+            <article id="276">
+            <header>📝 Amendement n°276 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       <ins>(41 bis) La Commission devrait surveiller de près le respect des obligations imposées aux États membres par le présent règlement, notamment en ce qui concerne l’installation de points de recharge et de ravitaillement ouverts au public sur l’ensemble de leur territoire. En cas de violation du droit de l’Union, la Commission devrait adopter toutes les mesures nécessaires, et notamment engager une procédure en manquement conformément à l’article 258 du traité FUE, afin de garantir le déploiement harmonisé des règles relatives à l’infrastructure pour carburants alternatifs dans l’Union. En outre, si l’État membre en cause ne se conforme pas à l’avis motivé de la Commission visé à l’article 258 du traité FUE, le Parlement européen devrait recommander à la Commission d’introduire un recours auprès de la Cour de justice de l’Union européenne contre l’État membre en question en demandant qu’il soit infligé à cet État membre une de recharge non installée.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">233</div>
+  <div class="against">379</div>
+  <div class="abstention">25</div>
+</span>
+
+  
+    
+    <a href="/voting/149424">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(233/637 * 100%)">233</div>
-  
-  
-    <div class="-" style="width: calc(379/637 * 100%)">379</div>
-  
-  
-    <div class="0" style="width: calc(25/637 * 100%)">25</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149424">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°277 | 
+        
+            <article id="277">
+            <header>📝 Amendement n°277 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       <ins>(41 ter) Les États membres devraient établir le régime de sanctions applicable en cas d’infractions au présent règlement par les entités concernées et en cas de manquement aux obligations qui leur incombent au titre du présent règlement, et ils devraient prendre les mesures nécessaires pour en garantir la mise en œuvre. Ces sanctions devraient être effectives, proportionnées et dissuasives.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">273</div>
+  <div class="against">352</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/149425">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(273/635 * 100%)">273</div>
-  
-  
-    <div class="-" style="width: calc(352/635 * 100%)">352</div>
-  
-  
-    <div class="0" style="width: calc(10/635 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149425">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°278 | 
+        
+            <article id="278">
+            <header>📝 Amendement n°278 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       <ins>Article 19 bis  Sanctions  1. Les États membres établissent le régime de sanctions applicable aux manquements des entités concernées à leurs obligations prévues par le présent règlement et prennent toutes les mesures nécessaires pour assurer l’application de ce régime.  2. Les sanctions prévues sont effectives, proportionnées et dissuasives.  3. Les États membres notifient sans délai à la Commission le régime de sanctions visé au paragraphe 1.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">269</div>
+  <div class="against">350</div>
+  <div class="abstention">16</div>
+</span>
+
+  
+    
+    <a href="/voting/149418">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(269/635 * 100%)">269</div>
-  
-  
-    <div class="-" style="width: calc(350/635 * 100%)">350</div>
-  
-  
-    <div class="0" style="width: calc(16/635 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149418">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
+        
+            <article id="279">
+            <header>📝 Amendement n°279 | 
 
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">ECR</div>
+                
+
+<p>
+
+  
+      (7) Le GNL va probablement conserver sa place dans le transport maritime, où il n’existe actuellement aucune technologie de propulsion à émissions nulles qui soit économiquement viable. Selon la communication sur la stratégie de mobilité durable et intelligente, les navires de mer à émissions nulles seront prêts à être commercialisés d’ici 2030. La reconversion de la flotte devrait se faire progressivement en raison de la longue durée de vie des navires. 
+  
+
+  
+      <del>Contrairement au transport maritime, dans</del>
+  
+
+  
+      <ins>Dans</ins>
+  
+
+  
+       le cas de la navigation intérieure, où les bateaux sont généralement plus petits et les distances plus courtes, 
+  
+
+  
+      <del>les technologies de propulsion à émissions nulles, comme l’hydrogène et l’électricité, devraient pénétrer plus rapidement sur les marchés. Le GNL ne devrait plus</del>
+  
+
+  
+      <ins>le GPL, le GNL, l’hydrogène et l’électricité, ainsi que leurs produits dérivés renouvelables, peuvent immédiatement</ins>
+  
+
+  
+       jouer un rôle important dans ce secteur. La décarbonation par mélange ou par remplacement des carburants destinés aux transports tels que le GNL doit aller croissant, en utilisant, par exemple, du biométhane liquéfié (bioGNL) ou des carburants gazeux de synthèse renouvelables et bas carbone. Ces carburants décarbonés peuvent être utilisés dans les mêmes infrastructures que les carburants gazeux fossiles, permettant ainsi une transition progressive vers les carburants décarbonés.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ECR
     
     
-    <article>
-    <header>📝 Amendement n°280 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="280">
+            <header>📝 Amendement n°280 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>Article 12 bis  Infrastructures pour carburants fossiles alternatifs pendant une phase de transition  Les États membres veillent à ce que les infrastructures pour carburants fossiles liquides et gazeux existantes puissent être utilisées sans restriction pour la distribution de carburants alternatifs et de mélanges de carburants alternatifs avec des carburants fossiles.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">161</div>
+  <div class="against">469</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    
+    <a href="/voting/149417">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(161/639 * 100%)">161</div>
-  
-  
-    <div class="-" style="width: calc(469/639 * 100%)">469</div>
-  
-  
-    <div class="0" style="width: calc(9/639 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149417">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°283 | 
+        
+            <article id="283">
+            <header>📝 Amendement n°283 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      (4) Les initiatives ReFuelEU Aviation48 et FuelEU Maritime49 devraient stimuler la production et l’utilisation de carburants alternatifs durables dans les transports aériens et maritimes. Si les exigences en matière d’utilisation de carburants durables d’aviation peuvent s’appuyer dans une large mesure sur l’infrastructure de ravitaillement existante, des investissements sont nécessaires pour la fourniture d’électricité aux aéronefs en stationnement. 
-  
+<p>
 
   
-      <ins>En outre, les États membres et la Commission devraient évaluer l’état actuel et l’évolution future du marché de l’hydrogène pour l’aviation et prévoir une étude de faisabilité sur le déploiement de l’infrastructure pertinente pour alimenter les aéronefs, y compris, le cas échéant, un plan de déploiement de l’infrastructure pour les carburants alternatifs dans les aéroports, en particulier pour la recharge des aéronefs en hydrogène et en électricité. Les aéronefs utilisés pour l’aviation d’affaires sont d’excellents candidats pour ce type de moyens de propulsion et devraient être sérieusement pris en considération dans ces plans de déploiement. </ins>
+      (4) Les initiatives ReFuelEU Aviation48 et FuelEU Maritime49 devraient stimuler la production et l’utilisation de carburants alternatifs durables dans les transports aériens et maritimes. Si les exigences en matière d’utilisation de carburants durables d’aviation peuvent s’appuyer dans une large mesure sur l’infrastructure de ravitaillement existante, des investissements sont nécessaires pour la fourniture d’électricité aux aéronefs en stationnement.
   
 
   
-      L’initiative FuelEU Maritime fixe des exigences, notamment en ce qui concerne l’utilisation de l’alimentation électrique à quai, qui ne peuvent être satisfaites que si un niveau adéquat d’alimentation électrique à quai est 
+      <ins> En outre, les États membres et la Commission devraient évaluer l’état actuel et l’évolution future du marché de l’hydrogène pour l’aviation et prévoir une étude de faisabilité sur le déploiement de l’infrastructure pertinente pour alimenter les aéronefs, y compris, le cas échéant, un plan de déploiement de l’infrastructure pour les carburants alternatifs dans les aéroports, en particulier pour la recharge des aéronefs en hydrogène et en électricité. Les aéronefs utilisés pour l’aviation d’affaires sont d’excellents candidats pour ce type de moyens de propulsion et devraient être sérieusement pris en considération dans ces plans de déploiement.</ins>
   
 
   
-      <ins>   </ins>
+       L’initiative FuelEU Maritime fixe des exigences, notamment en ce qui concerne l’utilisation de l’alimentation électrique à quai, qui ne peuvent être satisfaites que si un niveau adéquat d’alimentation électrique à quai est
   
 
   
-      déployé dans les ports du RTE-T. Toutefois, ces initiatives ne comportent pas de dispositions relatives à l’infrastructure requise pour les carburants, qui est une condition préalable à la réalisation des objectifs poursuivis.  
+      <del> </del>
   
 
   
-      <del>                   </del>
+      <ins>    </ins>
+  
+
+  
+      déployé dans les ports du RTE-T. Toutefois, ces initiatives ne comportent pas de dispositions relatives à l’infrastructure requise pour les carburants, qui est une condition préalable à la réalisation des objectifs poursuivis
+  
+
+  
+      <del>.                     </del>
+  
+
+  
+      <ins>.  </ins>
   
 
   
       _________________
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°284 | Partie 1 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="284">
+            <header>📝 Amendement n°284 | Partie 1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(145/641 * 100%)">145</div>
-  
-  
-    <div class="-" style="width: calc(485/641 * 100%)">485</div>
-  
-  
-    <div class="0" style="width: calc(11/641 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149422">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°284 | Partie 2 | 
+        
+            <article id="284">
+            <header>📝 Amendement n°284 | Partie 2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(294/638 * 100%)">294</div>
-  
-  
-    <div class="-" style="width: calc(339/638 * 100%)">339</div>
-  
-  
-    <div class="0" style="width: calc(5/638 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149423">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°285 | 
+        
+            <article id="285">
+            <header>📝 Amendement n°285 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>(11 bis) «opération de transport aérien commercial», un vol au sens de l’article 3 du règlement ReFuelEU Aviation63 bis;  _________________</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°286 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="286">
+            <header>📝 Amendement n°286 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>(35 bis) «pétrolier», un navire au</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°287 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="287">
+            <header>📝 Amendement n°287 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>(35 ter) «vraquier», un navire au</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°288 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="288">
+            <header>📝 Amendement n°288 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       1. Les États membres veillent à ce que, sur leur territoire, un nombre 
   
 
   
-      <del>minimal </del>
+      <del>minimal</del>
   
 
   
-      <ins>adéquat </ins>
+      <ins>adéquat</ins>
   
 
   
-      de stations de ravitaillement en hydrogène ouvertes au public soient mises en place au plus tard le 31 décembre 2030.
+       de stations de ravitaillement en hydrogène ouvertes au public soient mises en place au plus tard le 31 décembre 2030.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°289 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="289">
+            <header>📝 Amendement n°289 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       À cette fin, les États membres veillent à ce 
   
 
   
-      <del>que,</del>
+      <del>que</del>
   
 
   
-      <ins>qu’il existe,</ins>
+      <ins>qu’il existe</ins>
   
 
   
-       au plus tard le 31 décembre 2030, 
+      , au plus tard le 31 décembre 2030, 
   
 
   
-      <del>des </del>
+      <del>des</del>
   
 
   
-      <ins>un nombre adéquat de </ins>
+      <ins>un nombre adéquat de</ins>
   
 
   
-      stations de ravitaillement en hydrogène ouvertes au public, d’une capacité minimale de 2 t/jour et équipées d’un distributeur d’au moins 700 
+       stations de ravitaillement en hydrogène ouvertes au public, d’une capacité minimale de 2 t/jour et équipées d’un distributeur d’au moins 700 bars
   
 
   
-      <del>bars, soient déployées à un intervalle maximal de 150 km le long du réseau central du RTE- T et du réseau global du RTE-T. L’hydrogène liquide est mis à disposition dans des stations de ravitaillement ouvertes au public déployées à un intervalle maximal de 450 km.</del>
+      <del>, soient déployées à un intervalle maximal de 150 km le long du réseau central du RTE- T et du réseau global du RTE-T</del>
   
 
   
-      <ins>bars. L’hydrogène liquide peut également être mis à disposition dans des stations de ravitaillement ouvertes au public, s’il y a lieu.</ins>
+      . L’hydrogène liquide 
+  
+
+  
+      <del>est</del>
+  
+
+  
+      <ins>peut également être</ins>
+  
+
+  
+       mis à disposition dans des stations de ravitaillement ouvertes au public
+  
+
+  
+      <del> déployées à un intervalle maximal de 450 km</del>
+  
+
+  
+      <ins>, s’il y a lieu</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°290 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="290">
+            <header>📝 Amendement n°290 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       2. Les États membres voisins 
   
 
   
-      <del>veillent à ce que l’intervalle maximal visé au paragraphe 1, deuxième alinéa, ne soit pas dépassé pour les tronçons transfrontaliers du réseau central du RTE-T et du réseau global du RTE-T.</del>
+      <del>veillent à ce que l’intervalle maximal visé au paragraphe 1, deuxième alinéa, ne soit pas dépassé pour les tronçons transfrontaliers du réseau central du RTE-T et du réseau global du RTE-T</del>
   
 
   
-      <ins>s’efforcent de mettre en place les points de ravitaillement en hydrogène nécessaires pour que les véhicules puissent circuler de part et d’autre des frontières.</ins>
+      <ins>s’efforcent de mettre en place les points de ravitaillement en hydrogène nécessaires pour que les véhicules puissent circuler de part et d’autre des frontières</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°291 | Partie 1 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="291">
+            <header>📝 Amendement n°291 | Partie 1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(132/640 * 100%)">132</div>
-  
-  
-    <div class="-" style="width: calc(503/640 * 100%)">503</div>
-  
-  
-    <div class="0" style="width: calc(5/640 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149403">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°291 | Partie 2 | 
+        
+            <article id="291">
+            <header>📝 Amendement n°291 | Partie 2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(121/635 * 100%)">121</div>
-  
-  
-    <div class="-" style="width: calc(507/635 * 100%)">507</div>
-  
-  
-    <div class="0" style="width: calc(7/635 * 100%)">7</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149404">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°292 | 
+        
+            <article id="292">
+            <header>📝 Amendement n°292 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      1. Les États membres veillent à ce qu’une quantité minimale d’alimentation électrique à quai pour les porte-conteneurs de 
-  
+<p>
 
   
-      <del>mer et </del>
+      1. Les États membres veillent à ce qu’une quantité minimale d’alimentation électrique à quai pour les porte-conteneurs de mer
   
 
   
-      <ins>mer, </ins>
+      <del> et </del>
   
 
   
-      les navires à passagers de 
+      <ins>, </ins>
   
 
   
-      <del>mer </del>
+      les navires à passagers de mer
   
 
   
-      <ins>mer, les pétroliers et les vraquiers </ins>
+      <ins>, les pétroliers et les vraquiers</ins>
   
 
   
-      soit fournie dans les ports maritimes. À cette fin, les États membres prennent les mesures nécessaires pour que, au plus tard le 1er janvier 2030:
+       soit fournie dans les ports maritimes. À cette fin, les États membres prennent les mesures nécessaires pour que, au plus tard le 1er janvier 2030:
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°293 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="293">
+            <header>📝 Amendement n°293 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       a) les ports maritimes du réseau central du RTE-T et du réseau global du RTE-T dont le nombre annuel moyen d’escales effectuées au cours des trois dernières années par des porte-conteneurs brute est supérieur à 50 disposent d’une puissance de sortie à quai suffisante pour satisfaire au moins 90 % de cette demande;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°294 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="294">
+            <header>📝 Amendement n°294 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       b) les ports maritimes du réseau central du RTE-T et du réseau global du RTE-T dont le nombre annuel moyen d’escales effectuées au cours des trois dernières années par des navires rouliers à passagers de mer et des engins à passagers à grande vitesse de mer de plus de à 40 disposent d’une puissance de sortie à quai suffisante pour satisfaire au moins 90 % de cette demande;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°295 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="295">
+            <header>📝 Amendement n°295 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       c) les ports maritimes du réseau central du RTE-T et du réseau global du RTE-T dont le nombre annuel moyen d’escales effectuées au cours des trois dernières années par des navires à passagers autres que des navires rouliers à passagers et des engins à passagers à jauge brute est supérieur à 25 disposent d’une puissance de sortie à quai suffisante pour satisfaire au moins 90 % de cette demande.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°296 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="296">
+            <header>📝 Amendement n°296 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>c bis) les ports maritimes du réseau central du RTE-T et du réseau global du RTE-T dont le nombre annuel moyen d’escales effectuées au cours des trois dernières années par des pétroliers et des brute est supérieur à 50 disposent d’une puissance de sortie à quai suffisante pour satisfaire au moins 90 % de cette demande;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°297 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="297">
+            <header>📝 Amendement n°297 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. Les États membres veillent à ce que, au plus tard le 1er janvier 2035, tous les ports maritimes du réseau central et du réseau global du RTE-T disposent d’une puissance de sortie à quai suffisante pour répondre à au moins 90 % de la demande de tous les types de navires relevant du champ d’application du règlement FuelEU Maritime65bis.  _________________</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°298 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="298">
+            <header>📝 Amendement n°298 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       11 Objectifs pour l’approvisionnement en 
   
 
   
-      <del>GNL </del>
+      <del>GNL</del>
   
 
   
-      <ins>ammoniac et en hydrogène </ins>
+      <ins>ammoniac et en hydrogène</ins>
   
 
   
-      dans les ports maritimes
+       dans les ports maritimes
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°299 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="299">
+            <header>📝 Amendement n°299 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       1. Les États membres veillent à ce qu’un nombre approprié de points de ravitaillement en 
   
 
   
-      <del>GNL </del>
+      <del>GNL</del>
   
 
   
-      <ins>ammoniac et en hydrogène </ins>
+      <ins>ammoniac et en hydrogène</ins>
   
 
   
-      soient mis en place dans les ports maritimes du réseau central du RTE-
+       soient mis en place dans les ports maritimes du réseau central du RTE
   
 
   
-      <ins> </ins>
+      <del>-</del>
+  
+
+  
+      <ins>- </ins>
   
 
   
@@ -3751,308 +3671,533 @@
       permettre la circulation des navires de mer sur l’ensemble du réseau central du RTE-T au plus tard le 1er janvier 2025. Les États membres coopèrent avec les États membres voisins lorsque cela est nécessaire pour assurer une couverture adéquate du réseau central du RTE-T.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°300 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="300">
+            <header>📝 Amendement n°300 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. Les États membres veillent à ce qu’un nombre approprié de points de ravitaillement en ammoniac et en hydrogène soient mis en place dans les ports maritimes du réseau global du RTE-T visés au paragraphe 2 pour répondre à la demande du marché à court et à long terme pour ces carburants et permettre la circulation des navires de mer sur l’ensemble du réseau global du RTE-T au plus tard le 1er janvier 2030. Les États membres coopèrent avec les États membres voisins lorsque cela est nécessaire pour assurer une couverture adéquate du réseau global du RTE-T.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°301 | Partie 1 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="301">
+            <header>📝 Amendement n°301 | Partie 1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°301 | Partie 2 | 
+        
+            <article id="301">
+            <header>📝 Amendement n°301 | Partie 2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°302 | 
+        
+            <article id="302">
+            <header>📝 Amendement n°302 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       1. Les États membres veillent à ce que les entités gestionnaires d’aéroports 
   
 
   
-      <del>de tous les aéroports du réseau central et du réseau global du RTE-T </del>
+      <del>de tous les aéroports du réseau central et du réseau global du RTE-T</del>
   
 
   
-      <ins>et les fournisseurs de services d’assistance en escale de tous les aéroports au sein de l’Union </ins>
+      <ins>et les fournisseurs de services d’assistance en escale de tous les aéroports au sein de l’Union</ins>
   
 
   
-      assurent la fourniture d’électricité aux aéronefs en stationnement:
+       assurent la fourniture d’électricité aux aéronefs en stationnement:
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°303 | Partie 1 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="303">
+            <header>📝 Amendement n°303 | Partie 1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(278/638 * 100%)">278</div>
-  
-  
-    <div class="-" style="width: calc(353/638 * 100%)">353</div>
-  
-  
-    <div class="0" style="width: calc(7/638 * 100%)">7</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149412">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°303 | Partie 2 | 
+        
+            <article id="303">
+            <header>📝 Amendement n°303 | Partie 2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(119/635 * 100%)">119</div>
-  
-  
-    <div class="-" style="width: calc(489/635 * 100%)">489</div>
-  
-  
-    <div class="0" style="width: calc(27/635 * 100%)">27</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/149413">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°304 | 
+        
+            <article id="304">
+            <header>📝 Amendement n°304 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>2 bis. Au plus tard le 1er janvier 2030, les États membres fournissent un nombre suffisant de stations de recharge électrique pour tous les véhicules terrestres utilisés dans les aéroports du réseau central et du réseau global du RTE-T, et veillent à ce que cette recharge se fasse au moyen de l’électricité renouvelable supplémentaire disponible.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°305 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="305">
+            <header>📝 Amendement n°305 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>2 ter. Au plus tard le 1er janvier 2030, les États membres veillent à ce que les entités gestionnaires d’aéroports de tous les aéroports mettent à disposition une capacité en infrastructures de recharge électrique et en infrastructures de ravitaillement en hydrogène proportionnée à l’adoption d’aéronefs électriques et d’aéronefs propulsés à l’hydrogène.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°306 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="306">
+            <header>📝 Amendement n°306 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>p bis) un plan de déploiement comprenant des objectifs, adaptés à l’adoption et à la demande escomptées de véhicules, pour les infrastructures de recharge destinées aux véhicules utilitaires légers et aux véhicules utilitaires lourds dans les dépôts et les centres logistiques, afin de garantir la recharge de nuit et à destination;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
+        
     
+        
+        
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – J’ai voté contre ce texte. L’idée n’est pas simplement de développer l’électrique mais de faire disparaître totalement et extrêmement rapidement les moteurs thermiques. L’industrie thermique, qui a fait d’énormes progrès en quelques années pour limiter les émissions, n’est pas prêtes pour un passage aussi brusque. Nous risquons de tuer nos constructeurs et de nous rendre dépendants d’autres puissance. C’est la suite logique du texte adopté l&#39;an dernier et interdisant la vente de véhicules thermiques à partir de 2035, contre lequel j’avais déjà voté.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            Bras armé législatif du pacte vert européen, le paquet dit «Fit pour 55» («Prêts pour 2055») est un ensemble de textes européens dont la mise en œuvre est censée nous aider à atteindre les objectifs environnementaux prévus pour 2055.En l’occurrence, le texte voté ce jour concerne le déploiement des infrastructures pour carburants alternatifs, y comprendre donc des points de rechargement pour les véhicules roulant à l’électricité, à l’hydrogène ou au gaz naturel liquéfié (GNL).Sur le principe, la présence de véhicules électriques sur nos routes semblant inévitable, nous pourrions être d’accords avec cette proposition. Malheureusement, comme très souvent, la Commission se sent obligée de mettre en place des échéances et des pénalités. Ainsi, tout état membre qui ne serait pas assez rapide, ou pas assez efficace, dans l’application de ce texte dans les délais impartis, se verrait sanctionné par l’UE!Nous nous opposons fermement à cette façon d’agir, c’est pourquoi j’ai opté pour l’abstention sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce texte vise à accélérer le déploiement de stations de recharge et de ravitaillement en carburant alternatif pour les voitures, camions, trains et avions, notamment l’électricité et l’hydrogène. Il vise donc également à soutenir le recours aux véhicules durables pour s’assurer que l’Union atteindra les objectifs qu’elle s’est fixés en matière d’émission de gaz à effet de serre. Il demande un déploiement plus rapide et intensif des stations de recharge sur les principaux axes routiers de l’UE et une recharge plus simple à des prix plus abordables, comparables et non discriminatoires pour tous les véhicules. Favorable à ces mesures écologiques ambitieuses, j’ai soutenu ce texte par mon vote.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            . – La proposition vise à stimuler le déploiement de stations de recharge ou de ravitaillement en carburant alternatif sur les routes, dans les ports et dans les aéroports européens. Le texte contribue à soutenir le recours aux véhicules durables, afin que l’Europe puisse atteindre ses ambitions de neutralité climatique d’ici à 2050. Favorable à ces mesures, j’ai voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            Réussir la transition écologique de l’Union européenne nécessite d’apporter des réponses simples et concrètes aux citoyens. Si l’objectif est de développer les ventes de voitures électriques, alors l’offre en matière de borne de recharge doit suivre, ceci partout en Europe. Ce rapport vise à stimuler la création de stations de recharge ou de ravitaillement en carburants alternatifs (électrique, hydrogène...) pour les voitures, les camions et les avions. Pour ne laisser aucun citoyen, aucun territoire ni aucune entreprise de côté, nous avons prévu de déployer, d’ici 2028, des stations de recharge électrique tous les 60 km et à hydrogène tous les 100 km. Les conducteurs pourront traverser l’UE entière en toute sérénité, sans craindre la panne. Je me suis battu pour que des informations précises quant à la disponibilité des points de recharge et du temps d’attente estimé soient mises à la disposition des usagers. C’est un élément clé, notamment pour les chauffeurs professionnels de poids lourds, qui doivent respecter des contraintes de temps de conduite et de repos très strictes. Je me réjouis de voir mes 19 amendements déposés en commission des transports adoptés par le Parlement européen. Ils sont désormais intégrés dans ce texte charnière pour la transition environnementale européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            J’ai voté en faveur de l’accord de trilogue sur ce texte qui vise à soutenir le déploiement de stations de recharge (électrique) ou ravitaillement en carburant alternatif (hydrogène...) le long des routes, dans les ports et les aéroports européens. Ce texte vise en effet à stimuler le déploiement de stations de recharge ou de ravitaillement en carburant alternatif pour les voitures, les camions, les trains et les avions, et à soutenir le recours aux véhicules durables, afin que l’Europe puisse atteindre ses ambitions de neutralité climatique d’ici à 2050.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            J’estime nécessaire de déployer un réseau d’infrastructures de recharges en nombre suffisant pour garantir à tous l’accès aux énergies décarbonées. Compte tenu de la conjoncture économique actuelle et du recul historique des ventes de voitures en France ces deux dernières années, il faut donc déployer en nombre des infrastructures de distribution de carburants alternatifs nécessaires à l’essor du marché automobile de demain. J’ai soutenu ce dossier.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Si je soutiens la mise en place à long terme de ces infrastructures pour les carburants alternatifs, suivant en cela l&#39;évolution du secteur des transports, en revanche, les échéances et objectifs maximalistes fixés par la Commission et le Parlement apparaissent intenables en termes d&#39;investissement et de déploiement et constituent une marche forcée vers le &quot;tout électrique&quot;. D’où mon abstention.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            Je me suis abstenu sur ce rapport. Certes il encourage le déploiement d’infrastructures de carburants alternatifs, qui seront nécessaires pour l’avenir. Mais il approuve les nouvelles exigences européennes en matière automobile, dont le choix du tout électrique que je conteste.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Ce règlement sur les infrastructures de carburants alternatifs est proposé dans le cadre du paquet « fit for 55 ». Il fixe un certain nombre d’objectifs obligatoires pour le déploiement d’infrastructures de carburants alternatifs dans tous les Etats membres, et vise particulièrement à déployer les infrastructures de charge pour l’électrique ou carburants alternatifs dans le transport routier, maritime, aérien et ferroviaire. La mise en place d’objectifs obligatoires et de seuils nationaux contraignants pour le déploiement des infrastructures de carburants alternatifs est nécessaire afin d’atteindre les objectifs de réduction des émissions de gaz à effet de serre fixés par le Pacte Vert. C ‘est pourquoi, j’ai voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport sur les carburants alternatifs. Le texte vise à stimuler le déploiement de stations de recharge ou de ravitaillement en carburants alternatifs (par exemple l’hydrogène) pour les voitures, les camions, les trains et les avions, en vue d’atteindre l’objectif de neutralité carbone en Europe d’ici 2050. L’objectif est de permettre aux citoyens de pouvoir à terme disposer au minimum d’un point de recharge pour leur véhicule tous les 60 km ou de pouvoir se ravitailler en hydrogène tous les 100 km.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport sur le déploiement d’une infrastructure pour carburants alternatifs. Cet accord de trilogue vise à stimuler le déploiement de stations de recharge ou de ravitaillement en carburant alternatif (électrique, hydrogène...) pour les voitures, les camions, les trains et les avions, et à soutenir le recours aux véhicules durables, afin que l’Europe puisse atteindre la neutralité climatique d’ici 2050. Il fixe des objectifs nationaux contraignants et demande aux États membres de présenter un plan, avant 2024, en vue de les atteindre.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce texte vise à introduire un nouveau règlement sur les infrastructures de carburants alternatifs en remplacement de la directive existante, dans le cadre du paquet climat et de l’objectif de décarbonation du secteur des transports en Europe. Elle instaure notamment de nouveaux objectifs nationaux contraignants en matière de déploiement de stations de recharge afin de faciliter l’utilisation des véhicules électriques et comporte également des dispositions en faveur du recours à l’électrique pour les avions stationnaires et les navires effectuant de courtes distances. J’ai donc voté pour ce texte, qui aurait dû montrer une ambition plus grande mais reste un pas en avant par rapport à la situation actuelle pour créer des infrastructures en capacité de répondre à la demande en alimentation électrique des transports et de l’encourager.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à approuver l’accord de trilogue sur le règlement encadrant les infrastructures de carburants alternatifs. Il prévoit des seuils minimaux contraignants pour les Etats membres, renforce les obligations en matière de couverture des territoires par des stations de recharge électriques pour les particuliers, et d’équipements de fourniture d’électricité pour le transport maritime. J’ai donc voté pour ce texte qui aurait pu être plus ambitieux mais répond à des besoins identifiés dans le cadre de la transition énergétique.
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            Pour parvenir à décarboner sereinement le secteur du transport, automobile notamment, il faut un texte cohérent avec les objectifs de la directive relative aux énergies renouvelables (RED), pour lequel je suis rapporteur pour mon groupe Renew Europe. C’est le cas de ce règlement.Avec mon groupe, nous avons également obtenu le soutien au secteur ferroviaire dans son objectif de neutralité carbone. En votant en faveur de ce règlement qui accélère le passage aux carburants non fossiles comme l’hydrogène, nous assurons à la mobilité électrique un développement sûr.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté pour ce rapport sur le déploiement d’infrastructures pour les carburants alternatifs, en cohérence avec les précédentes prises de position du Parlement européen sur la décarbonation des transports, en particulier la fin programmée de la vente de véhicules thermiques neufs dans l’UE. Cette législation est une pièce cardinale du Pacte Vert pour l’Europe, car la substitution de nouveaux modes de propulsion des véhicules aux énergies fossiles ne peut se faire sans le déploiement d’un vaste réseau d’infrastructures de recharge et ravitaillement. Ce rapport détermine des obligations minimales de déploiement d’infrastructures de recharge pour le transport maritime, aérien et routier. Il permettra de garantir la facilité d’utilisation de transports décarbonés.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté en faveur de cet accord de trilogue sur le projet de règlement relatif au déploiement d’infrastructures pour carburants alternatifs. Celui-ci détermine des objectifs contraignants de déploiement d’infrastructures de recharge électrique et de ravitaillement en hydrogène pour l’ensemble des secteurs du transport maritime, routier, ferroviaire, aérien et fluvial.Cet accord de trilogue permettra de garantir la cohérence d’ensemble de notre stratégie européenne pour la décarbonation du transport. Le déploiement d’infrastructures de recharge et de ravitaillement sera en effet essentiel au développement accéléré de nouveaux moyens de locomotion décarbonnés tels que les véhicules électriques.Je suis satisfaite que nous soyons parvenus à un accord interinstitutionnel sur cette législation centrale du Pacte Vert pour l’Europe. C’est une victoire à la hauteur de notre ambition environnementale, et une réussite pour la Présidence française du Conseil de l’UE qui avait travaillé à une position de négociation au sein du Conseil.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai voté en faveur du rapport sur la mise en place des infrastructures nécessaires à l’utilisation des carburants alternatifs qui s’inscrit dans le cadre du paquet «Fit for 55» dans le cadre du Pacte Vert européen. Les carburants alternatifs concernent l’électricité, l’hydrogène, les bio-carburants ou encore le gaz naturel liquéfié. Il était important dans la période de transition qui est la nôtre que nous facilitions l’accès à ces carburants pour les citoyens européens. Grâce à ce rapport, nous allons augmenter significativement le nombre d’infrastructures de recharge électrique sur les routes avec une infrastructure de recharge tous les 60 km d’ici 2026 pour les voitures et les camions afin de faciliter la vie des automobilistes européens. Également, il y aura une augmentation des infrastructures de ravitaillement en hydrogène pour les véhicules routiers et des infrastructures de ravitaillement électrique pour les navires à quai dans les ports.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            Les carburants alternatifs joueront un rôle clé pour remplacer les carburants fossiles et permettre ainsi la décarbonation du secteur des transports. À travers l’électricité, l’hydrogène ou encore l’ammoniac, le secteur routier à de multiples possibilités pour se transformer et aider l’Union européenne à atteindre ses objectifs environnementaux. J’ai donc voté en faveur de ce rapport sur la mise en place des infrastructures pour carburants alternatifs qui permettra de favoriser l’accès à ces carburants pour les citoyens européens et qui fixera des objectifs progressifs et ambitieux d’installation de ces infrastructures. Le texte fixe des objectifs considérablement plus élevés pour l&#39;infrastructure de recharge électrique pour les voitures et les camionnettes avec une puissance de sortie de 1,3 kW par véhicule électrique, tandis que pour les camions il y aura une mise en place progressive des installations avec 15 % du réseau RTE-T en 2025, 50 % en 2027 et 100 % en 2030.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            J’ai voté en faveur de ce texte qui plaide pour le déploiement d’un réseau dense d’infrastructures de recharge pour voitures électriques, et d’infrastructures de distribution de carburants alternatifs. Dans ce cadre de la transition énergétique, un maillage dense du territoire est indispensable pour permettre à tous l’accès aux énergies décarbonées.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            Nous soutenons la création à long terme d&#39;infrastructures pour les carburants alternatifs, en suivant l&#39;évolution du secteur des transports. Cependant, les délais et objectifs extrêmement ambitieux fixés par la Commission et le Parlement semblent irréalisables en termes d&#39;investissement et de déploiement, et semblent imposer une transition forcée vers une électrification complète. J&#39;ai choisi de m&#39;abstenir lors du vote sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Ce texte fait fi des caractéristiques géographiques et territoriales propres à chaque État pourtant nécessaires aux choix d’investissements et d’infrastructures en matière énergétique. En outre, aussi souhaitable que soit la mise en place à long terme la construction d’infrastructures pour les carburants alternatifs, les échéances maximales fixées par la Commission, la marche forcée vers le «tout électrique», les objectifs ambitieux et contraignants sont autant d’éléments qui justifient mon abstention sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Le paquet législatif «Fit for 55» adopté en juillet dernier introduisait l’interdiction de la vente de véhicules thermiques à partir de 2035 au sein de l’UE.La proposition de règlement proposée ici, et qui fait également partie de ce paquet législatif, définit un cadre commun pour le déploiement d’un vaste réseau d’infrastructures (bornes de recharge) dédiées à la distribution de carburants alternatifs dans toute l’UE et destinées à tous les modes de transport.Il s’agit donc de rendre disponible à tous les énergies renouvelables sur l’ensemble du réseau RTE-T européen pour stimuler les ventes de véhicules à faibles émissions et à émissions nulles.La filière automobile européenne se retrouve confrontée à ce choix politique absurde, anti-industriel et totalitaire du «tout électrique» qui leur est imposé par la Commission européenne: c’est désormais aujourd’hui plus que jamais le marché de l’énergie qui tient les tenants et les aboutissants du marché de l’automobile. Les bornes électriques sont encore très rares sur le territoire européen et il est tout de même utile de soutenir leur déploiement.J’ai donc voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            La proposition de règlement sur le déploiement d’une infrastructure pour carburants alternatifs, qui fait également partie du Paquet législatif &quot;Fit for 55&quot;, définit un cadre commun pour le déploiement d&#39;un vaste réseau d&#39;infrastructures (bornes de recharge) dédiées à la distribution de carburants alternatifs dans toute l&#39;UE et destinées à tous les modes de transport. La proposition de règlement introduit des objectifs ambitieux et contraignants à court terme, avec notamment, l&#39;obligation pour les États membres d&#39;établir des cadres stratégiques nationaux en matière de déploiement d&#39;infrastructures, et prévoit également une obligation de notifier ces cadres stratégiques auprès de la Commission à partir du 1er janvier 2025.Nous soutenons la mise en place à long terme de ces infrastructures pour les carburants alternatifs, suivant en cela l&#39;évolution du secteur des transports. En revanche, les échéances et objectifs maximalistes fixés par la Commission et le Parlement apparaissent intenables en termes d&#39;investissement et de déploiement et constituent une marche forcée vers le &quot;tout électrique&quot;.Je me suis donc abstenue sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Le Paquet législatif « Fit for 55 » adopté l&#39;an dernier introduisait l&#39;interdiction de la vente de véhicules thermiques à partir de 2035 au sein de l’UE, dans le but d&#39;atteindre l&#39;objectif de réduction de 55% des émissions de CO² d&#39;ici 2030 et de parvenir à la neutralité carbone dans les transports pour 2050. Nous soutenons la mise en place à long terme de ces infrastructures pour les carburants alternatifs, suivant en cela l&#39;évolution du secteur des transports. Pour autant, les échéances et objectifs maximalistes fixés par la Commission et le Parlement apparaissent intenables en termes d&#39;investissement et de déploiement et constituent une marche forcée vers le « tout électrique ». Je me suis abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            Bien que je soutienne la mise en place à long terme des infrastructures pour les carburants alternatifs, en cohérence avec les investissements déjà réalisés par le secteur du transport, les échéances et objectifs fixés par la Commission et le Parlement sont intenables pour le secteur et constituent une marche forcée vers le tout électrique qui n’est pas nécessairement plus écologique.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            Je me suis abstenue sur ce texte car même si je soutiens la mise en place à long terme de ces infrastructures pour les carburants alternatifs, suivant en cela l&#39;évolution du secteur des transports, en revanche, je m’oppose aux échéances et objectifs maximalistes fixés par la Commission et le Parlement apparaissant intenables en termes d&#39;investissement et de déploiement.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b></b> | </header>
+            Ce projet de règlement vise à renforcer les objectifs concernant l’installation d’une infrastructure dédiée à la recharge électrique et à la mise à disposition de carburants alternatifs dans les secteurs routier, maritime, aérien et ferroviaire. Dans le cadre du paquet «Fit for 55», la Commission européenne a proposé d’introduire ce règlement sur les infrastructures de carburants alternatifs (acronyme anglais AFIR), abrogeant la précédente directive sur le sujet. L’AFIR fixe un certain nombre d’objectifs nationaux obligatoires pour le déploiement d’infrastructures de carburants alternatifs dans tous les États membres. Je regrette cependant un manque d’ambition concernant l’électrification à quai des navires, enjeu crucial pour la dépollution de l’air dans les zones littorales, notamment dans le bassin méditerranéen. Le déploiement de ces infrastructures est nécessaire pour améliorer l’accessibilité des carburants non-fossiles dont le développement est particulièrement pertinent pour les moyens de transport lourds tels que les transports ferroviaires et maritimes. J’ai donc voté pour ce règlement qui va tout de même dans le bon sens.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b></b> | </header>
+            Les transports comptent pour 27% des émissions de gaz à effet de serre de l’UE, et le Green Deal ambitionne de réduire ces émissions de 90% d’ici 2050. Dans ce cadre, le règlement sur les infrastructures de carburants alternatifs fixe des objectifs contraignants de déploiement de bornes de recharges électrique ou de carburant alternatifs dans le transport routier, maritime, aérien et ferroviaire. La mobilité électrique sera clef pour accompagner la transition énergétique, ainsi les nombreuses dispositions du texte sur la couverture territoriale des stations de recharge ou la fourniture d’électricité dans les grands ports sont bienvenues. Si le texte mentionne le déploiement de l’hydrogène, cela reste circonscrit aux véhicules lourds, qui est un usage pertinent de cette ressource. J’ai donc voté en faveur de ce règlement.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-    
-    
 
+    <section>
     
     
-
-    
-    
-
-    
-    
-
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/0223(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0234_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-10-19-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

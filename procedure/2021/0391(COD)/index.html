@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Plateforme de collaboration des équipes communes d’enquête</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,27 +22,39 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Plateforme de collaboration des équipes communes d’enquête</h2>
 
 
 
-
 <h3>🎯 Votes principaux</h3>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -49,7 +62,7 @@
     
         
         
-            <li>Lutte contre la criminalité</li>
+            <li>Coopération policière, judiciaire et douanière en général</li>
         
     
         
@@ -59,32 +72,239 @@
     
         
         
+            <li>Lutte contre la criminalité</li>
+        
+    
+        
+        
             <li>Lutte contre le terrorisme</li>
         
     
-        
-        
-            <li>Coopération policière, judiciaire et douanière en général</li>
-        
-    
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    
-    
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/0391(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/0391(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0245_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-03-30-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-03-30-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
+
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté pour ce texte.Les équipes communes d’enquête, créées en 2002, sont utiles s’agissant des infractions transnationales, comme le trafic de drogue, le blanchiment d’argent ou les fraudes fiscales.Ces équipes ont effectivement amélioré la coopération judiciaire et ont permis de limiter les procédures et de développer une culture commune d’enquête. Elles sont donc un rouage essentiel de la lutte contre la criminalité transnationale.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté pour ce rapport car il souhaite intégrer les autorités judiciaires internationales à la création d’une plateforme collaborative pour les ECE pour contribuer ainsi à une coopération internationale en termes de criminalité transfontière. Ce rapport figure comme une illustration d’une coopération européenne en bonne intelligence telle que nous la voulons.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport sur la plateforme de collaboration des équipes communes d&#39;enquête (ECE). Cet accord de trilogue vise à faciliter le travail des ECE, qui rassemblent des policiers et magistrats de plusieurs États membres pour coordonner et instruire les enquêtes transfrontalières. Il crée ainsi un espace numérique de coopération et d&#39;échange sécurisé de données au profit des ECE, hébergé par EU-Lisa sous le contrôle d&#39;Eurojust.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce texte vise à valider l’accord de trilogue sur la création de plateformes numériques de collaboration pour les équipes communes d’enquête (ECE). Il confie à l’agence EU-LISA la tâche de développer un cloud sécurisé pour le stockage des données nécessaires au travail de chaque ECE qui se composent d’agents de forces de police de différents pays ou d’instances comme la Cour pénale international, Europol ou l’Olaf. J’ai donc voté pour ce texte technique qui favorise les coopérations policières tout en renforçant la protection des données.
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            J’ai voté en faveur de cet accord de trilogue, qui permettra de soutenir les équipes communes d’enquêtes entre pays européens.Les équipes communes d&#39;enquête (Joint Investigation Teams «JITs») sont mises en place pour des enquêtes criminelles ayant un impact transfrontalier et pour une durée limitée. Elles permettent une coopération et une communication directes entre les autorités judiciaires et les services répressifs de plusieurs États membres afin d&#39;organiser leurs actions et leurs enquêtes dans les affaires transfrontalières.Jusqu’à aujourd’hui, ces équipes étaient confrontées à plusieurs difficultés techniques et opérationnelles, telles que l&#39;échange électronique sécurisé d&#39;informations et de preuves, la communication électronique sécurisée avec les autres membres de l&#39;équipe commune d’enquête, et la coordination par exemple avec Eurojust, Europol et l&#39;Office européen de lutte antifraude (OLAF).Ce règlement permettra de remédier aux difficultés techniques existantes et d’améliorer l’efficacité de nos services d’enquêtes judiciaires.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            . – J’ai voté pour ce texte qui permet de renforcer l’efficacité des «équipes communes d’enquête», formées lorsque plusieurs États membres s’associent dans le cadre d’enquêtes liées à des délits et des crimes transfrontaliers. Ces équipes ont largement démontré leur utilité depuis leur création en 2002
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Les équipes communes d’enquête sont d’utiles outils de coopération judiciaire pour les enquêtes et poursuites contre la criminalité transfrontière (terrorisme, crime organisée, cybercriminalité). J’ai donc voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – En vingt ans de mise en pratique, les ECE se sont révélées utiles pour améliorer la coopération judiciaire concernant les enquêtes et poursuites en termes de criminalité transfrontière (terrorisme, crime organisée, cybercriminalité). Un des effets concrets bénéfiques de ces ECE est d’avoir permis de limiter les procédures et de développer une culture commune de coopération transfrontière en matière pénale, faisant travailler ensembles des autorités judiciaires de différents États membres. Illustration d’une coopération européenne en bonne intelligence, les ECE sont un outil important dans la lutte contre la criminalité transnationale dans l’UE, car elles permettent une coopération efficace entre les EM. J’ai voté en faveur.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Une équipe commune d’enquête (ECE) peut être formée lorsqu&#39;un État membre de l’Union européenne demande l&#39;assistance d&#39;un autre État membre pour enquêter sur une infraction transnationale, comme un trafic de drogue, du blanchiment d&#39;argent ou une fraude fiscale. Elles ont des pouvoirs d&#39;enquête larges : écoute électronique, surveillance, fouille.Cette proposition de rapport propose de nouvelles dispositions concernant les ECE, dispositif créé en 2002, de manière à ce que des autorités judiciaires internationales participent à la création d’une plateforme collaborative pour ces ECE. En particulier, cela permettrait que la Cour pénale internationale (CPI) prenne part aux travaux de cette plateforme.En vingt ans de mise en pratique, les ECE se sont révélées utiles pour améliorer la coopération judiciaire concernant les enquêtes et poursuites en termes de criminalité transfrontière (terrorisme, crime organisée, cybecriminalité). Un des effets concrets bénéfiques de ces ECE est d’avoir permis de limiter les procédures et de développer une culture commune de coopération transfrontière en matière pénale, faisant travailler ensemble des autorités judiciaires de différents États membres.Enfin, rappelons d’ailleurs qu’en commission LIBE du 10 octobre 2022, ce rapport a fait l’objet d’un large consensus, par le vote favorable unanime des 56 députés présents.J’ai donc voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            . – Une équipe commune d’enquête (ECE) peut être formée lorsqu&#39;un État membre de l’Union européenne demande l&#39;assistance d&#39;un autre État membre pour enquêter sur une infraction transnationale, comme un trafic de drogue, du blanchiment d&#39;argent ou une fraude fiscale. En vingt ans de mise en pratique, les ECE se sont révélées utiles pour améliorer la coopération judiciaire concernant les enquêtes et poursuites en termes de criminalité transfrontière (terrorisme, crime organisée, cybecriminalité...). Un des effets concrets bénéfiques de ces ECE est d’avoir permis de limiter les procédures et de développer une culture commune de coopération transfrontière en matière pénale. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté en faveur de ce rapport car les équipes communes (ECE) se sont révélées utiles pour améliorer la coopération judiciaire concernant les enquêtes et poursuites en termes de criminalité transfrontière (terrorisme, crime organisée, cybecriminalité).Un des effets concrets bénéfiques de ces ECE est d’avoir permis de limiter les procédures et de développer une culture commune de coopération transfrontière en matière pénale, faisant travailler ensemble des autorités judiciaires de différents États membres.Illustration d’une coopération européenne en bonne intelligence, ces ECE sont un outil important dans la lutte contre la criminalité transnationale dans l’UE, car elles permettent une coopération efficace entre les Etats membres.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b></b> | </header>
+            Ce règlement confie à l’agence eu-LISA (une agence de l’UE qui consiste à fournir un accès technologique pour la mise en œuvre des politiques européennes dans les domaines de la justice et des affaires intérieures) la tâche de développer et de fournir une application en nuage sécurisé pour les équipes communes d’enquêtes (ECE).Les ECE correspondent à un cadre de coopération policière transfrontalière, créées à chaque fois pour une enquête spécifique. Ce rapport prévoit des limites dans les partages des données: seules les données pertinentes à l’enquête sont partagées et elles sont limitées aux pays concernés. Aussi, ces données ont vocation à être hébergées par l’agence et supprimées une fois que toutes les parties à l’enquête ont téléchargé les documents.Enfin, ce logiciel doit être développé par l’eu-LISA, ce qui évite l’implication d’acteurs privés. Au vu des garanties prévues par ce règlement et par les apports dans la lutte contre la criminalité transfrontalière que ce logiciel peut apporter, j’ai voté en faveur de ce règlement.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

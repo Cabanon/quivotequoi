@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Système d’information Schengen: application à Chypre des dispositions de l’acquis de Schengen</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,84 +22,39 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Système d’information Schengen: application à Chypre des dispositions de l’acquis de Schengen</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
-    <article>
-    <header>👍 Adoption du texte | 
-
-✅️ Adopté
-
-</header>
-    
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
-        <section>
-
-<div class="votes ">
-  
-    <div class="+" style="width: calc(403/530 * 100%)">403</div>
-  
-  
-    <div class="-" style="width: calc(58/530 * 100%)">58</div>
-  
-  
-    <div class="0" style="width: calc(69/530 * 100%)">69</div>
-  
-</div>
-</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
-        <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
-        
-        
-            <section>
-
-
-
-<div class="votes">
-  
-    <div class="+" style="width: calc(30/63 * 100%)">30</div>
-  
-  
-    <div class="-" style="width: calc(20/63 * 100%)">20</div>
-  
-  
-    <div class="0" style="width: calc(13/63 * 100%)">13</div>
-  
-</div>
- 
-</section>
-            <a href="/voting/142267">🗳 Voir le détail du vote</a>
-        
-    
-    </article>
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -106,12 +62,12 @@
     
         
         
-            <li>Libre circulation et intégration des ressortissants des pays-tiers</li>
+            <li>Espace Schengen, acquis de Schengen</li>
         
     
         
         
-            <li>Espace de liberté, de sécurité et de justice</li>
+            <li>Libre circulation et intégration des ressortissants des pays-tiers</li>
         
     
         
@@ -121,26 +77,245 @@
     
         
         
-            <li>Espace Schengen, acquis de Schengen</li>
+            <li>Espace de liberté, de sécurité et de justice</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/0266(NLE)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/0266(NLE)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0082_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-05-03-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-05-03-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Depuis l’invasion turque de Chypre, l’île est coupée en deux. La zone sud, la République de Chypre membre de l’Union européenne, est de plus en plus assaillie par des vagues de migrants clandestins qui viennent de la zone contrôlée par la Turquie, avec l’aide de cette dernière. Il faut donner à la République de Chypre tous les moyens nécessaires à sa protection, ce qui passe par cet accès au système d’information Schengen. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté pour ce rapport qui permet aux autorités chypriotes de saisir et consulter les signalements concernant des personnes ou des objets dans le Système d’Information Schengen, et ce, afin de garantir un niveau plus élevé de sécurité publique.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce texte vise à donner accès à Chypre, pays confronté à un fort afflux de migrants illégaux, au système d’information Schengen II (SIS) et ce bien que cet État ne fasse pas partie de l’espace Schengen. Ce fichier informatique permet aux États membres de l’espace Schengen de consulter et de renseigner des informations sur les personnes qui souhaitent entrer sur leur territoire, notamment afin de prévenir l’accès au territoire d’une personne dangereuse ou recherchée. La situation dans laquelle se situe actuellement Chypre et sa proximité géographique avec l’espace Schengen justifiant une coopération étroite en matière d’immigration, je me suis positionné en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Au vu des problèmes qui se posent à Chypre, à savoir un afflux de migrants illégaux, il semble pertinent que les autorités chargées du contrôle aux frontières et les autorités répressives chypriotes aient désormais la possibilité de saisir et consulter des signalements concernant des personnes ou des objets dans le SIS afin de garantir un meilleur contrôle et un niveau plus élevé de sécurité. J’ai donc soutenu ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">22858</div>
+            
+            <header><b>Fabienne KELLER</b> | Renaissance</header>
+            Je soutiens pleinement l’accès de Chypre au système d’information Schengen (SIS). Bien que Chypre ne fasse pas partie de l’espace de libre circulation, son accès à ce système permettra de renforcer la sécurité au sein de l’Union européenne grâce à une meilleure coopération policière.Toutefois, ce rapport non législatif est une procédure de consultation du Parlement européen, dont l’avis n’est pas contraignant pour le Conseil et n’entrave pas le processus d’accès de Chypre au SIS. C’est pourquoi je me suis opposée à ce texte porté par un rapporteur issu du Groupe «Identité et Démocratie» (ID), refusant ainsi de m’associer à un groupe d’extrême droite dont je ne soutiens ni l’idéologie, ni les positions eurosceptiques.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté pour ce rapport car il permettra d’effectuer plus facilement des signalements concernant les personnes ou les objets, garantissant ainsi un meilleur contrôle et un niveau plus élevé de sécurité à la frontière chypriote.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport relatif à l’application en République de Chypre des dispositions de l’acquis de Schengen relatives au système d’information Schengen (SIS). Chypre n’appartient pas à l’espace Schengen mais est confronté à un afflux de migrants illégaux. Le texte vise donc à donner un accès au SIS à cet État membre. Cet accès renforcera la sécurité de Chypre, mais aussi indirectement celle de notre frontière extérieure, qui est la véritable destination des migrants qui arrivent à Chypre.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            Au vu des problèmes qui se posent à Chypre, à savoir un afflux de migrants illégaux qui arrivent depuis la partie nord du territoire et franchissent illégalement la «ligne verte», longue de 184 kilomètres, en évitant les contrôles aux frontières, il est pertinent que les autorités chargées du contrôle aux frontières et les autorités répressives chypriotes aient désormais la possibilité de saisir et consulter des signalements concernant des personnes ou des objets dans le SIS afin de garantir un meilleur contrôle et un niveau plus élevé de sécurité. J’ai donc voté en faveur de ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – J’ai voté en faveur de ce texte car il me semble pertinent que les autorités chargées du contrôle aux frontières et les autorités répressives chypriotes aient la possibilité de saisir et consulter des signalements concernant des personnes ou des objets dans le SIS pour garantir un meilleur contrôle et un niveau plus élevé de sécurité. L’afflux de migrants illégaux à Chypre a rendu cette mesure nécessaire.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Conformément à l’article 3, paragraphes 1 et 2, de l’acte d’adhésion de 2003, certaines dispositions de l’acquis de Schengen sont déjà applicables à Chypre depuis la date d’adhésion, tandis que d’autres dispositions ne s’appliqueront qu’à la suite d’une décision du Conseil à cet effet. L’objectif de la proposition est de mettre en œuvre à Chypre les dispositions actuelles relatives au système d’information Schengen (SIS), ce qui n’est donc pas le cas jusqu’à aujourd’hui. Le 28 mai 2019, Chypre avait fait part de sa volonté et de son engagement d’appliquer toutes les parties de l’acquis de Schengen et de faire l’objet d’évaluations en ce domaine. Au vu des problèmes qui se posent à Chypre, à savoir un afflux de migrants illégaux qui arrivent depuis la partie nord du territoire et franchissent illégalement la «ligne verte», longue de 184 kilomètres, en évitant les contrôles aux frontières, il semble pertinent que les autorités chargées du contrôle aux frontières et les autorités répressives chypriotes aient désormais la possibilité de saisir et consulter des signalements concernant des personnes ou des objets dans le SIS afin de garantir un meilleur contrôle et un niveau plus élevé de sécurité. En conséquence, j’ai voté en faveur de ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Conformément à l’article 3, paragraphes 1 et 2, de l’acte d’adhésion de 2003, certaines dispositions de l’acquis de Schengen sont déjà applicables à Chypre depuis la date d’adhésion, tandis que d’autres dispositions ne s’appliqueront qu’à la suite d’une décision du Conseil à cet effet. L’objectif de la proposition est de mettre en œuvre à Chypre les dispositions actuelles relatives au système d’information Schengen (SIS), ce qui n’est donc pas le cas jusqu’à aujourd’hui.Au vu des problèmes qui se posent à Chypre, à savoir un afflux de migrants illégaux qui arrivent depuis la partie nord du territoire et franchissent illégalement la «ligne verte», longue de 184 kilomètres, en évitant les contrôles aux frontières, il semble pertinent que les autorités chargées du contrôle aux frontières et les autorités répressives chypriotes aient désormais la possibilité de saisir et de consulter des signalements concernant des personnes ou des objets dans le SIS afin de garantir un meilleur contrôle et un niveau plus élevé de sécurité.J’ai donc voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">197581</div>
+            
+            <header><b>Stéphanie YON-COURTIN</b> | Renaissance</header>
+            En tant que députée pro-européenne, je soutiens pleinement l’accès de Chypre au système d’information Schengen. Bien que cet État membre de l’Union ne fasse pas partie de l’espace de libre circulation, cet accord de coopération permettra de renforcer la sécurité au sein de l’Union européenne et le contrôle aux frontières des personnes ou entités recherchées ou qui présentent un risque pour la sécurité intérieure.Toutefois, ce texte non législatif est une procédure de consultation du Parlement européen, dont l’avis n’est pas contraignant pour le Conseil, j’ai donc souhaité m’opposer à ce rapport porté par un Rapporteur issu du Groupe «Identité et Démocratie» (ID), refusant de m’associer à un projet porté par l’extrême droite, dont je ne soutiens ni l’idéologie, ni les positions eurosceptiques.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            . – Au vu de l’afflux de migrants illégaux à Chypre qui arrivent depuis la partie nord du territoire et franchissent illégalement la «ligne verte», il semble pertinent que les autorités chargées du contrôle aux frontières aient désormais la possibilité de saisir et de consulter des signalements concernant des personnes ou des objets dans le SIS. Cela permettra de garantir un meilleur contrôle et un niveau plus élevé de sécurité. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            Chypre a adhéré à l’UE en 2003, cependant dans certains domaines, l’intégration européenne est progressive et, à ce jour, Chypre n’est pas encore intégrée au système d’information Schengen (SIS). Aujourd’hui Chypre subit un afflux de migrants illégaux arrivant du nord du territoire et franchissant la frontière en évitant les contrôles. Nous ne pouvons qu’être favorables à ce que les autorités chargées du contrôle aux frontières chypriotes aient désormais la possibilité de saisir et consulter des signalements de personnes ou d’objets dans le système SIS. Cela favorise un meilleur contrôle à Chypre et un niveau de sécurité plus élevé à Chypre, mais aussi dans le reste de l’Union puisque ce système est partagé. J’ai évidemment voté pour ce rapport qui a d’ailleurs été rédigé par l’un de mes collègues du groupe ID.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
+
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

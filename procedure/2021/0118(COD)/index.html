@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Procédures d&#39;insolvabilité: remplacement des annexes A et B du règlement</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,80 +22,39 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Procédures d&#39;insolvabilité: remplacement des annexes A et B du règlement</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
-    <article>
-    <header>👍 Adoption du texte | 
-
-✅️ Adopté
-
-</header>
-    
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
-        <section>
-
-<div class="votes ">
-  
-    <div class="+" style="width: calc(671/688 * 100%)">671</div>
-  
-  
-    <div class="-" style="width: calc(4/688 * 100%)">4</div>
-  
-  
-    <div class="0" style="width: calc(13/688 * 100%)">13</div>
-  
-</div>
-</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
-        <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
-        
-        
-            <section>
-
-
-
-<div class="votes">
-  
-    <div class="+" style="width: calc(79/79 * 100%)">79</div>
-  
-  
-  
-</div>
- 
-</section>
-            <a href="/voting/137366">🗳 Voir le détail du vote</a>
-        
-    
-    </article>
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -107,31 +67,264 @@
     
         
         
-            <li>Politique de l&#39;entreprise, coopération entre entreprises</li>
-        
-    
-        
-        
             <li>Droit des sociétés</li>
         
     
+        
+        
+            <li>Politique de l&#39;entreprise, coopération entre entreprises</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/0118(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/0118(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0293_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-11-23-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-11-23-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
+
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – De nouvelles procédures nationales dans les Etats membres ont rendu nécessaires les modifications techniques qu’apporte ce texte aux procédures d’insolvabilité. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté pour ce rapport.Cette mise à jour d&#39;annexes afférentes aux changements introduits par les États membres dans leur organisation s&#39;agissant des procédures d&#39;insolvabilité ne pose pas de difficulté.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Il s’agit d’un exercice technique de mise à jour d’annexes sur la base des changements opérés par les États membres dans leur organisation interne en matière d’insolvabilité. J’ai voté en faveur de ce dossier.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté pour ce rapport car il s’agit d’une simple proposition technique de bon sens visant à organiser les procédures nationales en matière d’insolvabilité.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Ce texte est relativement technique, car il traite du règlement même du parlement européen. Le règlement des procédures d’insolvabilité, adopté en 2015 englobe deux annexes : À et B qui correspondent respectivement au répertoire de toutes les procédures mises à disposition pour les entreprises faisant face à des difficultés économiques et au répertoire de tous les acteurs habilités par les autorités nationales à agir dans lesdites procédures. Lorsqu’un état membre souhaite amender une procédure liée à ce texte, il en informe la commission afin de modifier les annexes susmentionnées. Les modifications du texte que nous avons voté en plénière concernent plusieurs pays : concernent l’Allemagne, l’Italie, Chypre, la Lituanie, les Pays-Bas et l’Autriche. Comme il s’agit seulement d’une modification technique et non fondamentale, je n’ai vu aucun problème à voter pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            Les annexes du règlement (UE) 2015/848, relatif aux procédures d&#39;insolvabilité, énumèrent les dénominations données, dans le droit national des États membres, aux procédures d&#39;insolvabilité et aux praticiens de l&#39;insolvabilité auxquels ledit règlement s&#39;applique.Il s’agit donc d’un exercice technique de mise à jour d’annexes sur la base des changements opérés par les États membres dans leur organisation interne en matière d’insolvabilité. Je n’ai aucune objection à faire. J’ai donc voté POUR ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport relatif au remplacement des annexes A et B du règlement (UE) 2015/848 du Parlement européen et du Conseil en matière de procédures d’insolvabilité. Ce texte purement technique adapte la terminologie de certaines annexes en vue de tenir compte de modifications législatives opérées par certains États membres dans leur droit interne.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à actualiser les annexes du règlement sur les procédures d’insolvabilité pour intégrer des modifications introduites par plusieurs Etats membres au niveau national. J’ai donc voté pour ce texte technique qui prévoit simplement de prendre en compte les évolutions constatées en Allemagne, en Italie, à Chypre, en Lituanie, aux Pays-Bas et en Autriche sans modifier le contenu du règlement européen.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Le Règlement sur les procédures d’insolvabilité a été adopté en 2015. L’annexe A répertorie toutes les procédures disponibles en cas de difficultés économiques pour une entreprise et l’annexe B répertorie les acteurs habilités par les autorités nationales pour intervenir dans lesdites procédures. À chaque fois qu’un État Membre modifie une procédure liée à ce règlement, ou l’un des acteurs habilités à intervenir, il doit en informer la Commission qui fait une proposition pour amender les annexes en conséquence. Dans ce cas, les modifications concernent l’Allemagne, l’Italie, Chypre, la Lituanie, les Pays-Bas et l’Autriche. Il s’agit uniquement d’une modification technique à laquelle je n’ai aucune raison de m’opposer.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Il s’agit d’un exercice technique de mise à jour d’annexes sur la base des changements opérés par les États membres dans leur organisation interne en matière d’insolvabilité.Pour.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté pour ce rapport car il s’agit d’un exercice technique de mise à jour d’annexes sur la base des changements opérés par les États membres dans leur organisation interne en matière d’insolvabilité.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            Il s’agit avec ce rapport d’un exercice technique de mise à jour d’annexes sur la base des changements opérés par les États membres dans leur organisation interne en matière d’insolvabilité. Je n’ai naturellement aucune objection à y apporter.J’ai voté pour
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Les annexes A et B du règlement (UE) 2015/848, relatif aux procédures d&#39;insolvabilité, énumèrent les dénominations données, dans le droit national des États membres, aux procédures et aux praticiens de l&#39;insolvabilité auxquels ledit règlement s&#39;applique. En octobre 2020, les Pays-Bas ont notifié à la Commission les modifications récentes apportées à leur législation nationale en la matière, par lesquelles ils ont introduit un nouveau régime préventif ainsi que de nouvelles catégories de praticiens de l&#39;insolvabilité. Des notifications ont ensuite été reçues de l’Italie, de la Lituanie, de Chypre et de la Pologne en décembre 2020, puis de l’Allemagne, de la Hongrie et de l’Autriche, concernant des modifications apportées à leur législation nationale respective, introduisant de nouveaux types de procédures et de nouvelles catégories de praticiens. Tous ces nouveaux types de procédures et de praticiens rendent nécessaire la modification, pour mise à jour, des annexes A et B dudit règlement. Il s’agit d’un exercice technique de mise à jour d’annexes sur la base des changements opérés par les États membres dans leur organisation interne en matière d’insolvabilité. J’ai donc voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            En octobre 2020, les Pays-Bas ont notifié à la Commission les modifications récentes apportées à leur législation nationale en matière d’insolvabilité. Des notifications ont ensuite été reçues de l’Italie, de la Lituanie, de Chypre et de la Pologne en décembre 2020, puis de l’Allemagne, de la Hongrie et de l’Autriche, concernant des modifications apportées à leur législation nationale respective, introduisant de nouveaux types de procédures et de nouvelles catégories de praticiens.Il s’agit simplement d’un exercice technique de mise à jour d’annexes sur la base des changements opérés par les États membres dans leur organisation interne en matière d’insolvabilité. Notre délégation n’a évidemment aucune objection.J’ai donc voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            . – Il s’agit d’un exercice technique de mise à jour d’annexes sur la base des changements opérés par les États membres dans leur organisation interne en matière d’insolvabilité. Aucune objection à formuler, j’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté en faveur de cette mise à jour sur les changements opérés par les États membres dans leur organisation interne en matière d’insolvabilité. Il ne s’agit que d’un ajustement technique qui ne constitue pas une ingérence de l’Union dans les compétences des Etats membres.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

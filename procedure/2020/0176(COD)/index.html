@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Application des contingents tarifaires et des autres contingents à l’importationde l’Union</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,94 +22,43 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Application des contingents tarifaires et des autres contingents à l’importationde l’Union</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
-    <article>
-    <header>👍 Adoption du texte | 
-
-✅️ Adopté
-
-</header>
-    
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
-        <section>
-
-<div class="votes ">
-  
-    <div class="+" style="width: calc(686/696 * 100%)">686</div>
-  
-  
-    <div class="-" style="width: calc(3/696 * 100%)">3</div>
-  
-  
-    <div class="0" style="width: calc(7/696 * 100%)">7</div>
-  
-</div>
-</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
-        <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
-        
-        
-            <section>
-
-
-
-<div class="votes">
-  
-    <div class="+" style="width: calc(78/78 * 100%)">78</div>
-  
-  
-  
-</div>
- 
-</section>
-            <a href="/voting/125371">🗳 Voir le détail du vote</a>
-        
-    
-    </article>
 
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Politique commerciale commune en général</li>
-        
-    
-        
-        
-            <li>Accords et relations dans le cadre de l&#39;Organisation mondiale du commerce (OMC)</li>
-        
     
         
         
@@ -120,24 +70,271 @@
             <li>Accords et relations commerciales et économiques multilatérales et plurilatérales</li>
         
     
+        
+        
+            <li>Accords et relations dans le cadre de l&#39;Organisation mondiale du commerce (OMC)</li>
+        
+    
+        
+        
+            <li>Politique commerciale commune en général</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    
-    
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/0176(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/0176(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0216_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-11-23-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-11-23-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
+
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Ce texte a pour but de combler un vide juridique concernant les droits de douane perceptibles sur les produits en provenance d’un pays tiers et arrivant en Irlande du Nord. Je me suis abstenu car, s’il est important de combler ce vide, la stratégie globale de l’UE sur ces questions est critiquable et je refuse de lui donner un blanc-seing.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté pour ce texte.Le protocole annexé au traité précise que l&#39;Irlande du Nord fait partie intégrante du territoire du Royaume-Uni.Le règlement propose que les importations effectuées en vertu des contingents à l’importation de l’Union applicables aux marchandises originaires d’un pays tiers et introduites en Irlande du Nord ne pourraient pas être imputées sur les droits dudit pays tiers vis-àvis de l’Union, sauf accord du pays tiers.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            L’objectif de ce texte est de remédier aux conséquences du retrait du Royaume-Uni de l’Union et de préparer la mise en œuvre de l’accord de retrait en ce qui concerne l’application des contingents tarifaires. La situation du territoire irlandais présente un risque pour le bon fonctionnement du marché unique de l’Union et pour l’intégrité de la politique commerciale commune. Il convient donc de clarifier les impacts du Brexit en matière douanière sur ce territoire en particulier. La proposition dresse ainsi clairement la liste des territoires douaniers concernés qui constitueront désormais le territoire douanier de l’Union. J’ai voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            Je me suis abstenu sur ce rapport pour protester contre la stratégie globale de l’UE sur le Brexit. Cette stratégie initiée par la Commission cherche à traiter ces sujets techniques de façon politique, dans l’unique objectif de faire regretter au peuple britannique son courageux choix en faveur du Brexit.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Ce texte est une adaptation du cadre règlementaire commercial européen au Brexit. L’accord de transition passé en février 2020 (temporaire, jusqu’à règlement définitif escompté pour fin décembre) avec le Royaume-Uni maintient la libre circulation des marchandises comme si ce dernier était toujours membre de l’Union Européenne. L’astuce technique de ce « comme si » se trouve en Irlande du Nord, qui est le sas physique de la libre circulation maintenue, et à la frontière de laquelle il est impossible de rétablir une douane physique, sous peine de ruiner l’accord de paix passé en 1998 avec l’IRA. Mais le Royaume-Uni, Irlande du Nord comprise, n’est plus membre de l’Union et n’est donc plus obligé de respecter certains quotas d’importation (« contingents tarifaires ») depuis des pays tiers, essentiellement en matière agricole. Il faut donc à la fois garantir la libre-circulation des marchandises entre l’Europe et le Royaume-Uni ; et en même temps s’assurer que des importateurs n’utilisent pas le Royaume-Uni pour passer « en contrebande » vers l’Europe, via l’Irlande du Nord, des produits hors quota d’importation. Vote pour.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            Le Royaume-Uni (Grande-Bretagne et Irlande du Nord) s’est retiré de l’Union européenne le 1er février 2020. Ce retrait est négocié entre les différentes parties, notamment au regard des marchandises en circulation dans l’UE, du droit de l’UE en vigueur et en comptant une période de transition. Ce retrait pose plusieurs questions juridiques et douanières, notamment eu égard à l’accord (protocole) entre l’Irlande (UE) et l’Irlande du Nord qui crée un vide juridique. Le règlement vise à remplir ce vide juridique mais il poursuit une stratégie européenne plus globale relative au Brexit. Reste donc à savoir comment le vide juridique sera rempli et dans quelle stratégie globale s’inscrit ce règlement. Je me suis donc abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport sur l’application des contingents tarifaires et des autres contingents à l’importation de l’Union. Ce texte technique vise à tenir compte de l’impact du Brexit, étant donné qu’en vertu de l’accord de retrait, l’Irlande du Nord fera simultanément partie du territoire douanier du Royaume-Uni et de celui de l’UE.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Cette proposition législative établit que les contingents tarifaires à l’importation de l’Union ne devraient être disponibles que pour les marchandises importées et mises en circulation dans l’Union, et non en Irlande du Nord. Cette disposition est importante au vu des effets de la sortie du Royaume-Uni de l’Union européenne. En vertu de l’accord de sortie conclu, bien que l’Irlande du Nord se trouve officiellement sur le territoire douanier du Royaume-Uni, le gouvernement britannique, en ce qui concerne l’Irlande du Nord, est tenu d’appliquer la législation douanière de l’Union comme si l’Irlande du Nord était encore une partie du territoire douanier de l’Union. Dès lors, les importations effectuées en vertu des contingents tarifaires à l’importation de l’Union applicables aux marchandises originaires d’un pays tiers et introduite en Irlande du Nord ne doivent pas être imputées sur les droits dudit pays vis-à-vis de l’Union. Si ce n’était pas le cas, cela représenterait un risque pour le fonctionnement du marché intérieur européen en créant une possibilité de contournement des contingents tarifaires et autres contingents à l’importation de l’Union. Cette proposition clarifie les choses et prévient un tel risque. Je l’approuve et vote en sa faveur.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Le règlement propose que les importations effectuées en vertu des contingents à l&#39;importation de l&#39;Union applicables aux marchandises originaires d&#39;un pays tiers et introduites en Irlande du Nord ne pourraient pas être imputées sur les droits dudit pays tiers vis-à-vis de l&#39;Union, sauf accord du pays-tiers. Cette proposition vise à préserver l&#39;intégrité du marché unique et les intérêts français entre autres.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté pour ce rapport car il vise à protéger les intérêts français après le Brexit.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            J’ai voté en faveur de ce texte. Il propose que les importations effectuées en vertu des contingents à l’importation de l’Union applicables aux marchandises originaires d’un pays tiers, et introduites en Irlande du Nord, ne puissent pas être imputées sur les droits de ce pays tiers vis-à- vis de l’Union (sauf accord du pays tiers). Cette proposition vise à préserver l’intégrité du marché unique et préservera notamment les intérêts français.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – La stratégie globale relative au Brexit et le traitement des sujets techniques de la part de la Commission est plus que discutable. Un sujet d’une telle importance mérite d’être traité sans ornière idéologique, le règlement remplit un vide juridique qu’il faut combler. Je me suis donc abstenue sur ce vote.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Le Royaume-Uni (Grande-Bretagne et Irlande du Nord) s’est retiré de l’Union européenne le 1er février 2020. Ce retrait est négocié entre les différentes parties, notamment au regard des marchandises en circulation dans l’UE, du droit de l’UE en vigueur et en comptant une période de transition. Ce retrait pose plusieurs questions juridique et douanières, notamment eu égard à l’accord entre l’Irlande (UE) et l’Irlande du Nord qui crée un vide juridique. Ce protocole, annexé à l’accord de retrait précise que l’Irlande du Nord fait partie du territoire douanier du Royaume-Uni et qu’aucune disposition dudit protocole n’empêche le Royaume-Uni d’inclure l’Irlande du Nord dans le champ d’application territorial de ses listes de concessions annexées à l’accord général sur les tarifs douaniers et le commerce de 1994. Dans le même temps, bien que l’Irlande du Nord se trouve officiellement sur le territoire douanier du Royaume-Uni, le Royaume-Uni, en ce qui concerne l’Irlande du Nord, est tenu d’appliquer la législation douanière de l’Union comme si l’Irlande du Nord demeurait sur le territoire douanier de l’Union. Cette situation présente un risque pour l’intégrité du marché commun. Je me suis abstenue sur ce texte dans l’attente des précisions sur le Brexit.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Avec le référendum provoquant la sortie du Royaume-Uni de l’Union européenne et du marché commun, plusieurs questions juridiques et douanières se sont posées. La première source de tension devient la frontière entre l’Irlande et l’Irlande du Nord.Ce texte propose donc de solutionner ce conflit juridique et économique à venir. Cependant, l’attitude de la Commission depuis le référendum de 2016 n’est que revancharde. Symboliquement la souveraineté britannique est attaquée. Voter pour ce texte, c’est donner un accord de principe à cette attitude de beaucoup d’institutions européennes qui souhaitent punir les Britanniques pour leur « mauvais vote ».Plutôt que de voter contre, la délégation a proposé de s’abstenir. C’est pourquoi j’ai également voté abstention.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Le Royaume-Uni (Grande-Bretagne et Irlande du Nord) s’est retiré de l’UE le 1er février 2020. Un retrait négocié entre les différentes parties, notamment du fait des marchandises en circulation dans l’UE, du droit de l’UE en vigueur et en comptant une période de transition. Ce retrait pose plusieurs questions juridique et douanières, notamment eu égard à l’accord (protocole) entre l’Irlande (UE) et l’Irlande du Nord qui crée un vide juridique. Cette proposition de règlement a donc pour objet de combler ce vide juridique, ce qu’il fait très clairement, eu égard au protocole entre l’Irlande et l’Irlande du Nord. Dans le même temps, il poursuit une stratégie européenne relative au Brexit sur laquelle nous émettons de fortes réserves, pour ne rien dire des conséquences politiques que revêt le traitement par la Commission de ces sujets éminemment techniques. Je me suis donc abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté en faveur de ce rapport qui concerne le retrait du Royaume-Uni de l’Union européenne. Ce règlement préserve les intérêts français dans le cadre des importations qui transitent par l’Irlande du Nord.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

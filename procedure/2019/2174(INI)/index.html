@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Rapport sur les rapports 2019-2020 de la Commission sur la Macédoine du Nord</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Rapport sur les rapports 2019-2020 de la Commission sur la Macédoine du Nord</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(558/687 * 100%)">558</div>
-  
-  
-    <div class="-" style="width: calc(70/687 * 100%)">70</div>
+    <div class="for" style="width: calc(558/687 * 100%)">558</div>
   
   
-    <div class="0" style="width: calc(59/687 * 100%)">59</div>
+    <div class="against" style="width: calc(70/687 * 100%)">70</div>
+  
+  
+    <div class="abstention" style="width: calc(59/687 * 100%)">59</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(42/78 * 100%)">42</div>
+    <div class="for" style="width: calc(42/78 * 100%)">42</div>
   
   
-    <div class="-" style="width: calc(22/78 * 100%)">22</div>
+    <div class="against" style="width: calc(22/78 * 100%)">22</div>
   
   
-    <div class="0" style="width: calc(14/78 * 100%)">14</div>
+    <div class="abstention" style="width: calc(14/78 * 100%)">14</div>
   
 </div>
  
 </section>
-            <a href="/voting/129475">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/129475">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -111,426 +116,578 @@
     
         
         
-            <li>Etat et évolution de l&#39;Union</li>
+            <li>Elargissement de l&#39;Union</li>
         
     
         
         
-            <li>Elargissement de l&#39;Union</li>
+            <li>Etat et évolution de l&#39;Union</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2174(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0040_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-03-24-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
+<p>
 
   
       39. se félicite de l’adoption renouvelée de la législation anti-discrimination par l’ensemble des partis politiques et 
   
 
   
-      <del>invite instamment les autorités à poursuivre avec un processus inclusif et transparent instaurant une commission indépendante </del>
+      <del>invite instamment les autorités à poursuivre avec un processus inclusif et transparent instaurant </del>
   
 
   
-      <ins>salue le processus transparent de nomination d’une commission </ins>
+      <ins>salue le processus transparent de nomination d’</ins>
+  
+
+  
+      une commission 
+  
+
+  
+      <del>indépendante </del>
   
 
   
       de protection contre les discriminations, qui garantisse la protection et l’inclusion de l’ensemble des groupes marginalisés; encourage la Sobranie à adopter une législation qui permettra la mise en place d’une procédure simplifiée, transparente et accessible de reconnaissance légale du genre fondée sur l’autodétermination, et évitera les discriminations fondées sur l’orientation sexuelle ou l’identité de genre; note l’organisation de la toute première marche des fiertés de Skopje en juin 2019;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Indépendant, Mouvement Démocrate)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">593</div>
+  <div class="against">10</div>
+  <div class="abstention">81</div>
+</span>
+
+  
+    
+    <a href="/voting/129048">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(593/684 * 100%)">593</div>
-  
-  
-    <div class="-" style="width: calc(10/684 * 100%)">10</div>
-  
-  
-    <div class="0" style="width: calc(81/684 * 100%)">81</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/129048">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D,Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>77 bis. condamne les récentes déclarations provocatrices de responsables du gouvernement bulgare sur des questions historiques concernant la Macédoine du Nord, qui vont à l’encontre de l’esprit du traité sur les relations de bon voisinage avec la Bulgarie; invite les autorités bulgares à s’abstenir de faire de telles déclarations, malgré la campagne électorale en cours en Bulgarie; se félicite de la réaction sage et équilibrée des responsables du gouvernement de Macédoine du Nord à ces provocations;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">232</div>
+  <div class="against">353</div>
+  <div class="abstention">97</div>
+</span>
+
+  
+    
+    <a href="/voting/129265">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(232/682 * 100%)">232</div>
-  
-  
-    <div class="-" style="width: calc(353/682 * 100%)">353</div>
-  
-  
-    <div class="0" style="width: calc(97/682 * 100%)">97</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/129265">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D,Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>12 bis. prend acte de l’adoption par le gouvernement de deux plans de réforme, à savoir le programme «Europe at home» et le plan d’action pour la lutte contre la corruption, qui visent à rationaliser le programme de réformes dans certains domaines prioritaires dans le cadre du volet «fondamentaux» de la méthode d’adhésion révisée;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">580</div>
+  <div class="against">32</div>
+  <div class="abstention">72</div>
+</span>
+
+  
+    
+    <a href="/voting/129250">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(580/684 * 100%)">580</div>
-  
-  
-    <div class="-" style="width: calc(32/684 * 100%)">32</div>
-  
-  
-    <div class="0" style="width: calc(72/684 * 100%)">72</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/129250">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>74 bis. déplore l’absence persistante de progrès dans la mise en œuvre des précédentes recommandations du Parlement européen concernant la discrimination à l’encontre des citoyens qui expriment ouvertement leur identité et/ou leur origine ethnique bulgare;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">352</div>
+  <div class="against">171</div>
+  <div class="abstention">160</div>
+</span>
+
+  
+    
+    <a href="/voting/129051">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(352/683 * 100%)">352</div>
-  
-  
-    <div class="-" style="width: calc(171/683 * 100%)">171</div>
-  
-  
-    <div class="0" style="width: calc(160/683 * 100%)">160</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/129051">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>74 ter. encourage fermement les autorités et la société civile à prendre des mesures adéquates dans l’optique d’une réconciliation historique afin de surmonter les clivages entre les différents groupes ethniques et nationaux et en leur sein, y compris les citoyens d’identité bulgare;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">479</div>
+  <div class="against">136</div>
+  <div class="abstention">68</div>
+</span>
+
+  
+    
+    <a href="/voting/129052">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(479/683 * 100%)">479</div>
-  
-  
-    <div class="-" style="width: calc(136/683 * 100%)">136</div>
-  
-  
-    <div class="0" style="width: calc(68/683 * 100%)">68</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/129052">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>18 bis. souligne que plusieurs études et rapports, ainsi qu’Europol, ont confirmé la menace actuelle que représente le trafic d’armes à feu dans la région des Balkans occidentaux; souligne que les armes utilisées lors des récents attentats au sein de l’Union ont été acquises sur des marchés locaux d’armes à feu illicites et se sont avérées provenir pour l’essentiel des Balkans occidentaux, qui sont le principal fournisseur d’armes à feu illicites en Europe; rappelle que le dernier rapport des Nations unies sur le sujet, l’étude mondiale sur le trafic d’armes à feu 2020 de l’Office des Nations unies contre la drogue et le crime (ONUDC), confirme que les Balkans occidentaux restent une source d’armes à feu illicites pour l’Europe occidentale;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">268</div>
+  <div class="against">382</div>
+  <div class="abstention">28</div>
+</span>
+
+  
+    
+    <a href="/voting/129046">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(268/678 * 100%)">268</div>
-  
-  
-    <div class="-" style="width: calc(382/678 * 100%)">382</div>
-  
-  
-    <div class="0" style="width: calc(28/678 * 100%)">28</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/129046">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>55 bis. rappelle que la Turquie, en combinant un mélange d’idéologie néo-ottomane, d’islamisme et de pragmatisme dans sa politique étrangère, use de son pouvoir d’influence économique, culturel et religieux pour influencer les médias, la sphère publique et la situation politique dans les Balkans occidentaux; souligne le risque croissant d’expansionnisme de la Turquie dans les Balkans occidentaux, qui contribue à déstabiliser davantage la région;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">187</div>
+  <div class="against">404</div>
+  <div class="abstention">88</div>
+</span>
+
+  
+    
+    <a href="/voting/129050">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(187/679 * 100%)">187</div>
-  
-  
-    <div class="-" style="width: calc(404/679 * 100%)">404</div>
-  
-  
-    <div class="0" style="width: calc(88/679 * 100%)">88</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/129050">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>33 bis. regrette que les autorités de Skopje ne reconnaissent pas l’existence d’une communauté bulgare, bien que plus de origine bulgare;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">199</div>
+  <div class="against">405</div>
+  <div class="abstention">79</div>
+</span>
+
+  
+    
+    <a href="/voting/129047">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(199/683 * 100%)">199</div>
-  
-  
-    <div class="-" style="width: calc(405/683 * 100%)">405</div>
-  
-  
-    <div class="0" style="width: calc(79/683 * 100%)">79</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/129047">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       5. exprime sa solidarité avec la population de Macédoine du Nord et estime qu’il est important de continuer à soutenir fermement et activement les progrès réalisés par la Macédoine 
@@ -544,60 +701,62 @@
       sur la voie de l’adhésion à l’Union européenne;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">149</div>
+  <div class="against">487</div>
+  <div class="abstention">48</div>
+</span>
+
+  
+    
+    <a href="/voting/129044">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(149/684 * 100%)">149</div>
-  
-  
-    <div class="-" style="width: calc(487/684 * 100%)">487</div>
-  
-  
-    <div class="0" style="width: calc(48/684 * 100%)">48</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/129044">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
-
-  
-      48. se félicite des efforts du pays en faveur de l’amélioration de la coopération en matière 
-  
+<p>
 
   
-      <del>de gestion de la migration irrégulière, de protection des frontières et </del>
+      48. se félicite des efforts du pays en faveur de l’amélioration de la coopération en matière de 
   
 
   
-      de réponse aux besoins fondamentaux des réfugiés, demandeurs d’asile et migrants; invite à renforcer davantage la protection internationale des personnes dans le besoin et à prévenir les violations du droit international, telles que les refoulements présumés; invite les autorités à mettre en place un mécanisme 
+      <del>gestion de la migration irrégulière, de protection des frontières et de </del>
+  
+
+  
+      réponse aux besoins fondamentaux des réfugiés, demandeurs d’asile et migrants; invite à renforcer davantage la protection internationale des personnes dans le besoin et à prévenir les violations du droit international, telles que les refoulements présumés; invite les autorités à mettre en place un mécanisme 
   
 
   
@@ -605,15 +764,15 @@
   
 
   
-      de surveillance active et à prendre les mesures nécessaires pour empêcher ces violations du droit international; 
+      de surveillance active et à prendre les mesures nécessaires pour empêcher ces violations du droit international;
   
 
   
-      <del>souligne que la contribution de la Macédoine du Nord à la protection des frontières extérieures de l’Union européenne est d’une importance cruciale et demande à l’Union d’intensifier son appui à la protection des frontières dans la région; </del>
+      <del> souligne que la contribution de la Macédoine du Nord à la protection des frontières extérieures de l’Union européenne est d’une importance cruciale et demande à l’Union d’intensifier son appui à la protection des frontières dans la région;</del>
   
 
   
-      relève les progrès réalisés dans la lutte contre la traite et le trafic d’êtres humains et rappelle la nécessité de mettre en place un mécanisme viable pour la gestion des flux migratoires 
+       relève les progrès réalisés dans la lutte contre la traite et le trafic d’êtres humains et rappelle la nécessité de mettre en place un mécanisme viable pour la gestion des flux migratoires 
   
 
   
@@ -629,15 +788,11 @@
   
 
   
-      avec l’Agence européenne de garde-frontières et 
+      avec l’Agence européenne de garde-frontières et
   
 
   
-      <del>   </del>
-  
-
-  
-      de garde-
+      <del>    </del>
   
 
   
@@ -645,123 +800,258 @@
   
 
   
+      de garde
+  
+
+  
+      <del>-</del>
+  
+
+  
+      <ins>- </ins>
+  
+
+  
       côtes (Frontex), 
   
 
   
-      <del>qui contribuerait à une protection plus efficace des frontières et à la lutte contre la criminalité transfrontalière dans le plein respect des </del>
+      <del>qui contribuerait à une protection plus efficace des frontières et à la lutte contre la criminalité transfrontalière dans le plein respect des</del>
   
 
   
-      <ins>et rappelle que toute activité aux frontières doit respecter pleinement les </ins>
+      <ins>et rappelle que toute activité aux frontières doit respecter pleinement les</ins>
   
 
   
-      droits fondamentaux; encourage le pays à accélérer l’adoption d’une stratégie pour l’intégration des migrants, y compris pour la réintégration des personnes faisant l’objet d’une décision de retour;
+       droits fondamentaux; encourage le pays à accélérer l’adoption d’une stratégie pour l’intégration des migrants, y compris pour la réintégration des personnes faisant l’objet d’une décision de retour;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">116</div>
+  <div class="against">552</div>
+  <div class="abstention">16</div>
+</span>
+
+  
+    
+    <a href="/voting/129049">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(116/684 * 100%)">116</div>
-  
-  
-    <div class="-" style="width: calc(552/684 * 100%)">552</div>
-  
-  
-    <div class="0" style="width: calc(16/684 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/129049">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       75. réitère son soutien total à la coopération régionale améliorée et appelle toutes les parties à assurer la mise en œuvre complète, cohérente et de bonne foi de l’accord de Prespa avec la Grèce et du traité de bon voisinage avec la Bulgarie, en tant qu’éléments essentiels des relations bilatérales 
   
 
   
-      <del>respectives;</del>
+      <del>respectives</del>
   
 
   
-      <ins>et régionales;</ins>
+      <ins>et régionales</ins>
   
 
   
-       invite instamment les partenaires à continuer de dialoguer et à résoudre au niveau bilatéral toutes les questions bilatérales en suspens qui n’ont pas d’incidence sur le processus d’adhésion, à agir de manière constructive et à s’abstenir de toute action susceptible de porter atteinte à l’intégration européenne et aux intérêts plus larges de l’Union;
+      ; invite instamment les partenaires à continuer de dialoguer et à résoudre au niveau bilatéral toutes les questions bilatérales en suspens qui n’ont pas d’incidence sur le processus d’adhésion, à agir de manière constructive et à s’abstenir de toute action susceptible de porter atteinte à l’intégration européenne et aux intérêts plus larges de l’Union;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(143/684 * 100%)">143</div>
-  
-  
-    <div class="-" style="width: calc(508/684 * 100%)">508</div>
-  
-  
-    <div class="0" style="width: calc(33/684 * 100%)">33</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/129053">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2174(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0040_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">143</div>
+  <div class="against">508</div>
+  <div class="abstention">33</div>
+</span>
+
   
+    
+    <a href="/voting/129053">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-03-24-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – L’adhésion de la Macédoine du Nord à l’Union européenne, qui serait vraisemblablement concomitante avec celle de l’Albanie, puis suivie de celle du Kosovo, pourrait avoir des conséquences extrêmement néfastes. En effet, elle favoriserait certainement la constitution d’une Grande Albanie, les Albanais représentant désormais plus de 25% de la population du pays. A l’heure actuelle, aucun gouvernement n’a pu se former en Macédoine du Nord sans l’apport des partis albanophones. Le pays est, par ailleurs, l’une des plus faibles économies du continent: une adhésion ouvrirait la voie à une immigration massive vers l’ouest, apportant avec elle un islamisme radical qui travaille la minorité albanaise. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce texte.Je ne suis pas favorable, d&#39;une manière générale, à l&#39;élargissement de l&#39;Union européenne aux Balkans et, partant, à l&#39;ouverture des négociations d&#39;adhésion avec la Macédoine du Nord. Notons que la Bulgarie s&#39;y oppose pour l&#39;heure, sur fond de désaccords portant sur l&#39;identité et l&#39;histoire de ces deux Etats.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce rapport d’initiative donne son avis sur les rapports de 2019 et 2020 de la Commission concernant la Macédoine du Nord. Le pays est devenu officiellement candidat en 2005. Depuis 2009, la Commission recommande l’ouverture de négociations d’adhésion. Le rapport demande des efforts de la part de la Macédoine du Nord en matière d&#39;État de droit, de fonctionnement des institutions démocratiques, de droits fondamentaux et de liberté des médias. L’ouverture de l’Union à de nouveaux pays étant contraire à mes engagements de campagne, je me suis abstenu sur ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport qui est avant tout la promotion vers l’élargissement et l’adhésion de la Macédoine du Nord. De plus, il passe sous silence ou minimise les nombreux problèmes tels que l’immigration illégale vers l’UE passant par « la route des Balkans », la criminalité de groupes mafieux pan-albanais en lien avec le Kosovo, l’Albanie et le Sud de la Serbie, la présence d’éléments islamistes liés à l’UCK-M, la faiblesse du niveau de vie de ce pays, etc.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport en faveur de l’adhésion de la Macédoine du Nord à l’UE pour plusieurs raisons. Il appelle à une meilleure prise en compte des droits des réfugiés alors que la Macédoine du Nord constitue un des principaux points de passage de l’immigration irrégulière vers l’UE. La corruption endémique dans le pays ne peut être éludée par le rapporteur. Enfin, avec un faible niveau de vie, une adhésion à l’UE aurait pour conséquence d’accélérer l’émigration vers ses pays membres.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Ce rapport annuel étudie la situation politique en Macédoine du Nord dans le cadre du processus d’adhésion. Le texte comporte plusieurs éléments positifs. Il salue à raison les progrès réalisées par Skopje en matière de droits de l’Homme, de la Femme, des minorités. Il souligne les avancées de la Macédoine du Nord en matière de respect de l’état de droit. Il prend acte avec satisfaction des efforts consentis par ce pays pour mettre en œuvre des réformes conformes aux valeurs de l’Union européenne. Mais le texte comporte aussi de trop nombreux passages se félicitant de l’adhésion de la Macédoine du Nord à l’OTAN ; ou demandant à Skopje de s’aligner sur les sanctions européennes à l’encontre de la Russie, sans jamais s’interroger sur la nocivité de ces sanctions sur notre économie, encore moins sur leur efficacité politique et diplomatique. Pour ces deux raisons, je me suis abstenu.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            Je me suis abstenue sur ce rapport concernant la Macédoine du Nord, pays candidat à l’entrée dans l’UE. Le texte dressait un bilan des réformes menées par la Macédoine du Nord, en vue de son adhésion, mais également la liste des actions qu’il lui reste à accomplir dans cette perspective, par exemple dans le domaine de la lutte contre le blanchiment d’argent et les crimes économiques. Il contenait toutefois des dispositions inacceptables, telles que l’affirmation selon laquelle l’élargissement est l’un des instruments les plus efficaces de la politique étrangère de l’Union, ou encore la volonté d’ouvrir les négociations d’adhésion dès que possible. Conformément à mes convictions et à mon engagement confirmé lors de la campagne des élections européennes, je suis opposée à tout nouvel élargissement. C’est pourquoi, si je respecte et salue les efforts fournis par la Macédoine du Nord, je ne pouvais soutenir ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter la position du Parlement sur l’évolution de la situation politique, économique et sociale de la Macédoine du Nord dans le cadre de sa procédure d’accession à l’adhésion à l’Union européenne. Il salue à raison les progrès menés en matière d’égalité entre les femmes et les hommes et de lutte contre les discriminations, et appelle à poursuivre les efforts entrepris pour garantir un cadre institutionnel de protection des droits humains. Il appelle en revanche à une accession rapide à l’Union sans évoquer la nécessaire harmonisation sociale préalable et se félicite de l’adhésion de la Macédoine du Nord à l’OTAN. Je me suis donc abstenue sur ce texte qui présente des éléments positifs mais ne tire pas les leçons des précédents élargissements et s’inscrit dans une vision atlantiste de la construction européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce rapport étudie l’évolution de la situation de la Macédoine du Nord, dans le cadre du processus d’adhésion à l’Union européenne. Il souligne ainsi que des efforts ont été faits en matière de défense des droits humains, de l’État de droit, mais surtout pour l’amélioration du système démocratique en général et rappelle que des progrès doivent encore être effectués sur les droits des minorités, des femmes, des personnes LGBTI ou encore la lutte contre la corruption. Malheureusement, le rapport fait l’impasse sur un point crucial : il ne saurait y avoir une nouvelle vague d’adhésions à l’Union européenne sans une harmonisation vers le haut préalable de nos normes sociales, environnementales et fiscales. Sinon nous ne ferons que perpétuer indéfiniment le cercle du dumping et la mise en concurrence généralisée des peuples européens. Je m’abstiens donc sur ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport car il est tourné entièrement vers un élargissement de l’UE aux Balkans et en l’espèce à la Macédoine du Nord.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            Le principal écueil de ce rapport est avant tout sa promotion vers l’élargissement et l’adhésion de la Macédoine du Nord, qui justifie à lui seul un vote contre. De plus, ce texte pose plusieurs problèmes de fond.Totalement inspiré par la vision fédéraliste de la Commission, il nie à chaque pays membre d’avoir son propre point de vue sur les adhésions des pays des Balkans occidentaux.Le fait de souligner la connexion entre l’adhésion à l’OTAN et à l’Union européenne est révélateur d’une posture visant à faire de l’Union européenne un sous-ensemble du système stratégique euro-atlantique, placé sous la domination intérêts des États-Unis.L’adhésion de la Macédoine du Nord à l’Union européenne, qui serait vraisemblablement concomitante avec celle de l’Albanie, puis suivie de celle du Kosovo, pourrait avoir des conséquences des plus néfastes. En effet, elle favoriserait certainement la constitution d’une Grande Albanie, les Albanais représentant désormais plus de 25% de la population du pays. A l’heure actuelle, aucun gouvernement n’a pu se former en Macédoine du Nord sans l’apport des partis albanophones. Sans parler de l’attractivité d’une telle perspective sur les minorités albanaises de Serbie et du Monténégro. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            J&#39;ai voté Contre ce texte qui promeut l&#39;élargissement de l&#39;UE et l&#39;intégration de la Macédoine du Nord, à l&#39;encontre de toutes les aspirations exprimées ces dernières années par les peuples européens.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – D’entrée, le rapport salue la décision du Conseil du 26 mars 2020 de donner son feu vert pour l’ouverture des négociations d’adhésion. La corruption endémique et le caractère très élevé de la corruption dans ces pays n’est pas évoqué. En revanche, le rapport parle d’une nécessité de coexistence multi-ethnique, donnant ainsi son assentiment à une vision pluricommunautaire du pays. Les relations de bon voisinage évoquées concernent à fortiori l’Albanie. Il insiste sur les droits des « communautés non-majoritaires », ce qui suppose un droit particulier, y compris politique, pour les Albanais. Sur le plan stratégique, il se félicite de l’adhésion de la Macédoine du Nord à l’OTAN en 2020, ce qui constitue de son point de vue un élément essentiel dans sa marche à l’adhésion à l’Union européenne.Le principal écueil de ce rapport est avant tout sa promotion vers l’élargissement et l’adhésion de la Macédoine du Nord, qui justifie à lui seul mon opposition. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Le rapport salue la décision du Conseil du 26 mars 2020 de donner son feu vert pour l’ouverture des négociations d’adhésion. Le rapport souligne le fait que la Macédoine du Nord constitue un des principaux points de passage de l’immigration irrégulière. Le texte demande aux autorités macédoniennes d’accentuer leur lutte contre le terrorisme et la radicalisation, sans nommer explicitement celles-ci. Le rapport appelle à une meilleure protection des frontières, mais aussi à une meilleure prise en compte des droits des réfugiés et des dispositions internationales dans ce sens. L’adhésion de la Macédoine du Nord à l’Union européenne, qui serait vraisemblablement concomitante avec celle de l’Albanie, puis suivie de celle du Kosovo, pourrait avoir des conséquences des plus néfastes. En effet, elle favoriserait certainement la constitution d’une Grande Albanie. Pour l’ensemble de ces raisons, j’ai voté contre ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Jusqu’en février 2020, la France refusait l’élargissement aux Balkans, et la liste En Marche aux européennes avait d’ailleurs réaffirmé cette position pendant la campagne. Mais Emmanuel Macron a changé d’avis et ouvert la voie, incluant la Macédoine du Nord.D’entrée, le rapport salue la décision du Conseil du 26 mars 2020 de donner son feu vert pour l’ouverture des négociations d’adhésion. La corruption endémique et le caractère très élevé de la corruption dans ces pays n’est pas évoqué.Le rapport parle d’une nécessité de coexistence multi-ethnique, donnant ainsi son assentiment à une vision pluricommunautaire du pays. Les relations de bon voisinage évoquées concernent à fortiori l’Albanie. Il insiste sur les droits des « communautés non-majoritaires », ce qui suppose un droit particulier, y compris politique, pour les Albanais.Sur le plan stratégique, il se félicite de l’adhésion de la Macédoine du Nord à l’OTAN en 2020, ce qui constitue de son point de vue un élément essentiel dans sa marche à l’adhésion à l’Union européenne.Le principal écueil de ce rapport est avant tout sa promotion vers l’élargissement et l’adhésion de la Macédoine du Nord, qui justifie à lui seul mon opposition.J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            En 2008, le Conseil a adopté un partenariat pour l&#39;adhésion de la République de Macédoine. Ce rapport est un instrument de promotion en faveur de cette adhésion. Or, la situation de la Macédoine est problématique : une arrivée de ce pays pauvre dans l’UE aurait pour conséquence d’accélérer l’émigration vers les pays membres de l’Union européenne; c’est un des maillons faibles de la Route des Balkans, qui constitue le premier chemin de l’immigration illégale vers l’Europe et une extension du système de Schengen à ce pays fragiliserait davantage la lutte contre la submersion migratoire ; l’islamisme radical y est en outre bien implanté au sein de la forte minorité albanaise. Le fait que ce rapport souligne la connexion entre l’adhésion à l’OTAN et à l’UE est révélateur d’une posture visant à faire de l’Union européenne un sous-ensemble du système euro-atlantique, sous la domination des États-Unis. Enfin cette adhésion serait vraisemblablement concomitante avec celle de l’Albanie et du Kosovo, ce qui pourrait favoriser l’émergence d’une « Grande Albanie » islamique, déstabilisatrice pour les États voisins et toute l’Europe. J’ai voté contre.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

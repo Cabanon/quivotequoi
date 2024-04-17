@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Ressources propres: Un nouveau départ pour les finances de l’UE. Un nouveau départ pour l’Europe</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Ressources propres: Un nouveau départ pour les finances de l’UE. Un nouveau départ pour l’Europe</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(356/620 * 100%)">356</div>
-  
-  
-    <div class="-" style="width: calc(199/620 * 100%)">199</div>
+    <div class="for" style="width: calc(356/620 * 100%)">356</div>
   
   
-    <div class="0" style="width: calc(65/620 * 100%)">65</div>
+    <div class="against" style="width: calc(199/620 * 100%)">199</div>
+  
+  
+    <div class="abstention" style="width: calc(65/620 * 100%)">65</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(45/73 * 100%)">45</div>
+    <div class="for" style="width: calc(45/73 * 100%)">45</div>
   
   
-    <div class="-" style="width: calc(21/73 * 100%)">21</div>
+    <div class="against" style="width: calc(21/73 * 100%)">21</div>
   
   
-    <div class="0" style="width: calc(7/73 * 100%)">7</div>
+    <div class="abstention" style="width: calc(7/73 * 100%)">7</div>
   
 </div>
  
 </section>
-            <a href="/voting/154622">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/154622">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -121,539 +126,1206 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2172(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0155_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-05-10-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197626,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197615">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197626">🇫🇷 Rassemblement national</option> 
+                        
+                            <option value="NA,197629">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197697,96952,204420,197503,197500,96743,197531,96750,197574,197506,197533,197529,30482,197698</div>
+                
 
-<section>
+<p>
 
   
       13. estime que le volet des recettes du budget de l’Union devrait être utilisé de manière stratégique pour renforcer la compétitivité et la durabilité de l’Union et pour promouvoir l’innovation dans l’Union, ainsi que la justice sociale, fiscale et environnementale; souligne qu’il convient de compléter les ressources propres écologiques par des ressources propres fondée sur l’impôt des sociétés 
   
 
   
-      <del>pour des raisons de suffisance,</del>
+      <del>pour des raisons de suffisance</del>
   
 
   
-      <ins>ainsi que des particuliers et des ménages les plus riches pour des raisons de suffisance, d’égalité sociale et    économique,</ins>
+      <ins>ainsi que des particuliers et des ménages les plus riches pour des raisons de suffisance, d’égalité sociale et    économique</ins>
   
 
   
-       d’équivalence fiscale (ceux qui tirent parti de l’Union et de ses marchés ouverts 
+      , d’équivalence fiscale (ceux qui tirent parti de l’Union et de ses marchés ouverts
   
 
   
-      <del>   </del>
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
       doivent aussi contribuer dans une juste proportion à son financement) et d’équité de la distribution globale entre les États membres et les secteurs;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      François ALFONSI (R&amp;PS), 
+    
+      Younous OMARJEE (LFI), 
+    
+      Michèle RIVASI (EELV), 
+    
+      Sylvie GUILLAUME (PS), 
+    
+      Manon AUBRY (LFI), 
+    
+      Damien CARÊME (EELV), 
+    
+      Leila CHAIBI (LFI), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Pierre LARROUTUROU (ND), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV) et 
+    
+      Claude GRUFFAT (EELV)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">213</div>
+  <div class="against">371</div>
+  <div class="abstention">38</div>
+</span>
+
+  
+    
+    <a href="/voting/155117">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(213/622 * 100%)">213</div>
-  
-  
-    <div class="-" style="width: calc(371/622 * 100%)">371</div>
-  
-  
-    <div class="0" style="width: calc(38/622 * 100%)">38</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/155117">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197697,96952,204420,197503,197500,96743,197531,96750,197574,197506,197533,197529,30482,197698,96952,197698,204420,197503,197500,96743,197531,96750,197574,197506,197529,24505</div>
+                
 
-<section>
+<p>
 
   
       <ins>29 bis. met en avant les importantes inégalités qui existent en matière de revenus et de richesse dans l’Union et souligne l’importance des formes progressives d’imposition pour lutter contre ces inégalités et promouvoir l’équité sociale, économique et fiscale; invite la Commission à présenter une proposition de nouvelle ressource propre fondée sur un impôt sur la fortune pour les particuliers ou les ménages privés afin d’y remédier; considère qu’un impôt sur la fortune progressif à l’échelle de    l’Union contribuerait à sortir celle-ci de la multitude de crises récentes, qu’il peut être utilisé pour lutter contre l’inflation et la hausse des prix et qu’il réduira les inégalités sociales et économiques corrosives;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      François ALFONSI (R&amp;PS), 
+    
+      Younous OMARJEE (LFI), 
+    
+      Michèle RIVASI (EELV), 
+    
+      Sylvie GUILLAUME (PS), 
+    
+      Emmanuel MAUREL (GRS), 
+    
+      Manon AUBRY (LFI), 
+    
+      Damien CARÊME (EELV), 
+    
+      Leila CHAIBI (LFI), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Pierre LARROUTUROU (ND), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV) et 
+    
+      Claude GRUFFAT (EELV)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">196</div>
+  <div class="against">383</div>
+  <div class="abstention">25</div>
+</span>
+
+  
+    
+    <a href="/voting/155121">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(196/604 * 100%)">196</div>
-  
-  
-    <div class="-" style="width: calc(383/604 * 100%)">383</div>
-  
-  
-    <div class="0" style="width: calc(25/604 * 100%)">25</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/155121">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197697,96952,204420,197503,197500,96743,197531,96750,197574,197506,197533,197529,30482,197698,96952,197698,204420,197503,197500,96743,197531,96750,197574,197506,197529,24505,197697,96952,197698,204420,197503,197500,96750,197574,197506,197529,24505</div>
+                
 
-<section>
+<p>
 
   
       <ins>29 ter. rappelle que les bénéfices exceptionnels ne correspondent pas aux bénéfices réguliers que les grandes entreprises auraient ou auraient pu obtenir dans des circonstances normales si des événements imprévisibles, tels que la pandémie et la guerre en Ukraine, n’avaient pas eu lieu; réaffirme son soutien aux mesures visant à taxer tous les secteurs qui profitent des crises mondiales et souligne que les recettes des bénéfices exceptionnels devraient profiter aux consommateurs et aux entreprises, et    en particulier soutenir les ménages vulnérables et les PME; demande dès lors à la Commission de réaliser d’urgence une évaluation d’une nouvelle ressource propre fondée sur une taxe de solidarité applicable à toute entreprise qui tire des profits excessifs des crises, y compris celles des secteurs énergétique, alimentaire, financier et pharmaceutique; estime qu’une telle ressource propre pourrait être fondée sur un taux d’imposition plus élevé appliqué aux bénéfices excédentaires des grandes multinationales des secteurs concernés au-delà d’un certain pourcentage du rendement annuel mondial ou européen;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      François ALFONSI (R&amp;PS), 
+    
+      Younous OMARJEE (LFI), 
+    
+      Michèle RIVASI (EELV), 
+    
+      Sylvie GUILLAUME (PS), 
+    
+      Emmanuel MAUREL (GRS), 
+    
+      Manon AUBRY (LFI), 
+    
+      Damien CARÊME (EELV), 
+    
+      Leila CHAIBI (LFI), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Pierre LARROUTUROU (ND), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV) et 
+    
+      Claude GRUFFAT (EELV)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">245</div>
+  <div class="against">357</div>
+  <div class="abstention">12</div>
+</span>
+
+  
+    
+    <a href="/voting/155122">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(245/614 * 100%)">245</div>
-  
-  
-    <div class="-" style="width: calc(357/614 * 100%)">357</div>
-  
-  
-    <div class="0" style="width: calc(12/614 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/155122">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197697,96952,204420,197503,197500,96743,197531,96750,197574,197506,197533,197529,30482,197698,96952,197698,204420,197503,197500,96743,197531,96750,197574,197506,197529,24505,197697,96952,197698,204420,197503,197500,96750,197574,197506,197529,24505,96952,197698,204420,197503,197500,96743,96750,197506,197533,197529,24505,30482</div>
+                
 
-<section>
+<p>
 
   
       <ins>29 quater. invite la Commission à évaluer le potentiel d’une nouvelle ressource propre fondée sur un impôt minimal de l’Union sur les plus-values, dans le but d’imposer les bénéfices réalisés sur un actif au moment de la vente; considère qu’un tel impôt s’appliquerait à la plus-value des revenus du capital, qui sont souvent moins imposés que les revenus du travail dans la plupart des États membres; estime, en outre, qu’un tel impôt pourrait couvrir un certain nombre d’immobilisations,    notamment les actions, les obligations, les actifs numériques tels que les cryptomonnaies, et les biens immobiliers; invite donc la Commission à évaluer la faisabilité d’une telle ressource propre et à présenter une proposition pertinente;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      François ALFONSI (R&amp;PS), 
+    
+      Younous OMARJEE (LFI), 
+    
+      Michèle RIVASI (EELV), 
+    
+      Sylvie GUILLAUME (PS), 
+    
+      Emmanuel MAUREL (GRS), 
+    
+      Manon AUBRY (LFI), 
+    
+      Damien CARÊME (EELV), 
+    
+      Leila CHAIBI (LFI), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Pierre LARROUTUROU (ND), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV) et 
+    
+      Claude GRUFFAT (EELV)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">196</div>
+  <div class="against">372</div>
+  <div class="abstention">20</div>
+</span>
+
+  
+    
+    <a href="/voting/155123">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(196/588 * 100%)">196</div>
-  
-  
-    <div class="-" style="width: calc(372/588 * 100%)">372</div>
-  
-  
-    <div class="0" style="width: calc(20/588 * 100%)">20</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/155123">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197697,96952,204420,197503,197500,96743,197531,96750,197574,197506,197533,197529,30482,197698,96952,197698,204420,197503,197500,96743,197531,96750,197574,197506,197529,24505,197697,96952,197698,204420,197503,197500,96750,197574,197506,197529,24505,96952,197698,204420,197503,197500,96743,96750,197506,197533,197529,24505,30482,197697,197698,197503,197500,96743,197531,197574,197506,197529,24505,96952</div>
+                
 
-<section>
+<p>
 
   
       <ins>29 quinquies. estime en outre que, compte tenu de l’inégalité substantielle et croissante des richesses dans le monde, il est grand temps que l’Union prenne des mesures pour imposer les revenus les plus élevés; estime que l’établissement d’un niveau minimal d’imposition pour les hauts revenus et d’une tranche d’imposition supplémentaire pour les revenus «excessifs» serait la voie à suivre pour garantir la justice sociale et économique; invite la Commission à évaluer l’incidence d’un tel type de    nouvelle ressource propre et à présenter une proposition de nouvelle ressource propre fondée sur un impôt sur les plus hauts revenus;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      François ALFONSI (R&amp;PS), 
+    
+      Younous OMARJEE (LFI), 
+    
+      Michèle RIVASI (EELV), 
+    
+      Sylvie GUILLAUME (PS), 
+    
+      Emmanuel MAUREL (GRS), 
+    
+      Manon AUBRY (LFI), 
+    
+      Damien CARÊME (EELV), 
+    
+      Leila CHAIBI (LFI), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Pierre LARROUTUROU (ND), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV) et 
+    
+      Claude GRUFFAT (EELV)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">212</div>
+  <div class="against">383</div>
+  <div class="abstention">15</div>
+</span>
+
+  
+    
+    <a href="/voting/155124">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(212/610 * 100%)">212</div>
-  
-  
-    <div class="-" style="width: calc(383/610 * 100%)">383</div>
-  
-  
-    <div class="0" style="width: calc(15/610 * 100%)">15</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/155124">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197503,197500,197531,197533,96750,197574,197529,124693,197697,97236,204420,197527,96740,96868,197698,204418,197694,24505,113892</div>
+                
 
-<section>
+<p>
 
   
       <ins>14 bis. est très préoccupé par l’incidence croissante de l’aviation sur les émissions de gaz à effet de serre et le fait que ce secteur reçoit constamment plus d’aides que des moyens de transport plus durables; demande instamment à la Commission de présenter une proposition visant à faire payer au secteur de l’aviation sa juste part et à créer des conditions de concurrence équitables pour garantir la transition vers une économie neutre sur le plan climatique, tout en apportant de nouvelles recettes importantes au budget de l’Union sous la forme de ressources propres; invite la Commission, dans ce contexte, à présenter des propositions en vue d’une taxe    européenne sur le kérosène;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      François ALFONSI (R&amp;PS), 
+    
+      Karima DELLI (EELV), 
+    
+      Yannick JADOT (EELV), 
+    
+      Emmanuel MAUREL (GRS), 
+    
+      Eric ANDRIEU (PS), 
+    
+      Pascal DURAND (RE), 
+    
+      Manon AUBRY (LFI), 
+    
+      Damien CARÊME (EELV), 
+    
+      Leila CHAIBI (LFI), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Raphaël GLUCKSMANN (PP), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Pierre LARROUTUROU (ND), 
+    
+      Anne-Sophie PELLETIER (LFI), 
+    
+      Mounir SATOURI (EELV), 
+    
+      Marie TOUSSAINT (EELV), 
+    
+      Claude GRUFFAT (EELV) et 
+    
+      Nora MEBAREK (PS)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">168</div>
+  <div class="against">405</div>
+  <div class="abstention">38</div>
+</span>
+
+  
+    
+    <a href="/voting/155118">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(168/611 * 100%)">168</div>
-  
-  
-    <div class="-" style="width: calc(405/611 * 100%)">405</div>
-  
-  
-    <div class="0" style="width: calc(38/611 * 100%)">38</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/155118">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197503,197500,197531,197533,96750,197574,197529,124693,197697,97236,204420,197527,96740,96868,197698,204418,197694,24505,113892,197500,197531,197533,96750,197574,197529,197697,97236,197506,204420,197527,197512,96740,96868,197698,204418,236053,24505,113892</div>
+                
 
-<section>
-
-  
-      <del>Un «mécanisme d’ajustement </del>
-  
+<p>
 
   
-      <ins>Une «amende </ins>
+      <del>Un «mécanisme d’ajustement</del>
   
 
   
-      équitable aux frontières» de l’Union
+      <ins>Une «amende</ins>
+  
+
+  
+       équitable aux frontières» de l’Union
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      François ALFONSI (R&amp;PS), 
+    
+      Karima DELLI (EELV), 
+    
+      Yannick JADOT (EELV), 
+    
+      Emmanuel MAUREL (GRS), 
+    
+      Eric ANDRIEU (PS), 
+    
+      Pascal DURAND (RE), 
+    
+      Manon AUBRY (LFI), 
+    
+      Benoît BITEAU (EELV), 
+    
+      Damien CARÊME (EELV), 
+    
+      Leila CHAIBI (LFI), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Raphaël GLUCKSMANN (PP), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Pierre LARROUTUROU (ND), 
+    
+      Anne-Sophie PELLETIER (LFI), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV), 
+    
+      Marie TOUSSAINT (EELV), 
+    
+      Claude GRUFFAT (EELV), 
+    
+      Nora MEBAREK (PS) et 
+    
+      Marina MESURE (LFI)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">218</div>
+  <div class="against">380</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/155119">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(218/609 * 100%)">218</div>
-  
-  
-    <div class="-" style="width: calc(380/609 * 100%)">380</div>
-  
-  
-    <div class="0" style="width: calc(11/609 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/155119">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197503,197500,197531,197533,96750,197574,197529,124693,197697,97236,204420,197527,96740,96868,197698,204418,197694,24505,113892,197500,197531,197533,96750,197574,197529,197697,97236,197506,204420,197527,197512,96740,96868,197698,204418,236053,24505,113892,197500,197531,197533,96750,197574,197529,97236,197506,197527,197512,96740,197698,204418,236053,24505,124693,113892</div>
+                
 
-<section>
+<p>
 
   
       17. invite dès lors la Commission à réaliser une consultation des parties prenantes et une analyse d’impact approfondie concernant une éventuelle proposition législative relative à 
   
 
   
-      <del>un «mécanisme </del>
+      <del>un «mécanisme</del>
   
 
   
-      <ins>une «amende </ins>
+      <ins>une «amende</ins>
   
 
   
-      d’ajustement équitable aux frontières», exigeant des entreprises qui importent des marchandises sur le marché unique de l’Union qu’elles versent aux travailleurs employés dans des pays tiers dans leur chaîne d’approvisionnement mondiale un salaire journalier supérieur au seuil de pauvreté correspondant et suffisant pour leur permettre d’échapper à la pauvreté absolue, telle que définie par les organisations internationales compétentes; souligne que si une entreprise importe sur    le marché unique de l’Union des produits fabriqués dans des pays tiers par des travailleurs dont le salaire est inférieur à un seuil de pauvreté fixé, en violation d’une telle législation, elle devrait payer une 
+       d’ajustement équitable aux frontières», exigeant des entreprises qui importent des marchandises sur le marché unique de l’Union qu’elles versent aux travailleurs employés dans des pays tiers dans leur chaîne d’approvisionnement mondiale un salaire journalier supérieur au seuil de pauvreté correspondant et suffisant pour leur permettre d’échapper à la pauvreté absolue, telle que définie par les organisations internationales compétentes; souligne que si une entreprise importe sur    le marché unique de l’Union des produits fabriqués dans des pays tiers par des travailleurs dont le salaire est inférieur à un seuil de pauvreté fixé, en violation d’une telle législation, elle devrait payer une 
   
 
   
-      <del>redevance équivalente </del>
+      <del>redevance équivalente</del>
   
 
   
-      <ins>amende supérieure </ins>
+      <ins>amende supérieure</ins>
   
 
   
-      à la différence entre ce seuil et le salaire effectivement perçu par ses travailleurs; estime que le produit des 
+       à la différence entre ce seuil et le salaire effectivement perçu par ses travailleurs; estime que le produit des 
   
 
   
-      <del>redevances </del>
+      <del>redevances</del>
   
 
   
-      <ins>amendes </ins>
+      <ins>amendes</ins>
   
 
   
-      obtenues dans le cadre de l’exécution d’une telle mesure devrait alimenter le budget de l’Union; attend de la Commission qu’elle fournisse une estimation de l’incidence d’une telle mesure sur les conditions de travail dans les pays tiers, ainsi que de sa compatibilité avec les règles pertinentes de l’OMC; estime qu’une telle mesure pourrait renforcer la compétitivité des entreprises productrices dans l’Union qui respectent certaines normes de travail, conditions de travail et niveaux de salaires; invite la Commission, lors de l’examen d’
+       obtenues dans le cadre de l’exécution d’une telle mesure devrait alimenter le budget de l’Union; attend de la Commission qu’elle fournisse une estimation de l’incidence d’une telle mesure sur les conditions de travail dans les pays tiers, ainsi que de sa compatibilité avec les règles pertinentes de l’OMC; estime qu’une telle mesure pourrait renforcer la compétitivité des entreprises productrices dans l’Union qui respectent certaines normes de travail, conditions de travail et niveaux de salaires; invite la Commission, lors de l’examen d’
   
 
   
-      <del>un éventuel «mécanisme </del>
+      <del>un éventuel «mécanisme</del>
   
 
   
-      <ins>une éventuelle «amende </ins>
+      <ins>une éventuelle «amende</ins>
   
 
   
-      d’ajustement équitable aux frontières», à tenir compte des enseignements tirés des mécanismes comparables existants dans l’Union et dans le monde, tels que le mécanisme d’ajustement carbone aux frontières;
+       d’ajustement équitable aux frontières», à tenir compte des enseignements tirés des mécanismes comparables existants dans l’Union et dans le monde, tels que le mécanisme d’ajustement carbone aux frontières;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      François ALFONSI (R&amp;PS), 
+    
+      Karima DELLI (EELV), 
+    
+      Yannick JADOT (EELV), 
+    
+      Emmanuel MAUREL (GRS), 
+    
+      Eric ANDRIEU (PS), 
+    
+      Pascal DURAND (RE), 
+    
+      Manon AUBRY (LFI), 
+    
+      Benoît BITEAU (EELV), 
+    
+      Damien CARÊME (EELV), 
+    
+      Leila CHAIBI (LFI), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Raphaël GLUCKSMANN (PP), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Pierre LARROUTUROU (ND), 
+    
+      Anne-Sophie PELLETIER (LFI), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV), 
+    
+      Marie TOUSSAINT (EELV), 
+    
+      Claude GRUFFAT (EELV), 
+    
+      Nora MEBAREK (PS) et 
+    
+      Marina MESURE (LFI)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">219</div>
+  <div class="against">372</div>
+  <div class="abstention">12</div>
+</span>
+
+  
+    
+    <a href="/voting/155120">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(219/603 * 100%)">219</div>
-  
-  
-    <div class="-" style="width: calc(372/603 * 100%)">372</div>
-  
-  
-    <div class="0" style="width: calc(12/603 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/155120">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197503,197500,197531,197533,96750,197574,197529,124693,197697,97236,204420,197527,96740,96868,197698,204418,197694,24505,113892,197500,197531,197533,96750,197574,197529,197697,97236,197506,204420,197527,197512,96740,96868,197698,204418,236053,24505,113892,197500,197531,197533,96750,197574,197529,97236,197506,197527,197512,96740,197698,204418,236053,24505,124693,113892,197500,197531,197533,96750,197574,197529,124693,197697,97236,204420,197527,96740,96868,197698,204418,197694,236053,113892</div>
+                
 
-<section>
+<p>
 
   
       39. rappelle qu’il dispose de compétences consultatives s’agissant de la décision relative aux ressources propres; est convaincu qu’il devrait se voir accorder un rôle renforcé, en sa qualité d’autorité législative et budgétaire, dans la législation sous-jacente, ainsi que dans la procédure budgétaire annuelle relative au volet des recettes et aux niveaux d’endettement; estime, en outre, qu’il devrait jouer un rôle 
   
 
   
-      <del>accru </del>
+      <del>accru</del>
   
 
   
-      <ins>égal à celui du Conseil </ins>
+      <ins>égal à celui du Conseil</ins>
   
 
   
-      dans le processus décisionnel relatif aux ressources propres afin de garantir la visibilité, la légitimité et la responsabilité démocratique des finances publiques de l’Union;
+       dans le processus décisionnel relatif aux ressources propres afin de garantir la visibilité, la légitimité et la responsabilité démocratique des finances publiques de l’Union;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(248/620 * 100%)">248</div>
-  
-  
-    <div class="-" style="width: calc(361/620 * 100%)">361</div>
-  
-  
-    <div class="0" style="width: calc(11/620 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/155125">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+      François ALFONSI (R&amp;PS), 
     
+      Karima DELLI (EELV), 
+    
+      Yannick JADOT (EELV), 
+    
+      Emmanuel MAUREL (GRS), 
+    
+      Eric ANDRIEU (PS), 
+    
+      Pascal DURAND (RE), 
+    
+      Manon AUBRY (LFI), 
+    
+      Benoît BITEAU (EELV), 
+    
+      Damien CARÊME (EELV), 
+    
+      Leila CHAIBI (LFI), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Raphaël GLUCKSMANN (PP), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Pierre LARROUTUROU (ND), 
+    
+      Anne-Sophie PELLETIER (LFI), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV), 
+    
+      Marie TOUSSAINT (EELV), 
+    
+      Claude GRUFFAT (EELV), 
+    
+      Nora MEBAREK (PS) et 
+    
+      Marina MESURE (LFI)
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2172(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0155_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">248</div>
+  <div class="against">361</div>
+  <div class="abstention">11</div>
+</span>
+
   
+    
+    <a href="/voting/155125">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-05-10-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté contre cette résolution.Je ne suis pas favorable à l’introduction de ces nouvelles ressources propres telles que proposées dans un rapport d’initiative.Les ressources propres dont il est question relèveraient de la fiscalité des entreprises, d’une part, du mécanisme d’ajustement carbone aux frontières, d’autre part, mais également d’une taxe sur les transactions financières et les crypto-monnaies.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            . – Ce rapport sur les ressources propres de l’Union met en avant une dizaine de propositions de nouvelles ressources propres permettant de rembourser la dette européenne. Celles-ci comprennent notamment la création d’impôts afin d’obtenir un budget européen autonome. Opposé à ces mesures aux contours flous, je me suis abstenu de voter ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            Si ce texte envisage que de nouvelles ressources propres permettent de rembourser la dette européenne sans pénaliser les citoyens, objectif que je partage pleinement, il est néanmoins important de rester prudent dans la création d’impôts. Non seulement l’impôt est-il un sujet fondamentalement souverain, mais il convient d’y associer une rigueur et une exigence budgétaire que nous devons aux citoyens. Je comprends donc que la plupart des États membres restent réservés par principe à de nouvelles ressources propres et me suis abstenu sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">22858</div>
+            
+            <header><b>Fabienne KELLER</b> | Renaissance</header>
+            Je soutiens ce rapport d’initiative proposant de nouvelles ressources propres à la Commission européenne dans le cadre du prochain paquet, qu’elle devrait présenter d’ici septembre 2023. Ces propositions incluent des ressources propres fondées sur l’impôt sur les sociétés, la taxe sur les transactions financières, un nouveau mécanisme frontalier équitable, une taxe sur les crypto-actifs, des ressources propres vertes et qui incitent à l’égalité salariale femmes-hommes.Cette résolution permettra de rembourser l’emprunt du plan de relance Next Generation EU (NGEU) tout en assainissant nos finances et permettra de financer nos politiques européennes. Ce rapport s’inscrit dans l’action du groupe Renew Europe pour créer une Union plus forte et influente.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            Je me suis abstenue sur cette résolution relative aux ressources propres. Dans un contexte marqué par la nécessité de rembourser, à terme, l’emprunt européen contracté pour financer le plan de relance post-COVID, le texte suggérait de mettre en place une dizaine de nouvelles ressources propres pour abonder le budget de l’UE, parmi lesquelles de nombreuses taxes. Consciente de l’exigence de rigueur et de clarté budgétaires que les citoyens européens attendent, je n’ai pas souhaité cautionner ce texte trop imprécis et au périmètre flou sur un sujet aussi majeur pour l’avenir de l’Union.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            Les ressources propres sont un moyen de garantir l’autonomie financière de l’Union européenne. La création de telles ressources est soumise à une procédure très complexe, nécessitant l’unanimité au Conseil et la ratification de tous les parlements nationaux, ce qui ralentit l’autonomisation budgétaire de l’Union et impacte directement les citoyens tandis que le remboursement de la dette ne fait que croître. Ce rapport est le début d’un long processus d’échanges entre les institutions européennes et les États membres afin de développer des ressources propres intelligentes dans l’objectif de rembourser la dette sans pénaliser les citoyens et le budget européen. Favorable à une telle démarche, j’ai décidé de voter en faveur de ce rapport, consciente qu’il ne constitue qu’une base de discussion, que les modalités sont encore à définir et que le processus de négociation est encore long.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les recommandations du Parlement pour la mise en place de nouvelles ressources propres au niveau européen. Il appelle notamment la Commission à proposer de toute urgence un nouveau paquet de ressources propres et à intégrer une taxe numérique, une assiette commune fiscale des entreprises pour lutter contre l’évasion fiscale des multinationales, une taxe sur les transactions financières et une taxe sur les crypto-monnaies. En raison de l’alliance entre les libéraux, la droite et l’extrême-droite, il n’inclut en revanche pas d’appel à mettre en place un impôt sur la fortune au niveau européen et une taxation élargie des superprofits de l’ensemble des secteurs d’activité que nous avions proposée par amendement. J’ai malgré tout voté pour ce texte qui reste très ambitieux et appelle à renforcer la justice fiscale pour renforcer le budget européen et lui permettre de financer davantage d’investissements écologiques et sociaux.
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            Le plan de relance européen Next Generation EU s’est avéré essentiel pour faire face à la crise sanitaire et économique. Financé par 800 milliards d’euros d’emprunt public, il coûtera pourtant davantage à nos finances publiques du fait de la charge de la dette, estimée à 20 milliards d’euros par an à partir de 2028. Afin de rembourser ces montants, il est nécessaire que l’Union européenne dispose de davantage de ressources fiscales propres, car les revenus tirés de la fiscalité carbone seront insuffisants.Je soutiens donc pleinement le rapport d’initiative porté par ma collègue Valérie Hayer, qui propose de nouvelles sources de financement (comme la taxe sur les transactions financières ou les crypto-monnaies) sans pour autant accroître la charge fiscale sur les ménages.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            Je me réjouis de l’adoption à une large majorité de mon rapport d’initiative sur l’introduction de nouvelles ressources propres dans le budget de l’Union, dont j’étais corapporteure avec mon collègue José Manuel Fernandes.Ce rapport soumet au débat public de nouvelles idées de ressources propres, qui permettront de rembourser le grand emprunt du plan de relance NextGenerationEU et de doter le budget européen des ressources nécessaires pour mener les grandes transitions de notre époque et renforcer l’autonomie stratégique de l’UE.Parmi nos propositions figurent l’idée d’un nouveau mécanisme équitable aux frontières (pour lutter contre les situations de sous-rémunération dans les pays tiers exportant leurs produits vers le marché européen), une taxe sur les crypto-monnaies ou encore l’introduction de nouvelles ressources statistiques (pour moduler la contribution des États membres au budget de l’UE selon de nouveaux critères tels que l’égalité salariale ou le recyclage des biodéchets).L’adoption de ce rapport est une grande victoire pour le budget européen, et un signal fort adressé au Conseil pour valider le premier paquet de ressources propres et créer dans les plus brefs délais de nouvelles ressources.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            Alors que la Commission européenne doit présenter un deuxième panier de ressources propres d&#39;ici la fin de 2023, ce rapport d’initiative sur les ressources propres, intitulé «un nouveau départ pour les finances de l&#39;UE, un nouveau départ pour l&#39;Europe» se penche sur les diverses possibilités de nouvelles ressources propres. Le texte met en avant une dizaine de propositions de nouvelles ressources propres parmi lesquelles un nouveau mécanisme de frontière équitable, une fiscalité européenne des cryptomonnaies, l&#39;utilisation d&#39;une partie des recettes issues de la future harmonisation de l’impôt des sociétés en Europe (BEFIT), une contribution numérique ou encore des ressources statistiques supplémentaires.Bien que je soutienne la création de nouvelles ressources propres qui permettraient de rembourser la dette européenne sans pénaliser les citoyens, nous nous devons d’adopter une approche prudente. Étant donné que les contours de ces nouvelles ressources propres sont encore très flous, je me suis abstenue sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Je me suis opposé à l’introduction des nouvelles ressources propres de ce deuxième panier. L’UE devrait plutôt se concentrer sur la bonne gestion des moyens dont elle dispose surtout au regard de la situation de crise actuelle. Donner plus de moyens financiers à l’UE reviendrait à renforcer sa volonté de supplanter les Nations et étendre son emprise.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Tous les moyens sont bons pour augmenter les ressources de l’Union. Cette fois-ci sous couvert d’humanisme, de respect du sacro-saint des droits de l’Homme, ou encore de la protection de la planète, ce texte propose de nouvelles procédures pour capter un maximum d’argent même dans les secteurs où il est techniquement impossible de créer une richesse, ou d’autres qui sont dans une logique purement idéologique, sans oublier que certaines ressources telles qu’elles sont exposées proposent un revenu dégressif, ce qui poussera l’Union à toujours chercher de nouveaux moyens de créer de nouvelles ressources propres.L’Union européenne devrait se concentrer sur la bonne gestion des moyens dont elle dispose surtout en situation de crise comme celle-ci au cours de laquelle les Européens souffrent de la baisse du pouvoir d’achat et de l’inflation. La recherche constante de nouveaux moyens d’établir des ressources propres est un nouveau signe du mépris de Bruxelles envers les Européens pour qui l’idéologie passe avant le bien-être des citoyens de l’Union.J’ai donc bien évidemment voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Tous les moyens sont bons pour augmenter les ressources de l’Union. Cette fois-ci sous couvert d’humanisme, de respect du sacro-saint des droits de l’Homme, ou encore de la protection de la planète, ce texte propose de nouvelles procédures pour capter un maximum d’argent même dans les secteurs où il est techniquement impossible de créer une richesse, ou d’autres qui sont dans une logique purement idéologique, sans oublier que certaines ressources telles qu’elles sont exposées proposent un revenu dégressif, ce qui poussera l’Union à toujours chercher de nouveaux moyens de créer de nouvelles ressources propres.L’Union européenne devrait se concentrer sur la bonne gestion des moyens dont elle dispose surtout en situation de crise comme celle-ci au cours de laquelle les Européens souffrent de la baisse du pouvoir d’achat et de l’inflation. La recherche constante de nouveaux moyens d’établir des ressources propres est un nouveau signe du mépris de Bruxelles envers les Européens pour qui l’idéologie passe avant le bien-être des citoyens de l’Union.J’ai donc bien évidemment voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            . – Ce rapport propose l’introduction d’un deuxième panier de nouvelles ressources propres qui serviront notamment à la réalisation des principaux objectifs politiques de l&#39;Union, de ses programmes phares et de sa capacité de réaction en cas de crise. Sous couvert d’humanisme, de respect du sacro-saint des droits de l’Homme, ou encore de la protection de la planète, ce texte propose de nouvelles procédures pour capter un maximum d’argent même dans les secteurs où il est techniquement impossible de créer une richesse… Comme souvent l’idéologie passe avant le bien-être des citoyens de l’Union. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport qui propose l’introduction d’un deuxième panier de nouvelles ressources propres qui serviront à la réalisation des principaux objectifs politiques de l&#39;Union, de ses programmes phares et de sa capacité de réaction en cas de crise, mais aussi au remboursement du NGEU et les coûts d&#39;emprunt (estimés à au moins 15 milliards d&#39;euros par an en moyenne jusqu&#39;en 2058).L’Union européenne devrait plutôt se concentrer sur la bonne gestion des moyens dont elle dispose surtout en situation de crise dans laquelle les Européens souffrent de la baisse du pouvoir d’achat et de l’inflation.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b>Marina MESURE</b> | La France Insoumise</header>
+            Ce texte consiste à donner la position du Parlement européen sur l’état d’avancement des procédures de mise en place des ressources propres de l’Union européenne. Il s’agit de la possibilité pour l’UE de se constituer des sources de revenus par elle-même au moyen de dispositifs fiscaux. Le rapport pointe le fait qu’un premier paquet a été adopté par le Parlement européen mais pas par le Conseil, et l’incite donc à le faire. Ce texte demande par ailleurs à la Commission européenne de présenter un deuxième paquet de ressources propres, en y prévoyant notamment un impôt sur les sociétés et une taxe sur les transactions financières. J’ai donc voté pour ce rapport.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197534</div>
+            
+            <header><b>François-Xavier BELLAMY</b> | Les Républicains</header>
+            
+                <p> – Monsieur le Président, alors voilà, nous y sommes. Il y a trois ans, tout le monde se réjouissait de voir pleuvoir sur l&#39;Europe de l&#39;argent magique avec cet emprunt qui surgissait. Et aujourd&#39;hui, cet emprunt dont personne ne savait comment il serait remboursé, nous sommes face au coût qu&#39;il représente. Ce coût devait être de 15 milliards d&#39;euros, l&#39;équivalent de tous nos programmes spatiaux en Europe sur sept ans. Eh bien, aujourd&#39;hui, il a certainement explosé, même si nous ne le savons pas, puisque la Commission – Monsieur le commissaire, nos collègues le disaient tout à l&#39;heure – ne publie pas aujourd&#39;hui le coût actualisé de cet emprunt dans le contexte de l&#39;inflation. </p>
+            
+                <p>Chers collègues, nous parlions il y a quelques années d&#39;argent frais. Aujourd&#39;hui, nous parlons d&#39;impôts et tout le monde parle ici de nouvelles taxes. Car ces nouvelles ressources propres, c&#39;est bien sûr de fiscalité qu&#39;il s&#39;agit. Je crois qu&#39;il est temps de rappeler deux choses que nous devons aux citoyens de nos pays: la transparence sur la politique budgétaire de l&#39;Union européenne, cette transparence elle est cruciale, et le fait que nous devons nous souvenir à la fin que tout impôt est toujours, toujours, le résultat du travail de ceux qui nous ont fait confiance en nous donnant mandat pour les représenter ici. Il n&#39;y a pas d&#39;impôt qui puisse être levé comme s&#39;il était une solution magique aux problèmes que nous n&#39;aurons pas su résoudre. C&#39;est la condition pour que nous soyons vraiment à la hauteur des générations qui viennent. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            
+                <p>Et aujourd’hui, au travers de ce rapport, nous redonnons un nouvel élan à ce projet. Ce projet que nous avons remis au-dessus de l’agenda politique depuis 2019, alors que beaucoup avaient jeté l’éponge. En 2021, avec José Manuel Fernandes et les collègues des groupes pro-européens, nous avons obtenu la première ressource propre depuis 1988: la contribution qui impose aux États de mieux recycler leurs emballages plastiques. La première ressource en 33 ans. Et demain la taxe carbone aux frontières et les droits à polluer suivront. Rendez-vous compte du chemin parcouru.</p>
+            
+                <p>Mais nous devons encore aller plus loin, encore plus fort. Et c’est tout l’objet de notre rapport: alimenter le débat et lancer les travaux sur de nouvelles ressources propres supplémentaires. Et avec toujours un mot d’ordre: ne pas faire reposer la charge sur les Européens, mais sur ceux qui ne paient pas aujourd’hui leur juste part d’impôts. Parce que, chers collègues, s’il y a bien une entité qui peut s’attaquer aux pratiques fiscales agressives, aux imperfections de la mondialisation, au dumping environnemental, c’est bien l’Europe.</p>
+            
+                <p>C’est pourquoi nous demandons, monsieur le Commissaire, à la Commission européenne de faire preuve d’audace. Nous voulons un mécanisme équitable aux frontières pour que les produits fabriqués chez nous ne subissent plus une concurrence déloyale face à des produits fabriqués à bas coûts dans des pays tiers. Il est inacceptable de casser les prix sur le dos de travailleurs laissés dans l’extrême pauvreté, dans l’extrême misère. Pour y remédier, l’Europe doit s’assurer que les produits importés dans notre marché ne soient pas fabriqués par des travailleurs payés en dessous du seuil de pauvreté. Ainsi, de la même manière que nous protégeons le climat avec la taxe carbone aux frontières, nous protégerons demain nos modèles sociaux et la dignité humaine avec le mécanisme équitable aux frontières.</p>
+            
+                <p>Mais ce mécanisme, il n’est qu’une solution parmi d’autres, parce que l’Europe doit aussi s’adapter aux nouvelles réalités économiques de ce siècle. La fragmentation de l’imposition des grandes multinationales qui leur permet de mettre en concurrence les États européens pour faire baisser l’impôt; l’explosion des cryptomonnaies et la spéculation financière; la pratique cynique des grandes entreprises qui préfèrent racheter des actions pour rémunérer les grands actionnaires plutôt que d’investir leurs bénéfices exceptionnels; l’injustifiable et inacceptable écart de salaire entre les hommes et les femmes. Voici autant d’enjeux où l’Europe s’avère plus à même de pouvoir répondre que les États seuls.</p>
+            
+                <p>Chers collègues, les pères fondateurs et les chefs d’État qui leur ont succédés avaient pour ambition de remplacer progressivement les contributions des pays membres par des ressources propres. Ce rapport est l’occasion de leur faire honneur en démontrant que leurs convictions n’ont pas fané avec les années. Ainsi, les ressources propres détermineront la destinée de l’Europe. Soit elle protègera et régulera, soit elle restera condamnée à l’impuissance.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            
+                <p>Oui, on a besoin de davantage de justice fiscale et sociale. Oui, l’Europe doit avoir un budget autonome des contraintes budgétaires nationales. Oui, nous devons forcer les États à respecter l’engagement politique et l’engagement juridiquement contraignant qu’ils ont pris en 2020 pour rembourser le plan de relance. À savoir que ce ne sont pas les citoyens européens qui vont rembourser ce plan de relance, mais ce sont ceux qui ne paient pas leur juste part d’impôts: les grands pollueurs, les importateurs de CO2 étrangers. </p>
+            
+                <p>Et, Monsieur Van Overtveldt, quand vous dites que les citoyens ne sont pas prêts pour ça, est-ce que les citoyens ne veulent pas que les géants du numérique paient? Est-ce que les citoyens ne veulent pas que les institutions financières paient? Est-ce que les citoyens ne veulent pas que les importateurs de CO2 étrangers et les gros pollueurs paient? Si, ils le souhaitent. Il y a une attente pour ça, et l’échelle européenne est la bonne échelle pour mettre en place ce type de mesures.</p>
+            
+                <p>Au travers de ce rapport, nous rappelons la responsabilité qui est la nôtre. Cependant, cette responsabilité ne se limite pas au seul remboursement du plan de relance. Le budget européen, il peut être la solution à d’autres enjeux: la solution à la dérégulation des cryptomonnaies, la solution à la concurrence fiscale par le bas entre les États, la solution à l’extrême pauvreté dans le monde. Mais cela nécessite aussi un changement de pratiques, une autre façon de penser l’Union non plus comme un club de nations qui serait seulement le plus petit dénominateur commun entre leurs différences, mais bien comme un niveau de gouvernance partagé qui démultiplie notre puissance, et en l’occurrence notre puissance budgétaire et notre puissance sociale.</p>
+            
+                <p>Cela a déjà été dit par certains collègues, il est illusoire de croire que l’Europe pourra régler le changement climatique, faire face aux conséquences de la guerre en Ukraine, ou réaliser les efforts nécessaires pour assurer son autonomie stratégique, notre autonomie industrielle, Monsieur le Commissaire, avec un budget équivalent à seulement 1 % de son PIB. Alors j’en appelle à vous tous ici à voter largement en faveur de ce rapport et mettre une pression maximale sur les États pour donner à l’Union les moyens de nos ambitions.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            
+                <p>Bruxelles veut plus d’argent, mais pour quoi faire? Pour engraisser quel «big pharma»? Pour payer Pfizer 20 fois le prix de la dose anti-Covid que l’on va ensuite détruire, pour payer des émirs via des terres en Roumanie, pour des profs et des routes en Albanie, pour des crabes en République islamique de Mauritanie? Et pourquoi pas de budget pour les urgences de Thionville, les profs et les routes, ou pour le club de bridge de Thionville, alors que ce serait plus utile, plus légitime à Thionville? Les impôts des Européens pour les Européens.</p>
+            
+                <p>Pour Chateaubriand, après l’âge de la supériorité et des privilèges, votre empire administratif connaît aujourd’hui l’âge des vanités. Oui, vanité, car vous avez la vanité de vouloir commander aux gouvernements élus. Pire, et voici maintenant vos ordres ou chantages: raboter le droit du travail, raboter les retraites en France, subir les migrants en Italie, choisir d’autres juges, d’autres journalistes en Pologne ou en Hongrie, sinon vous n’aurez pas les fonds européens. Du chantage donc, et en plus avec un air d’intouchabilité. En attendant, voilà pourquoi nous ne devons pas vous confier nos ressources, fruits de notre sueur et de nos rêves.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197697</div>
+            
+            <header><b>Aurore LALUCQ</b> | Place publique</header>
+            
+                <p> – Monsieur le Président, Monsieur le Commissaire, chers collègues, je me suis demandé quel énième argument de rationalité j’allais pouvoir mobiliser pour justifier la nécessité d’un budget au niveau européen. Est-ce que j’allais citer encore une fois le </p>
+            
+                <p>Le budget est une question éminemment politique. C’est une question de volonté politique. Et même si je salue les avancées de ce rapport, je suis quand même déçue car ce n’est pas avec une taxe sur les cryptos, une taxe sur les plastiques ou une TTF bloquée au Conseil qu’on va financer la défense européenne, la transition écologique, l’industrie dont nous avons aujourd’hui terriblement besoin.</p>
+            
+                <p>On a besoin d’un plan pérenne, on a besoin de réponses concrètes de la Commission européenne sur ce point. On a besoin de justice fiscale, de taxation sur le capital et d’un prélèvement pour le marché unique, parce que si on aime l’Europe, on la finance. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197503</div>
+            
+            <header><b>David CORMAND</b> | Les Écologistes</header>
+            
+                <p>Il a fallu le momentum hallucinant, incroyable, de la crise Covid, puis cet autre momentum, dramatique, de l’agression russe en Ukraine, pour qu’ici il y ait une majorité qui décide d’avoir ces nouvelles ressources propres. Je pense néanmoins que nous passons à côté d’une partie de ce momentum.</p>
+            
+                <p>D’abord la question de la fiscalité juste. Parce qu’en plus de ces urgences à gérer, nous avons à financer la transition écologique. Et là, quand il s’agit de fiscaliser ceux qui se sont enrichis pendant la crise, ce Parlement, visiblement, n’arrive pas à trouver une majorité. C’est pourquoi nous avons présenté un certain nombre d’amendements qui vont dans ce sens. La crise climatique, la crise démocratique, la crise sociale que nous rencontrons ne pourront être dépassées que si nous arrivons à trouver le courage de faire payer celles et ceux qui aujourd’hui échappent à l’impôt. Et c’est à l’échelon européen que nous pouvons le faire.</p>
+            
+                <p>J’ai donc un sentiment mitigé entre ces avancées qui vont être proposées et ce que nous devrions vraiment faire pour changer ce modèle et pouvoir nous projeter dans l’avenir. Donc demain, il y a des amendements qui pourront être votés pour que ce Parlement donne une consigne claire au Conseil pour dire que, désormais, les plus riches doivent payer l’impôt. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">204420</div>
+            
+            <header><b>Claude GRUFFAT</b> | Les Écologistes</header>
+            
+                <p> – Monsieur le Président, Monsieur le Commissaire, chers collègues, attardons-nous sur le paradoxe suivant. D’un côté, l’immobilier flambe dans les grandes villes, les actions grimpent, les dividendes pleuvent et en face, il y a la vraie vie, la crise du logement, la crise de l’alimentaire, la crise écologique. Pour 100 euros créés dans l’économie européenne, 44 sont allés au 1 % des plus riches contre 9,6 qui sont allés aux 90 % des plus pauvres.</p>
+            
+                <p>Cet écart monumental n’est pas dû aux salaires des plus riches, mais à leurs investissements et aux plus-values réalisées sur ces investissements. Or, ces plus-values ne sont pas taxées. Belgique, Luxembourg, Slovénie, Slovaquie, Tchéquie sont des paradis fiscaux pour les plus-values, et en parallèle l’imposition sur les salaires des travailleurs peut aller jusqu’à 50 % dans certains pays. L’Union européenne ne peut plus continuer à imposer le travail au-dessus des gains du capital. C’est pourquoi nous appelons, avec mes collègues Verts, à l’instauration d’un impôt européen sur ces plus-values.</p>
+            
+                <p>On parle souvent des faiblesses du budget européen, il y a ici de quoi le rendre indépendant des égoïsmes nationaux et de quoi l’abonder pour les investissements verts sociaux nécessaires à la transition écologique.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

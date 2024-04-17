@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Instrument d’appui technique</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,27 +22,39 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Instrument d’appui technique</h2>
 
 
 
-
 <h3>🎯 Votes principaux</h3>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -50,6 +63,11 @@
         
         
             <li>Politique de cohésion, Fonds de cohésion (FC)</li>
+        
+    
+        
+        
+            <li>Fonds européen de développement régional (FEDER)</li>
         
     
         
@@ -67,29 +85,275 @@
             <li>Fonds structurels, fonds d&#39;investissement en général, programmes</li>
         
     
-        
-        
-            <li>Fonds européen de développement régional (FEDER)</li>
-        
-    
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    
-    
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/0103(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/0103(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0173_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-01-19-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-01-19-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
+
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Le texte l’indique clairement, l’instrument sert à la promotion des réformes structurelles prônées par la Commission. Sous couvert d’aide à la mise en œuvre de politiques décidées au niveau de l’UE, il peut facilement devenir un faux-nez de la Commission pour imposer son agenda de réformes libérales et s’immiscer, par les aspects techniques, dans les rouages des administrations nationales et dans les politiques des États. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce texte.Ce nouvel instrument de support est conçu pour être une aide administrative proposée par la Commission aux États dans le cadre des réformes structurelles et du plan de relance. On peut toutefois craindre une immixtion de l&#39;Union européenne dans les affaires intérieures des États membres.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce texte propose la mise en place d’un nouvel instrument d’assistance technique qui fait le lien avec les priorités thématiques du plan de relance européen Next Generation EU. Il vient remplacer l&#39;instrument de soutien aux réformes structurelles déjà existant. Effectif dès cette année, l’objectif de cet instrument est de préparer des réformes pour les plans nationaux de relance post-Covid-19 d’appuyer les États membres dans les réformes et les investissements à venir, notamment par une aide budgétaire pour les PME ainsi qu&#39;un accès aux prêts pour celles-ci et les travailleurs indépendants. Cet instrument vient aider et soutenir les États membres dans leurs démarches, afin d&#39;accroître leur compétitivité. Je me positionne donc en faveur de ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Sous couvert d’aide à la mise en œuvre de politiques décidées au niveau de l’UE, cet instrument peut devenir un faux-nez de la Commission pour imposer son agenda de réformes libérales et s’immiscer, par les aspects techniques, dans les rouages des administrations nationales et dans les politiques des États. J’ai voté contre ce dossier puisque je refuse la mise en place de tout relais d’influence bruxellois au cœur même des processus de décision des États souverains.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il est une tentative de plus de la Commission d’imposer ses réformes ultralibérales en s’immisçant dans les organisations internes des administrations nationales. L’instrument d’appui technique proposé n’est qu’un instrument d’influence politique accordé à la Commission pour agir dans les processus nationaux de décision.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            L’instrument d’appui technique a pour but d’aider les États membres à préparer des réformes qui seront inscrites dans leur plan national de relance post-Covid-19 en conformité avec les priorités thématiques du plan de relance européen «Next Generation EU», comme les transitions verte et numérique ou le renforcement des systèmes de santé. Mais il s&#39;agira aussi de préparer les réformes liées aux recommandations du Semestre européen. On peut donc lire cet instrument comme une ingérence dans la politique économique et fiscale nationale.Le texte prévoit aussi de préparer des réformes inquiétantes comme la gestion budgétaire, la dette, la stabilité financière, les politiques du marché du travail, la réforme de la santé, le «vieillissement actif» (donc les retraites)... Enfin, la réputation des «experts techniques» affectés à cet instrument est d’être systématiquement en faveur de l’austérité et des réformes «structurelles» néolibérales. J’ai voté CONTRE.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            Il s’agit d’un retour de trilogue sur la création d’un instrument d’appui technique aux réformes structurelles et au plan de relance. Le but est que la Commission continue de fournir une expertise de terrain afin de garantir que les États membres disposent de la capacité institutionnelle et administrative nécessaire pour mettre en œuvre les réformes structurelles. Il fait partie des réponses données aux exigences des États dits frugaux qui, lors de la négociation de juillet dernier, avaient conditionné leur acceptation du plan de relance à un droit de regard sur la manière dont les autres États dépensaient les subsides. Le texte l’indique clairement: l’instrument sert à la promotion des réformes structurelles de la Commission. Ainsi, sous couvert d’aide à la mise en œuvre de politiques décidées au niveau de l’UE, il peut contribuer à imposer l’agenda de réformes de la Commission et s’immiscer, par des aspects techniques, dans les politiques propres aux États. L’instrument d’appui technique pourrait n’avoir donc de technique que le nom et s’avérer être surtout un instrument d’influence politique au bénéfice de la Commission. J’ai dès lors voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport relatif à l’instrument d’appui technique. Cet instrument soutiendra, à leur demande, les États membres dans la préparation des réformes inscrites dans leur plan national de relance post-COVID-19, en conformité avec les priorités thématiques du plan de relance européen Next Generation EU. Il sera doté de 864 millions d’euros sur 2021-2027.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à valider la mise en place de l’instrument d’appui technique du plan de relance européen, dont l’objectif est d’aider les États à préparer les réformes qui devront être inscrites dans leurs plans nationaux avant validation par la Commission européenne. Il consiste à apporter une assistance et une expertise aux États membres pour intégrer les éléments demandés par la Commission et notamment les recommandations du Semestre européen en matière d’austérité budgétaire, de dette, de libéralisation du marché du travail, de privatisations, de mises en concurrence, etc. J’ai donc voté contre ce texte qui donne un outil supplémentaire à la Commission pour forcer les États à appliquer ses recommandations économiques austéritaires.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            L’instrument d’appui technique a pour vocation d’aider les États membres à préparer des réformes qui seront inscrites dans leur plan national de relance post-Covid-19 en conformité avec les priorités retenues par le prétendu plan de relance européen. Ces priorités quelles sont-elles? Un ensemble de mesures de «verdissage» d’un capitalisme tout à fait mortifère, un soutien massif aux grands groupes économiques sans aucune contrepartie sociale ou écologique, des privatisations et des mesures dites «d’assainissement budgétaire», autrement dit des mesures austéritaires. Ce plan de relance européen n’en est pas un et il condamne les peuples européens à des années de souffrance sans rien régler des problèmes de notre temps. Je vote donc contre la mise en œuvre de cet instrument d’appui technique.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            Le texte fait suite à l’accord trouvé en trilogue le 15 décembre 2020 et transforme l’actuel programme d’appui à la réforme structurelle en instrument d’appui technique, doté de 841 millions d’euros pour épauler les États membres dans leurs réformes structurelles de long-terme. Cet instrument pourra contribuer à la mise en œuvre de la facilité pour la relance et la résilience, fonds phare de la relance européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai voté en faveur du rapport sur la mise en place d’un instrument d’appui technique qui vise à accélérer la relance post- Covid-19. Cet instrument succèdera ainsi, à partir de 2021, à l’instrument de soutien aux réformes structurelles. Cet instrument, sans caractère contraignant, aidera les États membres qui en font la demande, à préparer des réformes qui seront inscrites dans leur plan national de relance post-Covid-19 en conformité avec les priorités du plan de relance européen telles que les transitions verte et numérique ainsi que le renforcement des systèmes de santé. L’instrument sera doté de 864,4 millions d&#39;euros sur la période 2021-2027.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport car il y a fort à craindre que cet instrument de support technique, conçu pour être une aide administrative proposée par la Commission aux États dans le cadre de la mise en place des réformes structurelles et du plan de relance, ne soit qu’un prétexte pour une immixtion et un pilotage des politiques publiques des États par les autorités de Bruxelles, sous couvert d’une aide technique.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce texte, car, comme il l&#39;indique clairement, cet instrument d&#39;appui technique servirait notamment à la promotion des réformes structurelles prônées par la Commission. Sous couvert d’aide à la mise en œuvre de politiques décidées au niveau de l’UE, cet outil pourrait devenir un faux-nez de la Commission pour imposer son agenda et s’immiscer dans les rouages des administrations nationales et dans les politiques des États.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Le présent rapport est un retour de trilogue sur la création d’un instrument d’appui technique aux réformes structurelles et au plan de relance mis à disposition des États membres. Il est appelé à remplacer l’instrument de soutien actuel, le PARS, créé en 2017 et dont il sera proche. Il aura cependant un périmètre plus large, tenant compte notamment du plan de relance adopté en juillet. Le but est que la Commission continue de fournir une expertise de terrain afin de garantir que les États membres disposent de la capacité institutionnelle et administrative nécessaire pour élaborer et mettre en œuvre les réformes structurelles. L’instrument d&#39;appui technique est aussi conçu pour aider les États membres à élaborer et à mettre en œuvre les plans pour la reprise et la résilience dans le cadre du plan de relance. Lors du trilogue, la position du Conseil est ressortie très proche de la proposition initiale. J’ai voté contre ce texte car cet instrument sert à la promotion des réformes structurelles prônées par la Commission, outre à celle des objectifs en matière de climat ou du numérique.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Le texte l’indique clairement, l’instrument sur la création d’un instrument d’appui technique aux réformes structurelles et au plan de relance mis à disposition des États membres sert à la promotion des réformes structurelles prônées par la Commission, outre à celle des objectifs en matière de climat ou du numérique.Il financera les missions d’expertise en matière de conseil sur les politiques à mener et/ou en matière de réorientations stratégiques, de feuilles de route, de réformes législatives, institutionnelles, structurelles et administratives.On perçoit donc le risque d’un tel outil: sous couvert d’aide à la mise en œuvre de politiques décidées au niveau de l’UE, il peut devenir un faux-nez de la Commission pour imposer son agenda de réformes libérales et s’immiscer, par les aspects techniques, dans les rouages des administrations nationales et dans les politiques des États.En définitive, l’instrument d’appui technique pourrait n’avoir de technique que le nom et s’avérer n’être qu’un instrument d’influence politique au bénéfice de la Commission, c&#39;est-à-dire un relais d’influence des conceptions de Bruxelles au cœur même des processus de décision des États souverains.J’ai voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Le rapport est un retour de trilogue sur la création d’un instrument d’appui technique aux réformes structurelles et au plan de relance mis à disposition des États membres. Le texte n’en fait pas mystère, bien au contraire, cet instrument entend servir à la promotion des réformes structurelles prônées par la Commission, financer les missions d’expertise en matière de conseil sur les politiques à mener et/ou en matière de réorientations stratégiques, de feuilles de route, de réformes législatives, institutionnelles, structurelles et administratives. Le risque d’un outil de ce type est clair: sous le prétexte d’aider à la mise en œuvre de politiques décidées au niveau des États membres, il peut être un cheval de Troie, un instrument d’influence politique au bénéfice de la Commission pour nous imposer son agenda de réformes libérales et s’immiscer, par les aspects techniques, dans les politiques des États et dans les rouages des administrations nationales. J’ai donc logiquement voté contre ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            Bien que ce nouvel instrument de support technique soit en principe une aide administrative «offerte» par la Commission, dans le cadre des réformes structurelles et du plan de relance, ce dispositif permettra une ingérence de la Commission dans les politiques menées par les États membres. J’ai donc voté contre ce rapport.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

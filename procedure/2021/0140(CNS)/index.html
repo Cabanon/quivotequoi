@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Le mécanisme d’évaluation de Schengen</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,82 +22,39 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Le mécanisme d’évaluation de Schengen</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
-    <article>
-    <header>👍 Adoption du texte | 
-
-✅️ Adopté
-
-</header>
-    
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
-        <section>
-
-<div class="votes ">
-  
-    <div class="+" style="width: calc(427/553 * 100%)">427</div>
-  
-  
-    <div class="-" style="width: calc(102/553 * 100%)">102</div>
-  
-  
-    <div class="0" style="width: calc(24/553 * 100%)">24</div>
-  
-</div>
-</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
-        <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
-        
-        
-            <section>
-
-
-
-<div class="votes">
-  
-    <div class="+" style="width: calc(45/47 * 100%)">45</div>
-  
-  
-    <div class="-" style="width: calc(2/47 * 100%)">2</div>
-  
-  
-</div>
- 
-</section>
-            <a href="/voting/141346">🗳 Voir le détail du vote</a>
-        
-    
-    </article>
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -104,7 +62,27 @@
     
         
         
+            <li>Application du droit de l&#39;Union européenne</li>
+        
+    
+        
+        
+            <li>Coopération judiciaire</li>
+        
+    
+        
+        
+            <li>Libre circulation et intégration des ressortissants des pays-tiers</li>
+        
+    
+        
+        
             <li>Etat et évolution de l&#39;Union</li>
+        
+    
+        
+        
+            <li>Espace Schengen, acquis de Schengen</li>
         
     
         
@@ -119,22 +97,7 @@
     
         
         
-            <li>Franchissement et contrôles aux frontières extérieures, visas</li>
-        
-    
-        
-        
-            <li>Application du droit de l&#39;Union européenne</li>
-        
-    
-        
-        
             <li>Coopération policière</li>
-        
-    
-        
-        
-            <li>Libre circulation et intégration des ressortissants des pays-tiers</li>
         
     
         
@@ -144,81 +107,215 @@
     
         
         
-            <li>Coopération judiciaire</li>
-        
-    
-        
-        
-            <li>Espace Schengen, acquis de Schengen</li>
+            <li>Franchissement et contrôles aux frontières extérieures, visas</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/0140(CNS)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0054_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-04-07-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°22 | 
+        
+        
+            <article id="22">
+            <header>📝 Amendement n°22 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       3. Les évaluations peuvent 
   
 
   
-      <del>porter sur tous les aspects de l’acquis de Schengen et tenir compte du fonctionnement des autorités qui appliquent cet acquis.</del>
+      <del>porter sur tous les aspects</del>
   
 
   
-      <ins>couvrir tout aspect de l’acquis de Schengen, y compris l’application effective et efficace par les États membres des mesures d’accompagnement dans les domaines des frontières extérieures, de la politique en matière de visas, du système d’information Schengen, de la protection des données, de la coopération policière, de la coopération judiciaire ainsi que de l’absence de contrôles aux frontières intérieures. Toutes les évaluations comprennent une appréciation du respect des droits fondamentaux dans le contexte des aspects couverts.</ins>
+      <ins>couvrir tout aspect</ins>
+  
+
+  
+       de l’acquis de Schengen
+  
+
+  
+      <del> et tenir compte du fonctionnement des autorités qui appliquent cet acquis</del>
+  
+
+  
+      <ins>, y compris l’application effective et efficace par les États membres des mesures d’accompagnement dans les domaines des frontières extérieures, de la politique en matière de visas, du système d’information Schengen, de la protection des données, de la coopération policière, de la coopération judiciaire ainsi que de l’absence de contrôles aux frontières intérieures. Toutes les évaluations comprennent une appréciation du respect des droits fondamentaux dans le contexte des aspects couverts</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°33 | 
+        
+        
+            <article id="33">
+            <header>📝 Amendement n°33 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       b) lorsqu’elle a connaissance de problèmes nouveaux ou 
   
 
   
-      <del>systémiques </del>
+      <del>systémiques</del>
   
 
   
-      <ins>existants </ins>
+      <ins>existants</ins>
   
 
   
-      susceptibles d’avoir une incidence négative 
+       susceptibles d’avoir une incidence négative 
   
 
   
@@ -226,40 +323,47 @@
   
 
   
-      sur le fonctionnement de l’espace 
+      sur le fonctionnement de l’espace Schengen
   
 
   
-      <del>Schengen;</del>
+      <ins>, y compris des circonstances  susceptibles de donner lieu à des menaces pour la sécurité intérieure</ins>
   
 
   
-      <ins>Schengen, y compris des circonstances  susceptibles de donner lieu à des menaces pour la sécurité intérieure;</ins>
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°34 | 
+        
+        
+            <article id="34">
+            <header>📝 Amendement n°34 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       c) lorsqu’elle a des raisons d’estimer qu’un État membre manque 
@@ -274,451 +378,592 @@
   
 
   
-      <del>notamment </del>
+      <del>notamment</del>
   
 
   
-      <ins>en particulier </ins>
+      <ins>en particulier</ins>
   
 
   
-      en cas d’allégations de violations graves des droits fondamentaux aux frontières extérieures.
+       en cas d’allégations de violations graves des droits fondamentaux aux frontières extérieures.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°45 | 
+        
+        
+            <article id="45">
+            <header>📝 Amendement n°45 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       Au cours de chaque cycle d’évaluation pluriannuel, chaque État membre fait l’objet d’une évaluation périodique et d’au moins une évaluation inopinée ou 
   
 
   
-      <del>thématique.</del>
+      <del>thématique</del>
   
 
   
-      <ins>d’une inspection à court préavis, ainsi que d’une ou plusieurs évaluations thématiques. Les évaluations inopinées prévues à l’article 4 sont organisées par la Commission chaque fois que les circonstances prévues audit article se présentent.</ins>
+      <ins>d’une inspection à court préavis, ainsi que d’une ou plusieurs évaluations thématiques. Les évaluations inopinées prévues à l’article 4 sont organisées par la Commission chaque fois que les circonstances prévues audit article se présentent</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°78 | 
+        
+        
+            <article id="78">
+            <header>📝 Amendement n°78 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       Afin de contrôler les progrès accomplis dans la mise en œuvre des recommandations relatives au manquement grave, la Commission organise une nouvelle inspection, qui doit avoir lieu au plus tard 
   
 
   
-      <del>un an après </del>
+      <del>un an après</del>
   
 
   
-      <ins>180 jours à compter de </ins>
+      <ins>180 jours à compter de</ins>
   
 
   
-      la date de l’activité d’évaluation.
+       la date de l’activité d’évaluation.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°86 | 
+        
+        
+            <article id="86">
+            <header>📝 Amendement n°86 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       7. Afin de contrôler les progrès accomplis dans la mise en œuvre des recommandations relatives au manquement grave, la Commission organise une nouvelle inspection, qui doit avoir lieu au plus tard 
   
 
   
-      <del>un an </del>
+      <del>un an</del>
   
 
   
-      <ins>six mois </ins>
+      <ins>six mois</ins>
   
 
   
-      après la date de l’activité d’évaluation.
+       après la date de l’activité d’évaluation.
   
 
   
       <ins>  La Commission s’abstient de tout autre financement en rapport avec le manquement grave jusqu’à ce que les États membres évalués aient pleinement mis en œuvre les mesures correctives.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">103</div>
+  <div class="against">443</div>
+  <div class="abstention">3</div>
+</span>
+
+  
+    
+    <a href="/voting/141571">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(103/549 * 100%)">103</div>
-  
-  
-    <div class="-" style="width: calc(443/549 * 100%)">443</div>
-  
-  
-    <div class="0" style="width: calc(3/549 * 100%)">3</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/141571">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°87 | 
+        
+            <article id="87">
+            <header>📝 Amendement n°87 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>(1 bis) Les États membres conservent leur souveraineté sur les contrôles aux frontières intérieures.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">89</div>
+  <div class="against">448</div>
+  <div class="abstention">14</div>
+</span>
+
+  
+    
+    <a href="/voting/141572">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(89/551 * 100%)">89</div>
-  
-  
-    <div class="-" style="width: calc(448/551 * 100%)">448</div>
-  
-  
-    <div class="0" style="width: calc(14/551 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/141572">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°88 | 
+        
+            <article id="88">
+            <header>📝 Amendement n°88 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>(1 ter) Un contrôle ferme et efficace des frontières extérieures est essentiel, et les États membres devraient être habilités à les protéger plutôt que d’être sanctionnés pour cela.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">98</div>
+  <div class="against">449</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    
+    <a href="/voting/141573">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(98/552 * 100%)">98</div>
-  
-  
-    <div class="-" style="width: calc(449/552 * 100%)">449</div>
-  
-  
-    <div class="0" style="width: calc(5/552 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/141573">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°89 | 
+        
+            <article id="89">
+            <header>📝 Amendement n°89 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>b bis) Il importe que les États membres dont les frontières sont des frontières extérieures de l’espace Schengen reçoivent le soutien nécessaire pour pouvoir les protéger efficacement.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">101</div>
+  <div class="against">428</div>
+  <div class="abstention">12</div>
+</span>
+
+  
+    
+    <a href="/voting/141561">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(101/541 * 100%)">101</div>
-  
-  
-    <div class="-" style="width: calc(428/541 * 100%)">428</div>
-  
-  
-    <div class="0" style="width: calc(12/541 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/141561">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
+        
+            <article id="90">
+            <header>📝 Amendement n°90 | 
 
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      3. Les évaluations peuvent porter sur tous les aspects de l’acquis de Schengen et 
+  
+
+  
+      <del>tenir</del>
+  
+
+  
+      <ins>prendre en</ins>
+  
+
+  
+       compte 
+  
+
+  
+      <del>du</del>
+  
+
+  
+      <ins>le</ins>
+  
+
+  
+       fonctionnement des autorités 
+  
+
+  
+      <del>qui appliquent cet acquis.</del>
+  
+
+  
+      <ins>appliquant l’acquis de Schengen et l’efficacité des contrôles aux frontières extérieures pour empêcher l’entrée illégale de personnes dans l’espace Schengen;</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°91 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="91">
+            <header>📝 Amendement n°91 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>a bis) évaluer l’efficacité des contrôles aux frontières extérieures afin de prévenir les entrées illégales;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">106</div>
+  <div class="against">443</div>
+  <div class="abstention">4</div>
+</span>
+
+  
+    
+    <a href="/voting/141566">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(106/553 * 100%)">106</div>
-  
-  
-    <div class="-" style="width: calc(443/553 * 100%)">443</div>
-  
-  
-    <div class="0" style="width: calc(4/553 * 100%)">4</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/141566">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°92 | 
+        
+            <article id="92">
+            <header>📝 Amendement n°92 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       3. Les évaluations 
   
 
   
-      <del>peuvent porter sur tous les aspects de l’acquis de Schengen et tenir compte du fonctionnement des autorités qui appliquent cet acquis.</del>
+      <del>peuvent porter</del>
   
 
   
-      <ins>ne portent que sur les aspects strictement liés à l’acquis de Schengen.</ins>
+      <ins>ne portent que</ins>
+  
+
+  
+       sur 
+  
+
+  
+      <del>tous </del>
+  
+
+  
+      les aspects 
+  
+
+  
+      <del>de</del>
+  
+
+  
+      <ins>strictement liés à</ins>
+  
+
+  
+       l’acquis de Schengen
+  
+
+  
+      <del> et tenir compte du fonctionnement des autorités qui appliquent cet acquis</del>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">102</div>
+  <div class="against">445</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/141562">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(102/555 * 100%)">102</div>
-  
-  
-    <div class="-" style="width: calc(445/555 * 100%)">445</div>
-  
-  
-    <div class="0" style="width: calc(8/555 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/141562">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°93 | 
+        
+            <article id="93">
+            <header>📝 Amendement n°93 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       2. La Commission 
   
 
   
-      <del>est chargée de </del>
+      <del>est chargée de</del>
   
 
   
-      <ins>assure un rôle de coordination générale en ce qui concerne </ins>
+      <ins>assure un rôle de coordination générale en ce qui concerne</ins>
   
 
   
-      la mise en place des programmes d’évaluation annuels et pluriannuels, 
+       la mise en place des programmes d’évaluation annuels et pluriannuels,
   
 
   
-      <del>de </del>
+      <del> de</del>
   
 
   
-      l’élaboration de questionnaires et 
+       l’élaboration de questionnaires et 
   
 
   
@@ -730,15 +975,15 @@
   
 
   
-      <del>inspections, du </del>
+      <del>inspections, du</del>
   
 
   
-      <ins>visites d’inspection, le </ins>
+      <ins>visites d’inspection, le</ins>
   
 
   
-      déroulement de celles-ci et 
+       déroulement de celles-ci et 
   
 
   
@@ -749,105 +994,105 @@
       la rédaction des rapports d’évaluation et des recommandations. Elle assure également les activités de suivi et de contrôle.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">97</div>
+  <div class="against">457</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    
+    <a href="/voting/141564">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(97/559 * 100%)">97</div>
-  
-  
-    <div class="-" style="width: calc(457/559 * 100%)">457</div>
-  
-  
-    <div class="0" style="width: calc(5/559 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/141564">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°94 | 
+        
+            <article id="94">
+            <header>📝 Amendement n°94 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
-
-  
-      2. La Commission peut organiser des évaluations inopiné
-  
+<p>
 
   
-      <del>es, notamment:</del>
+      2. La Commission peut organiser des évaluations inopinées
   
 
   
-      <ins>es</ins>
+      <del>, notamment:</del>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">88</div>
+  <div class="against">460</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    
+    <a href="/voting/141565">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(88/553 * 100%)">88</div>
-  
-  
-    <div class="-" style="width: calc(460/553 * 100%)">460</div>
-  
-  
-    <div class="0" style="width: calc(5/553 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/141565">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°97 | 
+        
+            <article id="97">
+            <header>📝 Amendement n°97 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       Au cours de chaque cycle d’évaluation pluriannuel, chaque État membre fait l’objet d’une évaluation périodique et d’au moins une évaluation 
@@ -861,113 +1106,170 @@
       thématique.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">95</div>
+  <div class="against">451</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    
+    <a href="/voting/141569">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(95/551 * 100%)">95</div>
-  
-  
-    <div class="-" style="width: calc(451/551 * 100%)">451</div>
-  
-  
-    <div class="0" style="width: calc(5/551 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/141569">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°98 | 
+        
+            <article id="98">
+            <header>📝 Amendement n°98 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       Les formations destinées aux évaluateurs de Schengen 
   
 
   
-      <del>comportent des modules relatifs aux droits fondamentaux, mis au point avec la participation de l’Agence des droits fondamentaux de l’Union européenne.</del>
+      <del>comportent des modules relatifs aux droits fondamentaux, mis au point avec la participation de l’Agence des droits fondamentaux de l’Union européenne</del>
   
 
   
-      <ins>sont fondées sur les faits et ne sont influencées par aucun groupe de pression.</ins>
+      <ins>sont fondées sur les faits et ne sont influencées par aucun groupe de pression</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">96</div>
+  <div class="against">452</div>
+  <div class="abstention">7</div>
+</span>
+
+  
+    
+    <a href="/voting/141570">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(96/555 * 100%)">96</div>
-  
-  
-    <div class="-" style="width: calc(452/555 * 100%)">452</div>
-  
-  
-    <div class="0" style="width: calc(7/555 * 100%)">7</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/141570">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
+        
     
+        
+        
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport qui propose une refonte du mécanisme d’évaluation et de contrôle de l’espace Schengen: il propose une forte implication du Parlement, de la Commission et même des ONG dans le but de maintenir autant que possible les frontières de l’Union ouvertes. Or, l’abolition totale des frontières, même en cas de crise, permet surtout la libre circulation des criminels, des trafiquants, des migrants et des terroristes. Le contrôle des frontières doit rester la prérogative des États.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport.Il s’agit d’une réforme du mécanisme d’évaluation et de contrôle de Schengen qui désavantage les États membres, en limitant les contrôles aux frontières intérieures. Par ailleurs, je ne suis pas favorable au renforcement des procédures d’infraction contre les États membres.
+        </article>
+    
+        <article>
+            <div class="hidden">22858</div>
+            
+            <header><b>Fabienne KELLER</b> | Renaissance</header>
+            Je me félicite de l’adoption de ce rapport qui présente la position du Parlement européen sur la proposition de règlement du Conseil de l’Union européenne portant révision du mécanisme d’évaluation et de contrôle de l’application de l’acquis de Schengen. Ce mécanisme est l’outil principal de l’Union européenne pour contrôler la gestion des frontières extérieures communes de l’Union et de l’espace de libre circulation entre les États membres.Le Parlement européen souligne l’importance de renforcer son efficacité tout en préservant les droits fondamentaux. Nous demandons ainsi une évaluation renforcée de la légalité de la réintroduction de contrôles aux frontières intérieures, et plus de vigilance sur le respect des droits fondamentaux. Enfin, nous appelons à davantage de missions d’évaluation inopinées pour contrôler aléatoirement la mise en œuvre par les États membres.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            . – J’ai voté en faveur de ce rapport relatif au mécanisme d’évaluation de Schengen. Ce texte de nature technique vise à moderniser le cadre applicable au mécanisme d’évaluation et de contrôle destiné à vérifier l’application de l’acquis de Schengen, déjà en vigueur. L’objectif est d’accroître l’efficacité de l’espace Schengen. Il facilite par exemple l’organisation de contrôles inopinés du respect de l’acquis de Schengen sur le territoire des États membres, en y associant étroitement la Commission, ses agences telles que Frontex, mais aussi le Parlement européen. Il ne remet pas en cause la possibilité offerte aux États de rétablir des contrôles ponctuels à leurs frontières intérieures dans des circonstances exceptionnelles.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter la position du Parlement européen sur la modification du mécanisme d’évaluation et de suivi de Schengen, qui vérifie le bon respect des règles par les États membres. Il propose des avancées intéressantes en prévoyant notamment des visites sans préavis au sein des États membres, un renforcement de l’implication de l’Agence de protection des droits fondamentaux et du Parlement, ou encore la possibilité pour les observateurs de l’Union de participer aux inspections. J’ai donc voté pour ce texte qui aurait dû aller plus loin pour sanctionner les violations des droits fondamentaux des exilés mais comporte cependant des améliorations bienvenues par rapport à la situation actuelle.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport qui propose une refonte du mécanisme d’évaluation et de contrôle de l’espace Schengen : il propose une forte implication du Parlement, de la Commission et même des ONG dans le but de maintenir autant que possible les frontières de l’UE ouvertes. Or, l’abolition totale des frontières même en cas de crise permet surtout la libre-circulation des criminels, des trafiquants, des migrants et des terroristes. Le contrôle des frontières doit rester la prérogative des États.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-    
-    
 
+    <section>
     
     
-
-    
-    
-
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/0140(CNS)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0054_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-04-07-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

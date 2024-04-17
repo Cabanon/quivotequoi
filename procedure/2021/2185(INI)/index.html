@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Politique de concurrence - rapport annuel 2021</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Politique de concurrence - rapport annuel 2021</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(436/601 * 100%)">436</div>
-  
-  
-    <div class="-" style="width: calc(70/601 * 100%)">70</div>
+    <div class="for" style="width: calc(436/601 * 100%)">436</div>
   
   
-    <div class="0" style="width: calc(95/601 * 100%)">95</div>
+    <div class="against" style="width: calc(70/601 * 100%)">70</div>
+  
+  
+    <div class="abstention" style="width: calc(95/601 * 100%)">95</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(46/66 * 100%)">46</div>
+    <div class="for" style="width: calc(46/66 * 100%)">46</div>
   
   
-    <div class="-" style="width: calc(17/66 * 100%)">17</div>
+    <div class="against" style="width: calc(17/66 * 100%)">17</div>
   
   
-    <div class="0" style="width: calc(3/66 * 100%)">3</div>
+    <div class="abstention" style="width: calc(3/66 * 100%)">3</div>
   
 </div>
  
 </section>
-            <a href="/voting/142248">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/142248">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -106,293 +111,521 @@
     
         
         
-            <li>Marché intérieur, marché unique</li>
+            <li>Concurrence</li>
         
     
         
         
-            <li>Concurrence</li>
+            <li>Marché intérieur, marché unique</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2185(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0064_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-05-05-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       <ins>50 bis. s’inquiète du fait que la connectivité des régions insulaires, périphériques et isolées de l’Union est pratiquement interrompue en basse saison, au détriment des résidents et des entreprises de ces régions; demande à la Commission de prêter dûment attention aux décisions d’aide d’État s’agissant de la connectivité des régions insulaires, périphériques et isolées de l’Union, notamment car elles ont été particulièrement durement touchées par la pandémie;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">492</div>
+  <div class="against">101</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/143023">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(492/603 * 100%)">492</div>
-  
-  
-    <div class="-" style="width: calc(101/603 * 100%)">101</div>
-  
-  
-    <div class="0" style="width: calc(10/603 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/143023">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>17 bis. déplore qu’aucune des 670 décisions d’approbation des aides assortie d’exigences sociales ou environnementales; regrette qu’un montant considérable d’aides d’État ait été accordé aux compagnies aériennes, aux aéroports et aux sociétés d’assistance au sol sans que ces entreprises ne soient tenues d’adopter des plans de transition en faveur de modèles commerciaux plus durables;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">141</div>
+  <div class="against">321</div>
+  <div class="abstention">142</div>
+</span>
+
+  
+    
+    <a href="/voting/143021">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(141/604 * 100%)">141</div>
-  
-  
-    <div class="-" style="width: calc(321/604 * 100%)">321</div>
-  
-  
-    <div class="0" style="width: calc(142/604 * 100%)">142</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/143021">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       30. constate que les politiques et mesures fiscales nationales peuvent avoir une incidence sur la perception des impôts dans les autres États membres; rappelle que la fiscalité est susceptible d’être parfois utilisée pour accorder des aides d’État indirectes, créant ainsi des conditions de concurrence inéquitables sur le marché intérieur, et insiste donc sur le fait que 
   
 
   
-      <del>la Commission recommande que les États membres n’accordent pas de soutien financier aux entreprises qui entretiennent des liens avec des paradis fiscaux;</del>
+      <del>la Commission recommande que les États membres n’accordent pas de soutien financier aux entreprises qui entretiennent des liens avec des paradis fiscaux</del>
   
 
   
-      <ins>les entreprises enregistrées dans les paradis fiscaux définis dans la liste noire de l’Union1 bis ne devraient pas pouvoir percevoir d’aides d’État;</ins>
+      <ins>les entreprises enregistrées dans les paradis fiscaux définis dans la liste noire de l’Union1 bis ne devraient pas pouvoir percevoir d’aides d’État</ins>
   
 
   
-       rappelle que le Conseil a invité la Commission à examiner comment remédier aux effets de distorsion résultant de la participation de soumissionnaires utilisant des paradis fiscaux à des fins d’évasion fiscale;
+      ; rappelle que le Conseil a invité la Commission à examiner comment remédier aux effets de distorsion résultant de la participation de soumissionnaires utilisant des paradis fiscaux à des fins d’évasion fiscale
   
 
   
-      <ins>   _________________  1 bis Conclusions du Conseil relatives à la liste révisée des pays et territoires non coopératifs à des fins fiscales, JO C 64</ins>
+      <del>;</del>
+  
+
+  
+      <ins>;   _________________  1 bis Conclusions du Conseil relatives à la liste révisée des pays et territoires non coopératifs à des fins fiscales, JO C 64</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">239</div>
+  <div class="against">250</div>
+  <div class="abstention">111</div>
+</span>
+
+  
+    
+    <a href="/voting/143022">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(239/600 * 100%)">239</div>
-  
-  
-    <div class="-" style="width: calc(250/600 * 100%)">250</div>
-  
-  
-    <div class="0" style="width: calc(111/600 * 100%)">111</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/143022">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      51. demande qu’il soit fait preuve de prudence dans la consolidation du secteur aérien de l’Union, eu égard aux très gros montants d’aides d’État autorisés pour certaines compagnies aériennes de l’Union, 
-  
+<p>
 
   
-      <ins>sans aucune condition dans la plupart des pays, </ins>
+      51. demande qu’il soit fait preuve de prudence dans la consolidation du secteur aérien de l’Union, eu égard aux très gros montants d’aides d’État autorisés pour certaines compagnies aériennes de l’Union,
   
 
   
-      afin de garantir qu’ils ne permettront pas à ces compagnies d’éliminer ou des racheter des concurrents européens plus petits;
+      <ins> sans aucune condition dans la plupart des pays,</ins>
+  
+
+  
+       afin de garantir qu’ils ne permettront pas à ces compagnies d’éliminer ou des racheter des concurrents européens plus petits;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">130</div>
+  <div class="against">428</div>
+  <div class="abstention">44</div>
+</span>
+
+  
+    
+    <a href="/voting/143024">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(130/602 * 100%)">130</div>
-  
-  
-    <div class="-" style="width: calc(428/602 * 100%)">428</div>
-  
-  
-    <div class="0" style="width: calc(44/602 * 100%)">44</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/143024">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>83 bis. se félicite des mesures restrictives que l’Union a adoptées depuis le 25 février 2022 en réponse à la guerre menée par la Russie contre l’Ukraine; constate que ces mesures et les contre- mesures russes pourraient fortement peser sur l’économie de l’Union et perturber le marché; souligne que des mesures politiques adéquates et proportionnelles, notamment des aides d’État, devraient être adoptées afin d’atténuer ces effets négatifs; regrette que dans sa communication du 23 mars 2022 intitulée «Accueil des personnes fuyant la guerre en Ukraine: préparer l’Europe à la Commission ait laissé aux États membres le choix de conditionner le versement d’aides d’État aux gros consommateurs d’énergie au respect d’exigences environnementales; souligne que la transition vers une économie neutre en carbone d’ici à 2050 requiert une reconfiguration du cadre en matière d’aides d’État, afin que les dépenses publiques soient allouées à des entreprises viables sur le plan environnemental;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(133/601 * 100%)">133</div>
-  
-  
-    <div class="-" style="width: calc(416/601 * 100%)">416</div>
-  
-  
-    <div class="0" style="width: calc(52/601 * 100%)">52</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/143025">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2185(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0064_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">133</div>
+  <div class="against">416</div>
+  <div class="abstention">52</div>
+</span>
+
   
+    
+    <a href="/voting/143025">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-05-05-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Je me suis abstenu sur ce rapport qui fait quelques bons constats sur les risques économiques induits par les diverses crises que nous traversons - énergétique, sanitaire, géopolitique... - et mentionne un besoin accru d’autonomie industrielle. Malheureusement, le texte pèche par idéologie et s’aligne sur les objectifs aussi irréalistes que néfastes pour notre industrie du « pacte vert ».
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce rapport, qui se démarque par une orientation idéologique et philosophique excessive et ne prend pas suffisamment en compte la nécessité d&#39;une concurrence saine.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Cette résolution porte sur le rapport annuel de la Commission sur la politique de concurrence, qui décrit à la fois ses activités législatives et l&#39;application des règles en matière d&#39;aides d&#39;État, de concurrence et de concentration. Le texte demande notamment à la Commission d’appliquer le cadre de l’Union en matière d’aides d’État afin de permettre aux États membres de soutenir les entreprises et secteurs les plus durement touchés par l&#39;agression militaire russe contre l&#39;Ukraine et par les sanctions imposées à la Russie. Partageant les aspirations de ce texte, je me suis prononcé en sa faveur.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Comme tous les ans, je déplore l’orientation idéologique et philosophique du rapport. La question de la nécessité d’une concurrence saine pour garantir l’indépendance nationale et le bon exercice de la démocratie sans ingérence des puissances de l’argent est absente. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il promeut un libre-échange imprudent qui ne protège pas les intérêts économiques de la France.
+        </article>
+    
+        <article>
+            <div class="hidden">197536</div>
+            
+            <header><b>Nathalie COLIN-OESTERLÉ</b> | Les centristes</header>
+            . – J’ai voté en faveur du rapport annuel 2021 sur la politique de concurrence. Les règles de concurrence doivent être révisées pour les adapter à l&#39;ère numérique, à ce titre, une expertise scientifique et technique doit être développée au sein des services de la Commission. J’espère également une proposition rapide de la nouvelle définition du marché pertinent. Sur les fusions-acquisitions, il est primordial de prendre en compte l’impact de la mise en commun des données par les entreprises. Les règles relatives aux aides d&#39;État doivent être assouplies pour aider les entreprises de l&#39;UE affectées par les sanctions contre la Russie. Le rapport évoque également le règlement VBER.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai voté en faveur du rapport annuel sur la politique de concurrence 2021 qui dresse un certain nombre de recommandations concernant l&#39;application des règles en matière d&#39;aides d&#39;État, de concurrence et de concentration. Ainsi, nous avons insisté sur la nécessité d’assurer une certaine flexibilité dans le cadre de nos aides d’État pour permettre aux États membres de fournir un soutien aux entreprises et aux secteurs les plus durement touchés par les sanctions imposées à la Russie. J’ai également soutenu un amendement visant à prendre en compte la situation particulière des régions ultrapériphériques, durement touchées par la pandémie de COVID-19, concernant les décisions d’aide d’État. Enfin, nous demandons qu’il soit tenu compte, dans les nouvelles lignes directrices de la Commission relatives aux règles en matière d’aides d’État dans le domaine du climat, de la protection de l’environnement et de l’énergie, des effets négatifs de la flambée des prix de l&#39;énergie.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Le rapport annuel sur la politique de la concurrence est un classique des rapports d’initiative issus de la Commission ECON. Chaque année, le Parlement formule par le biais de ce rapport les recommandations à la Commission qui est l’organe qui conduit la politique de la concurrence qui est l’une des plus conséquente de l’UE du fait de son poids aussi bien sur l’économie que sur la souveraineté. Comme tous les ans, on ne peut que déplorer l’orientation idéologique et philosophique du rapport. L’optique de la politique de la concurrence est toujours orienté du strict point de vue du consommateur. La question de la nécessité d’une concurrence saine pour garantir l’indépendance nationale et le bon exercice de la démocratie sans ingérence des puissances de l’argent est absente. J’ai voté contre ce texte qui présente des contradictions idéologiques flagrantes sur l’agriculture : aucune critique du libre-échange n’est mentionnée, cependant on déplore la trop grande concentration de la production agricole en Europe, alors même que ce libre-échange ne peut conduire qu’à cette conséquence par la disparition des petites unités de production.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Le rapport annuel sur la politique de la concurrence est un classique des rapports d’initiative issus de la Commission ECON. Le Parlement formule par le biais de ce rapport les recommandations à la Commission qui est l’organe qui conduit la politique de la concurrence qui est l’une des plus conséquente de l’UE du fait de son poids, aussi bien sur l’économie que sur la souveraineté.Comme tous les ans, on ne peut que déplorer l’orientation idéologique et philosophique du rapport. L’optique de la politique de la concurrence est toujours orienté sur le concept du « consumer welfare » c’est à dire du strict point de vue du consommateur. La question de la nécessité d’une concurrence saine pour garantir l’indépendance nationale et le bon exercice de la démocratie sans ingérence des puissances de l’argent est absente.On note également des contradictions idéologiques flagrantes, sur l’agriculture puisque l’absence de la critique du libre-échange en est absente, mais on déplore la trop grande concentration de la production agricole en Europe, alors même que ce libre-échange ne peut conduire qu’à cette conséquence par la disparition des petites unités de production.C’est pour ces raisons que j’ai voté contre ce rapport.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197581</div>
+            
+            <header><b>Stéphanie YON-COURTIN</b> | Renaissance</header>
+            
+                <p> – Monsieur le Président, Madame la Vice-présidente, Monsieur le rapporteur, chers collègues, après une pandémie mondiale et en pleine guerre sur notre continent, je veux rappeler quelque chose d’important, qui semble échapper à certains populistes qui souhaiteraient une Europe à la carte, justement.</p>
+            
+                <p>Notre politique de concurrence nous protège et protège bel et bien nos entreprises et nos citoyens. Pendant la crise de la COVID-19, les mesures exceptionnelles mises en place ont permis de sauver des milliers d’emplois et de soutenir financièrement nos entreprises. Avec la guerre et la crise de l’énergie, le nouveau cadre temporaire relatif aux aides d’État permet, encore une fois, d’apporter un soutien massif pour contrer la hausse des prix de l’énergie.</p>
+            
+                <p>Notre politique de concurrence est aussi le moyen d’assurer des conditions équitables sur notre marché unique. Demain, les GAFA ne pourront plus imposer leurs propres règles, en décidant qui entre ou non sur le marché. Demain, des entreprises perfusées aux subventions publiques par certains États tiers ne pourront plus concurrencer de manière déloyale nos entreprises européennes, ni racheter impunément nos fleurons industriels.</p>
+            
+                <p>Notre politique de concurrence sera un outil clé pour accompagner toutes les transitions et c’est dans ce cadre qu’il nous faut pouvoir permettre de bénéficier encore plus des normes européennes qui servent de modèle au monde entier.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">204420</div>
+            
+            <header><b>Claude GRUFFAT</b> | Les Écologistes</header>
+            
+                <p>Dans ce rapport, en effet, on cherche en vain quelques points pourtant essentiels, quand certains États européens laissent filer vers les paradis fiscaux des milliards d&#39;aides d&#39;État versées à des multinationales dans le cadre de la crise de la COVID. N&#39;est-ce pas une trahison des règles de concurrence face aux PME taxées, elles, sans fin? Et malgré les alertes des écologistes, quand ces mêmes milliards d&#39;aides d&#39;État servent à tenir à bout de bras un modèle énergétique incapable de se passer du bon vouloir de M. Poutine, n&#39;est ce pas contraire à l&#39;esprit des traités européens et à la construction de la souveraineté de l&#39;Union? </p>
+            
+                <p>Cette semaine, il fait 50 degrés en Inde et au Pakistan. On sait que, demain, c&#39;est le territoire européen qui subira une catastrophe climatique. En fait, cela a même déjà commencé. Rappelons-nous les inondations l&#39;été dernier en Allemagne ou en Belgique. Alors, accepter qu&#39;un seul centime des aides d&#39;État serve encore à investir dans un système basé sur les énergies fossiles, n&#39;est-ce pas un acte en totale opposition avec la raison même de l&#39;existence de l&#39;Union? Est-ce en minorant la compétitivité des solutions renouvelables que l’Union nous protégera et qu&#39;elle protégera nos enfants demain? </p>
+            
+                <p>On pourrait continuer ainsi à énumérer les renoncements à la carte des États européens complices de la catastrophe climatique, de la pollution et de la prédation fiscale. Alors, je vous le demande solennellement, faites de la politique de la concurrence un vrai levier de la transition. Et pour cela, je vous donne rendez-vous l&#39;an prochain avec un espoir d&#39;optimisme supplémentaire.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

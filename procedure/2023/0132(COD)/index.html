@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Médicaments à usage humain</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,41 +22,43 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Médicaments à usage humain</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Produits et industrie pharmaceutiques</li>
-        
-    
-        
-        
-            <li>Médecine, maladies</li>
-        
     
         
         
@@ -67,19 +70,1164 @@
             <li>Cohésion économique, sociale et territoriale</li>
         
     
+        
+        
+            <li>Produits et industrie pharmaceutiques</li>
+        
+    
+        
+        
+            <li>Médecine, maladies</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/0132(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2023/0132(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2024-0140_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-04-10-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
+
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,124693,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,124693">🇫🇷 Renaissance</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197626,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197626,197629,197615">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+        
+        
+            <article id="25">
+            <header>📝 Amendement n°25 | 
+
+✅️ Adopté
+
+</header>
+            
+                <div class="hidden"></div>
+                
+
+<p>
+
+  
+      <ins>(34 bis) Lorsque l’évaluation des risques pour l’environnement est incomplète ou insuffisamment étayée pour un médicament autorisé avant le 30 octobre 2005, l’autorisation nationale de mise sur le marché devrait pouvoir être retirée. Toutefois, il convient de tenir dûment compte de la nécessité d’éviter de restreindre l’accès des patients à ces médicaments avant qu’une décision ne soit prise sur le retrait.</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="55">
+            <header>📝 Amendement n°55 | 
+
+✅️ Adopté
+
+</header>
+            
+                <div class="hidden"></div>
+                
+
+<p>
+
+  
+      <ins>(69 bis) Les substances actives émises pendant la fabrication peuvent constituer une menace pour l’environnement et la santé publique. Par conséquent, il  convient d’évaluer les risques pour l’environnement et d’y remédier tout au long du cycle de vie des médicaments, de leur fabrication à leur élimination en passant par leur utilisation.</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="70">
+            <header>📝 Amendement n°70 | 
+
+✅️ Adopté
+
+</header>
+            
+                <div class="hidden"></div>
+                
+
+<p>
+
+  
+      (129)
+  
+
+  
+      <del>Si les</del>
+  
+
+  
+      <ins>Les</ins>
+  
+
+  
+       États membres 
+  
+
+  
+      <del>décident que</del>
+  
+
+  
+      <ins>devraient mettre</ins>
+  
+
+  
+       la notice 
+  
+
+  
+      <del>devrait en principe être mise à disposition uniquement par voie électronique, ils</del>
+  
+
+  
+      <ins>à disposition sous forme électronique et sous forme papier, sauf si l’État membre décide de mettre à disposition les informations concernant les produits uniquement par voie électronique. Lorsque la notice n’est disponible que sous forme électronique, les États membres</ins>
+  
+
+  
+       devraient également veiller à ce qu’une version papier de la notice soit mise à disposition sur demande et sans frais supplémentaires pour les patients. Ils devraient également veiller à ce que les informations au format numérique soient facilement accessibles à tous les patients, par exemple en incluant dans l’emballage extérieur du produit un code-barres lisible numériquement, qui renverrait le patient à la version électronique de la notice.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="85">
+            <header>📝 Amendement n°85 | 
+
+✅️ Adopté
+
+</header>
+            
+                <div class="hidden"></div>
+                
+
+<p>
+
+  
+      <del>a) la vente, la fourniture ou l’utilisation de médicaments à visée anticonceptionnelle ou abortive;</del>
+  
+
+  
+      <ins>supprimé</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">382</div>
+  <div class="against">199</div>
+  <div class="abstention">16</div>
+</span>
+
+  
+    
+    <a href="/voting/167875">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="159">
+            <header>📝 Amendement n°159 | Partie 1 | 
+
+✅️ Adopté
+
+</header>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
+        
+    
+        
+        
+            <article id="159">
+            <header>📝 Amendement n°159 | Partie 2 | 
+
+✅️ Adopté
+
+</header>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
+        
+    
+        
+        
+            <article id="176">
+            <header>📝 Amendement n°176 | 
+
+✅️ Adopté
+
+</header>
+            
+                <div class="hidden"></div>
+                
+
+<p>
+
+  
+      3. Les États membres peuvent décider 
+  
+
+  
+      <del>de mettre</del>
+  
+
+  
+      <ins>que, pour des médicaments individuels, des catégories de médicaments ou pour tous les médicaments, la notice est mise</ins>
+  
+
+  
+       à disposition
+  
+
+  
+      <ins> à</ins>
+  
+
+  
+       la 
+  
+
+  
+      <del>notice</del>
+  
+
+  
+      <ins>fois</ins>
+  
+
+  
+       sous forme papier 
+  
+
+  
+      <del>ou électronique, voire les deux</del>
+  
+
+  
+      <ins>et sous forme électronique ou uniquement sous forme électronique. Dans ce dernier cas, la décision n’est prise qu’après consultation des patients, des soignants et des autres parties prenantes concernées</ins>
+  
+
+  
+      . En l’absence de telles règles spécifiques dans un État membre, une notice 
+  
+
+  
+      <ins>est mise à disposition sous forme électronique et incluse </ins>
+  
+
+  
+      sous forme papier 
+  
+
+  
+      <del>est incluse </del>
+  
+
+  
+      dans l’emballage d’un médicament. Si la notice n’est disponible que sous forme électronique, le droit du patient à une copie imprimée de la notice est garanti sur demande et gratuitement, et il convient de
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>  </ins>
+  
+
+  
+      veiller à ce que les informations sous forme numérique soient facilement accessibles à tous les patients
+  
+
+  
+      <ins>, de même que rédigées et conçues d’une manière claire et compréhensible</ins>
+  
+
+  
+      .
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="190">
+            <header>📝 Amendement n°190 | 
+
+✅️ Adopté
+
+</header>
+            
+                <div class="hidden"></div>
+                
+
+<p>
+
+  
+      Les États membres 
+  
+
+  
+      <del>peuvent décider de</del>
+  
+
+  
+      <ins>veillent à</ins>
+  
+
+  
+       mettre à disposition la fiche de sensibilisation sous forme papier ou 
+  
+
+  
+      <del>électronique, voire les deux. En l’absence de règles spécifiques dans un État membre, une fiche de sensibilisation</del>
+  
+
+  
+      <ins>à la fois</ins>
+  
+
+  
+       sous forme papier 
+  
+
+  
+      <del>est incluse</del>
+  
+
+  
+      <ins>et électronique</ins>
+  
+
+  
+       dans l’emballage d’un antimicrobien.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="199">
+            <header>📝 Amendement n°199 | 
+
+✅️ Adopté
+
+</header>
+            
+                <div class="hidden"></div>
+                
+
+<p>
+
+  
+      1. La période de protection réglementaire des données est de 
+  
+
+  
+      <del>six</del>
+  
+
+  
+      <ins>sept</ins>
+  
+
+  
+       ans 
+  
+
+  
+      <ins>et six mois </ins>
+  
+
+  
+      à compter du jour auquel l’autorisation de mise sur le marché pour le médicament concerné a été octroyée conformément à l’article 6, paragraphe 2. En ce qui concerne les autorisations de mise sur le marché qui font partie d’une même autorisation globale de mise sur le marché, la période de protection des données commence à la date à laquelle l’autorisation initiale de mise sur le marché a été octroyée dans l’Union.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="339">
+            <header>📝 Amendement n°339 | 
+
+❌️ Rejeté
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      (11) La directive devrait fonctionner en synergie avec le règlement afin de favoriser l’innovation et de promouvoir la compétitivité de l’industrie pharmaceutique de l’Union, en particulier des PME
+  
+
+  
+      <ins> ou des autres titulaires d’autorisations de mise sur le marché produisant sur le territoire de l’Union, quelle que soit leur taille</ins>
+  
+
+  
+      . À cet égard, un système équilibré de mesures d’incitation est proposé, qui récompense l’innovation, en particulier dans des domaines où il subsiste toujours des besoins médicaux non satisfaits, et l’innovation qui atteint les patients et améliore l’accès dans l’ensemble de l’Union
+  
+
+  
+      <ins> et dans ses régions ultrapériphériques</ins>
+  
+
+  
+      . Afin de rendre le système réglementaire plus efficace et plus propice à l’innovation, la directive vise également à réduire la charge administrative et à simplifier les procédures pour les entreprises.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">112</div>
+  <div class="against">464</div>
+  <div class="abstention">6</div>
+</span>
+
+  
+    
+    <a href="/voting/167883">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="340">
+            <header>📝 Amendement n°340 | 
+
+❌️ Rejeté
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      (129) Si les États membres décident que la notice devrait 
+  
+
+  
+      <del>en principe</del>
+  
+
+  
+      <ins>également</ins>
+  
+
+  
+       être mise à disposition 
+  
+
+  
+      <del>uniquement </del>
+  
+
+  
+      par voie électronique, ils devraient 
+  
+
+  
+      <del>également veiller à ce qu’une version papier de la notice soit mise à disposition sur demande et sans frais supplémentaires pour les patients. Ils devraient également </del>
+  
+
+  
+      veiller à ce que les informations au format numérique soient facilement accessibles à tous les patients, par exemple en incluant dans l’emballage extérieur du produit un code-barres lisible numériquement, qui renverrait le patient à la version électronique de la notice.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="341">
+            <header>📝 Amendement n°341 | 
+
+❌️ Rejeté
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      3. Les États membres garantissent que
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>, dans leur droit national, </ins>
+  
+
+  
+      la responsabilité civile ou administrative des titulaires d’autorisations de mise sur le marché
+  
+
+  
+      <del>, des fabricants</del>
+  
+
+  
+       et des 
+  
+
+  
+      <del>professionnels de la santé n’est pas</del>
+  
+
+  
+      <ins>fabricants est</ins>
+  
+
+  
+       engagée pour toutes les conséquences résultant de l’utilisation d’un médicament 
+  
+
+  
+      <del>en dehors des</del>
+  
+
+  
+      <ins>dans ses</ins>
+  
+
+  
+       indications thérapeutiques 
+  
+
+  
+      <del>autorisées</del>
+  
+
+  
+      <ins>existantes</ins>
+  
+
+  
+       ou 
+  
+
+  
+      <del>de l’utilisation d’un médicament non autorisé</del>
+  
+
+  
+      <ins>nouvelles</ins>
+  
+
+  
+      , lorsque cette utilisation est recommandée ou exigée par une autorité compétente en réponse à la propagation suspectée ou confirmée d’agents pathogènes, de toxines, d’agents chimiques ou de radiations nucléaires, qui sont susceptibles de causer des dommages. Ces dispositions s’appliquent indépendamment du fait qu’une autorisation nationale ou centralisée de mise sur le marché ait été octroyée ou non.
+  
+
+  
+      <ins> Lorsqu’une autorité compétente exige ou recommande l’utilisation d’un tel médicament, les professionnels de la santé restent soumis à leurs obligations éthiques et conservent leurs droits en la matière.</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="342">
+            <header>📝 Amendement n°342 | 
+
+❌️ Rejeté
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      4. La responsabilité du fait des produits défectueux, telle que prévue par OP: merci de remplacer cette référence par une référence au nouvel instrument COM(2022) 495 après adoption], 
+  
+
+  
+      <del>n’est pas concernée par le paragraphe 3.   </del>
+  
+
+  
+      <ins>peut être applicable afin de compléter le droit à une indemnisation.  </ins>
+  
+
+  
+      _________________  juillet 1985 relative au rapprochement des dispositions législatives, réglementaires et administratives des États membres en matière de responsabilité du fait des p. 29).
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="343">
+            <header>📝 Amendement n°343 | 
+
+❌️ Rejeté
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      3. 
+  
+
+  
+      <del>Les États membres peuvent décider de mettre à disposition la notice sous forme papier ou électronique, voire les deux. En l’absence de telles règles spécifiques dans un État membre, une notice sous forme papier est incluse dans l’emballage d’un médicament. Si la notice n’est disponible que sous forme électronique, le droit du patient à une copie imprimée de la notice est garanti sur demande et gratuitement</del>
+  
+
+  
+      <ins>Par défaut, une notice sous forme papier est incluse dans l’emballage d’un médicament. Les États membres peuvent décider que la notice est également disponible sous forme électronique</ins>
+  
+
+  
+      , et il convient de veiller à ce que les informations sous forme numérique soient facilement accessibles à tous les patients.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">80</div>
+  <div class="against">509</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/167879">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="344">
+            <header>📝 Amendement n°344 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      <del>Les États membres peuvent décider de mettre à disposition la fiche de sensibilisation sous forme papier ou électronique, voire les deux. En l’absence de règles spécifiques dans un État membre, une fiche de sensibilisation sous forme papier est incluse dans l’emballage d’un antimicrobien</del>
+  
+
+  
+      <ins>Par défaut, une fiche de sensibilisation sous forme papier est incluse dans l’emballage d’un antimicrobien. Les États membres peuvent décider de mettre à disposition la fiche de sensibilisation également sous forme électronique</ins>
+  
+
+  
+      .
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="345">
+            <header>📝 Amendement n°345 | 
+
+❌️ Rejeté
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      1. La période de protection réglementaire des données est de 
+  
+
+  
+      <del>six</del>
+  
+
+  
+      <ins>huit</ins>
+  
+
+  
+       ans à compter du jour auquel l’autorisation de mise sur le marché pour le médicament concerné a été octroyée conformément à l’article 6, paragraphe 2. En ce qui concerne les autorisations de mise sur le marché qui font partie d’une même autorisation globale de mise sur le marché, la période de protection des données commence à la date à laquelle l’autorisation initiale de mise sur le marché a été octroyée dans l’Union.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">91</div>
+  <div class="against">490</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    
+    <a href="/voting/167881">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="346">
+            <header>📝 Amendement n°346 | 
+
+❌️ Rejeté
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      La prolongation de la période de protection des données visée à l’article 81, paragraphe 2, premier alinéa, point a), n’est accordée aux médicaments que s’ils sont 
+  
+
+  
+      <del>mis en circulation</del>
+  
+
+  
+      <ins>produits</ins>
+  
+
+  
+       et fournis sans interruption dans la chaîne d’approvisionnement
+  
+
+  
+      <ins> par les titulaires d’autorisations de mise sur le marché, quelle que soit leur taille,</ins>
+  
+
+  
+       en quantité suffisante et dans les présentations nécessaires pour couvrir les besoins des patients dans les États membres dans lesquels l’autorisation de mise sur le marché est valable.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">53</div>
+  <div class="against">532</div>
+  <div class="abstention">14</div>
+</span>
+
+  
+    
+    <a href="/voting/167882">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Résolution sur la situation humanitaire au Mozambique</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Résolution sur la situation humanitaire au Mozambique</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(616/686 * 100%)">616</div>
-  
-  
-    <div class="-" style="width: calc(13/686 * 100%)">13</div>
+    <div class="for" style="width: calc(616/686 * 100%)">616</div>
   
   
-    <div class="0" style="width: calc(57/686 * 100%)">57</div>
+    <div class="against" style="width: calc(13/686 * 100%)">13</div>
+  
+  
+    <div class="abstention" style="width: calc(57/686 * 100%)">57</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,23 +88,34 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(73/79 * 100%)">73</div>
+    <div class="for" style="width: calc(73/79 * 100%)">73</div>
   
   
   
-    <div class="0" style="width: calc(6/79 * 100%)">6</div>
+    <div class="abstention" style="width: calc(6/79 * 100%)">6</div>
   
 </div>
  
 </section>
-            <a href="/voting/117278">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/117278">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
+    
+        
+        
+            <li>Politique étrangère et de sécurité commune (PESC)</li>
+        
+    
+        
+        
+            <li>Aide d&#39;urgence, alimentaire, humanitaire, aux réfugiés, Réserve d&#39;aide d&#39;urgence</li>
+        
     
         
         
@@ -112,675 +127,837 @@
             <li>Relations extérieures de l&#39;Union</li>
         
     
-        
-        
-            <li>Aide d&#39;urgence, alimentaire, humanitaire, aux réfugiés, Réserve d&#39;aide d&#39;urgence</li>
-        
+</ul>
+
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2784(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/RC-9-2020-0300_FR.html" target="_blank">📜 Texte et amendements</a></li>
     
-        
-        
-            <li>Politique étrangère et de sécurité commune (PESC)</li>
-        
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-09-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>🗃️ Données</h3>
 
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>4 bis. souligne que le découpage du pays par des multinationales ne fait qu’exacerber les inégalités et la colère dans la population mozambicaine et, en dernière analyse, fait le jeu des groupes djihadistes présents dans le nord du pays depuis la découverte de réserves particulièrement importantes de ressources fossiles;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">50</div>
+  <div class="against">529</div>
+  <div class="abstention">118</div>
+</span>
+
+  
+    
+    <a href="/voting/117240">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(50/697 * 100%)">50</div>
-  
-  
-    <div class="-" style="width: calc(529/697 * 100%)">529</div>
-  
-  
-    <div class="0" style="width: calc(118/697 * 100%)">118</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117240">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>4 ter. est préoccupé par la colère suscitée par cette monopolisation incontrôlée des ressources naturelles et la répression aveugle exercée par les autorités nationales et les milices privées, car elle pourrait favoriser le recrutement de nouveaux insurgés terroristes;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">70</div>
+  <div class="against">553</div>
+  <div class="abstention">74</div>
+</span>
+
+  
+    
+    <a href="/voting/117241">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(70/697 * 100%)">70</div>
-  
-  
-    <div class="-" style="width: calc(553/697 * 100%)">553</div>
-  
-  
-    <div class="0" style="width: calc(74/697 * 100%)">74</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117241">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>21 bis. souligne que le fait de rendre l’économie de tout un pays dépendante des revenus générés par l’exportation de gaz et d’autres combustibles fossiles est un pari extrêmement risqué au regard de la menace qui pèse sur le climat, et est contraire aux principes de justice sociale et de partage des richesses;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">151</div>
+  <div class="against">533</div>
+  <div class="abstention">13</div>
+</span>
+
+  
+    
+    <a href="/voting/117246">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(151/697 * 100%)">151</div>
-  
-  
-    <div class="-" style="width: calc(533/697 * 100%)">533</div>
-  
-  
-    <div class="0" style="width: calc(13/697 * 100%)">13</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117246">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>13 bis. fait observer que le Mozambique est un pays particulièrement vulnérable aux effets du changement climatique, comme l’a montré le cyclone Idai en mars 2019;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">141</div>
+  <div class="against">527</div>
+  <div class="abstention">29</div>
+</span>
+
+  
+    
+    <a href="/voting/117245">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(141/697 * 100%)">141</div>
-  
-  
-    <div class="-" style="width: calc(527/697 * 100%)">527</div>
-  
-  
-    <div class="0" style="width: calc(29/697 * 100%)">29</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117245">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>21 ter. souligne l’hypocrisie du président Macron qui, en 2019, déclarait aux Nations unies que les grands pays de ce monde devaient cesser de financer de nouvelles infrastructures polluantes dans les pays en développement et qui, dans le même temps, a apporté au cours des deux dernières années 1,5 milliard d’euros sous forme de garanties à des projets de développement des combustibles fossiles, y compris au Mozambique;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">37</div>
+  <div class="against">576</div>
+  <div class="abstention">84</div>
+</span>
+
+  
+    
+    <a href="/voting/117247">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(37/697 * 100%)">37</div>
-  
-  
-    <div class="-" style="width: calc(576/697 * 100%)">576</div>
-  
-  
-    <div class="0" style="width: calc(84/697 * 100%)">84</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117247">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>21 quater. demande au gouvernement français d’annuler les «French Gas Days» qui devraient être organisées à Maputo l’année prochaine par Business France, l’organisme public français chargé de promouvoir l’internationalisation de l’économie française;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">46</div>
+  <div class="against">557</div>
+  <div class="abstention">94</div>
+</span>
+
+  
+    
+    <a href="/voting/117248">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(46/697 * 100%)">46</div>
-  
-  
-    <div class="-" style="width: calc(557/697 * 100%)">557</div>
-  
-  
-    <div class="0" style="width: calc(94/697 * 100%)">94</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117248">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>21 quinquies. demande aux banques privées françaises de se retirer immédiatement de trois projets en cours de développement et de s’engager à interrompre, à terme, tous les services financiers fournis au bénéfice de projets liés à l’exploration, à l’exploitation et à l’exportation des réserves de gaz mozambicaines;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">42</div>
+  <div class="against">560</div>
+  <div class="abstention">95</div>
+</span>
+
+  
+    
+    <a href="/voting/117249">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(42/697 * 100%)">42</div>
-  
-  
-    <div class="-" style="width: calc(560/697 * 100%)">560</div>
-  
-  
-    <div class="0" style="width: calc(95/697 * 100%)">95</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117249">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>21 sexies. demande au gouvernement français de s’engager à ne pas apporter de soutien financier aux deux autres projets en cours de développement (Mozambique LNG et Rovuma LNG), ni à aucun autre projet à venir concernant les réserves de gaz du Mozambique;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">42</div>
+  <div class="against">559</div>
+  <div class="abstention">96</div>
+</span>
+
+  
+    
+    <a href="/voting/117250">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(42/697 * 100%)">42</div>
-  
-  
-    <div class="-" style="width: calc(559/697 * 100%)">559</div>
-  
-  
-    <div class="0" style="width: calc(96/697 * 100%)">96</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117250">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. condamne les attaques brutales perpétrées par des groupes terroristes contre le peuple mozambicain dans la province du Cap Delgado, dans le nord du Mozambique; dénonce les intérêts qui sous-tendent la déstabilisation de la région et l’appropriation des ressources, alors que le Mozambique cherche à exploiter des ressources naturelles importantes pour son développement économique et social;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">186</div>
+  <div class="against">501</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/117238">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(186/697 * 100%)">186</div>
-  
-  
-    <div class="-" style="width: calc(501/697 * 100%)">501</div>
-  
-  
-    <div class="0" style="width: calc(10/697 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117238">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>3 bis. estime que la République du Mozambique a le droit inaliénable de défendre sa souveraineté, son indépendance et son intégrité territoriale, ainsi que de mobiliser les moyens qu’elle juge nécessaires pour réprimer les attentats terroristes afin de défendre ses populations, son patrimoine, ses ressources et son territoire;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">186</div>
+  <div class="against">502</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    
+    <a href="/voting/117239">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(186/697 * 100%)">186</div>
-  
-  
-    <div class="-" style="width: calc(502/697 * 100%)">502</div>
-  
-  
-    <div class="0" style="width: calc(9/697 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117239">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>5 bis. refuse toute tentative d’exploiter ou d’instrumentaliser la situation dans la région du Cap Delgado afin d’alimenter des stratégies d’ingérence, ainsi que toute attitude néocoloniale à l’encontre du Mozambique et de sa population; insiste sur le fait que toute relation entre l’Union européenne et la République du Mozambique doit être fondée sur le respect des principes de la charte des Nations unies et du droit international;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">136</div>
+  <div class="against">489</div>
+  <div class="abstention">72</div>
+</span>
+
+  
+    
+    <a href="/voting/117242">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(136/697 * 100%)">136</div>
-  
-  
-    <div class="-" style="width: calc(489/697 * 100%)">489</div>
-  
-  
-    <div class="0" style="width: calc(72/697 * 100%)">72</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117242">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°12 | 
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>5 ter. estime que la République du Mozambique a le droit souverain de déterminer sa trajectoire de développement; demande le soutien de l’aide au développement, dans le respect de la souveraineté et en coopération avec l’État mozambicain et ses institutions démocratiques, et, dès lors, sans imposer de contreparties politiques et économiques;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">165</div>
+  <div class="against">508</div>
+  <div class="abstention">24</div>
+</span>
+
+  
+    
+    <a href="/voting/117243">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(165/697 * 100%)">165</div>
-  
-  
-    <div class="-" style="width: calc(508/697 * 100%)">508</div>
-  
-  
-    <div class="0" style="width: calc(24/697 * 100%)">24</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117243">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°13 | 
+        
+            <article id="13">
+            <header>📝 Amendement n°13 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       8. insiste sur l’importance de mener les réformes nécessaires si l’on veut répondre correctement aux besoins de la population mozambicaine et leur éviter de devenir des cibles propices à la radicalisation; souligne en particulier qu’il est urgent de créer des emplois et d’offrir des perspectives à la population de la province de Cabo Delgado, surtout aux jeunes; insiste également sur la nécessité de s’efforcer d’éliminer certaines causes profondes 
   
 
   
-      <del>du terrorisme,</del>
+      <ins>de la perméabilité aux thèses terroristes et </ins>
   
 
   
-      <ins>de la perméabilité aux thèses terroristes et du recrutement,</ins>
+      du 
   
 
   
-       comme l’insécurité, la pauvreté, les violations des droits de l’homme, l’inégalité, l’exclusion, le chômage, la dégradation de l’environnement, la corruption et le détournement de fonds publics ainsi que l’impunité, ce qui contribuerait considérablement à l’élimination des organisations 
+      <del>terrorisme</del>
   
 
   
-      <del>terroristes;</del>
+      <ins>recrutement</ins>
   
 
   
-      <ins>terroristes et, dans le même temps, à reconnaître que les causes profondes du terrorisme sont complexes et que ce phénomène est alimenté par une vision du monde façonnée par une idéologie radicale violente qui recourt délibérément des tactiques violentes contre des cibles civiles pour parvenir à   des fins politiques;</ins>
+      , comme l’insécurité, la pauvreté, les violations des droits de l’homme, l’inégalité, l’exclusion, le chômage, la dégradation de l’environnement, la corruption et le détournement de fonds publics ainsi que l’impunité, ce qui contribuerait considérablement à l’élimination des organisations terroristes
+  
+
+  
+      <ins> et, dans le même temps, à reconnaître que les causes profondes du terrorisme sont complexes et que ce phénomène est alimenté par une vision du monde façonnée par une idéologie radicale violente qui recourt délibérément des tactiques violentes contre des cibles civiles pour parvenir à   des fins politiques</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(152/697 * 100%)">152</div>
-  
-  
-    <div class="-" style="width: calc(540/697 * 100%)">540</div>
-  
-  
-    <div class="0" style="width: calc(5/697 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/117244">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    ECR
     
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2784(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/RC-9-2020-0300_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">152</div>
+  <div class="against">540</div>
+  <div class="abstention">5</div>
+</span>
+
   
+    
+    <a href="/voting/117244">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-09-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            
+                <p>N’occultons pas néanmoins la rudesse du combat livré par le Mozambique contre la mouvance de l’État islamique, Al-Shabaab, qui met depuis 2017 le Cabo Delgado à feu et à sang. Une lutte que ce pays mène bien seul, puisque la Communauté de développement d&#39;Afrique australe a jusqu’à présent brillé par son absence. </p>
+            
+                <p>À la clef, le lot habituel de carnages, en particulier à l’encontre des chrétiens qui ont vu ces derniers temps leurs édifices réduits en cendres et certains qui parmi leurs fidèles refusaient d’abjurer leur foi, lâchement assassinés. À cet égard, cette situation dramatique s’inscrit dans la lignée de tragédies similaires au Nigéria ou au Burkina Faso. </p>
+            
+                <p>Ainsi, quand bien même les débats géopolitiques complexes restent pertinents, nous ne devons pas, par une fausse pudeur politiquement correcte, esquiver la dénonciation d’un quasi-génocide, qui de l’Afrique subsaharienne au Moyen-Orient, décime les chrétiens dans un silence général.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

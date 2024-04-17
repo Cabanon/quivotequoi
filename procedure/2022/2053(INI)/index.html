@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Cycles durables du carbone</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Cycles durables du carbone</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(323/639 * 100%)">323</div>
-  
-  
-    <div class="-" style="width: calc(257/639 * 100%)">257</div>
+    <div class="for" style="width: calc(323/639 * 100%)">323</div>
   
   
-    <div class="0" style="width: calc(59/639 * 100%)">59</div>
+    <div class="against" style="width: calc(257/639 * 100%)">257</div>
+  
+  
+    <div class="abstention" style="width: calc(59/639 * 100%)">59</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(28/73 * 100%)">28</div>
+    <div class="for" style="width: calc(28/73 * 100%)">28</div>
   
   
-    <div class="-" style="width: calc(27/73 * 100%)">27</div>
+    <div class="against" style="width: calc(27/73 * 100%)">27</div>
   
   
-    <div class="0" style="width: calc(18/73 * 100%)">18</div>
+    <div class="abstention" style="width: calc(18/73 * 100%)">18</div>
   
 </div>
  
 </section>
-            <a href="/voting/154235">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/154235">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -111,6 +116,11 @@
     
         
         
+            <li>Politique de l&#39;environnement</li>
+        
+    
+        
+        
             <li>Pollution du sol, dégradation</li>
         
     
@@ -119,129 +129,263 @@
             <li>Protection des ressources naturelles: faune, flore, vie sauvage, paysage; biodiversité </li>
         
     
-        
-        
-            <li>Politique de l&#39;environnement</li>
-        
+</ul>
+
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2053(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0066_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-04-18-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>🗃️ Données</h3>
 
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                            <option value="RE,197511">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197683,197629,197615">🇫🇷 Reconquête!</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">197536,190774,24594</div>
+                
 
-<section>
+<p>
 
   
       <ins>E bis. considérant que veiller à la disponibilité de matières premières naturelles (nourriture et biomasse) est l’objectif premier de l’agriculture et de la foresterie;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Geoffroy DIDIER (LR), 
+    
+      Anne SANDER (LR) et 
+    
+      Nathalie COLIN-OESTERLÉ (LC)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">326</div>
+  <div class="against">313</div>
+  <div class="abstention">2</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(326/641 * 100%)">326</div>
-  
-  
-    <div class="-" style="width: calc(313/641 * 100%)">313</div>
-  
-  
-    <div class="0" style="width: calc(2/641 * 100%)">2</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197536,190774,24594,190774,197535,24594</div>
+                
 
-<section>
-
-  
-      P. considérant qu’un cadre réglementaire efficient et robuste et un financement approprié seront nécessaires pour assurer la commercialisation et le déploiement en temps utile de technologies de captage, d’absorption et de stockage du carbone, ainsi que des infrastructures de CO requises;
-  
+<p>
 
   
-      <del>
+      P. considérant qu’un cadre réglementaire efficient et robuste et un financement approprié seront nécessaires pour assurer la commercialisation et le déploiement en temps utile de technologies de captage, d’absorption et de stockage du carbone, ainsi que des infrastructures de CO requises
+  
+
+  
+      <del>;
 2</del>
   
 
   
-      <ins> qu’un modèle de
+      <ins>; qu’un modèle de
 2 financement durable, à long terme et fondé sur le marché doit être créé sans puiser dans les fonds de la PAC;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Geoffroy DIDIER (LR), 
+    
+      Anne SANDER (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Agnès EVREN (LR)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">292</div>
+  <div class="against">328</div>
+  <div class="abstention">20</div>
+</span>
+
+  
+    
+    <a href="/voting/154278">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(292/640 * 100%)">292</div>
-  
-  
-    <div class="-" style="width: calc(328/640 * 100%)">328</div>
-  
-  
-    <div class="0" style="width: calc(20/640 * 100%)">20</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154278">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197536,190774,24594,190774,197535,24594,190774,197535,24594</div>
+                
 
-<section>
+<p>
 
   
       9. invite les secteurs industriels à proposer des solutions innovantes et des initiatives visant à éliminer progressivement le carbone fossile et à réduire les émissions de carbone; soutient la promotion, notamment au moyen d’incitations financières, de solutions technologiques pour le captage et l’utilisation du carbone, ainsi que la production de carburants de synthèse durables ou d’autres produits à base de carbone non fossile; invite la Commission, en coopération avec les secteurs industriels et les autres parties prenantes, y compris les organisations de la société civile, qui participent aux pratiques et technologies    d’absorption du carbone à présenter des solutions et des initiatives concrètes visant à remplacer le carbone fossile par des flux durables de carbone recyclé;
@@ -251,44 +395,67 @@
       <ins> souligne que, compte tenu du niveau élevé des émissions d’origine fossile, l’agriculture carbonée ne peut compenser ces émissions que dans une mesure très limitée; fait remarquer que l’utilisation de matières premières biogéniques est un premier pas vers la mise en place d’un cycle naturel du carbone;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  des députés
+  
+    dont 
     
+      Geoffroy DIDIER (LR), 
     
-    <article>
-    <header>📝 Amendement n°4 | 
+      Anne SANDER (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Agnès EVREN (LR)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">197536,190774,24594,190774,197535,24594,190774,197535,24594,190774,197535,24594</div>
+                
 
-<section>
-
-  
-      17. souligne que l’intérêt croissant pour l’agriculture carbonée devrait être l’occasion pour les agriculteurs de transformer leur modèle économique et devrait permettre de mieux récompenser les agriculteurs qui s’engagent dans une transition vers des pratiques d’agroforesterie agroécologiques et durables; 
-  
+<p>
 
   
-      <ins>demande à la Commission d’élargir sa définition des pratiques d’agriculture carbonée aux mesures d’atténuation au sein même des exploitations, en plus des mesures de séquestration dans les champs; souligne l’importance de garantir l’intégrité sociale, environnementale et économique    de l’agriculture carbonée afin de garantir la sécurité alimentaire, un revenu décent pour les agriculteurs et des incidences limitées sur l’environnement; </ins>
+      17. souligne que l’intérêt croissant pour l’agriculture carbonée devrait être l’occasion pour les agriculteurs de transformer leur modèle économique et devrait permettre de mieux récompenser les agriculteurs qui s’engagent dans une transition vers des pratiques d’agroforesterie agroécologiques et durables;
   
 
   
-      estime que l’agriculture carbonée peut être une activité volontaire et que, par conséquent, les rétributions financières pour l’agriculture carbonée devraient compenser les efforts supplémentaires que déploient les agriculteurs et les forestiers au-delà des obligations qui leur incombent en vertu de la législation de l’Union et des 
+      <ins> demande à la Commission d’élargir sa définition des pratiques d’agriculture carbonée aux mesures d’atténuation au sein même des exploitations, en plus des mesures de séquestration dans les champs; souligne l’importance de garantir l’intégrité sociale, environnementale et économique    de l’agriculture carbonée afin de garantir la sécurité alimentaire, un revenu décent pour les agriculteurs et des incidences limitées sur l’environnement;</ins>
   
 
   
-      <del>   </del>
+       estime que l’agriculture carbonée peut être une activité volontaire et que, par conséquent, les rétributions financières pour l’agriculture carbonée devraient compenser les efforts supplémentaires que déploient les agriculteurs et les forestiers au-delà des obligations qui leur incombent en vertu de la législation de l’Union et des
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
@@ -296,68 +463,89 @@
   
 
   
-      <del>ou par une combinaison de ces options de financement;</del>
+      <del>ou par</del>
   
 
   
-      <ins>un système de crédits carbone négociables ou une combinaison de ces options de financement, avec des contributions de programmes d’agriculture carbonée du marché privé;</ins>
+      <ins>un système de crédits carbone négociables ou</ins>
   
 
   
-       estime qu’il y a lieu de développer l’agriculture carbonée sur la base d’un cadre politique crédible et efficace tenant compte de la nécessité d’un ensemble de règles clair pour les agriculteurs et les forestiers qui décident de mettre en œuvre des pratiques d’agriculture carbonée; insiste sur le fait que la mise en place réussie de l’agriculture carbonée dépend d’une gestion globale de tous les réservoirs de carbone dans les sols, les matériaux et la végétation, en intégrant les flux de dioxyde de carbone, de méthane et d’oxyde nitreux à la fois pour les terres et le bétail; souligne en outre qu’il importe de garantir un prix à la sortie de l’exploitation et une rémunération équitables; souligne que les incitations à l’agriculture carbonée ne doivent pas avoir d’effets secondaires négatifs, tels que l’accaparement des terres par de grandes entreprises qui ont l’intention d’utiliser les terres à des fins de compensation des émissions de carbone et non pour des réductions réelles d’émissions; souligne le principe général 
+       une combinaison de ces options de financement
   
 
   
-      <ins>   </ins>
+      <ins>, avec des contributions de programmes d’agriculture carbonée du marché privé</ins>
+  
+
+  
+      ; estime qu’il y a lieu de développer l’agriculture carbonée sur la base d’un cadre politique crédible et efficace tenant compte de la nécessité d’un ensemble de règles clair pour les agriculteurs et les forestiers qui décident de mettre en œuvre des pratiques d’agriculture carbonée; insiste sur le fait que la mise en place réussie de l’agriculture carbonée dépend d’une gestion globale de tous les réservoirs de carbone dans les sols, les matériaux et la végétation, en intégrant les flux de dioxyde de carbone, de méthane et d’oxyde nitreux à la fois pour les terres et le bétail; souligne en outre qu’il importe de garantir un prix à la sortie de l’exploitation et une rémunération équitables; souligne que les incitations à l’agriculture carbonée ne doivent pas avoir d’effets secondaires négatifs, tels que l’accaparement des terres par de grandes entreprises qui ont l’intention d’utiliser les terres à des fins de compensation des émissions de carbone et non pour des réductions réelles d’émissions; souligne le principe général
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
   
 
   
       selon lequel les bénéficiaires de paiements liés aux absorptions de carbone devraient répondre de leurs émissions de gaz à effet de serre;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Geoffroy DIDIER (LR), 
+    
+      Anne SANDER (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Agnès EVREN (LR)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">324</div>
+  <div class="against">298</div>
+  <div class="abstention">22</div>
+</span>
+
+  
+    
+    <a href="/voting/154257">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(324/644 * 100%)">324</div>
-  
-  
-    <div class="-" style="width: calc(298/644 * 100%)">298</div>
-  
-  
-    <div class="0" style="width: calc(22/644 * 100%)">22</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154257">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197536,190774,24594,190774,197535,24594,190774,197535,24594,190774,197535,24594,190774,197535,24594</div>
+                
 
-<section>
+<p>
 
   
       20. souligne que la séquestration du carbone dans le sol et la biomasse devrait être considérée comme une contribution précieuse à la lutte contre le changement climatique en cours; insiste sur le fait que les secteurs de l’utilisation des terres et de la foresterie ont une capacité de stockage naturel du carbone maximale; souligne que la séquestration du carbone peut être soumise à des facteurs externes qui ne sont pas toujours sous le contrôle des agriculteurs et qui pourraient compromettre la durée des absorptions; répète que les absorptions de gaz à effet de serre par les puits de carbone naturels sont difficiles à calculer et potentiellement réversibles et    que le changement climatique ajoute encore au risque de réversibilité des absorptions par les puits de carbone naturels; souligne la nécessité d’assurer une définition claire de la permanence ainsi que des règles de responsabilité en cas d’inversion éventuelle;
@@ -367,159 +555,193 @@
       <ins> souligne que l’agriculture carbonée dans les sols agricoles présente un risque accru de rejet involontaire de carbone dans l’atmosphère, notamment en raison de fuites dues à des catastrophes naturelles;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Geoffroy DIDIER (LR), 
+    
+      Anne SANDER (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Agnès EVREN (LR)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">301</div>
+  <div class="against">320</div>
+  <div class="abstention">21</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(301/642 * 100%)">301</div>
-  
-  
-    <div class="-" style="width: calc(320/642 * 100%)">320</div>
-  
-  
-    <div class="0" style="width: calc(21/642 * 100%)">21</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197536,190774,24594,190774,197535,24594,190774,197535,24594,190774,197535,24594,190774,197535,24594,190774,197535,24594</div>
+                
 
-<section>
+<p>
 
   
       29. souligne que les solutions fondées sur les technologies de captage et stockage du CO (CSC) et de captage et utilisation
 2 du CO (CUC) peuvent jouer un rôle dans
-2 la décarbonation, en particulier pour l’atténuation des émissions de procédé dans l’industrie, pour les États membres qui optent pour ces technologies.
+2 la décarbonation, en particulier pour l’atténuation des émissions de procédé dans l’industrie, pour les États membres qui optent pour ces technologies
   
 
   
-      <ins> souligne le rôle de la BECSC par la combustion ou la fermentation du carbone biogénique;</ins>
+      <del>.</del>
+  
+
+  
+      <ins>. souligne le rôle de la BECSC par la combustion ou la fermentation du carbone biogénique;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Geoffroy DIDIER (LR), 
+    
+      Anne SANDER (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Agnès EVREN (LR)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">305</div>
+  <div class="against">325</div>
+  <div class="abstention">16</div>
+</span>
+
+  
+    
+    <a href="/voting/154261">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(305/646 * 100%)">305</div>
-  
-  
-    <div class="-" style="width: calc(325/646 * 100%)">325</div>
-  
-  
-    <div class="0" style="width: calc(16/646 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154261">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197536,190774,24594,190774,197535,24594,190774,197535,24594,190774,197535,24594,190774,197535,24594,190774,197535,24594,190774,197535,24594</div>
+                
 
-<section>
-
-  
-      33. estime que passer de sources d’énergie fossile à une utilisation industrielle de sources d’énergie issue de la biomasse a un effet induit assorti de répercussions négatives sur la quantité de carbone stockée dans le secteur de l’utilisation des terres; rappelle que du point de vue du changement climatique, l’accroissement des émissions persiste jusqu’à l’écoulement du temps de retour carbone, ce qui peut durer des siècles pour une culture énergétique; souligne que, par rapport à l’objectif de l’accord de Paris de limiter le réchauffement climatique à 1,5oC, les temps de retour carbone de plus d’une décennie sont devenus    inappropriés et contre-productifs21; demande des mesures stratégiques qui renforcent les absorptions et le stockage du carbone dans les écosystèmes en apportant des incitations compétitives aux gestionnaires de terres; 
-  
+<p>
 
   
-      <del>     </del>
+      33. estime que passer de sources d’énergie fossile à une utilisation industrielle de sources d’énergie issue de la biomasse a un effet induit assorti de répercussions négatives sur la quantité de carbone stockée dans le secteur de l’utilisation des terres; rappelle que du point de vue du changement climatique, l’accroissement des émissions persiste jusqu’à l’écoulement du temps de retour carbone, ce qui peut durer des siècles pour une culture énergétique; souligne que, par rapport à l’objectif de l’accord de Paris de limiter le réchauffement climatique à 1,5oC, les temps de retour carbone de plus d’une décennie sont devenus    inappropriés et contre-productifs21; demande des mesures stratégiques qui renforcent les absorptions et le stockage du carbone dans les écosystèmes en apportant des incitations compétitives aux gestionnaires de terres
   
 
   
-      <ins>estime qu’il est essentiel de mettre au point une nouvelle chaîne de valeur industrielle pour le captage, le recyclage, le transport et le stockage durables du carbone au moyen de technologies innovantes et de couloirs de transit existants;</ins>
+      <del>;        </del>
   
 
   
-        _________________  21 ESAC, EASAC’s Environmental Experts call for international action to restrict climate-damaging forest bioenergy schemes.
+      <ins>; estime qu’il est essentiel de mettre au point une nouvelle chaîne de valeur industrielle pour le captage, le recyclage, le transport et le stockage durables du carbone au moyen de technologies innovantes et de couloirs de transit existants;  </ins>
+  
+
+  
+      _________________  21 ESAC, EASAC’s Environmental Experts call for international action to restrict climate-damaging forest bioenergy schemes.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Geoffroy DIDIER (LR), 
+    
+      Anne SANDER (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Agnès EVREN (LR)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">312</div>
+  <div class="against">324</div>
+  <div class="abstention">6</div>
+</span>
+
+  
+    
+    <a href="/voting/154262">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(312/642 * 100%)">312</div>
-  
-  
-    <div class="-" style="width: calc(324/642 * 100%)">324</div>
-  
-  
-    <div class="0" style="width: calc(6/642 * 100%)">6</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154262">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197536,190774,24594,190774,197535,24594,190774,197535,24594,190774,197535,24594,190774,197535,24594,190774,197535,24594,190774,197535,24594,190774,197535,24594</div>
+                
 
-<section>
+<p>
 
   
       42. souligne la nécessité d’accroître la coopération, l’échange d’informations et le partage de bonnes pratiques entre les acteurs concernés, afin de favoriser une meilleure connaissance et une compréhension plus approfondie des possibilités et des risques dans la mise en œuvre des initiatives de cyclage du carbone;
@@ -529,44 +751,126 @@
       <ins> félicite la Commission pour sa récente création d’un groupe d’experts sur l’absorption du carbone, celui-ci réunissant des spécialistes issus des sphères publique et privée du domaine de l’absorption du carbone;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(271/640 * 100%)">271</div>
-  
-  
-    <div class="-" style="width: calc(335/640 * 100%)">335</div>
-  
-  
-    <div class="0" style="width: calc(34/640 * 100%)">34</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
-        
-    </footer>
-    </article>
+      Geoffroy DIDIER (LR), 
     
+      Anne SANDER (LR), 
+    
+      Nathalie COLIN-OESTERLÉ (LC) et 
+    
+      Agnès EVREN (LR)
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2053(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0066_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">271</div>
+  <div class="against">335</div>
+  <div class="abstention">34</div>
+</span>
+
   
+    🤖 Vote électronique
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-04-18-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            Je me suis abstenue sur cette résolution.Je me suis opposée, en particulier, aux dispositions proposant de puiser dans la politique agricole commune pour financer la séquestration du carbone.Le secteur n’est, ceci étant dit, pas opposé au système de séquestration du carbone et à l’innovation en ce sens. Le système qui nous est actuellement proposé est, pour l’heure, trop complexe.Néanmoins, la mission première de l’agriculture doit se concentrer sur la sécurité alimentaire.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il impose des objectifs irréalistes sur la réduction des émissions de carbone. Cela entraînera une décroissance de notre économie et un abandon de nos industries.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            J’ai voté en faveur du rapport Bernhuber sur les Cycles durables du carbone. Le texte souligne le rôle essentiel qu’ont l’agriculture et la sylviculture dans les absorptions de carbone. Ce rôle, et les efforts de ces secteurs dans la lutte pour le climat doivent être incités, valorisés et récompensés. L’initiative de la Commission sur la certification des absorptions de carbone doit nous permettre de nous saisir de cette opportunité pour le monde agricole. Les producteurs qui s’engagent dans des pratiques durables liées au Carbon Farming doivent être rémunérés et pour cela un bon équilibre devra être trouvé pour créer un régime incitatif qui ne représente pas de trop lourdes contraintes administratives, faute de quoi, ce mécanisme de certification sera un échec. Ce rapport est un premier pas dans l’économie liée aux cycles durables du carbone et j’espère que nos travaux au Parlement nous permettront d’avancer dans le bon sens sur la base de l’initiative mise sur la table en novembre dernier.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport présente les observations et les propositions du Parlement suite à la communication de la Commission sur les cycles durables du carbone. Il insiste notamment sur le potentiel des technologies de capture, de stockage et de recyclage de carbone qui sont pour le moment une fausse bonne solution au dérèglement climatique en raison de leur coût, leur efficacité, et le signal qu’elles envoient aux industriels incités à poursuivre leurs activités polluantes plutôt qu’à décarboner durablement leur modèle de production. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Reconquête!</header>
+            . – J’ai voté contre.Ce texte est une usine à gaz qui a pour objectif de promouvoir « l’agriculture carbonée » ainsi que de capter et stocker les émissions de carbone. Les moyens évoqués sont soit peu précis, soit totalement démesurés et, de l’avis d’ingénieurs et grands chefs d’entreprise spécialisés, simplement irréalisables d’un point de vue technique. De plus, la charge pesant sur les agriculteurs serait écrasante.
+        </article>
+    
+        <article>
+            <div class="hidden">197504</div>
+            
+            <header><b>Jérémy DECERLE</b> | Renaissance</header>
+            . – J’ai voté en faveur de cette résolution qui contribue à atteindre l’objectif de neutralité climatique que l’Europe s’est fixée d’ici 2050 via la loi climat. Cette résolution vise à compenser une partie des émissions de CO2 européennes inévitables en présentant des solutions afin d’absorber et de stocker davantage le carbone. L&#39;agriculture européenne est un des rares secteurs qui peut d&#39;ores et déjà jouer le rôle de modèle économique et écologique avec des gestionnaires de terres qui contribueront à la captation du carbone et donc à la protection de la biodiversité. Dans ce projet de grande ampleur de réduction du carbone de l’atmosphère au côté de l’industrie, il sera crucial de mettre en valeur le travail fait par nos agricultrices et nos agriculteurs pour stocker du carbone et réduire leurs émissions. Je prends en effet comme un bon signal l&#39;adoption d&#39;un amendement qui envisage une approche intégrative de la certification en préparation.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Si le secteur agricole n’est pas opposé à ce système qui rejoint notre vision d’une écologie fondée sur l’innovation, pour autant, il est beaucoup trop complexe à ce stade. Je me suis donc abstenu.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport qui tente de dynamiser la position du PE afin d’atteindre les objectifs du Pacte vert en tentant de maîtriser les cycles de carbone consistant à extraire du carbone des réserves fossiles puis à le rejeter dans l’atmosphère.Dans ce but, le texte promeut une géo-ingénierie qui entraînera la construction de structures gigantesques de captation et de stockage dans des proportions inconnues, ce qui n’est pas acceptable.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b></b> | </header>
+            Ce rapport d&#39;initiative fait suite à la communication de la Commission européenne de décembre 2021 sur les cycles durables du carbone, qui présente des actions à l&#39;échelle de l&#39;UE visant à intensifier les initiatives d&#39;agriculture carbonée et les solutions industrielles pour capturer, stocker et recycler le carbone (CCS/U). Ces dernières technologies apparaissent pour certains comme un moyen transitoire permettant de réduire nos émissions de gaz à effet de serre dans certains secteurs industriels tout en développant en parallèle des alternatives moins polluantes. Dans le même temps, certains industriels voient là l’opportunité pour eux de ne pas remettre en cause leur activité en misant sur le développement de ces projets. Quant à l’agriculture carbonée, la Commission a implicitement ouvert la voie dans sa communication à l’utilisation de la compensation des émissions de CO2 par l’absorption naturelle des sols et des divers puits de carbone, ce qui permettrait de masquer artificiellement les émissions du secteur. Pour ces raisons, j’ai voté contre ce texte, qui ne pose en outre pas de réglementation nouvelle mais qui se borne à demander une proposition législative à la Commission européenne.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

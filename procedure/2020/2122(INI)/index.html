@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Union bancaire – rapport annuel 2020</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Union bancaire – rapport annuel 2020</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(495/686 * 100%)">495</div>
-  
-  
-    <div class="-" style="width: calc(100/686 * 100%)">100</div>
+    <div class="for" style="width: calc(495/686 * 100%)">495</div>
   
   
-    <div class="0" style="width: calc(91/686 * 100%)">91</div>
+    <div class="against" style="width: calc(100/686 * 100%)">100</div>
+  
+  
+    <div class="abstention" style="width: calc(91/686 * 100%)">91</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,28 +88,24 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(50/79 * 100%)">50</div>
+    <div class="for" style="width: calc(50/79 * 100%)">50</div>
   
   
-    <div class="-" style="width: calc(29/79 * 100%)">29</div>
+    <div class="against" style="width: calc(29/79 * 100%)">29</div>
   
   
 </div>
  
 </section>
-            <a href="/voting/136124">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/136124">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Libre circulation des capitaux</li>
-        
     
         
         
@@ -117,226 +117,357 @@
             <li>Marché intérieur, marché unique</li>
         
     
+        
+        
+            <li>Libre circulation des capitaux</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2122(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0256_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-10-05-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. considère que l’union bancaire, avec ses mécanismes de surveillance et de résolution uniques des banques, a favorisé et déclenché des opérations de fusion et d’acquisition dans les secteurs bancaires de plusieurs États membres, ainsi que la concentration des dépôts et des investissements dans les géants de la finance, exacerbant le problème des institutions «trop grandes pour faire faillite»; rappelle en outre que l’union bancaire vise à retirer aux États membres leur contrôle et leurs décisions souveraines sur leur système bancaire et, partant, sur leur modèle de développement; rejette dès lors l’union bancaire;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">90</div>
+  <div class="against">552</div>
+  <div class="abstention">42</div>
+</span>
+
+  
+    
+    <a href="/voting/135787">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(90/684 * 100%)">90</div>
-  
-  
-    <div class="-" style="width: calc(552/684 * 100%)">552</div>
-  
-  
-    <div class="0" style="width: calc(42/684 * 100%)">42</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135787">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 ter. affirme que l’importance du système bancaire, pour que les ressources financières soient mises au service du développement et de la capacité productive des pays, et donc de l’amélioration des conditions de vie des populations et des travailleurs, détermine la nécessité d’un contrôle public des banques;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">81</div>
+  <div class="against">587</div>
+  <div class="abstention">16</div>
+</span>
+
+  
+    
+    <a href="/voting/135788">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(81/684 * 100%)">81</div>
-  
-  
-    <div class="-" style="width: calc(587/684 * 100%)">587</div>
-  
-  
-    <div class="0" style="width: calc(16/684 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135788">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>5 bis. déplore la fermeture des agences bancaires et le licenciement de milliers d’employés de banques dans les États membres; rappelle que ces processus ne sont pas sans lien avec le processus de concentration du secteur promu par l’union bancaire, avec des conséquences négatives pour les populations, notamment celles vivant dans les zones rurales, la population vieillissante, ou la partie de la population qui qui souffre d’une moindre maîtrise du numérique et des questions financières;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">123</div>
+  <div class="against">531</div>
+  <div class="abstention">30</div>
+</span>
+
+  
+    
+    <a href="/voting/135789">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(123/684 * 100%)">123</div>
-  
-  
-    <div class="-" style="width: calc(531/684 * 100%)">531</div>
-  
-  
-    <div class="0" style="width: calc(30/684 * 100%)">30</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135789">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       39. regrette que la question du pays d’origine et de l’État membre d’accueil demeure un défi pour l’achèvement de l’union bancaire et considère que la mise en place du SEAD fera partie de la solution, 
   
 
   
-      <del>parallèlement à de nouvelles mesures de réduction des risques;</del>
+      <del>parallèlement à de nouvelles mesures de réduction des risques</del>
   
 
   
-      <ins>mais seulement après que les risques auront été réduits;</ins>
+      <ins>mais seulement après que les risques auront été réduits</ins>
   
 
   
-       est préoccupé par le fait que, si le niveau des prêts non productifs augmente au fur et à mesure que les mesures de soutien public commencent à disparaître, les pays d’origine et d’accueil ne soient amenés à mettre en place des mesures de protection des actifs et à procéder à un nouveau cantonnement; souligne que les banques doivent être en mesure d’opérer au-delà des frontières tout en gérant leurs fonds propres et leurs liquidités à un niveau consolidé avec des garanties crédibles et applicables pour les pays d’accueil concernant la disponibilité des ressources et l’impact sur la stabilité financière, afin de diversifier leurs risques et de remédier à tout manque de rentabilité; estime qu’une harmonisation progressive est nécessaire dans les domaines où des options et pouvoirs discrétionnaires nationaux s’appliquent, y compris dans le domaine du droit de l’insolvabilité, afin de faciliter la planification des résolutions pour les groupes bancaires transfrontaliers;
+      ; est préoccupé par le fait que, si le niveau des prêts non productifs augmente au fur et à mesure que les mesures de soutien public commencent à disparaître, les pays d’origine et d’accueil ne soient amenés à mettre en place des mesures de protection des actifs et à procéder à un nouveau cantonnement; souligne que les banques doivent être en mesure d’opérer au-delà des frontières tout en gérant leurs fonds propres et leurs liquidités à un niveau consolidé avec des garanties crédibles et applicables pour les pays d’accueil concernant la disponibilité des ressources et l’impact sur la stabilité financière, afin de diversifier leurs risques et de remédier à tout manque de rentabilité; estime qu’une harmonisation progressive est nécessaire dans les domaines où des options et pouvoirs discrétionnaires nationaux s’appliquent, y compris dans le domaine du droit de l’insolvabilité, afin de faciliter la planification des résolutions pour les groupes bancaires transfrontaliers;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">97</div>
+  <div class="against">554</div>
+  <div class="abstention">33</div>
+</span>
+
+  
+    
+    <a href="/voting/135794">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(97/684 * 100%)">97</div>
-  
-  
-    <div class="-" style="width: calc(554/684 * 100%)">554</div>
-  
-  
-    <div class="0" style="width: calc(33/684 * 100%)">33</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135794">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       45. se félicite des efforts déployés par le MSU pour proposer aux banques des orientations et des précisions en vue de leur auto-évaluation et de la notification appropriée des risques liés à l’environnement ainsi qu’au changement climatique; souligne qu’une pression de surveillance supplémentaire est nécessaire pour que les institutions financières divulguent de manière appropriée les risques liés au climat et à l’environnement; estime que le test de résistance du MSU aux risques climatiques constitue une étape importante dans l’évaluation des pratiques des banques ainsi que dans le recensement des domaines concrets d’amélioration; se félicite, dans ce contexte, de la recommandation du guide de la BCE sur les risques liés au climat et à l’environnement, qui préconise une approche stratégique complète pour faire face aux risques liés au climat; soutient l’idée que les banques préparent leur auto- évaluation et des plans d’action en 2021, suivis d’une surveillance prudentielle des actions des banques en 2022; considère que ces auto-évaluations y notifications doivent être régies par le principe de proportionnalité et ne pas nuire à la capacité et à la compétitivité des banques; prend acte de l’initiative de l’ABE de mener un exercice pilote à l’échelle de    l’Union sur le risque climatique et prend acte de ses conclusions selon lesquelles il est nécessaire de fournir davantage d’informations sur les stratégies de transition et les émissions de gaz à effet de serre pour permettre aux banques et aux autorités de surveillance d’évaluer plus précisément le risque climatique; rappelle que les investissements et les prêts dans les activités économiques non durables peuvent donner lieu à des actifs délaissés ou à des investissements irrécupérables;
@@ -346,117 +477,121 @@
       <ins> avertit toutefois que le subventionnement excessif des investissements durables pourrait créer des bulles d’actifs verts;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">166</div>
+  <div class="against">503</div>
+  <div class="abstention">15</div>
+</span>
+
+  
+    
+    <a href="/voting/135795">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(166/684 * 100%)">166</div>
-  
-  
-    <div class="-" style="width: calc(503/684 * 100%)">503</div>
-  
-  
-    <div class="0" style="width: calc(15/684 * 100%)">15</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135795">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      M. considérant que le changement climatique, la dégradation de l’environnement et la transition vers une économie à faible intensité de 
-  
+<p>
 
   
-      <del>carbone </del>
+      M. considérant que le changement climatique, la dégradation de l’environnement et la transition vers une économie à faible intensité de carbone
   
 
   
-      <ins>carbone, ainsi que les efforts en matière de lutte contre le blanchiment d’argent et le financement du terrorisme, </ins>
+      <del> </del>
   
 
   
-      sont des facteurs à prendre en compte pour apprécier la viabilité des bilans des banques, en tant que sources de risques susceptibles d’avoir une incidence sur les investissements dans l’ensemble des régions et des secteurs; que les modèles de risque sophistiqués devraient déjà tenir compte de la plupart des risques associés au changement 
+      <ins>, ainsi que les efforts en matière de lutte contre le blanchiment d’argent et le financement du terrorisme, </ins>
   
 
   
-      <del>climatique;</del>
+      sont des facteurs à prendre en compte pour apprécier la viabilité des bilans des banques, en tant que sources de risques susceptibles d’avoir une incidence sur les investissements dans l’ensemble des régions et des secteurs; que les modèles de risque sophistiqués devraient déjà tenir compte de la plupart des risques associés au changement climatique
   
 
   
-      <ins>climatique, au blanchiment d’argent et au terrorisme;</ins>
+      <ins>, au blanchiment d’argent et au terrorisme</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">138</div>
+  <div class="against">536</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/135797">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(138/682 * 100%)">138</div>
-  
-  
-    <div class="-" style="width: calc(536/682 * 100%)">536</div>
-  
-  
-    <div class="0" style="width: calc(8/682 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135797">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       W. considérant que même si les règles de surveillance et de résolution, ainsi que le fonds de résolution ont été centralisés, les systèmes de garantie des dépôts restent d’envergure nationale et diffèrent d’un État membre à l’autre; que la directive relative aux systèmes de garantie des dépôts34 prévoit un niveau minimal de protection des déposants; que les déposants de l’ensemble de l’union bancaire 
@@ -470,280 +605,282 @@
       <ins>sont exposés à des niveaux de crédit variables, au risque de marché et au risque opérationnel, ce qui pourrait justifier des niveaux de protection différents; que les investisseurs de détail devraient bénéficier d’une garantie particulière qui tienne compte des spécificités nationales;   relative aux systèmes de garantie des</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">86</div>
+  <div class="against">544</div>
+  <div class="abstention">52</div>
+</span>
+
+  
+    
+    <a href="/voting/135798">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(86/682 * 100%)">86</div>
-  
-  
-    <div class="-" style="width: calc(544/682 * 100%)">544</div>
-  
-  
-    <div class="0" style="width: calc(52/682 * 100%)">52</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135798">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>7 bis. propose la création d’un pare-feu réglementaire entre les caisses d’épargne et les banques d’investissement afin d’éviter les effets d’entraînement et les effondrements systémiques;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">143</div>
+  <div class="against">515</div>
+  <div class="abstention">24</div>
+</span>
+
+  
+    
+    <a href="/voting/135790">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(143/682 * 100%)">143</div>
-  
-  
-    <div class="-" style="width: calc(515/682 * 100%)">515</div>
-  
-  
-    <div class="0" style="width: calc(24/682 * 100%)">24</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135790">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>19 bis. rappelle que l’argent liquide est un système d’échange anonyme et sert également à garantir les activités commerciales pour les personnes les plus vulnérables de la société, comme les personnes âgées et les pauvres; rappelle qu’une monnaie numérique de banque centrale risque d’exclure ces catégories de personnes des activités commerciales et qu’elle permettra aux banques centrales de surveiller le comportement des consommateurs ainsi que les habitudes de dépense de n’importe quel citoyen;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">142</div>
+  <div class="against">532</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/135791">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(142/682 * 100%)">142</div>
-  
-  
-    <div class="-" style="width: calc(532/682 * 100%)">532</div>
-  
-  
-    <div class="0" style="width: calc(8/682 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135791">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>19 ter. estime que les mesures déjà prises en vue de la création d’une monnaie numérique de banque centrale pourraient ouvrir la voie à un changement potentiellement radical du système bancaire, dans lequel le pouvoir de création monétaire serait transféré des banques commerciales au SEBC; considère que les implications n’ont pas été suffisamment débattues ou analysées;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">138</div>
+  <div class="against">540</div>
+  <div class="abstention">4</div>
+</span>
+
+  
+    
+    <a href="/voting/135792">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(138/682 * 100%)">138</div>
-  
-  
-    <div class="-" style="width: calc(540/682 * 100%)">540</div>
-  
-  
-    <div class="0" style="width: calc(4/682 * 100%)">4</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135792">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       38. 
   
 
   
-      <del>estimes </del>
+      <del>estimes</del>
   
 
   
-      <ins>estime </ins>
+      <ins>estime</ins>
   
 
   
-      que les avantages potentiels de la consolidation bancaire, tant au sein de l’Union qu’au-delà des frontières, pour remédier à la faible rentabilité, aux surcapacités et à la fragmentation du secteur, devrait être davantage étayé
+       que les avantages potentiels de la consolidation bancaire, tant au sein de l’Union qu’au-delà des frontières, pour remédier à la faible rentabilité, aux surcapacités et à la fragmentation du secteur, devrait être davantage étayés
   
 
   
-      <del>s;</del>
+      <ins>, tout comme les coûts et les risques éventuels, tels que la création d’oligopoles, la cartellisation, l’abus de pouvoir de marché et de pouvoir sociétal, et les déséconomies d’échelle</ins>
   
 
   
-      <ins>s, tout comme les coûts et les risques éventuels, tels que la création d’oligopoles, la cartellisation, l’abus de pouvoir de marché et de pouvoir sociétal, et les déséconomies d’échelle;</ins>
-  
-
-  
-       reconnaît la tendance du secteur bancaire à s’engager dans la consolidation et renvoie dans ce contexte au guide de la BCE sur l’approche prudentielle de la consolidation, qui soutient les regroupements d’entreprises bien conçus et bien exécutés; souligne les avantages de la protection de la diversité/pluralité des secteurs financiers dans la construction de la confiance systémique et le maintien de la stabilité financière; invite la Commission à prendre en compte les conclusions de l’évaluation réalisée en 2021 par le Conseil de stabilité financière sur les effets des réformes trop grandes pour faire faillite sur le système financier, et à leur donner suite;
+      ; reconnaît la tendance du secteur bancaire à s’engager dans la consolidation et renvoie dans ce contexte au guide de la BCE sur l’approche prudentielle de la consolidation, qui soutient les regroupements d’entreprises bien conçus et bien exécutés; souligne les avantages de la protection de la diversité/pluralité des secteurs financiers dans la construction de la confiance systémique et le maintien de la stabilité financière; invite la Commission à prendre en compte les conclusions de l’évaluation réalisée en 2021 par le Conseil de stabilité financière sur les effets des réformes trop grandes pour faire faillite sur le système financier, et à leur donner suite;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">143</div>
+  <div class="against">522</div>
+  <div class="abstention">17</div>
+</span>
+
+  
+    
+    <a href="/voting/135793">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(143/682 * 100%)">143</div>
-  
-  
-    <div class="-" style="width: calc(522/682 * 100%)">522</div>
-  
-  
-    <div class="0" style="width: calc(17/682 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135793">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°12 | 
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      46. prend acte du rôle de l’ABE dans la direction, la coordination et le suivi de la lutte du secteur financier de l’Union contre le blanchiment de capitaux et le financement du terrorisme; salue les efforts auxquels l’ABE a consenti au cours des deux dernières années pour améliorer les échanges d’informations entre le MSU et les autorités de surveillance en matière de lutte contre le blanchiment de capitaux et le financement du terrorisme afin de mieux tenir compte des aspects relatifs à la lutte contre le blanchiment de capitaux dans les mesures de surveillance prudentielle; demande que cette responsabilité s’accompagne d’un financement et de ressources appropriés; salue le soutien accordé par l’ABE en faveur de la mise en œuvre d’un fonctionnement individuel des pouvoirs de surveillance en matière de lutte contre le blanchiment de capitaux au sein des États membres, et demande des mesures supplémentaires pour veiller à ce que la surveillance en matière de lutte contre le blanchiment de capitaux et le financement du terrorisme se fonde sur les risques, qu’elle soit proportionnée et efficace; relève les différences entre, d’une part, les approches adoptées par les autorités nationales à l’égard de la surveillance en matière de lutte contre le blanchiment de capitaux et le financement    du terrorisme et, d’autre part, la mise en application de la législation de l’Union, ce qui peut donner lieu à des arbitrages réglementaires; encourage la transformation d’une partie des dispositions de la directive anti- blanchiment en un règlement; déplore que plusieurs États membres n’aient pas encore pleinement transposé les quatrième et cinquième directives anti-blanchiment, et que leur mise en œuvre effective présente de graves lacunes dans un nombre encore plus important d’États membres; se félicite que la Commission ait commencé à lancer des procédures d’infraction et l’invite à lancer des procédures d’infraction pour les cas restants de défaut de transposition et de mise en œuvre des directives sur le blanchiment de capitaux; prend acte du deuxième mandat de l’ABE, qui consiste à établir une base de données relative à la lutte contre le blanchiment de capitaux, dont l’élaboration est attendue en 
-  
+<p>
 
   
-      <del>2021,</del>
+      46. prend acte du rôle de l’ABE dans la direction, la coordination et le suivi de la lutte du secteur financier de l’Union contre le blanchiment de capitaux et le financement du terrorisme; salue les efforts auxquels l’ABE a consenti au cours des deux dernières années pour améliorer les échanges d’informations entre le MSU et les autorités de surveillance en matière de lutte contre le blanchiment de capitaux et le financement du terrorisme afin de mieux tenir compte des aspects relatifs à la lutte contre le blanchiment de capitaux dans les mesures de surveillance prudentielle; demande que cette responsabilité s’accompagne d’un financement et de ressources appropriés; salue le soutien accordé par l’ABE en faveur de la mise en œuvre d’un fonctionnement individuel des pouvoirs de surveillance en matière de lutte contre le blanchiment de capitaux au sein des États membres, et demande des mesures supplémentaires pour veiller à ce que la surveillance en matière de lutte contre le blanchiment de capitaux et le financement du terrorisme se fonde sur les risques, qu’elle soit proportionnée et efficace; relève les différences entre, d’une part, les approches adoptées par les autorités nationales à l’égard de la surveillance en matière de lutte contre le blanchiment de capitaux et le financement    du terrorisme et, d’autre part, la mise en application de la législation de l’Union, ce qui peut donner lieu à des arbitrages réglementaires; encourage la transformation d’une partie des dispositions de la directive anti- blanchiment en un règlement; déplore que plusieurs États membres n’aient pas encore pleinement transposé les quatrième et cinquième directives anti-blanchiment, et que leur mise en œuvre effective présente de graves lacunes dans un nombre encore plus important d’États membres; se félicite que la Commission ait commencé à lancer des procédures d’infraction et l’invite à lancer des procédures d’infraction pour les cas restants de défaut de transposition et de mise en œuvre des directives sur le blanchiment de capitaux; prend acte du deuxième mandat de l’ABE, qui consiste à établir une base de données relative à la lutte contre le blanchiment de capitaux, dont l’élaboration est attendue en 2021
   
 
   
-      <ins>2021 et devrait englober la lutte contre le financement du terrorisme,</ins>
+      <ins> et devrait englober la lutte contre le financement du terrorisme</ins>
   
 
   
-       et à approfondir la coopération et l’échange d’informations entre les autorités européennes; souligne que les collèges de lutte contre le blanchiment de capitaux 
+      , et à approfondir la coopération et l’échange d’informations entre les autorités européennes; souligne que les collèges de lutte contre le blanchiment de capitaux 
   
 
   
@@ -759,59 +896,195 @@
   
 
   
-      relevant des territoires dans lesquelles le groupe opère, jouent un rôle important dans l’évaluation des performances du groupe en matière de lutte contre le blanchiment de 
+      relevant des territoires dans lesquelles le groupe opère, jouent un rôle important dans l’évaluation des performances du groupe en matière de lutte contre le blanchiment de capitaux
   
 
   
-      <del>capitaux;</del>
+      <ins> et le financement du terrorisme</ins>
   
 
   
-      <ins>capitaux et le financement du terrorisme;</ins>
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(141/682 * 100%)">141</div>
-  
-  
-    <div class="-" style="width: calc(525/682 * 100%)">525</div>
-  
-  
-    <div class="0" style="width: calc(16/682 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135796">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    ID
+    (🇫🇷 : Rassemblement national)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2122(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0256_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">141</div>
+  <div class="against">525</div>
+  <div class="abstention">16</div>
+</span>
+
   
+    
+    <a href="/voting/135796">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-10-05-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Ce rapport n’apporte que peu d’éléments nouveaux à un dossier déjà ancien. Ce travail manquant de pertinence, mais louant toujours une union bancaire qui serait néfaste pour les intérêts français, j’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce texte.Ce rapport ne remet pas en cause certaines législations de l&#39;Union bancaire, qui sont inabouties. Les améliorations apportées par cette dernière, notamment s&#39;agissant de la protection des épargnants et des contribuables, restent à démontrer.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Il s’agit d’un rapport annuel sur l’union bancaire de l’UE. Il reconnaît qu’une union bancaire solide est nécessaire à la stabilité, à la compétitivité et à la convergence de l’union économique et monétaire (UEM) ainsi qu’à l’élargissement du rôle de l’euro sur la scène internationale. Néanmoins, l’union bancaire demeurera inachevée tant qu’elle ne disposera pas d’un filet de sécurité pour le Fonds de résolution unique (FRU) et d’un système européen d’assurance des dépôts (SEAD) comme troisième pilier. Le texte souligne également l&#39;importance de règles du jeu équitables qui évitent les désavantages pour PME en termes d&#39;accès au financement, et la nécessité de surveiller attentivement l&#39;émission de produits titrisés. En ce qui concerne la finance durable, le rapport invite la Commission à poursuivre ses efforts dans le domaine de la finance durable en adoptant les actes délégués restants en vertu du règlement de taxonomie de l&#39;UE. Le rapport évoque enfin l’adoption des ajustements des règles prudentielles bancaires pendant la crise de la COVID-19 et les travaux en cours de la BCE sur l’euro numérique. Partageant les constats et aspirations de ce texte, je me suis positionné en faveur de celui-ci.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            En définitive, ce rapport n’apporte que peu d’éléments nouveaux. J’ai voté contre ce énième compte-rendu périodique dont la philosophie se cantonne à se féliciter beaucoup et à critiquer peu.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport, car il n’est qu’un énième et inutile texte félicitant la politique de l’UE en matière bancaire, sans émettre aucune critique ni proposition nouvelle.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur du rapport annuel 2020 relatif à l’Union bancaire. Ce rapport d&#39;initiative dresse un bilan sur l&#39;union bancaire et identifie les lacunes rencontrées lors de l’année 2020. Il rappelle qu’il faut renforcer les deux mécanismes sur lesquels l’union bancaire se repose, notamment le mécanisme de surveillance unique (MSU), chargé de la surveillance des banques établies dans la zone euro et les autres États membres participants, et le mécanisme de résolution unique (MRU), dont le but est d&#39;assurer le déroulement ordonné des procédures de résolution pour les banques en difficulté au sein de l’union bancaire. Il émet des dispositions encourageant le développement de ces instruments afin de répondre aux questions de consommation ainsi qu’un système adéquat de supervision de la lutte contre le blanchiment de capitaux. Le rapport évoque enfin l’adoption des ajustements des règles prudentielles bancaires pendant la crise de la COVID-19 et les travaux en cours de la BCE sur l’euro numérique.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations et les recommandations du Parlement européen sur l’Union bancaire et l’état du système bancaire européen. Il affirme son soutien à l’Union des marchés de capitaux, défend l’allègement des normes bancaires (notamment en termes d’obligations de fonds propres) en raison de la COVID et félicite les banques pour leur soutien à l’économie réelle durant la crise sans s’alarmer sur leurs pratiques spéculatives. J’ai donc voté contre ce texte qui s’inscrit dans une vision dérégulée de la finance et ne souligne pas suffisamment la nécessité de la réguler plus fermement pour la mettre au service des urgences écologiques et sociales.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            L’Union européenne veut parachever au plus vite son projet d’union bancaire. Le Parlement rend son avis annuel à ce sujet. Cette vaste entreprise de constitution d’un unique marché des capitaux européens, de nature à renforcer encore davantage les effets pervers du capitalisme financier, est de fort mauvais augure. Face à une telle situation, ce rapport ne trouve rien de mieux que de féliciter les banques européennes pour leur action « responsable » au cours de la pandémie et espérer un parachèvement prochain de ce funeste projet. Je rejette donc vigoureusement ce texte !
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce texte qui, malgré l&#39;immobilisme de l&#39;union bancaire, se félicite du travail prétendument accompli.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai voté en faveur du rapport annuel 2020 sur l’Union bancaire. Je suis d’avis qu’une Union bancaire solide est nécessaire à la stabilité et à la compétitivité de l’union économique et monétaire ainsi qu’au renforcement du rôle de l’euro sur la scène internationale. Je soutiens également les dispositions du texte qui soulignent l&#39;importance de règles du jeu équitables qui évitent les désavantages pour PME en termes d&#39;accès au financement.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport, car il se félicite beaucoup et remet peu en question le bien-fondé de législations complexes et inabouties.On attend toujours la preuve de l’efficacité de l’union bancaire en matière de limitation et de gestion des risques ainsi que de protection des épargnants et des contribuables.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            Ce rapport rappelle certes utilement les enjeux de ce dossier, dont les commissaires font souvent un élément central de la cohésion de l’UE. Il n’apporte cependant que peu d’éléments nouveaux. Nos élus ont souvent reporté leur hostilité à la philosophie de ces textes sur les rapports périodiques, qui, il est vrai, se félicitent beaucoup et critiquent peu. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport, car il n’est qu’un énième et inutile texte félicitant la politique de l’UE en matière bancaire, sans émettre aucune critique ni proposition nouvelle.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Comme chaque année le Parlement présente son rapport sur les développements de l’Union bancaire. Or, nous déplorons que les développements véritablement nouveaux soient rares. Depuis l’adoption des textes à la fin de la législature 2009-2014, les éléments restés alors en suspens le sont tous encore aujourd’hui. Le premier pilier, celui de la supervision par la BCE des banques systémiques, fonctionne depuis 2015. Le second, le mécanisme de résolution unique, n’est pas appliqué, le Fonds de résolution Unique venant au secours d’une banque en difficulté continuant d’être abondé, la seule évolution conséquente étant la possibilité, d’avoir recours au MES pour faire face aux difficultés d’un de leurs membres. Le troisième pilier, celui de la protection des dépôts et du mécanisme de garantie, poursuit le sur-place entamé il y a de nombreuses années. Deux approches opposées: les pays du Nord qui ne souhaitent pas avoir à payer pour les erreurs de gestion des banques du Sud, et les autres qui privilégient la solidarité. En définitive, le rapport nous rappelle utilement les enjeux de ce dossier, dont les commissaires font souvent un élément central de la cohésion de l’UE mais il n’apporte cependant que peu de nouveauté. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Comme chaque année le Parlement présente son rapport sur les développements de l’Union bancaire. On peut s’interroger sur la pertinence de ce travail, tant les développements véritablement nouveaux sont rares.En définitive, le rapport nous rappelle certes utilement les enjeux de ce dossier, dont les commissaires font souvent un élément central de la cohésion de l’UE. Il n’apporte cependant que peu d’éléments nouveaux.Nos élus ont souvent reporté leur hostilité à la philosophie de ces textes sur les rapports périodiques, qui, il est vrai, se félicitent beaucoup et critiquent peu.J’ai voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Comme chaque année le Parlement présente son rapport sur les développements de l’Union bancaire. On peut s’interroger sur la pertinence de ce travail, tant les développements véritablement nouveaux sont rares. C’est de nouveau le cas ici. J’ai voté contre
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            
+                <p> – Madame la Présidente, Madame la Commissaire, Madame la Rapporteure, mes chers collègues, l’union bancaire est le serpent de mer constant de la politique européenne. Aujourd’hui, vous prétendez superviser l’hyperconcentration d’un risque, alors qu’il est déjà hors de contrôle.</p>
+            
+                <p>Le cloisonnement des marchés, la séparation des risques et la diversité des modèles de fixation des prix et de contrôle sont des conditions de la sécurité. L’interdépendance et la concentration multiplient le risque systémique, surtout quand ils relient des marchés hétérogènes comme le restent encore les marchés nationaux européens. Mais le principe est fondé sur un système qui, une fois le contribuable rincé, engage les épargnants, les déposants et les entreprises à payer la note pour sauver les activités spéculatives des banques.</p>
+            
+                <p>On sait déjà que ces mêmes banques sont exposées à de multiples bulles qui risquent d’éclater demain, du fait de la pandémie et du fait que les banques n’ont pas voulu tirer les nécessaires leçons des faillites précédentes. Il suffit pour s’en convaincre de voir les demandes de dérégulation exigées par le lobby bancaire au plus fort de la période COVID-19, où l’on trouve encore des activités de titrisation très risquées, celles-là mêmes qui ont conduit à la faillite de Lehman Brothers et à l’explosion mondiale de 2008. On prend les mêmes et on recommence. L’addition de faiblesses n’a jamais constitué une force. La clé n’est pas la mutualisation du risque, mais son redécoupage et sa déconcentration. Tel est le rôle de l’État-nation que nous appelons de nos vœux.</p>
+            
+                <p>Vous avez construit une union bancaire en laissant la protection des épargnants au dernier rang de vos préoccupations. Nous, nous pensons que c’est en prenant des mesures de régulation fortes au niveau national que nous serons à même de protéger les épargnants et les déposants, qui sont au premier rang de nos préoccupations.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

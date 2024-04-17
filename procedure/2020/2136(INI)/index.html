@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Évaluation de la mise en œuvre de l’article 50 du traité UE</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Évaluation de la mise en œuvre de l’article 50 du traité UE</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(516/692 * 100%)">516</div>
-  
-  
-    <div class="-" style="width: calc(85/692 * 100%)">85</div>
+    <div class="for" style="width: calc(516/692 * 100%)">516</div>
   
   
-    <div class="0" style="width: calc(91/692 * 100%)">91</div>
+    <div class="against" style="width: calc(85/692 * 100%)">85</div>
+  
+  
+    <div class="abstention" style="width: calc(91/692 * 100%)">91</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(50/79 * 100%)">50</div>
+    <div class="for" style="width: calc(50/79 * 100%)">50</div>
   
   
-    <div class="-" style="width: calc(23/79 * 100%)">23</div>
+    <div class="against" style="width: calc(23/79 * 100%)">23</div>
   
   
-    <div class="0" style="width: calc(6/79 * 100%)">6</div>
+    <div class="abstention" style="width: calc(6/79 * 100%)">6</div>
   
 </div>
  
 </section>
-            <a href="/voting/139870">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/139870">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -106,12 +111,12 @@
     
         
         
-            <li>Etat et évolution de l&#39;Union</li>
+            <li>Application du droit de l&#39;Union européenne</li>
         
     
         
         
-            <li>Application du droit de l&#39;Union européenne</li>
+            <li>Etat et évolution de l&#39;Union</li>
         
     
         
@@ -121,20 +126,138 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2136(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0357_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-02-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       D. considérant que l’article 50 du traité UE, en prévoyant explicitement le retrait de l’Union dans le cadre du droit de l’Union, établit la procédure unique 
@@ -152,113 +275,125 @@
       <ins> que les principes et les règles de droit international, en particulier la convention de Vienne sur le droit des traités, sont d’application;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">92</div>
+  <div class="against">547</div>
+  <div class="abstention">59</div>
+</span>
+
+  
+    
+    <a href="/voting/139126">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(92/698 * 100%)">92</div>
-  
-  
-    <div class="-" style="width: calc(547/698 * 100%)">547</div>
-  
-  
-    <div class="0" style="width: calc(59/698 * 100%)">59</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139126">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       16. estime néanmoins que le processus de retrait a d’emblée été marqué
   
 
   
-      <del>, du côté britannique,</del>
+      <del>, du côté britannique, </del>
   
 
   
-       par un climat d’incertitude, comme en témoigne, entre autres, le temps écoulé entre le référendum et la notification du retrait en vertu de l’article 50 du traité UE, et ce jusqu’à la fin des négociations; considère que cette incertitude a eu des répercussions sur les citoyens et les opérateurs économiques, en particulier sur l’île d’Irlande; estime 
+      <ins> </ins>
   
 
   
-      <del>que la mise en avant du risque d’un retrait sans accord a mis en péril les perspectives d’un retrait ordonné;</del>
+      par un climat d’incertitude, comme en témoigne, entre autres, le temps écoulé entre le référendum et la notification du retrait en vertu de l’article 50 du traité UE, et ce jusqu’à la fin des négociations; considère que cette incertitude a eu des répercussions sur les citoyens et les opérateurs économiques, en particulier sur l’île d’Irlande; estime 
   
 
   
-      <ins>toutefois, à cet égard, que la décision quant au moment de la transmission de la notification formelle relève de la seule appréciation de l’État qui se retire; souligne en outre que l’évaluation de la conformité ou non de la décision de quitter l’Union avec les règles constitutionnelles de l’État qui se retire relève de la compétence exclusive de ce dernier;</ins>
+      <del>que la mise en avant du risque d’un retrait sans accord a mis en péril les perspectives d’un retrait ordonné</del>
+  
+
+  
+      <ins>toutefois, à cet égard, que la décision quant au moment de la transmission de la notification formelle relève de la seule appréciation de l’État qui se retire; souligne en outre que l’évaluation de la conformité ou non de la décision de quitter l’Union avec les règles constitutionnelles de l’État qui se retire relève de la compétence exclusive de ce dernier</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">100</div>
+  <div class="against">544</div>
+  <div class="abstention">54</div>
+</span>
+
+  
+    
+    <a href="/voting/139121">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(100/698 * 100%)">100</div>
-  
-  
-    <div class="-" style="width: calc(544/698 * 100%)">544</div>
-  
-  
-    <div class="0" style="width: calc(54/698 * 100%)">54</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139121">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       24. fait observer que le traité UE ne précise aucune exigence de fond concernant le cadre des relations futures entre l’État membre qui se retire et l’Union et son lien avec les modalités de retrait; rappelle toutefois que, conformément à l’article 50, paragraphe 2, du traité UE, l’accord de retrait doit tenir compte du cadre des relations futures entre l’État membre qui se retire et l’Union;
@@ -268,49 +403,51 @@
       <ins> estime, à cet égard, qu’il est nécessaire de suivre une démarche parallèle plus stricte entre la négociation de l’accord de retrait et la négociation des futures relations commerciales avec l’État qui se retire, conformément à l’article 50, paragraphe 2, du traité UE; prend acte des obstacles qui ont entravé la séquence des négociations imposée par l’Union et des retards dans la résolution des questions liées au retrait en raison de l’absence d’une conception commune des relations futures; affirme en outre qu’il importe d’établir des mesures transitoires fondées sur le principe de coopération loyale, assorties de conditions favorables aux intérêts des deux parties et des citoyens européens, clairement définies et limitées dans le temps, et soumises à des mécanismes de mise en application équitables et efficaces;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">95</div>
+  <div class="against">598</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    
+    <a href="/voting/139122">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(95/698 * 100%)">95</div>
-  
-  
-    <div class="-" style="width: calc(598/698 * 100%)">598</div>
-  
-  
-    <div class="0" style="width: calc(5/698 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139122">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       27. considère que l’article 50 du traité UE assure un 
@@ -341,71 +478,101 @@
   
 
   
-      <del>relève toutefois que les dispositions de l’article 50 du traité UE manquent de détails sur les aspects suivants:  – les exigences formelles relatives à  la notification de l’intention de quitter l’Union et la possibilité explicite de révoquer la notification;  – le cadre approprié pour la prolongation de la période de deux ans prévue à l’article 50, paragraphe 3, du traité UE, qui permet une certaine souplesse dans les négociations dans le respect du principe de coopération loyale;  – l’incidence de l’obligation de tenir compte du cadre des relations futures;  – l’application des dispositions de l’article 218 du traité FUE, et en particulier les dispositions sur le rôle du Parlement européen et de    la Cour de justice de l’Union européenne;  – les éventuelles dispositions transitoires;</del>
+      <del>relève toutefois que les dispositions de l’article 50 du traité UE manquent de détails sur les aspects suivants:  – les exigences formelles relatives à  la notification de l’intention de quitter l’Union et la possibilité explicite de révoquer la notification;  – le cadre approprié pour la prolongation de la période de deux ans prévue à l’article 50, paragraphe 3, du traité UE, qui permet une certaine souplesse dans les négociations dans le respect du principe de coopération loyale;  – l’incidence de l’obligation de tenir compte du cadre des relations futures;  – l’application des dispositions de </del>
   
 
   
-      <ins>estime que la convention de Vienne sur le droit des traités contient les règles nécessaires pour remédier à certains des problèmes recensés dans le cadre de l’application de  l’article 50 du traité UE;</ins>
+      <ins>estime que la convention de Vienne sur le droit des traités contient les règles nécessaires pour remédier à certains des problèmes recensés dans le cadre de l’application de  </ins>
+  
+
+  
+      l’article 
+  
+
+  
+      <del>218</del>
+  
+
+  
+      <ins>50</ins>
+  
+
+  
+       du traité 
+  
+
+  
+      <del>FUE, et en particulier les dispositions sur le rôle du Parlement européen et de    la Cour de justice de l’Union européenne;  – les éventuelles dispositions transitoires</del>
+  
+
+  
+      <ins>UE</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">95</div>
+  <div class="against">596</div>
+  <div class="abstention">7</div>
+</span>
+
+  
+    
+    <a href="/voting/139123">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(95/698 * 100%)">95</div>
-  
-  
-    <div class="-" style="width: calc(596/698 * 100%)">596</div>
-  
-  
-    <div class="0" style="width: calc(7/698 * 100%)">7</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139123">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       41. 
   
 
   
-      <del>réaffirme que, jusqu’à l’</del>
+      <del>réaffirme que, jusqu’à l</del>
   
 
   
-      <ins>estime qu’un État membre devrait être considéré comme un pays tiers à compter de la date d’</ins>
+      <ins>estime qu’un État membre devrait être considéré comme un pays tiers à compter de la date d</ins>
   
 
   
-      entrée en vigueur 
+      ’entrée en vigueur 
   
 
   
@@ -421,104 +588,106 @@
   
 
   
-      <del>jusqu’à l’expiration de la période de deux ans ou de la période prolongée mentionné</del>
+      <del>jusqu’à l’expiration de la période de deux ans ou de la période prolongée mentionnée</del>
   
 
   
-      <ins>deux ans après la notification visé</ins>
+      <ins>deux ans après la notification visée</ins>
   
 
   
-      e à l’article 50, paragraphe 
+       à l’article 50, paragraphe 
   
 
   
-      <del>3,</del>
+      <del>3</del>
   
 
   
-      <ins>2,</ins>
+      <ins>2</ins>
   
 
   
-       du traité UE, 
+      , du traité UE, 
   
 
   
-      <del>l’État qui se retire reste un État membre, jouit de tous les droits à ce titre et est soumis à toutes les obligations découlant des traités sans exception, y compris le principe de coopération loyale énoncé </del>
+      <del>l’État qui se retire reste un État membre, jouit de tous les droits à ce titre et est soumis à toutes les obligations découlant des traités sans exception, y compris le principe de coopération loyale énoncé</del>
   
 
   
-      <ins>sauf si le Conseil européen, en accord avec l’État membre concerné, décide à l’unanimité de proroger ce délai, conformément </ins>
+      <ins>sauf si le Conseil européen, en accord avec l’État membre concerné, décide à l’unanimité de proroger ce délai, conformément</ins>
   
 
   
-      à l’article 
+       à l’article 
   
 
   
-      <del>4,</del>
+      <del>4</del>
   
 
   
-      <ins>50,</ins>
+      <ins>50</ins>
   
 
   
-       paragraphe 3, du traité 
+      , paragraphe 3, du traité UE
   
 
   
-      <del>UE, ainsi que l’obligation d’organiser des élections au Parlement européen, de nommer ses représentants au sein des institutions et organes de l’Union, d’assurer la protection pleine et entière de tous les droits des citoyens et d’honorer ses obligations financières;</del>
+      <del>, ainsi que l’obligation d’organiser des élections au Parlement européen, de nommer ses représentants au sein des institutions et organes de l’Union, d’assurer la protection pleine et entière de tous les droits des citoyens et d’honorer ses obligations financières</del>
   
 
   
-      <ins>UE;</ins>
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">82</div>
+  <div class="against">611</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    
+    <a href="/voting/139124">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(82/698 * 100%)">82</div>
-  
-  
-    <div class="-" style="width: calc(611/698 * 100%)">611</div>
-  
-  
-    <div class="0" style="width: calc(5/698 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139124">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       48. estime qu’il est de la responsabilité et du rôle de l’Union et de ses États membres d’agir davantage pour préserver le 
@@ -529,27 +698,27 @@
   
 
   
-      principe de coopération 
+      principe de coopération loyale
   
 
   
-      <del>loyale, </del>
+      <del>, </del>
   
 
   
-      <ins>loyale </ins>
+      <ins> </ins>
   
 
   
-      et empêcher qu’un retrait de l’Union ne se reproduise; 
+      et empêcher qu’un retrait de l’Union ne se reproduise;
   
 
   
-      <del>déplore, dans ce contexte, la retenue et l’engagement limité du Parlement européen et de ses commissions en amont du référendum britannique, qui n’ont pas permis aux citoyens britanniques, qui étaient à l’époque des citoyens de l’Union, de disposer d’un accès plein et entier aux informations sur le fonctionnement de l’Union et sur les implications du retrait; souligne qu’il y a lieu de mettre en place des garanties pour que le débat public qui précède le déclenchement de l’article 50 du traité UE par un État membre permette aux citoyens concernés de prendre une décision en connaissance de cause; </del>
+      <del> déplore, dans ce contexte, la retenue et l’engagement limité du Parlement européen et de ses commissions en amont du référendum britannique, qui n’ont pas permis aux citoyens britanniques, qui étaient à l’époque des citoyens de l’Union, de disposer d’un accès plein et entier aux informations sur le fonctionnement de l’Union et sur les implications du retrait; souligne qu’il y a lieu de mettre en place des garanties pour que le débat public qui précède le déclenchement de l’article 50 du traité UE par un État membre permette aux citoyens concernés de prendre une décision en connaissance de cause;</del>
   
 
   
-      invite les États membres et l’Union à informer 
+       invite les États membres et l’Union à informer 
   
 
   
@@ -573,59 +742,176 @@
   
 
   
-      <del>offre l’occasion de    renforcer le dialogue avec les citoyens et la société civile sur l’Union européenne et son évolution;</del>
+      <del>offre</del>
   
 
   
-      <ins>pourrait être l’occasion de mener un dialogue renforcé, ouvert et franc avec les citoyens et la société civile sur l’Union et d’engager une réflexion visant à saisir pleinement tous les éléments problématiques du projet européen qui ont poussé le Royaume-Uni à se retirer de l’Union;</ins>
+      <ins>pourrait être</ins>
   
 
   
-       encourage la Commission à présenter une proposition permettant aux partis politiques européens de financer des campagnes référendaires liées à la mise en œuvre du traité UE ou du traité FUE;
+       l’occasion de
+  
+
+  
+      <del>    renforcer le dialogue</del>
+  
+
+  
+      <ins> mener un dialogue renforcé, ouvert et franc</ins>
+  
+
+  
+       avec les citoyens et la société civile sur l’Union 
+  
+
+  
+      <del>européenne et son évolution</del>
+  
+
+  
+      <ins>et d’engager une réflexion visant à saisir pleinement tous les éléments problématiques du projet européen qui ont poussé le Royaume-Uni à se retirer de l’Union</ins>
+  
+
+  
+      ; encourage la Commission à présenter une proposition permettant aux partis politiques européens de financer des campagnes référendaires liées à la mise en œuvre du traité UE ou du traité FUE;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(103/698 * 100%)">103</div>
-  
-  
-    <div class="-" style="width: calc(576/698 * 100%)">576</div>
-  
-  
-    <div class="0" style="width: calc(19/698 * 100%)">19</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139125">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    ID
+    (🇫🇷 : Rassemblement national)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2136(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0357_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">103</div>
+  <div class="against">576</div>
+  <div class="abstention">19</div>
+</span>
+
   
+    
+    <a href="/voting/139125">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-02-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Ce rapport fait un état des lieux de l’application de l’article 50, créé avec le traité de Lisbonne, qui prévoit une sortie d’un État de l’UE. Il examine donc les conséquences du Brexit pour les deux parties. Ce texte sans grand intérêt est surtout une occasion pour les fédéralistes de stigmatiser la décision britannique pourtant légitimée par le vote du peuple. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce texte.L&#39;article 50 du traité sur l&#39;Union européenne a trait au processus de retrait de cette dernière. Il a été mis en œuvre par le Royaume-Uni.Ce rapport est dénué d&#39;intérêt et se borne à une critique du Brexit.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            Ce rapport évalue la mise en œuvre de l&#39;article 50 du Traité de l’Union européenne, l&#39;article qui établit les dispositions du processus de retrait de l&#39;UE et qui fut activé pour la première fois lors du Brexit.J’ai soutenu ce rapport, qui conclut que l&#39;article 50 du TUE établit un bon équilibre entre la garantie d&#39;un processus de retrait juridiquement solide et le maintien de la flexibilité politique nécessaire pour s&#39;adapter aux circonstances spécifiques.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il est une critique en règle du Royaume-Uni, auquel l’UE continue à reprocher son Brexit.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution relative à l’évaluation de la mise en œuvre de l’article 50 du traité UE. Le texte dresse le bilan de l’activation de l’article 50 dans le cadre du Brexit. Il estime que cet article établit un bon équilibre entre la garantie d&#39;un processus de retrait juridiquement solide et le maintien de la flexibilité politique nécessaire pour s&#39;adapter aux circonstances spécifiques lors d’un retrait de l’Union.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à évaluer les leçons à tirer de l’application de l’article 50 du traité sur le processus de sortie de l’UE à l’aune de l’expérience du Brexit. Il souligne à raison l’importance de prioriser la question des droits et libertés des citoyens, anticiper les litiges futurs en clarifiant le rôle de la cour de justice, et mieux intégrer le parlement dans le contrôle du processus. Il reprend en revanche des appréciations politiques malvenues sur le choix souverain des britanniques en déplorant le résultat du référendum et ses conditions d’organisation. Je me suis donc abstenue sur ce texte qui établit des constats juridiques pertinents mais intègre également des commentaires sur le Brexit en lui-même au lieu de s’en tenir à une analyse du déroulé du processus de sortie de l’Union.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce rapport entend tirer les leçons du processus initié par l&#39;activation par le Royaume-Uni, en mars 2017, de l&#39;article 50 du traité sur l&#39;Union européenne qui a mené à sa sortie de l&#39;Union. Si le texte souligne l’importance de prioriser la question des droits et des libertés des citoyens dans l’application de l’article 50, de clarifier la question des litiges futurs notamment du rôle de la Cour de justice de l’Union européenne, et de renforcer le contrôle exercé par le Parlement, je le trouve fort peu prudent dans les jugements qu’il porte sur le choix du peuple britannique. Face à la décision d’un peuple souverain, nous ne pouvons que nous incliner et essayer d’organiser au mieux notre existence commune. Je regrette cette orientation du texte et préfère donc m’abstenir.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            Le retrait du Royaume-Uni de l’Union européenne a nécessité l’utilisation, et ce pour la toute première fois, de l’article 50 du Traité sur l’Union européenne qui créé un processus de sortie de l’Union européenne en conférant aux États membres un droit souverain de retrait. J’ai voté en faveur de ce rapport qui évalue l’interprétation et l’application des dispositions par les institutions de cet article, et la manière dont la procédure de retrait du Royaume-Uni a été menée eu égard à ces dispositions. De fait, l’objectif de la procédure a été clairement définie dès le départ, avec un retrait ordonné sur la base d’une approche par étapes apportant autant de clarté et de sécurité juridique que possible aux citoyens, aux entreprises, aux parties prenantes et aux partenaires internationaux. Le texte conclut du bon équilibre établi par l’article 50, entre la garantie d’un processus de retrait juridiquement solide, et le maintien de la flexibilité politique nécessaire pour s’adapter aux circonstances spécifiques.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport inutile ne servant qu’à blâmer une fois de plus le Royaume-Uni pour son départ.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Pour le Parlement, ce rapport n’a pour seul objectif que de se féliciter de ses propres négociations et de brocarder encore plus les Britanniques, de leur reprocher encore une fois le Brexit. C’est dommage, ce sujet aurait mérité une analyse juridique approfondie. J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            L’article 50 du traité sur l’Union européenne crée un processus de sortie de l’Union européenne en conférant aux États membres un droit souverain de retrait. Pour l’Union européenne, le retrait du Royaume-Uni était un nouveau processus et constituait un défi sans précédent. La mise en application de l’article 50 du traité UE, lequel n’existait pas avant le traité de Lisbonne, a exigé une réflexion approfondie sur cette question ainsi que sur d’autres éléments complexes liés à la séparation d’un État membre de l’Union dans un laps de temps restreint. Le rapport fait un état des lieux de l’application de l’article 50 et de ses conséquences pour les deux parties (UE et Royaume-Uni). Il est difficile de voir l’intérêt de ce rapport, le sujet méritant une analyse juridique approfondie plutôt qu’une approche politique qui n’ajoute rien aux débats et commentaires qu’a suscité le Brexit. Il est une simple occasion supplémentaire pour le Parlement de se féliciter de ses négociations et de brocarder un peu plus le choix du Royaume-Uni. Pour l’auteur du rapport et ses soutiens, il est clair que ce choix n’a pas été réfléchi et que le vote des Britanniques trouve son explication dans l’ignorance des conséquences de cette sortie. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            L’article 50 du traité sur l’Union européenne crée un processus de sortie de l’Union européenne en conférant aux États membres un droit de retrait. Pour l’Union européenne, le retrait du Royaume-Uni était un nouveau processus et constituait un défi sans précédent. La mise en application de l’article 50 du traité, lequel n’existait pas avant le traité de Lisbonne, a exigé une réflexion approfondie sur cette question ainsi que sur d’autres éléments complexes liés à la séparation d’un État membre de l’Union dans un laps de temps restreint.Il est difficile de voir l’intérêt de ce rapport, le sujet méritant une analyse juridique approfondie plutôt qu’une approche politique qui n’ajoute rien aux débats et commentaires qu’a suscité le Brexit. Il est une simple occasion supplémentaire pour le Parlement de se féliciter de ses négociations et de brocarder un peu plus le choix du Royaume-Uni. Pour l’auteur du rapport et ses soutiens, il est clair que ce choix n’a pas été réfléchi et que le vote des Britanniques trouve son explication dans l’ignorance des conséquences de cette sortieJ’ai donc voté contre ce rapport.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

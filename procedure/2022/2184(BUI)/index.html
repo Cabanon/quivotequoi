@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Orientations pour le budget 2024 – Section III</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Orientations pour le budget 2024 – Section III</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(210/636 * 100%)">210</div>
-  
-  
-    <div class="-" style="width: calc(321/636 * 100%)">321</div>
+    <div class="for" style="width: calc(210/636 * 100%)">210</div>
   
   
-    <div class="0" style="width: calc(105/636 * 100%)">105</div>
+    <div class="against" style="width: calc(321/636 * 100%)">321</div>
+  
+  
+    <div class="abstention" style="width: calc(105/636 * 100%)">105</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(5/72 * 100%)">5</div>
+    <div class="for" style="width: calc(5/72 * 100%)">5</div>
   
   
-    <div class="-" style="width: calc(57/72 * 100%)">57</div>
+    <div class="against" style="width: calc(57/72 * 100%)">57</div>
   
   
-    <div class="0" style="width: calc(10/72 * 100%)">10</div>
+    <div class="abstention" style="width: calc(10/72 * 100%)">10</div>
   
 </div>
  
 </section>
-            <a href="/voting/154224">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/154224">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -121,864 +126,1071 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2184(BUI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0124_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-04-19-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,124693,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,124693">🇫🇷 Renaissance</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197626,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197626,197629,197615">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>-1. considérant que le budget de l’Union doit encourager l’investissement public en soutenant les secteurs productifs et stratégiques, les services publics, la création d’emplois assortis de droits, la lutte contre la pauvreté, contre l’exclusion sociale et les inégalités, la protection de l’environnement et la pleine exploitation des potentialités de chaque pays et de chaque région, ainsi que la conduite de relations extérieures fondées sur la solidarité, la coopération, le respect mutuel et la paix;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">199</div>
+  <div class="against">390</div>
+  <div class="abstention">49</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(199/638 * 100%)">199</div>
-  
-  
-    <div class="-" style="width: calc(390/638 * 100%)">390</div>
-  
-  
-    <div class="0" style="width: calc(49/638 * 100%)">49</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>-1 bis. demande un renforcement significatif du budget de l’Union afin de répondre à la situation socio-économique difficile que connaissent les peuples et les États membres, aggravée, entre autres, par l’augmentation brutale du coût de la vie; demande également que sa fonction redistributive soit renforcée à travers la promotion d’une réelle convergence des progrès économiques et sociaux entre les États membres;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">149</div>
+  <div class="against">440</div>
+  <div class="abstention">49</div>
+</span>
+
+  
+    
+    <a href="/voting/154289">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(149/638 * 100%)">149</div>
-  
-  
-    <div class="-" style="width: calc(440/638 * 100%)">440</div>
-  
-  
-    <div class="0" style="width: calc(49/638 * 100%)">49</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154289">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>-1 ter. estime par ailleurs que, dans la situation actuelle, les principaux objectifs à poursuivre par une mobilisation de fonds provenant du budget de l’Union doivent être les suivants: aider les États membres à protéger les revenus des travailleurs et de leur famille, notamment par l’augmentation générale urgente et nécessaire des salaires afin de lutter contre l’augmentation du coût de la vie; défendre l’emploi assorti de droits et de relations de travail stables et réglementées; garantir la solvabilité des micro, petites et moyennes entreprises; promouvoir les investissements dans les secteurs productifs et stratégiques; promouvoir la souveraineté des États membres, en particulier la souveraineté alimentaire et énergétique; protéger l’environnement et la biodiversité; et contribuer à l’accueil et à l’intégration de tous les réfugiés et migrants;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">120</div>
+  <div class="against">509</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/154290">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(120/640 * 100%)">120</div>
-  
-  
-    <div class="-" style="width: calc(509/640 * 100%)">509</div>
-  
-  
-    <div class="0" style="width: calc(11/640 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154290">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>3 bis. demande que le budget prévoie un financement suffisant pour mettre en œuvre les mesures nécessaires pour lutter contre les effets brutaux des hausses successives des taux d’intérêt décidées par la BCE sur les travailleurs, les familles et les États, en particulier en ce qui concerne les répercussions sur les prêts hypothécaires;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">60</div>
+  <div class="against">495</div>
+  <div class="abstention">80</div>
+</span>
+
+  
+    
+    <a href="/voting/154291">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(60/635 * 100%)">60</div>
-  
-  
-    <div class="-" style="width: calc(495/635 * 100%)">495</div>
-  
-  
-    <div class="0" style="width: calc(80/635 * 100%)">80</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154291">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>11 bis. plaide également pour un renforcement significatif des lignes budgétaires se rapportant à la cohésion; dans ce contexte, demande instamment de renforcer le soutien aux régions ultrapériphériques, en particulier POSEI (programme d’options spécifiques à l’éloignement et à l’insularité), et demande la réintroduction du POSEI Pêche ainsi que la création d’un régime de transport POSEI en tant que dispositif d’aide supplémentaire pour compenser les désavantages et les dommages causés par l’éloignement;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">209</div>
+  <div class="against">411</div>
+  <div class="abstention">12</div>
+</span>
+
+  
+    
+    <a href="/voting/154296">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(209/632 * 100%)">209</div>
-  
-  
-    <div class="-" style="width: calc(411/632 * 100%)">411</div>
-  
-  
-    <div class="0" style="width: calc(12/632 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154296">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>12 bis. demande le renforcement des programmes spécifiques pour l’agriculture afin de promouvoir une agriculture durable dans tous les États membres et de répondre aux enjeux les plus urgents, tels que la sécheresse, le déficit de production et l’augmentation spéculative des coûts des intrants, notamment par des aides directes aux producteurs et, à moyen terme, une contribution permanente à l’électricité verte et au financement de petites installations hydroagricoles, y compris la construction d’étangs pour retenir l’eau; demande l’annulation de la décision de réduire les aides versées au titre du régime des petites exploitations agricoles; demande en outre que les projets financés par le budget de l’Union promeuvent des circuits de commercialisation courts, une rémunération équitable, stable et digne des producteurs, et qu’ils rendent compte d’une répartition équitable entre les pays, les producteurs et les productions, en éliminant les disparités actuelles et en profitant aux États membres qui affichent les déficits de production les plus élevés en termes relatifs;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">137</div>
+  <div class="against">408</div>
+  <div class="abstention">92</div>
+</span>
+
+  
+    
+    <a href="/voting/154297">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(137/637 * 100%)">137</div>
-  
-  
-    <div class="-" style="width: calc(408/637 * 100%)">408</div>
-  
-  
-    <div class="0" style="width: calc(92/637 * 100%)">92</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154297">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>12 ter. demande que des aides soient débloquées pour répondre de manière ambitieuse et concrète à l’augmentation des coûts de production subie par le secteur de la pêche, en particulier la petite pêche artisanale et côtière; demande que le FEAMPA contribue en priorité à l’amélioration de la sécurité de la flotte, des conditions de travail, de santé et d’hygiène à bord, à la mise en place de mécanismes de compensation et d’aide au revenu pour les pêcheurs en fonction de l’instabilité liée à l’activité de pêche, ainsi qu’à une politique maritime intégrée (promotion de la recherche marine et du développement de la technologie et de l’ingénierie maritimes dans ses différents aspects, y compris la construction navale favorisant un transport maritime plus durable sur le plan environnemental, et des infrastructures portuaires dans le cadre de la gestion publique, qui valorise la pêche en assurant la modernisation du secteur et sa viabilité socio-économique, la pérennité des ressources et le rôle et les caractéristiques spécifiques des régions ultrapériphériques);  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">190</div>
+  <div class="against">410</div>
+  <div class="abstention">39</div>
+</span>
+
+  
+    
+    <a href="/voting/154298">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(190/639 * 100%)">190</div>
-  
-  
-    <div class="-" style="width: calc(410/639 * 100%)">410</div>
-  
-  
-    <div class="0" style="width: calc(39/639 * 100%)">39</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154298">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>21 bis. plaide donc pour un renforcement du programme LIFE afin d’y inclure des enveloppes consacrées à la biodiversité et à la gestion du réseau Natura 2000, en garantissant une répartition équitable du financement entre les États membres; demande également qu’un soutien soit apporté à l’évaluation de l’état écologique et phytosanitaire des forêts, y compris le reboisement avec des espèces indigènes, en particulier dans les pays qui ont été les plus durement touchés par les feux de forêt;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">160</div>
+  <div class="against">420</div>
+  <div class="abstention">60</div>
+</span>
+
+  
+    
+    <a href="/voting/154299">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(160/640 * 100%)">160</div>
-  
-  
-    <div class="-" style="width: calc(420/640 * 100%)">420</div>
-  
-  
-    <div class="0" style="width: calc(60/640 * 100%)">60</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154299">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>19 bis. demande un soutien accru aux infrastructures de transport et à la promotion des transports publics et de la mobilité durable; demande qu’il soit tenu compte de l’urgence de soutenir les infrastructures de transport locales et régionales dans les États membres situés à la périphérie; demande instamment que les fonds de l’Union soient réorientés et affectés aux investissements publics dans les infrastructures de transport; rejette l’utilisation du budget de l’Union pour renforcer les partenariats public-privé et promouvoir la privatisation et la libéralisation du secteur, comme l’ont préconisé InvestEU, le MIE et d’autres instruments;  Or. pt</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
     
-    <article>
-    <header>📝 Amendement n°11 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>32 bis. demande par conséquent le renforcement des programmes de soutien à la culture et à la création de nouvelles lignes budgétaires qui protègent et promeuvent la diversité culturelle, qui stimulent et démocratisent la création et le plaisir artistiques ainsi que l’accès à la culture;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">151</div>
+  <div class="against">464</div>
+  <div class="abstention">7</div>
+</span>
+
+  
+    
+    <a href="/voting/154303">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(151/622 * 100%)">151</div>
-  
-  
-    <div class="-" style="width: calc(464/622 * 100%)">464</div>
-  
-  
-    <div class="0" style="width: calc(7/622 * 100%)">7</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154303">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°12 | 
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
-
-  
-      34. rappelle que les femmes sont touchées de manière disproportionnée par la crise économique et sociale actuelle et que la grande majorité des réfugiés fuyant la guerre en Ukraine sont des femmes et des enfants; se félicite de la récente proposition législative visant à renforcer le cadre juridique de la lutte contre les violences sexistes; demande, par conséquent, un financement ambitieux du volet Daphné du programme CERV pour la prévention et la lutte contre la violence fondée sur le genre et la violence à l’égard des enfants, y compris les ressources nécessaires pour soutenir l’accès à des services sûrs de santé sexuelle et génésique, aux organisations de défense des droits des femmes, aux refuges et aux services de soutien dans les zones de conflit et de guerre, ainsi qu’aux initiatives de l’Union visant à lutter contre la discrimination, notamment à l’égard des femmes et des personnes LGBTI+
-  
+<p>
 
   
-      <ins> ; estime qu’il est tout aussi important d’augmenter l’enveloppe financière de l’Institut européen pour l’égalité entre les hommes et les femmes (EIGE);  Or. pt</ins>
+      34. rappelle que les femmes sont touchées de manière disproportionnée par la crise économique et sociale actuelle et que la grande majorité des réfugiés fuyant la guerre en Ukraine sont des femmes et des enfants; se félicite de la récente proposition législative visant à renforcer le cadre juridique de la lutte contre les violences sexistes; demande, par conséquent, un financement ambitieux du volet Daphné du programme CERV pour la prévention et la lutte contre la violence fondée sur le genre et la violence à l’égard des enfants, y compris les ressources nécessaires pour soutenir l’accès à des services sûrs de santé sexuelle et génésique, aux organisations de défense des droits des femmes, aux refuges et aux services de soutien dans les zones de conflit et de guerre, ainsi qu’aux initiatives de l’Union visant à lutter contre la discrimination, notamment à l’égard des femmes et des personnes LGBTI
+  
+
+  
+      <del>+</del>
+  
+
+  
+      <ins>+ ; estime qu’il est tout aussi important d’augmenter l’enveloppe financière de l’Institut européen pour l’égalité entre les hommes et les femmes (EIGE);  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">144</div>
+  <div class="against">483</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(144/635 * 100%)">144</div>
-  
-  
-    <div class="-" style="width: calc(483/635 * 100%)">483</div>
-  
-  
-    <div class="0" style="width: calc(8/635 * 100%)">8</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°13 | 
+        
+            <article id="13">
+            <header>📝 Amendement n°13 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       51. 
   
 
   
-      <del>souligne qu’il est nécessaire de renforcer les capacités de sécurité et de défense de l’Union afin de mieux répondre aux défis géopolitiques sans précédent actuels, y compris la lutte contre le terrorisme, la cybercriminalité et la propagation de la désinformation en ligne, qui représente une menace pour la démocratie européenne; rappelle l’importance d’une approche globale de la sécurité couvrant les capacités militaires et civiles, les relations extérieures et la sécurité intérieure;</del>
+      <del>souligne qu’il est nécessaire de renforcer les capacités de sécurité et de défense de l’Union afin de mieux répondre aux défis géopolitiques sans précédent actuels, y compris la lutte contre le terrorisme, </del>
   
 
   
-      <ins>rejette l’augmentation de la dotation budgétaire pour la militarisation, y compris pour l’armement, les infrastructures, les capacités et la mobilité militaire; rejette l’escalade actuelle de la militarisation de l’Union, incarnée dans la «boussole stratégique»; demande la réaffectation des fonds du budget de l’Union à l’action extérieure (à l’exception de l’aide publique au développement), à la surveillance et l’externalisation des frontières, à la militarisation et la mutualisation des programmes de sécurité, en les réorientant pour aider les États membres à faire face à la situation économique et sociale en vertu du principe de cohésion économique et sociale, c’est-à-dire la réalisation d’une convergence dans le progrès économique et social;  Or. pt</ins>
+      <ins>rejette l’augmentation de la dotation budgétaire pour la militarisation, y compris pour l’armement, les infrastructures, les capacités et la mobilité militaire; rejette l’escalade actuelle de la militarisation de l’Union, incarnée dans la «boussole stratégique»; demande la réaffectation des fonds du budget de l’Union à l’action extérieure (à l’exception de l’aide publique au développement), à la surveillance et l’externalisation des frontières, à </ins>
+  
+
+  
+      la 
+  
+
+  
+      <del>cybercriminalité</del>
+  
+
+  
+      <ins>militarisation</ins>
+  
+
+  
+       et la 
+  
+
+  
+      <del>propagation de la désinformation en ligne, qui représente une menace pour la démocratie européenne; rappelle l’importance d’une approche globale de la sécurité couvrant les capacités militaires et civiles, les relations extérieures et la sécurité intérieure;</del>
+  
+
+  
+      <ins>mutualisation des programmes de sécurité, en les réorientant pour aider les États membres à faire face à la situation économique et sociale en vertu du principe de cohésion économique et sociale, c’est-à-dire la réalisation d’une convergence dans le progrès économique et social;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">154</div>
+  <div class="against">445</div>
+  <div class="abstention">31</div>
+</span>
+
+  
+    
+    <a href="/voting/154319">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(154/630 * 100%)">154</div>
-  
-  
-    <div class="-" style="width: calc(445/630 * 100%)">445</div>
-  
-  
-    <div class="0" style="width: calc(31/630 * 100%)">31</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154319">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°14 | 
+        
+            <article id="14">
+            <header>📝 Amendement n°14 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>53 bis. demande un véritable engagement pour que le principe du multilinguisme devienne réalité; demande, à cette fin, une augmentation du financement des services de traduction et d’interprétation des institutions européennes, en veillant à ce que les agents de ces services soient internalisés et bénéficient d’une relation de travail permanente avec les institutions l’Union;  Or. pt</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">153</div>
+  <div class="against">421</div>
+  <div class="abstention">27</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(153/601 * 100%)">153</div>
-  
-  
-    <div class="-" style="width: calc(421/601 * 100%)">421</div>
-  
-  
-    <div class="0" style="width: calc(27/601 * 100%)">27</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°15 | 
+        
+            <article id="15">
+            <header>📝 Amendement n°15 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>65 bis. observe que de nombreux documents et communications des institutions, organes et organismes de l&#39;Union ne sont disponibles qu’en langue anglaise; constate également que des réunions de travail se tiennent sans possibilité d&#39;interprétation; demande le respect des principes, droits et obligations inscrits dans la charte des droits fondamentaux de l&#39;Union, le règlement nº internes, telles que le code de bonne conduite administrative; invite dès lors les institutions, organes et organismes de l’Union à fournir les ressources humaines nécessaires pour garantir le respect du multilinguisme, en augmentant les effectifs chargés de la traduction et de l&#39;interprétation;  Or. fr</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">243</div>
+  <div class="against">370</div>
+  <div class="abstention">26</div>
+</span>
+
+  
+    
+    <a href="/voting/154323">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(243/639 * 100%)">243</div>
-  
-  
-    <div class="-" style="width: calc(370/639 * 100%)">370</div>
-  
-  
-    <div class="0" style="width: calc(26/639 * 100%)">26</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154323">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°16 | 
+        
+            <article id="16">
+            <header>📝 Amendement n°16 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>65 ter. demande que les fonds européens ne financent pas des actions ou des structures ayant pour objet ou finalité le prosélytisme religieux, ou y concourant;  Or. fr</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">126</div>
+  <div class="against">458</div>
+  <div class="abstention">52</div>
+</span>
+
+  
+    
+    <a href="/voting/154324">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(126/636 * 100%)">126</div>
-  
-  
-    <div class="-" style="width: calc(458/636 * 100%)">458</div>
-  
-  
-    <div class="0" style="width: calc(52/636 * 100%)">52</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154324">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°17 | 
+        
+            <article id="17">
+            <header>📝 Amendement n°17 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>65 quater. demande que les institutions européennes achètent prioritairement des produits et services fabriqués dans l’Union européenne, avec un minimum de 30 % de tels produits et services;  Or. fr</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">144</div>
+  <div class="against">399</div>
+  <div class="abstention">93</div>
+</span>
+
+  
+    
+    <a href="/voting/154325">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(144/636 * 100%)">144</div>
-  
-  
-    <div class="-" style="width: calc(399/636 * 100%)">399</div>
-  
-  
-    <div class="0" style="width: calc(93/636 * 100%)">93</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154325">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°18 | 
+        
+            <article id="18">
+            <header>📝 Amendement n°18 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>65 quinquies. constate que les institutions européennes ont recours à des intelligences artificielles (IA), notamment l’outil de traduction de la Commission ou le robot dialogueur (chatbot) de la direction générale des finances du Parlement; demande que les institutions européennes ne remplacent pas des postes salariés par des IA;  Or. fr</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">75</div>
+  <div class="against">456</div>
+  <div class="abstention">103</div>
+</span>
+
+  
+    
+    <a href="/voting/154326">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(75/634 * 100%)">75</div>
-  
-  
-    <div class="-" style="width: calc(456/634 * 100%)">456</div>
-  
-  
-    <div class="0" style="width: calc(103/634 * 100%)">103</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154326">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°19 | 
+        
+            <article id="19">
+            <header>📝 Amendement n°19 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>47 bis. souligne qu’il est urgent d’assurer le contrôle efficace des frontières terrestres et maritimes extérieures de l’Union; soutient fermement les contributions budgétaires de l’Union pour financer la construction de clôtures aux frontières extérieures de l’Union; invite la Commission à mobiliser immédiatement des fonds et des moyens importants de l’Union pour aider les États membres à renforcer les capacités et les infrastructures de protection des frontières, y compris les points de passage frontaliers, les moyens de surveillance tels que la surveillance aérienne et les équipements;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">279</div>
+  <div class="against">328</div>
+  <div class="abstention">26</div>
+</span>
+
+  
+    
+    <a href="/voting/154316">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(279/633 * 100%)">279</div>
-  
-  
-    <div class="-" style="width: calc(328/633 * 100%)">328</div>
-  
-  
-    <div class="0" style="width: calc(26/633 * 100%)">26</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154316">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°20 | 
+        
+            <article id="20">
+            <header>📝 Amendement n°20 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       63. souligne que des vérifications et des contrôles adéquats des dépenses de l’Union sont essentiels pour lutter contre la fraude, protéger les intérêts financiers de l’Union et garantir un niveau élevé de confiance des citoyens dans les institutions de l’Union et dans les processus décisionnels de l’Union; rappelle que la sélection des bénéficiaires finaux et l’exécution de tous les fonds de l’Union dans le respect des principes démocratiques, de la responsabilité et du respect des droits fondamentaux et des valeurs de l’Union sont essentielles au succès de l’investissement européen;
@@ -988,49 +1200,51 @@
       <ins> demande par conséquent à la Commission de cesser tous les financements accordés aux campagnes qui légitiment le hijab ou en font l’apologie;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">182</div>
+  <div class="against">429</div>
+  <div class="abstention">19</div>
+</span>
+
+  
+    
+    <a href="/voting/154322">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(182/630 * 100%)">182</div>
-  
-  
-    <div class="-" style="width: calc(429/630 * 100%)">429</div>
-  
-  
-    <div class="0" style="width: calc(19/630 * 100%)">19</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154322">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°21 | 
+        
+            <article id="21">
+            <header>📝 Amendement n°21 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       2. est déterminé à faire en sorte que le budget 2024 
@@ -1045,135 +1259,161 @@
   
 
   
-      <del>la nécessité d’investir davantage dans </del>
+      <del>la nécessité d’investir davantage dans</del>
   
 
   
-      <ins>que le budget du prochain exercice devrait se concentrer sur </ins>
+      <ins>que le budget du prochain exercice devrait se concentrer sur</ins>
   
 
   
-      l’énergie, la santé, la sécurité alimentaire, la cohésion, 
+       l’énergie, la santé, la sécurité alimentaire, la cohésion, 
   
 
   
-      <del>les transitions numérique et écologique,</del>
+      <del>les transitions numérique et écologique</del>
   
 
   
-      <ins>la transition numérique,</ins>
+      <ins>la transition numérique</ins>
   
 
   
-       la recherche et l’innovation et les PME, 
+      , la recherche et l’innovation et les PME, 
   
 
   
-      <del>ainsi que de soutenir </del>
+      <del>ainsi que de soutenir</del>
   
 
   
-      <ins>tout en soutenant </ins>
+      <ins>tout en soutenant</ins>
   
 
   
-      la création d’emplois de qualité, de lutter contre le chômage et la pauvreté et 
+       la création d’emplois de qualité, de lutter contre le chômage et la pauvreté et 
   
 
   
-      <del>d’offrir </del>
+      <del>d’offrir</del>
   
 
   
-      <ins>en offrant </ins>
+      <ins>en offrant</ins>
   
 
   
-      à tous, et notamment aux jeunes et aux personnes issues de groupes défavorisés, des possibilités et, partant, d’améliorer le niveau de vie de tous les Européens;
+       à tous, et notamment aux jeunes et aux personnes issues de groupes défavorisés, des possibilités et, partant, d’améliorer le niveau de vie de tous les Européens;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°22 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="22">
+            <header>📝 Amendement n°22 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>8 bis. souligne que les nouvelles mesures adoptées au niveau de l’Union ne devraient pas créer de charges fiscales supplémentaires pour les PME;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">196</div>
+  <div class="against">429</div>
+  <div class="abstention">13</div>
+</span>
+
+  
+    
+    <a href="/voting/154295">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(196/638 * 100%)">196</div>
-  
-  
-    <div class="-" style="width: calc(429/638 * 100%)">429</div>
-  
-  
-    <div class="0" style="width: calc(13/638 * 100%)">13</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154295">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°23 | 
+        
+            <article id="23">
+            <header>📝 Amendement n°23 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       21. 
   
 
   
-      <del>insiste sur la nécessité</del>
+      <del>insiste sur</del>
   
 
   
-      <ins>prend acte de la volonté</ins>
+      <ins>prend acte de</ins>
+  
+
+  
+       la 
+  
+
+  
+      <del>nécessité</del>
+  
+
+  
+      <ins>volonté</ins>
   
 
   
@@ -1181,344 +1421,402 @@
   
 
   
-      <del>rappelle qu’un financement supplémentaire est nécessaire </del>
+      <del>rappelle qu’un financement supplémentaire est nécessaire</del>
   
 
   
-      <ins>souligne que toutes les mesures possibles doivent être prises </ins>
+      <ins>souligne que toutes les mesures possibles doivent être prises</ins>
   
 
   
-      pour protéger les citoyens de l’Union de l’augmentation des coûts liés au changement climatique et à la transformation écologique et pour encourager les investissements et créer de l’emploi dans les régions en transition, notamment 
+       pour protéger les citoyens de l’Union de l’augmentation des coûts liés au changement climatique et à la transformation écologique et pour encourager les investissements et créer de l’emploi dans les régions en transition, notamment 
   
 
   
-      <del>par l’intermédiaire </del>
+      <del>par l’intermédiaire</del>
   
 
   
-      <ins>dans le contexte </ins>
+      <ins>dans le contexte</ins>
   
 
   
-      du Fonds pour une transition juste; 
+       du Fonds pour une transition juste;
   
 
   
-      <ins>souligne par conséquent que les investissements correspondants ne doivent pas être supportés par les PME ni par les citoyens européens, qui subissent déjà une augmentation sans précédent des prix de l’énergie; </ins>
+      <ins> souligne par conséquent que les investissements correspondants ne doivent pas être supportés par les PME ni par les citoyens européens, qui subissent déjà une augmentation sans précédent des prix de l’énergie;</ins>
   
 
   
-      demande, à cet égard, une évaluation de la mise en œuvre du Fonds, en accordant une attention particulière aux besoins d’augmentation de sa capacité d’absorption, à la nécessité de garantir un soutien adéquat aux régions qui continuent d’accuser du retard et au fait que les États membres et les régions ont des situations de départ et des besoins différents;
+       demande, à cet égard, une évaluation de la mise en œuvre du Fonds, en accordant une attention particulière aux besoins d’augmentation de sa capacité d’absorption, à la nécessité de garantir un soutien adéquat aux régions qui continuent d’accuser du retard et au fait que les États membres et les régions ont des situations de départ et des besoins différents;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°24 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="24">
+            <header>📝 Amendement n°24 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      35. souligne que le soutien budgétaire en faveur d’une communication efficace avec les citoyens contribue à sensibiliser le public au processus décisionnel et aux politiques de l’Union, ce qui accroît la transparence dans l’élaboration des politiques de l’Union et en renforce la légitimité, 
-  
+<p>
 
   
-      <ins>, pour autant que ces initiatives ne se transforment pas en une campagne de propagande au profit exclusif des institutions de l’Union, </ins>
+      35. souligne que le soutien budgétaire en faveur d’une communication efficace avec les citoyens contribue à sensibiliser le public au processus décisionnel et aux politiques de l’Union, ce qui accroît la transparence dans l’élaboration des politiques de l’Union et en renforce la légitimité,
   
 
   
-      en particulier dans la perspective des élections européennes de 2024, du début de la prochaine législature et de l’élection à la présidence de la Commission; rappelle, à cet égard, qu’il importe que les contenus soient disponibles dans toutes les langues officielles de l’Union dans la mesure du possible;
+      <ins> , pour autant que ces initiatives ne se transforment pas en une campagne de propagande au profit exclusif des institutions de l’Union,</ins>
+  
+
+  
+       en particulier dans la perspective des élections européennes de 2024, du début de la prochaine législature et de l’élection à la présidence de la Commission; rappelle, à cet égard, qu’il importe que les contenus soient disponibles dans toutes les langues officielles de l’Union dans la mesure du possible;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">112</div>
+  <div class="against">462</div>
+  <div class="abstention">47</div>
+</span>
+
+  
+    
+    <a href="/voting/154308">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(112/621 * 100%)">112</div>
-  
-  
-    <div class="-" style="width: calc(462/621 * 100%)">462</div>
-  
-  
-    <div class="0" style="width: calc(47/621 * 100%)">47</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154308">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°25 | 
+        
+            <article id="25">
+            <header>📝 Amendement n°25 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>39 bis. souligne que tout financement au titre de l’IVCDCI devrait être subordonné à la mise en œuvre effective des accords de rapatriement;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">132</div>
+  <div class="against">487</div>
+  <div class="abstention">18</div>
+</span>
+
+  
+    
+    <a href="/voting/154309">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(132/637 * 100%)">132</div>
-  
-  
-    <div class="-" style="width: calc(487/637 * 100%)">487</div>
-  
-  
-    <div class="0" style="width: calc(18/637 * 100%)">18</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154309">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°26 | 
+        
+            <article id="26">
+            <header>📝 Amendement n°26 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>45 bis. souligne l’échec des politiques de l’Union pour empêcher les flux migratoires et la traite des êtres humains; réitère ses préoccupations quant à l’utilisation du financement alloué dans le domaine de la migration, de l’asile et de la gestion des frontières et au rôle joué par des instruments tels que le Fonds pour la sécurité intérieure et le Fonds «Asile, migration et intégration», qui devraient garantir la bonne mise en œuvre d’une politique d’asile rigoureuse, conformément aux normes internationales, tout en bloquant l’immigration clandestine, en assurant le contrôle des frontières et une politique de rapatriement appropriée;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">150</div>
+  <div class="against">479</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    
+    <a href="/voting/154314">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(150/638 * 100%)">150</div>
-  
-  
-    <div class="-" style="width: calc(479/638 * 100%)">479</div>
-  
-  
-    <div class="0" style="width: calc(9/638 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154314">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°27 | 
+        
+            <article id="27">
+            <header>📝 Amendement n°27 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>60 bis. souligne la nécessité de mener une enquête appropriée sur les économies possibles dans le budget 2024, en particulier pour les agences décentralisées, où le nombre total et les coûts continuent d’augmenter chaque exercice;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°28 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="28">
+            <header>📝 Amendement n°28 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>60 ter. rappelle que le budget de l’Union européenne ne devrait en aucun cas être utilisé pour financer des organisations islamistes ou pour promouvoir le port du voile islamique;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">166</div>
+  <div class="against">452</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    
+    <a href="/voting/154321">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(166/627 * 100%)">166</div>
-  
-  
-    <div class="-" style="width: calc(452/627 * 100%)">452</div>
-  
-  
-    <div class="0" style="width: calc(9/627 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154321">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°29 | 
+        
+            <article id="29">
+            <header>📝 Amendement n°29 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       48. 
   
 
   
-      <del>est vivement préoccupé par l’interprétation donnée par certains États membres aux conclusions du Conseil européen du 9 février 2023, en particulier à leur paragraphe 23; souligne que l’autorité budgétaire de l’Union est fermement opposée à l’utilisation de tout financement de l’Union pour la construction de clôtures ou de murs aux frontières extérieures de l’Union et espère que la Commission continuera à refuser tout financement de ce type aujourd’hui et à l’avenir;</del>
+      <del>est vivement préoccupé par l’interprétation donnée par certains États membres aux</del>
   
 
   
-      <ins>souligne l’importance d’un contrôle efficace des frontières extérieures de l’Union et condamne fermement les tentatives d’instrumentalisation des migrants, notamment dans le cadre d’actions hybrides de déstabilisation; salue les conclusions du Conseil européen du 9 février 2023, en particulier leur paragraphe 23 qui invitent la Commission à mobiliser immédiatement des fonds et des moyens importants de l’Union pour aider les États membres à renforcer les capacités et les infrastructures de protection des frontières, les moyens de surveillance, notamment la surveillance aérienne et les équipements; rappelle que les droits fondamentaux des migrants doivent être respectés;</ins>
+      <ins>souligne l’importance d’un contrôle efficace des frontières extérieures de l’Union et condamne fermement les tentatives d’instrumentalisation des migrants, notamment dans le cadre d’actions hybrides de déstabilisation; salue les</ins>
+  
+
+  
+       conclusions du Conseil européen du 9 février 2023, en particulier
+  
+
+  
+      <del> à</del>
+  
+
+  
+       leur paragraphe 23
+  
+
+  
+      <del>; souligne que l’autorité budgétaire de l’Union est fermement opposée à l’utilisation de tout financement de l’Union pour la construction de clôtures ou de murs aux frontières extérieures de l’Union et espère que la Commission continuera à refuser tout financement de ce type aujourd’hui et à l’avenir</del>
+  
+
+  
+      <ins> qui invitent la Commission à mobiliser immédiatement des fonds et des moyens importants de l’Union pour aider les États membres à renforcer les capacités et les infrastructures de protection des frontières, les moyens de surveillance, notamment la surveillance aérienne et les équipements; rappelle que les droits fondamentaux des migrants doivent être respectés</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">322</div>
+  <div class="against">290</div>
+  <div class="abstention">20</div>
+</span>
+
+  
+    
+    <a href="/voting/154317">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(322/632 * 100%)">322</div>
-  
-  
-    <div class="-" style="width: calc(290/632 * 100%)">290</div>
-  
-  
-    <div class="0" style="width: calc(20/632 * 100%)">20</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154317">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°30 | 
+        
+            <article id="30">
+            <header>📝 Amendement n°30 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       34. rappelle que les femmes sont touchées de manière disproportionnée par la crise économique et sociale actuelle et que la grande majorité des réfugiés fuyant la guerre en Ukraine sont des femmes et des enfants; se félicite de la récente proposition législative visant à renforcer le cadre juridique de la lutte contre la violence sexiste; demande, par conséquent, un financement ambitieux du volet Daphné du programme CERV pour la prévention et la lutte contre la violence fondée sur le genre et la violence à l’égard des enfants, y compris les ressources nécessaires pour soutenir 
@@ -1541,179 +1839,335 @@
   
 
   
-      <del>des services sûrs de santé sexuelle </del>
+      <del>des services sûrs de santé sexuelle</del>
   
 
   
-      <ins>la santé et aux droits sexuels </ins>
+      <ins>la santé et aux droits sexuels</ins>
   
 
   
-      et géné
+       et 
   
 
   
-      <del>sique,</del>
+      <del>génésique</del>
   
 
   
-      <ins>siques,</ins>
+      <ins>génésiques</ins>
   
 
   
-       aux organisations de défense des droits des femmes, aux refuges et aux services de soutien dans les zones de conflit et de guerre, ainsi qu’aux initiatives de l’Union visant à lutter contre la discrimination, notamment à l’égard des femmes et des personnes LGBTI+
+      , aux organisations de défense des droits des femmes, aux refuges et aux services de soutien dans les zones de conflit et de guerre, ainsi qu’aux initiatives de l’Union visant à lutter contre la discrimination, notamment à l’égard des femmes et des personnes LGBTI+
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">349</div>
+  <div class="against">251</div>
+  <div class="abstention">30</div>
+</span>
+
+  
+    
+    <a href="/voting/154304">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(349/630 * 100%)">349</div>
-  
-  
-    <div class="-" style="width: calc(251/630 * 100%)">251</div>
-  
-  
-    <div class="0" style="width: calc(30/630 * 100%)">30</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154304">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°31 | 
+        
+            <article id="31">
+            <header>📝 Amendement n°31 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       47. souligne la nécessité de mettre en œuvre une politique de migration et d’asile 
   
 
   
-      <del>dans le respect des droits de l’homme et de garantir </del>
+      <del>dans le respect des droits de l’homme et de garantir</del>
   
 
   
-      <ins>fondée sur la solidarité, la responsabilité partagée et le respect des droits de l’homme, en promouvant des voies d’accès sûres et légales et en garantissant </ins>
+      <ins>fondée sur la solidarité, la responsabilité partagée et le respect des droits de l’homme, en promouvant des voies d’accès sûres et légales et en garantissant</ins>
   
 
   
-      une intégration sociale et économique effective, conformément aux valeurs de l’Union et aux engagements internationaux; souligne la nécessité de fournir des moyens financiers adéquats pour assurer la mise en œuvre du pacte européen sur les migrations; condamne fermement les tentatives visant à instrumentaliser les migrants à des fins politiques; demande que davantage de fonds soient consacrés à la coordination avec les pays de transit et les pays d’origine des migrants en situation irrégulière de sorte à maîtriser et arrêter la traite et le trafic des êtres humains;
+       une intégration sociale et économique effective, conformément aux valeurs de l’Union et aux engagements internationaux; souligne la nécessité de fournir des moyens financiers adéquats pour assurer la mise en œuvre du pacte européen sur les migrations; condamne fermement les tentatives visant à instrumentaliser les migrants à des fins politiques; demande que davantage de fonds soient consacrés à la coordination avec les pays de transit et les pays d’origine des migrants en situation irrégulière de sorte à maîtriser et arrêter la traite et le trafic des êtres humains;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">323</div>
+  <div class="against">263</div>
+  <div class="abstention">47</div>
+</span>
+
+  
+    
+    <a href="/voting/154315">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(323/633 * 100%)">323</div>
-  
-  
-    <div class="-" style="width: calc(263/633 * 100%)">263</div>
-  
-  
-    <div class="0" style="width: calc(47/633 * 100%)">47</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154315">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°32 | 
+        
+            <article id="32">
+            <header>📝 Amendement n°32 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>53 bis. souligne que les salaires et les avantages perçus par les commissaires européens et les députés au Parlement européen sont trop généreux; s’inquiète du risque que ces rémunérations disproportionnées puissent les coupent complètement de la vie quotidienne des gens, de leurs besoins et de leurs luttes; considère donc que l’attribution de salaires et d’avantages sociaux plus raisonnables augmenterait la probabilité de rendre la proposition de budget annuel plus conforme aux besoins des travailleurs;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(54/629 * 100%)">54</div>
-  
-  
-    <div class="-" style="width: calc(433/629 * 100%)">433</div>
-  
-  
-    <div class="0" style="width: calc(142/629 * 100%)">142</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/154320">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2184(BUI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0124_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">54</div>
+  <div class="against">433</div>
+  <div class="abstention">142</div>
+</span>
+
   
+    
+    <a href="/voting/154320">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-04-19-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            Ce rapport sur les orientations générales du Parlement européen pour le budget est l’outil de négociation principal de l’institution. Il représente les priorités du Parlement pour le futur, et donc, celles des citoyens européens. Un texte qui prône le financement de campagnes religieuses et l’élargissement de notre Union alors même que celle-ci subit une crise énergétique, économique et migratoire profonde ne reflète pas les priorités de nos citoyens. J’ai donc choisi de m’abstenir.
+        </article>
+    
+        <article>
+            <div class="hidden">22858</div>
+            
+            <header><b>Fabienne KELLER</b> | Renaissance</header>
+            J’ai voté le rejet du rapport sur les orientations générales du budget européen pour 2024. Bien que ce rapport souligne d’importantes priorités que le Parlement souhaite voir refléter dans la proposition que la Commission présentera en juin: résilience face aux crises, compétitivité, liberté des médias, investissements stratégiques dans la santé, la défense, le numérique et la transition écologique, l’adoption en plénière de l’amendement proposé par le PPE soutenant implicitement le financement des murs aux frontières de l’UE est contraire aux valeurs que je défends et au travail en cours sur le Pacte Asile et migration.Je me bats depuis le début de mon mandat pour trouver une solution efficace, humaine, et coordonnée à la question migratoire. Cet amendement du PPE, soutenu par l’extrême droite, propose une réponse trop simpliste et démagogique aux flux migratoires. C’est contraire à nos valeurs européennes: nous savons que les murs ne sont pas une solution efficace pour gérer les flux migratoires
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car le budget qu’il propose finance certaines actions que je réprouve comme l’accueil des migrants.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les propositions du Parlement européen pour la construction du budget 2024 de l’Union. Il rappelle la multiplication actuelle de crises (inflation, guerre en Ukraine, dérèglement climatique) et appelle notamment à réviser le cadre financier pluriannuel pour avoir des politiques industrielles, écologiques et sociales à la hauteur des enjeux. A la suite d’une alliance entre la droite et l’extrême-droite qui a fait adopter un amendement au texte initial, il ajoute un appel à soutenir la construction de murs aux frontières de l’Union européenne. J’ai donc voté contre ce texte afin de dénoncer cette grave dérive qui s’inscrit dans un agenda xénophobe méprisant la protection des droits humains des exilés.
+        </article>
+    
+        <article>
+            <div class="hidden">197589</div>
+            
+            <header><b>Laurence FARRENG</b> | Mouvement Démocrate</header>
+            Mercredi 19 avril, j’ai voté contre le projet de lignes directrices du Parlement européen sur le budget 2024 de l’Union européenne. Si je soutiens l’essence du texte, en faveur d’un budget européen ambitieux et reflétant les priorités du Parlement, le vote d’un amendement du PPE appelant indirectement au financement de murs aux frontières extérieures par l’Union européenne a empêché à ce texte de refléter l’approche constructive menée par mon groupe politique pour une gestion européenne des migrations. J’ai donc voté contre le texte. N’ayant pas de valeur législative, il n’empêche en rien la bonne conduite du budget de l’Union européenne pour 2024.
+        </article>
+    
+        <article>
+            <div class="hidden">197585</div>
+            
+            <header><b>Pierre KARLESKIND</b> | Renaissance</header>
+            C’était un texte qui visait à préparer le budget européen 2024. J’y soutenais la volonté d’investir massivement dans la santé, l’énergie, l’éducation, le numérique ou encore la transition écologique. Cependant, j’ai voté contre ce texte que la droite et l’extrême-droite sont parvenus à transformer en réquisitoire anti-immigration. Nous avions appelé à ce que le futur budget ne serve pas à financer des murs à nos frontières extérieures. Ils ont demandé le contraire. Alors nous avons dit non. Non à la construction de barrières autour de l’Europe, qui plus est, payées par l’Union européenne. Si nous avons résolument besoin d’une stratégie européenne de maîtrise de nos frontières, elle se doit d’être humaine. Or, ces murs ne le sont pas. Je regrette que nos propositions de financement de notre indépendance énergétique et de nos innovations scientifiques aient ainsi dû être balayées. Mais nos valeurs et nos principes ne peuvent être sacrifiés.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Indépendant</header>
+            . – J’ai voté contre ces orientations budgétaires pour 2024. Elles ne consistent qu’à réclamer toujours plus d’argent au profit d’un budget européen dont l’efficacité et la pertinence restent encore largement.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            Je me suis opposée au vote final sur ce rapport relatif aux orientations du Parlement européen pour le budget 2024. Si l’essentiel des lignes directrices énoncées dans ce rapport étaient en phase avec nos priorités budgétaires pour l’année à venir (révision urgente du cadre financier pluriannuel, soutien aux investissements stratégiques dans des domaines tels que la défense, le numérique, l’énergie ou encore la transition verte), un amendement de la droite européenne, supprimant la mention du refus explicite de financer des murs par le budget européen, m’a contrainte à me prononcer négativement sur le rapport final.Le budget européen apporte un soutien essentiel aux citoyens pour les protéger des crises et les aider à mener les grandes transitions de notre époque. Il est hors de question que l’argent du contribuable européen soit utilisé pour des projets inhumains, inutiles et de surcroît coûteux. La réponse adéquate au défi migratoire reposera sur la conclusion prochaine du Pacte européen sur la migration et l&#39;asile.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport car je m’oppose fermement à certaines de ses lignes budgétaires, notamment celles relatives à l’accueil des migrants économiques, à l’instrument de la Pré-accession, à la politique étrangère de l’UE, à la défense européenne, aux dépenses administratives et au Service Européen de l’Action Extérieure.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            J&#39;ai voté contre les orientations générales du budget 2024, qui laissent à nouveau présager un budget européen mal utilisé. Je m&#39;oppose particulièrement aux orientations budgétaires destinées à accompagner les mouvements migratoires vers l&#39;UE, ainsi qu&#39;aux instruments de pré-accession qui visent à dépenser l&#39;argent du contribuable pour élargir encore davantage l&#39;Union européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport car le budget qu’il propose finance certaines actions que je réprouve comme l’accueil des migrants.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car je m’oppose fermement à certaines lignes budgétaires, notamment celles relatives à l’accueil des migrants économiques, à l’instrument de la Pré-adhésion et à la politique étrangère de l’UE, à la défense européenne, aux dépenses administratives et au Service Européen de l’Action Extérieure.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b>Marina MESURE</b> | La France Insoumise</header>
+            Cette résolution du Parlement européen vise à exprimer, au regard de l’actualité, les priorités budgétaires identifiées par les parlementaires pour les années à venir. Ce texte n’est pas contraignant mais oriente l’établissement du budget de l’Union dans le futur. Cette résolution avance des constats intéressants quant au manque structurel de fonds disponibles pour l’action de l’Union, notamment dans le cadre de la transition écologique et du soutien aux régions. Cependant, plusieurs amendements soutenus par la droite et l’extrême droite ont été adoptés. Ces amendements invitent l’Union à dédier en priorité une part significative de son budget à la construction de murs aux frontières extérieures de l’Union. Ces murs, outre leur inefficacité pratique pour prévenir les mouvements migratoires, représentent une dépense budgétaire considérable alors que l’action de l’Union en faveur des ménages précaires et des petites entreprises fait cruellement défaut. J’ai donc voté contre cette résolution qui préconise des financements qui ne répondent pas aux besoins des européens au détriment d’actions utiles à l’ensemble des citoyens.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">22858</div>
+            
+            <header><b>Fabienne KELLER</b> | Renaissance</header>
+            
+                <p>Cela nous donne très peu de marge pour financer nos priorités sur les investissements, Monsieur le Commissaire, dans les domaines stratégiques: l’indépendance énergétique, la jeunesse, la transition écologique et numérique et la souveraineté, chère à ma collègue Valérie Hayer. </p>
+            
+                <p>Si l’Union européenne veut faire face aux défis majeurs auxquels nous sommes confrontés et répondre aux inquiétudes des citoyens, nous devons nous doter d’un budget en conséquence. Une révision du cadre financier pluriannuel est donc essentielle, Monsieur le Commissaire. </p>
+            
+                <p>Mon second point: je déplore que dans ce texte, qui vise à fixer nos priorités pour le budget 2024, mes collègues du PPE, d’ECR et d’ID persistent à vouloir financer des murs avec le budget européen, agitant cette proposition comme la solution miracle contre la migration. Je l’ai dit et je le répète: la question migratoire ne sera pas résolue par des murs. Il nous faut construire une vraie réponse européenne, réponse de responsabilité et de solidarité. C’est cela que le budget européen doit financer. C’est cela que nous proposons, chers collègues, avec le pacte sur l’asile et la migration. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197698</div>
+            
+            <header><b>Pierre LARROUTUROU</b> | Nouvelle Donne</header>
+            
+                <p> – Monsieur le Président, chers collègues, dans tous nos pays, des millions de gens souffrent de la flambée des prix. Il y a des boulangers qui mettent la clé sous la porte. Il y a des milliers de familles qui doivent choisir entre se chauffer normalement ou manger normalement. Pour beaucoup, la situation est vraiment dramatique et il y a des entreprises qui délocalisent pour aller aux États-Unis parce que l’énergie y est moins chère et parce que Joe Biden donne des subventions massives. </p>
+            
+                <p>Autre urgence: pour lutter contre le dérèglement climatique, il faut isoler toutes nos maisons, investir dans les transports en commun, aider nos agriculteurs. Pour répondre en même temps à la crise sociale et à la crise climatique, il faut du budget, beaucoup plus de budget. Et c’est pour cela que le Parlement européen demande qu’on décide enfin de créer une taxe sur la spéculation avant la fin du mois de juin 2023. C’est la demande de tout le Parlement, pour une raison simple: la taxe sur les transactions financières est la seule solution, la seule proposition de financement suffisamment mature pour arriver à un accord dans les semaines qui viennent. Et c’est celle qui peut rapporter le plus, jusqu’à 57 milliards par an. </p>
+            
+                <p>Aujourd’hui, il n’y a que la France qui bloque la coopération renforcée. Voilà pourquoi, depuis ce Parlement, je veux interpeller M. Macron. Monsieur Macron, vous dites que vous voulez un budget européen plus ambitieux. Vous dites que le climat est votre priorité. S’il vous plaît, acceptez enfin une taxe sur la spéculation.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            
+                <p> – Monsieur le Président, Monsieur le Commissaire, chers collègues, le PPE veut construire un mur aux frontières de l’Europe. Du ciment, du béton, du grillage. Voilà donc les secteurs dans lesquels le centre droit désire désormais investir pour l’avenir de l’Europe. Tout ça pour construire des murs et des barrières. Est-ce donc ça, le nouveau centre droit européen? Un groupe, un parti qui, pour ne pas perdre la bataille de celui qui se dit le plus à droite, se met à défendre les idées les plus ignobles et les plus inutiles de l’extrême droite.</p>
+            
+                <p>Chers collègues, les murs ne servent à rien. L’histoire nous l’a montré partout à travers le monde. Ils ne découragent pas plus les migrants qu’une mer entière à traverser. Alors, que voulez-vous faire? Construire un mur au milieu de la mer Méditerranée? Mes chers collègues, où est passé le centre droit qui voulait investir dans l’innovation, assurer un revenu décent à nos agriculteurs et prévenir la gabegie budgétaire de certains?</p>
+            
+                <p>Au lieu de chercher à dilapider l’argent public dans des projets inhumains, inutiles et de surcroît coûteux, je vous invite à revenir à la raison. Ce ciment, ce béton, ce grillage seraient bien plus utiles pour construire des écoles où on éduque nos jeunes face aux idées populistes. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197683</div>
+            
+            <header><b>Gilbert COLLARD</b> | Divers droite</header>
+            
+                <p> – Monsieur le Président, chers collègues, mon pays, la France, qui est un grand pays quand il a des chefs historiques, ce qui n’est hélas pas le cas aujourd’hui, souffre d’une réforme terrible, faite de violences, parce qu’on veut économiser 12 milliards d’euros. </p>
+            
+                <p>Afin de mettre fin au chaos qui sévit en France, à la violence policière qui frappe, je propose de retirer ces 12 milliards d’euros des 25 milliards de la contribution annuelle que la France fait au budget de l’Union européenne. La France pourra ainsi retirer cette réforme. Peu de chose au vu des 18 milliards d’euros attribués à la guerre en Ukraine en 2023. </p>
+            
+                <p>Il faut payer le prix de la paix en France. Ce qui s’y passe actuellement est horrible, et la souffrance du peuple est absolument inimaginable. Et la répression est indigne d’une démocratie. </p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

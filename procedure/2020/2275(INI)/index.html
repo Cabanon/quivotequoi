@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Communiquer avec les citoyens: le droit de pétition, le droit de saisir le Médiateur européen et l’initiative citoyenne européenne</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Communiquer avec les citoyens: le droit de pétition, le droit de saisir le Médiateur européen et l’initiative citoyenne européenne</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(417/694 * 100%)">417</div>
-  
-  
-    <div class="-" style="width: calc(40/694 * 100%)">40</div>
+    <div class="for" style="width: calc(417/694 * 100%)">417</div>
   
   
-    <div class="0" style="width: calc(237/694 * 100%)">237</div>
+    <div class="against" style="width: calc(40/694 * 100%)">40</div>
+  
+  
+    <div class="abstention" style="width: calc(237/694 * 100%)">237</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,19 +88,20 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(48/79 * 100%)">48</div>
+    <div class="for" style="width: calc(48/79 * 100%)">48</div>
   
   
   
-    <div class="0" style="width: calc(31/79 * 100%)">31</div>
+    <div class="abstention" style="width: calc(31/79 * 100%)">31</div>
   
 </div>
  
 </section>
-            <a href="/voting/140792">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/140792">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -104,12 +109,12 @@
     
         
         
-            <li>Médiateur européen</li>
+            <li>Droit de pétition</li>
         
     
         
         
-            <li>Droit de pétition</li>
+            <li>Droits du citoyen</li>
         
     
         
@@ -119,36 +124,154 @@
     
         
         
-            <li>Droits du citoyen</li>
+            <li>Médiateur européen</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2275(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0018_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-03-08-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">197535,197534,96747,190774,5565,24594</div>
+                
 
-<section>
-
-  
-      S. considérant que l’Union doit garantir aux 
-  
+<p>
 
   
-      <del>citoyens </del>
+      S. considérant que l’Union doit garantir aux citoyens
   
 
   
-      <ins>citoyens, eu égard en particulier aux besoins particuliers des personnes handicapées, </ins>
+      <del> </del>
+  
+
+  
+      <ins>, eu égard en particulier aux besoins particuliers des personnes handicapées, </ins>
   
 
   
@@ -156,68 +279,81 @@
   
 
   
-      <del>leur langue maternelle </del>
+      <del>leur langue maternelle</del>
   
 
   
-      <ins>l’une des langues officielles de l’Union quelle qu’elle soit </ins>
+      <ins>l’une des langues officielles de l’Union quelle qu’elle soit</ins>
   
 
   
-      afin d’éviter toute forme de 
+       afin d’éviter toute forme de discrimination
   
 
   
-      <del>discrimination;</del>
+      <ins> et de promouvoir le multilinguisme</ins>
   
 
   
-      <ins>discrimination et de promouvoir le multilinguisme;</ins>
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Geoffroy DIDIER (LR), 
+    
+      Anne SANDER (LR), 
+    
+      Arnaud DANJEAN (LR), 
+    
+      Brice HORTEFEUX (LR), 
+    
+      François-Xavier BELLAMY (LR) et 
+    
+      Agnès EVREN (LR)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">560</div>
+  <div class="against">114</div>
+  <div class="abstention">21</div>
+</span>
+
+  
+    
+    <a href="/voting/140224">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(560/695 * 100%)">560</div>
-  
-  
-    <div class="-" style="width: calc(114/695 * 100%)">114</div>
-  
-  
-    <div class="0" style="width: calc(21/695 * 100%)">21</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140224">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197535,197534,96747,190774,5565,24594,197534,96747,190774,5565,24594</div>
+                
 
-<section>
+<p>
 
   
       41. rappelle que les citoyens de l’UE disposent de droits d’accès aux documents des institutions de l’Union; félicite la Médiatrice pour l’excellent travail accompli en ce qui concerne l’accessibilité aux documents de l’Union, et en particulier l’application de la procédure accélérée de traitement de ces demandes; invite les colégislateurs à suivre les recommandations de la Médiatrice    relatif à l’accès du public aux documents et à encourager sa révision; estime que la constitue une priorité pour garantir une parfaite transparence et l’accès plein et entier du public aux documents 
@@ -228,119 +364,318 @@
   
 
   
-      détenus par les institutions de l’
+      détenus par les institutions de l’Union
   
 
   
-      <del>Union;</del>
+      <ins>, dans le plein respect des règles de l’Union en matière d’accès aux documents</ins>
   
 
   
-      <ins>Union, dans le plein respect des règles de l’Union en matière d’accès aux documents;</ins>
-  
-
-  
-       souligne l’importance des missions du Médiateur en matière de transparence pour la démocratie européenne, notamment en ce qui concerne l’accessibilité des documents pour les citoyens européens, afin de leur permettre d’exercer pleinement leur droit à l’information et d’accroître la confiance des citoyens dans le projet européen; invite la Médiatrice à poursuivre ses efforts dans ce sens, étant donné que la possibilité d’accéder à des documents en temps utile et dans les 24 langues officielles de l’UE est essentielle pour garantir une participation adéquate des citoyens et de la société civile au processus décisionnel;
+      ; souligne l’importance des missions du Médiateur en matière de transparence pour la démocratie européenne, notamment en ce qui concerne l’accessibilité des documents pour les citoyens européens, afin de leur permettre d’exercer pleinement leur droit à l’information et d’accroître la confiance des citoyens dans le projet européen; invite la Médiatrice à poursuivre ses efforts dans ce sens, étant donné que la possibilité d’accéder à des documents en temps utile et dans les 24 langues officielles de l’UE est essentielle pour garantir une participation adéquate des citoyens et de la société civile au processus décisionnel;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Geoffroy DIDIER (LR), 
+    
+      Anne SANDER (LR), 
+    
+      Arnaud DANJEAN (LR), 
+    
+      Brice HORTEFEUX (LR), 
+    
+      François-Xavier BELLAMY (LR) et 
+    
+      Agnès EVREN (LR)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">245</div>
+  <div class="against">447</div>
+  <div class="abstention">2</div>
+</span>
+
+  
+    
+    <a href="/voting/140222">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(245/694 * 100%)">245</div>
-  
-  
-    <div class="-" style="width: calc(447/694 * 100%)">447</div>
-  
-  
-    <div class="0" style="width: calc(2/694 * 100%)">2</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140222">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197535,197534,96747,190774,5565,24594,197534,96747,190774,5565,24594,197534,96747,190774,5565,72779,24594</div>
+                
 
-<section>
+<p>
 
   
       44. estime qu’il est très important de continuer de fournir aux citoyens de l’Union des informations adéquates sur le rôle et la portée des activités du Médiateur et sur son influence sur l’évolution des institutions de l’Union; invite la Médiatrice à continuer de diffuser des informations sur les résultats des enquêtes qui ont abouti à 
   
 
   
-      <del>accroître la transparence des négociations commerciales de l’Union, à rendre publics les résultats des essais cliniques de    médicaments évalués dans l’Union, à mettre en place des mécanismes de plainte pour les demandeurs d’asile et à renforcer les règles déontologiques applicables aux commissaires européens;</del>
+      <del>accroître la transparence des négociations commerciales de l’Union, à rendre publics</del>
   
 
   
-      <ins>améliorer les travaux des institutions de l’Union;</ins>
+      <ins>améliorer</ins>
+  
+
+  
+       les 
+  
+
+  
+      <del>résultats</del>
+  
+
+  
+      <ins>travaux</ins>
+  
+
+  
+       des 
+  
+
+  
+      <del>essais cliniques de    médicaments évalués dans l’Union, à mettre en place des mécanismes de plainte pour les demandeurs d’asile et à renforcer les règles déontologiques applicables aux commissaires européens</del>
+  
+
+  
+      <ins>institutions de l’Union</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(243/694 * 100%)">243</div>
-  
-  
-    <div class="-" style="width: calc(395/694 * 100%)">395</div>
-  
-  
-    <div class="0" style="width: calc(56/694 * 100%)">56</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140223">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+      Geoffroy DIDIER (LR), 
     
+      Anne SANDER (LR), 
+    
+      Arnaud DANJEAN (LR), 
+    
+      Brice HORTEFEUX (LR), 
+    
+      Nadine MORANO (LR), 
+    
+      François-Xavier BELLAMY (LR) et 
+    
+      Agnès EVREN (LR)
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2275(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0018_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">243</div>
+  <div class="against">395</div>
+  <div class="abstention">56</div>
+</span>
+
   
+    
+    <a href="/voting/140223">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-03-08-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            Je me suis abstenue sur ce texte.Le texte déplore la sous-utilisation des outils participatifs de l’Union dénotant un certain désintérêt des citoyens vis-à-vis des politiques européennes.Il est dommage que le texte laisse entendre que certaines pétitions du Médiateur européen pourraient être utilisées à des fins politiques, en matière d’état de droit.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Si ce texte va dans le bon sens en dénonçant une sous-utilisation des outils participatifs dont dispose l’UE et, en conséquence, une déconnexion entre les institutions européennes et les citoyens, deux passages montrent néanmoins une volonté d’utiliser le droit de pétition et le Médiateur européen pour faire pression sur les États membres (application du droit de l’UE, mécanisme de conditionnalité des aides), nous empêchant de voter favorablement. D’où mon abstention.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            Je me suis abstenu sur ce rapport. Certes, il va dans le bon sens en dénonçant la déconnexion entre les institutions européennes et les citoyens. Mais il montre une volonté d’utiliser le droit de pétition et le Médiateur européen pour faire pression sur les États membres, ce que je juge inacceptable.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Ce rapport fait l’état des lieux de l’efficacité des outils liés à la démocratie participative au sein de l’Union européenne. Il est ici question du droit de pétition, du droit de saisir le Médiateur européen et de l’initiative citoyenne européenne (ICE). On constate grâce à ce rapport que l’efficacité de ces outils reste très limitée. Pour rendre ces outils plus efficaces, le rapport Vedrenne propose le renforcement du rôle du droit de pétition au sein des institutions européennes, l’augmentation du budget du Médiateur pour favoriser son action et appuie la demande du Médiateur concernant la transparence au sein des institutions. Enfin, l’ICE est encouragée, car elle représente l’opportunité d’influer sur la législation européenne pour un citoyen. Afin de renforcer les outils démocratiques dans l’Union, j’ai voté en faveur de ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            Je me suis abstenue sur cette résolution relative au droit de pétition et au droit de saisir le Médiateur européen. Le texte contenait des recommandations intéressantes, notamment dans le domaine de la sensibilisation des citoyens à leurs droits ou encore de la promotion du multilinguisme. Il présentait toutefois des dispositions inacceptables invitant le Médiateur à excéder ses compétences, en empiétant par exemple sur celles de l’OLAF ou du Parquet européen. Attachée au respect des différentes institutions européennes et à la complémentarité de leurs prérogatives, je ne pouvais soutenir ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations et les recommandations du Parlement européen sur l’effectivité et des possibilités de recours des citoyens européens aux pétitions, au Médiateur européen et aux initiatives citoyennes. Il regrette l’absence de réponse opportune et satisfaisante de la Commission aux pétitions, souligne l’importance du rôle du Médiateur européen et la nécessité de renforcer ses financements, et demande de renforcer les actions de communication autour du cadre des initiatives citoyennes afin que les citoyens européens soient plus nombreux à s’en saisir. J’ai donc voté pour ce texte qui va dans le sens d’un renforcement des outils démocratiques de participation citoyenne au sein des institutions européennes.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce rapport se penche sur le manque de participation des citoyens aux processus décisionnels au sein de l’Union. Il développe un vaste nombre de propositions concrètes pour y remédier. Constatant le défaut de suivi récurrent de la Commission européenne, il recommande en particulier d’assurer un suivi des initiatives citoyennes européennes, de faciliter la saisie de la Médiatrice européenne par les citoyens, et de donner des suites législatives concrètes aux pétitions des citoyens européens. La construction européenne s’est faite jusqu’à présent sans les peuples. Il est temps de les faire rentrer en multipliant les possibilités d’interventions citoyennes dans le processus institutionnel européen! Je soutiens ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Je me suis abstenu sur un rapport d’initiative qui n’ouvre aucune piste sérieuse pour une meilleure prise en compte par le grand public en matière de droit de pétition et d’initiative citoyenne. Comment la Commission, dépourvue de toute légitimité démocratique, pourrait-elle mettre en place de vrais instrument de démocratie participative?
+        </article>
+    
+        <article>
+            <div class="hidden">197576</div>
+            
+            <header><b>Sylvie BRUNET</b> | Mouvement Démocrate</header>
+            Notre assemblée souhaite renforcer les trois outils de démocratie participative que nous avons à notre disposition: le droit de pétition, le droit de saisine du Médiateur et les initiatives citoyennes européennes. Tout d’abord, les citoyens doivent être mieux informés et sensibilisés sur ces outils et leurs possibilités d’utilisation. Nous appelons à éliminer les obstacles à leurs usages comme les barrières technologiques ou linguistiques. Concernant le droit de pétition, nous soulignons qu’une réponse plus systématique pourrait permettre de renforcer ce lien direct entre les citoyens et les institutions. Nous souhaitons aussi voir un renforcement du rôle du Médiateur européen sur la manière dont les fonds et le budget européens sont dépensés afin de vérifier que les intérêts de l’Union ne sont pas compromis par des violations de l’état de droit ou le non-respect des principes et des valeurs de l’Union. La Conférence sur l’avenir de l’Europe aura un rôle essentiel pour débattre sur ces outils et proposer des améliorations concrètes. Pour aller vers une participation accrue des citoyens aux processus décisionnels de l’Union, j’ai voté en faveur de notre rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            Ce rapport porte sur trois instruments de participation démocratique au niveau européen: le droit de pétition, le droit de saisir le Médiateur européen et l’initiative Citoyenne européenne. Rapporteure pour mon groupe politique, le PPE, sur ce texte, j’ai fait plusieurs propositions sur la sensibilisation des citoyens à leurs droits, les campagnes de communication pour faire connaître davantage les mécanismes participatifs existants, le renforcement de la coopération avec les autres institutions et les autres commissions parlementaires, la traduction des documents dans toutes les langues officielles de l’Union, l’engagement civique des jeunes ou encore l’importance d’accompagner les citoyens – par le biais des centres d’information Europe Direct et des Maisons de l’Europe – dans leurs démarches de dépôt de pétitions, d’initiatives citoyennes et de plaintes auprès du Médiateur européen. Toutefois, je n’ai pu soutenir ce texte qui interprète le champ de compétences du Médiateur de manière très large, en lui conférant des pouvoirs de l’OLAF ou du Parquet européen et en l’appelant à surveiller de manière plus étroite encore la manière dont les fonds et le budget européens sont dépensés. C’est pourquoi, je me suis abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Si le texte déplore que les outils participatifs de l’UE (droit de pétition, Médiateur européen, initiative citoyenne européenne) ne soient pas assez utilisés et aboutit au constat juste d’une déconnexion entre les institutions européennes et les citoyens, il laisse entendre que le mécanisme des pétitions et le Médiateur pourraient être utilisés pour faire pression sur certains États membres accusés de ne pas respecter l’état de droit et de ne pas appliquer correctement le droit de l’UE. Je me suis donc abstenu.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            Le texte déplore que les outils participatifs de l’UE (droit de pétition, Médiateur, initiative citoyenne européenne) ne soient pas assez utilisés et aboutit au constat juste d’une déconnexion entre les institutions européennes et les citoyens. Mais au-delà de ce constat, des passages du texte laissent entendre que les pétitions et le Médiateur pourraient être utilisés pour faire pression sur certains États membres accusés de ne pas respecter l’état de droit ou de ne pas appliquer correctement le droit de l’UE. Ce dernier point m’a conduit à m’abstenir.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Alors que ce texte va dans le bon sens en dénonçant une sous-utilisation des outils participatifs entre les mains de l’UE, il veut malheureusement utiliser le droit de pétition et le Médiateur européen contre les États membres. Je ne pouvais pas voter en faveur à cause des derniers points, je me suis donc abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Ce texte se penche sur les trois outils de «démocratie participative» dont dispose l’UE: le droit de pétition, le Médiateur européen et l’initiative citoyenne européenne (ICE). Le droit de pétition permet d’adresser des pétitions à la commission PETI, qui peuvent éventuellement donner lieu à une résolution adoptée en plénière par le Parlement européen. Le Médiateur européen est chargé d’enquêter sur les cas de mauvaise administration de la part des institutions de l’UE et reçoit les plaintes des citoyens européens à ce sujet. Enfin, l’ICE est une initiative citoyenne qui peut déboucher sur un acte législatif de l’Union, si elle réunit plus d’un million de signatures dans au moins 7 États de l’UE. Depuis leur mise en place en 2012, seules 6 ICE ont abouti. Le texte va dans le bon sens en dénonçant une sous-utilisation des outils participatifs dont dispose l’UE, et, en conséquence, une déconnexion entre les institutions européennes et les citoyens. Il contient des orientations intéressantes, sur l’ICE en particulier. Néanmoins, deux passages qui montrent une volonté d’utiliser le droit de pétition et le Médiateur européen pour faire pression sur les États membres nous empêchent de voter favorablement. Je me suis donc abstenue sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Ce texte se penche sur les trois outils de «démocratie participative» dont dispose l’UE: le droit de pétition, le Médiateur européen et l’initiative citoyenne européenne (ICE). Le droit de pétition permet d’adresser des pétitions à la commission PETI, qui peuvent éventuellement donner lieu à une résolution adoptée en plénière par le Parlement européen. Le Médiateur européen est chargé d’enquêter sur les cas de mauvaise administration de la part des institutions de l’UE et reçoit les plaintes des citoyens européens à ce sujet. Enfin, l’ICE est une initiative citoyenne qui peut déboucher sur un acte législatif de l’Union, si elle réunit plus d’un million de signatures dans au moins 7 États de l’UE. Depuis leur mise en place en 2012, seules 6 ICE ont abouti.Texte qui va dans le bon sens en dénonçant une sous-utilisation des outils participatifs dont dispose l’UE, et, en conséquence, une déconnexion entre les institutions européennes et les citoyens. Il contient des orientations intéressantes, sur l’ICE en particulier. Néanmoins, deux passages qui montrent une volonté d’utiliser le droit de pétition et le Médiateur européen pour faire pression sur les États membres (application du droit de l’UE, mécanisme de conditionnalité des aides), nous empêchent de voter favorablement.Je me suis abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            . – Ce texte se penche sur les trois outils de «démocratie participative» dont dispose l’UE: le droit de pétition, le Médiateur européen et l’initiative citoyenne européenne (ICE). Il va dans le bon sens en dénonçant une sous-utilisation desdits outils et, en conséquence, une déconnexion entre les institutions européennes et les citoyens. Il contient des orientations intéressantes, sur l’ICE en particulier. Cependant, deux passages qui montrent une volonté d’utiliser le droit de pétition et le Médiateur européen pour faire pression sur les États membres (application du droit de l’UE, mécanisme de conditionnalité des aides), m’ont contrainte à m’abstenir.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            Je me suis abstenue sur ce rapport qui déplore que les outils participatifs de l’Union (droit de pétition, Médiateur, initiative citoyenne européenne) ne soient pas assez utilisés. Le constat est juste mais le rapport laisse aussi entendre que le Médiateur européen devrait faire pression sur les États membres accusés de ne pas respecter l’état de droit, ce qui constitue une nouvelle discrimination politique à l’encontre de ces États.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197502</div>
+            
+            <header><b>Marie-Pierre VEDRENNE</b> | Mouvement Démocrate</header>
+            
+                <p>Notre rempart est la démocratie. Ce sont les valeurs qui nous unissent et les droits que les citoyens partagent, et il n’y a pas de démocratie sans les citoyens.</p>
+            
+                <p>Le courage des Ukrainiens, leur soif de liberté, leur amour de la démocratie rappellent avec force que l’Union européenne, symbole de paix, d’unité, de liberté, doit porter haut un modèle démocratique toujours plus enclin à la participation citoyenne, toujours plus intransigeant sur le respect de l’état de droit et toujours plus favorable à la transparence.</p>
+            
+                <p>Car il n’y a pas de démocratie sans participation active des citoyens, et la conférence sur l’avenir de l’Europe montre l’envie des citoyens de faire entendre leur voix, et ceci au-delà des élections. Leurs recommandations doivent être prises en compte. Sans résultats concrets, les citoyens vont s’éloigner encore plus de nos institutions. Et leur confiance, déjà érodée, c’est à nous, élus au Parlement européen, de la regagner. </p>
+            
+                <p>Il est urgent de repenser les instruments participatifs et il nous faut travailler pour que tous les obstacles à la participation soient levés: barrières linguistiques, barrières technologiques... De refus de collaborer de la part de nos institutions, nous ne pouvons plus accepter. L’Union européenne doit être ambitieuse pour donner la parole à chacun, écouter et donner les moyens nécessaires pour s’impliquer. Notre démocratie, nous la renforcerons ainsi. </p>
+            
+                <p>Pas de démocratie sans respect de l’état de droit. Nous ne pourrons faire aucun compromis. L’Union européenne est une communauté de valeurs et il n’y a pas de place pour les autocrates qui ne respectent pas l’état de droit. Ainsi, nous devons garantir une surveillance étroite des fonds européens dans nos États membres. Chaque citoyen doit pouvoir être assuré que les valeurs européennes sont respectées dans le cadre du plan de relance et en cela, le rôle du Médiateur est essentiel. Le Parlement européen lui a déjà montré son plein soutien pour assurer le respect de l’état de droit. </p>
+            
+                <p>Enfin, pas de démocratie sans transparence. La démocratie européenne ne peut être considérée comme acquise. Sans accès aux informations, sans transparence, les citoyens ne peuvent participer pleinement. L’Union européenne doit maintenir des normes élevées en matière de transparence. Plus de transparence dans les négociations des accords de commerce, par exemple. La médiatrice a pointé du doigt les manquements de la Commission européenne, notamment sur l’accord avec le Mercosur. Plus de transparence pour éviter les conflits d’intérêts, avec un renforcement des règles concernant les anciens députés et les commissaires.</p>
+            
+                <p>Madame la Commissaire, chers collègues, une démocratie courageuse accepte de regarder en face ses faiblesses. Une démocratie courageuse accepte qu’elle sera toujours perfectible. Une démocratie courageuse, nous la devons aux Européens, nous la devons à ceux qui, comme les Ukrainiens, la chérissent au péril de leur vie.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

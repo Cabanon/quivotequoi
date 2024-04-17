@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Un statut pour les associations et organisations à but non lucratif européennes transfrontalières</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Un statut pour les associations et organisations à but non lucratif européennes transfrontalières</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(530/691 * 100%)">530</div>
-  
-  
-    <div class="-" style="width: calc(146/691 * 100%)">146</div>
+    <div class="for" style="width: calc(530/691 * 100%)">530</div>
   
   
-    <div class="0" style="width: calc(15/691 * 100%)">15</div>
+    <div class="against" style="width: calc(146/691 * 100%)">146</div>
+  
+  
+    <div class="abstention" style="width: calc(15/691 * 100%)">15</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,19 +88,20 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(55/77 * 100%)">55</div>
+    <div class="for" style="width: calc(55/77 * 100%)">55</div>
   
   
-    <div class="-" style="width: calc(22/77 * 100%)">22</div>
+    <div class="against" style="width: calc(22/77 * 100%)">22</div>
   
   
 </div>
  
 </section>
-            <a href="/voting/139909">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/139909">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -104,7 +109,7 @@
     
         
         
-            <li>Politiques communautaires</li>
+            <li>Economie sociale, mutuelles, coopératives</li>
         
     
         
@@ -124,125 +129,351 @@
     
         
         
-            <li>Economie sociale, mutuelles, coopératives</li>
+            <li>Politique sociale, charte et protocole social</li>
         
     
         
         
-            <li>Politique sociale, charte et protocole social</li>
+            <li>Politiques communautaires</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2026(INL)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0007_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-02-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>8 bis. déplore que dans l’affaire C-78/18, Commission européenne/Hongrie, la Cour de justice de l’Union européenne ait jugé que les normes et restrictions découlant des règles de lutte contre le blanchiment de capitaux et le financement du terrorisme et s’appliquant aux organisations à but lucratif ne s’appliquent pas mutatis mutandis aux organisations à but non lucratif; déplore que cela implique que les tentatives de la Hongrie visant à faire entrer les organisations à but non lucratif dans le champ d’application de ses règles nationales en matière de lutte contre le blanchiment de capitaux et le financement du terrorisme violent la libre circulation des capitaux;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">141</div>
+  <div class="against">541</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/139128">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(141/693 * 100%)">141</div>
-  
-  
-    <div class="-" style="width: calc(541/693 * 100%)">541</div>
-  
-  
-    <div class="0" style="width: calc(11/693 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139128">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>8 ter. déplore que les organisations à but non lucratif soient des entités non assujetties au titre de la 5e directive anti- blanchiment et des normes internationales du Groupe d’action financière (GAFI), mais uniquement soumises aux règles moins strictes de vigilance à l’égard de la clientèle des entités assujetties; rappelle que le rapport 2019 sur l’évaluation supranationale des risques de la Commission a souligné que les organisations à but non lucratif étaient exposées aux risques de blanchiment de capitaux et de financement du terrorisme; rappelle que des comptes européenne a mis en évidence de graves lacunes dans la transparence de l’utilisation des 11,3 milliards d’euros issus du budget de l’Union et alloués aux ONG sur la proposition actuelle ne réponde pas à ces enjeux de manière appropriée;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(144/693 * 100%)">144</div>
-  
-  
-    <div class="-" style="width: calc(539/693 * 100%)">539</div>
-  
-  
-    <div class="0" style="width: calc(10/693 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139129">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    ID
+    (🇫🇷 : Rassemblement national)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2026(INL)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0007_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">144</div>
+  <div class="against">539</div>
+  <div class="abstention">10</div>
+</span>
+
   
+    
+    <a href="/voting/139129">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-02-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Ce rapport entend remédier à une incertitude juridique concernant les organisations sans but lucratif en définissant un cadre commun quand ces organisations agissent dans un espace européen et transfrontalier. Si l’idée est intéressante, les règles pour les États membres sont trop contraignantes et font la part belle à certaines organisations immigrationnistes. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce texte, qui vise à établir un cadre commun pour faciliter l&#39;activité transfrontière. Des stratégies nationales me paraissent, en l&#39;occurrence, plus efficaces qu&#39;un règlement.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il considère que les actions des ONG sont naturellement vertueuses et propose donc de leur accorder un statut privilégié. Or la réalité nous montre que les ONG sont pour la plupart pro-européistes et pro-migrants. Encore plus grave, la Cour des comptes européenne a pointé du doigt en 2018 la gestion désastreuse de l’argent versé à ces ONG, soit plus de 11 milliards d’euros dépensés sans aucune transparence.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution relative à un statut pour les associations et organisations à but non lucratif européennes transfrontalières. Dans un contexte où le droit d’association n’est pas reconnu de façon uniforme au sein de l’Union, ce qui engendre des surcoûts et des charges administratives inutiles, la résolution propose de mettre en place une forme juridique harmonisée à l’échelle de l’Union européenne, sur le modèle des sociétés civiles, des entreprises commerciales et des groupements d’intérêts économiques.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            J&#39;ai voté en faveur du rapport d’initiative par lequel nous demandons à la Commission européenne de proposer des mesures spécifiques pour les associations transfrontalières. Elles faciliteront la vie des citoyens et de ceux qui veulent monter des projets dans les régions frontalières, en réduisant les freins administratifs et réglementaires.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les propositions du Parlement pour créer un statut aux entités européennes à but non lucratif. Il prévoit notamment de simplifier les charges administratives liées à la disparité des règles nationales et d’instaurer une base juridique facilitant le travail des organisations concernées. J’ai donc voté pour ce texte qui permet de soutenir l’activité transfrontalière à but non lucratif en simplifiant et en sécurisant son cadre.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce rapport demande la création d’un cadre européen pour les associations et organisations à but non lucratif, le 16 février. Pour ce faire, ce texte demande à la Commission d&#39;élaborer à la fois une proposition de règlement établissant un statut d&#39;association européenne et une proposition de directive établissant des standards minimaux pour les organisations à but non lucratif. Ce cadre européen devrait permettre de créer des conditions égales pour les organisations de la société civile partout dans l&#39;Union européenne, celles-ci faisant actuellement face à de nombreux obstacles, notamment du fait des politiques répressives menées par certains États membres. L’existence d’un riche et dense tissu associatif, indépendant de l’État, est une condition sine qua non de la démocratie. Je soutiens donc ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport car il a une appréciation trop générale des organisations non lucratives, incluant par exemple celles qui développent une activité politique sous des apparences humanitaires, telles les organisations complices de passeurs de migrants.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Le texte malgré de bons aspects propose un règlement qui est bien trop contraignant pour les États membres. Et l’appréciation des organisations non lucratives du rapport est bien trop générale, les activités politiques sous faux drapeau humanitaire y sont inclues. Pour ces raisons j’ai voté contre le rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Selon le rapport, les organisations sans but lucratif sont fondamentales pour représenter les intérêts des citoyens et de la société civile, car elles soutiennent la participation active à la vie économique, démocratique et sociale. Mais, en raison de l&#39;absence d&#39;un statut juridique européen commun et des divergences existantes entre les règles des États membres, ces organisations, lorsqu’elles travaillent au-delà des frontières, seraient confrontées à de lourdes charges juridiques et administratives qui les empêcheraient de bénéficier pleinement du marché unique européen, le rapport craignant que l&#39;absence de règles harmonisées ne les dissuade d&#39;étendre leurs activités au-delà des frontières.L’idée de définir via une directive un cadre commun pour faciliter l’activité transfrontière peut être à considérer. Mais la proposition d’un règlement qui constitue le second aspect du rapport va beaucoup trop loin et est beaucoup trop contraignante pour les États membres, alors même que le texte reconnait par ailleurs les approches nationales différentes en la matière. Enfin, le rapport a une appréciation des organisations non lucratives trop générale, incluant donc aussi celles qui développent une activité politique sous des apparences humanitaires, telles les organisations agissant dans le champ des migrations et des réfugiés. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Selon le rapport, les organisations sans but lucratif (les associations, les organisations philanthropiques et les fondations) sont fondamentales pour représenter les intérêts des citoyens et de la société civile, car elles soutiennent la participation active à la vie économique, démocratique et sociale.Mais, en raison de l&#39;absence d&#39;un statut juridique européen commun et des divergences existantes entre les règles des États membres, ces organisations, lorsqu’elles travaillent au-delà des frontières, seraient confrontées à de lourdes charges juridiques et administratives qui les empêcheraient de bénéficier pleinement du marché unique européen et de contribuer à la société démocratique. Le rapport craignant que l&#39;absence de règles harmonisées ne les dissuade d&#39;étendre leurs activités au-delà des frontières.La proposition d’un règlement qui constitue le second aspect du rapport va beaucoup trop loin et est beaucoup trop contraignante pour les États membres, alors même que le texte reconnait les approches nationales différentes en la matière. Enfin, le rapport a une appréciation des organisations non lucratives trop générale, incluant donc aussi celles qui développent une activité politique sous des apparences humanitaires, telles les organisations agissant dans le champ des migrations et des réfugiés.J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre cette proposition qui, sous couvert de faciliter les activités transfrontières, vise à promouvoir des ONG faussement humanitaires qui développent des politiques en faveur des migrations.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            
+                <p>Cette sollicitude est guidée par un optimisme qui confine à la naïveté. Le rapport fait en effet des ONG les parangons de toutes les vertus et affirme même qu’elles constituent une école de la démocratie. C’est méconnaître le rôle réel de certaines ONG parmi les plus influentes, dont celle de George Soros, qui cherche à déstabiliser nos vieilles nations d’Europe en ouvrant la porte de la submersion migratoire.</p>
+            
+                <p>C’est, d’autre part, fermer les yeux sur les conclusions accablantes du rapport nº 35/2018 de la Cour des comptes européenne, qui dénonce l’opacité de l’utilisation par les ONG des subventions de l’Union européenne. Cette dénonciation est d’autant plus préoccupante que nous ne parlons pas de petites sommes, mais de 11,3 milliards d’euros, qui leur ont été généreusement donnés en quatre ans par l’Union européenne. Le rapport Lagodinsky cherche certes à instaurer un embryon de contrôle sur leurs comptes, mais il s’agit d’un contrôle beaucoup trop léger pour restaurer la confiance.</p>
+            
+                <p>Pour ces raisons je m’oppose à ce rapport. </p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

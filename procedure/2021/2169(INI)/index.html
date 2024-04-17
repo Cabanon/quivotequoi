@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>État des lieux de la mise en oeuvre de la politique commune de la pêche et perspectives d&#39;avenir</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>État des lieux de la mise en oeuvre de la politique commune de la pêche et perspectives d&#39;avenir</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(371/555 * 100%)">371</div>
-  
-  
-    <div class="-" style="width: calc(92/555 * 100%)">92</div>
+    <div class="for" style="width: calc(371/555 * 100%)">371</div>
   
   
-    <div class="0" style="width: calc(92/555 * 100%)">92</div>
+    <div class="against" style="width: calc(92/555 * 100%)">92</div>
+  
+  
+    <div class="abstention" style="width: calc(92/555 * 100%)">92</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(30/67 * 100%)">30</div>
+    <div class="for" style="width: calc(30/67 * 100%)">30</div>
   
   
-    <div class="-" style="width: calc(16/67 * 100%)">16</div>
+    <div class="against" style="width: calc(16/67 * 100%)">16</div>
   
   
-    <div class="0" style="width: calc(21/67 * 100%)">21</div>
+    <div class="abstention" style="width: calc(21/67 * 100%)">21</div>
   
 </div>
  
 </section>
-            <a href="/voting/162968">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/162968">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -106,78 +111,197 @@
     
         
         
-            <li>Politiques communautaires</li>
+            <li>Politique de la pêche</li>
         
     
         
         
-            <li>Politique de la pêche</li>
+            <li>Politiques communautaires</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2169(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0357_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-01-18-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">124760</div>
+                
 
-<section>
+<p>
 
   
       <ins>89 bis. souligne qu’il convient de modifier concernant des mesures de gestion pour l’exploitation durable des ressources halieutiques en Méditerranée (ou règlement «Méditerranée»), qui définit les règles régissant les caractéristiques techniques des engins de pêche ainsi que leur utilisation, car il est obsolète et, à ce titre, constitue un obstacle à la réalisation des principaux objectifs de la politique commune de la pêche, et notamment de ceux qui concernent la pêche artisanale;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Nicolas BAY (REC)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">374</div>
+  <div class="against">94</div>
+  <div class="abstention">84</div>
+</span>
+
+  
+    
+    <a href="/voting/163343">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(374/552 * 100%)">374</div>
-  
-  
-    <div class="-" style="width: calc(94/552 * 100%)">94</div>
-  
-  
-    <div class="0" style="width: calc(84/552 * 100%)">84</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/163343">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">197503,124693,197506,97236,197574,197500,204420,197512,96750,197531,197505,30482</div>
+                
 
-<section>
+<p>
 
   
       82. invite la Commission à élargir davantage les connaissances scientifiques sur le bien-être des animaux aquatiques 
@@ -200,60 +324,85 @@
   
 
   
-      <del>l’aquaculture, ne devrait pas alourdir les formalités économiques et opérationnelles pour </del>
+      <del>l’aquaculture, ne devrait pas alourdir les formalités économiques et opérationnelles pour</del>
   
 
   
-      <ins>la pêche et de l’aquaculture et de l’impact économique et opérationnel potentiel sur </ins>
+      <ins>la pêche et de l’aquaculture et de l’impact économique et opérationnel potentiel sur</ins>
   
 
   
-      les opérateurs et les activités et devrait également tenir compte de la nécessité d’assurer des conditions de concurrence équitables sur le plan international;
+       les opérateurs et les activités et devrait également tenir compte de la nécessité d’assurer des conditions de concurrence équitables sur le plan international;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      François ALFONSI (R&amp;PS), 
+    
+      Younous OMARJEE (LFI), 
+    
+      Pascal DURAND (RE), 
+    
+      Benoît BITEAU (EELV), 
+    
+      Damien CARÊME (EELV), 
+    
+      Catherine CHABAUD (MoDem), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV), 
+    
+      Marie TOUSSAINT (EELV) et 
+    
+      Claude GRUFFAT (EELV)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">308</div>
+  <div class="against">239</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/163340">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(308/558 * 100%)">308</div>
-  
-  
-    <div class="-" style="width: calc(239/558 * 100%)">239</div>
-  
-  
-    <div class="0" style="width: calc(11/558 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/163340">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       16. rappelle que la PCP, entre autres objectifs, «vise à faire en sorte que l’exploitation des ressources biologiques vivantes de la mer rétablisse et maintienne les populations des espèces exploitées au‑dessus des niveaux qui permettent d’obtenir le rendement maximal durable» et d’atteindre «le taux d’exploitation permettant d’obtenir le rendement maximal durable [...] en 2020 au plus tard», et en 2025 pour les stocks relevant du plan de gestion des stocks démersaux de Méditerranée occidentale;
@@ -263,69 +412,101 @@
       <del> fait toutefois observer que pour les pêcheries multi- espèces, il est impossible d’appliquer une gestion des espèces fondée sur le modèle du rendement maximal durable, même pour celles qui ont déjà fait l’objet d’études scientifiques approfondies et bien documentées;</del>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°4 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      23. réaffirme les positions exprimées dans sa résolution du 18 mai 2021 sur l’obligation de débarquement; rappelle que les captures indésirées ou accessoires sont inévitables, en particulier dans les pêcheries 
-  
+<p>
 
   
-      <del>mixtes, car le poisson peut être endommagé ou impropre à la vente, ne pas avoir la taille requise ou être propre à la consommation humaine, mais interdit à la vente, etc.; rappelle en outre que, malgré les efforts déployés par toutes les parties prenantes et la collaboration de celles-ci, l’obligation de débarquement ne peut être correctement mise en œuvre s’il n’est pas remédié à certaines lacunes, telles que le manque de capacité de stockage à bord ou d’installations de collecte au port ainsi que la mis en en œuvre en bonne et due forme des exemptions; souligne que ces lacunes ne permettent pas une bonne mise en œuvre, ce qui </del>
+      23. réaffirme les positions exprimées dans sa résolution du 18 mai 2021 sur l’obligation de débarquement; rappelle que les captures indésirées ou accessoires sont inévitables, en particulier dans les pêcheries mixtes
   
 
   
-      <ins>mixtes; souligne que le défaut de mise en œuvre </ins>
+      <del>, car le poisson peut être endommagé ou impropre à la vente, ne pas avoir la taille requise ou être propre à la consommation humaine, mais interdit à la vente, etc.; rappelle en outre que, malgré les efforts déployés par toutes les parties prenantes et la collaboration de celles-ci, l’obligation de débarquement ne peut être correctement mise en œuvre s’il n’est pas remédié à certaines lacunes, telles que le manque de capacité de stockage à bord ou d’installations de collecte au port ainsi que la mis en en œuvre en bonne et due forme des exemptions; souligne que ces lacunes ne permettent pas une bonne</del>
   
 
   
-      se traduit par une collecte de données insuffisante sur les stocks et rend difficile l’estimation précise des captures et, partant, ne permet pas d’établir des estimations scientifiques fiables sur les stocks halieutiques;
+      <ins>; souligne que le défaut de</ins>
+  
+
+  
+       mise en œuvre
+  
+
+  
+      <del>, ce qui</del>
+  
+
+  
+       se traduit par une collecte de données insuffisante sur les stocks et rend difficile l’estimation précise des captures et, partant, ne permet pas d’établir des estimations scientifiques fiables sur les stocks halieutiques;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°5 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       31. invite la Commission et le Conseil à envisager de fixer des TAC pour des périodes plus longues qu’une année ou un semestre, en particulier pour les principaux stocks cibles, toujours sur la base des meilleurs avis scientifiques disponibles, afin que les pêcheurs bénéficient de plus de prévisibilité et de sécurité à long terme et conformément au principe du RMD;
@@ -335,152 +516,185 @@
       <del> invite la Commission et le Conseil à rechercher les meilleurs avis scientifiques disponibles sur la possibilité de supprimer les TAC pour certains stocks, tout en veillant à ce que le stock concerné reste dans des limites biologiques sûres à court et moyen terme;</del>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">153</div>
+  <div class="against">355</div>
+  <div class="abstention">44</div>
+</span>
+
+  
+    
+    <a href="/voting/163331">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(153/552 * 100%)">153</div>
-  
-  
-    <div class="-" style="width: calc(355/552 * 100%)">355</div>
-  
-  
-    <div class="0" style="width: calc(44/552 * 100%)">44</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/163331">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       36. 
   
 
   
-      <del>souligne que, compte tenu </del>
+      <del>souligne que, compte tenu</del>
   
 
   
-      <ins>tient compte </ins>
+      <ins>tient compte</ins>
   
 
   
-      des possibilités actuelles offertes par le Feampa pour soutenir la santé, la sécurité, les conditions de travail et l’efficacité énergétique à bord des navires de pê
+       des possibilités actuelles offertes par le Feampa pour soutenir la santé, la sécurité, les conditions de travail et l’efficacité énergétique à bord des navires de pêche
   
 
   
-      <del>che, le recours actuel au tonnage brut comme unité de mesure de la capacité de pêche dans l’Union risque de faire obstacle à l’amélioration de l’efficacité énergétique, de la sécurité et du confort des navires car il limite les possibilités de remplacement et de modernisation de ceux-ci ou d’augmentation de l’espace, même si cette augmentation n’augmente pas la capacité des navires à pêcher plus; souligne qu’à son tour, cette situation fait obstacle à </del>
+      <del>, le recours actuel au tonnage brut comme unité de mesure de la capacité de pêche dans l’Union risque de faire obstacle à l’amélioration de l’efficacité énergétique, de la sécurité et du confort des navires car il limite les possibilités de remplacement et de modernisation de ceux-ci ou d’augmentation de l’espace, même si cette augmentation n’augmente pas la capacité des navires à pêcher plus; souligne qu’à son tour, cette situation fait obstacle à</del>
   
 
   
-      <ins>che en vue de </ins>
+      <ins> en vue de</ins>
   
 
   
-      l’amélioration des caractéristiques en question, qui, en fin de compte, permettent d’encourager l’emploi, le développement des communautés côtières et l’attractivité du secteur, en particulier pour les jeunes et les femmes;
+       l’amélioration des caractéristiques en question, qui, en fin de compte, permettent d’encourager l’emploi, le développement des communautés côtières et l’attractivité du secteur, en particulier pour les jeunes et les femmes;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°7 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      42. demande en outre la mise en place d’une aide à la transition économique couvrant tous les segments de flotte afin d’accélérer la dé
-  
+<p>
 
   
-      <del>carbonation; souligne que cette aide devrait également servir à remplacer les navires actuels, la flotte étant très ancienne, par des </del>
+      42. demande en outre la mise en place d’une aide à la transition économique couvrant tous les segments de flotte afin d’accélérer la décarbonation
   
 
   
-      <ins>carbonation, ce qui permettrait de disposer de </ins>
+      <del>; souligne que cette aide devrait également servir à remplacer les navires actuels, la flotte étant très ancienne, par des</del>
   
 
   
-      navires plus efficaces, plus sûrs, plus innovants sur le plan technologique et dotés de plus grands espaces à leur 
+      <ins>, ce qui permettrait de disposer de</ins>
   
 
   
-      <del>bord, ce qui </del>
+       navires plus efficaces, plus sûrs, plus innovants sur le plan technologique et dotés de plus grands espaces à leur bord
   
 
   
-      <ins>bord et </ins>
+      <del>, ce qui</del>
   
 
   
-      contribuerait à améliorer l’attractivité du secteur et à encourager le renouvellement générationnel;
+      <ins> et</ins>
+  
+
+  
+       contribuerait à améliorer l’attractivité du secteur et à encourager le renouvellement générationnel;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2169(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0357_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
   
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-01-18-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

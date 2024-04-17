@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Système commun de taxe sur la valeur ajoutée: identification des assujettis en Irlande du Nord</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Système commun de taxe sur la valeur ajoutée: identification des assujettis en Irlande du Nord</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(641/685 * 100%)">641</div>
-  
-  
-    <div class="-" style="width: calc(17/685 * 100%)">17</div>
+    <div class="for" style="width: calc(641/685 * 100%)">641</div>
   
   
-    <div class="0" style="width: calc(27/685 * 100%)">27</div>
+    <div class="against" style="width: calc(17/685 * 100%)">17</div>
+  
+  
+    <div class="abstention" style="width: calc(27/685 * 100%)">27</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,19 +88,20 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(55/78 * 100%)">55</div>
+    <div class="for" style="width: calc(55/78 * 100%)">55</div>
   
   
   
-    <div class="0" style="width: calc(23/78 * 100%)">23</div>
+    <div class="abstention" style="width: calc(23/78 * 100%)">23</div>
   
 </div>
  
 </section>
-            <a href="/voting/124731">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/124731">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -119,21 +124,256 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/0165(CNS)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/0165(CNS)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0200_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-11-11-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-11-11-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            Je me suis abstenue sur ce texte.Il s&#39;agit de créer une racine de numéro d’identification TVA spécifique pour les assujettis en Irlande du Nord.En effet, dans le cadre des accords sur le Brexit, la législation européenne en matière de TVA ne s&#39;appliquera plus au Royaume-Uni, mais continuera à s&#39;appliquer à l&#39;Irlande du Nord pour les biens.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            L’accord de retrait sur le Brexit prévoit une période de transition prenant fin le 31 décembre 2020. Jusqu’à cette date, la législation de l’Union relative à la TVA continue de s’appliquer au Royaume-Uni et sur son territoire. Après la période de transition, cette législation ne s’appliquera plus au Royaume-Uni ou sur son territoire. La législation de l’Union européenne sur la TVA restera bien évidemment applicable à l’Irlande du Nord pour les biens, afin d’éviter une frontière physique entre l’Irlande et l’Irlande du Nord. Cependant, concernant le domaine des services, l’Irlande du Nord sera considérée comme extérieure à l’Union. Il convenait donc de modifier le système commun de TVA. Je me suis donc prononcé en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            Je me suis abstenu sur ce texte purement technique car il réorganise le système de TVA applicable à l’Irlande du Nord après le Brexit. Ces modifications auront des conséquences concrètes qui concerneront très peu la France.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Le Parlement est consulté sur une modification de la directive système commun de TVA qui prépare l&#39;inclusion de l&#39;Irlande du Nord dans le système commun de TVA, dans l&#39;éventualité d&#39;un no-deal. Les exportations de l&#39;Irlande du Nord se feraient attribuer un numéro de TVA européen.Ce texte, qui permet de soutenir le protocole sur l’Irlande et l’Irlande du Nord afin d’éviter une frontière physique entre l’Irlande et l’Irlande du Nord et d’apporter de la clarté aux assujettis à la TVA dans leurs échanges de biens entre l’Irlande du Nord et l’Union européenne, va dans le bon sens. Je l’ai naturellement soutenu.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            Après la période de transition du Brexit, la législation de l’UE en matière de TVA ne s’appliquera plus au Royaume-Uni. Cependant, elle restera applicable à l’Irlande du Nord pour les biens, afin d’éviter une frontière physique entre la République d’Irlande et l’Irlande du Nord.En revanche, en ce qui concerne les services, l’Irlande du Nord, tout comme le reste du Royaume-Uni, sera considérée comme extérieure à l’UE. Il en résulte inévitablement un système de TVA mixte en Irlande du Nord.Aussi, pour que le système de TVA de l’UE fonctionne correctement, il est essentiel que les assujettis effectuant des livraisons de biens en Irlande du Nord ou des acquisitions intracommunautaires de biens y soient identifiés au moyen d’un numéro d&#39;identification TVA de l’UE distinct des numéros d’identification TVA britanniques.La proposition modifie la directive TVA et introduira en Irlande du Nord ces numéros d&#39;identification TVA comportant un préfixe spécifique. Ce rapport technique vient corriger le vide juridique d’une situation exceptionnelle négociée par le Royaume-Uni, je me suis donc abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport modifiant la directive 2006/112/CE relative au système commun de taxe sur la valeur ajoutée en ce qui concerne l&#39;identification des assujettis en Irlande du Nord. Ce texte technique vise à tenir compte de l’incidence du Brexit, dans un contexte où l’Irlande du Nord demeurera, une fois le Brexit parvenu à son terme, soumise à la législation de l’UE en matière de TVA sur les biens mais pas sur les services.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à valider une modification de la directive «système commun de TVA» pour y inclure l&#39;Irlande du Nord dans l’éventualité d’un Brexit sans accord. Il prévoit ainsi d’attribuer un numéro de TVA européen pour les exportations de l’Irlande du Nord afin de permettre le maintien des livraisons et acquisitions de biens dans la région. J’ai donc voté pour ce texte qui a notamment pour objectif d’éviter le retour d’une frontière physique entre l’Irlande et l’Irlande du Nord, conformément à l’engagement de l’Union européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            À partir du 1er janvier 2021, la législation de l’Union en matière de TVA ne s’appliquera plus au Royaume-Uni. Cependant, sur la base du protocole sur l’Irlande et l’Irlande du Nord, la législation de l’UE sur la TVA restera applicable à l’Irlande du Nord pour les biens. Pour que le système de TVA de l’UE fonctionne correctement, il faut que les acteurs effectuant des livraisons de biens en Irlande du Nord ou des acquisitions intracommunautaires de biens soient identifiés par le système européen de TVA. Cette modification législative est nécessaire, notamment au vu de la perspective probable d’une absence d’accord avec le Royaume-Uni d’ici la fin de l’année. Je vote donc en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Ce rapport très technique a pour objet de créer une racine de numéro d’identification TVA spécifique pour les assujettis en République d’Irlande. Dans le cadre des accords sur le Brexit, il est en effet prévu que la législation de l’UE en matière de TVA ne s’appliquera plus au Royaume-Uni. Cependant, elle restera applicable à l’Irlande du Nord pour les biens. Je me suis abstenu.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai apporté mon soutien au rapport modifiant la directive 2006/112/CE relative au système commun de taxe sur la valeur ajoutée en ce qui concerne l&#39;identification des assujettis en Irlande du Nord. En effet, la législation de l&#39;UE sur la TVA s&#39;appliquera au Royaume-Uni jusqu&#39;à la fin de 2020. Néanmoins, le protocole sur l&#39;Irlande et l&#39;Irlande du Nord stipule qu&#39;à partir du 1er janvier 2021, l&#39;Irlande du Nord continuera à rester sous la législation de l&#39;UE sur la TVA concernant les biens. Afin que les entreprises impliquées dans le commerce de marchandises à destination et en provenance de l&#39;Irlande du Nord puissent comprendre plus facilement quelles règles s&#39;appliquent, le texte propose d’introduire en Irlande du Nord des numéros d&#39;identification TVA comportant un préfixe spécifique pour établir des distinctions claires.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            Je me suis abstenu sur ce rapport très technique ayant pour objet de créer une racine de numéro d’identification TVA spécifique pour les assujettis en République d’Irlande.Dans le cadre des accords sur le Brexit, il est en effet prévu que la législation de l’UE en matière de TVA ne s’appliquera plus au Royaume-Uni. Cependant, elle restera applicable à l’Irlande du Nord pour les biens.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            Je me suis abstenue sur ce rapport purement technique sur lequel je ne porte pas de regard politique particulier.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            Ce rapport a pour objet de créer une racine de numéro d’identification TVA spécifique pour les assujettis en République d’Irlande. Dans le cadre des accords sur le Brexit, il est en effet prévu que la législation de l’UE en matière de TVA ne s’appliquera plus au Royaume-Uni. Cependant, elle restera applicable à l’Irlande du Nord pour les biens. Je me suis abstenu sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Après la période de transition du Brexit, la législation de l’UE en matière de TVA ne s’appliquera plus au Royaume-Uni. Cependant, elle restera applicable à l’Irlande du Nord pour les biens, afin d’éviter une frontière physique entre la République d’Irlande et l’Irlande du Nord. En revanche, en ce qui concerne les services, l’Irlande du Nord, tout comme le reste du Royaume-Uni, sera considérée comme extérieure à l’UE. Il en résulte inévitablement un système de TVA mixte en Irlande du Nord. Aussi, pour que le système de TVA de l’UE fonctionne correctement, il est essentiel que les assujettis effectuant des livraisons de biens en Irlande du Nord ou des acquisitions intracommunautaires de biens y soient identifiés au moyen d’un numéro d&#39;identification TVA de l’UE distinct des numéros d’identification TVA britanniques. Je me suis abstenue sur ce rapport purement technique qui introduira en Irlande du Nord des numéros d&#39;identification TVA comportant un préfixe spécifique.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Après la période de transition du Brexit, la législation de l’UE en matière de TVA ne s’appliquera plus au Royaume-Uni. Cependant, elle restera applicable à l’Irlande du Nord pour les biens, afin d’éviter une frontière physique entre la république d’Irlande et l’Irlande du Nord. En revanche, en ce qui concerne les services, l’Irlande du Nord, tout comme le reste du Royaume-Uni, sera considérée comme extérieure à l’UE. Il en résulte inévitablement un système de TVA mixte en Irlande du Nord. La proposition modifie la directive TVA et introduira en Irlande du Nord ces numéros d&#39;identification TVA comportant un préfixe spécifique. Les États membres devraient transposer la directive au plus tard le 31 décembre 2020. Pour ce rapport purement technique j’ai voté une abstention.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            La proposition entend modifier la directive TVA et introduire en Irlande du Nord des numéros d&#39;identification TVA comportant un préfixe spécifique. Il s’agit ici de prendre en compte le fait qu’après la période de transition du Brexit, la législation de l’UE en matière de TVA ne s’appliquera plus au Royaume-Uni, mais restera applicable à l’Irlande du Nord pour les biens. Une situation qui répond à la volonté d’éviter une frontière physique entre la république d’Irlande et l’Irlande du Nord. Pour autant, en ce qui concerne les services, l’Irlande du Nord, tout comme le reste du Royaume-Uni, sera considérée comme extérieure à l’UE. Il en résultera de facto un système de TVA mixte en Irlande du Nord. Aussi, afin que le système de TVA de l’UE fonctionne correctement, il est impératif que les assujettis effectuant des livraisons de biens en Irlande du Nord ou des acquisitions intracommunautaires de biens y soient identifiés au moyen d’un numéro d&#39;identification TVA de l’UE distinct des numéros d’identification TVA britanniques. Je me suis abstenue.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
+
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

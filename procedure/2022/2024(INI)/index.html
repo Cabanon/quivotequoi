@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Délibérations de la commission des pétitions en 2021</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Délibérations de la commission des pétitions en 2021</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(408/483 * 100%)">408</div>
-  
-  
-    <div class="-" style="width: calc(44/483 * 100%)">44</div>
+    <div class="for" style="width: calc(408/483 * 100%)">408</div>
   
   
-    <div class="0" style="width: calc(31/483 * 100%)">31</div>
+    <div class="against" style="width: calc(44/483 * 100%)">44</div>
+  
+  
+    <div class="abstention" style="width: calc(31/483 * 100%)">31</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             🔎 Vote introuvable
@@ -83,13 +87,14 @@
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
     
         
         
-            <li>Etat et évolution de l&#39;Union</li>
+            <li>Citoyenneté européenne</li>
         
     
         
@@ -99,17 +104,17 @@
     
         
         
+            <li>Droits du citoyen</li>
+        
+    
+        
+        
             <li>Droit de pétition</li>
         
     
         
         
-            <li>Citoyenneté européenne</li>
-        
-    
-        
-        
-            <li>Droits du citoyen</li>
+            <li>Etat et évolution de l&#39;Union</li>
         
     
         
@@ -124,21 +129,209 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2024(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2024(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0271_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-12-15-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-12-15-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                            <option value="RE,197511">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197683,197629,197615">🇫🇷 Reconquête!</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Reconquête!</header>
+            . – Je vote contre cette résolution qui est utilisée comme escamotage pour rebondir sur les questions récurrentes du Parlement européen, l’idéologie du genre, le pacte vert, sans pourtant améliorer la participation directe des citoyens aux procédures démocratique que le Parlement devrait soutenir.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            Je me suis abstenue sur ce texte, qui fait un tour d’horizon des pétitions examinées en 2021.Il en résulte certaines remarques intéressantes, comme celle ayant trait au manque de transparence en matière d’achat de vaccin.Le bilan global de ce dispositif, largement ignoré par les Européens, reste toutefois mitigé.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce rapport est un bilan de l’activité de la commission des pétitions pour l’année 2021. Il nous apprend que le Parlement européen a reçu près de 1 400 pétitions en 2021 contre 1 573 en 2020. Les principaux sujets abordés par ces pétitions étaient les droits fondamentaux, la santé, l’environnement, la justice et l’éducation. Reconnaissant le travail effectué par cette commission, j’ai voté en faveur de ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            Je me suis abstenu sur ce rapport car il tire des conclusions tantôt intéressantes tantôt contestables des pétitions examinées en 2021 par la commission PETI.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution sur les délibérations de la commission des pétitions en 2021. Le texte souligne qu’en 2021, le Parlement européen a reçu 1 392 pétitions contre 1 573 en 2020 soit une baisse de 11,5 %. Les principaux sujets de préoccupation des pétitionnaires étaient les droits fondamentaux, la santé, l’environnement, la justice et l’éducation.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter l’analyse du Parlement européen sur les travaux de la Commission des pétitions. Il résume notamment les principaux sujets traités, souligne la nécessité d’apporter des réponses précises aux préoccupations soulevées par les citoyens et demande aux institutions européennes d’en tenir compte dans l’élaboration de leurs politiques publiques. J’ai donc voté pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport qui présente les différentes activités de la commission des pétitions en 2021, à savoir les pétitions débattues lors des réunions de notre commission, les auditions publiques, notamment celles portant sur les initiatives citoyennes européennes, ou encore la coopération avec le Médiateur européen, avec la Commission européenne, mais aussi avec les autres commissions parlementaires. Le rapport détaille également les principaux sujets de préoccupation des pétitionnaires au cours de l’année 2021, à commencer par les urgences sanitaires et socioéconomiques résultant de la pandémie de COVID-19, mais également les droits fondamentaux, l’environnement et la justice. J’ai souhaité insister, par le biais d’amendements, sur la possibilité pour les citoyens d’apporter leur soutien à certaines pétitions, sur la nécessité d’accroître les campagnes de communication pour faire connaître davantage les mécanismes participatifs existants et sur la création d’un portail digital unique qui regrouperait et détaillerait l’ensemble des procédures liées aux pétitions accessibles aux citoyens, du côté du Médiateur européen et du Parlement européen.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Ce texte fait un tour d’horizon des pétitions examinées par la commission des pétitions en 2021. S’il en tire des conclusions intéressantes sur certains thèmes (absence de transparence sur les contrats d’achats de vaccin par la Commission, discriminations subies par les personnes non vaccinées pendant la pandémie…), certaines sont plus problématiques sur d’autres thèmes (défense des droits des minorités qui justifierait d’empiéter sur la souveraineté des États membres). Je me suis donc abstenu.Malgré la hausse des pétitions reçues, cet outil demeure méconnu des citoyens européens et le texte dresse un bilan mitigé en appelant à mieux faire connaître le droit de pétition dans l’UE.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b></b> | </header>
+            Ce rapport porte sur le mécanisme de dépôts de pétitions citoyennes auprès des institutions de l’Union. Il fait une analyse pertinente des entraves qui existent encore aujourd’hui à leur prise en compte effective par le Parlement et la Commission. Cet outil démocratique doit en effet aboutir à des propositions concrètes de nouvelles législations dans les domaines intéressant les citoyens et permettre plus généralement de mieux protéger les droits des Européens. Il reste néanmoins un moyen utile de mettre en évidence des violations de droits des citoyens puisque ces pétitions peuvent également être déposées à titre individuel. Ce rapport propose d’améliorer la connaissance des citoyens sur l’existence de ce dispositif et demande concrètement l’adoption d’un acte législatif européen qui consacre la reconnaissance des droits des personnes LGBTIQ+ compte tenu du nombre important de pétitions qui révèlent des atteintes aux droits des personnes concernées. Il plaide également pour la mise en place d’un outil informatique interinstitutionnel à guichet unique entre la Commission et le Parlement afin de partager publiquement toutes les informations disponibles sur les suites données aux pétitions. J’ai donc voté pour ce rapport qui avance des recommandations bienvenues afin de mieux garantir l’effectivité des droits des citoyens européens.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
+
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

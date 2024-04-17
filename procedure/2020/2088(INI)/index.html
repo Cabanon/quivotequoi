@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Bilan des élections européennes</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Bilan des élections européennes</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(468/696 * 100%)">468</div>
-  
-  
-    <div class="-" style="width: calc(194/696 * 100%)">194</div>
+    <div class="for" style="width: calc(468/696 * 100%)">468</div>
   
   
-    <div class="0" style="width: calc(34/696 * 100%)">34</div>
+    <div class="against" style="width: calc(194/696 * 100%)">194</div>
+  
+  
+    <div class="abstention" style="width: calc(34/696 * 100%)">34</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(46/78 * 100%)">46</div>
+    <div class="for" style="width: calc(46/78 * 100%)">46</div>
   
   
-    <div class="-" style="width: calc(24/78 * 100%)">24</div>
+    <div class="against" style="width: calc(24/78 * 100%)">24</div>
   
   
-    <div class="0" style="width: calc(8/78 * 100%)">8</div>
+    <div class="abstention" style="width: calc(8/78 * 100%)">8</div>
   
 </div>
  
 </section>
-            <a href="/voting/125375">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/125375">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -106,7 +111,7 @@
     
         
         
-            <li>Etat et évolution de l&#39;Union</li>
+            <li>Elections, suffrage universel direct</li>
         
     
         
@@ -116,674 +121,862 @@
     
         
         
-            <li>Elections, suffrage universel direct</li>
+            <li>Institutions de l&#39;Union</li>
         
     
         
         
-            <li>Institutions de l&#39;Union</li>
+            <li>Etat et évolution de l&#39;Union</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2088(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0211_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-11-23-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       F. considérant que le taux de participation plus élevé est également lié au succès des partis 
   
 
   
-      <del>pro-européens grâce aux voix des jeunes générations, qui ont contribué à la majorité pro-européenne au Parlement européen, mais que le succès des mouvements eurosceptiques, populistes et nationalistes, qui menacent le projet d’intégration européenne, doit être considéré comme un avertissement;</del>
+      <del>pro-européens grâce aux voix des jeunes générations, qui ont contribué à la majorité pro-européenne au Parlement européen, mais que le succès des mouvements eurosceptiques, populistes et nationalistes, qui menacent le projet d’intégration européenne, doit être considéré comme un avertissement</del>
   
 
   
-      <ins>d’extrême droite, ce qui doit être considéré comme un avertissement et remettre en question notre soutien aux politiques actuelles de l’Union, notamment en matière de dumping social;</ins>
+      <ins>d’extrême droite, ce qui doit être considéré comme un avertissement et remettre en question notre soutien aux politiques actuelles de l’Union, notamment en matière de dumping social</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">45</div>
+  <div class="against">638</div>
+  <div class="abstention">14</div>
+</span>
+
+  
+    
+    <a href="/voting/124969">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(45/697 * 100%)">45</div>
-  
-  
-    <div class="-" style="width: calc(638/697 * 100%)">638</div>
-  
-  
-    <div class="0" style="width: calc(14/697 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124969">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>K bis. considérant qu’il est difficile de déterminer si le Parlement est socialement représentatif de la diversité de la société; que la profession des élus ne fait pas partie des renseignements exigés par l’administration du Parlement; considérant que, bien que les représentants élus doivent fournir des détails sur leur profession dans leur déclaration d’intérêts financiers, qui est publiée, l’administration du Parlement ne recueille ni ne publie de statistiques relatives à ces données; que les parlements nationaux mettent ces informations à disposition; qu’il y va de l’intérêt général de disposer et de rendre publiques ces informations afin de contribuer à ce que toutes les catégories socio-professionnelles soient correctement représentées au Parlement;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">142</div>
+  <div class="against">544</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/124973">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(142/697 * 100%)">142</div>
-  
-  
-    <div class="-" style="width: calc(544/697 * 100%)">544</div>
-  
-  
-    <div class="0" style="width: calc(11/697 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124973">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>K ter. considérant que l’usage de la langue anglaise, sans interprétation, dans les réunions de négociations de rapporteurs et de rapporteurs fictifs du Parlement européen ainsi que les traductions souvent tardives voire inexistantes des textes des institutions européennes sont un frein additionnel à une représentation plus diversifiée et représentative de la diversité sociale de l’Europe au Parlement européen;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">221</div>
+  <div class="against">448</div>
+  <div class="abstention">27</div>
+</span>
+
+  
+    
+    <a href="/voting/124974">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(221/696 * 100%)">221</div>
-  
-  
-    <div class="-" style="width: calc(448/696 * 100%)">448</div>
-  
-  
-    <div class="0" style="width: calc(27/696 * 100%)">27</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124974">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       W. considérant que des propositions institutionnelles telles que les listes transnationales, comme le fait remarquer le Parlement dans sa résolution du 7 février 2018 sur la composition du Parlement européen, le fait de placer les partis et mouvements politiques européens plus au centre des élections européennes, la transformation du Conseil en une deuxième chambre législative de l’Union, comme cela est proposé dans sa résolution du 16 février 2017 sur les évolutions et adaptations possibles de la structure institutionnelle actuelle de l’Union européenne, ou encore l’instauration de la possibilité de former des coalitions de partis et mouvements politiques européens en amont des élections, contribueraient à transformer les élections européennes en 
   
 
   
-      <del>une seule véritable élection européenne, par opposition à l’addition de 27 élections nationales distinctes qu’elles sont aujourd’hui;</del>
+      <del>une seule véritable élection européenne, par opposition à l’addition de 27 élections nationales distinctes qu’elles sont aujourd’hui</del>
   
 
   
-      <ins>un enjeu crucial, caractérisé par de vrais débats et par la présentation de conceptions différentes pour l’avenir du projet d’intégration européenne;</ins>
+      <ins>un enjeu crucial, caractérisé par de vrais débats et par la présentation de conceptions différentes pour l’avenir du projet d’intégration européenne</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">68</div>
+  <div class="against">606</div>
+  <div class="abstention">22</div>
+</span>
+
+  
+    
+    <a href="/voting/124979">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(68/696 * 100%)">68</div>
-  
-  
-    <div class="-" style="width: calc(606/696 * 100%)">606</div>
-  
-  
-    <div class="0" style="width: calc(22/696 * 100%)">22</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124979">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       1. se félicite de la participation accrue aux élections européennes de 2019, qui montre qu’il est possible d’inverser la tendance à la baisse de la participation en Europe, mais regrette dans le même temps le taux d’abstention persistant et le fait que, dans l’ensemble de l’Union, près de la moitié des électeurs n’ont pas voté; reconnaît le rôle important qu’ont joué les campagnes menées par les institutions de l’Union et les organisations de la société civile, notamment la campagne «cette fois je vote», pour accroître la participation; souligne qu’il est nécessaire d’agir davantage aux niveaux local, régional, national et européen afin d’inciter les électeurs à participer aux élections européennes; estime que cette hausse de la participation 
   
 
   
-      <del>montre qu’une proportion croissante de </del>
+      <del>montre</del>
   
 
   
-      <ins>semble indiquer qu’une partie des </ins>
+      <ins>semble indiquer</ins>
   
 
   
-      citoyens considère l’Union européenne comme le cadre adéquat pour relever les défis de notre époque, tels que l’économie et la croissance durables, le changement climatique et la protection environnementale, les inégalités sociales et les inégalités entre les hommes et les femmes, 
+       qu’une 
   
 
   
-      <ins>le dumping social, </ins>
+      <del>proportion croissante de</del>
   
 
   
-      la révolution numérique, la promotion de la liberté, des droits de l’homme et de la démocratie, et la démographie, ainsi que les préoccupations géopolitiques comme la migration et la politique étrangère, la sécurité et le rôle de    l’Union dans le monde; invite dès lors toutes les institutions de l’Union à prendre leurs responsabilités et à agir conformément au mandat que leur ont confié, directement ou indirectement, les citoyens;
+      <ins>partie des</ins>
+  
+
+  
+       citoyens considère l’Union européenne comme le cadre adéquat pour relever les défis de notre époque, tels que l’économie et la croissance durables, le changement climatique et la protection environnementale, les inégalités sociales et les inégalités entre les hommes et les femmes,
+  
+
+  
+      <ins> le dumping social,</ins>
+  
+
+  
+       la révolution numérique, la promotion de la liberté, des droits de l’homme et de la démocratie, et la démographie, ainsi que les préoccupations géopolitiques comme la migration et la politique étrangère, la sécurité et le rôle de    l’Union dans le monde; invite dès lors toutes les institutions de l’Union à prendre leurs responsabilités et à agir conformément au mandat que leur ont confié, directement ou indirectement, les citoyens;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">183</div>
+  <div class="against">488</div>
+  <div class="abstention">26</div>
+</span>
+
+  
+    
+    <a href="/voting/124932">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(183/697 * 100%)">183</div>
-  
-  
-    <div class="-" style="width: calc(488/697 * 100%)">488</div>
-  
-  
-    <div class="0" style="width: calc(26/697 * 100%)">26</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124932">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       3. se félicite de l’augmentation significative de la participation des jeunes aux élections; invite à nouveau le Conseil et la Commission à tenir compte de leurs préoccupations, qui sont essentielles pour la vie des générations futures, par des consultations publiques et la Conférence sur l’avenir de l’Europe; recommande 
   
 
   
-      <del>aux États membres d’envisager d’harmoniser l’âge de la majorité électorale, afin de renforcer encore la participation des jeunes électeurs;</del>
+      <del>aux</del>
   
 
   
-      <ins>à tous États membres de mettre en place un âge minimum pour les électeurs afin de donner aux jeunes la place qui leur revient dans nos sociétés; invite les 13 États membres dont l’âge minimum requis pour les candidats est supérieur à 18 ans à abaisser cet âge minimum à 18 ans;</ins>
+      <ins>à tous</ins>
+  
+
+  
+       États membres 
+  
+
+  
+      <del>d’envisager d’harmoniser l’âge de la majorité électorale, afin de renforcer encore la participation des jeunes électeurs</del>
+  
+
+  
+      <ins>de mettre en place un âge minimum pour les électeurs afin de donner aux jeunes la place qui leur revient dans nos sociétés; invite les 13 États membres dont l’âge minimum requis pour les candidats est supérieur à 18 ans à abaisser cet âge minimum à 18 ans</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">257</div>
+  <div class="against">425</div>
+  <div class="abstention">15</div>
+</span>
+
+  
+    
+    <a href="/voting/124936">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(257/697 * 100%)">257</div>
-  
-  
-    <div class="-" style="width: calc(425/697 * 100%)">425</div>
-  
-  
-    <div class="0" style="width: calc(15/697 * 100%)">15</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124936">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       4. 
   
 
   
-      <del>se félicite du fait que l’équilibre entre les hommes et les femmes au Parlement se soit amélioré après les dernières élections; souligne toutefois que des améliorations sont encore possibles pour y atteindre un véritable équilibre entre les hommes et les femmes et reconnaît qu’il existe d’importantes différences entre les États membres, certains ayant élu plus de 50 % de femmes, tandis que d’autres n’en ont pas élu une seule à la fonction de député au Parlement européen; invite les États membres et les institutions de l’Union à tout mettre en œuvre pour encourager le principe de l’égalité entre les hommes et les femmes dans l’ensemble du processus électoral; souligne, dans ce contexte, l’importance que revêtent des listes des candidats respectant la parité entre les hommes et les femmes; invite la Commission, en coopération avec le Parlement et d’autres organes tels que la Commission de Venise, à formuler des recommandations aux États membres en vue d’accroître la représentation des femmes au Parlement européen; demande que soient présentées des listes de candidats comptant autant de femmes susceptibles d’être élues que d’hommes, par exemple au moyen de listes alternées ou de méthodes équivalentes, car de    nombreux États membres ne disposent pas d’une législation garantissant la parité politique aux élections;</del>
+      <del>se félicite du fait que l’équilibre entre les hommes et les femmes au Parlement se soit amélioré après les dernières élections; souligne toutefois que des améliorations sont encore possibles pour y atteindre un véritable équilibre entre les hommes et les femmes et reconnaît qu’il existe d’importantes différences entre les États membres, certains ayant élu plus de 50 % de femmes, tandis que d’autres n’en ont pas élu une seule à la fonction de député au Parlement européen; invite les États membres et les institutions de l’Union à tout mettre en œuvre pour encourager le principe de l’égalité entre les hommes et les femmes dans l’ensemble du processus électoral; souligne, dans ce contexte, l’importance que revêtent des listes des candidats respectant la parité entre les hommes et les femmes; invite la Commission, en coopération avec le Parlement et d’autres organes tels que la Commission de Venise, à formuler des recommandations aux États membres en vue d’accroître la représentation des femmes au Parlement européen; demande que soient présentées des listes de candidats comptant autant de femmes susceptibles d’être élues que d’hommes, par exemple au moyen de listes alternées ou de méthodes équivalentes, car de    nombreux États membres ne disposent pas d’une législation garantissant la parité politique aux élections</del>
   
 
   
-      <ins>déplore le fait que le résultat des élections n’ait pas conduit à un véritable équilibre entre les hommes et les femmes au Parlement; invite la Commission, en coopération avec le Parlement et d’autres organes tels que la Commission de Venise, à formuler des recommandations aux États membres en vue d’accroître la représentation des femmes au Parlement européen; invite les États membres à adopter, dans leur législation électorale nationale, une obligation générale pour les partis politiques de présenter des listes entièrement paritaires de candidats, avec une alternance entre hommes et femmes; demande en outre aux États membres qui possèdent un système de vote préférentiel de proposer le vote préférentiel sur un nombre pair de candidats afin de garantir la parité;</ins>
+      <ins>déplore le fait que le résultat des élections n’ait pas conduit à un véritable équilibre entre les hommes et les femmes au Parlement; invite la Commission, en coopération avec le Parlement et d’autres organes tels que la Commission de Venise, à formuler des recommandations aux États membres en vue d’accroître la représentation des femmes au Parlement européen; invite les États membres à adopter, dans leur législation électorale nationale, une obligation générale pour les partis politiques de présenter des listes entièrement paritaires de candidats, avec une alternance entre hommes et femmes; demande en outre aux États membres qui possèdent un système de vote préférentiel de proposer le vote préférentiel sur un nombre pair de candidats afin de garantir la parité</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">111</div>
+  <div class="against">566</div>
+  <div class="abstention">19</div>
+</span>
+
+  
+    
+    <a href="/voting/124939">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(111/696 * 100%)">111</div>
-  
-  
-    <div class="-" style="width: calc(566/696 * 100%)">566</div>
-  
-  
-    <div class="0" style="width: calc(19/696 * 100%)">19</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124939">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
-
-  
-      4. se félicite du fait que l’équilibre entre les hommes et les femmes au Parlement se soit amélioré après les dernières élections; souligne toutefois que des améliorations sont encore possibles pour y atteindre un véritable équilibre entre les hommes et les femmes et reconnaît qu’il existe d’importantes différences entre les États membres, certains ayant élu plus de 50 % de femmes, tandis que d’autres n’en ont pas élu une seule à la fonction de député au Parlement européen; invite les États membres et les institutions de l’Union à tout mettre en œuvre pour encourager le principe de l’égalité entre les hommes et les femmes dans l’ensemble du processus électoral; souligne, dans ce contexte, l’importance que revêtent des listes des candidats respectant la parité entre les hommes et les femmes; invite la Commission, en coopération avec le Parlement et d’autres organes tels que la Commission de Venise, à formuler des recommandations aux États membres en vue d’accroître la représentation des femmes au Parlement européen; demande que soient présentées des listes de candidats comptant autant de femmes susceptibles d’être élues que d’hommes, 
-  
+<p>
 
   
-      <del>par exemple </del>
+      4. se félicite du fait que l’équilibre entre les hommes et les femmes au Parlement se soit amélioré après les dernières élections; souligne toutefois que des améliorations sont encore possibles pour y atteindre un véritable équilibre entre les hommes et les femmes et reconnaît qu’il existe d’importantes différences entre les États membres, certains ayant élu plus de 50 % de femmes, tandis que d’autres n’en ont pas élu une seule à la fonction de député au Parlement européen; invite les États membres et les institutions de l’Union à tout mettre en œuvre pour encourager le principe de l’égalité entre les hommes et les femmes dans l’ensemble du processus électoral; souligne, dans ce contexte, l’importance que revêtent des listes des candidats respectant la parité entre les hommes et les femmes; invite la Commission, en coopération avec le Parlement et d’autres organes tels que la Commission de Venise, à formuler des recommandations aux États membres en vue d’accroître la représentation des femmes au Parlement européen; demande que soient présentées des listes de candidats comptant autant de femmes susceptibles d’être élues que d’hommes,
   
 
   
-      au moyen de listes alterné
+      <del> par exemple</del>
   
 
   
-      <del>es ou de méthodes équivalentes,</del>
+       au moyen de listes alternées
   
 
   
-      <ins>es,</ins>
+      <del> ou de méthodes équivalentes</del>
   
 
   
-       car de nombreux États membres ne disposent pas 
+      , car de nombreux États membres ne disposent pas
   
 
   
-      <del>   </del>
+      <del>    </del>
   
 
   
-      d’une législation garantissant la parité politique 
+      <ins> </ins>
   
 
   
-      <ins>   </ins>
+      d’une législation garantissant la parité politique
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
   
 
   
       aux élections;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">101</div>
+  <div class="against">575</div>
+  <div class="abstention">19</div>
+</span>
+
+  
+    
+    <a href="/voting/124940">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(101/695 * 100%)">101</div>
-  
-  
-    <div class="-" style="width: calc(575/695 * 100%)">575</div>
-  
-  
-    <div class="0" style="width: calc(19/695 * 100%)">19</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124940">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       14. est d’avis que le processus des têtes de liste 
   
 
   
-      <del>n’a pas réussi à aboutir à un président de la Commission européenne à l’issue des élections de 2019, premièrement, parce qu’aucune amélioration n’a été apportée à l’application du principe des candidats tête de liste à la suite de l’expérience de 2014 et, deuxièmement, en raison du manque d’explications et de compréhension du processus par les citoyens de l’Union; entend réformer le processus démocratique pour le choix du président de la Commission avant les prochaines élections européennes de 2024; fait valoir, cependant, que l’élection de la présidence de la Commission dépend toujours de l’obtention du soutien d’une majorité de députés au Parlement européen, de manière à ce que les résultats de l’élection soient pleinement pris en compte, comme le prévoit le traité de Lisbonne;</del>
+      <del>n’a pas réussi à aboutir à un président de la Commission européenne à l’issue des élections de 2019, premièrement, parce qu’aucune amélioration n’a été apportée à l’application du principe des candidats tête de liste à la suite de l’expérience de 2014 et, deuxièmement, en raison du manque d’explications et de compréhension du processus par les citoyens de l’Union; entend réformer le processus démocratique pour le choix du président de la Commission avant les prochaines élections européennes de 2024; fait valoir, cependant, que l’élection de la présidence de la Commission dépend toujours de l’obtention du soutien d’une majorité de députés au Parlement européen, de manière à ce que les résultats de l’élection soient pleinement pris en compte, comme le prévoit le traité de Lisbonne</del>
   
 
   
-      <ins>devrait être abandonné;</ins>
+      <ins>devrait être abandonné</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">179</div>
+  <div class="against">504</div>
+  <div class="abstention">14</div>
+</span>
+
+  
+    
+    <a href="/voting/124943">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(179/697 * 100%)">179</div>
-  
-  
-    <div class="-" style="width: calc(504/697 * 100%)">504</div>
-  
-  
-    <div class="0" style="width: calc(14/697 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124943">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       15. souligne le rôle essentiel de la prochaine Conférence sur l’avenir de l’Europe dans le débat sur les questions institutionnelles, notamment à l’aune des résultats des élections européennes de 2019; 
   
 
   
-      <del>se félicite </del>
+      <del>se félicite</del>
   
 
   
-      <ins>est dans l’attente </ins>
+      <ins>est dans l’attente</ins>
   
 
   
-      de la déclaration commune à venir des trois institutions de l’Union sur la Conférence sur l’avenir de l’Europe et appelle de ses vœux son adoption rapide; rappelle l’engagement pris par la présidente de la Commission d’aborder les sujets spécifiquement liés aux processus démocratiques et aux questions 
+       de la déclaration commune à venir des trois institutions de l’Union sur la Conférence sur l’avenir de l’Europe et appelle de ses vœux son adoption rapide; rappelle l’engagement pris par la présidente de la Commission d’aborder les sujets spécifiquement liés aux processus démocratiques et aux questions institutionnelles
   
 
   
-      <del>institutionnelles, notamment le système des candidats tête de liste pour l’élection du président de la Commission et les élections au Parlement européen, y compris dans le cadre de la Conférence, sans préjudice des décisions de la Conférence elle-même concernant la liste des priorités à traiter;</del>
+      <del>, notamment le système des candidats tête de liste pour l’élection du président de la Commission et les élections au Parlement européen, y compris dans le cadre de la Conférence, sans préjudice des décisions de la Conférence elle-même concernant la liste des priorités à traiter</del>
   
 
   
-      <ins>institutionnelles;</ins>
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">140</div>
+  <div class="against">520</div>
+  <div class="abstention">36</div>
+</span>
+
+  
+    
+    <a href="/voting/124945">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(140/696 * 100%)">140</div>
-  
-  
-    <div class="-" style="width: calc(520/696 * 100%)">520</div>
-  
-  
-    <div class="0" style="width: calc(36/696 * 100%)">36</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124945">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>17 bis. invite à revoir les traités et l’Acte électoral afin d’établir une condition de duo paritaire dans les candidats proposés par chaque parti politique européen ou chaque coalition de partis nationaux ou mouvements à la présidence de la Commission européenne;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">119</div>
+  <div class="against">562</div>
+  <div class="abstention">15</div>
+</span>
+
+  
+    
+    <a href="/voting/124946">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(119/696 * 100%)">119</div>
-  
-  
-    <div class="-" style="width: calc(562/696 * 100%)">562</div>
-  
-  
-    <div class="0" style="width: calc(15/696 * 100%)">15</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124946">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°12 | 
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       19. estime qu’il convient de réfléchir au processus d’attribution des portefeuilles au sein de la Commission, afin que ceux-ci soient distribués en fonction de l’expérience professionnelle, des priorités politiques et du respect des principes de bonne gouvernance, et non uniquement en fonction d’intérêts nationaux;
@@ -793,49 +986,51 @@
       <del> rappelle qu’au titre de l’article 17 du traité UE, le nombre de portefeuilles devrait répondre aux principes de la bonne gouvernance et non du nombre d’États membres; relève que la logique de l’article 17, paragraphe 5, du traité UE prévoit la fin de la pratique consistant à nommer un commissaire par État membre;</del>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">200</div>
+  <div class="against">467</div>
+  <div class="abstention">30</div>
+</span>
+
+  
+    
+    <a href="/voting/124947">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(200/697 * 100%)">200</div>
-  
-  
-    <div class="-" style="width: calc(467/697 * 100%)">467</div>
-  
-  
-    <div class="0" style="width: calc(30/697 * 100%)">30</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124947">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°16 | 
+        
+            <article id="16">
+            <header>📝 Amendement n°16 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       – des normes 
@@ -849,64 +1044,66 @@
       pour les droits de vote passifs et actifs dans les États membres, y compris une réflexion sur l’abaissement à 16 ans de l’âge de la majorité électorale dans tous les États membres,
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">75</div>
+  <div class="against">568</div>
+  <div class="abstention">53</div>
+</span>
+
+  
+    
+    <a href="/voting/124952">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(75/696 * 100%)">75</div>
-  
-  
-    <div class="-" style="width: calc(568/696 * 100%)">568</div>
-  
-  
-    <div class="0" style="width: calc(53/696 * 100%)">53</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124952">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°18 | 
+        
+            <article id="18">
+            <header>📝 Amendement n°18 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       29. 
   
 
   
-      <del>souligne le rôle essentiel </del>
+      <del>souligne le rôle essentiel</del>
   
 
   
-      <ins>relève que </ins>
+      <ins>relève que</ins>
   
 
   
-      des partis politiques, des mouvements politiques et des fondations politiques européens 
+       des partis politiques, des mouvements politiques et des fondations politiques européens 
   
 
   
@@ -921,68 +1118,74 @@
       <del> rappelle toutefois qu’en raison de mesures restrictives aux niveaux européen et national, les partis politiques européens ne peuvent pas participer pleinement aux campagnes électorales européennes; souligne, en outre, qu’ils ne sont pas autorisés à faire campagne lors de référendums portant sur des questions européennes telles que les accords commerciaux internationaux ou le référendum britannique de 2016 sur l’appartenance à l’Union européenne; demande la poursuite de l’harmonisation des législations nationales et européennes afin de garantir des conditions équitables dans l’ensemble de l’Union pour les élections européennes; propose de renforcer la visibilité des partis et mouvements politiques européens en apposant leurs noms et logos sur les bulletins de vote, et recommande de les faire figurer également sur tous les supports utilisés dans les campagnes électorales européennes;</del>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">162</div>
+  <div class="against">496</div>
+  <div class="abstention">39</div>
+</span>
+
+  
+    
+    <a href="/voting/124956">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(162/697 * 100%)">162</div>
-  
-  
-    <div class="-" style="width: calc(496/697 * 100%)">496</div>
-  
-  
-    <div class="0" style="width: calc(39/697 * 100%)">39</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124956">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°19 | 
+        
+            <article id="19">
+            <header>📝 Amendement n°19 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       31. propose de modifier le règlement européen et du Conseil relatif au statut et au financement des partis politiques européens et des fondations politiques européennes25 afin de 
   
 
   
-      <del>permettre aux partis politiques européens et aux fondations politiques européennes de participer pleinement à l’espace politique européen, de faire campagne et de pouvoir utiliser des financements à cette fin et se présenter aux élections européennes, de renforcer la transparence de leur financement,</del>
+      <del>permettre aux partis politiques européens et aux fondations politiques européennes de participer pleinement à l’espace politique européen, de faire campagne et de pouvoir utiliser des financements à cette fin et se présenter aux élections européennes, de renforcer la transparence de leur financement</del>
   
 
   
-      <ins>renforcer la transparence de leur financement, y compris lorsqu’il provient d’acteurs privés,</ins>
+      <ins>renforcer la transparence de leur financement, y compris lorsqu’il provient d’acteurs privés</ins>
   
 
   
-       notamment en ce qui concerne la gestion des fonds provenant du budget européen et lorsque les fonds proviennent de partis membres, et d’interdire les dons provenant de personnes morales publiques et privées de pays tiers; souligne néanmoins que les cotisations de 
+      , notamment en ce qui concerne la gestion des fonds provenant du budget européen et lorsque les fonds proviennent de partis membres, et d’interdire les dons provenant de personnes morales publiques et privées de pays tiers; souligne néanmoins que les cotisations de
   
 
   
-      <del> </del>
+      <del>  </del>
+  
+
+  
+      <ins> </ins>
   
 
   
@@ -997,136 +1200,140 @@
       paneuropéens, à condition que cela s’inscrive dans un cadre de transparence accrue;  ______________
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">120</div>
+  <div class="against">554</div>
+  <div class="abstention">23</div>
+</span>
+
+  
+    
+    <a href="/voting/124957">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(120/697 * 100%)">120</div>
-  
-  
-    <div class="-" style="width: calc(554/697 * 100%)">554</div>
-  
-  
-    <div class="0" style="width: calc(23/697 * 100%)">23</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124957">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°20 | 
+        
+            <article id="20">
+            <header>📝 Amendement n°20 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>31 bis. invite les États membres à adopter des mesures globales en matière de transparence pour les dons d’organisations privées aux partis politiques nationaux et à imposer des restrictions strictes aux sources de financement politique;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">183</div>
+  <div class="against">456</div>
+  <div class="abstention">57</div>
+</span>
+
+  
+    
+    <a href="/voting/124959">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(183/696 * 100%)">183</div>
-  
-  
-    <div class="-" style="width: calc(456/696 * 100%)">456</div>
-  
-  
-    <div class="0" style="width: calc(57/696 * 100%)">57</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124959">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°21 | 
+        
+            <article id="21">
+            <header>📝 Amendement n°21 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       32. 
   
 
   
-      <del>fait observer </del>
+      <del>fait observer</del>
   
 
   
-      <ins>note </ins>
+      <ins>note</ins>
   
 
   
-      que les programmes des partis européens n’ont toujours pas occupé une place significative dans le débat politique avant les élections de 2019; 
+       que les programmes des partis européens n’ont toujours pas occupé une place significative dans le débat politique avant les élections de 2019; 
   
 
   
-      <del>déplore vivement les cas où ces </del>
+      <del>déplore vivement les cas où ces</del>
   
 
   
-      <ins>relève que certains </ins>
+      <ins>relève que certains</ins>
   
 
   
-      débats, plutôt que de 
+       débats, plutôt que de 
   
 
   
-      <del>concerner </del>
+      <del>concerner</del>
   
 
   
-      <ins>porter sur </ins>
+      <ins>porter sur</ins>
   
 
   
-      des questions européennes, se sont 
+       des questions européennes, se sont 
   
 
   
@@ -1138,75 +1345,89 @@
   
 
   
-      <del>la dimension européenne des élections peut être considérablement renforcée </del>
+      <del>la dimension européenne des élections</del>
   
 
   
-      <ins>lien avec les politiques de l’Union peut être renforcé </ins>
+      <ins>lien avec les politiques de l’Union</ins>
   
 
   
-      en informant davantage les citoyens des décisions prises par l’Union et de l’incidence de celles-ci sur leur vie quotidienne;
+       peut être 
+  
+
+  
+      <del>considérablement renforcée</del>
+  
+
+  
+      <ins>renforcé</ins>
+  
+
+  
+       en informant davantage les citoyens des décisions prises par l’Union et de l’incidence de celles-ci sur leur vie quotidienne;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">142</div>
+  <div class="against">541</div>
+  <div class="abstention">14</div>
+</span>
+
+  
+    
+    <a href="/voting/124960">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(142/697 * 100%)">142</div>
-  
-  
-    <div class="-" style="width: calc(541/697 * 100%)">541</div>
-  
-  
-    <div class="0" style="width: calc(14/697 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124960">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°22 | 
+        
+            <article id="22">
+            <header>📝 Amendement n°22 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       34. appelle de ses vœux une stratégie coordonnée au niveau européen pour assurer 
   
 
   
-      <del>la </del>
+      <del>la</del>
   
 
   
-      <ins>une meilleure </ins>
+      <ins>une meilleure</ins>
   
 
   
-      couverture médiatique des élections européennes, notamment en 
+       couverture médiatique des élections européennes, notamment en 
   
 
   
@@ -1233,556 +1454,600 @@
       soient invités par les médias et à ce que les événements de la campagne soient couverts par ces derniers;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">99</div>
+  <div class="against">588</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/124962">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(99/697 * 100%)">99</div>
-  
-  
-    <div class="-" style="width: calc(588/697 * 100%)">588</div>
-  
-  
-    <div class="0" style="width: calc(10/697 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124962">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°23 | 
+        
+            <article id="23">
+            <header>📝 Amendement n°23 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>35 bis. prône la création d’une chaîne de télévision publique gratuite, à l’échelle de l’Union, consacrée à la retransmission en direct des travaux du Parlement européen dans toutes les langues officielles de l’Union, afin de sensibiliser le public aux travaux quotidiens du Parlement et de l’inciter à s’y intéresser; encourage vivement les chaînes publiques nationales à consacrer plus de temps d’antenne aux questions européennes aux heures de grande écoute, de manière régulière et en particulier à l’approche des élections européennes;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">263</div>
+  <div class="against">417</div>
+  <div class="abstention">17</div>
+</span>
+
+  
+    
+    <a href="/voting/124964">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(263/697 * 100%)">263</div>
-  
-  
-    <div class="-" style="width: calc(417/697 * 100%)">417</div>
-  
-  
-    <div class="0" style="width: calc(17/697 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124964">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°24 | 
+        
+            <article id="24">
+            <header>📝 Amendement n°24 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
-
-  
-      36. estime que le résultat des élections européennes est un signal clair en faveur d’une réflexion institutionnelle approfondie qui permettra aux citoyens, à la société civile et à leurs représentants de façonner l’avenir de l’Union; souligne que la pandémie de COVID-19 n’a fait qu’accroître l’urgence d’un processus de réforme institutionnelle au niveau européen; invite par conséquent tous les partenaires institutionnels à prendre leurs responsabilités et à organiser une conférence ambitieuse, interactive et inclusive sur l’avenir de l’Europe, qui soit ouverte aux citoyens, à la société civile et à leurs représentants, et qui renforce la démocratie représentative ainsi que la résilience de l’Union en produisant des résultats tangibles, ainsi qu’à donner suite aux conclusions de la Conférence, qui devrait apporter des changements significatifs aux politiques et à l’architecture institutionnelle de l’Union 
-  
+<p>
 
   
-      <del>et donner un nouvel élan au projet européen;</del>
+      36. estime que le résultat des élections européennes est un signal clair en faveur d’une réflexion institutionnelle approfondie qui permettra aux citoyens, à la société civile et à leurs représentants de façonner l’avenir de l’Union; souligne que la pandémie de COVID-19 n’a fait qu’accroître l’urgence d’un processus de réforme institutionnelle au niveau européen; invite par conséquent tous les partenaires institutionnels à prendre leurs responsabilités et à organiser une conférence ambitieuse, interactive et inclusive sur l’avenir de l’Europe, qui soit ouverte aux citoyens, à la société civile et à leurs représentants, et qui renforce la démocratie représentative ainsi que la résilience de l’Union en produisant des résultats tangibles, ainsi qu’à donner suite aux conclusions de la Conférence, qui devrait apporter des changements significatifs aux politiques et à l’architecture institutionnelle de l’Union et
   
 
   
-      <ins>et, de ce fait, modifier les traités européens si les peuples européens en décident ainsi;</ins>
+      <del> donner un nouvel élan au projet européen</del>
+  
+
+  
+      <ins>, de ce fait, modifier les traités européens si les peuples européens en décident ainsi</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">112</div>
+  <div class="against">501</div>
+  <div class="abstention">84</div>
+</span>
+
+  
+    
+    <a href="/voting/124966">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(112/697 * 100%)">112</div>
-  
-  
-    <div class="-" style="width: calc(501/697 * 100%)">501</div>
-  
-  
-    <div class="0" style="width: calc(84/697 * 100%)">84</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124966">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°25 | 
+        
+            <article id="25">
+            <header>📝 Amendement n°25 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
-
-  
-      G. considérant que le taux de participation plus élevé est également un signe que les citoyens européens veulent que l’Union agisse de façon rapide, démocratique et efficace dans des domaines importants tels que 
-  
+<p>
 
   
-      <ins>l’emploi, le coût de la vie, </ins>
+      G. considérant que le taux de participation plus élevé est également un signe que les citoyens européens veulent que l’Union agisse de façon rapide, démocratique et efficace dans des domaines importants tels que
   
 
   
-      le dumping social, le changement climatique, la migration, la protection des droits fondamentaux et la démocratisation;
+      <ins> l’emploi, le coût de la vie,</ins>
+  
+
+  
+       le dumping social, le changement climatique, la migration, la protection des droits fondamentaux et la démocratisation;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">545</div>
+  <div class="against">117</div>
+  <div class="abstention">35</div>
+</span>
+
+  
+    
+    <a href="/voting/124970">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(545/697 * 100%)">545</div>
-  
-  
-    <div class="-" style="width: calc(117/697 * 100%)">117</div>
-  
-  
-    <div class="0" style="width: calc(35/697 * 100%)">35</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124970">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°26 | 
+        
+            <article id="26">
+            <header>📝 Amendement n°26 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       W. considérant que des 
   
 
   
-      <del>propositions institutionnelles telles que les listes transnationales, comme le fait remarquer le Parlement dans sa résolution du 7 février 2018 sur la composition du Parlement européen, le fait de placer les partis et mouvements politiques européens plus au centre des élections européennes, la transformation du Conseil en une deuxième chambre législative de l’Union, comme cela est proposé dans sa résolution du 16 février 2017 sur les évolutions et adaptations possibles de la structure institutionnelle actuelle de l’Union européenne, ou encore l’instauration de la possibilité de former des coalitions de partis et mouvements politiques européens en amont des élections, contribueraient à transformer les élections européennes en une seule véritable élection </del>
+      <del>propositions</del>
   
 
   
-      <ins>réformes institutionnelles sont nécessaires pour parvenir à une véritable sphère politique </ins>
+      <ins>réformes</ins>
   
 
   
-      européenne, par opposition à l’addition de 27 
+       institutionnelles 
   
 
   
-      <del>élections nationales distinctes qu’elles sont </del>
+      <del>telles que les listes transnationales, comme le fait remarquer le Parlement dans sa résolution du 7 février 2018 sur la composition du Parlement européen, le fait de placer les partis et mouvements politiques européens plus au centre des élections européennes, la transformation du Conseil en une deuxième chambre législative de l’Union, comme cela est proposé dans sa résolution du 16 février 2017 sur les évolutions et adaptations possibles de la structure institutionnelle actuelle de l’Union européenne, ou encore l’instauration de la possibilité de former des coalitions de partis et mouvements politiques européens en amont des élections, contribueraient à transformer les élections européennes en une seule véritable élection</del>
   
 
   
-      <ins>débats nationaux distincts qu’elle est </ins>
+      <ins>sont nécessaires pour parvenir à une véritable sphère politique</ins>
   
 
   
-      aujourd’hui;
+       européenne, par opposition à l’addition de 27 
+  
+
+  
+      <del>élections nationales distinctes qu’elles sont</del>
+  
+
+  
+      <ins>débats nationaux distincts qu’elle est</ins>
+  
+
+  
+       aujourd’hui;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">245</div>
+  <div class="against">340</div>
+  <div class="abstention">111</div>
+</span>
+
+  
+    
+    <a href="/voting/124978">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(245/696 * 100%)">245</div>
-  
-  
-    <div class="-" style="width: calc(340/696 * 100%)">340</div>
-  
-  
-    <div class="0" style="width: calc(111/696 * 100%)">111</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124978">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°27 | 
+        
+            <article id="27">
+            <header>📝 Amendement n°27 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       B. considérant que l’enquête Eurobaromètre demandée par le Parlement à la suite des élections européennes de 2019 montre que 
   
 
   
-      <del>la situation économique et l’environnement étaient les deux principales priorités des électeurs, ce qui révèle clairement le souhait des </del>
+      <del>la situation économique et l’environnement étaient les deux principales priorités des électeurs, ce qui révèle clairement le souhait des</del>
   
 
   
-      <ins>les deux principales priorités des électeurs étaient la situation économique (44 %) et l’environnement (37 %), ce qui ne permet pas de conclure que les </ins>
+      <ins>les deux principales priorités des électeurs étaient la situation économique (44 %) et l’environnement (37 %), ce qui ne permet pas de conclure que les</ins>
   
 
   
-      citoyens qui ont participé aux élections européennes 
+       citoyens qui ont participé aux élections européennes 
   
 
   
-      <del>de </del>
+      <del>de</del>
   
 
   
-      <ins>souhaitent </ins>
+      <ins>souhaitent</ins>
   
 
   
-      voir l’Union européenne agir 
+       voir l’Union européenne agir 
   
 
   
-      <del>davantage </del>
+      <del>davantage</del>
   
 
   
-      <ins>plus ou moins </ins>
+      <ins>plus ou moins</ins>
   
 
   
-      dans ces deux domaines, pour lesquels la compétence est partagée entre l’Union et 
+       dans ces deux domaines, pour lesquels la compétence est partagée entre l’Union et
   
 
   
-      <ins> </ins>
+      <del> l’échelon national16</del>
   
 
   
-      l’échelon 
+      <ins>  l’échelon national, ou que l’action en la matière devrait être coordonnée ou harmonisée16</ins>
   
 
   
-      <del>national16;</del>
+      ;  _____________________  16 Eurobaromètre 91.5, «The 2019 Post- Electoral Survey – Have European Elections Entered a New Dimension
   
 
   
-      <ins>national, ou que l’action en la matière devrait être coordonnée ou harmonisée16;</ins>
+      <del>?»  («</del>
   
 
   
-        _____________________  16 Eurobaromètre 91.5, «The 2019 Post- Electoral Survey – Have European Elections Entered a New Dimension?» 
+      <ins>?» («</ins>
   
 
   
-      <del> </del>
-  
-
-  
-      («Les élections européennes de 2019: Les élections européennes sont-elles entrées dans une nouvelle dimension?»), Parlement européen, septembre 2019.
+      Les élections européennes de 2019: Les élections européennes sont-elles entrées dans une nouvelle dimension?»), Parlement européen, septembre 2019.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">143</div>
+  <div class="against">538</div>
+  <div class="abstention">14</div>
+</span>
+
+  
+    
+    <a href="/voting/124968">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(143/695 * 100%)">143</div>
-  
-  
-    <div class="-" style="width: calc(538/695 * 100%)">538</div>
-  
-  
-    <div class="0" style="width: calc(14/695 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124968">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°28 | 
+        
+            <article id="28">
+            <header>📝 Amendement n°28 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       I. considérant 
   
 
   
-      <del>que malgré une amélioration </del>
+      <del>que malgré</del>
   
 
   
-      <ins>qu’il y a une évolution </ins>
+      <ins>qu’il y a</ins>
   
 
   
-      en matière d’égalité entre les hommes et les femmes parmi les députés au Parlement européen (41 % de femmes en 2019, contre 37 % en 2014)
+       une 
   
 
   
-      <del>, la parité n’y est pas encore atteinte;</del>
+      <del>amélioration</del>
   
 
   
-      <ins>;</ins>
+      <ins>évolution</ins>
   
 
   
-       considérant que ces chiffres cachent des différences majeures entre les États 
+       en matière d’égalité entre les hommes et les femmes parmi les députés au Parlement européen (41 % de femmes en 2019, contre 37 % en 2014
   
 
   
-      <del>membres et de nombreux défis pour atteindre la parité entre les genres;</del>
+      <del>), la parité n’y est pas encore atteinte; </del>
   
 
   
-      <ins>membres;</ins>
+      <ins>); </ins>
+  
+
+  
+      considérant que ces chiffres cachent des différences majeures entre les États membres
+  
+
+  
+      <del> et de nombreux défis pour atteindre la parité entre les genres</del>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">136</div>
+  <div class="against">542</div>
+  <div class="abstention">17</div>
+</span>
+
+  
+    
+    <a href="/voting/124971">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(136/695 * 100%)">136</div>
-  
-  
-    <div class="-" style="width: calc(542/695 * 100%)">542</div>
-  
-  
-    <div class="0" style="width: calc(17/695 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124971">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°29 | 
+        
+            <article id="29">
+            <header>📝 Amendement n°29 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       K. considérant que 
   
 
   
-      <del>le Parlement européen doit être plus représentatif de la diversité et du multiculturalisme de l’Europe;</del>
+      <del>le Parlement européen doit être plus représentatif de la diversité et du multiculturalisme de l’Europe</del>
   
 
   
-      <ins>la composition du Parlement européen est déterminée par l’élection des représentants des citoyens au suffrage universel et égal;</ins>
+      <ins>la composition du Parlement européen est déterminée par l’élection des représentants des citoyens au suffrage universel et égal</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">162</div>
+  <div class="against">527</div>
+  <div class="abstention">6</div>
+</span>
+
+  
+    
+    <a href="/voting/124972">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(162/695 * 100%)">162</div>
-  
-  
-    <div class="-" style="width: calc(527/695 * 100%)">527</div>
-  
-  
-    <div class="0" style="width: calc(6/695 * 100%)">6</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124972">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°30 | 
+        
+            <article id="30">
+            <header>📝 Amendement n°30 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       T. considérant que le processus des têtes de liste 
   
 
   
-      <del>n’est pas encore pleinement exploité; considérant qu’il ne prévoit pas, entre autres, la possibilité pour les têtes de liste de se présenter comme candidats officiels, ce qui permettrait à tous les électeurs européens de choisir leur tête de liste préférée et de voter pour elle et de savoir qui sont les candidats à la présidence de la Commission et comment ils ont été choisis par les partis politiques européens;</del>
+      <del>n’est pas encore pleinement exploité; considérant qu’il ne prévoit pas, entre autres, la possibilité pour les têtes de liste de se présenter comme candidats officiels, ce qui permettrait à tous les électeurs européens de choisir leur tête de liste préférée et de voter pour elle et de savoir qui sont les candidats à la présidence de la Commission et comment ils ont été choisis par les partis politiques européens</del>
   
 
   
-      <ins>a manifestement échoué;</ins>
+      <ins>a manifestement échoué</ins>
   
 
   
-       considérant que le 
+      ; considérant que le 
   
 
   
-      <del>système </del>
+      <del>système</del>
   
 
   
-      <ins>processus </ins>
+      <ins>processus</ins>
   
 
   
-      des têtes de liste 
+       des têtes de liste 
   
 
   
@@ -1793,177 +2058,187 @@
       <ins>ne peut pas fonctionner puisqu’il n’y a pas de peuple européen qui pourrait servir de fondement à une démocratie à l’échelle de l’Union;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">109</div>
+  <div class="against">545</div>
+  <div class="abstention">41</div>
+</span>
+
+  
+    
+    <a href="/voting/124975">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(109/695 * 100%)">109</div>
-  
-  
-    <div class="-" style="width: calc(545/695 * 100%)">545</div>
-  
-  
-    <div class="0" style="width: calc(41/695 * 100%)">41</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124975">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°31 | 
+        
+            <article id="31">
+            <header>📝 Amendement n°31 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       V. considérant que seuls 8 % des personnes interrogées ont affirmé avoir voté lors des dernières élections en vue d’influer sur le choix du prochain président de la 
   
 
   
-      <del>Commission21,</del>
+      <del>Commission21</del>
   
 
   
-      <ins>Commission,</ins>
+      <ins>Commission</ins>
   
 
   
-       ce qui met en évidence 
+      , ce qui met en évidence 
   
 
   
-      <del>le besoin urgent de préciser et de rendre plus transparent le processus de sélection du président;</del>
+      <del>le besoin urgent de préciser et de rendre plus transparent le processus de sélection du président</del>
   
 
   
-      <ins>que le processus de sélection du président ne semble intéresser que 8 % des électeurs;</ins>
+      <ins>que le processus de sélection du président ne semble intéresser que 8 % des électeurs</ins>
   
 
   
-        __________________________
+      ;  __________________________
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">99</div>
+  <div class="against">577</div>
+  <div class="abstention">19</div>
+</span>
+
+  
+    
+    <a href="/voting/124976">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(99/695 * 100%)">99</div>
-  
-  
-    <div class="-" style="width: calc(577/695 * 100%)">577</div>
-  
-  
-    <div class="0" style="width: calc(19/695 * 100%)">19</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124976">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°32 | 
+        
+            <article id="32">
+            <header>📝 Amendement n°32 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       W. considérant que des propositions institutionnelles telles que les listes transnationales, comme le fait remarquer le Parlement dans sa résolution du 7 février 2018 sur la composition du Parlement européen, le fait de placer les partis et mouvements politiques européens plus au centre des élections européennes, la transformation du Conseil en une deuxième chambre législative de l’Union, comme cela est proposé dans sa résolution du 16 février 2017 sur les évolutions et adaptations possibles de la structure institutionnelle actuelle de l’Union européenne, ou encore l’instauration de la possibilité de former des coalitions de partis et mouvements politiques européens en amont des élections, 
   
 
   
-      <del>contribueraient à transformer les élections européennes en une seule véritable élection européenne, par opposition à l’addition de 27 élections nationales distinctes qu’elles sont aujourd’hui;</del>
+      <del>contribueraient à transformer les élections européennes en une seule véritable élection européenne, par opposition à l’addition de 27 élections nationales distinctes qu’elles sont aujourd’hui</del>
   
 
   
-      <ins>sont vouées à l’échec en raison de l’absence d’identité européenne commune, ainsi que du manque de soutien des citoyens des États membres de l’Union, comme le montrent clairement les résultats des partis politiques eurosceptiques aux élections;</ins>
+      <ins>sont vouées à l’échec en raison de l’absence d’identité européenne commune, ainsi que du manque de soutien des citoyens des États membres de l’Union, comme le montrent clairement les résultats des partis politiques eurosceptiques aux élections</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">92</div>
+  <div class="against">585</div>
+  <div class="abstention">18</div>
+</span>
+
+  
+    
+    <a href="/voting/124977">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(92/695 * 100%)">92</div>
-  
-  
-    <div class="-" style="width: calc(585/695 * 100%)">585</div>
-  
-  
-    <div class="0" style="width: calc(18/695 * 100%)">18</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124977">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°33 | 
+        
+            <article id="33">
+            <header>📝 Amendement n°33 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       AA. considérant que 
@@ -1978,71 +2253,73 @@
   
 
   
-      <del>lors des élections européennes mais pas seulement, et que leur visibilité devrait être renforcée; qu’en vertu de ce rôle important, les partis politiques européens et les fondations politiques européennes devraient garantir une transparence financière maximale concernant les fonds qu’ils gèrent, en particulier ceux qui proviennent du budget de l’Union européenne;</del>
+      <del>lors des élections européennes mais pas seulement, et que leur visibilité devrait être renforcée; qu’en vertu de ce rôle important, les partis politiques européens et les fondations politiques européennes devraient garantir une transparence financière maximale concernant les fonds qu’ils gèrent, en particulier ceux qui proviennent du budget de l’Union européenne</del>
   
 
   
-      <ins>ils ne doivent pas entraver les processus électoraux nationaux, qui sont la seule source crédible de légitimité politique lors des élections européennes;</ins>
+      <ins>ils ne doivent pas entraver les processus électoraux nationaux, qui sont la seule source crédible de légitimité politique lors des élections européennes</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">103</div>
+  <div class="against">552</div>
+  <div class="abstention">39</div>
+</span>
+
+  
+    
+    <a href="/voting/124980">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(103/694 * 100%)">103</div>
-  
-  
-    <div class="-" style="width: calc(552/694 * 100%)">552</div>
-  
-  
-    <div class="0" style="width: calc(39/694 * 100%)">39</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124980">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°34 | 
+        
+            <article id="34">
+            <header>📝 Amendement n°34 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      1. se félicite de la participation accrue aux élections européennes de 2019, qui montre qu’il est possible d’inverser la tendance à la baisse de la participation en Europe, mais regrette dans le même temps le taux d’abstention persistant et le fait que, dans l’ensemble de l’Union, près de la moitié des électeurs n’ont pas voté; reconnaît le rôle important qu’ont joué les campagnes menées par les institutions de l’Union et les organisations de la société 
-  
+<p>
 
   
-      <del>civile,</del>
+      1. se félicite de la participation accrue aux élections européennes de 2019, qui montre qu’il est possible d’inverser la tendance à la baisse de la participation en Europe, mais regrette dans le même temps le taux d’abstention persistant et le fait que, dans l’ensemble de l’Union, près de la moitié des électeurs n’ont pas voté; reconnaît le rôle important qu’ont joué les campagnes menées par les institutions de l’Union et les organisations de la société civile
   
 
   
-      <ins>civile pour accroître la participation des électeurs pro-européens,</ins>
+      <ins> pour accroître la participation des électeurs pro-européens</ins>
   
 
   
-       notamment la campagne 
+      , notamment la campagne 
   
 
   
@@ -2054,31 +2331,35 @@
   
 
   
-      <del>pour accroître la participation;</del>
+      <del>pour accroître la participation</del>
   
 
   
-      <ins>qui s’est construite autour d’un discours intégrationniste véhiculant un message fort selon lequel la cohésion européenne serait menacée par les eurosceptiques; considère que cette approche revient à mépriser et exclure plus encore ceux qui critiquent et condamnent la direction actuelle prise par l’Union et renforce l’image d’une Union non démocratique qui domine ses citoyens plutôt que d’être façonnée par eux et qui sert ses propres intérêts plutôt que les leurs;</ins>
+      <ins>qui s’est construite autour d’un discours intégrationniste véhiculant un message fort selon lequel la cohésion européenne serait menacée par les eurosceptiques; considère que cette approche revient à mépriser et exclure plus encore ceux qui critiquent et condamnent la direction actuelle prise par l’Union et renforce l’image d’une Union non démocratique qui domine ses citoyens plutôt que d’être façonnée par eux et qui sert ses propres intérêts plutôt que les leurs</ins>
   
 
   
-       souligne qu’il est nécessaire d’agir davantage aux niveaux local, régional, national et européen afin 
+      ; souligne qu’il est nécessaire d’agir davantage aux niveaux local, régional, national et européen afin 
   
 
   
-      <del>d’inciter les électeurs à participer </del>
+      <del>d’inciter les électeurs à participer</del>
   
 
   
-      <ins>de s’assurer que les électeurs et les non-votants prennent des décisions éclairées </ins>
+      <ins>de s’assurer que les électeurs et les non-votants prennent des décisions éclairées</ins>
   
 
   
-      aux élections européennes; estime que cette hausse de la 
+       aux élections européennes; estime que cette hausse de la
   
 
   
-      <ins>   </ins>
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
   
 
   
@@ -2086,919 +2367,1353 @@
   
 
   
-      <del>le cadre adéquat </del>
+      <del>le cadre adéquat</del>
   
 
   
-      <ins>l’un des cadres adéquats </ins>
+      <ins>l’un des cadres adéquats</ins>
   
 
   
-      pour relever les défis de notre époque, tels que l’économie et la croissance durables, le changement climatique et la protection environnementale, les inégalités sociales et les inégalités entre les hommes et les femmes, la révolution numérique, la promotion de la liberté, des droits de l’homme et de la démocratie, et la démographie, ainsi que les préoccupations géopolitiques comme la migration et la politique étrangère, la sécurité et le rôle de 
+       pour relever les défis de notre époque, tels que l’économie et la croissance durables, le changement climatique et la protection environnementale, les inégalités sociales et les inégalités entre les hommes et les femmes, la révolution numérique, la promotion de la liberté, des droits de l’homme et de la démocratie, et la démographie, ainsi que les préoccupations géopolitiques comme la migration et la politique étrangère, la sécurité et le rôle de
   
 
   
-      <del>   </del>
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
       l’Union dans le monde; invite dès lors toutes les institutions de l’Union à prendre leurs responsabilités et à agir conformément au mandat que leur ont confié, directement ou indirectement, les citoyens;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">88</div>
+  <div class="against">595</div>
+  <div class="abstention">12</div>
+</span>
+
+  
+    
+    <a href="/voting/124933">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(88/695 * 100%)">88</div>
-  
-  
-    <div class="-" style="width: calc(595/695 * 100%)">595</div>
-  
-  
-    <div class="0" style="width: calc(12/695 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124933">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°35 | 
+        
+            <article id="35">
+            <header>📝 Amendement n°35 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. déplore le caractère partisan de la campagne «Cette fois, je vote», qui s’est illustré par le lancement d’une plateforme singulière intitulée «Ce que l’Union fait pour moi», par le fait que les organisateurs de la campagne ont collaboré avec d’ardents défenseurs de l’intégration comme les Jeunes Européens fédéralistes, l’Union des fédéralistes européens et l’Union des organisations islamiques en Europe, qui entretient des liens manifestes avec les Frères musulmans, lesquels étaient dirigés pendant la période des élections européennes par la figure controversée de Youssef al-Qardaoui, et par la diffusion d’idées politiques visant à faire avancer l’intégration européenne, comme la création d’une armée européenne, la nomination d’un ministre européen des finances et le pouvoir de prélever directement des ressources propres sous la forme d’impôts européens;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">133</div>
+  <div class="against">559</div>
+  <div class="abstention">3</div>
+</span>
+
+  
+    
+    <a href="/voting/124934">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(133/695 * 100%)">133</div>
-  
-  
-    <div class="-" style="width: calc(559/695 * 100%)">559</div>
-  
-  
-    <div class="0" style="width: calc(3/695 * 100%)">3</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124934">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°36 | 
+        
+            <article id="36">
+            <header>📝 Amendement n°36 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 ter. relève qu’il disposait d’un budget de 36,3 millions d’euros pour sa campagne de communication sur les élections européennes de 2019; estime qu’il n’appartient pas à un parlement d’organiser la communication autour de ses propres élections; s’inquiète de cette violation du principe de neutralité des institutions de l’Union;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">88</div>
+  <div class="against">553</div>
+  <div class="abstention">54</div>
+</span>
+
+  
+    
+    <a href="/voting/124935">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(88/695 * 100%)">88</div>
-  
-  
-    <div class="-" style="width: calc(553/695 * 100%)">553</div>
-  
-  
-    <div class="0" style="width: calc(54/695 * 100%)">54</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124935">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°37 | 
+        
+            <article id="37">
+            <header>📝 Amendement n°37 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       4. 
   
 
   
-      <del>se félicite </del>
+      <del>se félicite</del>
   
 
   
-      <ins>prend acte </ins>
+      <ins>prend acte</ins>
   
 
   
-      du fait que l’équilibre entre les hommes et les femmes au Parlement 
+       du fait que l’équilibre entre les hommes et les femmes au Parlement 
   
 
   
-      <del>se soit </del>
+      <del>se soit</del>
   
 
   
-      <ins>s’est </ins>
+      <ins>s’est</ins>
   
 
   
-      amélioré après les dernières élections; 
+       amélioré après les dernières élections; 
   
 
   
-      <del>souligne toutefois que des améliorations sont encore possibles pour y atteindre un véritable équilibre entre les hommes et les femmes et reconnaît qu’il existe d’importantes différences entre les États membres, certains ayant élu plus de 50 % de femmes, tandis que d’autres n’en ont pas élu une seule à la fonction de député au Parlement européen; invite les États membres et les institutions de l’Union à tout mettre en œuvre pour encourager le principe de l’égalité entre les hommes et les femmes dans l’ensemble du processus électoral; souligne, dans ce contexte, l’importance que revêtent des listes des candidats respectant la parité entre les hommes et les femmes; invite la Commission, en coopération avec le Parlement et d’autres organes tels que la Commission de Venise, à formuler des recommandations aux États membres en vue d’accroître la représentation des femmes au Parlement européen; demande que soient présentées des listes de candidats comptant autant de femmes susceptibles d’être élues que d’hommes, par exemple au moyen de listes alternées ou de méthodes équivalentes, car de    nombreux États membres ne disposent pas d’une législation garantissant la parité politique aux élections;</del>
+      <del>souligne toutefois que des améliorations sont encore possibles pour y atteindre un véritable équilibre entre les hommes et les femmes et reconnaît qu’il existe d’importantes différences entre les États membres, certains ayant élu plus de 50 % de femmes, tandis que d’autres n’en ont pas élu une seule à</del>
   
 
   
-      <ins>estime que les électeurs votent pour des candidats sur la base de leurs compétences et non de leur sexe; est dès lors convaincu que l’équilibre entre les hommes et les femmes n’est pas un indicateur qualitatif valable de représentativité et de responsabilité vis- à-vis des électeurs;</ins>
+      <ins>estime que les électeurs votent pour des candidats sur</ins>
+  
+
+  
+       la 
+  
+
+  
+      <del>fonction</del>
+  
+
+  
+      <ins>base</ins>
+  
+
+  
+       de 
+  
+
+  
+      <del>député au Parlement européen; invite les États membres et les institutions de l’Union à tout mettre en œuvre pour encourager le principe de</del>
+  
+
+  
+      <ins>leurs compétences et non de leur sexe; est dès lors convaincu que</ins>
+  
+
+  
+       l’
+  
+
+  
+      <del>égalité</del>
+  
+
+  
+      <ins>équilibre</ins>
+  
+
+  
+       entre les hommes et les femmes 
+  
+
+  
+      <del>dans l’ensemble du processus électoral; souligne, dans ce contexte, l’importance que revêtent des listes des candidats respectant la parité entre les hommes et les femmes; invite la Commission, en coopération avec le Parlement et d’autres organes tels que la Commission de Venise, à formuler des recommandations aux États membres en vue d’accroître la représentation des femmes au Parlement européen; demande que soient présentées des listes de candidats comptant autant de femmes susceptibles d’être élues que d’hommes, par exemple au moyen de listes alternées ou de méthodes équivalentes, car de    nombreux États membres ne disposent pas d’une législation garantissant la parité politique aux élections</del>
+  
+
+  
+      <ins>n’est pas un indicateur qualitatif valable de représentativité et de responsabilité vis- à-vis des électeurs</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">136</div>
+  <div class="against">539</div>
+  <div class="abstention">20</div>
+</span>
+
+  
+    
+    <a href="/voting/124938">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(136/695 * 100%)">136</div>
-  
-  
-    <div class="-" style="width: calc(539/695 * 100%)">539</div>
-  
-  
-    <div class="0" style="width: calc(20/695 * 100%)">20</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124938">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°38 | 
+        
+            <article id="38">
+            <header>📝 Amendement n°38 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       6. relève que seuls quelques députés au Parlement européen appartiennent à des minorités ethniques, linguistiques ou autres22; estime que 
   
 
   
-      <del>la lutte contre le racisme et l’élimination de l’exclusion et de la discrimination est un devoir qui découle des valeurs de l’Union et de la Charte des droits fondamentaux de l’Union européenne; souligne qu’il est nécessaire d’agir davantage à l’échelon européen afin de renforcer encore l’inclusion dans les listes électorales et l’élection de membres de minorités et invite les États membres et les partis politiques qui participent aux élections européennes à adopter des mesures proactives afin de renforcer la représentation des groupes sous-  représentés;</del>
+      <del>la lutte contre le racisme et l’élimination de l’exclusion et de la discrimination est un devoir qui découle des valeurs de l’Union et de la Charte des droits fondamentaux de l’Union européenne; souligne qu’il est nécessaire d’agir davantage à l’échelon européen afin de renforcer encore l’inclusion dans les listes électorales et l’élection de membres de minorités et invite les États membres et les partis politiques qui participent aux élections européennes à adopter des mesures proactives afin de renforcer la représentation des groupes sous-  représentés;  ___________  22 Communication de la Commission du</del>
   
 
   
-      <ins>les candidats sont élus sur la base de leur mérite et de leurs idées et non sur la base des critères susmentionnés;          </ins>
+      <ins>les candidats sont élus sur la base de leur mérite et de leurs idées et non sur la base des critères susmentionnés;            ____________  22 Communication de la Commission du  19 juin 2020 intitulée «Rapport sur les</ins>
   
 
   
-        
-  
-
-  
-      <del>___________ </del>
-  
-
-  
-      <ins>____________ </ins>
-  
-
-  
-       22 Communication de la Commission du 
-  
-
-  
-      <ins> 19 juin 2020 intitulée «Rapport sur les </ins>
-  
-
-  
-      élections au Parlement européen de 2019»
+       élections au Parlement européen de 2019»
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">143</div>
+  <div class="against">547</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    
+    <a href="/voting/124941">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(143/695 * 100%)">143</div>
-  
-  
-    <div class="-" style="width: calc(547/695 * 100%)">547</div>
-  
-  
-    <div class="0" style="width: calc(5/695 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124941">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°39 | 
+        
+            <article id="39">
+            <header>📝 Amendement n°39 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       10. relève que les différentes cultures électorales se traduisent par une variété de systèmes électoraux; 
   
 
   
-      <del>recommande l’adoption de règles, de recommandations et d’orientations claires afin de garantir une évolution vers un droit électoral unifié et une égalité de vote pour les citoyens de l’Union, notamment en ce qui concerne le droit d’immatriculer un parti ou de se présenter à des élections, l’accès au scrutin, la présentation de candidats, l’accessibilité, le vote à distance ou par procuration et les jours d’élections;</del>
+      <del>recommande l’adoption de règles, de recommandations et d’orientations claires afin de garantir une évolution vers un droit électoral unifié et une égalité de vote pour les citoyens de l’Union, notamment en ce qui concerne le droit d’immatriculer un parti ou de se présenter à des élections, l’accès au scrutin, la présentation de candidats, l’accessibilité, le vote à distance ou par procuration et les jours d’élections</del>
   
 
   
-      <ins>salue cette diversité démocratique comme une force;</ins>
+      <ins>salue cette diversité démocratique comme une force</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">138</div>
+  <div class="against">537</div>
+  <div class="abstention">20</div>
+</span>
+
+  
+    
+    <a href="/voting/124942">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(138/695 * 100%)">138</div>
-  
-  
-    <div class="-" style="width: calc(537/695 * 100%)">537</div>
-  
-  
-    <div class="0" style="width: calc(20/695 * 100%)">20</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124942">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°40 | 
+        
+            <article id="40">
+            <header>📝 Amendement n°40 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       14. 
   
 
   
-      <del>est d’avis que le processus des têtes de liste n’a pas réussi à aboutir à un président de la Commission européenne à l’issue des élections de 2019, premièrement, parce qu’aucune amélioration n’a été apportée à l’application du principe des candidats tête de liste à la suite de l’expérience de 2014 et, deuxièmement, en raison du manque d’explications et de compréhension du processus par les citoyens de l’Union; entend réformer le processus démocratique pour le choix du président de la Commission avant les prochaines élections européennes de 2024; fait valoir, cependant, que l’élection de la présidence de la Commission dépend toujours de l’obtention du soutien d’une majorité de députés au Parlement européen, de manière à ce que les résultats de l’élection soient pleinement pris en compte, comme le prévoit le traité de Lisbonne;</del>
+      <del>est d’avis</del>
   
 
   
-      <ins>considère que le mécanisme des têtes de liste n’intéresse pas les citoyens et est contraire aux traités; rappelle que le Parlement a voté contre l’établissement de listes transnationales le 7 février 2018; constate que la pratique consistant à organiser des votes successifs jusqu’à l’obtention du résultat souhaité est désormais une tradition bien ancrée au sein de l’Union européenne; rejette catégoriquement l’établissement de listes transnationales et le mécanisme des têtes de liste;</ins>
+      <ins>considère</ins>
+  
+
+  
+       que le 
+  
+
+  
+      <del>processus</del>
+  
+
+  
+      <ins>mécanisme</ins>
+  
+
+  
+       des têtes de liste n’
+  
+
+  
+      <del>a</del>
+  
+
+  
+      <ins>intéresse</ins>
+  
+
+  
+       pas 
+  
+
+  
+      <del>réussi à aboutir à un président de la Commission européenne à l’issue des élections de 2019, premièrement, parce qu’aucune amélioration n’a été apportée à l’application du principe des candidats tête de liste à la suite de</del>
+  
+
+  
+      <ins>les citoyens et est contraire aux traités; rappelle que le Parlement a voté contre</ins>
+  
+
+  
+       l’
+  
+
+  
+      <del>expérience</del>
+  
+
+  
+      <ins>établissement</ins>
+  
+
+  
+       de 
+  
+
+  
+      <del>2014 et, deuxièmement, en raison du manque d’explications et de compréhension du processus par les citoyens de l’Union; entend réformer le processus démocratique pour le choix du président de la Commission avant les prochaines élections européennes de 2024; fait valoir, cependant, que l’élection de la présidence de la Commission dépend toujours de l’obtention du soutien d’une majorité de députés au Parlement européen, de manière à ce que les résultats de l’élection soient pleinement pris en compte, comme le prévoit le traité</del>
+  
+
+  
+      <ins>listes transnationales le 7 février 2018; constate que la pratique consistant à organiser des votes successifs jusqu’à l’obtention du résultat souhaité est désormais une tradition bien ancrée au sein de l’Union européenne; rejette catégoriquement l’établissement de listes transnationales et le mécanisme des têtes</ins>
+  
+
+  
+       de 
+  
+
+  
+      <del>Lisbonne</del>
+  
+
+  
+      <ins>liste</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">153</div>
+  <div class="against">528</div>
+  <div class="abstention">14</div>
+</span>
+
+  
+    
+    <a href="/voting/124944">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(153/695 * 100%)">153</div>
-  
-  
-    <div class="-" style="width: calc(528/695 * 100%)">528</div>
-  
-  
-    <div class="0" style="width: calc(14/695 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124944">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°41 | 
+        
+            <article id="41">
+            <header>📝 Amendement n°41 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       21. souligne que les modifications du droit primaire de l’Union proposées dans le présent rapport, qui témoignent du rôle politique accru de la Commission dans le cadre de l’Union, 
   
 
   
-      <del>devraient également comprendre la responsabilité individuelle et collective de la Commission envers le Parlement et le Conseil, ainsi que la transformation du Conseil en une deuxième chambre législative de l’Union;</del>
+      <del>devraient également comprendre la responsabilité individuelle et collective de la Commission envers le Parlement et le Conseil, ainsi que la transformation du Conseil en une deuxième chambre législative de l’Union</del>
   
 
   
-      <ins>supposent un changement des traités, qui doit faire l’objet de référendums dans les États membres afin de renforcer la légitimité publique;</ins>
+      <ins>supposent un changement des traités, qui doit faire l’objet de référendums dans les États membres afin de renforcer la légitimité publique</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">142</div>
+  <div class="against">543</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/124949">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(142/695 * 100%)">142</div>
-  
-  
-    <div class="-" style="width: calc(543/695 * 100%)">543</div>
-  
-  
-    <div class="0" style="width: calc(10/695 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124949">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°42 | 
+        
+            <article id="42">
+            <header>📝 Amendement n°42 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       26. 
   
 
   
-      <del>estime que les ingérences illicites dans les processus électoraux ne constituent pas un phénomène exclusivement étranger; estime que les algorithmes des réseaux sociaux favorisant certains contenus doivent être examinés et, si nécessaire, réglementés afin de garantir que les informations dont disposent les citoyens ne soient pas biaisées et que leur droit à l’information soit protégé pendant et après les campagnes électorales;</del>
+      <del>estime que les ingérences illicites dans les processus électoraux ne constituent pas un phénomène exclusivement étranger; estime que les algorithmes des réseaux sociaux favorisant certains contenus doivent être examinés et, si nécessaire, réglementés afin de garantir que les informations dont disposent les citoyens ne soient pas biaisées et que leur droit à l’information soit protégé pendant et après les campagnes électorales</del>
   
 
   
-      <ins>insiste sur le fait que les allégations d’ingérence devraient reposer sur des preuves solides et concordantes plutôt que sur des allégations non étayées, comme cela s’est produit après le référendum sur le Brexit; s’inquiète de l’utilisation parfois instrumentalisée d’expressions telles que «fausses informations», «discours haineux» et «désinformation» pour promouvoir la mise en place d’une législation qui met en péril la liberté d’expression et le droit à l’information; estime que la définition du cadre juridique de la liberté d’expression et la réglementation du contenu des plateformes doivent rester une prérogative nationale;</ins>
+      <ins>insiste sur le fait que les allégations d’ingérence devraient reposer sur des preuves solides et concordantes plutôt que sur des allégations non étayées, comme cela s’est produit après le référendum sur le Brexit; s’inquiète de l’utilisation parfois instrumentalisée d’expressions telles que «fausses informations», «discours haineux» et «désinformation» pour promouvoir la mise en place d’une législation qui met en péril la liberté d’expression et le droit à l’information; estime que la définition du cadre juridique de la liberté d’expression et la réglementation du contenu des plateformes doivent rester une prérogative nationale</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">93</div>
+  <div class="against">586</div>
+  <div class="abstention">16</div>
+</span>
+
+  
+    
+    <a href="/voting/124953">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(93/695 * 100%)">93</div>
-  
-  
-    <div class="-" style="width: calc(586/695 * 100%)">586</div>
-  
-  
-    <div class="0" style="width: calc(16/695 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124953">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°43 | 
+        
+            <article id="43">
+            <header>📝 Amendement n°43 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>27 bis. souligne le rôle très important des instituts de sondage dans la structuration des débats publics; note leur incapacité croissante à fournir une image réaliste de l’opinion publique lors des grandes élections; invite ces organismes à repenser leurs méthodologies et leurs méthodes de communication afin d’éviter la critique selon laquelle ils tentent d’influencer l’opinion publique plutôt que de l’analyser;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">93</div>
+  <div class="against">581</div>
+  <div class="abstention">21</div>
+</span>
+
+  
+    
+    <a href="/voting/124955">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(93/695 * 100%)">93</div>
-  
-  
-    <div class="-" style="width: calc(581/695 * 100%)">581</div>
-  
-  
-    <div class="0" style="width: calc(21/695 * 100%)">21</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124955">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°44 | 
+        
+            <article id="44">
+            <header>📝 Amendement n°44 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>31 bis. souligne néanmoins que le été modifié deux fois; s’inquiète de ce que la dernière modification est intervenue seulement deux mois avant les élections européennes de mai 2019 en contravention des recommandations de la Commission de Venise; attire l’attention sur le fait qu’une nouvelle révision ne serait pas de nature à renforcer la confiance des citoyens dans les partis et fondations politiques européens;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">94</div>
+  <div class="against">589</div>
+  <div class="abstention">12</div>
+</span>
+
+  
+    
+    <a href="/voting/124958">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(94/695 * 100%)">94</div>
-  
-  
-    <div class="-" style="width: calc(589/695 * 100%)">589</div>
-  
-  
-    <div class="0" style="width: calc(12/695 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124958">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°45 | 
+        
+            <article id="45">
+            <header>📝 Amendement n°45 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       34. 
   
 
   
-      <del>appelle de ses vœux une stratégie coordonnée au niveau européen pour assurer la couverture médiatique des élections européennes, notamment en veillant à ce que les programmes politiques des différentes forces politiques européennes fassent l’objet de débats, à ce que les candidats qui se présentent aux élections européennes dans différents États membres soient invités par les médias et à ce que les événements de la campagne soient couverts par ces derniers;</del>
+      <del>appelle de ses vœux une stratégie coordonnée au niveau européen pour assurer la couverture médiatique des élections européennes, notamment en veillant à ce que les programmes politiques des différentes forces politiques européennes fassent l’objet de débats, à ce que les candidats qui se présentent aux élections européennes dans différents États membres soient invités par les médias et à ce que les événements de la campagne soient couverts par ces derniers</del>
   
 
   
-      <ins>respecte l’indépendance des médias et s’abstient d’essayer d’établir leur programme à leur place;</ins>
+      <ins>respecte l’indépendance des médias et s’abstient d’essayer d’établir leur programme à leur place</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">108</div>
+  <div class="against">534</div>
+  <div class="abstention">53</div>
+</span>
+
+  
+    
+    <a href="/voting/124961">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(108/695 * 100%)">108</div>
-  
-  
-    <div class="-" style="width: calc(534/695 * 100%)">534</div>
-  
-  
-    <div class="0" style="width: calc(53/695 * 100%)">53</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124961">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°46 | 
+        
+            <article id="46">
+            <header>📝 Amendement n°46 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       35. 
   
 
   
-      <del>encourage les radiodiffuseurs publics à organiser et à diffuser des débats entre les têtes de liste et entre les candidats aux élections au Parlement européen dans le cadre de leur mandat d’information du public;</del>
+      <del>encourage les radiodiffuseurs publics à organiser et à diffuser des débats entre les têtes de liste et entre les candidats aux élections au Parlement européen dans le cadre de leur mandat d’information du public</del>
   
 
   
-      <ins>respecte l’indépendance des radiodiffuseurs publics et s’abstient de s’engager dans la définition des priorités politiques, d’interférer ou d’exercer quelque pression que ce soit;</ins>
+      <ins>respecte l’indépendance des radiodiffuseurs publics et s’abstient de s’engager dans la définition des priorités politiques, d’interférer ou d’exercer quelque pression que ce soit</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">104</div>
+  <div class="against">555</div>
+  <div class="abstention">36</div>
+</span>
+
+  
+    
+    <a href="/voting/124963">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(104/695 * 100%)">104</div>
-  
-  
-    <div class="-" style="width: calc(555/695 * 100%)">555</div>
-  
-  
-    <div class="0" style="width: calc(36/695 * 100%)">36</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124963">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°47 | 
+        
+            <article id="47">
+            <header>📝 Amendement n°47 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      36. estime que le résultat des élections européennes est un signal clair en faveur d’une réflexion institutionnelle approfondie qui permettra aux 
-  
+<p>
 
   
-      <del>citoyens, à la société civile et à leurs représentants de façonner l’avenir de l’Union; souligne que la pandémie de COVID-19 n’a fait qu’accroître l’urgence d’un processus de réforme institutionnelle au niveau européen; invite par conséquent tous les partenaires institutionnels à prendre leurs responsabilités et à organiser une conférence ambitieuse, interactive et inclusive sur l’avenir de l’Europe, qui soit ouverte aux citoyens, à la société civile et à leurs représentants, et qui renforce la démocratie représentative ainsi que la résilience de l’Union en produisant des résultats tangibles, ainsi qu’à donner suite aux conclusions de la Conférence, qui devrait apporter des changements significatifs aux politiques et à l’architecture institutionnelle de l’Union et donner un nouvel élan au projet européen;</del>
+      36. estime que le résultat des élections européennes est un signal clair en faveur d’une réflexion institutionnelle approfondie qui permettra aux citoyens
   
 
   
-      <ins>citoyens de façonner l’avenir de l’Union;</ins>
+      <del>, à la société civile et à leurs représentants de façonner l’avenir de l’Union; souligne que la pandémie de COVID-19 n’a fait qu’accroître l’urgence d’un processus de réforme institutionnelle au niveau européen; invite par conséquent tous les partenaires institutionnels à prendre leurs responsabilités et à organiser une conférence ambitieuse, interactive et inclusive sur l’avenir de l’Europe, qui soit ouverte aux citoyens, à la société civile et à leurs représentants, et qui renforce la démocratie représentative ainsi que la résilience de l’Union en produisant des résultats tangibles, ainsi qu’à donner suite aux conclusions de la Conférence, qui devrait apporter des changements significatifs aux politiques et à l’architecture institutionnelle de l’Union et donner un nouvel élan au projet européen</del>
+  
+
+  
+      <ins> de façonner l’avenir de l’Union</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">109</div>
+  <div class="against">546</div>
+  <div class="abstention">40</div>
+</span>
+
+  
+    
+    <a href="/voting/124965">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(109/695 * 100%)">109</div>
-  
-  
-    <div class="-" style="width: calc(546/695 * 100%)">546</div>
-  
-  
-    <div class="0" style="width: calc(40/695 * 100%)">40</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124965">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°48 | 
+        
+            <article id="48">
+            <header>📝 Amendement n°48 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>– vu l&#39;arrêt de la Cour de justice de l&#39;Union européenne (grande chambre) du (décision préjudicielle dans l&#39;affaire Junqueras i Vies),</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">180</div>
+  <div class="against">479</div>
+  <div class="abstention">37</div>
+</span>
+
+  
+    
+    <a href="/voting/124967">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(180/696 * 100%)">180</div>
-  
-  
-    <div class="-" style="width: calc(479/696 * 100%)">479</div>
-  
-  
-    <div class="0" style="width: calc(37/696 * 100%)">37</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124967">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°49 | 
+        
+            <article id="49">
+            <header>📝 Amendement n°49 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>3 bis. déplore le fait que M. Oriol Junqueras n’ait pas pu siéger comme il l’aurait dû, le Parlement européen restant donc incomplet; estime que, puisque le Parlement européen est le seul organe compétent pour lever l’immunité de ses députés, il doit agir, ce faisant, conformément à la Charte;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">139</div>
+  <div class="against">479</div>
+  <div class="abstention">76</div>
+</span>
+
+  
+    
+    <a href="/voting/124937">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(139/694 * 100%)">139</div>
-  
-  
-    <div class="-" style="width: calc(479/694 * 100%)">479</div>
-  
-  
-    <div class="0" style="width: calc(76/694 * 100%)">76</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124937">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
+        
     
+        
+        
+    
+        
+        
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – L’avertissement n’a vraisemblablement pas été entendu car ce rapport contient exactement les mêmes idées que celles défendues depuis 5 ans par les fédéralistes. Le bilan des élections est donc vite dressé : les fédéralistes ont raison sur tout et si des citoyens ont voté pour les groupes souverainistes c’est simplement qu’ils n’ont pas compris les enjeux. La feuille de route proposée ne bouge donc pas d’un iota : quelle que soit la question, la réponse est « plus d’Europe ».
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce texte.Ce texte affirme que les citoyens des Etats membres ont, par leur vote, témoigné de leur adhésion au projet européen en l&#39;état, ce qui est loin d&#39;être avéré.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            . – Le rapport Durand dresse un bilan des élections européennes de 2019 qui ont vu une hausse de la participation des jeunes malgré un taux d’abstention persistant. Il réaffirme les priorités politiques comme le coût de la vie, l’emploi, l’environnement et propose des réformes institutionnelles, en particulier celle du système des têtes de liste pour la présidence de la Commission européenne.Bien que ce rapport contienne des éléments de réflexion intéressants sur la participation des personnes handicapées, des sans-abris ou des personnes âgées se trouvant dans des centres, il plaide également pour l’abaissement de la majorité électorale à 16 ans et la création de listes transnationales qui seraient donc les enseignements à tirer du résultat de ces élections.À la différence du rapporteur qui fait des listes transnationales une prophétie autoréalisatrice, je pense que le message des électeurs est plus simple: l’Europe doit se concentrer et agir sur les priorités qui ont été identifiées dans ce texte, doit être plus lisible et visible pour les citoyens. Des réformes institutionnelles seront certes nécessaires mais je ne crois pas que la participation des jeunes signifie que nous devions toucher à la majorité électorale qui est une compétence nationale et orienter l’Europe…
+        </article>
+    
+        <article>
+            <div class="hidden">124770</div>
+            
+            <header><b>Jean-François JALKH</b> | Rassemblement national</header>
+            . – Dans ce rapport censé faire le bilan des élections européennes de 2019, M. Durand se laisse aller à ses considérations politiques personnelles davantage qu&#39;à une analyse objective du scrutin.Il y fait également des propositions afin de préparer le prochain renouvellement du Parlement européen en 2024, et ces propositions relèvent essentiellement d&#39;un renforcement d&#39;une intégration toujours plus centralisée.Mais y figurent également des mesures au caractère anti-démocratique : une sélection de candidats en fonction de leur origine ethnique afin d&#39;augmenter la représentation de certaines minorités, généralisation du vote à 16 ans dans tous les États, développement du recours à la publicité commerciale alors même qu&#39;elle est interdite en France, etc.J&#39;ai donc voté contre ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car les conclusions qu’il tire des dernières élections européennes sont fausses. Il aurait dû relever que le vote en masse des Européens pour les députés du groupe Identité et Démocratie auquel j’appartiens est le signe qu’ils ne veulent plus de cette Union. Au lieu de cela, le rapport s’acharne à critiquer les mouvements eurosceptiques populistes accusés de tous les maux de l’Europe, puis fait un pas de plus vers le fédéralisme en demandant la mise en place des listes transnationales.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Le rapport dresse un certain nombre de constats après les élections européennes de 2019 et propose des recommandations en vue de la préparation des élections de 2024. Le principal axe du rapport tient à la possibilité de présenter des listes transnationales, ce qui avait déjà été rejeté par le Parlement au terme d’un vote serré, puis par le Conseil. Le rapport demande à ce que l’idée, soutenue à travers le continent, soit rediscutée dans la prochaine Conférence sur l’avenir de l’Europe. L’autre point majeur est le mode de désignation du « Spitzenkandidat », c’est-à-dire du candidat tête de liste qui, si sa liste est majoritaire, est appelé à présider le Parlement. Le rapport demande à ce que les partis nationaux soient associés au processus qui, aujourd’hui, est du ressort exclusif des partis européens. Il aborde aussi la question de l’égalité entre hommes et femmes, préconisant qu’il ne soit plus possible à certains Etats membres de n’être représentés par aucune femme. Globalement en accord avec les constats et les recommandations, et considérant que des élections « nouvelle formule » pourraient renforcer le rôle démocratique du Parlement parmi les instances de l’Union, j’ai voté pour le rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            Ce rapport entend faire suite aux élections européennes de 2019 qui ont vu notamment le groupe politique ID devenir la première force d’opposition et le quatrième plus gros groupe du Parlement européen. Le rapport se félicite en effet de la hausse de la participation qui est évidemment selon lui un signe d’adhésion au projet européen. Pour le rapporteur, il est urgent de relancer la Conférence sur le futur de l’Europe et appelle à la relance de l’initiative européenne sur la loi électorale afin d’unifier les conditions des processus électoraux. Pour ce qui nous concerne, le rapport concède « le succès des mouvements eurosceptiques, populistes et nationalistes, qui menacent le projet d’intégration européenne » mais s’empresse de préciser que cela « doit être considéré comme un avertissement », nullement comme une aspiration sincère des citoyens. Le bilan des élections est donc vite dressé : les fédéralistes ont raison sur tout et si des citoyens ont voté pour les groupes souverainistes c’est simplement qu’ils n’ont pas compris les enjeux. La feuille de route proposée ne bouge donc pas d’un iota : quelle que soit la question, la réponse est « plus d’Europe ». Pour ces raisons, j’ai voté contre ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté contre cette résolution relative au bilan des élections européennes. Le texte formulait plusieurs propositions inacceptables, telles que la création de listes transnationales, ou encore la modification du mode de scrutin dans certains États membres au détriment de leur souveraineté. J’ai soutenu différents amendements, par exemple pour encourager la publication des statistiques relatives à l’appartenance socio-professionnelle des députés européens, ou pour dénoncer la prépondérance de la langue anglaise à l’oral et à l’écrit qui affecte considérablement le travail parlementaire et empêche par conséquent l&#39;expression d&#39;opinions diverses dans les langues des différents États membres.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            Le rapport DURAND dresse un bilan des élections européennes de 2019. Ce texte émet des recommandations concernant les priorités politiques, l&#39;accès de tous au vote, y compris les personnes en situation de handicap, les sans-abris et les personnes âgées ou la représentativité des députés européens. Il insiste sur la nécessité de réformer le processus des têtes de liste à la présidence de la Commission européenne et d&#39;accroitre la visibilité des partis et mouvements européens au cours des campagnes pour les élections européennes. Si le rapport contient des pistes de réflexion intéressantes, il propose, entre autres, la création de listes transnationales. Tout comme le groupe du Parti populaire européen, je suis totalement opposée à la création de listes transnationales car elles vont éloigner encore plus les citoyens du débat européen et accroître davantage l’abstention. Par conséquent, j’ai décidé de m’abstenir sur ce rapport pour le vote final.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter l’analyse du Parlement sur les dernières élections européennes de juin 2019. Il alerte sur le niveau d’abstention qui reste élevé malgré une diminution significative par rapport au précédent scrutin, déplore le manque de parité au sein du Parlement, recommande la création d’un organe indépendant de contrôle éthique des conflits d’intérêts et défend la nécessité d’affirmer le caractère et les enjeux européens de ces élections. J’ai donc voté pour ce texte qui va dans le sens d’un renforcement de la démocratie au sein des institutions européennes.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce rapport vise à émettre des recommandations pour préparer les prochaines élections européennes, c’est-à-dire celles qui se tiendront en 2024. Ma camarade Leila Chaibi était la rapportrice fictive du groupe de la GUE/NGL sur ce texte et a obtenu de nombreuses avancées, notamment pour améliorer l’accès au droit de vote des personnes sans-abri ou des personnes handicapées, faciliter la participation des mouvements ou coalitions de partis politiques nationaux aux élections européennes et notamment au processus devant conduire à la désignation de la présidence de la Commission européenne. Je me félicite de toutes ses avancées qui, si elles sont mises en œuvre, permettront de renforcer la participation populaire à des élections où se jouent de nombreuses questions majeures pour le futur des peuples européens. Je vote donc en sa faveur.
+        </article>
+    
+        <article>
+            <div class="hidden">197529</div>
+            
+            <header><b>Leila CHAIBI</b> | La France Insoumise</header>
+            Ce rapport fait le bilan des élections européennes passées et vise à faire des propositions pour les prochaines. En tant que rapporteure fictive, j’ai pu intégrer des mesures auxquelles je suis particulièrement attachée, le droit de vote dès 16 ans et la facilitation d’accès au vote, pour les personnes sans-abri et les personnes en situation de handicap. La question de la parité est centrale: nous demandons des listes alternées entre femmes et hommes. De plus, ce rapport propose de mettre à l’ordre du jour de la conférence sur l’avenir de l’Europe la mise en place de listes transnationales aux élections européennes. Il s’agirait, en plus des listes nationales habituelles, d’avoir des listes communes aux différents Etats membres sur lesquelles des députés seraient élu par famille politique. Les candidats chefs de file qui composeraient ces listes transnationales seraient candidats à la présidence de la Commission. Le rapport ne se positionne pas sur ces deux sujets mais propose qu’ils soient débattus lors de la conférence sur l’avenir de l’Europe. Afin d’injecter plus de démocratie et de transparence au sein de l’Union européenne et parce qu’un certain nombre des amendements que je proposais ont été intégrés, je vote pour ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197585</div>
+            
+            <header><b>Pierre KARLESKIND</b> | Renaissance</header>
+            e rapport d’initiative vise à faire le point sur les dernières élections européennes et à faire des recommandations pour améliorer le processus pour les prochaines élections européennes notamment via la Conférence sur l’avenir de l’Europe. J’ai soutenu ce rapport qui a pour objectif de fixer un cadre commun pour les élections européennes à l’ensemble des États membres en harmonisant l’âge minimum des électeurs, instaurant des listes alternées et abordant les listes transnationales et le processus des Spitzenkandidaten. Il faut que la démocratie européenne puisse évoluer dans les années à venir. Je tiens à saluer le travail de mon collègue Pascal Durand, rapporteur sur ce dossier.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Résolution affirmant que le message envoyé par les citoyens lors des dernières élections est celui d&#39;une adhésion toujours plus grande au projet fédéraliste européen.
+        </article>
+    
+        <article>
+            <div class="hidden">197576</div>
+            
+            <header><b>Sylvie BRUNET</b> | Mouvement Démocrate</header>
+            J’ai voté en faveur de notre rapport concernant le bilan des élections européennes de 2019. Ce rapport se félicite du taux de participation renforcé, notamment grâce à une participation accrue des jeunes, et de l’amélioration de l’égalité́ des genres au Parlement européen. Le rapport fait également état de recommandations pour améliorer davantage la parité par la mise en place de listes alternées, et pour encourager l’inclusion de candidats appartenant à des minorités. Il appelle à ce que le système des têtes de liste soit étudié dans le cadre de la Conférence sur l’avenir de l’Europe. Des pistes de réflexion sont abordées pour renforcer le processus électoral : des règles communes en matière de campagnes et de financement ; des dispositions relatives aux périodes d’absence des députés, par exemple en cas de congé parental ; de nouvelles méthodes de vote à distance pour les citoyens de l’Union. La question des listes transnationales est aussi soulevée pour renforcer le caractère européen de l’élection, ce qui est un point majeur pour moi. Enfin, le rapport relève l&#39;ingérence étrangère et les campagnes de désinformation pendant la campagne électorale, et demande à la Commission et aux États membres de lutter efficacement contre ces pratiques inadmissibles.
+        </article>
+    
+        <article>
+            <div class="hidden">197536</div>
+            
+            <header><b>Nathalie COLIN-OESTERLÉ</b> | Les centristes</header>
+            Je me suis abstenue sur le rapport Durand qui concerne le bilan des élections européennes 2019. Le rapport émet des recommandations concernant les priorités politiques, l&#39;accès de tous au vote, y compris les personnes handicapées, les sans-abris et les personnes âgées ou la représentativité des députés européens. Il insiste sur la nécessité de réformer le processus des têtes de liste à la présidence de la Commission européenne et d&#39;accroitre la visibilité des partis et mouvements européens au cours des campagnes pour les élections européennes. Toutefois, les références aux listes transnationales ont été conservées dans le rapport. Ce processus électoral éloignerait encore davantage les citoyens européens de leurs parlementaires européens alors même que dans le contexte actuel, chaque élu se doit d’avoir un ancrage territorial. La mise en place d’un organe éthique indépendant ou l’harmonisation de l’âge de la majorité électorale à seize ans tels qu’ils sont mentionnés dans le rapport me semblent problématiques.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté en faveur de ce rapport qui dresse un bilan des dernières élections européennes, dans l’objectif de pouvoir améliorer le processus électoral pour les prochaines échéances européennes. Bien que la participation ait augmenté significativement en 2019, elle reste insuffisante au regard des enjeux qu’elle sous-tend. Par ce rapport, le Parlement européen propose notamment d’abaisser le droit de vote à 16 ans de façon harmonisée partout en Europe, de faciliter le vote à distance, de renforcer la parité par des outils règlementaires ambitieux et harmonisés (au regard de ce qui est fait en France). Le rapport pointe aussi le dysfonctionnement du système des Spitzenkandidaten (le fait de place à la tête de la Commission européenne le chef de file du parti vainqueur aux élections des eurodéputés) et appelle à le réformer, en proposant que les citoyens européens puissent tous s’exprimer pour désigner le ou la futur(e) président(e) de la Commission européenne. De nombreuses autres propositions sont mentionnées dans ce rapport, et la future Conférence sur l’avenir de l’Europe doit permettre de prendre des décisions importantes à ce sujet, afin de renforcer la légitimité démocratique et la transparence des futures élections européennes.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            Ce rapport vise à dresser le bilan des élections européennes de 2019. Nous notons, avec satisfaction, le taux de participation accru, notamment chez les jeunes. Ce rapport émet également des recommandations pour permettre l’accès de tous au scrutin, notamment les personnes handicapées, les personnes sans-abri ou encore les personnes âgées. Si des réformes doivent être envisagées avant le prochain scrutin qui se tiendra en 2024, telles que le vote à distance dans certains cas spécifiques, je ne peux souscrire à l’ensemble des propositions que contient ce rapport. En effet, je me suis opposée à une harmonisation de l’âge de la majorité électorale à 16 ans dans l’ensemble des États membres de l’Union européenne. Je regrette également qu’il contienne des références sur la création des listes transnationales auxquelles je suis fermement opposée. Pour toutes ces raisons, je n’ai pu apporter mon soutien à ce rapport et me suis abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre cette résolution car elle affirme, en dehors de tout principe de réalité, que le message envoyé par les citoyens lors des dernières élections européennes est celui d’une adhésion toujours plus grande au projet fédéraliste européen.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            J’ai voté Contre cette résolution, qui illustre bien l’aveuglement idéologique dans lequel s’enfoncent les institutions européennes. En effet, faisant fi du désir d’alternative politique forte exprimé par les citoyens de nombreux pays européens lors des élections de 2019, cette résolution affirme que le message envoyé par les citoyens est celui d’une adhésion toujours plus grande au projet fédéraliste européen.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Le rapport est complètement déconnecté des réalités et des attentes des peuples européens. Les élections européennes ont été un véritable plébiscite en faveur de la souveraineté nationale et du rejet du projet fédéraliste. Les fédéralistes font les sourdes oreilles en proposant une feuille de route qui ne bouge pas d’un iota avec leurs programmes précédents. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Pour le rapporteur, il est urgent de relancer la Conférence sur le futur de l’Europe afin de mettre enfin en place les listes transnationales et le système des Spitzenkandidaten. Il appelle aussi à la relance de l’initiative européenne sur la loi électorale afin d’unifier les conditions dans lesquelles se déroulent les 27 processus électoraux. À ce titre, les ingérences étrangères et la désinformation sont brandies comme des menaces qui appellent de nouvelles règles sur le contenu des plateformes afin de s’assurer que « que les informations dont disposent les citoyens ne soient pas biaisées ». Le rapport se félicite la hausse de la participation qui est évidemment selon lui un signe d’adhésion au projet européen mais aussi une volonté claire de mettre en avant les problématiques à la mode : l’économie et la croissance durables, le changement climatique et la protection environnementale, les inégalités sociales et les inégalités entre les hommes et les femmes, la révolution numérique, la promotion de la liberté, des droits de l’homme et de la démocratie. J’ai voté contre ce rapport car quelle que soit la question, la réponse est toujours « plus d’Europe ».
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Ce rapport entend faire suite aux élections européennes de 2019 qui ont vu notamment le groupe politique ID devenir la première force d’opposition et le quatrième plus gros groupe du Parlement européen. Le rapport se félicite tout d’abord de la hausse de la participation qui est évidemment selon lui un signe d’adhésion au projet européen mais aussi une volonté claire de mettre en avant les problématiques à la mode. Enfin, pour ce qui nous concerne, le rapport concède « le succès des mouvements eurosceptiques, populistes et nationalistes, qui menacent le projet d’intégration européenne » mais s’empresse de préciser que cela « doit être considéré comme un avertissement », nullement comme une aspiration sincère des citoyens.Face à la mauvaise foi de ce rapport, j’ai voté contre ce texte et notamment la feuille de route qui est proposée.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport emblématique de l’incapacité des eurofédéralistes à remettre en cause leur logiciel, politique et idéologique, pourtant aujourd’hui rejeté par un nombre croissant d’Européens. Pourtant ce rapport analyse la hausse de la participation au dernier scrutin européen comme un signe d’adhésion au projet bruxellois et à ses problématiques progressistes. Au nom de sa philosophie inclusive, le rapporteur dit notamment souhaiter une relance de la Conférence sur le futur de l’Europe pour mettre en place des listes transnationales et le système des Spitzenkandidaten (candidats têtes de liste qui auraient vocation à diriger la Commission européenne en cas de victoire…). Sans surprise, ont été ajoutées des considérations sur les ingérences étrangères et la désinformation qui appelleraient à la mise en place de nouvelles règles de contrôle du contenu des plateformes. Quant au « succès des mouvements eurosceptiques, populistes et nationalistes, qui menacent le projet d’intégration européenne », il est appréhendé comme un simple « avertissement » et non comme le désir profond et résolu d’un changement de cap.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            Le 25 novembre dernier, le Parlement européen a adopté le rapport Durand sur le bilan des élections européennes.Bien loin de renforcer la démocratie européenne comme il le prétend, ce rapport dresse un constat mensonger des élections européennes de 2019 en affirmant que le record de participation (50,66 % dans toute l’UE) s’explique par l’adhésion des électeurs à l’intégration européenne !C’est évidemment faux puisque les partis souverainistes et patriotiques sont arrivés en tête dans plusieurs pays comme en France, en Italie, en Pologne ou en Hongrie.Ce rapport propose par ailleurs de renforcer le rôle de la Commission au détriment de celui du Conseil, expression de la volonté des Etats, dans le but de concentrer toujours plus de pouvoirs dans les mains de la technocratie européenne.J’ai voté contre cette fuite en avant qui ne reflète pas la volonté des peuples européens.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-    
-    
 
+    <section>
     
     
-
+        <article>
+            <div class="hidden">124693</div>
+            
+            <header><b>Pascal DURAND</b> | Renaissance</header>
+            
+                <p>J’aimerais quand même commencer par jeter un petit regard dans le rétroviseur. D’où venons-nous? Nous sommes en 2019 et nous parlons d’élection au suffrage universel direct du Parlement européen. Nous sommes 40 ans après la création de ce Parlement. Nous sommes à la naissance quasiment de cette démocratie parlementaire en Europe. Gardons tous bien à l’esprit que nous avançons, que notre démocratie progresse, et qu’à l’origine ce Parlement n’était pas élu au suffrage universel et était composé de représentants des parlements nationaux. Nous avons donc franchi une étape très importante et cette élection est venue conforter cette progression.</p>
+            
+                <p>Le premier élément que je souhaite évidemment souligner, c’est celui de la participation. Tout le monde s’est réjoui de l’augmentation de la participation. Nous enregistrons plus de 50 % de participation à ces élections européennes et, lorsque j’entends un peu partout que l’Europe ne représente pas directement, etc., je dis que ce sont plus de 200 millions, je dis bien 200 millions de citoyennes et de citoyens européens, qui ont voté aux élections européennes. Nous avons tous eu, il y a quelques jours ou quelques semaines, des cernes sous les yeux, à regarder des chaînes américaines pour essayer de connaître l’issue des élections aux États-Unis. Nous comptons 30 millions d’électeurs de plus qui élisent notre Parlement. Ne soyons donc pas modestes: acceptons le fait que la démocratie européenne est forte, qu’elle progresse et que, oui, les citoyennes et les citoyens s’intéressent à son devenir, c’est très important.</p>
+            
+                <p>C’est très important également de relever que cette participation a augmenté, parce que les jeunes se sont approprié cette élection. Et si les jeunes se sont approprié cette élection – c’est le point sur lequel je veux insister et je me tourne évidemment vers les opposants à l’Union européenne –, c’est parce qu’ils considèrent que l’échelon européen est le bon levier pour répondre aux difficultés et aux crises, mais également pour aborder les enjeux à venir. Sur les questions de climat, sur les questions de sécurité, sur les questions de démocratie et de droits humains, sur les questions sociales, la jeunesse de l’Europe a compris que nous n’arriverions à résoudre ces questions-là qu’à travers notre puissance continentale et pas simplement dans les replis identitaires et nationaux. Et ça, c’est effectivement très important.</p>
+            
+                <p>Pour autant, cette participation n’est pas égale partout et il faut effectivement relever le fait que dans certains États, la participation reste encore très faible. Il faut améliorer cette situation, il faut continuer à communiquer, il faut faire en sorte que la démocratie progresse de manière uniforme dans toute l’Union européenne.</p>
+            
+                <p>Mais, je l’ai dit, nous avons des bonnes nouvelles. Nous en avons aussi de moins bonnes. Je l’ai dit, certains pays ne se mobilisent pas autour de l’élection européenne, mais nous avons également toute une partie de la population européenne qui n’arrive pas à participer à ces élections. Je parle des personnes les plus faibles, des personnes en situation de handicap. Dans certains pays, c’est extrêmement compliqué de voter. Je parle de certaines communautés qui n’arrivent pas à accéder librement au droit de vote dans certains pays européens, cela est inacceptable, cela doit changer.</p>
+            
+                <p>Nous avons également à constater le manque de diversité dans notre Parlement. Bien sûr qu’il faut faire des progrès sur cette question-là, il y a toute une partie de la population européenne qui n’est pas représentée au sein de nos institutions, cela doit changer. </p>
+            
+                <p>Cela doit également changer pour la diversité et l’égalité des genres. Oui, il y a une progression, nous sommes passés de 37 à 41 % de femmes dans ce Parlement. Oui, c’est une progression, mais 41 % c’est loin encore des 51 ou 52 % que nous devrions atteindre. Donc ça, c’est un objectif, il faut le faire. Nous devons effectivement arriver à ce que ce Parlement ait une parité réelle, effective, entre les femmes et les hommes. </p>
+            
+                <p>Et puis, analyser une situation, c’est bien, mais je terminerai en disant que nous devons aussi faire des propositions. J’ai parlé des bonnes nouvelles, mais il y en a une mauvaise: le principe du candidat tête de liste n’a, en l’état, pas été compris par les électeurs. À peine 8 % des électrices et des électeurs européens ont dit que cette question de la candidate ou du candidat tête de liste était au cœur de leur vote. Nous devons donc progresser, réfléchir à cette capacité que la démocratie parlementaire peut mettre en œuvre pour que les citoyennes et les citoyens européens votent effectivement pour une candidate ou un candidat européen. Et là, nous devons avoir le courage de débattre de l’ensemble des sujets comme les listes transnationales, la circonscription unique, n’est-ce pas Madame Jourová, c’est dans votre portefeuille, ce sont des sujets dont nous devons débattre sans peur, sans crainte, tout simplement parce qu’ils sont au cœur de la démocratie européenne.</p>
+            
+                <p>Il y a bien d’autres sujets, Monsieur le Président, mais je m’arrêterai là. Nous avons progressé, nous avons encore des progrès à accomplir.</p>
+            
+        </article>
     
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            
+                <p> – Monsieur le Président, le rapport Durand dresse un étrange bilan des élections européennes de 2019.</p>
+            
+                <p>Je ne suis d’accord avec lui que sur un point. Comme lui, je me félicite de la participation accrue aux élections, qui constitue un signe encourageant de regain d’intérêt pour le processus démocratique.</p>
+            
+                <p>Mais je suis en désaccord sur l’explication de ce regain d’intérêt. En France, si les électeurs se sont déplacés, ce n’est pas parce que la coûteuse et inutile campagne de l’Union intitulée «cette fois, je vote» a porté ses fruits, c’est parce qu’ils se sont passionnés pour la lutte que se sont livrée les deux listes principales. Celle de Jordan Bardella et du Rassemblement national ayant finalement triomphé de celle du président de la République, Emmanuel Macron.</p>
+            
+                <p>Quant à tirer de ce regain de participation la leçon d’une adhésion des citoyens à l’Union, c’est très présomptueux, car au lendemain de la révolte des gilets jaunes, beaucoup d’électeurs ont au contraire voté pour manifester leur défiance envers l’ultralibéralisme de l’Union, qu’ils jugent, à juste titre, coresponsable de leur malheur.</p>
+            
+                <p>Circonstance aggravante, le rapport Durand ne se contente pas de dresser le bilan des élections, il en prend prétexte pour tracer le contour des réformes qui permettraient, selon lui, d’améliorer l’Union. Mais le rêve qu’il décrit fait figure, à mes yeux, de cauchemar.</p>
+            
+                <p>Le rapport veut en effet renforcer le rôle politique de la Commission, notamment à travers la consécration du système des candidats têtes de liste. À l’inverse, je voudrais plutôt retirer tout rôle politique à la Commission en transformant celle-ci en un simple secrétariat technique permanent. Le rapport veut marginaliser le Conseil en le transformant en une deuxième chambre, c’est-à-dire en une sorte de Sénat. À l’inverse, je voudrais plutôt renforcer son rôle en lui confiant l’initiative législative. Le rapport veut transformer le Parlement européen en représentant d’un introuvable peuple européen avec listes transnationales, droit électoral unifié et création d’une autorité électorale européenne. À l’inverse, je voudrais plutôt qu’on réfléchisse aux moyens de le rendre plus représentatif des nations européennes.</p>
+            
+                <p>En conclusion, je m’oppose au rapport Durand, parce qu’il veut créer un empire supranational, alors que je défends le projet d’une Europe des nations.</p>
+            
+        </article>
     
-
+        <article>
+            <div class="hidden">197529</div>
+            
+            <header><b>Leila CHAIBI</b> | La France Insoumise</header>
+            
+                <p>Je voulais vous parler de ma petite cousine Clotilde, qui a 16 ans. Elle a participé à toutes les manifs climat depuis un an et aux repas de famille, on ne peut pas l’arrêter quand elle commence à essayer de convaincre toute la famille de l’urgence écologique. Clotilde a un avis bien tranché sur la société, mais, pourtant, quand c’est le jour des élections, elle n’a pas le droit de s’exprimer dans les urnes.</p>
+            
+                <p>Je voulais vous parler aussi de Lorenzo, qui a 16 ans. Il est italien. Il a le droit d’ouvrir son propre magasin de vêtements, il a même le droit d’être patron d’un restaurant. En revanche, voter c’est </p>
+            
+                <p>Je voulais vous parler de Tobias, 16 ans. Il est allemand. Il a droit d’acheter de la bière, il a droit de sortir en discothèque avec ses amis de 16 ans, mais il n’a pas le droit de voter.</p>
+            
+                <p>Je vous parlerai aussi de Carmen, qui a 16 ans. Elle est espagnole. Elle travaille 40 heures par semaine et elle a le droit de se marier. Pourtant, elle n’a pas le droit de voter, elle non plus.</p>
+            
+                <p>Clotilde, Lorenzo, Tobias, Carmen et puis la majorité des jeunes européens de 16 ans s’engagent. Ils s’engagent pour le climat, pour l’égalité entre les femmes et les hommes, mais ils n’ont pas le droit de participer à la démocratie, ils n’ont pas le droit d’élire les représentants qui décideront de comment doit s’organiser la vie dans la société dans laquelle ils et elles évoluent.</p>
+            
+                <p>Vous savez, avant que les femmes aient le droit de vote, avant que les moins de 21 ans aient le droit de vote, on disait d’elles, on disait d’eux, pour justifier leur exclusion de la vie politique, que leur trop faible maturité d’esprit ne pouvait leur permettre de prendre une part intelligente à la conduite des affaires publiques.</p>
+            
+                <p>Cela vous paraît obsolète quand on dit cela, pourtant ce sont les mêmes arguments qu’on entend ici à propos du droit de vote à 16 ans. Alors je voudrais demander à ceux qui s’opposent à l’idée du droit de vote à 16 ans, est-ce que, dans le fond, vous n’avez pas peur de vous retrouver avec un hémicycle transformé du fait de l’arrivée dans les urnes, du fait de l’arrivée dans les bureaux de vote de Clotilde, de Lorenzo, de Tobias, de Carmen et de tous les autres?</p>
+            
+                <p>Je crois, au contraire, qu’il est grand temps de rétablir l’équilibre générationnel en rajeunissant le corps électoral pour mettre en adéquation le poids politique de la jeunesse avec son poids dans la société.</p>
+            
+        </article>
     
+        <article>
+            <div class="hidden">204419</div>
+            
+            <header><b>Sandro GOZI</b> | Renaissance</header>
+            
+                <p>Il y a cependant une remarque majeure: ces élections européennes sont encore trop peu européennes. Malgré un taux de participation plus élevé, les débats restent coincés dans un enclos purement national dans les 27 pays membres. Européanisons ces élections! Je dirais: remettons l’église au milieu du village.</p>
+            
+                <p>Pour une démocratie européenne accomplie, il est essentiel de promouvoir un véritable espace politique transnational. Il n’existe aujourd’hui aucun véritable mouvement politique européen. Pourtant, imaginez l’impact en termes de force et de légitimité. Rappelons que c’est avant tout pour résoudre ces problèmes que l’idée des listes transnationales est née. Favorisons un débat véritablement européen à travers l’émergence de mouvements politiques transnationaux présentant des visions et programmes sur l’Union et élus directement par les citoyens. Soyons ambitieux pour mai 2024 et doublons les choix démocratiques des citoyens. Ces derniers pourront et devront voter pour une liste nationale et une liste transnationale. C’est une question de légitimité, c’est une question de démocratie, c’est une question de visibilité pour que les citoyens comprennent bien ce qu’ils sont en train de faire.</p>
+            
+                <p>Donc, Monsieur le Président, arrêtons de faire semblant, nous voulons avoir des candidats têtes de liste pour la présidence de la Commission européenne. Donc, la logique voudrait que, pour atteindre cet objectif, il soit indispensable d’avoir des listes. L’accord conclu au début de cette législature prévoyait de travailler sur l’amélioration du système des têtes de liste, mais aussi de mettre en œuvre les listes transnationales. Les deux vont de pair: pas de tête de liste, sans liste, je dirais.</p>
+            
+                <p>Notre temps est compté: mettre en œuvre la réforme de la loi électorale dans les 27 pays de l’Union prendra du temps, nous devons la lancer dès à présent afin de la terminer dans les délais pour 2024 pour une vraie démocratie européenne et transnationale.</p>
+            
+        </article>
     
-
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2088(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0211_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-11-23-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

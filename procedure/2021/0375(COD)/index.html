@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Statut et financement des fondations politiques européennes et des partis politiques européens</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,93 +22,43 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Statut et financement des fondations politiques européennes et des partis politiques européens</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
-    <article>
-    <header>👍 Adoption du texte | 
-
-✅️ Adopté
-
-</header>
-    
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
-        <section>
-
-<div class="votes ">
-  
-    <div class="+" style="width: calc(392/567 * 100%)">392</div>
-  
-  
-    <div class="-" style="width: calc(119/567 * 100%)">119</div>
-  
-  
-    <div class="0" style="width: calc(56/567 * 100%)">56</div>
-  
-</div>
-</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
-        <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
-        
-        
-            <section>
-
-
-
-<div class="votes">
-  
-    <div class="+" style="width: calc(37/70 * 100%)">37</div>
-  
-  
-    <div class="-" style="width: calc(19/70 * 100%)">19</div>
-  
-  
-    <div class="0" style="width: calc(14/70 * 100%)">14</div>
-  
-</div>
- 
-</section>
-            <a href="/voting/147411">🗳 Voir le détail du vote</a>
-        
-    
-    </article>
 
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Etat et évolution de l&#39;Union</li>
-        
     
         
         
@@ -121,7 +72,7 @@
     
         
         
-            <li>Cohésion économique, sociale et territoriale</li>
+            <li>Etat et évolution de l&#39;Union</li>
         
     
         
@@ -131,7 +82,7 @@
     
         
         
-            <li>Institutions de l&#39;Union</li>
+            <li>Agences et organes de l&#39;Union</li>
         
     
         
@@ -141,12 +92,12 @@
     
         
         
-            <li>Agences et organes de l&#39;Union</li>
+            <li>Politique sociale, charte et protocole social</li>
         
     
         
         
-            <li>Politique sociale, charte et protocole social</li>
+            <li>Institutions de l&#39;Union</li>
         
     
         
@@ -154,73 +105,217 @@
             <li>Droits politiques, vote et éligibilité</li>
         
     
+        
+        
+            <li>Cohésion économique, sociale et territoriale</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/0375(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0223_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-09-15-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      (39) Afin de pouvoir atteindre leurs membres et leurs circonscriptions dans l’ensemble de l’Union, les partis politiques européens devraient avoir le droit d’utiliser leur financement pour des campagnes politiques transfrontiè
-  
+<p>
 
   
-      <del>res .</del>
+      (39) Afin de pouvoir atteindre leurs membres et leurs circonscriptions dans l’ensemble de l’Union, les partis politiques européens devraient avoir le droit d’utiliser leur financement pour des campagnes politiques transfrontières
   
 
   
-      <ins>res, telles que des campagnes référendaires et des campagnes menées dans le contexte d’élections au Parlement européen, y compris en établissant et en promouvant des listes transnationales de candidats à ces élections.</ins>
+      <del> . </del>
   
 
   
-       Le financement et la limitation des dépenses électorales pour les partis et les candidats en vue de ces campagnes devraient être régis par les règles applicables dans chaque État membre.
+      <ins>, telles que des campagnes référendaires et des campagnes menées dans le contexte d’élections au Parlement européen, y compris en établissant et en promouvant des listes transnationales de candidats à ces élections. </ins>
+  
+
+  
+      Le financement et la limitation des dépenses électorales pour les partis et les candidats en vue de ces campagnes devraient être régis par les règles applicables dans chaque État membre.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       (41) Les partis politiques européens 
   
 
   
-      <del>ne devraient pas financer, directement ou indirectement, d’autres partis politiques, et en particulier des partis ou des candidats nationaux. Les fondations politiques européennes ne devraient pas financer, directement ou indirectement, des partis politiques ou des candidats européens ou </del>
+      <del>ne devraient pas financer, directement ou indirectement, d’autres partis politiques, et en particulier des partis ou des candidats nationaux. Les fondations politiques européennes ne devraient pas financer, directement ou indirectement, </del>
   
 
   
-      <ins>et les fondations politiques européennes ne devraient pas utiliser le financement reçu du budget général de l’Union européenne pour le financement direct ou indirect d’autres entités politiques, et en particulier des partis ou des candidats </ins>
+      <ins>et les fondations politiques européennes ne devraient pas utiliser le financement reçu du budget général de l’Union européenne pour le financement direct ou indirect d’autres entités politiques, et en particulier </ins>
+  
+
+  
+      des partis 
+  
+
+  
+      <del>politiques </del>
+  
+
+  
+      ou des candidats 
+  
+
+  
+      <del>européens ou </del>
   
 
   
@@ -228,150 +323,205 @@
   
 
   
-      <del>direct </del>
+      <del>direct</del>
   
 
   
-      <ins>indirect </ins>
+      <ins>indirect</ins>
   
 
   
-      ne devrait cependant pas empêcher les partis politiques européens 
+       ne devrait cependant pas empêcher les partis politiques européens 
   
 
   
-      <del>de soutenir publiquement leurs partis membres </del>
+      <ins>ou les fondations politiques européennes </ins>
   
 
   
-      <ins>ou les fondations politiques européennes de soutenir publiquement leurs partis membres ou organisations membres dans l’Union </ins>
+      de soutenir publiquement leurs partis membres 
   
 
   
-      et de dialoguer avec ceux-ci sur des questions présentant un intérêt pour l’Union, 
+      <ins>ou organisations membres dans l’Union </ins>
   
 
   
-      <del>ou </del>
+      et de dialoguer avec ceux-ci sur des questions présentant un intérêt pour l’Union,
   
 
   
-      de soutenir des activités politiques dans l’intérêt 
+      <del> ou</del>
   
 
   
-      <del>commun,</del>
+       de soutenir des activités politiques dans l’intérêt commun
   
 
   
-      <ins>commun ou de prendre part à des activités éducatives,</ins>
+      <ins> ou de prendre part à des activités éducatives</ins>
   
 
   
-       afin de pouvoir remplir la mission qui leur incombe en vertu de l’article 10, paragraphe 4, du traité sur l’Union europé
+      , afin de pouvoir remplir la mission qui leur incombe en vertu de l’article 10, paragraphe 4, du traité sur l’Union européenne
   
 
   
-      <del>enne. En outre, les partis politiques européens et les fondations politiques européennes qui leur sont affiliées ne devraient financer des activités dans le contexte de campagnes référendaires nationales que lorsqu’elles concernent la mise en œuvre du traité sur l’Union européenne et du traité sur le fonctionnement de l’Union européenne.</del>
+      <del>. En outre, les partis politiques européens et les fondations politiques européennes qui leur sont affiliées ne devraient financer des activités dans le contexte de campagnes référendaires nationales que lorsqu’elles concernent la mise en œuvre du traité sur l’Union européenne et du traité sur le fonctionnement de</del>
   
 
   
-      <ins>enne et de renforcer le demos européen. L’interdiction du financement indirect ne devrait pas empêcher les représentants et le personnel des partis politiques, ni les personnes potentiellement actives sur le plan politique, de participer aux événements des fondations politiques européennes. Toutefois, les fondations politiques européennes ne devraient pas prendre part à la formation de candidats politiques dans les six mois précédant des élections nationales ou européennes. En outre, les partis politiques européens ne devraient financer des activités dans le contexte de campagnes référendaires nationales que lorsqu’elles concernent des questions directement liées à l’Union.</ins>
+      <ins> et de renforcer le demos européen. L’interdiction du financement indirect ne devrait pas empêcher les représentants et le personnel des partis politiques, ni les personnes potentiellement actives sur le plan politique, de participer aux événements des fondations politiques européennes. Toutefois, les fondations politiques européennes ne devraient pas prendre part à la formation de candidats politiques dans les six mois précédant des élections nationales ou européennes. En outre, les partis politiques européens ne devraient financer des activités dans le contexte de campagnes référendaires nationales que lorsqu’elles concernent des questions directement liées à</ins>
   
 
   
-       Ces principes sont conformes à la déclaration nº 11 relative à l’article 191 du traité instituant la Communauté européenne, annexée à l’acte final du traité de Nice.
+       l’Union
+  
+
+  
+      <del> européenne</del>
+  
+
+  
+      . Ces principes sont conformes à la déclaration nº 11 relative à l’article 191 du traité instituant la Communauté européenne, annexée à l’acte final du traité de Nice.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
+        
+        
+            <article id="25">
+            <header>📝 Amendement n°25 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden"></div>
+                
+
+<p>
+
+  
+      j) ses 
+  
+
+  
+      <ins>propres </ins>
+  
+
+  
+      règles internes en matière d’équilibre hommes-femmes.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    <article>
-    <header>📝 Amendement n°26 | 
+        
+        
+            <article id="26">
+            <header>📝 Amendement n°26 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>Article 4 bis  Obligations de transparence quant à l’utilisation des logos, à la publication du programme politique et à l’équilibre hommes-femmes  1. Chaque parti politique européen veille à ce que les partis membres publient sur leurs sites internet le programme politique et le logo du parti politique européen. Le logo du parti politique européen est affiché dans la partie supérieure de la page d’accueil du site internet du parti membre, de manière clairement visible.  2. Chaque parti politique européen et ses partis membres publient sur leurs sites  internet des informations sur l’équilibre hommes-femmes parmi les candidats aux élections au Parlement européen qui ont lieu après le ... [date de l’entrée en vigueur du présent règlement], ainsi que des informations à jour sur la représentation des hommes et des femmes parmi leurs députés au Parlement européen. Chaque parti politique européen veille à ce que ses partis membres publient, sur leurs sites internet, ce type d’informations en ce qui concerne leurs propres candidats aux élections européennes et leurs députés au Parlement européen.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°27 | Partie 1 | 
+        
+        
+            <article id="27">
+            <header>📝 Amendement n°27 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°27 | Partie 2 | 
+        
+            <article id="27">
+            <header>📝 Amendement n°27 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°28 | 
+        
+            <article id="28">
+            <header>📝 Amendement n°28 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       3. L’Autorité publie 
@@ -382,56 +532,60 @@
   
 
   
-      les informations visées au paragraphe 2 dans le répertoire prévu à l’article 
+      les informations visées au paragraphe 2 dans le répertoire prévu à l’article 8
   
 
   
-      <del>8. Ces informations sont présentées sous une forme aisément accessible, bien visible et conviviale et sont formulées en des termes simples.</del>
+      <del>. Ces informations sont présentées sous une forme aisément accessible, bien visible et conviviale et sont formulées en des termes simples</del>
   
 
   
-      <ins>8 sans retard injustifié.</ins>
+      <ins> sans retard injustifié</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">468</div>
+  <div class="against">89</div>
+  <div class="abstention">17</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(468/574 * 100%)">468</div>
-  
-  
-    <div class="-" style="width: calc(89/574 * 100%)">89</div>
-  
-  
-    <div class="0" style="width: calc(17/574 * 100%)">17</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°30 | 
+        
+            <article id="30">
+            <header>📝 Amendement n°30 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       L’Autorité décide de l’enregistrement et de la radiation des partis politiques européens et des fondations politiques européennes conformément aux procédures et aux conditions établies dans le présent règlement. En outre, l’Autorité vérifie régulièrement que les conditions d’enregistrement visées à l’article 3 et les dispositions relatives à la gouvernance établies 
@@ -454,132 +608,157 @@
   
 
   
-      <del>f)</del>
+      <del>f</del>
   
 
   
-      <ins>h)</ins>
+      <ins>h</ins>
   
 
   
-      , et à l’article 6, paragraphe 1, points a) à e) et point g), sont toujours respectées par les partis politiques européens et les fondations politiques européennes enregistrés.
+      ), et à l’article 6, paragraphe 1, points a) à e) et point g), sont toujours respectées par les partis politiques européens et les fondations politiques européennes enregistrés.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°41 | 
+        
+        
+            <article id="41">
+            <header>📝 Amendement n°41 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       4. 
   
 
   
-      <del>Une décision de l’Autorité de radier un parti politique européen ou une fondation politique européenne pour violation manifeste et grave concernant le respect des conditions établies à l’article 3, paragraphe 1, point d), ou à l’article 3, paragraphe 2, point c), est communiquée au Parlement européen et au Conseil. La décision n’entre en vigueur que si elle n’a donné lieu à aucune objection du Parlement européen et du Conseil dans les trois mois suivant sa notification à ces deux institutions ou si, avant l’expiration de ce délai, le Parlement européen et le Conseil ont tous deux informé l’Autorité de leur intention de ne pas formuler d’objections. En cas d’objection du Parlement européen et du Conseil, le </del>
+      <del>Une décision de l’Autorité de radier un parti politique européen ou une fondation politique européenne pour violation manifeste et grave concernant le respect des conditions établies à l’article 3, paragraphe 1, point d), ou à l’article 3, paragraphe 2, point c), est communiquée au Parlement européen et au Conseil. La décision n’entre en vigueur que si elle n’a donné lieu à aucune objection du Parlement européen et du Conseil dans les trois mois suivant sa notification à ces deux institutions ou si, avant l’expiration de ce délai, le Parlement européen et le Conseil ont tous deux informé l’Autorité de leur intention de ne pas formuler d’objections. En cas d’objection du Parlement européen et du Conseil, le</del>
   
 
   
-      <ins>À l’expiration des délais visés aux paragraphes 2 et 3, ou après avoir reçu dans lesdits délais, de la part du parti politique européen concerné ou de la fondation politique européenne concernée, des observations ou des informations sur les mesures correctives, l’Autorité examine, sans retard injustifié et à la lumière de ces observations éventuelles présentées par le parti politique européen ou la fondation politique européenne, si l’un des motifs de radiation au titre de l’article 19, paragraphe 1, point a), ou de l’article 19, paragraphe 2, s’applique au </ins>
+      <ins>À l’expiration des délais visés aux paragraphes 2 et 3, ou après avoir reçu dans lesdits délais, de la part du parti politique européen concerné ou de la fondation politique européenne concernée, des observations ou des informations sur les mesures correctives, l’Autorité examine, sans retard injustifié et à la lumière de ces observations éventuelles présentées par le parti politique européen ou la fondation politique européenne, si l’un des motifs de radiation au titre de l’article 19, paragraphe 1, point a), ou de l’article 19, paragraphe 2, s’applique au</ins>
   
 
   
-      parti politique européen ou 
+       parti politique européen ou
   
 
   
-      <ins>à </ins>
+      <ins> à</ins>
   
 
   
-      la fondation politique europé
+       la fondation politique européenne
   
 
   
-      <del>enne demeurent enregistrés.</del>
+      <del> demeurent enregistrés</del>
   
 
   
-      <ins>enne.</ins>
+      .
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°75 | 
+        
+        
+            <article id="75">
+            <header>📝 Amendement n°75 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       9. 
   
 
   
-      <del>Les contributions versées par des membres d’un parti politique européen qui ont leur siège dans un État membre ou en sont citoyens ou par des partis membres qui ont leur siège dans un pays appartenant au Conseil de l’Europe sont permises. La valeur totale des contributions des membres ne dépasse pas 40 % du budget annuel de ce d’un parti politique européen. La valeur des contributions versées par des partis membres qui ont leur siège dans un pays en dehors de l’Union ne dépasse pas 10 %  des contributions totales des membres.</del>
+      <del>Les contributions versées par des membres d’un parti politique européen qui ont leur siège dans un État membre ou en sont citoyens ou par des partis membres qui ont leur siège dans un pays appartenant au Conseil de l’Europe sont permises. La valeur totale des contributions des membres ne dépasse pas 40 % du budget annuel de ce d’un parti politique européen. La valeur des contributions versées par des partis membres qui ont leur siège dans un pays en dehors de l’Union ne dépasse pas 10 %  des contributions totales des membres</del>
   
 
   
-      <ins>La valeur totale des contributions versées à un parti politique européen ne dépasse pas 40 % du budget annuel de celui-ci.</ins>
+      <ins>La valeur totale des contributions versées à un parti politique européen ne dépasse pas 40 % du budget annuel de celui-ci</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°81 | 
+        
+        
+            <article id="81">
+            <header>📝 Amendement n°81 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       2. Le financement de partis politiques européens 
@@ -594,300 +773,680 @@
   
 
   
-      <del>la mise en œuvre des traités de l’Union.</del>
+      <del>la mise en œuvre des traités de</del>
   
 
   
-      <ins>des questions directement liées à l’Union européenne.</ins>
+      <ins>des questions directement liées à</ins>
+  
+
+  
+       l’Union
+  
+
+  
+      <ins> européenne</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°87 | 
+        
+        
+            <article id="87">
+            <header>📝 Amendement n°87 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       2. L’Autorité contrôle le respect, par les partis politiques européens et les fondations politiques européennes, de leurs obligations en vertu du présent règlement, en particulier en rapport avec l’article 3, l’article 4, paragraphe 1, points a), b), d), e)
   
 
   
-      <del> et f),</del>
+      <ins>, f)</ins>
   
 
   
-      <ins>, f) et h), l’article 4 bis, l’article 5,</ins>
+       et 
   
 
   
-       l’article 6, paragraphe 1, points a) à e) et point g), l’article 10, paragraphes 5 et 6, et 
+      <del>f), </del>
   
 
   
-      <del>les articles 23, 24 et 25.</del>
+      <ins>h), l’article 4 bis, l’article 5, </ins>
   
 
   
-      <ins>l’article 23. Lorsqu’il n’y a pas de financement provenant du budget général de l’Union européenne, elle contrôle également le respect, par les partis politiques européens, de leurs obligations au titre de l’article 25, paragraphe 1.</ins>
-  
- 
-</section>
-
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°118 | 
-
-❌️ Rejeté
-
-</header>
-    
-        
-
-<section>
-
-  
-      1. Les crédits destinés au financement des partis politiques européens et des fondations politiques européennes sont déterminés dans le cadre de la procédure budgétaire annuelle et exécutés conformément au présent règlement 
+      l’article 6, paragraphe 1, points a) à e) et point g), l’article 10, paragraphes 5 et 6, et 
   
 
   
-      <del>et</del>
+      <del>les articles 23, 24 et 25</del>
   
 
   
-      <ins>et Conformément aux normes établies en matière de coûts du contrôle du financement de l’Union, les coûts annuels du contrôle du financement ne dépassent pas 2 % du budget annuel total combiné des partis politiques européens et des fondations politiques européennes.</ins>
+      <ins>l’article 23. Lorsqu’il n’y a pas de financement provenant du budget général de l’Union européenne, elle contrôle également le respect, par les partis politiques européens, de leurs obligations au titre de l’article 25, paragraphe 1</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
-    
-    
-    <article>
-    <header>📝 Amendement n°120 | 
 
-❌️ Rejeté
+  la commission 
 
-</header>
-    
-        
+</i>
+                <footer>
 
-<section>
+  🖐 Vote à main levée
 
-  
-      d) elle respecte , notamment dans son programme et ses activités, les valeurs sur lesquelles se fonde l’Union, telles qu’énoncées à l’article 2 du traité sur l’Union européenne, à savoir le respect de la dignité humaine, la liberté, la démocratie, l’égalité, l’État de droit ainsi que le respect des droits de l’homme, notamment les droits des personnes appartenant à des minorité
-  
-
-  
-      <del>s .</del>
-  
-
-  
-      <ins>s; toute évaluation de ce respect devrait s’appuyer sur une méthodologie transparente et objective qui ne reflète que les faits et garantisse l’égalité de traitement des partis politiques.</ins>
-  
-
-  
-       Elle fournit une déclaration écrite à l’aide du modèle figurant à l’annexe 
-  
-
-  
-      <del>I ;</del>
-  
-
-  
-      <ins>I;</ins>
-  
- 
-</section>
-
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°121 | 
-
-❌️ Rejeté
-
-</header>
-    
-        
-
-<section>
-
-  
-      c) elle respecte , notamment dans son programme et ses activités, les valeurs sur lesquelles se fonde l’Union, telles qu’énoncées à l’article 2 du traité sur l’Union européenne, à savoir le respect de la dignité humaine, la liberté, la démocratie, l’égalité, l’État de droit ainsi que le respect des droits de l’homme, notamment les droits des personnes appartenant à des minorité
-  
-
-  
-      <del>s .</del>
-  
-
-  
-      <ins>s; toute évaluation de ce respect devrait s’appuyer sur une méthodologie transparente et objective qui ne reflète que les faits et garantisse l’égalité de traitement des fondations politiques.</ins>
-  
-
-  
-       Elle fournit une déclaration écrite à l’aide du modèle figurant à l’annexe I;
-  
- 
-</section>
-
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°125 | 
-
-❌️ Rejeté
-
-</header>
-    
-        
-
-<section>
-
-  
-      4. Les contributions financières ou les subventions à la charge du budget général de l’Union européenne ne dépassent pas 95 % des dépenses remboursables annuelles indiquées dans le budget d’un parti politique européen et 95 % des coûts éligibles supportés par une fondation politique européenne. Les partis politiques européens peuvent employer toute partie inutilisée de la contribution de l’Union accordée pour la couverture de dépenses remboursables au cours de l’exercice qui suit son octroi. Les montants inutilisés après cet exercice sont récupérés conformément au règlement (UE,
-  
-
-  
-      <del> financières de l’année des élections au Parlement européen peuvent couvrir 100 % des dépenses remboursables supportées par un parti politique européen.</del>
-  
- 
-</section>
-
-    
-    <footer>
-        
+</footer>
             
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(205/565 * 100%)">205</div>
-  
-  
-    <div class="-" style="width: calc(350/565 * 100%)">350</div>
-  
-  
-    <div class="0" style="width: calc(10/565 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/148126">📣 Vote nominal : voir le détail</a>
-            
+            </article>
         
-    </footer>
-    </article>
     
-
-    
-    
-    <article>
-    <header>📝 Amendement n°128 | 
+        
+        
+            <article id="118">
+            <header>📝 Amendement n°118 | 
 
 ❌️ Rejeté
 
 </header>
+            
+                <div class="hidden">ECR</div>
+                
+
+<p>
+
+  
+      1. Les crédits destinés au financement des partis politiques européens et des fondations politiques européennes sont déterminés dans le cadre de la procédure budgétaire annuelle et exécutés conformément au présent règlement et
+  
+
+  
+      <ins> Conformément aux normes établies en matière de coûts du contrôle du financement de l’Union, les coûts annuels du contrôle du financement ne dépassent pas 2 % du budget annuel total combiné des partis politiques européens et des fondations politiques européennes.</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
         
+        
+            <article id="119">
+            <header>📝 Amendement n°119 | 
 
-<section>
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">ECR</div>
+                
+
+<p>
 
   
-      j) ses règles internes en matière d’é
+      (41) Les partis politiques européens ne devraient pas financer, directement ou indirectement, d’autres partis politiques, et en particulier des partis ou des candidats nationaux. Les fondations politiques européennes ne devraient pas financer, directement ou indirectement, des partis politiques ou des candidats européens ou nationaux.
   
 
   
-      <del>quilibre hommes-</del>
+      <del> L’interdiction du financement direct ne devrait cependant pas empêcher les partis politiques européens de soutenir publiquement leurs partis membres et de dialoguer avec ceux-ci sur des questions présentant un intérêt pour l’Union, ou de soutenir des activités politiques dans l’intérêt commun, afin de pouvoir remplir la mission qui leur incombe en vertu de l’article 10, paragraphe 4, du traité sur l’Union européenne. En outre, les partis politiques européens et les fondations politiques européennes qui leur sont affiliées ne devraient financer des activités dans le contexte de campagnes référendaires nationales que lorsqu’elles concernent la mise en œuvre du traité sur l’Union européenne et du traité sur le fonctionnement de l’Union européenne.</del>
   
 
   
-      <ins>galité des chances entre les hommes et les </ins>
+       Ces principes sont conformes à la déclaration nº 11 relative à l’article 191 du traité instituant la Communauté européenne, annexée à l’acte final du traité de Nice.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="120">
+            <header>📝 Amendement n°120 | 
+
+❌️ Rejeté
+
+</header>
+            
+                <div class="hidden">ECR</div>
+                
+
+<p>
+
+  
+      d) elle respecte , notamment dans son programme et ses activités, les valeurs sur lesquelles se fonde l’Union, telles qu’énoncées à l’article 2 du traité sur l’Union européenne, à savoir le respect de la dignité humaine, la liberté, la démocratie, l’égalité, l’État de droit ainsi que le respect des droits de l’homme, notamment les droits des personnes appartenant à des minorités
+  
+
+  
+      <del> . </del>
+  
+
+  
+      <ins>; toute évaluation de ce respect devrait s’appuyer sur une méthodologie transparente et objective qui ne reflète que les faits et garantisse l’égalité de traitement des partis politiques. </ins>
+  
+
+  
+      Elle fournit une déclaration écrite à l’aide du modèle figurant à l’annexe I
+  
+
+  
+      <del> ;</del>
+  
+
+  
+      <ins>;</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="121">
+            <header>📝 Amendement n°121 | 
+
+❌️ Rejeté
+
+</header>
+            
+                <div class="hidden">ECR</div>
+                
+
+<p>
+
+  
+      c) elle respecte , notamment dans son programme et ses activités, les valeurs sur lesquelles se fonde l’Union, telles qu’énoncées à l’article 2 du traité sur l’Union européenne, à savoir le respect de la dignité humaine, la liberté, la démocratie, l’égalité, l’État de droit ainsi que le respect des droits de l’homme, notamment les droits des personnes appartenant à des minorités
+  
+
+  
+      <del> . </del>
+  
+
+  
+      <ins>; toute évaluation de ce respect devrait s’appuyer sur une méthodologie transparente et objective qui ne reflète que les faits et garantisse l’égalité de traitement des fondations politiques. </ins>
+  
+
+  
+      Elle fournit une déclaration écrite à l’aide du modèle figurant à l’annexe I;
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="122">
+            <header>📝 Amendement n°122 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">ECR</div>
+                
+
+<p>
+
+  
+      9. Les contributions versées par des membres d’un parti politique européen qui ont leur siège dans un État membre ou en sont citoyens 
+  
+
+  
+      <del>ou par des partis membres qui ont leur siège dans un pays appartenant au Conseil de l’Europe </del>
+  
+
+  
+      sont permises. La valeur totale des contributions des membres ne dépasse pas 40 % du budget annuel d’un parti politique européen.
+  
+
+  
+      <del> La valeur des contributions versées par des partis membres qui ont leur siège dans un pays en dehors de l’Union ne dépasse pas 10 % des contributions totales des membres.</del>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="125">
+            <header>📝 Amendement n°125 | 
+
+❌️ Rejeté
+
+</header>
+            
+                <div class="hidden">PPE</div>
+                
+
+<p>
+
+  
+      4. Les contributions financières ou les subventions à la charge du budget général de l’Union européenne ne dépassent pas 95 % des dépenses remboursables annuelles indiquées dans le budget d’un parti politique européen et 95 % des coûts éligibles supportés par une fondation politique européenne. Les partis politiques européens peuvent employer toute partie inutilisée de la contribution de l’Union accordée pour la couverture de dépenses remboursables au cours de l’exercice qui suit son octroi. Les montants inutilisés après cet exercice sont récupérés conformément au règlement (UE
+  
+
+  
+      <del>, financières de l’année des élections au Parlement européen peuvent couvrir 100 % des dépenses remboursables supportées par un parti politique européen.</del>
+  
+
+  
+      <ins>,</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">205</div>
+  <div class="against">350</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/148126">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="126">
+            <header>📝 Amendement n°126 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      (30) Il convient que les partis politiques européens et leurs partis membres montrent l’exemple en matière de comblement de l’écart entre les hommes et les femmes dans le domaine politique. 
+  
+
+  
+      <del>S’ils souhaitent bénéficier d’un financement de l’Union européenne, les</del>
+  
+
+  
+      <ins>Les</ins>
+  
+
+  
+       partis politiques européens devraient disposer de règles internes favorisant l’équilibre hommes-femmes et ils devraient faire preuve de transparence en ce qui concerne l’équilibre hommes
+  
+
+  
+      <del>- </del>
+  
+
+  
+      <ins>-</ins>
+  
+
+  
+      femmes de leurs partis membres. Les partis politiques européens devraient 
+  
+
+  
+      <del>fournir des éléments probants concernant leur politique interne sur</del>
+  
+
+  
+      <ins>encourager</ins>
+  
+
+  
+       l’équilibre hommes- femmes et 
+  
+
+  
+      <del>concernant </del>
+  
+
+  
+      la représentation des hommes et des femmes 
+  
+
+  
+      <del>au sein de leurs partis membres en ce qui concerne les</del>
+  
+
+  
+      <ins>parmi leurs</ins>
+  
+
+  
+       candidats au Parlement européen et 
+  
+
+  
+      <del>les</del>
+  
+
+  
+      <ins>leurs</ins>
+  
+
+  
+       membres 
+  
+
+  
+      <ins>au sein </ins>
+  
+
+  
+      de celui-ci. Les partis politiques européens sont également encouragés à fournir des informations concernant l’inclusivité et la représentation des minorités à propos de leurs partis membres.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="128">
+            <header>📝 Amendement n°128 | 
+
+❌️ Rejeté
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      j) ses règles internes en matière d’
+  
+
+  
+      <del>équilibre hommes-</del>
+  
+
+  
+      <ins>égalité des chances entre les hommes et les </ins>
   
 
   
       femmes.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°130 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="129">
+            <header>📝 Amendement n°129 | 
+
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">ID</div>
+                
+
+<p>
+
+  
+      4. Une décision de l’Autorité de radier un parti politique européen ou une fondation politique européenne pour violation 
+  
+
+  
+      <del>manifeste et grave</del>
+  
+
+  
+      <ins>établie</ins>
+  
+
+  
+       concernant le respect des conditions établies à l’article 3, paragraphe 1, point d), ou à l’article 3, paragraphe 2, point c), est communiquée au Parlement européen et au Conseil. La décision n’entre en vigueur que si elle n’a donné lieu à aucune objection du Parlement européen et du Conseil dans les trois mois suivant sa notification à ces deux institutions ou si, avant l’expiration de ce délai, le Parlement européen et le Conseil ont tous deux informé l’Autorité de leur intention de ne pas formuler d’objections
+  
+
+  
+      <del>. </del>
+  
+
+  
+      <ins>.      Le Parlement européen adopte une procédure qui garantit le droit de la minorité parlementaire, à savoir le nombre de députés correspondant au seuil bas des députés qui composent le Parlement ou un groupe politique, à soulever des objections, en adaptant son règlement intérieur si nécessaire.  </ins>
+  
+
+  
+      En cas d’objection du Parlement européen et du Conseil, le parti politique européen ou la fondation politique européenne
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
+  
+
+  
+      demeurent enregistrés.
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
+    
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="130">
+            <header>📝 Amendement n°130 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       1. Le comité de personnalités éminentes indépendantes institué par le compose de six membres, le Parlement européen, le Conseil et la Commission désignant chacun deux membres. Les membres du comité sont choisis en fonction de leurs qualités personnelles et professionnelles. Ils ne sont pas membres 
@@ -898,44 +1457,56 @@
   
 
   
-      du Parlement européen, du Conseil ni de la Commission, ne sont pas titulaires de mandats électoraux, ne sont pas des fonctionnaires ou autres agents de l’Union europé
+      du Parlement européen, du Conseil ni de la Commission, ne sont pas titulaires de mandats électoraux, ne sont pas des fonctionnaires ou autres agents de l’Union européenne
   
 
   
-      <del>enne </del>
+      <del> </del>
   
 
   
-      <ins>enne, ni membres d’associations ou d’organisations orientées politiquement, </ins>
+      <ins>, ni membres d’associations ou d’organisations orientées politiquement, </ins>
   
 
   
       ni actuellement ou anciennement employés par un parti politique européen ou une fondation politique européenne.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°131 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="131">
+            <header>📝 Amendement n°131 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       j) ses 
@@ -946,277 +1517,208 @@
   
 
   
-      règles internes en matière d’é
+      règles internes en matière d’
   
 
   
-      <del>quilibre </del>
+      <del>équilibre</del>
   
 
   
-      <ins>galité </ins>
+      <ins>égalité</ins>
   
 
   
-      hommes-femmes.
+       hommes-femmes.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">301</div>
+  <div class="against">249</div>
+  <div class="abstention">23</div>
+</span>
+
+  
+    
+    <a href="/voting/148118">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(301/573 * 100%)">301</div>
-  
-  
-    <div class="-" style="width: calc(249/573 * 100%)">249</div>
-  
-  
-    <div class="0" style="width: calc(23/573 * 100%)">23</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/148118">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°132 | 
+        
+            <article id="132">
+            <header>📝 Amendement n°132 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>Article 4 bis  Obligations de transparence quant à l’utilisation des logos, à la publication du programme politique et à l’équilibre hommes-femmes  1. Chaque parti politique européen veille à ce que les partis membres publient sur leurs sites internet le programme politique et le logo du parti politique européen. Le logo du parti politique européen est affiché dans la partie supérieure de la page d’accueil du site internet du parti membre, de manière clairement visible.  2. Chaque parti politique européen et ses partis membres publient sur leurs sites internet des informations sur l’équilibre hommes-femmes parmi les candidats aux élections au Parlement européen à la suite de l’entrée en vigueur du présent règlement, ainsi que des informations à jour sur la représentation des hommes et des femmes parmi leurs députés au Parlement européen et sur les mesures qu’ils ont prises en vue de parvenir, en ce qui concerne leurs députés au Parlement européen, à l’égalité entre les hommes et les femmes. Chaque parti politique européen veille à ce que ses partis membres publient, sur leurs sites internet, ce type d’informations en ce qui concerne    leurs propres candidats aux élections européennes et leurs députés au Parlement européen.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">256</div>
+  <div class="against">261</div>
+  <div class="abstention">59</div>
+</span>
+
+  
+    
+    <a href="/voting/148119">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(256/576 * 100%)">256</div>
-  
-  
-    <div class="-" style="width: calc(261/576 * 100%)">261</div>
-  
-  
-    <div class="0" style="width: calc(59/576 * 100%)">59</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/148119">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°133 | 
+        
+            <article id="133">
+            <header>📝 Amendement n°133 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>i bis) ses propres règles internes en matière d’égalité hommes-femmes.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">298</div>
+  <div class="against">253</div>
+  <div class="abstention">23</div>
+</span>
+
+  
+    
+    <a href="/voting/148120">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(298/574 * 100%)">298</div>
-  
-  
-    <div class="-" style="width: calc(253/574 * 100%)">253</div>
-  
-  
-    <div class="0" style="width: calc(23/574 * 100%)">23</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/148120">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°134 | Partie 1 | 
+        
+            <article id="134">
+            <header>📝 Amendement n°134 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(301/571 * 100%)">301</div>
-  
-  
-    <div class="-" style="width: calc(228/571 * 100%)">228</div>
-  
-  
-    <div class="0" style="width: calc(42/571 * 100%)">42</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/148122">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°134 | Partie 2 | 
+        
+            <article id="134">
+            <header>📝 Amendement n°134 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(305/571 * 100%)">305</div>
-  
-  
-    <div class="-" style="width: calc(235/571 * 100%)">235</div>
-  
-  
-    <div class="0" style="width: calc(31/571 * 100%)">31</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/148123">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°134 | Partie 3 | 
+        
+            <article id="134">
+            <header>📝 Amendement n°134 | Partie 3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(330/571 * 100%)">330</div>
-  
-  
-    <div class="-" style="width: calc(173/571 * 100%)">173</div>
-  
-  
-    <div class="0" style="width: calc(68/571 * 100%)">68</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/148124">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°135 | 
+        
+            <article id="135">
+            <header>📝 Amendement n°135 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       L’Autorité décide de l’enregistrement et de la radiation des partis politiques européens et des fondations politiques européennes conformément aux procédures et aux conditions établies dans le présent règlement. En outre, l’Autorité vérifie régulièrement que les conditions d’enregistrement visées à l’article 3 et les dispositions relatives à la gouvernance établies 
@@ -1239,224 +1741,220 @@
   
 
   
-      <del>f)</del>
+      <del>f), et </del>
   
 
   
-      <ins>h)</ins>
+      <ins>h), à l’article 4 bis, </ins>
   
 
   
-      , 
+      à l’article 6, paragraphe 1, points a) à e) et point g),
   
 
   
-      <del>et </del>
+      <ins> et à l’article 6 bis</ins>
   
 
   
-      <ins>à l’article 4 bis, </ins>
-  
-
-  
-      à l’article 6, paragraphe 1, points a) à e) et point g), 
-  
-
-  
-      <ins>et à l’article 6 bis </ins>
-  
-
-  
-      sont toujours respectées par les partis politiques européens et les fondations politiques européennes enregistrés.
+       sont toujours respectées par les partis politiques européens et les fondations politiques européennes enregistrés.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">137</div>
+  <div class="against">366</div>
+  <div class="abstention">73</div>
+</span>
+
+  
+    
+    <a href="/voting/148125">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(137/576 * 100%)">137</div>
-  
-  
-    <div class="-" style="width: calc(366/576 * 100%)">366</div>
-  
-  
-    <div class="0" style="width: calc(73/576 * 100%)">73</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/148125">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°136 | 
+        
+            <article id="136">
+            <header>📝 Amendement n°136 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>4 bis. Au moins 5 % des contributions financières ou des subventions provenant du budget général de l’Union européenne sont utilisés pour exécuter les mesures prévues à l’article 6 bis.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">127</div>
+  <div class="against">429</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    
+    <a href="/voting/148127">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(127/565 * 100%)">127</div>
-  
-  
-    <div class="-" style="width: calc(429/565 * 100%)">429</div>
-  
-  
-    <div class="0" style="width: calc(9/565 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/148127">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°137 | 
+        
+            <article id="137">
+            <header>📝 Amendement n°137 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>3 bis. Un parti politique européen inclut dans sa demande un rapport annuel sur la mise en œuvre de ses règles en matière d’égalité entre les hommes et les femmes, démontrant qu’il respecte l’article 6 bis.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">197</div>
+  <div class="against">350</div>
+  <div class="abstention">14</div>
+</span>
+
+  
+    
+    <a href="/voting/148128">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(197/561 * 100%)">197</div>
-  
-  
-    <div class="-" style="width: calc(350/561 * 100%)">350</div>
-  
-  
-    <div class="0" style="width: calc(14/561 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/148128">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°138 | 
+        
+            <article id="138">
+            <header>📝 Amendement n°138 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>6 bis. Une fondation politique européenne inclut dans sa demande un rapport annuel sur la mise en œuvre de ses règles en matière d’égalité entre les hommes et les femmes, démontrant qu’elle respecte l’article 6 bis.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">193</div>
+  <div class="against">348</div>
+  <div class="abstention">20</div>
+</span>
+
+  
+    
+    <a href="/voting/148129">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(193/561 * 100%)">193</div>
-  
-  
-    <div class="-" style="width: calc(348/561 * 100%)">348</div>
-  
-  
-    <div class="0" style="width: calc(20/561 * 100%)">20</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/148129">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°139 | 
+        
+            <article id="139">
+            <header>📝 Amendement n°139 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       2. L’Autorité contrôle le respect, par les partis politiques européens et les fondations politiques européennes, de leurs obligations en vertu du présent règlement, en particulier en rapport avec l’article 3, l’article 4, paragraphe 1, points a), b), d), e)
@@ -1471,267 +1969,291 @@
   
 
   
-      <del>f)</del>
+      <del>f</del>
   
 
   
-      <ins>h)</ins>
+      <ins>h</ins>
   
 
   
-      , l’article 
+      ),
   
 
   
-      <ins>4 bis, l’article 5, l’article </ins>
+      <ins> l’article 4 bis, l’article 5,</ins>
   
 
   
-      6, paragraphe 1, points a) à e) et point g), l’article 
+       l’article 6, paragraphe 1, points a) à e) et point g),
   
 
   
-      <ins>6 bis, l’article </ins>
+      <ins> l’article 6 bis,</ins>
   
 
   
-      10, paragraphes 5 et 6, et 
+       l’article 10, paragraphes 5 et 6, et 
   
 
   
-      <del>les articles 23, 24 et 25.</del>
+      <del>les articles 23, 24 et 25</del>
   
 
   
-      <ins>l’article 23. Lorsqu’il n’y a pas de financement provenant du budget général de l’Union européenne, elle contrôle également le respect, par les partis politiques européens, de leurs obligations au titre de l’article 25, paragraphe 1.</ins>
+      <ins>l’article 23. Lorsqu’il n’y a pas de financement provenant du budget général de l’Union européenne, elle contrôle également le respect, par les partis politiques européens, de leurs obligations au titre de l’article 25, paragraphe 1</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">136</div>
+  <div class="against">412</div>
+  <div class="abstention">19</div>
+</span>
+
+  
+    
+    <a href="/voting/148130">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(136/567 * 100%)">136</div>
-  
-  
-    <div class="-" style="width: calc(412/567 * 100%)">412</div>
-  
-  
-    <div class="0" style="width: calc(19/567 * 100%)">19</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/148130">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°140 | 
+        
+            <article id="140">
+            <header>📝 Amendement n°140 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>ii bis) en cas de non-respect des obligations énoncées à l’article 6 bis;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">178</div>
+  <div class="against">365</div>
+  <div class="abstention">21</div>
+</span>
+
+  
+    
+    <a href="/voting/148131">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(178/564 * 100%)">178</div>
-  
-  
-    <div class="-" style="width: calc(365/564 * 100%)">365</div>
-  
-  
-    <div class="0" style="width: calc(21/564 * 100%)">21</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/148131">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°141 | 
+        
+            <article id="141">
+            <header>📝 Amendement n°141 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>2 bis. L&#39;article 6 bis entre en vigueur deux ans après la date d&#39;entrée en vigueur du présent règlement. Dans le cas où une demande d’enregistrement est déposée auprès de l’Autorité, le demandeur est encouragé à remplir les obligations énoncées à l’article 6 bis lors du dépôt de la demande.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">188</div>
+  <div class="against">358</div>
+  <div class="abstention">17</div>
+</span>
+
+  
+    
+    <a href="/voting/148132">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(188/563 * 100%)">188</div>
-  
-  
-    <div class="-" style="width: calc(358/563 * 100%)">358</div>
-  
-  
-    <div class="0" style="width: calc(17/563 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/148132">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°142 | 
+        
+            <article id="142">
+            <header>📝 Amendement n°142 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>2 ter. Les paragraphes 3 bis et 6 bis de l’article 21 ne s’appliquent pas aux demandes de financement pour les trois premiers exercices qui suivent la date d’entrée en vigueur du présent règlement.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">205</div>
+  <div class="against">345</div>
+  <div class="abstention">14</div>
+</span>
+
+  
+    
+    <a href="/voting/148133">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(205/564 * 100%)">205</div>
-  
-  
-    <div class="-" style="width: calc(345/564 * 100%)">345</div>
-  
-  
-    <div class="0" style="width: calc(14/564 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/148133">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°143 | 
+        
+            <article id="143">
+            <header>📝 Amendement n°143 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>(12 bis) Afin de garantir que les critères d’enregistrement et d’adhésion prévoient une représentation inclusive et réelle des partis politiques actifs au niveau européen, tout en évitant les obstacles à la représentation démocratique des petits partis politiques au niveau européen, il convient d’envisager l’élaboration d’autres critères, tels que l’introduction d’un soutien des citoyens pour satisfaire aux critères de représentation et l’abaissement du seuil d’enregistrement.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
     
-    <article>
-    <header>📝 Amendement n°144 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="144">
+            <header>📝 Amendement n°144 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
-
-  
-      (30) Il convient que les partis politiques europé
-  
+<p>
 
   
-      <del>ens et </del>
+      (30) Il convient que les partis politiques européens
   
 
   
-      <ins>ens, </ins>
+      <del> et </del>
+  
+
+  
+      <ins>, </ins>
   
 
   
@@ -1751,19 +2273,59 @@
   
 
   
-      devraient disposer de règles internes favorisant l’é
+      devraient disposer de règles internes favorisant l’
   
 
   
-      <del>quilibre hommes-femmes et ils </del>
+      <del>équilibre hommes-femmes et ils</del>
   
 
   
-      <ins>galité hommes- femmes, notamment un plan pour l’égalité entre les hommes et les femmes et un protocole visant à empêcher, déceler et lutter contre le harcèlement sexuel et le harcèlement fondé sur le genre. En outre, les partis politiques européens </ins>
+      <ins>égalité hommes- femmes, notamment un plan pour l’égalité entre les hommes et les femmes et un protocole visant à empêcher, déceler et lutter contre le harcèlement sexuel et le harcèlement fondé sur le genre. En outre, les partis politiques européens</ins>
   
 
   
-      devraient faire preuve de transparence en ce qui concerne l’équilibre hommes-
+       devraient faire preuve de transparence en ce qui concerne l’équilibre hommes
+  
+
+  
+      <del>- </del>
+  
+
+  
+      <ins>-</ins>
+  
+
+  
+      femmes de leurs partis membres
+  
+
+  
+      <del>. Les partis politiques européens</del>
+  
+
+  
+      <ins> et</ins>
+  
+
+  
+       devraient fournir des éléments probants concernant 
+  
+
+  
+      <del>leur politique interne sur l’équilibre hommes-femmes et concernant </del>
+  
+
+  
+      la représentation des hommes et des femmes au sein de leurs partis membres en ce qui concerne les candidats au Parlement européen et les membres de celui-ci.
+  
+
+  
+      <ins> Les partis politiques européens et les fondations politiques européennes doivent également fournir des éléments probants concernant leur politique interne sur l’égalité entre les hommes et les femmes au moyen d’un rapport annuel.</ins>
+  
+
+  
+       Les partis politiques européens sont également
   
 
   
@@ -1771,143 +2333,320 @@
   
 
   
-      femmes de leurs partis 
-  
-
-  
-      <del>membres. Les partis politiques européens </del>
-  
-
-  
-      <ins>membres et </ins>
-  
-
-  
-      devraient fournir des éléments probants 
-  
-
-  
-      <del>concernant leur politique interne sur l’équilibre hommes-femmes et </del>
-  
-
-  
-      concernant la représentation des hommes et des femmes au sein de leurs partis membres en ce qui concerne les candidats au Parlement européen et les membres de celui-ci. Les partis politiques européens 
-  
-
-  
-      <del>sont également </del>
-  
-
-  
-      <ins>et les fondations politiques européennes doivent également fournir des éléments probants concernant leur politique interne sur l’égalité entre les hommes et les femmes au moyen d’un rapport annuel. Les partis politiques européens sont également    </ins>
+      <ins>    </ins>
   
 
   
       encouragés à fournir des informations concernant l’inclusivité et la représentation des minorités à propos de leurs partis membres.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">277</div>
+  <div class="against">231</div>
+  <div class="abstention">50</div>
+</span>
+
+  
+    
+    <a href="/voting/148134">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(277/558 * 100%)">277</div>
-  
-  
-    <div class="-" style="width: calc(231/558 * 100%)">231</div>
-  
-  
-    <div class="0" style="width: calc(50/558 * 100%)">50</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/148134">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°145 | 
+        
+            <article id="145">
+            <header>📝 Amendement n°145 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>(34 bis) Afin de veiller à ce que les exigences en matière d’égalité entre les hommes et les femmes soient mises en œuvre de manière appropriée, les partis politiques européens et les fondations politiques européennes devraient consacrer au moins 5 % des contributions financières ou des subventions qu’ils reçoivent du budget général de l’Union européenne à des mesures ayant trait à l’égalité entre les hommes et les femmes.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">177</div>
+  <div class="against">378</div>
+  <div class="abstention">7</div>
+</span>
+
+  
+    
+    <a href="/voting/148136">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(177/562 * 100%)">177</div>
-  
-  
-    <div class="-" style="width: calc(378/562 * 100%)">378</div>
-  
-  
-    <div class="0" style="width: calc(7/562 * 100%)">7</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/148136">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
+        
     
+        
+        
+    
+        
+        
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            Afin de simplifier et clarifier les textes européens, il est courant qu’un acte législatif et ses modifications successives soient rassemblés en un texte unique, sans modification du contenu. Dans le cas présent, il s’agit d’une directive sur les contrôles que les États membres exercent sur les transports de marchandises dangereuses par route effectués au moyen de véhicules circulant sur leur territoire ou y entrant en provenance d&#39;un pays tiers. Cette directive ne réduit en rien le droit des États membres de contrôler les transports nationaux et internationaux de marchandises dangereuses effectués sur leur territoire, nous ne trouvons donc rien à redire à ce texte, et j’ai donc soutenu cette simple codification.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            . – Ce rapport vise à donner la position du Parlement européen sur la proposition de la Commission concernant la mise à jour des règles relatives aux partis politiques et aux fondations au niveau européen. La proposition de la Commission a principalement pour but de faciliter encore davantage les interactions entre les partis européens et leurs partis membres nationaux et au-delà des frontières, d’accroître leur transparence et leur viabilité financière ainsi que de garantir que leurs membres hors-UE souscrivent à des valeurs équivalentes à celles qui s’appliquent dans l’UE. Bien que je partage la majeure partie des orientations et ambitions de ce texte, j’ai choisi de m’abstenir de le voter car il appelle en creux à établir des listes transnationales aux élections européennes.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            Ce rapport révise le règlement fixant les conditions relatives au statut et au financement des partis politiques européens. Il définit le concept de publicité politique et établit une obligation de transparence politique. Il entend également réguler les financements, notamment les contributions financières étrangères.Ces ajustements sont nécessaires pour s’adapter aux nouvelles technologies et aux actualités politiques. Or ce texte a été politisé par le groupe Renew, où siège la majorité présidentielle, pour avancer leur projet de listes transnationales aux élections européennes. En effet, ils ont profité d’un rapport technique pour inclure une mention de ce projet qui entend créer des députés européens dénués de territoire et détachés des citoyens européens. Les électeurs des États membre doivent pouvoir voter pour des députés qui comprennent les priorités locales, régionales et nationales de leurs territoires. Il est fondamental de d’empêcher l’aboutissement de ce projet absurde et c’est la raison pour laquelle j’ai choisi de m’abstenir.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            La clarification des règles financières permettra certainement aux partis politiques européens d’intensifier leurs activités, mais cette refonte est encore un pas en avant vers le fédéralisme européen. Elle accorde plus de pouvoirs aux partis politiques européens, qui pourront s’immiscer dans les campagnes nationales, ce qui n’est d’ailleurs pas sans lien avec la création des listes transnationales. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197494</div>
+            
+            <header><b>Nathalie LOISEAU</b> | Renaissance</header>
+            Renforcer les partis et fondations politiques européens, y assurer une parité effective, la plus grande transparence et un contrôle rigoureux sont évidemment des objectifs que je partage pleinement. Comme bien sûr celui de promouvoir l’Union européenne et ses valeurs au-delà de ses frontières. Toutefois, sachant que nous luttons pied à pied contre des ingérences étrangères dans nos processus démocratiques, je ne peux aller, dans ce contexte, dans le sens d’une ouverture de l’adhésion à ces partis et fondations européens à des partis issus d’États non membre de l’Union européenne. C’est pour répondre à ce souci d’assurer et de renforcer notre souveraineté européenne que j’ai voté contre la motion de résolution sur ce projet de règlement.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à approuver une révision du règlement encadrant les statuts et financements des partis et fondations politiques européens. Il prévoit notamment une transparence accrue en matière de financements, faciliter l’organisation de campagnes référendaires sur des enjeux concernant l’UE, et de promotion de listes transnationales européennes. J’ai donc voté pour ce texte qui permettra de renforcer le débat démocratique au niveau européen.
+        </article>
+    
+        <article>
+            <div class="hidden">197589</div>
+            
+            <header><b>Laurence FARRENG</b> | Mouvement Démocrate</header>
+            Jeudi 15 septembre, j’ai voté en faveur de la réforme du règlement relatif au statut et au financement des partis et fondations politiques européens. Ce texte permet d’accroître la viabilité financière des partis et fondations européens, tout en contrôlant davantage les sources des revenus des partis, afin de répondre à des exigences de transparence et de bonne gestion financière. Les élections européennes pourraient ainsi donner de plus en plus d’espace à un débat véritablement européen, tout en s’assurant que les partis européens respectent les valeurs définies dans les traités.
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            Je me suis exprimé en faveur de cette loi qui régit les partis politiques et les fondations à l’échelle européenne. Le texte favorise l’avènement d’un véritable espace public européen et renforce la démocratie de notre continent. En effet, en promouvant la transparence dans le financement et la gouvernance des partis et fondations, l’UE gagnera en légitimité aussi bien face à ses pays membres que sur la scène mondiale. Identification des donneurs importants, définition claire des sources de revenus des partis, contribution accrue de l’UE aux partis européens et respect des valeurs fondamentales de l’union vont dans le bon sens.
+        </article>
+    
+        <article>
+            <div class="hidden">197576</div>
+            
+            <header><b>Sylvie BRUNET</b> | Mouvement Démocrate</header>
+            J’ai voté en faveur de cette refonte du statut et du financement des partis politiques et fondations politiques européens.Les prochaines élections du Parlement européen auront lieu en 2024. Nous avons besoin de partis et de fondations politiques européens plus forts dans une véritable sphère politique européenne.En définissant un ensemble plus clair de règles et de conditions pour les partis et fondations politiques européens, nous offrons une plus grande flexibilité afin de leur permettre de se concentrer sur leur mission principale: représenter et informer les citoyens de l’UE.J’ai également tenu à soutenir des amendements renforçant les politiques d’égalité hommes-femmes au sein de partis et des fondations, que ce soit à travers l’engagement à un plan d’action pour l’égalité, la parité au sein des organes directeurs, un protocole anti-harcèlement et des contrôles externes du respect de ce dernier... Il me paraît essentiel, pour les partis politiques et ceux qui les représentent, d’être exemplaires en matière d’égalité entre les femmes et les hommes.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté en faveur de ce rapport car la réforme du règlement relatif au statut et au financement des partis et fondations politiques européens est essentielle au plan d’action pour la démocratie européenne. Il ne peut en effet pas y avoir d’européanisation du débat public, pourtant cruciale dans un contexte où les enjeux politiques débattus dans les États membres sont de plus en plus liés entre eux, sans capacité de mobilisation des partis politiques. Par ailleurs, ce texte renforce la transparence financière des partis et fondations politiques et le contrôle de leurs financements.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Ce rapport constitue un pas en avant vers le fédéralisme européen, avec plus de pouvoirs aux partis politiques européens, qui pourront s’immiscer dans les campagnes nationales. À cela s’ajoute une surveillance accrue et idéologique de l’Autorité. Pour ces raisons, j’ai voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            Ce rapport accorde plus de pouvoirs aux partis politiques européens, qui pourront s’immiscer dans les campagnes nationales. Cela n’est d’ailleurs pas sans lien avec la création de listes transnationales, prévue par l’Union européenne. Cette inflexion fédéraliste ne ferait qu’éloigner les partis politiques des citoyens, et serait délétère pour la vitalité de nos démocraties.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Le rapport accorde plus de pouvoirs aux partis politiques européens, qui pourront s’immiscer dans les campagnes nationales. Cela n’est d’ailleurs pas sans lien avec la création des listes transnationales. Par ailleurs, en devant respecter un certain nombre de valeurs et critères ces partis et fondations politiques européens seront mieux contrôlés et surveillés par les hautes instances bruxelloises. Je me suis opposée à ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            La proposition est une refonte du règlement qui régit le statut et le financement des partis politiques européens et des fondations politiques européennes. Suite à diverses évaluations de l’application du règlement, il est relevé que des «manquements» empêcheraient les fondations et partis politiques européens de s’acquitter pleinement de leur mission consistant à «contribuer à la création d’un espace politique européen». Le cadre juridique actuel ne répondrait notamment pas suffisamment à la nécessité de transparence de la publicité à caractère politique, «essentielle à la tenue d’un débat démocratique équitable».La clarification des règles financières permettra certainement aux partis politiques européens d’intensifier leurs activités mais cette refonte est encore un pas en avant vers le fédéralisme européen. Elle accorde plus de pouvoirs aux partis politiques européens, qui pourront s’immiscer dans les campagnes nationales. Cela n’est d’ailleurs pas sans lien avec la création des listes transnationales. Par ailleurs, en devant respecter un certain nombre de valeurs et critères mesurant la transparence de ces partis et fondations politiques européens, ces derniers seront mieux contrôlés et surveillés par les hautes instances européennes.J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            La clarification des règles financières permettra certainement aux partis politiques européens d’intensifier leurs activités, mais cette refonte est encore un pas en avant vers le fédéralisme européen. Elle accorde plus de pouvoirs aux partis politiques européens, qui pourront s’immiscer dans les campagnes nationales. Cela n’est d’ailleurs pas sans lien avec la création des listes transnationales. Par ailleurs, en devant respecter un certain nombre de valeurs et critères mesurant la transparence de ces partis et fondations politiques européens, ces derniers seront mieux contrôlés et surveillés par les hautes instances européennes. J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre la refonte des statuts des fondations et partis européens qui se résume à un nouveau pas en avant vers le fédéralisme européen.Elle accorde plus de pouvoirs aux partis politiques européens qui pourront s’immiscer dans les campagnes nationales, ce qui n’est d’ailleurs pas sans lien avec la création des listes transnationales que nous condamnons.À cela s’ajoute une surveillance accrue et idéologique de l’Autorité des fondations et partis européens.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b></b> | </header>
+            Cette révision du règlement relatif au financement des partis politiques européens et des fondations politiques européennes permet d’améliorer la transparence de leurs revenus. Elle permet aussi de baisser leur taux de cofinancement, ce qui permet d’aider les petits partis, et donc favorise leur pluralité. Cette révision permet par ailleurs d’introduire un droit pour ces partis de financer des campagnes référendaires nationales portant sur des enjeux européens. Pour ces raisons, j’ai donc voté pour cette révision.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-    
-    
 
+    <section>
     
     
-
+        <article>
+            <div class="hidden">96750</div>
+            
+            <header><b>François ALFONSI</b> | Régions et Peuples Solidaires</header>
+            
+                <p> – Madame la Présidente, les partis politiques et les fondations politiques sont un vecteur essentiel de la vie démocratique. Ce que nous voterons aujourd’hui ne sera qu’une simple amélioration d’une situation qui est appelée à évoluer en profondeur.</p>
+            
+                <p>Parmi les évolutions proposées, les plus intéressantes sont celles qui répondent à la situation politique nouvelle, comme le Brexit et le projet d’élargissement, rendu encore plus nécessaire par la guerre en Ukraine. Nous pourrons désormais proposer à des formations politiques britanniques de se maintenir comme membre à part entière de nos partis européens et nous pourrons préfigurer les conditions de l’adhésion ou de la réadhésion de nouveaux pays à l’Europe à travers leur participation à la vie des partis politiques européens.</p>
+            
+                <p>Ce nouveau règlement simplifiera aussi le fonctionnement des partis, ce qui est important, notamment pour les plus petits partis politiques européens, qui sont tous indispensables à la diversité de l’offre politique faite à nos citoyens. Ces progrès sont intéressants et nous les approuvons.</p>
+            
+                <p>Comment cependant imaginer que nous allons continuer avec des organes aussi essentiels à la vie démocratique de l’Union, qui devraient en être l’avant-garde, tout en restant autant en retard sur des thèmes aussi sensibles que l’égalité des genres, la lutte contre la corruption ou la lutte pour la transparence?</p>
+            
+        </article>
     
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            
+                <p>Outre que des millions d’euros seraient dilapidés dans cette aventure, l’entreprise présenterait l’inconvénient de ressusciter le projet de création de listes transnationales, dans la mesure où chaque liste transnationale aurait vocation à être portée par un parti politique européen. En théorie, les mouvements nationalistes comme le RN et ses alliés pourraient au moins se défendre en formant leurs propres partis politiques européens. Mais en pratique, ils en seraient tôt ou tard empêchés, puisque le rapport les soupçonne déjà d’être corrompus par Poutine. L’outil de censure idéologique est déjà en place avec l’autorité de contrôle.</p>
+            
+                <p>Après la démocratie sans peuple, l’Union européenne est en train d’inventer la compétition électorale à sens unique. Je ne suis pas dupe de vos manigances. Face à l’offensive oligarchique et anti-nationale que vous cautionnez, je préconise la suppression des partis politiques européens, l’interdiction des listes transnationales et l’organisation dans chaque État membre d’un référendum sur la transformation de l’Union en État fédéral. </p>
+            
+        </article>
     
-
+        <article>
+            <div class="hidden">197531</div>
+            
+            <header><b>Gwendoline DELBOS-CORFIELD</b> | Les Écologistes</header>
+            
+                <p>Mais c’est sur la question de l’égalité de genre et de l’accompagnement des femmes en politique que le débat a été le plus compliqué. En trois ans, dans cette maison, je n’avais jamais rencontré un refus pareil de discuter de ces questions-là. Nous n’avons pas pu avancer sur aucun de ces sujets et, du coup, nous allons avoir des partis politiques européens qui peuvent continuer à avoir des conseils d’administration à 100 % masculins alors que nous demandons aux entreprises de ne plus le faire. Nous allons avoir des partis politiques européens qui vont pouvoir continuer à exercer du harcèlement moral ou sexuel sans mettre en place de mécanismes de prévention, sans y réfléchir, sans y travailler au sein de leur parti. Nous allons aussi avoir des partis politiques européens qui peuvent continuer à ignorer la faible représentation des femmes en politique, à ne pas se questionner sur comment on pourrait changer cela, accompagner les femmes, les former et travailler avec elles pour qu’elles prennent plus de place, notamment dans des pays où les règles n’obligent pas à mettre des femmes sur les listes. C’était un peu triste d’en arriver là et il me semble que pour certains de mes collègues, les partis politiques vont rester longtemps le cénacle du conservatisme le plus important. Et c’est inopérant parce que quand nos partis politiques et nos parlementaires sont autant en décalage avec la société et les peuples, eh bien nos politiques publiques sont aussi inefficaces. </p>
+            
+        </article>
     
+        <article>
+            <div class="hidden">197694</div>
+            
+            <header><b>Raphaël GLUCKSMANN</b> | Place publique</header>
+            
+                <p> – Madame la Présidente, Madame la Vice-Présidente, chers collègues. La présidente de la Commission européenne, Ursula von der Leyen, a annoncé hier ici même un grand pacte pour la défense de la démocratie. C’est ce que nous demandons dans la commission spéciale sur l’ingérence étrangère depuis longtemps déjà. Il est urgent de prendre la mesure du péril et de renforcer nos démocraties. Ce texte y participe. Les partis politiques européens et les fondations européennes sont des acteurs clés de notre vie démocratique et à ce titre, je me réjouis que la révision de leur statut et de leur financement vise à garantir leur meilleure visibilité, à simplifier les procédures administratives et à faciliter leur participation dans certaines campagnes nationales.</p>
+            
+                <p>Néanmoins, je tiens à vous alerter sur un point précis: la possibilité de financement via des contributions provenant de pays membres du Conseil de l’Europe pose problème. Elle met l’Union européenne dans une position de dépendance vis-à-vis d’autres institutions et envoie un signal dangereux aux États membres auxquels nous demandons de réviser leur loi électorale afin d’interdire les financements étrangers de la vie politique. Donc attention et alerte. </p>
+            
+        </article>
     
-
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/0375(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0223_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-09-15-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+        <article>
+            <div class="hidden">204421</div>
+            
+            <header><b>Jean-Lin LACAPELLE</b> | Rassemblement national</header>
+            
+                <p> – Madame la Présidente, chers collègues, on savait déjà que l’Union européenne, en bon élève de l’Union soviétique, avait adopté le principe brejnévien de la souveraineté limitée, c’est-à-dire que les États satellites de l’URSS étaient libres dans les moyens d’appliquer la doctrine marxiste, mais ils n’étaient pas libres de s’en écarter. L’Union européenne vient, à travers de ce rapport invraisemblable sur les partis politiques européens, d’y ajouter le concept de démocratie limitée.</p>
+            
+                <p>Comment peut-on accepter, dans un espace prétendument démocratique, qu’une prétendue autorité administrative, sans la moindre légitimité, puisse établir quels sont les partis qui seront éligibles, notamment au plan financier, à la qualité de parti politique européen? Que signifie cette référence absolue aux valeurs de l’Union européenne? Est-ce pour vous une façon de mettre au ban, après des nations telles que la Hongrie et la Pologne, les mouvements politiques, notamment ceux qui sont assis sur une très forte base populaire et une forte légitimité électorale et qui n’adhèrent pas à votre idéologie mondialiste, immigrationniste et destructrice de notre civilisation européenne?</p>
+            
+                <p>Pour notre part, nous demeurerons fidèles aux principes édictés par la constitution française voulue par le Général de Gaulle, et je le cite: «Les partis et groupements politiques concourent à l’expression du suffrage. Ils se forment et exercent leur activité librement et doivent respecter les principes de la souveraineté nationale et de la démocratie». En effet, la souveraineté nationale et la démocratie, deux concepts qui vous sont totalement étrangers. De plus en plus, l’Union européenne, qui se comporte en ennemi de la liberté, veut contrôler l’esprit intime des citoyens. Ce texte en est l’élément révélateur. Dans votre sectarisme, vous refusez la légitimité aux opinions différentes des vôtres. Mais dites-moi, la démocratie, vous en avez peur? </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">204421</div>
+            
+            <header><b>Jean-Lin LACAPELLE</b> | Rassemblement national</header>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">204419</div>
+            
+            <header><b>Sandro GOZI</b> | Renaissance</header>
+            
+                <p>Les objectifs de ce rapport, dont je remercie vivement les deux corapporteurs, Charles Goerens et Rainer Wieland, s’inscrivent par ailleurs dans une stratégie de démocratie et politique plus vaste, car nous devons pouvoir voter directement pour les partis européens à travers la liste transnationale afin de renforcer leur légitimité démocratique et nous devons lutter contre la désinformation et les ingérences étrangères notamment, mais pas seulement, avec de nouvelles règles sur la publicité politique pour protéger nos démocraties. Et nous devons aller vite. Lors des élections européennes de 2024, grâce à ces réformes, nous devons multiplier le pouvoir de choix des citoyens dans un nouvel espace démocratique plus efficace, plus transparent et surtout plus européen.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

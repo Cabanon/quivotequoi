@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Résolution sur la peine de mort en Iran</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Résolution sur la peine de mort en Iran</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(617/684 * 100%)">617</div>
-  
-  
-    <div class="-" style="width: calc(8/684 * 100%)">8</div>
+    <div class="for" style="width: calc(617/684 * 100%)">617</div>
   
   
-    <div class="0" style="width: calc(59/684 * 100%)">59</div>
+    <div class="against" style="width: calc(8/684 * 100%)">8</div>
+  
+  
+    <div class="abstention" style="width: calc(59/684 * 100%)">59</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,19 +88,20 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(52/79 * 100%)">52</div>
+    <div class="for" style="width: calc(52/79 * 100%)">52</div>
   
   
   
-    <div class="0" style="width: calc(27/79 * 100%)">27</div>
+    <div class="abstention" style="width: calc(27/79 * 100%)">27</div>
   
 </div>
  
 </section>
-            <a href="/voting/140044">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/140044">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -119,424 +124,499 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2541(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/RC-9-2022-0105_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-02-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197683,197629,197615">🇫🇷 Reconquête!</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | Partie 1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(480/697 * 100%)">480</div>
-  
-  
-    <div class="-" style="width: calc(73/697 * 100%)">73</div>
-  
-  
-    <div class="0" style="width: calc(144/697 * 100%)">144</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140028">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°1 | Partie 2 | 
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(355/696 * 100%)">355</div>
-  
-  
-    <div class="-" style="width: calc(210/696 * 100%)">210</div>
-  
-  
-    <div class="0" style="width: calc(131/696 * 100%)">131</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140029">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°1 | Partie 3 | 
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | Partie 3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(677/697 * 100%)">677</div>
-  
-  
-    <div class="-" style="width: calc(6/697 * 100%)">6</div>
-  
-  
-    <div class="0" style="width: calc(14/697 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/140030">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>16 bis. souligne que la pandémie de COVID-19 a eu de graves répercussions en Iran et qu’il est urgent de renforcer l’aide humanitaire et de lever les sanctions; invite l’Union et ses États membres à fournir une assistance financière et d’autres aides au système de santé publique iranien et aux partenaires non gouvernementaux qui travaillent dans le pays; demande instamment aux États membres de redoubler d’efforts pour rendre l’instrument d’appui aux échanges commerciaux pleinement opérationnel et efficace afin de faciliter le commerce légitime entre l’Union et l’Iran;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">251</div>
+  <div class="against">318</div>
+  <div class="abstention">129</div>
+</span>
+
+  
+    
+    <a href="/voting/139943">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(251/698 * 100%)">251</div>
-  
-  
-    <div class="-" style="width: calc(318/698 * 100%)">318</div>
-  
-  
-    <div class="0" style="width: calc(129/698 * 100%)">129</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139943">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>H bis. considérant que l’ONG Open Doors classe l’Iran en neuvième position parmi les 50 pays où les chrétiens subissent le plus de persécutions; que les musulmans convertis au christianisme sont particulièrement exposés au risque de persécution; que, selon des informations inquiétantes, le Code pénal pourrait être modifié pour rendre la diffusion du message chrétien passible de poursuites;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">182</div>
+  <div class="against">430</div>
+  <div class="abstention">83</div>
+</span>
+
+  
+    
+    <a href="/voting/139946">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(182/695 * 100%)">182</div>
-  
-  
-    <div class="-" style="width: calc(430/695 * 100%)">430</div>
-  
-  
-    <div class="0" style="width: calc(83/695 * 100%)">83</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139946">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>O bis. considérant que, selon les rapports, 400 à 500 femmes sont brutalement assassinées chaque année en Iran, victimes de crimes dits d’honneur; que, dans certaines circonstances, le Code pénal iranien autorise ces crimes, qui ne sont pas sanctionnés; qu’on dénie souvent toute justice à ces femmes et à ces hommes victimes de crimes commis au nom de «l’honneur»; que le 5 février 2022, Mona Heydari a été décapitée par son mari qui a ensuite paradé dans les rues avec sa tête coupée dans la ville d’Ahvaz, au sud-ouest du pays; qu’en mai 2020, Romina Ashrafi, âgée de 13 ans, a été décapitée dans son sommeil par son propre père, avec une faucille;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">403</div>
+  <div class="against">240</div>
+  <div class="abstention">55</div>
+</span>
+
+  
+    
+    <a href="/voting/139947">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(403/698 * 100%)">403</div>
-  
-  
-    <div class="-" style="width: calc(240/698 * 100%)">240</div>
-  
-  
-    <div class="0" style="width: calc(55/698 * 100%)">55</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139947">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>O ter. considérant que, selon le département d’État américain, l’Iran est resté ces dernières années le principal acteur étatique mondial à alimenter le terrorisme et à fournir un soutien politique, financier, opérationnel et logistique à de nombreux groupes figurant à la fois sur la liste des organisations terroristes de l’Union européenne et sur la liste des organisations terroristes étrangères tenue par les États-Unis;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">298</div>
+  <div class="against">283</div>
+  <div class="abstention">116</div>
+</span>
+
+  
+    
+    <a href="/voting/139948">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(298/697 * 100%)">298</div>
-  
-  
-    <div class="-" style="width: calc(283/697 * 100%)">283</div>
-  
-  
-    <div class="0" style="width: calc(116/697 * 100%)">116</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139948">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>19 bis. demande à Josep Borrell, vice- président de la Commission et haut représentant de l’Union pour les affaires étrangères et la politique de sécurité, d’insister sur le fait que toute amélioration des relations économiques avec l’Iran devra être subordonnée à la fin des graves violations des droits de l’homme commises par ce pays, notamment le recours arbitraire à la peine de mort;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">133</div>
+  <div class="against">424</div>
+  <div class="abstention">140</div>
+</span>
+
+  
+    
+    <a href="/voting/139944">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(133/697 * 100%)">133</div>
-  
-  
-    <div class="-" style="width: calc(424/697 * 100%)">424</div>
-  
-  
-    <div class="0" style="width: calc(140/697 * 100%)">140</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139944">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>19 ter. dénonce le rôle déstabilisateur du régime iranien dans l’ensemble de la région et le fait que celui-ci est responsable de la mort de nombreux civils en Syrie, au Yémen et en Irak;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(282/698 * 100%)">282</div>
-  
-  
-    <div class="-" style="width: calc(280/698 * 100%)">280</div>
-  
-  
-    <div class="0" style="width: calc(136/698 * 100%)">136</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/139945">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    ECR
     
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2541(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/RC-9-2022-0105_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">282</div>
+  <div class="against">280</div>
+  <div class="abstention">136</div>
+</span>
+
   
+    
+    <a href="/voting/139945">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-02-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197585</div>
+            
+            <header><b>Pierre KARLESKIND</b> | Renaissance</header>
+            
+                <p> – Madame la Présidente, Madame la Commissaire, «partout dans le monde […] où triomphent la dictature et le mépris des droits de l’homme, partout vous y trouverez inscrite, en caractères sanglants, la peine de mort». Ces mots, je les emprunte à Robert Badinter, qui fit abolir la peine de mort en France il y a quarante ans. C’est bien cela, la véritable signification de la peine de mort. Elle découle de l’idée, purement totalitaire, qu’un gouvernement dispose à tel point de ses citoyens qu’il peut leur retirer la vie. L’an dernier, l’Iran a retiré la vie à 200 de ses citoyens. </p>
+            
+                <p>Ce débat n’aura pas de sens s’il se restreint à une simple critique du régime iranien. Il doit aussi nous servir à comprendre qui nous sommes, nous, les Européens. Nous appartenons, face à la barbarie, à un territoire d’humanité, où la dignité de chaque individu est respectée; face à l’arbitraire, à un territoire de justice, qui a tourné ses pages sanglantes et en a fini avec ses exécutions furtives, vengeresses et honteuses; face au totalitarisme, à un continent de liberté, où l’on ne craint pas d’être tué pour ce que l’on est, pour ce que l’on pense, pour qui l’on aime et pour ce en quoi l’on croit. </p>
+            
+                <p>C’est cela que nous sommes et que ce débat doit nous rappeler, et c’est pour cela que nous devons nous battre: pour que, un jour, à son tour, le peuple iranien puisse fièrement se libérer du joug totalitaire et vivre dans un pays d’humanité, de liberté et de justice.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Mise en œuvre d’actions d’éducation à la citoyenneté</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Mise en œuvre d’actions d’éducation à la citoyenneté</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(460/627 * 100%)">460</div>
-  
-  
-    <div class="-" style="width: calc(130/627 * 100%)">130</div>
+    <div class="for" style="width: calc(460/627 * 100%)">460</div>
   
   
-    <div class="0" style="width: calc(37/627 * 100%)">37</div>
+    <div class="against" style="width: calc(130/627 * 100%)">130</div>
+  
+  
+    <div class="abstention" style="width: calc(37/627 * 100%)">37</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(41/55 * 100%)">41</div>
+    <div class="for" style="width: calc(41/55 * 100%)">41</div>
   
   
-    <div class="-" style="width: calc(7/55 * 100%)">7</div>
+    <div class="against" style="width: calc(7/55 * 100%)">7</div>
   
   
-    <div class="0" style="width: calc(7/55 * 100%)">7</div>
+    <div class="abstention" style="width: calc(7/55 * 100%)">7</div>
   
 </div>
  
 </section>
-            <a href="/voting/141251">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/141251">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -106,7 +111,7 @@
     
         
         
-            <li>Education, formation professionnelle et jeunesse</li>
+            <li>Espace européen de l&#39;éducation et de la formation tout au long de la vie</li>
         
     
         
@@ -116,281 +121,620 @@
     
         
         
-            <li>Espace européen de l&#39;éducation et de la formation tout au long de la vie</li>
+            <li>Cohésion économique, sociale et territoriale</li>
         
     
         
         
-            <li>Cohésion économique, sociale et territoriale</li>
+            <li>Education, formation professionnelle et jeunesse</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2008(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0060_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-04-06-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       G. considérant que l’émergence d’une citoyenneté européenne dynamique a été freinée par un manque de connaissances et de lien émotionnel, ainsi que par l’absence de mécanismes favorisant la participation des citoyens et le dialogue; que l’identité européenne complète les multiples identités locales, nationales, géographiques, culturelles ou autres qu’une personne peut présenter; qu’une connaissance 
   
 
   
-      <del>insuffisante ou nulle </del>
+      <del>insuffisante ou nulle</del>
   
 
   
-      <ins>approfondie </ins>
+      <ins>approfondie</ins>
   
 
   
-      de l’Union et une 
+       de l’Union et une 
   
 
   
-      <del>mauvaise </del>
+      <del>mauvaise compréhension de son fonctionnement et de sa valeur ajoutée peuvent contribuer à la perception d’un</del>
   
 
   
-      compréhension 
+      <ins>compréhension plus fine de son fonctionnement peuvent contribuer à une conscience accrue de son</ins>
   
 
   
-      <ins>plus fine </ins>
+       déficit démocratique et favoriser 
   
 
   
-      de son fonctionnement 
+      <del>la</del>
   
 
   
-      <del>et de sa valeur ajoutée peuvent contribuer à la perception d’un déficit démocratique et favoriser la défiance, le désengagement civique et l’euroscepticisme </del>
+      <ins>une</ins>
   
 
   
-      <ins>peuvent contribuer à une conscience accrue de son déficit démocratique et favoriser une défiance légitime, un désengagement civique fondé et un euroscepticisme justifié </ins>
+       défiance
   
 
   
-      dans les États membres;
+      <del>, le</del>
+  
+
+  
+      <ins> légitime, un</ins>
+  
+
+  
+       désengagement civique
+  
+
+  
+      <ins> fondé</ins>
+  
+
+  
+       et 
+  
+
+  
+      <del>l’euroscepticisme</del>
+  
+
+  
+      <ins>un euroscepticisme justifié</ins>
+  
+
+  
+       dans les États membres;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°2 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       3. 
   
 
   
-      <del>se dit préoccupé par </del>
+      <del>se dit préoccupé par</del>
   
 
   
-      <ins>prend acte de </ins>
+      <ins>prend acte de</ins>
   
 
   
-      l’attention limitée accordée aux aspects européen et mondial de la citoyenneté dans les programmes scolaires nationaux; constate 
+       l’attention limitée accordée aux aspects européen et mondial de la citoyenneté dans les programmes scolaires nationaux; constate 
   
 
   
-      <del>avec inquiétude que seule la moitié des étudiants qui suivent un cursus dans l’Union déclarent avoir eu l’occasion d’apprendre à connaître l’Europe à l’école; souligne que plus le niveau d’instruction civique des étudiants est élevé, plus ils sont favorables à la coopération entre pays européens; déplore la tension croissante entre le niveau national et le niveau européen dans les programmes scolaires de certains États membres;</del>
+      <del>avec inquiétude que seule la moitié des étudiants qui suivent un cursus dans l’Union déclarent avoir eu l’occasion d’apprendre à connaître l’Europe à l’école; souligne que plus le niveau d’instruction civique des étudiants est élevé, plus ils sont favorables à la coopération entre pays européens; déplore la tension croissante entre le niveau national et le niveau européen dans les programmes scolaires de certains États membres</del>
   
 
   
-      <ins>que, conformément à l’article 165 du traité FUE, les États membres sont responsables du contenu de l’enseignement et de l’organisation du système éducatif ainsi que de leur diversité culturelle et linguistique;</ins>
+      <ins>que, conformément à l’article 165 du traité FUE, les États membres sont responsables du contenu de l’enseignement et de l’organisation du système éducatif ainsi que de leur diversité culturelle et linguistique</ins>
   
 
   
-       se dit préoccupé par la politisation excessive de l’éducation civique et ses conséquences, telles que des modifications incessantes et drastiques du programme, et réaffirme la nécessité d’une stabilité et d’une cohérence sur la durée des programmes d’éducation civique;
+      ; se dit préoccupé par la politisation excessive de l’éducation civique et ses conséquences, telles que des modifications incessantes et drastiques du programme, et réaffirme la nécessité d’une stabilité et d’une cohérence sur la durée des programmes d’éducation civique;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°3 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       51. souligne qu’il est 
   
 
   
-      <del>nécessaire d’investir davantage dans les modules éducatifs consacrés à l’Union européenne dans les écoles et les universités, à la fois dans l’éducation formelle et dans l’enseignement et la formation professionnels, en élaborant de nouveaux programmes scolaires et universitaires dans ce domaine; invite la Commission à proposer une recommandation présentant des programmes scolaires d’enseignement primaire, secondaire et universitaire indicatifs, ainsi que des programmes indicatifs pour l’enseignement et la formation professionnels, consacrés à l’éducation civique européenne et mondiale en vue de sa mise en œuvre volontaire par les États membres, dans le plein respect des dispositions du traité, en particulier de l’article 165 du traité FUE; le contenu de cette recommandation serait préparé en collaboration avec, dans les États membres, des spécialistes, des facultés spécialisées dans les affaires européennes, des enseignants, des éducateurs, des étudiants et la communauté éducative dans son ensemble, et s’accompagnerait de mesures incitatives pour encourager sa mise en œuvre; estime que lesdits programmes indicatifs communs devraient </del>
+      <del>nécessaire d’investir davantage dans les modules éducatifs consacrés à l’Union européenne dans les écoles et les universités, à la fois dans l’éducation formelle et dans l’enseignement et la formation professionnels, en élaborant de nouveaux programmes scolaires et universitaires dans ce domaine; invite la Commission à proposer une recommandation présentant des programmes scolaires d’enseignement primaire, secondaire et universitaire indicatifs, ainsi que des programmes indicatifs pour l’enseignement et la formation professionnels, consacrés à l’éducation civique européenne et mondiale en vue de sa mise en œuvre volontaire par les États membres, dans le plein respect des dispositions du traité, en particulier de l’article 165 du traité FUE; le contenu de cette recommandation serait préparé en collaboration avec, dans les États membres, des spécialistes, des facultés spécialisées dans les affaires européennes, des enseignants, des éducateurs, des étudiants et la communauté éducative dans son ensemble, et s’accompagnerait de mesures incitatives pour encourager sa mise en œuvre; estime que lesdits programmes indicatifs communs devraient</del>
   
 
   
-      <ins>possible pour les États membres, dans le plein respect des dispositions du traité, en particulier de l’article 165 du traité FUE, de </ins>
+      <ins>possible pour les États membres, dans le plein respect des dispositions du traité, en particulier de l’article 165 du traité FUE, de</ins>
   
 
   
-      favoriser une meilleure compréhension de l’histoire 
+       favoriser une meilleure compréhension de l’histoire
   
 
   
-      <del>   </del>
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
       de l’intégration européenne, de l’organisation et de la structure des institutions existantes de l’Union européenne, des processus électoral et décisionnel européens, y compris les voies de participation citoyenne à la vie démocratique de l’Union, en combinant différentes approches et méthodes pédagogiques, mêlant apprentissage théorique et apprentissage fondé sur des projets, adaptées aux besoins des apprenants;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°4 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>-1. souligne que les États membres demeurent pleinement compétents pour le contenu de l’enseignement et l’organisation du système éducatif ainsi que leur diversité culturelle et linguistique, conformément à l’article 165 du traité sur le fonctionnement de l’Union européenne (traité FUE); réaffirme l’engagement de l’Union à respecter ces compétences;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
+    
+    ECR
     
     
-    <article>
-    <header>📝 Amendement n°5 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>-1 bis. fait observer que l’absence de consensus, au niveau de l’Union, au sujet de l’éducation est tout à fait normale pour une union d’États souverains ayant chacun ses particularités territoriales, démographiques, culturelles et historiques; réaffirme la devise de rend incongrue toute velléité d’homogénéiser la culture et l’éducation; souligne qu’une telle homogénéité n’est pas l’objectif de l’Union;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
+    
+    ECR
     
     
-    <article>
-    <header>📝 Amendement n°6 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>-1 ter. déplore que la conférence sur l’avenir de l’Europe se focalise sur l’éducation, qui est une compétence des États membres; relève avec préoccupation la tendance qui consiste à donner principalement l’occasion de s’exprimer aux voix qui demandent une intégration plus poussée dans le domaine de l’éducation, sans souci de préserver un bon équilibre des points de vue;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2008(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0060_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+    ECR
+    
+    
   
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-04-06-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – J’ai voté contre ce texte. Il envisage une «citoyenneté mondiale», considère l’euroscepticisme comme une menace contre la démocratie et est ostensiblement contre le «populisme», pourtant mal défini. Il fait l’apologie des lobbies LGBT et ne respecte pas la compétence propre des États membres en matière d’éducation. Enfin, le texte «invite les États membres et la communauté éducative à s’assurer la participation de tous, y compris les descendants de migrants, les migrants, les réfugiés et les communautés religieuses».
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce texte. Tout d&#39;abord, et aux termes de l&#39;article 165 du traité sur le fonctionnement de l&#39;Union européenne, l&#39;éducation relève de la compétence des États membres.De ce fait, toute éducation civique à l&#39;échelle de l&#39;Union européenne paraît inadéquate.Par ailleurs, il est évident que des programmes communs risquent de transmettre une vision orientée de l&#39;Union européenne et de son œuvre.
+        </article>
+    
+        <article>
+            <div class="hidden">96952</div>
+            
+            <header><b>Sylvie GUILLAUME</b> | Parti socialiste</header>
+            J&#39;ai voté en faveur des recommandations formulées dans ce rapport d&#39;initiative en matière d&#39;éducation civique européenne afin d&#39;informer et de sensibiliser les Européens aux valeurs européennes et au fonctionnement de l&#39;UE et activer leur citoyenneté européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car l’enseignement est une compétence exclusive des États membres, et il n’est pas question que l’UE se l’approprie. En outre, il ne fait aucun doute que cette « éducation à la citoyenneté » servirait à diffuser la propagande européiste.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Ce texte est intéressant dans le constat qu&#39;il pose : il faut éduquer les citoyens, tout au long de leur vie, à l&#39;esprit critique, aux valeurs de l&#39;Union européenne, le tout pour renforcer leur sentiment d&#39;appartenance à cette communauté. Certaines solutions proposées par le Parlement sont certes dérisoires. Il envisage notamment la création dans chaque commune d&#39;un &quot;monument à l&#39;UE&quot; pour offrir un symbole visuel de l&#39;intégration européenne. Une autre solution, quant à elle, est plus ambitieuse mais pose d’autres problèmes. Le texte propose de faire de l&#39;éducation civique une compétence partagée entre l&#39;UE et les États Membres. Certes, nous aurions aimé, plutôt que des valeurs à &quot;enseigner&quot; et à &quot;transmettre&quot;, des moyens pour le faire, mais cette question de l’éducation est trop importante pour voter contre des projets qui permette une plus grande émancipations des citoyens et qui s’opposent aux idéologies réactionnaires. J’ai donc voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            . – Je me suis abstenue sur cette résolution relative au déploiement de mesures en faveur de l’éducation civique. Le texte contenait des dispositions intéressantes, soulignant par exemple la contribution des programmes européens tels qu’Erasmus+, Horizon Europe, ou encore le corps européen de solidarité, à l’enseignement actif de l’éducation civique. Il contrevenait néanmoins au principe de subsidiarité en préconisant d’introduire une compétence partagée de l’UE en matière d’éducation et en invitant la Commission à proposer des initiatives législatives dans le champ de l’éducation civique. Résolument engagée en faveur d’une Europe des Nations et favorable au respect de la souveraineté des États membres en matière éducative, je ne pouvais donc l’approuver.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            Je me suis abstenue sur le vote final de ce rapport relatif au déploiement de mesures en faveur de l’éducation civique. L’éducation civique de nos plus jeunes est essentielle pour leur donner les clés de compréhension qui leur permettront d’être des citoyens éclairés et avertis. Le rapport soulignait un manque de cohérence politique dans l’éducation au sein de l’Union européenne. Toutefois, il faut garder à l’esprit que l’enseignement et l’organisation du système d’éducation relèvent de la compétence des États membres, l’Union européenne ne disposant que d’une compétence d’appui. Le texte en ce sens ne respectait pas les dispositions des Traités, en indiquant que des compétences partagées devraient être mises en place dans le domaine de l’éducation.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations et les recommandations du Parlement européen sur le déploiement de mesures en faveur de l’éducation civique. Il rappelle notamment que l’éducation est un droit fondamental et un bien public devant être accessible à tous gratuitement, souligne la nécessité d’encourager le développement de l’esprit critique et l&#39;éducation aux médias, et encourage la promotion de l’éducation civique à tous les âges, y compris en formation continue tout au long de la vie. J’ai donc voté pour ce texte qui va dans le sens d’une meilleure prise en compte de l’enjeu de l’éducation civique au niveau européen.
+        </article>
+    
+        <article>
+            <div class="hidden">197589</div>
+            
+            <header><b>Laurence FARRENG</b> | Mouvement Démocrate</header>
+            J&#39;ai voté en faveur de ce rapport de mise en oeuvre, qui rend à la fois compte de la mise en place de mesure en faveur de l&#39;éducation civique dans les différents Etats membres, tout en effectuant des recommandations pour le futur. Nous y faisons état de grandes disparités en matière d&#39;enseignement civique dans les Etats membres, et demandons notamment à ce qu&#39;une approche européenne coordonnée y soit consacrée.
+        </article>
+    
+        <article>
+            <div class="hidden">197536</div>
+            
+            <header><b>Nathalie COLIN-OESTERLÉ</b> | Les centristes</header>
+            . – Je me suis abstenue sur le rapport Ruiz-Devesa relatif à l&#39;éducation civique. Ce texte comporte, en effet, plusieurs dispositions problématiques, notamment en ce qu&#39;il estime que «des compétences partagées devraient être mises en place dans le domaine de l’éducation, au moins en ce qui concerne l’éducation civique». Je regrette tout d’abord qu’aucune définition ne soit donnée de l’éducation civique. Ensuite, je considère que l’éducation doit donc rester une compétence nationale, de telles compétences partagées ne peuvent être envisagées en vertu du principe de subsidiarité. Cependant, cela n’empêche en rien les États membres de se coordonner en matière d’éducation, notamment sur le rôle et le fonctionnement de l’Union européenne ou sur les matières fondamentales (mathématiques notamment). J’estime que l’Union européenne doit avant tout continuer à harmoniser ses règles en matière de reconnaissance mutuelle des diplômes afin de faciliter la liberté d’établissement et de prestation de services avant de vouloir élargir à tout prix ses compétences en matière d’éducation.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            L’éducation est un vecteur de transmission des valeurs de citoyenneté et donc, de participation démocratique. L’Année européenne de la jeunesse 2022 a ainsi pour objectif de mettre en lumière l’importance de la participation de la jeunesse européenne à la construction d’un avenir européen plus écologique, plus inclusif et plus numérique et de développer le sentiment d’appartenance européen auprès de la jeunesse. Il était donc nécessaire de rédiger un rapport sur le déploiement de mesures en faveur de l&#39;éducation civique. Toutefois, ce rapport demande à ce que l’éducation devienne une compétence partagée entre l’Union et ses États membres, raison pour laquelle je me suis abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport car l’enseignement est une compétence exclusive des États membres, et il n’est pas question que l’UE se l’approprie. En outre, il ne fait aucun doute que cette « éducation à la citoyenneté » servirait à diffuser la propagande européiste.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">96952</div>
+            
+            <header><b>Sylvie GUILLAUME</b> | Parti socialiste</header>
+            
+                <p> – Monsieur le Président, le rapport de mon collègue Domènec Ruiz Devesa, que je félicite chaleureusement, liste une série d’événements et de changements sociaux survenus ces dernières années, tels que le Brexit, les attentats, les méfaits de la désinformation et de l’ingérence, ou encore la montée de l’euroscepticisme, qui prouvent tous un besoin urgent d’éducation à la citoyenneté et aux valeurs de l’Union européenne.</p>
+            
+                <p>De nombreuses déclarations ont été faites en ce sens. Pourtant, le rapport dresse le constat regrettable qu’à ce jour, encore trop peu est réalisé pour atteindre cet objectif. Depuis l’adoption de ce rapport en commission, la guerre a éclaté aux portes de l’Europe, et si elle a unifié l’Union face à l’urgence, elle ne rend que plus nécessaire le besoin d’une éducation à long terme à la citoyenneté et aux valeurs de l’Union, qui sont les seuls antidotes à la propagande illibérale et au nationalisme.</p>
+            
+                <p>Rappelons-le: les jeunes d’aujourd’hui dans l’Union, comme en Ukraine et en Russie j’espère, sont les vecteurs du changement et de la paix de demain. C’est pourquoi je soutiens l’objectif de ce rapport et j’appuie la mise en place des recommandations formulées, au premier rang desquelles l’exploitation maximale du potentiel des programmes européens y consacrés, comme le programme «Citoyens, égalité, droits et valeurs», mais également les actions pour une éducation civique européenne renouvelée.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">204416</div>
+            
+            <header><b>Ilana CICUREL</b> | Renaissance</header>
+            
+                <p>Kamran est professeur d’histoire-géographie à Moscou. Il a 28 ans. La semaine dernière, il a dû démissionner car il refusait de relayer devant ses élèves le discours officiel du régime de Poutine.</p>
+            
+                <p>Face à l’agression de l’Ukraine par la Russie, faire de l’Europe une puissance militaire et énergétique s’impose comme une évidence. Le rapport que nous avons à voter demain insiste sur une dimension non moins essentielle: faire de l’Europe une puissance éducative. Nous ne pouvons prétendre conserver la paix entre les peuples – nos peuples – si nous ne bâtissons pas une culture pédagogique commune dans laquelle l’éducation civique a un rôle capital pour porter les valeurs qui nous rassemblent: l’esprit critique, l’attachement à la démocratie, au pluralisme, à l’état de droit, aux droits humains, le respect des faits et de l’histoire. </p>
+            
+                <p>La nouvelle ambition que nous défendons dans ce rapport insiste autant sur nos programmes scolaires, qui demandent plus de coordination et plus de cohérence, que sur les expériences d’engagement vécues par nos jeunes. À ce titre, permettez-moi de me réjouir qu’une priorité de la présidence française du Conseil ait fait l’objet d’un consensus: la création d’un véritable service civique européen, qui viendra amplifier la dynamique portée par le corps européen de solidarité. C’est pourquoi je vous demande d’être demain au rendez-vous pour que cette mobilité civique européenne, porteuse de nos valeurs en actes, devienne à terme, comme les Erasmus aujourd’hui, une voie puissante pour enraciner notre jeunesse dans les valeurs qui nous tiennent ensemble.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

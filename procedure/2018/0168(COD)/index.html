@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>L&#39;assurance automobile</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,27 +22,39 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>L&#39;assurance automobile</h2>
 
 
 
-
 <h3>🎯 Votes principaux</h3>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -49,12 +62,12 @@
     
         
         
-            <li>Protection des consommateurs, généralités</li>
+            <li>Cohésion économique, sociale et territoriale</li>
         
     
         
         
-            <li>Cohésion économique, sociale et territoriale</li>
+            <li>Protection des consommateurs, généralités</li>
         
     
         
@@ -74,17 +87,181 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2018/0168(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2018/0168(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-8-2019-0035_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-10-19-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+        
+        
+    
+        
+        
+            <article id="62">
+            <header>📝 Amendement n°62 | 
+
+✅️ Adopté
+
+</header>
+            
+                <div class="hidden"></div>
+                
+
+<p>
+
+  
+      <del>Pour information, la déclaration est libellée co  Déclaration de la Commission sur la directive d   La Commission reste déterminée à défendre un  le cadre de la directive sur l’assurance automob  victimes, y compris dans des situations transfro  que possible et ne soient pas soumises à des exi  susceptibles d’entraver leur accès à l’indemnisa  en grande partie de la question de savoir si elle  note à cet égard des préoccupations exprimées  au sujet des différences entre les États membre  c’est-à-dire le délai pendant lequel une personn  Commission examinera attentivement cette que  renforcer encore la protection des victimes, si d  niveau de l’Union se justifie.</del>
+  
+
+  
+      <ins>1 bis. prend acte de la déclaration de la Commission annexée à la présente résolution;   mme suit:  u Parlement européen et du Conseil modifiant   niveau élevé de protection des victimes dans  ile. Notre objectif est de faire en sorte que les  ntalières, soient indemnisées aussi rapidement  gences procédurales disproportionnées  tion. L’efficacité de l’indemnisation dépend  est effectuée en temps utile. Nous prenons  à plusieurs reprises par le Parlement européen  s en ce qui concerne les délais de prescription,  e lésée peut formuler une demande. La  stion et étudiera les solutions possibles afin de  es éléments démontrent qu’une action au</ins>
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">653</div>
+  <div class="against">39</div>
+  <div class="abstention">4</div>
+</span>
+
+  
+    
+    <a href="/voting/136176">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b></b> | </header>
+            
+                <p>La création d’organismes nationaux chargés d’indemniser les victimes en cas de faillite de l’assureur est une avancée importante, tout comme la clarification de plusieurs cas spéciaux apparus avec l’évolution des sociétés. L’encouragement du contrôle des assurances par les États membres des véhicules présents sur leur territoire, sans pour autant cibler spécifiquement les voitures étrangères, ainsi que la publication du mode de calcul des bonus des assureurs semblent être de bonnes mesures. Je note également que la Fédération française de l’assurance soutient ce projet.</p>
+            
+                <p>Néanmoins, si je juge toujours positif d’améliorer les conditions d’assurance, il importe également d’accélérer l’indemnisation des assurés. Par ailleurs, si je peux me féliciter du relèvement du minimum obligatoire de la couverture, il ne faudrait pas que la hausse du coût des assurances vienne impacter le niveau de vie des automobilistes.</p>
+            
+                <p>En France, depuis 2018 et l’apparition du mouvement des gilets jaunes, les classes moyennes, souvent rurales, qui dépendent de l’utilisation de leurs véhicules sont à bout. Que ce soit du fait de l’augmentation inédite du prix de l’essence, de l’abaissement des vitesses autorisées, du développement des contrôles radars ou, comme ici à Strasbourg, de la future interdiction des véhicules diesel, l’automobiliste voit de plus en plus l’utilisation de son véhicule comme un moyen de se faire taper par l’État.</p>
+            
+                <p>Faciliter la vie des citoyens français et européens, c’est notre seul objectif.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
+
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Perception des ressources propres provenant de la taxe sur la valeur ajoutée</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,89 +22,43 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Perception des ressources propres provenant de la taxe sur la valeur ajoutée</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
-    <article>
-    <header>👍 Adoption du texte | 
-
-✅️ Adopté
-
-</header>
-    
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
-        <section>
-
-<div class="votes ">
-  
-    <div class="+" style="width: calc(552/688 * 100%)">552</div>
-  
-  
-    <div class="-" style="width: calc(69/688 * 100%)">69</div>
-  
-  
-    <div class="0" style="width: calc(67/688 * 100%)">67</div>
-  
-</div>
-</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
-        <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
-        
-        
-            <section>
-
-
-
-<div class="votes">
-  
-    <div class="+" style="width: calc(78/78 * 100%)">78</div>
-  
-  
-  
-</div>
- 
-</section>
-            <a href="/voting/129466">🗳 Voir le détail du vote</a>
-        
-    
-    </article>
 
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Etat et évolution de l&#39;Union</li>
-        
     
         
         
@@ -122,101 +77,326 @@
     
         
         
+            <li>Fiscalité</li>
+        
+    
+        
+        
             <li>Marché intérieur, marché unique</li>
         
     
         
         
-            <li>Fiscalité</li>
+            <li>Etat et évolution de l&#39;Union</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2018/0133(NLE)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0049_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-03-24-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      «Article 9  1. Les rectifications à apporter, pour quelque cause que ce soit, aux relevés visés à l’article 7, paragraphe 1, concernant les exercices précédents sont effectuées d’un commun accord entre la Commission et l’État membre concerné.  Si l’État membre et la Commission ne sont pas d’accord sur une rectification, la Commission informe par lettre l’État membre concerné de la rectification nécessaire. Cette lettre constitue des &quot;mesures&quot; au sens de l’article 12, paragraphe 2, point c), du règlement (CE)  
-  
+<p>
 
   
-      <del>2. L’État membre concerné peut demander à la Commission de réexaminer  la rectification communiquée conformément au paragraphe 1, deuxième alinéa, dans un délai de deux mois à compter de la date de réception de la lettre visée au paragraphe 1, deuxième alinéa. Cette procédure de réexamen se conclut par une décision de la Commission qui doit être adoptée au plus tard trois mois après la date de réception de la demande de l’État membre.  Lorsque la décision de la Commission revoit en tout ou en partie les montants correspondant à la rectification, l’État membre met à disposition le montant correspondant. Ni la demande de réexamen de la rectification présentée par l’État membre ni un recours en annulation contre la décision de la Commission n’affectent l’obligation de l’État membre de mettre à disposition le montant correspondant à la rectification.  Toutes les rectifications sont intégrées dans des états cumulatifs, qui modifient les relevés précédents établis pour les exercices considérés.  3. La Commission adopte des actes d’exécution détaillant les modalités procédurales de la procédure de réexamen visée au paragraphe 2. Ces actes d’exécution sont adoptés en conformité avec la procédure d’examen visée à l’article 13, paragraphe 3. L’adoption de ces actes d’exécution est sans préjudice de l’application de la procédure de réexamen prévue au paragraphe 2.</del>
+      «Article 9  1. Les rectifications à apporter, pour quelque cause que ce soit, aux relevés visés à l’article 7, paragraphe 1, concernant les exercices précédents sont effectuées d’un commun accord entre la Commission et l’État membre concerné.  Si l’État membre et la Commission ne sont pas d’accord sur une rectification, la Commission informe par lettre l’État membre concerné de la rectification nécessaire. Cette lettre constitue des mesures au sens de l’article 12, paragraphe 2, point c), du règlement (CE
   
 
   
-      <ins>                                        </ins>
+      <del>)  2. L’État membre concerné peut demander à la Commission de réexaminer  la rectification communiquée conformément au paragraphe 1, deuxième alinéa, dans un délai de deux mois à compter de la date de réception de la lettre visée au paragraphe 1, deuxième alinéa. Cette procédure de réexamen se conclut par une décision de la Commission qui doit être adoptée au plus tard trois mois après la date de réception de la demande de l’État membre.  Lorsque la décision de la Commission revoit en tout ou en partie les montants correspondant à la rectification, l’État membre met à disposition le montant correspondant. Ni la demande de réexamen de la rectification présentée par l’État membre ni un recours en annulation contre la décision de la Commission n’affectent l’obligation de l’État membre de mettre à disposition le montant correspondant à la rectification.  Toutes les rectifications sont intégrées dans des états cumulatifs, qui modifient les relevés précédents établis pour les exercices considérés.  3. La Commission adopte des actes d’exécution détaillant les modalités procédurales de la procédure de réexamen visée au paragraphe 2. Ces actes d’exécution sont adoptés en conformité avec la procédure d’examen visée à l’article 13, paragraphe 3. L’adoption de ces actes d’exécution est sans préjudice de l’application de la procédure de réexamen prévue au paragraphe 2.  4</del>
   
 
   
-        
+      <ins>)                                            2</ins>
   
 
   
-      <del>4.</del>
-  
-
-  
-      <ins>2.</ins>
-  
-
-  
-       Après le 31 juillet de la quatrième année suivant un exercice donné, les relevés visés à l’article 7, paragraphe 1, ne sont plus rectifiés, sauf pour les points notifiés avant cette échéance soit par la Commission, soit par l’État membre concerné.&quot;
+      . Après le 31 juillet de la quatrième année suivant un exercice donné, les relevés visés à l’article 7, paragraphe 1, ne sont plus rectifiés, sauf pour les points notifiés avant cette échéance soit par la Commission, soit par l’État membre concerné.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">517</div>
+  <div class="against">169</div>
+  <div class="abstention">4</div>
+</span>
+
+  
     
-    <footer>
-        
-            
+    <a href="/voting/129363">📣 Vote nominal : voir le détail</a>
+  
 
-<div class="votes small">
-  
-    <div class="+" style="width: calc(517/690 * 100%)">517</div>
-  
-  
-    <div class="-" style="width: calc(169/690 * 100%)">169</div>
-  
-  
-    <div class="0" style="width: calc(4/690 * 100%)">4</div>
-  
-</div>
-
+</footer>
             
-                
-                
-                    
-                
-                <a href="/voting/129363">📣 Vote nominal : voir le détail</a>
-            
+            </article>
         
-    </footer>
-    </article>
     
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b></b> | </header>
+            . – Il s’agit d’un texte essentiellement technique, rationalisant et simplifiant le calcul de la ressource propre TVA. Il est favorable aux États membres qui auront la possibilité de demander à la Commission de réexaminer les montants demandés par cette dernière. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b></b> | </header>
+            J&#39;ai voté pour ce texte, essentiellement technique et qui porte sur une simplification des ressources propres issues de la TVA.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b></b> | </header>
+            Ce rapport vise à simplifier le calcul des ressources propres provenant de la taxe sur la valeur ajoutée. L&#39;objectif est de simplifier et de rendre plus transparente la procédure actuelle pour réduire la charge administrative pour les industries et les secteurs utilisant ce système. J’ai voté en faveur de ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b></b> | </header>
+            Je soutiens la rationalisation et la simplification du calcul de la ressource propre TVA, d’autant que le projet du Conseil est favorable aux États membres qui auront la possibilité de demander à la Commission de réexaminer les montants demandés par cette dernière. J’ai donc voté pour ce dossier.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b></b> | </header>
+            J’ai voté pour ce rapport car je soutiens la rationalisation et la simplification du calcul de la ressource propre provenant de la TVA. De plus, les États membres auront la possibilité de demander à la Commission de réexaminer les montants demandés par cette dernière.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b></b> | </header>
+            La taxe sur la valeur ajoutée représente entre 10 % et 15 % de ressources propres de l’Union européenne. Le présent rapport répond à une demande antérieure du Parlement européen de simplifier un certain nombre de procédures dans les calculs, et fait également partie de la feuille de route européenne qui vise à acquérir de nouveaux moyens de financements propres. En assouplissant une partie du cadre législatif et procédural relative au calcul, les États membres disposeront de meilleures marges de manœuvre pour collecter les taxes, ce qui permettra ultérieurement une redistribution équitablement répartie au niveau européen. J’ai donc voté pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b></b> | </header>
+            La rationalisation et la simplification du calcul de la ressource propre TVA sont à soutenir.Il s’agit d’un texte essentiellement technique, où le projet du Conseil est favorable aux États membres, qui auront la possibilité de demander à la Commission de réexaminer les montants demandés par cette dernière.Pour l’ensemble de ces raisons, j&#39;ai voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b></b> | </header>
+            J’ai voté en faveur de ce rapport sur la perception des ressources propres provenant de la taxe sur la valeur ajoutée. Ce texte technique amende le projet présenté par le Conseil. Il propose essentiellement de supprimer le dispositif de réexamen rapide des règlements relatifs aux ressources propres, qui serait facteur de retards et de paralysie du système des ressources propres, tout en faisant doublon avec les recours effectifs dont disposent déjà les États membres.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b></b> | </header>
+            Ce rapport vise à valider une modification du règlement précisant les conditions de perception, collecte et versement des recettes provenant de la taxe sur la valeur ajoutée. J’ai donc voté pour ce texte technique qui prévoit uniquement de simplifier la procédure de calcul de cette ressource qui représente 10 à 15 % du budget européen.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b></b> | </header>
+            Cet ensemble de texte vise à renforcer les ressources propres de l’Union européenne, ici les ressources propres appuyées sur la TVA. Il s’agit là d’une nécessité absolue en vue de diminuer le fardeau budgétaire qui pèse sur des États contributeurs nets comme la France, notamment pour assurer le remboursement du plan de relance européen, et financer un budget européen à la hauteur des urgences climatique, environnementale et sociale. Je soutiens donc cet ensemble de texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b></b> | </header>
+            Retire aux États membres la possibilité de demander un réexamen des calculs réalisés par la Commission.Contre.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b></b> | </header>
+            J’ai voté en faveur de mon rapport qui contribue à lever les dernières barrières au déploiement du nouveau système de ressources propres de l’UE et qui fait suite aux propositions de simplification de la Commission dans le calcul et la mise en œuvre de la ressource TVA. L’adoption de ce rapport permettra la mise en œuvre de la nouvelle ressource propre basée sur la TVA dès que la procédure de ratification par les États membres sera achevée. La simplification de la ressource TVA est une demande de longue date du Parlement, c’est une victoire.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b></b> | </header>
+            . – J’ai voté pour ce rapport car la rationalisation et la simplification du calcul de la ressource propre TVA sont à soutenir.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b></b> | </header>
+            La rationalisation et la simplification du calcul de la ressource propre TVA sont à soutenir.Il s’agit d’un texte essentiellement technique pour lequel un vote contre de ma part ne serait pas compris d’autant que le projet du Conseil est favorable aux États membres, qui auront la possibilité de demander à la Commission de réexaminer les montants demandés par cette dernière. Pour l’ensemble de ces raisons, je soutiens ce texte. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b></b> | </header>
+            J&#39;ai voté en faveur de ce texte essentiellement technique (il ne porte pas sur le principe même des ressources propres), et qui apporte une simplification bienvenue. Il est plutôt favorable aux États membres, qui auront désormais la possibilité de demander à la Commission de réexaminer les montants TVA demandés.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b></b> | </header>
+            . – La simplification de la ressource propre TVA était demandée et attendue depuis de nombreuses années. Ce souci de simplification va dans le bon sens. Il s’agit d’un texte essentiellement technique. Le projet du Conseil est favorable aux États membres qui auront la possibilité de demander à la Commission de réexaminer les montants demandés par cette dernière. J’ai, donc, voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b></b> | </header>
+            Une procédure de révision des paiements du règlement modifiant le règlement 1553/89 a été suggérée par la présidence allemande du Conseil en 2018 relative à la ressource propre fondée sur la TVA. La Commission a proposé en conséquence des simplifications substantielles dans le calcul et la mise en œuvre des ressources propres fondées sur la TVA. Les dispositions relatives à un &quot;gel&quot; pluriannuel du taux moyen pondéré de la TVA par État membre simplifieront et rationaliseront le calcul, la mise en œuvre et le contrôle de la ressource propre fondée sur la TVA. La simplification de la ressource propre TVA était demandée et attendue depuis de nombreuses années. La rationalisation et la simplification du calcul de la ressource propre TVA sont à soutenir. Pour l’ensemble de ces raisons, j’ai voté en faveur du texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b></b> | </header>
+            La Commission propose des simplifications substantielles dans le calcul et la mise en œuvre des ressources propres fondées sur la TVA.Les dispositions relatives à un &quot;gel&quot; pluriannuel du taux moyen pondéré de la TVA par État membre simplifieront et rationaliseront le calcul, la mise en œuvre et le contrôle de la ressource propre fondée sur la TVA.La simplification de la ressource propre TVA était demandée et attendue depuis de nombreuses années. Ce souci de simplification va dans le bon sens.Il s’agit d’un texte essentiellement technique. Le projet du Conseil est favorable aux États membres, qui auront la possibilité de demander à la Commission de réexaminer les montants demandés par cette dernière.J’ai donc voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b></b> | </header>
+            Le projet de règlement du Conseil a introduit une disposition de révision rapide stipulant que les États membres pourraient être autorisés par un tel mécanisme à contester l&#39;exactitude des calculs de la ressource propre TVA. Ce projet du Conseil est favorable aux États membres qui auront la possibilité de demander à la Commission de réexaminer les montants demandés par cette dernière. La simplification de la ressource propre TVA était demandée et attendue depuis de nombreuses années, ce souci de rationalisation et de simplification va incontestablement dans le bon sens. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b></b> | </header>
+            J’ai voté en faveur de ce rapport technique qui vise à rationaliser et à simplifier le calcul de la TVA comme ressource propre.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2018/0133(NLE)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0049_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-03-24-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

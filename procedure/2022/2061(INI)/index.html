@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Union bancaire - rapport annuel 2022</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Union bancaire - rapport annuel 2022</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(454/622 * 100%)">454</div>
-  
-  
-    <div class="-" style="width: calc(152/622 * 100%)">152</div>
+    <div class="for" style="width: calc(454/622 * 100%)">454</div>
   
   
-    <div class="0" style="width: calc(16/622 * 100%)">16</div>
+    <div class="against" style="width: calc(152/622 * 100%)">152</div>
+  
+  
+    <div class="abstention" style="width: calc(16/622 * 100%)">16</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,19 +88,20 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(48/72 * 100%)">48</div>
+    <div class="for" style="width: calc(48/72 * 100%)">48</div>
   
   
-    <div class="-" style="width: calc(24/72 * 100%)">24</div>
+    <div class="against" style="width: calc(24/72 * 100%)">24</div>
   
   
 </div>
  
 </section>
-            <a href="/voting/156771">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/156771">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -119,47 +124,199 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2061(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0177_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-07-11-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                            <option value="RE,197511">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197683,197629,197615">🇫🇷 Reconquête!</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       2. 
   
 
   
-      <del>suit les évolutions en cours sur les marchés financiers à la suite de la faillite de la Silicon Valley Bank et de deux autres banques américaines de taille moyenne, ainsi que du rachat de Credit Suisse par UBS; salue la déclaration commune de </del>
+      <del>suit les évolutions en cours sur les marchés financiers </del>
   
 
   
-      <ins>insiste, à la lumière de la récente faillite de la Silicon Valley Bank et de deux autres banques américaines de taille moyenne, sur les risques financiers découlant actuellement d’une surveillance bancaire inadéquate, de la dévaluation des portefeuilles des banques causée par les hausses générales des taux d’intérêt et de l’exposition des banques au secteur des cryptomonnaies; invite </ins>
+      <ins>insiste, </ins>
   
 
   
-      l’ABE, 
+      à la 
   
 
   
-      <del>du </del>
+      <del>suite</del>
   
 
   
-      <ins>le </ins>
+      <ins>lumière</ins>
   
 
   
-      CRU et 
+       de la 
+  
+
+  
+      <ins>récente </ins>
+  
+
+  
+      faillite de la Silicon Valley Bank et de deux autres banques américaines de taille moyenne, 
+  
+
+  
+      <del>ainsi que du rachat de Credit Suisse par UBS; salue la déclaration commune de</del>
+  
+
+  
+      <ins>sur les risques financiers découlant actuellement d’une surveillance bancaire inadéquate, de la dévaluation des portefeuilles des banques causée par les hausses générales des taux d’intérêt et de l’exposition des banques au secteur des cryptomonnaies; invite</ins>
+  
+
+  
+       l’ABE, 
+  
+
+  
+      <del>du</del>
+  
+
+  
+      <ins>le</ins>
+  
+
+  
+       CRU et 
   
 
   
@@ -171,36 +328,52 @@
   
 
   
-      <del>du 20 mars 2023 sur l’annonce faite le 19 mars 2023 par les autorités suisses;</del>
+      <del>du 20 mars 2023 sur l’annonce faite le 19 mars 2023 par les autorités suisses</del>
   
 
   
-      <ins>à évaluer correctement ces risques dans le système bancaire de l’Union; s’inquiète du fait que la poursuite de la concentration bancaire soit considérée comme la meilleure option de résolution, comme dans le cas du rachat de Crédit Suisse par UBS;</ins>
+      <ins>à évaluer correctement ces risques dans le système bancaire de l’Union; s’inquiète du fait que la poursuite de la concentration bancaire soit considérée comme la meilleure option de résolution, comme dans le cas du rachat de Crédit Suisse par UBS</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
     
-    <article>
-    <header>📝 Amendement n°2 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       6. insiste pour que l’Union européenne applique 
@@ -214,149 +387,185 @@
       <ins>intégralement et sans délai la réforme de Bâle III;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
     
-    <article>
-    <header>📝 Amendement n°3 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>20 bis. souligne que la demande d’une réduction rapide des PNP, notamment par la vente de PNP non performants à des entités tierces, s’est traduite par d’importantes pertes en capital pour le secteur bancaire, souvent supportées par les budgets publics, et a affaibli encore davantage la protection des débiteurs; s’inquiète du fait qu’une pression similaire puisse s’exercer en cas de nouvelles augmentations des PNP résultant de la politique monétaire actuelle;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
     
-    <article>
-    <header>📝 Amendement n°4 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       25. estime qu’un secteur bancaire bien diversifié, comprenant des banques de petite taille et des banques locales ainsi que des banques publiques et coopératives, représente une bonne solution pour les entreprises et les ménages; 
   
 
   
-      <del>souligne les risques systémiques résultant des interconnexions et de la complexité, qui font le lit du problème des banques «trop grandes pour faire faillite» ayant motivé le travail considérable que les institutions de l’Union ont accompli à cet égard,</del>
+      <del>souligne les risques systémiques résultant des interconnexions et de la complexité, qui font le lit du problème des banques «trop grandes pour faire faillite» ayant motivé le travail considérable que les institutions de l’Union ont accompli à cet égard, et demande que ce travail se poursuive</del>
   
 
   
-      <ins>attire l’attention sur le fait que cette tendance systémique à créer des banques «trop grandes pour faire faillite» exacerbe les risques financiers, comme l’a déjà prouvé la crise financière mondiale,</ins>
+      <ins>attire l’attention sur le fait que cette tendance systémique à créer des banques «trop grandes pour faire faillite» exacerbe les risques financiers, comme l’a déjà prouvé la crise financière mondiale, et que ce problème n’a jamais été véritablement résolu; observe que l’union bancaire encourage la concentration financière</ins>
   
 
   
-       et 
-  
-
-  
-      <del>demande </del>
-  
-
-  
-      que ce 
-  
-
-  
-      <del>travail se poursuive;</del>
-  
-
-  
-      <ins>problème n’a jamais été véritablement résolu; observe que l’union bancaire encourage la concentration financière;</ins>
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
     
-    <article>
-    <header>📝 Amendement n°5 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       47. souligne 
   
 
   
-      <del>que, malgré les répercussions de la pandémie de COVID- 19 et de la guerre en Ukraine, le taux de prêts non performants a baissé, pour s’établir à 2,29 %; prend acte des progrès importants accomplis en matière de réduction des risques dans le secteur bancaire; déplore, en revanche, les progrès limités accomplis en matière de partage des risques; demande la mise en place d’un mécanisme de partage des risques au moyen d’un SEAD, sans pour autant mettre fin à la tendance à la réduction des risques dans tous les pays de l’Union; insiste sur l’importance de poursuivre la réduction des risques en vue de l’achèvement de l’union bancaire;</del>
+      <del>que, malgré les répercussions de la pandémie de COVID- 19 et de la guerre en Ukraine, le taux de prêts non performants a baissé, pour s’établir à 2,29 %; prend acte des progrès importants accomplis en matière de réduction des risques dans le secteur bancaire; déplore, en revanche, les progrès limités accomplis en matière de partage des risques; demande la mise en place d’un mécanisme de partage des risques au moyen d’un SEAD, sans pour autant mettre fin à la tendance à la réduction des risques dans tous les pays de l’Union; insiste sur l’importance de poursuivre la réduction des risques en vue de l’achèvement de l’union bancaire</del>
   
 
   
-      <ins>qu’un SEAD devrait être établi sans conditions limitant l’exposition des banques à la dette souveraine, en particulier dans le cas des pays dont le taux d’endettement est élevé;</ins>
+      <ins>qu’un SEAD devrait être établi sans conditions limitant l’exposition des banques à la dette souveraine, en particulier dans le cas des pays dont le taux d’endettement est élevé</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
     
-    <article>
-    <header>📝 Amendement n°6 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       14. se félicite du fait que la Croatie soit devenue le 20e État membre à rejoindre la zone euro; invite les États membres de l’Union européenne qui ne font pas encore partie de l’union bancaire à prendre des mesures pour y adhérer; rappelle que toute adhésion de nouveaux États membres à la zone euro est subordonnée à la présence d’un cadre solide et efficace de lutte contre le blanchiment de capitaux dans l’État membre concerné;
@@ -366,48 +575,148 @@
       <ins> souligne, cependant, que chaque État membre a le droit de décider s’il souhaite adopter l’euro;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(177/631 * 100%)">177</div>
-  
-  
-    <div class="-" style="width: calc(426/631 * 100%)">426</div>
-  
-  
-    <div class="0" style="width: calc(28/631 * 100%)">28</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/156760">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    ECR
     
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2061(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0177_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">177</div>
+  <div class="against">426</div>
+  <div class="abstention">28</div>
+</span>
+
   
+    
+    <a href="/voting/156760">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-07-11-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Reconquête!</header>
+            . – J’ai voté contre ce texte. Rituel annuel, il déplore toujours les mêmes choses, et d’abord l’impossibilité d’une vraie union bancaire tant qu’un système européen d’assurance des dépôts n’aura pas été créé. Un tel système permettrait en effet de partager entre tous les pertes dues à la faillite d’une banque de la zone euro quelle qu’elle soit. Il appelle en outre de ses vœux la création de l’euro numérique, qui, j’en suis persuadé et malgré les discours de Christine Lagarde, se substituerait tôt ou tard aux billets et aux pièces et constituerait un moyen de surveillance inacceptable des populations et de leurs habitudes de consommation.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            . – L’Union bancaire a été une des réponses majeures de l’Union européenne à la crise de la zone euro. Favorable à ce rapport technique, je me suis prononcé en sa faveur.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            Chaque année nous votons un rapport qui identifie les lacunes de l’Union bancaire et exprime la position du Parlement sur les différents sujets qui y sont liés (mécanisme de résolution unique, mécanisme de surveillance unique...). J’ai voté en faveur de ce texte qui estime que l’Union bancaire a été une des réponses majeures de l’Union européenne à la crise de la zone euro.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Le secteur bancaire, quelque peu épargné depuis quelques années, retrouve une zone de turbulences. Et les règles de l’Union bancaire restent à mi-chemin sans offrir ni des procédures stables et claires ni les fonds suffisants pour faire face à une crise d’envergure. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car les modifications budgétaires qu’il propose, justifiées par le « verdissement » du secteur bancaire, mettent en danger l’épargne des particuliers voire des États sur le long terme.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport sur l’Union bancaire. Le texte souligne que cette union bancaire a été l’une des réponses majeures de l’Union européenne à la crise de la zone euro. Initiée en 2012, sa construction n’est pas encore achevée. Si les piliers de la supervision et de la résolution sont d’ores et déjà communautarisés, le rapport rappelle que la protection des dépôts des épargnants, qui relève des législations nationales, demeure à mettre en place à l’échelle de l’UE.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations et les recommandations du Parlement européen sur l’avancement de l’union bancaire européenne. Il appelle notamment à parachever l’union des marchés de capitaux au lieu d’insister sur sa régulation et évoque des dérogations possibles aux accords de Bâle III plutôt que de demander la renforcement des règles prudentielles des banques. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai voté en faveur du rapport annuel 2022 sur l’Union bancaire. Je suis d’avis qu’une Union bancaire solide est nécessaire à la stabilité et à la compétitivité de l’Union économique et monétaire ainsi qu’au renforcement du rôle de l’euro sur la scène internationale. Des progrès significatifs ont été accomplis depuis la crise financière de 2008 grâce à la mise en place du mécanisme de surveillance unique et du mécanisme de résolution unique. Les banques européennes sont désormais mieux placées pour résister aux chocs financiers et des mécanismes de résolution sont en place pour garantir que les banques défaillantes puissent être liquidées sans utiliser l&#39;argent des contribuables. Enfin, le rapport soutient les efforts visant à renforcer et à compléter l&#39;Union bancaire.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            Ce rapport annuel présente un aperçu des questions liées à l&#39;Union bancaire, une politique de l&#39;Union européenne visant à établir des règles uniformes pour les banques européennes en matière de normes prudentielles et de résolution des crises. Il met en évidence les modifications législatives en cours et souligne le retour des risques. Le secteur bancaire, qui a connu une relative accalmie ces dernières années, fait face à une période plus turbulente. Les règles de l&#39;Union bancaire restent partiellement efficaces, ne fournissant ni des procédures stables et claires, ni des fonds adéquats pour faire face à une crise d&#39;ampleur. Je me suis donc opposé à ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Ce texte propose d’établir un corpus de règles uniques pour les banques européennes. Il comporte divers points répréhensibles. En premier lieu, la question de la solvabilité de nombreuses entreprises mises sous perfusion avec les aides Covid se pose dès lors qu’elles cessent progressivement. Ensuite, le verdissement de la politique monétaire est un objectif auquel nous devons réaffirmer notre opposition. Enfin, les difficultés de l’immobilier commercial pourraient également avoir des conséquences pour les établissements de crédit à moyen terme. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Ce rapport annuel dresse le panorama des sujets relatifs à l’Union bancaire, politique de l’Union visant à établir un corpus de règles uniques pour les banques européennes axées sur les normes prudentielles et la résolution des crises. La faillite de plusieurs banques américaines au printemps (Silicon Valley Bank et Signature Bank), mais surtout le rachat par UBS du Crédit suisse finalisé en juin, dont la valorisation s’était effondrée sur craintes d’un défaut de liquidité, ont fait ressurgir la crainte de défauts bancaire et d’une potentielle crise.Le rapport alerte à juste titre sur plusieurs risques connus, par exemple celui, toujours élevé, découlant des activités bancaires non réglementées (shadow banking) ou encore sur le risque de concentration excessive dans le secteur (risque systémique lié au banques too big to fail), critiquant indirectement les appels souvent relayés à de nouvelles concentrations bancaires.Mais il ressasse toujours les mêmes sujets que les précédents rapports annuels sur l’Union bancaire, notamment l’impossible compromis entre réduction des risques et partage des risques, écueil sur lequel bute le fonds de garantie des dépôts.J’ai donc voté contre ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Ce rapport annuel dresse le panorama des sujets relatifs à l’Union bancaire, visant à établir un corpus de règles uniques pour les banques européennes axées sur les normes prudentielles et la résolution des crises. Il met l’accent sur les modifications législatives en cours et le retour des risques. Ces rapports annuels ressassent un peu toujours les mêmes sujets, notamment l’impossible compromis entre réduction des risques et partage des risques, écueil sur lequel bute le fonds de garantie des dépôts. Au final, le secteur bancaire, quelque peu épargné depuis quelques années, retrouve une zone plus turbulente. Et les règles de l’Union bancaire restent à mi-chemin sans offrir ni des procédures stables et claires ni les fonds suffisants pour faire face à une crise d’envergure. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car les règles de l’Union bancaire restent à mi-chemin, sans offrir ni des procédures stables et claires ni les fonds suffisants pour faire face à une crise d’envergure. En effet, la question de la solvabilité de nombreuses entreprises mises sous perfusion avec les aides Covid va se poser dès lors qu’elles cesseront progressivement et les difficultés de l’immobilier commercial pourraient également avoir des conséquences pour les établissements de crédit.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

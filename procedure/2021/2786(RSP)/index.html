@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Résolution sur Hong Kong, notamment l’affaire de l’Apple Daily</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Résolution sur Hong Kong, notamment l’affaire de l’Apple Daily</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(578/680 * 100%)">578</div>
-  
-  
-    <div class="-" style="width: calc(29/680 * 100%)">29</div>
+    <div class="for" style="width: calc(578/680 * 100%)">578</div>
   
   
-    <div class="0" style="width: calc(73/680 * 100%)">73</div>
+    <div class="against" style="width: calc(29/680 * 100%)">29</div>
+  
+  
+    <div class="abstention" style="width: calc(73/680 * 100%)">73</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,19 +88,20 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(54/79 * 100%)">54</div>
+    <div class="for" style="width: calc(54/79 * 100%)">54</div>
   
   
   
-    <div class="0" style="width: calc(25/79 * 100%)">25</div>
+    <div class="abstention" style="width: calc(25/79 * 100%)">25</div>
   
 </div>
  
 </section>
-            <a href="/voting/135093">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/135093">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -104,12 +109,12 @@
     
         
         
-            <li>Libertés fondamentales, droits de l&#39;homme, démocratie, état de droit en général</li>
+            <li>Relations extérieures de l&#39;Union</li>
         
     
         
         
-            <li>Relations extérieures de l&#39;Union</li>
+            <li>Libertés fondamentales, droits de l&#39;homme, démocratie, état de droit en général</li>
         
     
         
@@ -119,235 +124,423 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2786(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/RC-9-2021-0385_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-07-06-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>-1. demande à tous les États étrangers de cesser de s’immiscer dans la situation à Hong Kong et d’empêcher les États-Unis, le Royaume-Uni et l’Union européenne d’utiliser ce prétexte pour compliquer encore la situation et remettre en cause la souveraineté chinoise; souligne la nécessité de mettre un terme à la prise de positions belliqueuses et antagonistes vis- à-vis de la Chine; dénonce le recours à une propagande politique malhonnête au sujet de la République populaire de Chine et de son territoire; invite l’Union européenne à désavouer cette campagne de propagande et à analyser la situation en toute honnêteté et impartialité, sans suivre les États-Unis dans leur tentative de déstabiliser le pays dans le cadre de leur antagonisme avec la Chine sur la scène internationale; insiste sur la nécessité de jeter les fondations d’un monde multilatéral reposant sur la paix, la souveraineté, la coopération et le progrès social; invite dès lors instamment l’Union à cesser d’instrumentaliser les droits de l’homme au service d’intérêts économiques ou géopolitiques;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">22</div>
+  <div class="against">616</div>
+  <div class="abstention">53</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(22/691 * 100%)">22</div>
-  
-  
-    <div class="-" style="width: calc(616/691 * 100%)">616</div>
-  
-  
-    <div class="0" style="width: calc(53/691 * 100%)">53</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>-1 bis. souligne que Hong Kong fait partie de la République populaire de Chine, avec le statut de région administrative spéciale (RAS), et relève de la règle «un pays, deux systèmes»; réprouve toute tentative étrangère de remettre en cause la souveraineté chinoise sur Hong Kong; souligne l’importance d’une coopération plus étroite entre l’Union européenne et la République populaire de Chine dans différents secteurs, y compris dans le cadre des nouvelles routes de la soie, et le besoin de relations fondées sur la compréhension et les accords profitables aux deux parties; rappelle l’importance que revêtent de bonnes relations avec la Chine, en particulier dans le contexte de la pandémie de COVID-19, qui a vu les autorités chinoises collaborer étroitement avec différents États membres dans un élan de solidarité;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">27</div>
+  <div class="against">616</div>
+  <div class="abstention">47</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(27/690 * 100%)">27</div>
-  
-  
-    <div class="-" style="width: calc(616/690 * 100%)">616</div>
-  
-  
-    <div class="0" style="width: calc(47/690 * 100%)">47</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       13. 
   
 
   
-      <del>réaffirme sa position sur </del>
+      <del>réaffirme sa position sur</del>
   
 
   
-      <ins>dénonce la signature de </ins>
+      <ins>dénonce la signature de</ins>
   
 
   
-      l’accord global UE-Chine relatif aux 
+       l’accord global UE-Chine relatif aux investissements
   
 
   
-      <del>investissements, </del>
+      <del>, </del>
   
 
   
-      <ins>investissements alors que les atteintes aux droits de l&#39;homme se multiplient; réaffirme sa position </ins>
+      <ins> alors que les atteintes aux droits de l&#39;homme se multiplient; réaffirme sa position </ins>
   
 
   
       exprimée dans sa résolution du 21 mai 2021, y compris la nécessité urgente d’adopter des mesures ciblées supplémentaires relevant du régime mondial de sanctions de l’Union en matière de droits de l’homme, le cas échéant, pour continuer de réagir à la répression exercée au Xinjiang et à Hong Kong et inciter la Chine à mettre un terme à toutes les violations;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">139</div>
+  <div class="against">453</div>
+  <div class="abstention">99</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(139/691 * 100%)">139</div>
-  
-  
-    <div class="-" style="width: calc(453/691 * 100%)">453</div>
-  
-  
-    <div class="0" style="width: calc(99/691 * 100%)">99</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>16 bis. souligne qu’alors que l’Union traverse toujours une pandémie massive, cet accord renforcera encore notre dépendance à l’égard des produits «made in China»; souligne que l’autonomie stratégique ne doit pas exister que sur le papier;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(102/691 * 100%)">102</div>
-  
-  
-    <div class="-" style="width: calc(505/691 * 100%)">505</div>
-  
-  
-    <div class="0" style="width: calc(84/691 * 100%)">84</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2786(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/RC-9-2021-0385_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">102</div>
+  <div class="against">505</div>
+  <div class="abstention">84</div>
+</span>
+
   
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-07-06-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197494</div>
+            
+            <header><b>Nathalie LOISEAU</b> | Renaissance</header>
+            
+                <p> – Monsieur le Président, Viktor Orbán et Carrie Lam ont deux points en commun: ils ne savent pas dire non à Pékin et ils détestent la presse libre. Reporters sans frontières vient d’ailleurs de les distinguer parmi les dirigeants mondiaux qui s’en prennent le plus aux journalistes. Ce n’est donc pas un hasard si le premier ministre hongrois a volé au secours de la dirigeante de Hong Kong et empêché l’Union européenne d’ouvrir ses portes aux démocrates hongkongais qui fuient une répression devenue systématique. Ce n’est pas un hasard, mais c’est une honte. Vingt-six États européens étaient prêts à lancer une bouée de sauvetage aux journalistes et aux militants que les dirigeants de Hong Kong veulent réduire au silence en les accueillant dans l’Union européenne. Mais Viktor Orbán veillait et il a dit non. Les démocrates de Hong Kong, l’Australie, le Canada et notre voisin, le Royaume-Uni, sauront les accueillir, mais pas nous. Il est temps de changer nos règles et d’abandonner la règle de l’unanimité en politique étrangère. Il est temps de demander des comptes à Viktor Orbán sur son combat acharné contre les libertés.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197623</div>
+            
+            <header><b>Thierry MARIANI</b> | Rassemblement national</header>
+            
+                <p>La diplomatie n’est pas cependant une affaire de sympathie ou de sentiments. C’est une affaire d’intérêts nationaux. En 1997, l’Angleterre a décidé de rétrocéder Hong Kong à la Chine et d’abandonner de facto la souveraineté sur l’île. Et chacun savait déjà la suite de l’histoire... On peut le regretter. On peut regretter que les nations européennes aient été et continuent d’être incitées à réduire leur influence à travers le monde. Mais je suis également réaliste: l’Union européenne n’a aucune influence à Hong Kong et nos nations n’ont aucun intérêt à adopter une rhétorique belliciste contre la Chine, comme on peut le constater déjà dans certains propos. Ouvrons les yeux et cherchons notre propre voie, l’intérêt de l’Europe, au milieu de l’adversité entre la Chine et les États-Unis. Ne nous laissons pas entraîner à nouveau dans une nouvelle guerre froide.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197534</div>
+            
+            <header><b>François-Xavier BELLAMY</b> | Les Républicains</header>
+            
+                <p>Depuis ce Parlement, nous devons dire notre immense admiration pour le courage de ceux qui payent le prix de cet engagement auquel ils n’ont jamais renoncé en faveur de la démocratie: les journalistes d’</p>
+            
+                <p>Ce n’est donc pas seulement à la liberté de Hong Kong que la Chine s’attaque, mais aussi à tout le monde occidental. Elle fragilise de fait tout le climat des relations que nous pouvons construire avec elle, y compris sur le plan commercial. Qu’en sera-t-il des investissements que nous prétendons sécuriser avec la Chine, si cette plateforme que Hong Kong a toujours représentée pour les relations commerciales devait disparaître définitivement, dans sa liberté, au profit du Parti communiste chinois?</p>
+            
+                <p>L’Europe doit promouvoir les principes de l’état de droit auxquels elle s’honore de tenir dans ses négociations commerciales et politiques. Elle doit ici prouver sa cohérence. Nous sommes attendus parce que, de fait, c’est l’avenir de la liberté qui est en jeu. Si nous ne réagissons pas, nous laisserons la Chine imposer son modèle, qui est en réalité un contre-modèle global.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197502</div>
+            
+            <header><b>Marie-Pierre VEDRENNE</b> | Mouvement Démocrate</header>
+            
+                <p> – Monsieur le Président, Madame la Commissaire, une nouvelle fois, la Chine ne respecte aucun de ses engagements – dont le principe «un État, deux systèmes». Une nouvelle fois, la Chine demeure prête à tout pour faire taire opposition, critiques ou même once de liberté à Hong Kong.</p>
+            
+                <p>Nous, Parlement européen, portons un message de solidarité et de soutien inconditionnel avec les démocrates hongkongais. La Chine ne nous fera pas taire. La liberté de la presse n’est pas négociable. Utilisons notre régime européen de défense des droits de l’homme pour sanctionner les responsables de cette répression ignoble; utilisons nos relations commerciales avec la Chine comme levier et soyons clairs sur l’avenir.</p>
+            
+                <p>Aujourd’hui, l’accord sur les investissements avec la Chine est gelé. Demain, si les sanctions chinoises contre notre institution et nos collègues sont levées, nous devrons être et nous serons fermes, et nous nous positionnerons à la lumière du respect des droits de l’homme par la Chine, non seulement au Xinjiang, mais aussi à Hong Kong. Solidarité avec Hong Kong, fermeté avec la Chine, voilà notre ligne de conduite. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197511</div>
+            
+            <header><b>Salima YENBOU</b> | Les Écologistes</header>
+            
+                <p> – Monsieur le Président, quoi de plus classique pour une dictature que d’accuser les personnes critiques de travailler pour des forces étrangères, même lorsque les critiques viennent de l’intérieur, de leur propre société civile, de leurs propres journalistes? Molière écrivait: «Qui veut noyer son chien l’accuse de la rage.» C’est le cas à Hong Kong avec la dramatique disparition du quotidien prodémocratie </p>
+            
+                <p>Bilan d’un an de loi sur la sécurité nationale pilotée par Pékin: des bureaux de presse fouillés, des journalistes harcelés et arrêtés, la confiscation des avoirs de médias. Comment ne pas penser à cette réplique si sibylline, mais si lucide du chef-d’œuvre </p>
+            
+                <p>Au peuple hongkongais, mais aussi au peuple du Xinjiang, du Tibet, de Mongolie intérieure, je veux témoigner notre soutien et notre solidarité. Au peuple européen, je veux rappeler à quel point nos libertés sont précieuses et fragiles, et qu’il ne faut jamais baisser la garde. Nous devons défendre les droits humains et la liberté de la presse, aussi bien à l’extérieur de l’Union qu’à l’intérieur. </p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

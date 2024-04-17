@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Gouvernance d’entreprise durable</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Gouvernance d’entreprise durable</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(347/696 * 100%)">347</div>
-  
-  
-    <div class="-" style="width: calc(307/696 * 100%)">307</div>
+    <div class="for" style="width: calc(347/696 * 100%)">347</div>
   
   
-    <div class="0" style="width: calc(42/696 * 100%)">42</div>
+    <div class="against" style="width: calc(307/696 * 100%)">307</div>
+  
+  
+    <div class="abstention" style="width: calc(42/696 * 100%)">42</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(48/79 * 100%)">48</div>
+    <div class="for" style="width: calc(48/79 * 100%)">48</div>
   
   
-    <div class="-" style="width: calc(24/79 * 100%)">24</div>
+    <div class="against" style="width: calc(24/79 * 100%)">24</div>
   
   
-    <div class="0" style="width: calc(7/79 * 100%)">7</div>
+    <div class="abstention" style="width: calc(7/79 * 100%)">7</div>
   
 </div>
  
 </section>
-            <a href="/voting/126250">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/126250">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -106,12 +111,12 @@
     
         
         
-            <li>Politiques communautaires</li>
+            <li>Politique de l&#39;entreprise, coopération entre entreprises</li>
         
     
         
         
-            <li>Politique de l&#39;entreprise, coopération entre entreprises</li>
+            <li>Politiques communautaires</li>
         
     
         
@@ -121,183 +126,445 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2137(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0240_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-12-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       26. estime que, au cours du processus de définition et de suivi de leurs stratégies de durabilité, les entreprises devraient 
   
 
   
-      <del>être tenues d’informer et de consulter toutes les parties prenantes concernées;</del>
+      <del>être tenues d’informer et de consulter</del>
   
 
   
-      <ins>informer toutes les parties prenantes concernées et dialoguer avec elles;</ins>
+      <ins>informer</ins>
   
 
   
-       juge que la notion de partie prenante devrait être interprétée au sens large et inclure toutes les personnes dont les droits et intérêts peuvent être affectés par les décisions de l’entreprise, notamment les employés, les syndicats, les communautés locales, les peuples autochtones, les associations de citoyens, les actionnaires, la société civile et les organisations environnementales; estime par ailleurs qu’il est indispensable de 
+       toutes les parties prenantes concernées
   
 
   
-      <del>consulter les </del>
+      <ins> et dialoguer avec elles</ins>
   
 
   
-      <ins>se prévaloir de l’expertise des </ins>
+      ; juge que la notion de partie prenante devrait être interprétée au sens large et inclure toutes les personnes dont les droits et intérêts peuvent être affectés par les décisions de l’entreprise, notamment les employés, les syndicats, les communautés locales, les peuples autochtones, les associations de citoyens, les actionnaires, la société civile et les organisations environnementales; estime par ailleurs qu’il est indispensable de 
   
 
   
-      autorités 
+      <del>consulter les autorités publiques    </del>
   
 
   
-      <del>publiques </del>
-  
-
-  
-         
-  
-
-  
-      <ins>publiques </ins>
+      <ins>se prévaloir de l’expertise des autorités    publiques </ins>
   
 
   
       nationales et locales chargées de la viabilité des activités économiques, en particulier celles chargées des politiques publiques en matière d’emploi et d’environnement;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      aucun français
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">317</div>
+  <div class="against">360</div>
+  <div class="abstention">17</div>
+</span>
+
+  
+    
+    <a href="/voting/125592">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(317/694 * 100%)">317</div>
-  
-  
-    <div class="-" style="width: calc(360/694 * 100%)">360</div>
-  
-  
-    <div class="0" style="width: calc(17/694 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125592">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      27. estime que cet engagement devrait se faire, en fonction de la taille et du domaine d’activité de l’entreprise concernée, 
-  
+<p>
 
   
-      <ins>et exception faite des petites et moyennes entreprises (PME) qui n’interviennent pas dans des secteurs à haut risque, lesquels devraient être définis par la Commission, </ins>
+      27. estime que cet engagement devrait se faire, en fonction de la taille et du domaine d’activité de l’entreprise concernée,
   
 
   
-      au moyen de comités consultatifs auxquels participeraient des représentants des parties prenantes ou des porte-parole, y compris des employés et des experts indépendants, dans le but de prodiguer des conseils sur le contenu et la mise en œuvre de la stratégie de durabilité de l’entreprise; estime que ces comités 
+      <ins> et exception faite des petites et moyennes entreprises (PME) qui n’interviennent pas dans des secteurs à haut risque, lesquels devraient être définis par la Commission,</ins>
   
 
   
-      <del>consultatifs pourraient être présidés par des administrateurs non exécutifs et </del>
+       au moyen de comités consultatifs auxquels participeraient des représentants des parties prenantes ou des porte-parole, y compris des employés et des experts indépendants, dans le but de prodiguer des conseils sur le contenu et la mise en œuvre de la stratégie de durabilité de l’entreprise; estime que ces comités
   
 
   
-      <ins>   consultatifs </ins>
+      <del> consultatifs pourraient être présidés par des administrateurs non exécutifs et</del>
   
 
   
-      devraient avoir le droit, si une large majorité l’approuve, de demander un audit 
+      <ins>    consultatifs</ins>
   
 
   
-      <del>   </del>
+       devraient avoir le droit, si une large majorité l’approuve, de demander un audit
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
       indépendant en cas de préoccupations raisonnables quant à la bonne mise en œuvre de la stratégie de durabilité;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(353/694 * 100%)">353</div>
-  
-  
-    <div class="-" style="width: calc(324/694 * 100%)">324</div>
-  
-  
-    <div class="0" style="width: calc(17/694 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/125593">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+      aucun français
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2137(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0240_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">353</div>
+  <div class="against">324</div>
+  <div class="abstention">17</div>
+</span>
+
   
+    
+    <a href="/voting/125593">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-12-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté contre ce texte dont l’objectif de moralisation du capitalisme est louable, mais qui fait peser trop de contraintes sur les entreprises européennes.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce rapport d&#39;initiative appelle à bâtir une approche européenne cohérente en matière de gouvernance d&#39;entreprise durable. Il est désormais nécessaire d’établir un nouveau cadre définissant les devoirs des conseils d’administration en matière de durabilité. Cependant, il ne faut pas rajouter de la complexité administrative et normative à des entreprises se situant dans un contexte économique déjà fragilisé. Le PPE a donc rééquilibré ce texte pour éviter toute entrave normative à la création et à la performance entrepreneuriale. Considérant que ce texte est finalement équilibré, je me suis prononcé en faveur de celui-ci.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car, même si l’objectif de moralisation du capitalisme est bon, le texte fait peser trop de contraintes et d’incertitudes sur les entreprises européennes qui n’ont pas besoin de cela en cette période de crise.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Nous votions là un rapport non-législatif, qui propose donc à la Commission un certain nombre d’éléments à valeur juridiquement non-contraignante, pour la réforme des règlements sur la gouvernance des entreprises. On vise particulièrement : (a) la réforme de la directive 2014/95/UE sur la publication d’informations non-financières et (b) la proposition législative sur la gouvernance durable des entreprises, prévue au deuxième trimestre 2021 et qui traitera des devoirs des dirigeants. Le texte est un peu timide et ne formule pas de propositions concrètes. Néanmoins, des idées font leur chemin et ce rapport en rend compte : la nécessité d’une transparence maximale de la chaîne de production, le devoir de sollicitude des dirigeants d’entreprises, l’équilibre dans les conseils d’administration… Pour ces esquisses d’avancées, j’ai voté POUR le texte.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            Ce rapport vise à élargir le champ d’application de la directive de 2014 sur la publication d’informations non financières, conformément à la demande exprimée par le Parlement européen dans sa résolution du 29 mai 2018 sur la finance durable.Son objectif est de convaincre les grandes entreprises de privilégier leurs intérêts à long terme plutôt que de céder à la tentation de rémunérer grassement leurs actionnaires le plus vite possible. Le texte a deux buts : tenter de brider les excès du libéralisme et créer un cadre juridique contraignant, qui ne serait pas seulement basé sur la publication par les grandes entreprises d’informations non financières, mais aussi sur l’édiction d’obligations pesant sur leurs dirigeants et sur leurs conseils d’administration. Si l’objectif de moralisation du capitalisme est une bonne chose, le texte fait peser trop de contraintes et d’incertitudes sur les entreprises européennes, qui n’ont pas besoin de cela en cette période de crise. Je me suis donc opposé à ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport, dont j’étais la rapporteure fictive pour notre groupe, présente les propositions du Parlement européen pour créer un cadre de gouvernance durable pour les entreprises. Il reprend notamment plusieurs de mes propositions en recommandant de renforcer la publication d’informations sur l’impact environnemental des entreprises, d’encourager la publication des écarts salariaux, de mieux intégrer l’obligation d’égalité entre les femmes et les hommes, et de légiférer au niveau européen pour mieux encadrer les devoirs sociaux et environnementaux des dirigeants d’entreprises. Je portais également des propositions encore plus ambitieuses pour intégrer les salariés dans la gouvernance des entreprises ou pour réguler les dividendes versés aux actionnaires, mais ce rapport représente déjà un premier pas pour œuvrer contre les actionnaires-roi au sein des entreprises et j’ai donc voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce rapport soumet de bons éléments à la Commission en vue de la réforme de la Directive 2014/95/UE sur la publication d&#39;informations non financières (le fameux «reporting non-financier» des entreprises) et de la proposition législative sur la gouvernance durable des entreprises prévue au deuxième trimestre 2021, qui traitera notamment des devoirs des dirigeants. Bien que manquant parfois d’ambition, notamment sur les contreparties aux aides publiques, la régulation des dividendes ou la représentation des salariés aux conseils d’administration, ce texte comporte un certain nombre d’avancées que je soutiens. Je vote donc en faveur de ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197585</div>
+            
+            <header><b>Pierre KARLESKIND</b> | Renaissance</header>
+            J’ai soutenu ce rapport, qui s’intéresse à la gouvernance durable des entreprises et expose les positions du Parlement européen en amont des propositions de la Commission européenne sur ce dossier. Nous y appelons à une réforme en profondeur du capitalisme européen, par l’émergence d’un nouveau modèle européen de l’entreprise durable, pour que les entreprises européennes soient plus responsables face aux enjeux sociaux et environnementaux.L’État ne peut répondre seul à l’ensemble des défis auxquels nos sociétés font face. Les entreprises doivent prendre leur part et se préoccuper davantage de la planète et des êtres humains dans leur organisation et leur choix de production. Nous appelons donc à une meilleure intégration des intérêts de long terme dans les processus internes de prise en décision des entreprises, notamment grâce à la mise en place d’une stratégie de durabilité aux objectifs clairs et mesurables. Je remercie mon collègue Pascal Durand pour ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            L&#39;objectif de moralisation du capitalisme est bon, mais le texte fait peser trop de contraintes et d&#39;incertitudes sur les entreprises européennes, qui n&#39;ont pas besoin de cela en cette période de crise.
+        </article>
+    
+        <article>
+            <div class="hidden">197576</div>
+            
+            <header><b>Sylvie BRUNET</b> | Mouvement Démocrate</header>
+            J’ai soutenu notre rapport sur la gouvernance durable des entreprises. Ce rapport présente la position du Parlement européen sur deux initiatives de la Commission européenne à venir.Premièrement, la révision de la directive sur la publication d’informations non financières. Suite aux premières avancées de cette directive de 2014, nous appelons à la mise en place de normes claires et comparables pour la publication de telles informations, et à élargir le champ d’application à toutes les entreprises de plus de 250 salariés. Nous rappelons l’importance de définir avec précision la référence aux questions sociales et de personnel qui pourrait englober la divulgation des politiques salariales des entreprises et notamment les écarts de rémunération entre les hommes et les femmes.Deuxièmement, sur le devoir de sollicitude des dirigeants. Afin d’intégrer les intérêts de long terme dans les processus de prise de décision, nous proposons l’instauration d’une stratégie de durabilité fixant des objectifs en matière climatique, environnementale et sociale. Des politiques internes sur les salaires décents, l’égalité des genres et les droits des travailleurs pourraient également faire partie de ces stratégies. Enfin, nous appelons au déblocage des négociations de la directive «Women on Boards » afin d’assurer la diversité et l’inclusion dans les entreprises.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car si l’objectif de moralisation du capitalisme est bon, le texte fait peser trop de contraintes et d’incertitudes sur les entreprises européennes, qui n’ont pas besoin de cela en cette période de crise.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            L&#39;objectif moralisateur du texte est bon mais le texte laisse trop d&#39;incertitudes et de contraintes sur nos entreprises en ces temps de crises.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Ce rapport vise à élargir le champ d’application de la directive de 2014 sur la publication d’informations non financières, conformément à la demande exprimée par le Parlement européen dans sa résolution du 29 mai 2018 sur la finance durable. Son objectif est de convaincre les grandes entreprises de privilégier leurs intérêts à long terme plutôt que de céder à la tentation de rémunérer grassement leurs actionnaires le plus vite possible. L’idée est aussi de favoriser ainsi un meilleur respect de l’environnement grâce à la promotion de pratiques d’« exploitation durable » de celui-ci. J’ai voté contre ce texte car il fait peser trop de contraintes et d’incertitudes sur les entreprises européennes, qui n’ont pas besoin de cela en cette période de crise.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Ce rapport vise à élargir le champ d’application de la directive de 2014 sur la publication d’informations non financières, conformément à la demande exprimée par le Parlement européen dans sa résolution du 29 mai 2018 sur la finance durable.Son objectif est de convaincre les grandes entreprises de privilégier leurs intérêts à long terme plutôt que de céder à la tentation de rémunérer grassement leurs actionnaires le plus vite possible. Le texte a le mérite de tenter de moraliser le capitalisme. À la demande de mon collègue Gilles Lebreton, il vise aussi à lutter contre la concurrence déloyale des pays tiers en englobant leurs grandes entreprises qui commercent dans l’UE.Au bout du compte et après discussion avec d’autres groupes, nous pensons que l’objectif de moralisation du capitalisme est bon, mais que le texte fait peser trop de contraintes et d’incertitudes sur les entreprises européennes, qui n’ont pas besoin de cela en cette période de crise. C’est pourquoi j’ai voté contre ce texte final.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            L’objectif de moralisation du capitalisme contenu dans ce texte est louable, mais il fait peser trop de contraintes et d’incertitudes sur les entreprises européennes. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            Si certaines intentions du rapport sont louables, les entreprises européennes, durement frappées par la pandémie, n’ont pas besoin de subir de nouvelles contraintes administratives. J’ai donc voté contre ce rapport.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124693</div>
+            
+            <header><b>Pascal DURAND</b> | Renaissance</header>
+            
+                <p>Parce que, dans ces dossiers qui peuvent apparaître techniques, nous sommes au cœur de ce qui est éminemment politique – politique au sens noble du terme: parce que cela touche à notre vision, la vision que nous voulons construire pour notre Union européenne. La vision de savoir si nous voulons, en matière extra-financière, nous faire imposer nos normes par l’extérieur, par les États-Unis, par la Chine ou par je ne sais quelle autre puissance, ou si nous voulons, au contraire, rester maîtres dans une logique d’indépendance et de souveraineté. Rester maîtres de notre modèle économique, environnemental, social, c’est tout l’enjeu de ce </p>
+            
+                <p>Quelle est notre ambition? Quelle est notre volonté de construire effectivement un monde qui soit plus durable, plus soutenable, plus vivable pour l’ensemble de la population? Sans entrer dans le détail – évidemment trop technique –, nous devons regarder en face la situation telle qu’elle se présente. </p>
+            
+                <p>Nous sommes dans un moment où les entreprises – pour des raisons qu’il ne nous appartient pas de développer ici, mais qui sont une réalité – se trouvent confrontées à des enjeux de très court terme. Elles se trouvent dans une logique de nécessité de développer des profits à court terme, d’essayer de compenser la financiarisation de notre société. Elles sont obligées d’aller au-devant d’une logique qui est une logique qui détruit une vision à moyen et à long terme de l’entreprise.</p>
+            
+                <p>Nous devons rééquilibrer: c’est ça, l’objet de nos normes. Ce n’est pas de porter atteinte au monde de l’entreprise, au contraire. C’est d’essayer de créer de la véritable valeur et une valeur qui persiste dans le temps, une valeur qui ne fasse pas que les dividendes soient, en l’espace de 20 ans, développés de 1 à 4 %, pendant que la recherche et les investissements diminuent quasiment dans les mêmes proportions.</p>
+            
+                <p>Nous sommes obligés de penser à ce futur et de le construire ensemble. Alors, nous avons des objectifs, les objectifs que l’Union s’est elle-même fixés, avec la taxonomie, avec ces normes environnementales, ces normes sociales qui en font un modèle et un îlot sur l’ensemble de cette planète. Cet équilibre entre l’environnement, le social, l’humain et l’économique, que nous avons toujours porté et que nous devons continuer à défendre, nous devons l’intégrer maintenant au XXIe siècle.</p>
+            
+                <p>Alors oui, nous avons des objectifs. Mme von der Leyen et ce Parlement ont rappelé les objectifs du </p>
+            
+                <p>Alors je le répète, et je terminerai là-dessus, parce que c’est vraiment le cœur: que voulons-nous construire ensemble? Si nous voulons un marché, si nous voulons faire en sorte que l’arbitraire ne domine pas et que ce ne soit pas simplement la loi des plus forts, alors nous devons poser des normes qui soient extrêmement claires. Nous devons avoir des rapports clairs, nous devons avoir des audits indépendants, nous devons avoir une gouvernance qui respecte à la fois les salariés, l’égalité des genres, le long terme, qui prenne en compte l’ensemble des conditions humaines, environnementales et, je le répète, sociales qui se posent à nous au XXIe siècle.</p>
+            
+                <p>C’est toute l’ambition que nous portons dans ce rapport et qui, je l’espère, ouvrira la voie à la Commission dans le cadre de la réforme des directives qu’elle doit présenter au début de l’année 2021.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

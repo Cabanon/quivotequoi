@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Accès du public aux documents - rapport annuel pour les années 2019 à 2021</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Accès du public aux documents - rapport annuel pour les années 2019 à 2021</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(481/493 * 100%)">481</div>
-  
-  
-    <div class="-" style="width: calc(9/493 * 100%)">9</div>
+    <div class="for" style="width: calc(481/493 * 100%)">481</div>
   
   
-    <div class="0" style="width: calc(3/493 * 100%)">3</div>
+    <div class="against" style="width: calc(9/493 * 100%)">9</div>
+  
+  
+    <div class="abstention" style="width: calc(3/493 * 100%)">3</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,28 +88,24 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(56/57 * 100%)">56</div>
+    <div class="for" style="width: calc(56/57 * 100%)">56</div>
   
   
-    <div class="-" style="width: calc(1/57 * 100%)">1</div>
+    <div class="against" style="width: calc(1/57 * 100%)">1</div>
   
   
 </div>
  
 </section>
-            <a href="/voting/157513">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/157513">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Accès du public à l&#39;information et aux documents, relations avec l&#39;administration</li>
-        
     
         
         
@@ -117,261 +117,555 @@
             <li>Citoyenneté européenne</li>
         
     
+        
+        
+            <li>Accès du public à l&#39;information et aux documents, relations avec l&#39;administration</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2015(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0179_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-07-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197683,197629,197615">🇫🇷 Reconquête!</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>G bis. considérant que la transparence est l’un des principaux éléments fondateurs de l’Union européenne et que, malgré cela, la Commission n’a divulgué le nom des auteurs d’aucun de ses rapports sur l’état de droit, ce qui suscite des doutes quant à l’objectivité, à l’exactitude et au professionnalisme de ces rapports;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">124</div>
+  <div class="against">420</div>
+  <div class="abstention">2</div>
+</span>
+
+  
+    
+    <a href="/voting/157509">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(124/546 * 100%)">124</div>
-  
-  
-    <div class="-" style="width: calc(420/546 * 100%)">420</div>
-  
-  
-    <div class="0" style="width: calc(2/546 * 100%)">2</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/157509">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>M bis. considérant que la Commission a violé de manière flagrante le principe de transparence et négocié des contrats avec des entreprises pharmaceutiques concernant la fabrication de vaccins contre la COVID-19, contrats qui, à ce jour, n’ont pas été rendus publics dans leur intégralité;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">156</div>
+  <div class="against">377</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/157510">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(156/543 * 100%)">156</div>
-  
-  
-    <div class="-" style="width: calc(377/543 * 100%)">377</div>
-  
-  
-    <div class="0" style="width: calc(10/543 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/157510">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>M ter. considérant que la Médiatrice européenne a mené fin 2021 une enquête concernant l’échange de messages et d’appels personnels entre la présidente de la Commission Ursula von der Leyen et le PDG de Pfizer, Albert Bourla, au sujet de l’achat de vaccins contre la COVID-19, que la Commission a refusé de divulguer par la suite; que la Médiatrice a estimé que ce comportement constituait un cas de mauvaise administration du fait que les échanges ont eu lieu dans le cadre de la négociation d’un contrat d’achat de vaccins conclu ultérieurement1 bis;  _________________  1 bis Médiatrice européenne, «Recommandation concernant le refus de la Commission européenne d’accorder au public l’accès aux messages SMS échangés entre la présidente de la Commission et le PDG d’une entreprise pharmaceutique sur l’achat d’un vaccin contre la COVID-19 (affaire</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">225</div>
+  <div class="against">321</div>
+  <div class="abstention">1</div>
+</span>
+
+  
+    
+    <a href="/voting/157511">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(225/547 * 100%)">225</div>
-  
-  
-    <div class="-" style="width: calc(321/547 * 100%)">321</div>
-  
-  
-    <div class="0" style="width: calc(1/547 * 100%)">1</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/157511">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>M quater. considérant que, le 14 octobre 2022, le Parquet européen a annoncé qu’une enquête était en cours sur l’acquisition de vaccins contre la COVID-19 dans l’Union et que cette confirmation exceptionnelle est intervenue après que le public a manifesté un intérêt extrêmement vif pour cette question;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">164</div>
+  <div class="against">379</div>
+  <div class="abstention">4</div>
+</span>
+
+  
+    
+    <a href="/voting/157512">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(164/547 * 100%)">164</div>
-  
-  
-    <div class="-" style="width: calc(379/547 * 100%)">379</div>
-  
-  
-    <div class="0" style="width: calc(4/547 * 100%)">4</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/157512">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>1 bis. relève que les rapports de la Commission sur l’état de droit ne mentionnent pas le nom de leurs auteurs; invite la Commission à faire preuve d’une transparence totale concernant les rapports et à dévoiler, dans ceux-ci, les noms des experts qui les ont rédigés;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(122/549 * 100%)">122</div>
-  
-  
-    <div class="-" style="width: calc(422/549 * 100%)">422</div>
-  
-  
-    <div class="0" style="width: calc(5/549 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/157503">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    ECR
     
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2015(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0179_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">122</div>
+  <div class="against">422</div>
+  <div class="abstention">5</div>
+</span>
+
   
+    
+    <a href="/voting/157503">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-07-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Reconquête!</header>
+            . – J’ai voté pour cette résolution, qui a été soutenue par tous les groupes. Elle vise à rendre les institutions européennes et ses agences plus transparentes devant les citoyens, pointe les atteintes sérieuses à la transparence de la part de la Commission et de sa présidente. Bien que cela n’entraînera aucune métamorphose, c’est une démarche importante et bienvenue.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            . – Ce rapport invite les institutions européennes à être plus transparentes et à donner plein accès aux documents utiles. Favorable aux mesures proposées par ce rapport, j’ai soutenu ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Je soutiens le principe selon lequel les décisions des institutions européennes doivent être prises dans le plus grand respect possible du principe de transparence, tout en respectant l’intérêt public.Un niveau élevé de transparence facilite le suivi des activités liées au processus décisionnel et peut contribuer à la mise à jour d&#39;activités ayant fait l’objet d’actes de corruption. J’ai voté en faveur de ce dossier.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté pour ce rapport car il permet de faciliter l’accès des citoyens aux documents des organismes de l’UE, et de contraindre les institutions européennes à plus de transparence.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution sur l’accès du public aux documents. Le texte demande davantage de transparence pour l’accès des citoyens aux documents de l’UE en vue d’un meilleur fonctionnement démocratique. J’ai soutenu des amendements qui demandent davantage de transparence et de coopération de la part de la Présidente de la Commission européenne Ursula VON DER LEYEN dans le cadre de ses échanges de SMS avec le PDG de Pfizer lors de la pandémie de COVID-19.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les propositions du Parlement pour renforcer l’accès des citoyens aux documents pour l’ensemble des institutions européennes. Il appelle à renforcer la participation des citoyens dans les processus décisionnels de l’UE, demande de lever les entraves à l’accès du public aux documents, et de garantir une transparence dans l’ensemble du processus législatif européen. J’ai donc voté pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197527</div>
+            
+            <header><b>Anne-Sophie PELLETIER</b> | La France Insoumise</header>
+            Ce texte vient renforcer le droit des consommateurs d’accéder aux documents au sein des institutions et organismes de l’Union. Il s’attache à combler les lacunes systémiques qui entraînent de trop fréquents refus aux demandes d’accès aux documents. Il est ici question de responsabilité des institutions mais aussi de démocratie et de transparence. J’ai donc voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197536</div>
+            
+            <header><b>Nathalie COLIN-OESTERLÉ</b> | Les centristes</header>
+            J’ai voté en faveur du rapport annuel sur l’accès public aux documents, qui appelle à renforcer la transparence des institutions européennes, en rendant une partie de leurs activités publiques. Le rapport évoque par exemple les contrats passés par la Commission européenne dans le cadre de l’achat groupé de vaccins contre la Covid-19 ou encore les activités législatives du Conseil de l’Union européenne. L’accès du public aux documents des institutions européennes est essentiel pour renforcer la confiance des citoyens dans l’Union européenne et ses institutions, et pour leur permettre d’être mieux informés au sujet des politiques européennes. C’est un enjeu crucial à l’approche des élections européennes.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            Je considère que les citoyens européens doivent être totalement éclairés sur les décisions qui sont prises, dans le plus grand respect de transparence. La transparence élevée facilite le suivi des activités liées au processus décisionnel et peut contribuer à la détection et à la lutte contre les actes de corruption. J’ai donc voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Ce texte permet un plus grand respect du principe de transparence au sein des Institutions européennes. Il permettrait de faciliter le suivi des activités liées au processus décisionnel et d’ainsi mettre à jour les activités ayant fait l’objet d’actes de corruption. En conséquence, il convenait de voter en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            L’accès aux documents est gratuit. La demande est déposée au moyen d’un formulaire électronique et ne requiert aucune justification particulière. Les documents qui ne sont pas directement consultables dans le registre peuvent être fournis sur demande.Nous ne pouvons que soutenir le principe selon lequel les décisions des institutions européennes doivent être prises dans le plus grand respect possible du principe de transparence, tout en respectant l’intérêt public. Actuellement, les citoyens ne peuvent contester le refus d&#39;une demande d&#39;accès à un document qu&#39;en engageant une procédure judiciaire contre l&#39;institution ou en déposant une plainte auprès du médiateur, mais la procédure demeure trop longue.Afin de remédier à cette situation, le rapporteur préconise de nommer des hauts fonctionnaires indépendants capables d&#39;examiner, sans retard excessif, les recours concernant l&#39;accès aux documents. Un niveau élevé de transparence facilite le suivi des activités liées au processus décisionnel et peut contribuer à la mise à jour d&#39;activités ayant fait l’objet d’actes de corruption.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Nous ne pouvons que soutenir le principe selon lequel les décisions des institutions européennes doivent être prises dans le plus grand respect possible du principe de transparence, tout en respectant l’intérêt public. Actuellement, les citoyens ne peuvent contester le refus d&#39;une demande d&#39;accès à un document qu&#39;en engageant une (trop longue) procédure judiciaire contre l&#39;institution ou en déposant une plainte auprès du médiateur. Le rapporteur préconise de nommer des hauts fonctionnaires indépendants capables d&#39;examiner, sans retard excessif, les recours concernant l&#39;accès aux documents. Un niveau élevé de transparence peut notamment contribuer à la mise à jour d&#39;activités ayant fait l’objet d’actes de corruption. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté en faveur de ce rapport car nous ne pouvons que soutenir le principe selon lequel les décisions des institutions européennes doivent être prises dans le plus grand respect possible du principe de transparence, tout en respectant l’intérêt public. Un niveau élevé de transparence facilite le suivi des activités liées au processus décisionnel et peut contribuer à la mise à jour d&#39;activités ayant fait l’objet d’actes de corruption.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b></b> | </header>
+            Ce rapport a pour objet la protection et le renforcement du droit de tout citoyen de l’Union d’accéder aux documents au sein des institutions, organes et organismes de l’Union. Il appelle à une plus grande implication des citoyens dans les processus décisionnels et la gouvernance des institutions, et critique une série de lacunes qui ont entraîné le refus de l’accès du public aux documents. Le rapport souligne également la classification excessive des documents officiels, le recours excessif aux réunions à huis clos, le refus d’accès aux documents. Il demande également une publication proactive des documents relatifs aux procédures législatives et la mise en œuvre d’une base de données commune facilement accessible. En raison de l’importance de la protection des droits des citoyens et d’une meilleure participation de la société civile dans les processus décisionnels, j’ai décidé de voter en faveur de rapport.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197527</div>
+            
+            <header><b>Anne-Sophie PELLETIER</b> | La France Insoumise</header>
+            
+                <p> – Monsieur le Président, Madame la Commissaire, Qatargate, SMS Gate, affaire Dentsu-Hoffman, Frontex… La liste est longue et plutôt que de regarder ces scandales en face, chacun détourne le regard. Non, ça ne se passe pas chez nous. Si, ça se passe chez nous.</p>
+            
+                <p>Nos institutions ne doivent pas se contenter de slogans, mais d’un vrai plan d’action. L’accès public aux documents est une liberté fondamentale et notre rôle est de la garantir, en commençant par une chose très simple: rendre accessibles à tous et toutes les sites internet de nos institutions. C’est vraiment anodin, mais c’est la première liaison avec les citoyens européens.</p>
+            
+                <p>Alors, quand il s’agit de défendre nos valeurs, nous sommes très forts. Mais d’autres sont très impliqués dans l’intérêt des multinationales ou les leurs. Et je vous le dis, la politique qui vise à garder la confiance des marchés perd la confiance du peuple. Et dans ces temps sombres, l’inconnu et l’ombre sèment le doute. Ce sont la clarté et la transparence qui rallumeront peut-être les étoiles européennes.</p>
+            
+                <p>Nous devons être à la hauteur des enjeux. C’est ce que souhaitent les citoyens européens. Nous n’en sommes plus au simple temps de la nécessité, mais bien au temps des priorités. Pas au temps de la publicité. Parce qu’il suffit d’un rien pour que nos démocraties soient vraiment en danger. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            
+                <p> – Monsieur le Président, chers collègues, hier, nous avons voté le rapport Pfizer et aujourd’hui je suis agréablement surprise. Est-ce que la nuit porte conseil? Parce qu’hier vous aviez l’occasion de sanctionner, dans le cadre du rapport Pfizer, le travail de la Commission qui était, nous l’avons bien vu, le reflet d’un travail de lobbyistes. En effet, ce rapport sur la COVID-19 ne mentionnait ni Pfizer ni l’affaire des SMS, encore moins les problèmes soulevés par la Cour des comptes sur le manque de transparence. Et vous connaissez le scandale de ces contrats juteux, ces contrats auxquels nous n’avons pas eu accès en entier pour protéger les intérêts financiers de Pfizer. Des contrats d’achats de centaines de millions de doses pour encore quatre ans.</p>
+            
+                <p>C’est pourquoi votre rapport est primordial. Oui, nous devons avoir accès à tous ces documents. Oui, nous devons savoir quels lobbyistes rencontrent les commissaires et les députés au Parlement. Pfizer a des badges d’accès. Ces lobbyistes rencontrent donc qui ils veulent ici. Je propose que ces données d’accès des lobbyistes soient publiques. Les Français et les Européens doivent savoir qui vient faire du lobbying et aussi pourquoi. Idem quand certains commissaires vont à ces réunions cachées organisées au Bilderberg.</p>
+            
+                <p>Ensuite, les documents de l’Agence européenne du médicament, qui analysent les effets secondaires des médicaments et vaccins, doivent être accessibles dans toutes les langues. Et surtout, cette agence doit répondre à nos demandes, par exemple en nous fournissant les rapports mensuels de suivi des effets secondaires de Pfizer, comme elle s’y était engagée lors des auditions de la commission COVI.</p>
+            
+                <p>Enfin, concernant le secret imposé sur certains documents, nous devrions plutôt imposer à l’administration européenne la transparence totale ou, au minimum, une date d’expiration sur les documents à diffusion restreinte. Même la CIA ouvre ses archives. Donc la Commission doit arrêter avec cette opacité coupable et complice.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            
+                <p> – Monsieur le Président, le manque de transparence de la part des institutions européennes a atteint son sommet en 2021, quand la Commission a refusé de rechercher correctement les textos échangés entre la présidente de la Commission et le PDG de la société Pfizer.</p>
+            
+                <p>Nous apprenons en outre, dans cette affaire, en plus des plaintes administratives qui sont pendantes auprès du Médiateur européen et de la CJUE, que M. Baldan, un lobbyiste belge accrédité, a déposé une plainte auprès de la justice belge visant directement la présidente de la Commission européenne. La conséquence serait inédite, car cette dernière pourrait voir son immunité levée et les SMS échangés avec le président de Pfizer pourraient être consultés par le juge d’instruction en charge du dossier.</p>
+            
+                <p>La justice devra déterminer si Mme von der Leyen a agi en dehors des traités européens et de son mandat, et si ces échanges de SMS relèvent d’une relation privilégiée entre les deux protagonistes, ce qui constituerait un conflit d’intérêts manifeste. Cette affaire est emblématique du chemin qui reste à parcourir par l’exécutif européen dans le niveau de transparence des contrats et du processus de décision, car l’opacité en la matière entame nécessairement la confiance des citoyens.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">236052</div>
+            
+            <header><b></b> | </header>
+            
+                <p> – Monsieur le Président, chers collègues, la transparence, c’est le chien de garde, le vérificateur actif et démocratique de l’action publique. Par conséquent, l’accès aux documents doit être le principe et non pas l’exception. Effectivement, le public réclame l’accès aux contrats pharmaceutiques de milliards d’euros qui restent inaccessibles. Les citoyens sont choqués qu’il y ait des négociations secrètes ou encore se demandent comment vous pouvez refuser de répondre aux questions, ici, dans ce Parlement européen, posées par vos propres parlementaires.</p>
+            
+                <p>Que penser du pschitt qu’a fait le Qatargate et de toutes les questions dont les réponses restent enfouies dans les tiroirs? Et encore plus récent, à Malte, le 20 juin dernier, lors de ma mission officielle, j’apprends que la nouvelle Agence européenne pour l’asile va collecter des données et se prépare à contrôler et à évaluer les États membres, mais uniquement pour la Commission, sans rendre ces données publiques. Qui sont ces chevaliers blancs qui ont pondu ces textes en faveur de la transparence, alors que cette maison ne la pratique pas à l’égard de ses propres députés?</p>
+            
+                <p>Alors, si nous soutenons toute initiative en faveur de l’accès, nous continuerons à réclamer partout et en tout lieu que les nobles intentions se traduisent surtout en actes. Car oui, la transparence est le vérificateur actif de l’action publique et le seul garant contre la dictature. Et je dirais: à bon entendeur. </p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

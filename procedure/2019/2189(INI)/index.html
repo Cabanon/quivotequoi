@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Une approche européenne globale du stockage de l&#39;énergie</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Une approche européenne globale du stockage de l&#39;énergie</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(556/688 * 100%)">556</div>
-  
-  
-    <div class="-" style="width: calc(22/688 * 100%)">22</div>
+    <div class="for" style="width: calc(556/688 * 100%)">556</div>
   
   
-    <div class="0" style="width: calc(110/688 * 100%)">110</div>
+    <div class="against" style="width: calc(22/688 * 100%)">22</div>
+  
+  
+    <div class="abstention" style="width: calc(110/688 * 100%)">110</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,19 +88,20 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(50/79 * 100%)">50</div>
+    <div class="for" style="width: calc(50/79 * 100%)">50</div>
   
   
   
-    <div class="0" style="width: calc(29/79 * 100%)">29</div>
+    <div class="abstention" style="width: calc(29/79 * 100%)">29</div>
   
 </div>
  
 </section>
-            <a href="/voting/116287">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/116287">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -114,21 +119,256 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2189(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2189(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0130_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-07-08-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-07-08-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            Je me suis abstenue sur ce texte.Je regrette que les possibilités de stockage dans l&#39;énergie nucléaire n&#39;aient pas été évoquées.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport d’initiative qui rappelle que le stockage de l&#39;énergie a un rôle clé à jouer dans la transition vers une économie neutre en carbone. Les solutions de stockage de l&#39;énergie ont le potentiel d&#39;équilibrer les réseaux électriques et d&#39;économiser l&#39;énergie excédentaire, d&#39;améliorer l&#39;efficacité énergétique et d&#39;intégrer davantage de sources d&#39;énergies renouvelables dans les systèmes électriques, et contribuent ainsi à renforcer la sécurité énergétique européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            Je me suis abstenu de voter ce rapport qui invite les États membres à exploiter pleinement leur potentiel de stockage d’énergie. Il demande à la Commission européenne d’élaborer une stratégie globale afin de permettre la transformation vers une économie basée sur les énergies renouvelables. En faisant des énergies renouvelables le seul moyen possible de parvenir à l’objectif européen de neutralité climatique, le texte conteste de fait l’énergie nucléaire, pourtant très importante pour la France.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            L’Union européenne s’est engagée pour une économie neutre en carbone d’ici 2050. La décarbonation de plusieurs secteurs passe par une électrification, ce qui entrainera une augmentation de la demande en électricité, + 55% en 2050. Or dans le même temps, pour arriver à une économie neutre, une augmentation de la part des sources d’énergies renouvelables est nécessaire. Une augmentation traduisant une plus grande volatilité du réseau électrique, le renforcement de la capacité de stockage de l’énergie est donc nécessaire si l’on veut garantir la sécurité de l’approvisionnement. Ce rapport analyse les possibilités de stockage actuelles et émet des propositions pour les augmenter. Il reconnaît l’importance des batteries de lithium et rappelle le respect des Droits de l’homme et des normes en matière de droit du travail pour son extraction. Le rapport demande également une planification coordonnée des infrastructures et la révision du règlement sur les réseaux transeuropéens d’énergie.Néanmoins je me suis ABSTENU de voter en faveur de ce rapport car il n’établit pas de priorité politique dans le choix des énergies renouvelables. Et laisse une possibilité de continuer à exploiter et investir dans des types hydrogènes polluants.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            La proposition s’inscrit dans le contexte du Pacte Vert pour l’Europe et l’engagement de l’Union Européenne à décarboner l’économie afin devenir neutre en carbone d’ici 2050, à travers une transition énergétique accélérée : des combustibles fossiles comme source d’énergie primaire vers des sources d’énergie renouvelables. L’augmentation de la part des sources d’énergie renouvelables se traduit inévitablement par une plus grande volatilité du réseau électrique. Dès lors, une augmentation massive de la capacité de stockage est nécessaire afin de garantir la sécurité de l’approvisionnement en énergie. Le rapport évoque un peu toutes les technologies de stockage qui sont l’objet d’efforts soutenus de recherche et développement en France - mécanique, électrochimique (les défis futurs porteront surtout sur les piles, les batteries et le vecteur hydrogène), électromagnétique et thermique. En résumé, au niveau des politiques énergétiques, l&#39;objectif principal de l&#39;Europe sera l&#39;intégration des énergies renouvelables dans les systèmes de production, de stockage, de transport et de distribution. Le texte aurait dû insister à mon sens sur l&#39;énorme augmentation de la consommation d&#39;énergie électrique qui nous attend, en invoquant l’exigence d’un système mixte de production qui aurait pu inclure l’étude d’options de stockage dans le secteur de l’énergie nucléaire. Je me suis donc abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution sur l’approche européenne globale du stockage de l&#39;énergie. Le texte présente des pistes pour renforcer la capacité de l’UE à stocker de l’énergie, ce qui s’avèrera indispensable pour garantir à la fois la sécurité de l’approvisionnement et l’objectif de neutralité carbone en 2050.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les propositions du parlement européen sur la mise en place d’une stratégie européenne du stockage de l’énergie. Il insiste à raison sur la nécessité de développer des capacités de stockages pour accroître la part des renouvelables sans rendre l’approvisionnement énergétique trop volatile et appelle à renforcer l’action des Etats européens dans la recherche et la production de batteries. Il pointe en revanche du doigt les inquiétudes locales légitimes face aux méga-infrastructures et refuse de s’opposer clairement au recours à l’hydrogène produit à partir d’énergies fossiles. Je me suis donc abstenue sur ce texte dont je ne partage qu’une partie des constats et recommandations.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Dans le cadre la bifurcation écologique il est essentiel de développer nos capacités de stockage de l’énergie afin d’assurer un futur 100% renouvelables à l’horizon 2050 tout en remédiant aux problèmes d’intermittence de ces énergies. Ce rapport invite ainsi la Commission à élaborer une stratégie globale sur le stockage de l’énergie et les États membres à explorer pleinement leur potentiel de stockage. Ce rapport présente de nombreux points positifs notamment en encourageant le développement des projets par accumulation par pompage, tout particulièrement les stations de transfert d’énergie par pompage (STEP) qui ont un fort potentiel de développement en France. Le rapport s’alarme également des conditions d’extractions de métaux indispensables aux batteries tels que le lithium : en effet, l’extraction minière de ces matériaux nous assurant un futur « propre » en Europe ne peuvent pas se faire aux dépenses de la santé et de l’environnement des populations du reste du monde. Toutefois, ce rapport soutient le développement de tous les types d’hydrogène, y compris celui qui est fortement carboné, ce qui fait l’affaire du lobby du gaz. Pour cette raison et d’autres, je dois à regret m’abstenir sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            La proposition s’inscrit dans le contexte du Pacte Vert pour l’Europe et l’engagement de l’Union Européenne à décarboner l’économie afin devenir neutre en carbone d’ici 2050, à travers une transition énergétique accélérée de combustibles fossiles comme source d’énergie primaire à des sources d’énergie renouvelables. le texte est assez équilibré, sauf pour la rhétorique récurrente sur l&#39;objective absolu de neutralité climatique de l&#39;Union Européenne: il y a derrière l’idée qu’on ne pourra la rejoindre qu’à travers des énergies exclusivement renouvelables. Pour le mix énergétique français, c’est encore une fois une négation dangereuse de l’énergie nucléaire. je me suis donc abstenu.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            Je me suis abstenu sur ce rapport car il aurait dû insister sur l&#39;énorme augmentation de la consommation d&#39;énergie électrique qui nous attend en invoquant l’exigence d’un système mixte de production qui aurait pu inclure l’étude d’options de stockage dans le secteur de l’énergie nucléaire. Il n’était pas possible de déposer des amendements en plénière pour améliore ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            J’ai voté abstention. On s’attend, à ce que la décarbonation ait principalement lieu grâce à l’électrification des plus grands secteurs (énergie, transport, chauffage et refroidissement), ce qui entraînera une augmentation massive de la demande d’électricité. Le texte aurait dû insister sur l&#39;énorme augmentation de la consommation d&#39;énergie électrique qui nous attend, exigeant un système mixte de production et une capacité de stockage. L’étude d’options de stockage dans le secteur de l’énergie nucléaire serait nécessaire.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            Je me suis abstenu sur ce texte. La stratégie présentée est globalement équilibrée, mais le texte véhicule l&#39;idée que la neutralité carbone de l&#39;UE ne pourra être atteinte qu&#39;au moyen de l&#39;utilisation exclusive d&#39;énergies renouvelables, faisant fi du mix énergétique français dans lequel l&#39;énergie nucléaire joue un rôle majeur. En outre, il manque dans ce texte l’étude d’options de stockage dans le secteur de l’énergie nucléaire.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            Le rapport invite les Etats à exploiter pleinement leur potentiel de stockage d&#39;energie et demande à la Commission européenne de fixer une stratégie globale de transformation de l&#39;économie avec des énergies renouvelables. Par ce biais, le rapport met de côté l&#39;energie nucléaire, pourtant très importante pour la France, en ne créditant que les énergies renouvelables. Je me suis donc abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            La proposition s’inscrit dans le contexte du Pacte Vert pour l’Europe et l’engagement de l’Union Européenne à décarboner l’économie afin devenir neutre en carbone d’ici 2050, à travers une transition énergétique accélérée de combustibles fossiles comme source d’énergie primaire à des sources d’énergie renouvelables. On s’attend, à ce que la décarbonation ait principalement lieu grâce à l’électrification des plus grands secteurs (énergie, transport, chauffage et refroidissement), ce qui entraînera une augmentation massive de la demande d’électricité. L’augmentation de la part des sources d’énergie renouvelables se traduit inévitablement par une plus grande volatilité du réseau électrique. Dès lors, une augmentation massive de la capacité de stockage est nécessaire afin de garantir la sécurité de l’approvisionnement en énergie. Ce rapport d’initiative législative invite les États membres à explorer pleinement leur potentiel de stockage d’énergie et demande à la Commission d’élaborer une stratégie globale afin de permettre la transformation vers une économie à haute efficacité énergétique et basée sur les énergies renouvelables, en tenant compte de toutes les technologies disponibles et en adoptant une approche neutre pour assurer des règles du jeu équitable. Je me suis abstenue car pour le mix énergétique français, c’est encore une fois une négation dangereuse de l’énergie nucléaire.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Je me suis abstenue sur ce texte qui si, encore une fois, paraît difficilement critiquable dans ses intentions, me semble apporter des réponses inadaptées à des constats pourtant justes. Encore une fois, il y a un déni des aspects positifs du nucléaire qui nous semble contreproductif.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            Je me suis abstenue sur ce rapport sur une approche européenne globale du stockage de l&#39;énergie. S’il explore de nombreuses pistes intéressantes pour le stockage d’énergies renouvelables, je déplore qu’il ne dénonce pas les problématiques posées par les énergies intermittentes. Par ailleurs, et il refuse de considérer le nucléaire comme énergie décarbonée, et son stockage, au sein d’un système mixte de production.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
+
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

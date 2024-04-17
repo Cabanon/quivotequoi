@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Budget rectificatif 3/2021: Réserve d&#39;ajustement au Brexit</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Budget rectificatif 3/2021: Réserve d&#39;ajustement au Brexit</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(645/695 * 100%)">645</div>
-  
-  
-    <div class="-" style="width: calc(14/695 * 100%)">14</div>
+    <div class="for" style="width: calc(645/695 * 100%)">645</div>
   
   
-    <div class="0" style="width: calc(36/695 * 100%)">36</div>
+    <div class="against" style="width: calc(14/695 * 100%)">14</div>
+  
+  
+    <div class="abstention" style="width: calc(36/695 * 100%)">36</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,26 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(79/79 * 100%)">79</div>
+    <div class="for" style="width: calc(79/79 * 100%)">79</div>
   
   
   
 </div>
  
 </section>
-            <a href="/voting/135141">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/135141">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Etat et évolution de l&#39;Union</li>
-        
     
         
         
@@ -115,23 +115,277 @@
             <li>Budget 2021</li>
         
     
+        
+        
+            <li>Etat et évolution de l&#39;Union</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
-
-    Aucun amendement
-
-<h3>Sources</h3>
+<h3>📚 Sources</h3>
 <ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/0022(BUD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/0022(BUD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
     <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0263_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-09-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-09-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
 </ul>
+
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Cette réserve ciblant les États membres de l’UE les plus durement touchés par le Brexit est un instrument que je soutiens: elle bénéficiera principalement à nos PME, aux travailleurs indépendants et à la pêche artisanale.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté pour cette réserve qui cible les États membres les plus durement touchés par le Brexit. Il est en effet essentiel de soutenir, notamment, les PME, les travailleurs indépendants et la pêche artisanale.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Pour faire face aux conséquences imprévues et négatives dans les États membres et les secteurs les plus touchés par le retrait du Royaume-Uni de Grande-Bretagne et d’Irlande du Nord de l’Union, la Commission a présenté le 25 décembre 2020 une proposition de règlement établissant une réserve d’ajustement au Brexit au titre des instruments spéciaux thématiques en dehors des plafonds budgétaires de l’Union fixés dans le CFP. Ce texte vise à rectifier le budget établi pour l’année 2021 afin d’y inscrire le financement de cette réserve d’ajustement à hauteur de 4,2 milliards d’euros. J’ai donc pris position en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Cette réserve est rapide et simple, ciblant les États membres de l’UE les plus durement touchés par le Brexit, dont la France qui fait partie des premiers bénéficiaires. J’ai soutenu ce dossier puisqu’il est important d’aider à travers cela les PME, les travailleurs indépendants et le secteur de la pêche artisanale.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté pour ce rapport car il met en place un fonds destiné aux États membres les plus touchés par les conséquences économiques du Brexit. Il vise en particulier les PME du secteur de la pêche artisanale, très importantes pour la France.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport visant à inscrire au budget de l’UE les besoins de préfinancement résultant de la mise en place de la Réserve d’ajustement au Brexit. La première tranche de la Réserve s’élèvera à 1,6 milliard d’euros en 2021.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport technique vise à valider un budget rectificatif afin de mettre en œuvre la réserve d’ajustement au Brexit. Ce programme prévoit notamment d’aider les PME se retrouvant en difficulté et d’accompagner les citoyens revenant du Royaume-Uni dans leur réinsertion sur le marché du travail. J’ai donc voté pour ce texte qui permettra d’apporter des solutions aux personnes et aux entreprises concernées.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce texte amende le budget 2021 de l’Union européenne afin de faire place à l’enveloppe budgétaire de cinq milliards d’euros prévue pour la réserve d’ajustement au Brexit. Il est important que cette réserve dont l’importance est cruciale pour de nombreuses régions européennes soit correctement dotée en termes de budget. Je soutiens donc ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Cette réserve qui est rapide et simple, ciblant les États membres de l’UE les plus durement touchés par le Brexit, est un instrument que nous pouvons soutenir, d’autant que la France fait partie des premiers bénéficiaires. Bien entendu, l’adaptation structurelle à nos nouvelles relations avec le Royaume-Uni nécessitera bien plus d’ajustements à long terme.Mais il est important de soutenir à travers cette réserve les PME, les travailleurs indépendants et le secteur de la pêche artisanale, étant ici précisé que les secteurs financier et bancaire sont exclus du soutien.Pour.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté en faveur de la création de ce fonds pour lequel j’ai été rapporteure au sein de la commission des budgets. Ce fonds de 5 milliards d’euros vise à soutenir les États membres et les secteurs impactés par le Brexit afin de faire face aux conséquences économiques et sociales. La proposition initiale de la Commission était trop déséquilibrée dans sa répartition des fonds entre les États. J’ai donc négocié plusieurs semaines durant en commission BUDG pour introduire une clé de répartition plus équitable qui prenne mieux en compte l’impact réel du Brexit sur les économies européennes. Parmi les autres avancées obtenues et votées ensuite en commission REGI puis ici en plénière: une extension de la période de référence qui couvrira les dépenses encourues dans les États membres du 1er janvier 2020 au 31 décembre 2023, le versement du préfinancement (80 % de la Réserve) en trois tranches, l’établissement de principes horizontaux (état de droit, pacte vert, socle des droits sociaux ou encore égalité des genres) que les mesures financées par la Réserve doivent respecter. À l’issue du vote et des modifications apportées par les eurodéputés, la France bénéficiera d’un montant total de 672 millions d’euros soit 276 millions de plus par rapport à la dotation initiale proposée par la Commission.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai apporté mon soutien au rapport sur le projet de budget rectificatif (DAB) n° 1/2021 concernant la réserve d’ajustement du Brexit. L’objectif de ce projet de budget rectificatif est de répondre aux besoins de préfinancement résultant de la mise en place de la réserve d’ajustement Brexit en 2021 et prévoit une première tranche de préfinancement, en 2021, de 1,6 milliard d’euros. La réserve soutiendra les dépenses publiques encourues par les États membres du 1er janvier 2020 au 31 décembre 2023 pour les mesures éligibles, qui comprennent le soutien aux secteurs touchés, la formation et les nouvelles installations frontalières.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté pour cette réserve qui est rapide et simple, ciblant les États membres de l’UE les plus durement touchés par le Brexit. Il s’agit d’un instrument que nous pouvons soutenir, d’autant que la France fait partie de ses premiers bénéficiaires. Bien entendu, l’adaptation structurelle à nos nouvelles relations avec le Royaume-Uni nécessitera bien plus d’ajustements à long terme mais il est important de soutenir à travers cette réserve les PME, les travailleurs indépendants et le secteur de la pêche artisanale, étant ici précisé que les secteurs financier et bancaire sont exclus du soutien.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            Cette réserve qui est rapide et simple, ciblant les États membres de l’UE les plus durement touchés par le Brexit, est un instrument que je peux soutenir, d’autant que la France fait partie des premiers bénéficiaires.Bien entendu, l’adaptation structurelle à nos nouvelles relations avec le Royaume-Uni nécessitera bien plus d’ajustements à long terme.Mais il est important de soutenir à travers cette réserve les PME, les travailleurs indépendants et le secteur de la pêche artisanale, étant ici précisé que les secteurs financier et bancaire sont exclus du soutien. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Ce rapport vise à soutenir les États membres de l’UE qui sont touchés par le Brexit, la France fait partie de la liste des bénéficiaires. J’ai donc décidé de soutenir ce texte, notamment pour apporter une aide aux travailleurs indépendants et le secteur de la pêche artisanale.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Le 25 décembre 2020, la Commission européenne a présenté sa proposition pour la réserve d’ajustement au Brexit, qui sera créée en tant qu’instrument spécial en dehors des plafonds budgétaires du cadre financier pluriannuel (CFP) 2021-2027. La finalité de cette réserve est de faire face aux conséquences économiques et sociales négatives dans les États membres et les secteurs les plus touchés. Le budget global de cette réserve sera de 5 milliards d’euros. Le projet de budget rectificatif vise à mettre à disposition 4 244 832 000 euros en crédits d’engagement et de paiement pour couvrir les besoins de préfinancement de la réserve d’ajustement au Brexit. Cette réserve qui est rapide et simple, ciblant les États membres de l’UE les plus durement touchés par le Brexit, est un instrument à soutenir, d’autant que la France fait partie des premiers bénéficiaires. Bien entendu, l’adaptation structurelle à nos nouvelles relations avec le Royaume-Uni nécessitera bien plus d’ajustements à long terme. Mais il est important de soutenir à travers cette réserve les PME, les travailleurs indépendants et le secteur de la pêche artisanale, étant ici précisé que les secteurs financier et bancaire sont exclus du soutien. J’ai donc voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Le 25 décembre 2020, la Commission européenne a présenté sa proposition pour la réserve d’ajustement au Brexit, qui sera créée en tant qu’instrument spécial en dehors des plafonds budgétaires du cadre financier pluriannuel 2021-2027.Elle soutiendra les entreprises et l’emploi dans les secteurs les plus touchés. Elle aidera également les régions et les communautés locales, notamment celles qui dépendent des activités de pêche dans les eaux britanniques.Le budget global de cette réserve sera de 5 milliards d’euros.Cette réserve qui est rapide et simple, ciblant les États membres de l’UE les plus durement touchés par le Brexit, est un instrument que nous pouvons soutenir, d’autant que la France fait partie des premiers bénéficiaires.Bien entendu, l’adaptation structurelle à nos nouvelles relations avec le Royaume-Uni nécessitera bien plus d’ajustements à long terme.Mais il est important de soutenir à travers cette réserve les PME, les travailleurs indépendants et le secteur de la pêche artisanale, étant ici précisé que les secteurs financier et bancaire sont exclus du soutien.J’ai voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Cette réserve, rapide, simple et ciblant les États membres de l’UE les plus durement touchés par le Brexit, est un instrument que nous pouvons soutenir, d’autant que la France fait partie des premiers bénéficiaires. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté en faveur de cette réserve qui cible les États membres les plus durement touchés par le Brexit. La France fait partie des premiers bénéficiaires. Il est particulièrement important de soutenir nos PME, nos travailleurs indépendants et le secteur de la pêche artisanale.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

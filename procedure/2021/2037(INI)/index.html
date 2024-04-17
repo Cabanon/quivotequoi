@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Une nouvelle stratégie UE–Chine</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Une nouvelle stratégie UE–Chine</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(570/671 * 100%)">570</div>
-  
-  
-    <div class="-" style="width: calc(61/671 * 100%)">61</div>
+    <div class="for" style="width: calc(570/671 * 100%)">570</div>
   
   
-    <div class="0" style="width: calc(40/671 * 100%)">40</div>
+    <div class="against" style="width: calc(61/671 * 100%)">61</div>
+  
+  
+    <div class="abstention" style="width: calc(40/671 * 100%)">40</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,25 +88,36 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(50/79 * 100%)">50</div>
+    <div class="for" style="width: calc(50/79 * 100%)">50</div>
   
   
-    <div class="-" style="width: calc(23/79 * 100%)">23</div>
+    <div class="against" style="width: calc(23/79 * 100%)">23</div>
   
   
-    <div class="0" style="width: calc(6/79 * 100%)">6</div>
+    <div class="abstention" style="width: calc(6/79 * 100%)">6</div>
   
 </div>
  
 </section>
-            <a href="/voting/135561">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/135561">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
+    
+        
+        
+            <li>Accords et relations commerciales et économiques bilatérales</li>
+        
+    
+        
+        
+            <li>Politique commerciale commune en général</li>
+        
     
         
         
@@ -119,319 +134,610 @@
             <li>Relations avec les pays tiers</li>
         
     
-        
-        
-            <li>Accords et relations commerciales et économiques bilatérales</li>
-        
+</ul>
+
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2037(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0252_FR.html" target="_blank">📜 Texte et amendements</a></li>
     
-        
-        
-            <li>Politique commerciale commune en général</li>
-        
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-09-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>🗃️ Données</h3>
 
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       3. soutient le renforcement du dialogue et de la coopération avec la Chine sur la paix et la sécurité; prend acte de l’importance d’une coopération avec la Chine pour 
   
 
   
-      <del>soutenir le processus de paix en Afghanistan </del>
+      <del>soutenir le processus de paix en Afghanistan</del>
   
 
   
-      <ins>empêcher l’Afghanistan de devenir une nouvelle base terroriste </ins>
+      <ins>empêcher l’Afghanistan de devenir une nouvelle base terroriste</ins>
   
 
   
-      et décourager la Corée du Nord de poursuivre son programme nucléaire; approuve la recherche d’une coopération en matière de développement durable, de contribution à l’aide humanitaire et aux secours en cas de catastrophe, de questions environnementales, d’espace et d’aérospatial, de science, de technologie et d’innovation, tout en insistant fermement sur le principe de liberté de la recherche; souligne que ces dialogues et cette coopération doivent reposer sur un engagement commun en faveur de l’ouverture et sur une collaboration transparente, juste et équitable dans le cadre d’un système international fondé sur des règles, tout en veillant à préserver les valeurs et intérêts européens et en renforçant, en tant que de besoin, la capacité de l’Europe à concurrencer la Chine;
+       et décourager la Corée du Nord de poursuivre son programme nucléaire; approuve la recherche d’une coopération en matière de développement durable, de contribution à l’aide humanitaire et aux secours en cas de catastrophe, de questions environnementales, d’espace et d’aérospatial, de science, de technologie et d’innovation, tout en insistant fermement sur le principe de liberté de la recherche; souligne que ces dialogues et cette coopération doivent reposer sur un engagement commun en faveur de l’ouverture et sur une collaboration transparente, juste et équitable dans le cadre d’un système international fondé sur des règles, tout en veillant à préserver les valeurs et intérêts européens et en renforçant, en tant que de besoin, la capacité de l’Europe à concurrencer la Chine;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">634</div>
+  <div class="against">3</div>
+  <div class="abstention">42</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/135460">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(634/679 * 100%)">634</div>
-  
-  
-    <div class="-" style="width: calc(3/679 * 100%)">3</div>
-  
-  
-    <div class="0" style="width: calc(42/679 * 100%)">42</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135460">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">197694,204418</div>
+                
 
-<section>
-
-  
-      E. considérant que la longue tradition de démocratie à Hong 
-  
+<p>
 
   
-      <del>Kong </del>
+      E. considérant que la longue tradition de démocratie à Hong Kong
   
 
   
-      <ins>Kong, à Macao </ins>
+      <ins>, à Macao</ins>
   
 
   
-      et à Taïwan démontrent que la démocratie est précieuse pour le peuple chinois;
+       et à Taïwan démontrent que la démocratie est précieuse pour le peuple chinois;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Raphaël GLUCKSMANN (PP) et 
+    
+      Nora MEBAREK (PS)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">611</div>
+  <div class="against">19</div>
+  <div class="abstention">48</div>
+</span>
+
+  
+    
+    <a href="/voting/135463">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(611/678 * 100%)">611</div>
-  
-  
-    <div class="-" style="width: calc(19/678 * 100%)">19</div>
-  
-  
-    <div class="0" style="width: calc(48/678 * 100%)">48</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135463">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">197694,204418,197694,204418</div>
+                
 
-<section>
+<p>
 
   
       <ins>E bis. considérant qu’à Macao, après avoir interdit les cérémonies de commémoration de l’anniversaire du massacre de Tien-An-Men et fait pression sur les organisations de médias pour qu’elles adoptent une ligne éditoriale prochinoise, cet été, les autorités chinoises ont exclu 21 candidats de la participation aux prochaines élections législatives, en majorité membres de mouvements favorables à la démocratie;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Raphaël GLUCKSMANN (PP) et 
+    
+      Nora MEBAREK (PS)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">608</div>
+  <div class="against">12</div>
+  <div class="abstention">56</div>
+</span>
+
+  
+    
+    <a href="/voting/135464">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(608/676 * 100%)">608</div>
-  
-  
-    <div class="-" style="width: calc(12/676 * 100%)">12</div>
-  
-  
-    <div class="0" style="width: calc(56/676 * 100%)">56</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135464">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">197694,204418,197694,204418,197694,204418</div>
+                
 
-<section>
-
-  
-      11. rappelle, dans ce contexte, sa résolution du 20 mai 2021 sur les contre- sanctions chinoises; invite la Commission, conformément à sa résolution du 20 mai 2021 sur les contre-sanctions chinoises et à l’article 21, paragraphe 1, du traité sur l’Union européenne, à utiliser tous les outils à sa disposition et le débat sur l’AGI comme levier pour améliorer la protection des droits de l’homme et le soutien à la société civile en Chine; exhorte la Chine à prendre des mesures concrètes afin de mettre fin aux autres violations des droits de l’homme dans le pays, telles que le travail forcé et la persécution systématique des Ouïgours et autres minorités musulmanes turques, des    Tibétains, ainsi que des chrétiens et autres communautés et confessions religieuses, et à respecter les engagements qu’elle a pris au niveau international au sujet de Hong Kong au titre de la déclaration commune sino-britannique et de la loi fondamentale de Hong Kong en suspendant les réformes prévues du système électoral de la ville et en relâchant les législateurs et militants pro-démocratie;
-  
+<p>
 
   
-      <ins> invite également la Chine à respecter la loi fondamentale de Macao, en vigueur jusque 2049, ainsi que les dispositions de la déclaration conjointe sino-portugaise1 empêchant toute ingérence dans les processus électoraux du pays et le fonctionnement des médias;  1Déclaration conjointe de la Chine et du Portugal du 13 avril 1987 sur la question de Macao.</ins>
+      11. rappelle, dans ce contexte, sa résolution du 20 mai 2021 sur les contre- sanctions chinoises; invite la Commission, conformément à sa résolution du 20 mai 2021 sur les contre-sanctions chinoises et à l’article 21, paragraphe 1, du traité sur l’Union européenne, à utiliser tous les outils à sa disposition et le débat sur l’AGI comme levier pour améliorer la protection des droits de l’homme et le soutien à la société civile en Chine; exhorte la Chine à prendre des mesures concrètes afin de mettre fin aux autres violations des droits de l’homme dans le pays, telles que le travail forcé et la persécution systématique des Ouïgours et autres minorités musulmanes turques, des    Tibétains, ainsi que des chrétiens et autres communautés et confessions religieuses, et à respecter les engagements qu’elle a pris au niveau international au sujet de Hong Kong au titre de la déclaration commune sino-britannique et de la loi fondamentale de Hong Kong en suspendant les réformes prévues du système électoral de la ville et en relâchant les législateurs et militants pro-démocratie
+  
+
+  
+      <del>;</del>
+  
+
+  
+      <ins>; invite également la Chine à respecter la loi fondamentale de Macao, en vigueur jusque 2049, ainsi que les dispositions de la déclaration conjointe sino-portugaise1 empêchant toute ingérence dans les processus électoraux du pays et le fonctionnement des médias;  1Déclaration conjointe de la Chine et du Portugal du 13 avril 1987 sur la question de Macao.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Raphaël GLUCKSMANN (PP) et 
+    
+      Nora MEBAREK (PS)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">609</div>
+  <div class="against">15</div>
+  <div class="abstention">54</div>
+</span>
+
+  
+    
+    <a href="/voting/135461">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(609/678 * 100%)">609</div>
-  
-  
-    <div class="-" style="width: calc(15/678 * 100%)">15</div>
-  
-  
-    <div class="0" style="width: calc(54/678 * 100%)">54</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135461">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">197694,204418,197694,204418,197694,204418,197694,204418</div>
+                
 
-<section>
-
-  
-      30. invite le VP/HR à coordonner les actions de l’Union avec des partenaires qui partagent ses valeurs en ce qui concerne la protection des droits de l’homme, le soutien à la population en 
-  
+<p>
 
   
-      <del>Chine et </del>
+      30. invite le VP/HR à coordonner les actions de l’Union avec des partenaires qui partagent ses valeurs en ce qui concerne la protection des droits de l’homme, le soutien à la population en Chine
   
 
   
-      <ins>Chine, </ins>
+      <del> et </del>
   
 
   
-      à Hong Kong et à 
+      <ins>, </ins>
   
 
   
-      <ins>Macao et à </ins>
+      à Hong Kong et à
   
 
   
-      la diaspora chinoise dans le monde, ainsi que la défense de la démocratie libérale dans le monde, notamment à Hong Kong et à Taïwan, et en vue d’inciter la Chine à respecter le droit international, le droit de manifester publiquement, qui procède de la liberté d’expression et de la liberté de réunion, la liberté de survol et de navigation, y compris dans les mers de Chine méridionale et orientale, et le règlement pacifique des différends; souligne, par    ailleurs, que ces partenariats et cette coopération internationale avec des partenaires partageant les mêmes valeurs devraient englober tous les éléments et toutes les mesures figurant dans la nouvelle stratégie UE-Chine;
+      <ins> Macao et à</ins>
+  
+
+  
+       la diaspora chinoise dans le monde, ainsi que la défense de la démocratie libérale dans le monde, notamment à Hong Kong et à Taïwan, et en vue d’inciter la Chine à respecter le droit international, le droit de manifester publiquement, qui procède de la liberté d’expression et de la liberté de réunion, la liberté de survol et de navigation, y compris dans les mers de Chine méridionale et orientale, et le règlement pacifique des différends; souligne, par    ailleurs, que ces partenariats et cette coopération internationale avec des partenaires partageant les mêmes valeurs devraient englober tous les éléments et toutes les mesures figurant dans la nouvelle stratégie UE-Chine;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(611/678 * 100%)">611</div>
-  
-  
-    <div class="-" style="width: calc(9/678 * 100%)">9</div>
-  
-  
-    <div class="0" style="width: calc(58/678 * 100%)">58</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/135462">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+      Raphaël GLUCKSMANN (PP) et 
     
+      Nora MEBAREK (PS)
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2037(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0252_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">611</div>
+  <div class="against">9</div>
+  <div class="abstention">58</div>
+</span>
+
   
+    
+    <a href="/voting/135462">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-09-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Je suis opposé à l’accord général d’investissement avec la Chine annoncé à la fin de l’année dernière. Cet accord sera au strict bénéfice de l’Allemagne et conduira à un nouvel affaiblissement de la politique commerciale française. Or, le rapport établit une analyse globale des conséquences de l’accord sans différencier les risques encourus par les États membres. Il est donc forcément très favorable à l’accord, au mépris des intérêts français. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce rapport, très atlantiste et qui vise à une confrontation avec la Chine, tout en octroyant davantage de prérogatives à l&#39;Union européenne en matière diplomatique.Il est toutefois louable d&#39;apporter des garde-fous à l&#39;accord général sur les investissements avec la Chine.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            La stratégie actuelle de l’Union à l’égard de la Chine montre ses limites à la lumière de l’évolution récente de la situation et des problèmes mondiaux posés par la Chine. Celle-ci doit donc être actualisée. Cette recommandation du Parlement européen au haut représentant de l’Union pour les affaires étrangères et la politique de sécurité se prononce en faveur de l’élaboration d’une stratégie UE-Chine plus affirmée, complète et cohérente faisant la promotion d’un ordre multilatéral fondé sur des règles et plaçant la défense des valeurs européennes au cœur de cette stratégie.Reconnaissant la nécessité absolue d’un changement de stratégie vis-à-vis de la Chine au profit d’une plus grande fermeté, notamment sur notre autonomie stratégique, sur la défense des droits de l’homme et des valeurs démocratiques, je me suis positionné en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Je suis opposée à l’accord général d’investissement avec la Chine, annoncé à la fin de l’année 2020. Cet accord sera au strict bénéfice de l’Allemagne et conduire à un nouvel affaissement de la politique commerciale française. J’ai voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car la politique commerciale française s’en trouvera menacée au bénéfice de l’Allemagne. De plus, il promeut un atlantisme forcené et une défiance vis-à-vis de la souveraineté des États.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Ce rapport se veut être un avant-goût de la nouvelle stratégie de l’Union européenne face à l’émergence de la Chine au niveau international. On y trouve des éléments très positifs sur la situation des droits de l’homme. Ce texte demande aussi à la Chine de se conformer aux normes internationales sur les question climatiques et sociales. Il s’insurge enfin contre les sanctions mises en place à l’encontre de députés et d’organes de l’UE.Néanmoins, sur l’accord d’investissement entre l’Union européenne et la Chine, ce texte reconnait «les efforts déployés par la Commission pour remédier aux lacunes liées aux asymétries en matière d’accès au marché, à des conditions de concurrence équitables et au développement durable au moyen d’un engagement fondé sur des règles». Il souhaite également coopération renforcée de l’Union avec l’OTAN, au détriment de notre autonomie stratégique et, enfin, souhaite intégrer le réseau «Blue Dot» américain. Pour toutes ces raisons, je me suis abstenu.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport relatif à une nouvelle stratégie UE-Chine. Le texte invite le VP/HR à adopter une vision différente des rapports entre l’Union et la Chine, fondée sur le respect des droits de l’homme et des principes démocratiques, mais aussi sur un rééquilibrage de nos relations commerciales. Il demande à la Chine de mettre un terme à ses violations des droits fondamentaux et à sa politique étrangère agressive.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            Le présent texte est un rapport d’initiative visant à présenter une nouvelle stratégie dans les relations entre l’Union européenne et la Chine. Le rapport soutient une approche fondée sur un équilibre entre fermeté et coopération. En effet, la Chine est un partenaire économique et commercial stratégique majeur pour notre continent. Il est ainsi nécessaire de maintenir des relations commerciales, qui, bien qu’étant fortement déséquilibrées, demeurent fondamentales. Par ailleurs, les valeurs et les intérêts de européens doivent être réaffirmés, tout en faisant de l’Union européenne un acteur géopolitique et économique mondial. Je me suis ainsi exprimée en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations et les préconisations du Parlement sur l’évolution du partenariat entre l’Union européenne et la Chine. Il alerte à raison sur les violations répétées des droits humains en insistant notamment sur les persécutions subies par les Ouïghours et demande par ailleurs à la Chine de se conformer aux normes internationales en matière de climat, de droit du travail et de droits civils et politiques. Il appelle en revanche à une coopération renforcée entre l’Union européenne et les États-Unis au sein de l’OTAN dans une logique de confrontation et ne s&#39;oppose pas à la signature d&#39;un accord commercial entre l&#39;Union européenne et la Chine.Je me suis donc abstenue sur ce texte qui présente des constats que je partage mais s’inscrit dans une vision atlantiste et libre-échangiste des relations entre l&#39;UE et la Chine.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Cette résolution entend contribuer à définir une nouvelle stratégie de l’Union européenne vis-à-vis de la République populaire de Chine. Ce texte contient des éléments positifs, tels que le rappel de la nécessité de coopérer avec Beijing dans la lutte contre le réchauffement climatique, les crises sanitaires mondiales présentes et à venir, et en vue de réformer le multilatéralisme. De même, le texte condamne les nombreuses violations des droits humains commises sur le territoire chinois.Néanmoins, le texte consiste pour l’essentiel à demander un alignement complet sur les États-Unis d’Amérique et un renforcement des coopérations entre l’Union et l’OTAN pour « endiguer » la Chine. La République populaire est un partenaire géostratégique avec lequel nous avons de nombreux désaccords mais il serait catastrophique de s’en faire un adversaire géopolitique aux seules fins de complaire à Washington. Je me refuse donc à cautionner cet énième acte de servitude envers les États-Unis de la part des Européens et préfère m’abstenir.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Cette résolution, si elle met quelques saines barrières à l’accord général sur les investissements UE Chine, n’en demeure pas moins une excuse pour pousser à l’atlantisme, à la confrontation avec la Chine et prétend remplacer l’action diplomatique des États nations par celle de Bruxelles. Contre.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté en faveur de ce rapport qui présente les attentes du Parlement concernant cette nouvelle stratégie. Les eurodéputés avaient déjà exprimé l’an dernier leurs craintes et leurs attentes quant au respect des droits fondamentaux et à la désinformation en Chine. Dans ce rapport, nous formulons ici plusieurs piliers autour desquels l’UE doit faire reposer sa stratégie, en particulier la coopération dans les défis mondiaux, l’engagement de la Chine sur le respect des droits fondamentaux ou encore la défense de nos intérêts européens. Point également crucial, le Parlement rappelle sa position quant à l’accord global sur les investissements qui n’obtiendra pas notre ratification tant que les sanctions chinoises contre des élus et institutions européennes n’auront pas été levées. De même, nous réaffirmons qu’il est hors de question que les entreprises qui exploitent les populations ouighours dans le Xinjiang puissent commercialiser leurs produits dans l’espace de l’Union européenne et appelons la Commission à la plus grande fermeté sur cette question.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport car il prétend notamment remplacer l’action diplomatique des États-nations par celle de Bruxelles.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            Je suis opposée à l’accord général d’investissement avec la Chine, annoncé à la fin de l’année 2020. Cet accord sera au strict bénéfice de l’Allemagne et conduire à un nouvel affaissement de la politique commerciale française.Or, le rapport établit une analyse transeuropéenne des conséquences de l’accord sans différencier les risques encourus par les États membres de l’UE.Par ailleurs, si le rapport énonce certaines préoccupations et nécessités évidentes en matière de droit du travail et de normes environnementales par exemple, il fait reposer le principal de sa réflexion sur deux piliers que nous ne partageons pas : le triomphe des droits de l’homme sur les souverainetés et la volonté d’établir la Commission européenne comme ordonnatrice et dirigeante de la politique extérieure des Nations.Ainsi, ce rapport, au lieu d’aborder de manière pragmatique nos relations avec la Chine, se distingue par un atlantisme forcené et une défiance vis à vis de la souveraineté des États. C’est tout l’inverse d’une politique de puissance face à la Chine et je ne peux donc soutenir cela.J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Je suis opposée à l’accord général d’investissement avec la Chine, annoncé à la fin de l’année 2020. Cet accord sera au strict bénéfice de l’Allemagne et conduire à un nouvel affaissement de la politique commerciale française. Or, le rapport établit une analyse transeuropéenne des conséquences de l’accord sans différencier les risques encourus par les États membres de l’UE. Par ailleurs, si le rapport énonce certaines préoccupations et nécessités évidentes en matière de droit du travail et de normes environnementales par exemple, il fait reposer le principal de sa réflexion sur deux piliers que nous ne partageons pas: le triomphe des droits de l’homme sur les souverainetés et la volonté d’établir la Commission européenne comme ordonnatrice et dirigeante de la politique extérieure des nations. Ainsi, ce rapport, au lieu d’aborder de manière pragmatique nos relations avec la Chine, se distingue par un atlantisme forcené et une défiance vis à vis de la souveraineté des États. J&#39;ai donc voté contre ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Le texte se trompe sur toute la ligne concernant la Chine. Outre les fausses considérations sur les droits de l’homme, la rapporteure évoque l’application de l’article 5 du traité de l’OTAN (défense collective face à une agression). Sans surprise, elle essaye d’utiliser l’émergence de la Chine pour justifier un renforcement de l’OTAN.Si le rapport énonce certaines préoccupations et nécessités évidentes en matière de droit du travail et de normes environnementales par exemple, il fait reposer le principal de sa réflexion sur deux piliers que nous ne partageons pas : le triomphe des droits de l’homme sur les souverainetés et la volonté d’établir la Commission européenne comme ordonnatrice et dirigeante de la politique extérieure des Nations.Ainsi, ce rapport, au lieu d’aborder de manière pragmatique nos relations avec la Chine, se distingue par un atlantisme forcené et une défiance vis-à-vis de la souveraineté des États. C’est tout l’inverse d’une politique de puissance face à la Chine et nous ne pouvons pas soutenir cela.J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Le rapport énonce certaines préoccupations et nécessités évidentes (droit du travail, normes environnementales par exemple) mais il fait reposer le principal de sa réflexion sur deux piliers que nous ne partageons pas : le triomphe des droits de l’homme sur les souverainetés et la volonté d’établir la Commission européenne comme ordonnatrice et dirigeante de la politique extérieure des Nations. Ce texte, au lieu d’aborder de manière pragmatique nos relations avec la Chine, se distingue par un atlantisme forcené et une défiance vis-à-vis de la souveraineté des États. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre cette résolution qui, si elle érige quelques barrières à l’accord général sur les investissements UE - Chine, n’en demeure pas moins une excuse pour pousser à l’atlantisme, à la confrontation avec la Chine et prétend remplacer l’action diplomatique des États-nations par celle de Bruxelles.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197494</div>
+            
+            <header><b>Nathalie LOISEAU</b> | Renaissance</header>
+            
+                <p>Dans ce domaine comme dans d’autres, notre naïveté laisse sans voix. Nous n’avons pas prêté assez attention aux secteurs stratégiques, souvent dans la zone grise entre le civil et le militaire, dans lesquels la coopération scientifique avec la Chine foisonne. Nous avons laissé les instituts Confucius se multiplier et dicter, là où ils s’implantent, les sujets de recherche autorisés et ceux qui sont interdits lorsqu’il s’agit de la Chine. Nous ignorons qui sont les chercheurs européens que Pékin a convaincus de travailler pour la recherche chinoise et les conditions dans lesquelles ils mettent leurs savoirs au service d’un pays et souvent d’une armée, l’Armée populaire de libération, dont les ambitions devraient nous inquiéter.</p>
+            
+                <p>En résumé, nous avons accepté sans réagir une dépendance croissante de nos universités aux coopérations avec la Chine, au risque d’un pillage de nos savoirs et d’une censure chinoise dans notre recherche. Il est temps d’imposer la transparence là où règne l’opacité, de ne plus laisser nos universités faire n’importe quoi en ordre dispersé et de construire une véritable stratégie de souveraineté scientifique de l’Europe. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197502</div>
+            
+            <header><b>Marie-Pierre VEDRENNE</b> | Mouvement Démocrate</header>
+            
+                <p> – Madame la Présidente, Madame la Commissaire, si le dialogue avec Pékin peut être nécessaire pour lutter contre le changement climatique, sur les autres champs, nous devons faire preuve de fermeté. La Chine doit notamment s’engager à respecter pleinement les règles fixées par l’OMC et œuvrer à sa réforme.</p>
+            
+                <p>Sur l’accord sur les investissements, notre message demeure clair: il est inenvisageable que nous procédions à quelque vote ou étude tant que la Chine maintient ses sanctions contre nos institutions. Et quand bien même cet accord est gelé, la Chine doit honorer ses engagements de ratifier et de mettre en œuvre les conventions de l’OIT sur le travail forcé. Nous ne cautionnerons pas les pratiques inhumaines envers la minorité ouïghoure ou envers les Hongkongais.</p>
+            
+                <p>Madame la Commissaire, il est grand temps que l’Europe se dote d’instruments adéquats, notamment un mécanisme pour interdire l’importation de produits issus du travail forcé ou l’instrument visant à contrer les mesures coercitives. Il est grand temps d’assurer le respect de nos valeurs, la promotion de nos ambitions et la cohérence dans notre action. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197694</div>
+            
+            <header><b>Raphaël GLUCKSMANN</b> | Place publique</header>
+            
+                <p> – Madame la Présidente, Madame la Commissaire, chers collègues, nous sommes le 14 septembre 2021 et des millions de Ouïghours sont toujours parqués dans des camps de concentration en Chine; non pour ce qu’ils font, mais pour ce qu’ils sont. Je vous lasse, sans doute, à sans cesse revenir sur ce crime contre l’humanité, mais cela fait cinq ans que ces camps existent. Cinq ans que des multinationales cupides bénéficient de l’esclavage d’un peuple. Cinq ans que nos dirigeants refusent d’agir pour que cesse l’horreur. Nous savons pourtant les mesures qu’il nous faudrait prendre: bannissement des produits de l’esclavage de nos marchés. Ce n’est toujours pas fait. Alors, faisons-le. Sanctions des plus hauts responsables de la répression, comme Chen Quanguo, l’architecte de la déportation des Ouïgours après avoir été celui de la répression des Tibétains. Ce n’est toujours pas fait. Alors, faisons-le.</p>
+            
+                <p>Chers collègues, des centaines de milliers de jeunes partout en Europe se mobilisent pour briser le silence qui entoure la disparition d’un peuple. Je ne suis aujourd’hui que leur écho dans cette enceinte. Écoutez-les. Ils sont l’honneur de l’Europe. Ils nous conjurent d’agir. Alors agissons!</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

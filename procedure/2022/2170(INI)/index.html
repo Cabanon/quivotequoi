@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Création d&#39;emplois: transition juste et investissement dans l&#39;impact</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Création d&#39;emplois: transition juste et investissement dans l&#39;impact</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(349/556 * 100%)">349</div>
-  
-  
-    <div class="-" style="width: calc(142/556 * 100%)">142</div>
+    <div class="for" style="width: calc(349/556 * 100%)">349</div>
   
   
-    <div class="0" style="width: calc(65/556 * 100%)">65</div>
+    <div class="against" style="width: calc(142/556 * 100%)">142</div>
+  
+  
+    <div class="abstention" style="width: calc(65/556 * 100%)">65</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(51/68 * 100%)">51</div>
+    <div class="for" style="width: calc(51/68 * 100%)">51</div>
   
   
-    <div class="-" style="width: calc(16/68 * 100%)">16</div>
+    <div class="against" style="width: calc(16/68 * 100%)">16</div>
   
   
-    <div class="0" style="width: calc(1/68 * 100%)">1</div>
+    <div class="abstention" style="width: calc(1/68 * 100%)">1</div>
   
 </div>
  
 </section>
-            <a href="/voting/160076">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/160076">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -116,351 +121,724 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2170(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0342_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-11-23-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197623,197687,197690,204421,236051,236052,236050">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197511,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197529,197527,236053">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197529,197527,236053">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197626,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197615">🇫🇷 Reconquête!</option> 
+                        
+                            <option value="NA,197683">🇫🇷 Divers droite</option> 
+                        
+                            <option value="NA,197626">🇫🇷 Rassemblement national</option> 
+                        
+                            <option value="NA,197629">🇫🇷 Indépendant</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">124693,245018,96952,197697,197694,197531,197506,197500,97236,197529,197533,30482,24505</div>
+                
 
-<section>
+<p>
 
   
       O. considérant qu’il est nécessaire d’investir davantage dans l’enseignement professionnel ainsi que dans le perfectionnement et la reconversion professionnels; que les 
   
 
   
-      <del>employeurs </del>
+      <del>employeurs</del>
   
 
   
-      <ins>partenaires sociaux </ins>
+      <ins>partenaires sociaux</ins>
   
 
   
-      connaissent le mieux 
+       connaissent le mieux
   
 
   
-      <del>la main-d’œuvre, les aptitudes et les compétences dont ils ont besoin;</del>
+      <del> la main-d’œuvre,</del>
   
 
   
-      <ins>les aptitudes et les compétences qui sont nécessaires au renforcement de l’économie européenne;</ins>
+       les aptitudes et les compétences 
   
 
   
-       qu’il importe de faire correspondre ces besoins aux aspirations des 
+      <del>dont ils ont besoin</del>
   
 
   
-      <del>citoyens et de renforcer la croissance de l’Europe;</del>
+      <ins>qui sont nécessaires au renforcement de l’économie européenne</ins>
   
 
   
-      <ins>citoyens;</ins>
+      ; qu’il importe de faire correspondre ces besoins aux aspirations des citoyens
+  
+
+  
+      <del> et de renforcer la croissance de l’Europe</del>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Younous OMARJEE (LFI), 
+    
+      Sylvie GUILLAUME (PS), 
+    
+      Emmanuel MAUREL (GRS), 
+    
+      Pascal DURAND (RE), 
+    
+      Manon AUBRY (LFI), 
+    
+      Leila CHAIBI (LFI), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Raphaël GLUCKSMANN (PP), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV), 
+    
+      Marie TOUSSAINT (EELV) et 
+    
+      Christophe CLERGEAU (PS)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">346</div>
+  <div class="against">131</div>
+  <div class="abstention">70</div>
+</span>
+
+  
+    
+    <a href="/voting/161706">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(346/547 * 100%)">346</div>
-  
-  
-    <div class="-" style="width: calc(131/547 * 100%)">131</div>
-  
-  
-    <div class="0" style="width: calc(70/547 * 100%)">70</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/161706">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">124693,245018,96952,197697,197694,197531,197506,197500,97236,197529,197533,30482,24505,124693,245018,96952,197697,197694,197531,197506,197500,97236,197529,197533,30482,24505</div>
+                
 
-<section>
+<p>
 
   
       P. considérant que disposer d’une main-d’œuvre qualifiée 
   
 
   
-      <del>alignée sur les exigences du marché du travail contribue à une croissance durable, favorise l’innovation et améliore la compétitivité des entreprises;</del>
+      <del>alignée sur les exigences du marché du travail </del>
   
 
   
-      <ins>améliore le fonctionnement des marchés du travail, réduit l’inadéquation des compétences, contribue à une croissance durable et favorise l’innovation;</ins>
+      <ins>améliore le fonctionnement des marchés du travail, réduit l’inadéquation des compétences, </ins>
+  
+
+  
+      contribue à une croissance durable
+  
+
+  
+      <del>, </del>
+  
+
+  
+      <ins> et </ins>
+  
+
+  
+      favorise l’innovation
+  
+
+  
+      <del> et améliore la compétitivité des entreprises</del>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Younous OMARJEE (LFI), 
+    
+      Sylvie GUILLAUME (PS), 
+    
+      Emmanuel MAUREL (GRS), 
+    
+      Pascal DURAND (RE), 
+    
+      Manon AUBRY (LFI), 
+    
+      Leila CHAIBI (LFI), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Raphaël GLUCKSMANN (PP), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV), 
+    
+      Marie TOUSSAINT (EELV) et 
+    
+      Christophe CLERGEAU (PS)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">238</div>
+  <div class="against">290</div>
+  <div class="abstention">12</div>
+</span>
+
+  
+    
+    <a href="/voting/161707">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(238/540 * 100%)">238</div>
-  
-  
-    <div class="-" style="width: calc(290/540 * 100%)">290</div>
-  
-  
-    <div class="0" style="width: calc(12/540 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/161707">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">124693,245018,96952,197697,197694,197531,197506,197500,97236,197529,197533,30482,24505,124693,245018,96952,197697,197694,197531,197506,197500,97236,197529,197533,30482,24505,124693,245018,96952,197697,197694,197531,197506,197500,97236</div>
+                
 
-<section>
+<p>
 
   
       3. salue 
   
 
   
-      <del>la communication de la Commission intitulée «La compétitivité à long terme de l’UE: se projeter au-delà de 2030», qui vise à rationaliser et à simplifier les obligations d’information de 25 % pour les domaines thématiques écologique, numérique et économique, et la présentation, par la Commission, d’une proposition afin d’atteindre cet objectif d’ici à l’automne 2023; demande à la Commission de démontrer cet engagement rapidement, en améliorant </del>
+      <del>la communication de la Commission intitulée «La compétitivité à long terme de l’UE: se projeter au-delà de 2030», qui vise à rationaliser et à simplifier les obligations d’information de 25 % pour les domaines thématiques écologique, numérique et économique, et la présentation, par la Commission, d’une proposition afin d’atteindre cet objectif d’ici à l’automne 2023; demande à la Commission de démontrer cet engagement rapidement, en améliorant la compétitivité de toutes les entreprises de l’Union, y compris les PME, et en relevant le niveau des conditions de base pour la justice sociale et la prospérité; rappelle que les PME constituent l’épine dorsale de notre cohésion sociale</del>
   
 
   
-      <ins>le travail effectué par la Commission en vue du bon fonctionnement de l’économie sociale de marché, qui soit fondée sur une croissance durable et des emplois de qualité et qui investisse dans la transition écologique et la transition numérique; demande à la Commission de continuer à intensifier ce travail afin de soutenir </ins>
+      <ins>le travail effectué par la Commission en vue du bon fonctionnement de l’économie sociale de marché, qui soit fondée sur une croissance durable et des emplois de qualité et qui investisse dans la transition écologique et la transition numérique; demande à la Commission de continuer à intensifier ce travail afin de soutenir la compétitivité de toutes les entreprises de l’Union, y compris les PME, en même temps que la justice sociale et la prospérité; rappelle que des emplois de qualité et les PME sont essentiels à la cohésion sociale et à une économie compétitive et productive</ins>
   
 
   
-      la compétitivité de toutes les entreprises de l’Union, y compris les PME, 
-  
-
-  
-      <del>et en relevant le niveau des conditions de base pour </del>
-  
-
-  
-      <ins>en même temps que </ins>
-  
-
-  
-      la justice sociale et la prospérité; rappelle que 
-  
-
-  
-      <del>les PME constituent l’épine dorsale de notre cohésion sociale;</del>
-  
-
-  
-      <ins>des emplois de qualité et les PME sont essentiels à la cohésion sociale et à une économie compétitive et productive;</ins>
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Younous OMARJEE (LFI), 
+    
+      Sylvie GUILLAUME (PS), 
+    
+      Emmanuel MAUREL (GRS), 
+    
+      Pascal DURAND (RE), 
+    
+      Manon AUBRY (LFI), 
+    
+      Leila CHAIBI (LFI), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Raphaël GLUCKSMANN (PP), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV), 
+    
+      Marie TOUSSAINT (EELV) et 
+    
+      Christophe CLERGEAU (PS)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">223</div>
+  <div class="against">321</div>
+  <div class="abstention">19</div>
+</span>
+
+  
+    
+    <a href="/voting/161662">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(223/563 * 100%)">223</div>
-  
-  
-    <div class="-" style="width: calc(321/563 * 100%)">321</div>
-  
-  
-    <div class="0" style="width: calc(19/563 * 100%)">19</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/161662">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">124693,245018,96952,197697,197694,197531,197506,197500,97236,197529,197533,30482,24505,124693,245018,96952,197697,197694,197531,197506,197500,97236,197529,197533,30482,24505,124693,245018,96952,197697,197694,197531,197506,197500,97236,124693,245018,96952,197697,197694,197531,197506,197500,97236,197529,197533,30482,24505</div>
+                
 
-<section>
+<p>
 
   
       13. souligne la 
   
 
   
-      <del>charge réglementaire pesant sur les employeurs de l’Union et son incidence négative éventuelle sur la compétitivité, la croissance et la création d’emplois de qualité dans le contexte des transitions écologique et numérique; continue de soutenir le principe «un ajout, un retrait» et invite la Commission à élaborer un programme pour une meilleure réglementation plus ambitieux, qui devrait conduire à une réduction de la charge réglementaire pour les employeurs de l’Union;</del>
+      <del>charge réglementaire pesant sur les employeurs de l’Union et son incidence négative éventuelle sur la compétitivité, la croissance et la création d’emplois de qualité dans le contexte des transitions écologique et numérique; continue de soutenir le principe «un ajout, un retrait» et invite la Commission à élaborer un programme pour une meilleure réglementation plus ambitieux, qui devrait conduire à une réduction de la charge réglementaire pour les employeurs de l’Union</del>
   
 
   
-      <ins>nécessité de simplifier les procédures administratives pour les PME, tout en garantissant des conditions de travail correctes, une croissance durable et la création d’emplois de qualité dans le contexte des transitions écologique et numérique; invite la Commission à poursuivre sa coopération avec les employeurs et les travailleurs de l’Union afin qu’ils soient associés aux transitions;</ins>
+      <ins>nécessité de simplifier les procédures administratives pour les PME, tout en garantissant des conditions de travail correctes, une croissance durable et la création d’emplois de qualité dans le contexte des transitions écologique et numérique; invite la Commission à poursuivre sa coopération avec les employeurs et les travailleurs de l’Union afin qu’ils soient associés aux transitions</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Younous OMARJEE (LFI), 
+    
+      Sylvie GUILLAUME (PS), 
+    
+      Emmanuel MAUREL (GRS), 
+    
+      Pascal DURAND (RE), 
+    
+      Manon AUBRY (LFI), 
+    
+      Leila CHAIBI (LFI), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Raphaël GLUCKSMANN (PP), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV), 
+    
+      Marie TOUSSAINT (EELV) et 
+    
+      Christophe CLERGEAU (PS)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">268</div>
+  <div class="against">283</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/161668">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(268/562 * 100%)">268</div>
-  
-  
-    <div class="-" style="width: calc(283/562 * 100%)">283</div>
-  
-  
-    <div class="0" style="width: calc(11/562 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/161668">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">124693,245018,96952,197697,197694,197531,197506,197500,97236,197529,197533,30482,24505,124693,245018,96952,197697,197694,197531,197506,197500,97236,197529,197533,30482,24505,124693,245018,96952,197697,197694,197531,197506,197500,97236,124693,245018,96952,197697,197694,197531,197506,197500,97236,197529,197533,30482,24505,124693,245018,96952,197697,197694,197531,197506,197500,97236,197529,197533,30482,24505</div>
+                
 
-<section>
+<p>
 
   
       25. souligne que les établissements d’enseignement et de formation doivent renforcer la pertinence 
   
 
   
-      <del>de leurs formations en fonction des besoins des marchés du travail concurrentiels </del>
+      <del>de leurs formations en fonction des besoins des marchés du travail concurrentiels</del>
   
 
   
-      <ins>des formations sur le lieu de travail et des formations professionnelles </ins>
+      <ins>des formations sur le lieu de travail et des formations professionnelles</ins>
   
 
   
-      et préparer les apprenants, les formateurs et les enseignants aux connaissances et aux compétences nécessaires pour être des acteurs actifs du changement en vue d’une transition juste vers des économies durables sur le plan environnemental et une société où chacun a sa place;
+       et préparer les apprenants, les formateurs et les enseignants aux connaissances et aux compétences nécessaires pour être des acteurs actifs du changement en vue d’une transition juste vers des économies durables sur le plan environnemental et une société où chacun a sa place;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(246/556 * 100%)">246</div>
-  
-  
-    <div class="-" style="width: calc(289/556 * 100%)">289</div>
-  
-  
-    <div class="0" style="width: calc(21/556 * 100%)">21</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/161680">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+      Younous OMARJEE (LFI), 
     
+      Sylvie GUILLAUME (PS), 
+    
+      Emmanuel MAUREL (GRS), 
+    
+      Pascal DURAND (RE), 
+    
+      Manon AUBRY (LFI), 
+    
+      Leila CHAIBI (LFI), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Raphaël GLUCKSMANN (PP), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV), 
+    
+      Marie TOUSSAINT (EELV) et 
+    
+      Christophe CLERGEAU (PS)
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2170(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0342_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">246</div>
+  <div class="against">289</div>
+  <div class="abstention">21</div>
+</span>
+
   
+    
+    <a href="/voting/161680">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-11-23-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            . – Il s&#39;agit d&#39;un rapport d&#39;initiative qui vise à lier transition environnementale et création d&#39;emploi de qualité. L’objectif général de ce texte devant être encouragé, j’ai voté en faveur de ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            . – La transition écologique, telle qu’elle est engagée, va bouleverser notre rapport au travail, notre façon de travailler et le type d’emplois disponibles. Se poser la question de la suite, et de comment tirer au mieux parti de cette transition est donc légitime. Le problème est que leurs solutions passent toutes par le « tout européen », c’est une façon d’atteindre les objectifs de l’Accord de Paris ! J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car si je soutiens sa volonté d’engager une vraie réflexion sur les conséquences de la transition écologique, je refuse que tous les pouvoirs de contrôle et de décision sur l’avenir des Européens soient délégués à l’UE.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution sur la création d&#39;emplois. Le texte émet une série de recommandations en faveur de la création d’emplois de qualité au service de la transition environnementale. Il souligne l&#39;importance de la compétitivité des entreprises, notamment des PME, qui sont la colonne vertébrale de l&#39;économie européenne. Il insiste également sur la baisse de la charge administrative pesant sur les entreprises via une rationalisation des demandes d&#39;information tout en soutenant l&#39;importance fondamentale de la formation et l&#39;éducation dans l&#39;adaptation au marché du travail.
+        </article>
+    
+        <article>
+            <div class="hidden">197623</div>
+            
+            <header><b>Thierry MARIANI</b> | Rassemblement national</header>
+            Ce texte est un rapport d’initiative qui justifie son existence en indiquant que, d’après les estimations, 25% des enfants seraient menacés de pauvreté et d’exclusion sociale, et que l’UE se doit donc « d’apporter sa pierre à l’édifice ». Si nous devons apporter des réponses afin de remédier à ces problèmes, ce n’est pas à Bruxelles d’évaluer les besoins, définir les concepts et les objectifs, mais aux États membres. J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations et les recommandations du Parlement européen sur le potentiel de création d’emplois de la bifurcation écologique et sociale de nos économies. Il appelle à réduire le temps de travail, renforcer la démocratie sur le lieu de travail, renforcer les financements pour la transition écologique et la formation des travailleurs. J’ai donc voté pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197502</div>
+            
+            <header><b>Marie-Pierre VEDRENNE</b> | Mouvement Démocrate</header>
+            Le rapport souligne que la transition verte, lorsqu&#39;elle est gérée de manière efficace et bénéficie d&#39;un soutien adéquat, aura un impact significatif sur le développement des activités économiques liées aux énergies renouvelables, à l&#39;efficacité énergétique et à l&#39;économie circulaire. Elle engendrera également une transformation des autres secteurs économiques, favorisant leur potentiel de croissance durable. Une transition juste implique de créer des opportunités d&#39;emploi décent et en veillant à ce que personne ne soit laissé pour compte., un principe que notre délégation a déjà poussé à de nombreuses reprises, que cela soit dans le Fonds Social Climat, ou dans le Net Zero Industry Act pour une économie décarbonée.La transition doit profiter à la fois aux travailleurs actuels, qui font face à des changements substantiels dans leurs fonctions, et aux travailleurs licenciés en cours de transition vers de nouveaux emplois. Cela implique de garantir des conditions de travail décentes pour l&#39;ensemble de ces travailleurs.Évidemment, fidèle à lui-même, le Rassemblement National s’est prononcé contre cette résolution.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – La raison d’être de ce texte n’est pas infondée : la transition écologique, telle qu’elle est engagée, va bouleverser notre rapport au travail, notre façon de travailler et le type d’emplois disponibles. Se poser la question de la suite, et de comment tirer au mieux parti de cette transition est donc légitime. Le problème, ce sont les conclusions auxquelles ce rapport arrive, puisque ses solutions passent toutes par le « tout européen ». L’UE est à la manette pour évaluer les besoins, définir les concepts et les objectifs, financer, évaluer, surveiller.... Pour ces raisons, j’ai voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Le véritable problème du texte sont les conclusions auxquelles ils arrivent, puisque leurs solutions passent toutes par le «tout européen». L’UE est à la manette pour évaluer les besoins, définir les concepts et les objectifs, financer, évaluer, surveiller ... Ce texte aurait pu être l’occasion de mettre en avant l’importance du travail, d’appeler à soutenir les États membres qui réévaluent les salaires, à se reconcentrer sur le local, il n’en est rien. Je me suis donc opposé à ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Le rapporteur s’inquiète que la dimension sociale puisse être oubliée durant la transition écologique engagée par l’UE. Selon elle, les textes comme le Green Deal, l’Année européenne des compétences ou encore le règlement pour une industrie à zéro émission nette sont autant d’opportunité de développer des emplois stables, bien payés, effectués dans des conditions décentes, et avec une implication à tous les niveaux des syndicats et partenaires sociaux.La raison d’être de ce texte n’est pas infondée : la transition écologique, telle qu’elle est engagée, va bouleverser notre rapport au travail, notre façon de travailler et le type d’emplois disponibles. Se poser la question de la suite, et de comment tirer au mieux parti de cette transition est donc légitime. Le problème, ce sont les conclusions auxquelles ils arrivent, puisque leurs solutions passent toutes par le « tout européen ».J’ai tout de même voté en faveur.
+        </article>
+    
+        <article>
+            <div class="hidden">197629</div>
+            
+            <header><b>Maxette PIRBAKAS</b> | Indépendant</header>
+            . – Je me suis abstenue sur ce rapport d’initiative qui entend se mêler d’un domaine qui n’appartient pas aux compétences de l’Union européenne. Même si la plupart des préconisations sont bonnes, quoique sans grande portée concrète, j’ai estimé que l’interférence avec les politiques internes des États membres, qui sont souvent le fruit d’équilibres spécifiques, n’était pas souhaitable.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            . – Ce rapport d’initiative s’inquiète de ce que la dimension sociale puisse être oubliée durant la transition écologique engagée par l’UE. Cette réflexion n’est pas infondée : la transition écologique, telle qu’elle est engagée, va bouleverser notre rapport au travail, notre façon de travailler et le type d’emplois disponibles. Le problème, ce sont les conclusions auxquelles ils arrivent, puisque leurs solutions passent toutes par le « tout européen ». L’UE est à la manette pour évaluer les besoins, définir les concepts et les objectifs, financer, évaluer, surveiller. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b>Marina MESURE</b> | La France Insoumise</header>
+            Ce rapport met en avant le potentiel de création d’emplois d’une transition juste. Il appelle à l&#39;intensification de l&#39;apprentissage tout au long de la vie et à une meilleure implication des travailleurs et de leurs représentants dans la transition. Le rapport demande une prise en compte effective des travailleurs dont l’emploi pourrait être menacé par la transition écologique et utiliser la transition comme levier effectif d’une politique d’emploi juste. Malgré certaines lacunes, notamment sur la nécessité d’inscrire la transition dans le protectionnisme, en particulier concernant l’industrie, j’ai voté pour ce rapport progressiste qui rappelle que la transition écologique doit être un levier de politique sociale.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

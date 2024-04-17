@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Mise en œuvre du nouvel agenda européen de la culture et de la stratégie de l’Union européenne dans le domaine des relations culturelles internationales</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Mise en œuvre du nouvel agenda européen de la culture et de la stratégie de l’Union européenne dans le domaine des relations culturelles internationales</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(455/613 * 100%)">455</div>
-  
-  
-    <div class="-" style="width: calc(114/613 * 100%)">114</div>
+    <div class="for" style="width: calc(455/613 * 100%)">455</div>
   
   
-    <div class="0" style="width: calc(44/613 * 100%)">44</div>
+    <div class="against" style="width: calc(114/613 * 100%)">114</div>
+  
+  
+    <div class="abstention" style="width: calc(44/613 * 100%)">44</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             🔎 Vote introuvable
@@ -83,14 +87,10 @@
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Programmes, actions culturelles et soutien</li>
-        
     
         
         
@@ -99,7 +99,12 @@
     
         
         
-            <li>Relations avec les pays tiers</li>
+            <li>Programmes, actions culturelles et soutien</li>
+        
+    
+        
+        
+            <li>Relations dans le cadre/avec les organisations internationales: ONU, OSCE, OCDE, Conseil de l&#39;Europe, BERD</li>
         
     
         
@@ -109,153 +114,321 @@
     
         
         
-            <li>Espace culturel commun, diversité culturelle</li>
+            <li>Relations avec les pays tiers</li>
         
     
         
         
-            <li>Relations dans le cadre/avec les organisations internationales: ONU, OSCE, OCDE, Conseil de l&#39;Europe, BERD</li>
+            <li>Espace culturel commun, diversité culturelle</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2047(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0279_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-12-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,204416,204419,234344">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502,234344">🇫🇷 Mouvement Démocrate</option> 
+                        
+                            <option value="RE,197511">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197683,197629,197615">🇫🇷 Reconquête!</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       E. considérant que l’Europe est 
   
 
   
-      <del>une communauté culturelle fondée sur des valeurs et une histoire communes ainsi que sur la poursuite de l’intégration;</del>
+      <del>une communauté culturelle fondée sur des valeurs et une histoire communes ainsi que sur la poursuite de l’intégration</del>
   
 
   
-      <ins>un continent aux traditions culturelles locales florissantes;</ins>
+      <ins>un continent aux traditions culturelles locales florissantes</ins>
   
 
   
-       que la culture et le patrimoine culturel, notamment les itinéraires culturels européens, présentent un potentiel énorme en matière de 
+      ; que la culture et le patrimoine culturel, notamment les itinéraires culturels européens, présentent un potentiel énorme en matière de 
   
 
   
-      <del>promotion des valeurs de l’Union européenne, de renforcement de ses diverses identités et de réalisation de ses objectifs au niveau mondial, ainsi que de contribution à la résolution des défis mondiaux;</del>
+      <del>promotion des valeurs de l’Union européenne, de renforcement de ses</del>
   
 
   
-      <ins>renforcement des diverses identités de l’Europe;</ins>
+      <ins>renforcement des</ins>
+  
+
+  
+       diverses identités 
+  
+
+  
+      <del>et </del>
+  
+
+  
+      de 
+  
+
+  
+      <del>réalisation de ses objectifs au niveau mondial, ainsi que de contribution à la résolution des défis mondiaux</del>
+  
+
+  
+      <ins>l’Europe</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°2 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      20. invite la Commission et les États membres à garantir l’inclusion des groupes les plus marginalisés et sous-représenté
-  
+<p>
 
   
-      <del>s </del>
+      20. invite la Commission et les États membres à garantir l’inclusion des groupes les plus marginalisés et sous-représentés
   
 
   
-      <ins>s, en particulier les personnes handicapées, </ins>
+      <del> </del>
+  
+
+  
+      <ins>, en particulier les personnes handicapées, </ins>
   
 
   
       dans les activités et initiatives culturelles, non seulement en tant que bénéficiaires passifs mais également en tant que créateurs actifs de ces activités, de façon à encourager un sentiment d’appartenance commune et la perspective d’un avenir commun à tous; salue à cet effet la mise en route d’une étude indépendante intitulée «L’importance de la participation des citoyens à la culture pour l’engagement civique et la démocratie – enseignements politiques tirés de la recherche internationale», et attend avec impatience sa publication en novembre 2022; encourage la Commission à partager les résultats de l’étude et à prendre les mesures de suivi appropriées;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°3 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
-
-  
-      32. estime que les travailleurs dans les 
-  
+<p>
 
   
-      <del>SICC,</del>
+      32. estime que les travailleurs dans les SICC
   
 
   
-      <ins>SICC ont été</ins>
+      <del>, </del>
   
 
   
-       durement affectés par 
+      <ins> ont été </ins>
   
 
   
-      <del>la pandé</del>
+      durement affectés par 
   
 
   
-      <ins>les conséquences des mesures prises en réponse à l’épidé</ins>
+      <del>la pandémie</del>
   
 
   
-      mie de COVID-
+      <ins>les conséquences des mesures prises en réponse à l’épidémie</ins>
   
 
   
-      <del>19, </del>
+       de COVID-19
   
 
   
-      <ins>19 et </ins>
+      <del>, </del>
+  
+
+  
+      <ins> et </ins>
   
 
   
@@ -266,169 +439,327 @@
       <del> invite les États membres à consacrer 2 % de leur budget à la culture, conformément aux demandes répétées du Parlement en ce sens;</del>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°4 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       45. souligne la contribution considérable des arts et de la culture à la sensibilisation 
   
 
   
-      <del>aux questions environnementales, climatiques et de durabilité et à leur dimension sociale,</del>
+      <del>aux questions environnementales, climatiques et de durabilité et à leur dimension sociale</del>
   
 
   
-      <ins>à la nature,</ins>
+      <ins>à la nature</ins>
   
 
   
-       ainsi qu’à l’incitation à une évolution positive du comportement; rappelle, en particulier, que les savoirs traditionnels, qui font partie du patrimoine culturel, sont essentiels pour renforcer les efforts en matière d’atténuation du changement climatique et d’adaptation à ce dernier; à cette fin, encourage la Commission à collaborer plus étroitement avec les États membres, la société civile et les organisations nationales et locales afin de sensibiliser les citoyens à ce sujet, ainsi qu’à prévoir un financement spécifique pour ce type d’initiatives culturelles grâce à des synergies avec d’autres programmes, fonds et politiques spécifiques de l’Union;
+      , ainsi qu’à l’incitation à une évolution positive du comportement; rappelle, en particulier, que les savoirs traditionnels, qui font partie du patrimoine culturel, sont essentiels pour renforcer les efforts en matière d’atténuation du changement climatique et d’adaptation à ce dernier; à cette fin, encourage la Commission à collaborer plus étroitement avec les États membres, la société civile et les organisations nationales et locales afin de sensibiliser les citoyens à ce sujet, ainsi qu’à prévoir un financement spécifique pour ce type d’initiatives culturelles grâce à des synergies avec d’autres programmes, fonds et politiques spécifiques de l’Union;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    ID
+    (🇫🇷 : Rassemblement national)
     
-    <article>
-    <header>📝 Amendement n°5 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       49. rappelle l’article 3 du traité sur l’Union européenne, qui dispose que l’Union doit veiller à la sauvegarde et au développement du patrimoine culturel européen; 
   
 
   
-      <del>invite donc la Commission à tenir compte de cet aspect primordial lors de sa décision concernant l’inclusion du plomb dans la liste des substances soumises à autorisation figurant à l’annexe XIV du règlement concernant l’enregistrement, l’évaluation et l’autorisation des substances chimiques, ainsi que les restrictions applicables à ces substances (REACH); rappelle qu’une telle mesure pourrait entraîner la fermeture ou la délocalisation de nombreuses entreprises artisanales dans des domaines tels que l’industrie du vitrail et, à terme, avoir des répercussions sur la restauration du vaste patrimoine de l’Union, ainsi que provoquer la disparition de nombreuses productions agricoles traditionnelles; insiste sur la nécessité de concilier le niveau requis de protection de la santé humaine et de l’environnement avec la préservation du patrimoine européen et demande que le secteur culturel soit exempté de manière permanente du règlement susmentionné;</del>
+      <del>invite donc la Commission à tenir compte de cet aspect primordial lors de sa décision concernant l’inclusion du plomb dans la liste des substances soumises à autorisation figurant à l’annexe XIV du règlement concernant l’enregistrement, l’évaluation et l’autorisation des substances chimiques, ainsi que les restrictions applicables à ces substances (REACH); rappelle qu’une telle mesure pourrait entraîner la fermeture ou la délocalisation de nombreuses entreprises artisanales dans des domaines tels que l’industrie du vitrail et, à terme, avoir des répercussions sur la restauration du vaste patrimoine de l’Union, ainsi que provoquer la disparition de nombreuses productions agricoles traditionnelles; insiste sur la nécessité de concilier le niveau requis de protection de la santé humaine et de l’environnement avec</del>
   
 
   
-      <ins>insiste sur le fait que maintenir la protection nécessaire de la santé humaine et de l’environnement n’est pas incompatible avec la préservation du patrimoine européen; souligne que le rapport intitulé «Renforcer la résilience du patrimoine culturel face au changement climatique», publié en 2022 par des experts de la Commission et des États membres, indique clairement que la crise climatique ne peut être résolue par une crise du patrimoine culturel; invite donc la Commission à tenir compte de ces considérations au moment de décider d’inclure des substances énumérées à l’annexe XIV du règlement concernant l’enregistrement, l’évaluation et l’autorisation des substances chimiques, ainsi que les restrictions applicables à ces substances (REACH), lorsque ces substances sont nécessaires à la restauration du patrimoine culturel; demande à la Commission, dans de tels cas, d’évaluer soigneusement les avantages socio-économiques découlant de l’utilisation de ces substances par rapport au risque pour la santé humaine ou l’environnement, afin que les deux    intérêts soient correctement préservés; demande qu’elle examine également l’existence de substances ou de technologies de remplacement appropriées, conformément à l’article 60 et à l’article 58, paragraphe 2, (et aux autres articles pertinents) du règlement REACH; souligne que le secteur du patrimoine a pris des mesures exemplaires en termes d’exigences légales pour protéger les artisans et les artistes dans l’exercice de leurs activités professionnelles; demande que le secteur culturel et les activités liées au patrimoine culturel bénéficient, le cas échéant, d’exemptions et de dérogations au règlement susmentionné, afin d’éviter la fermeture ou la délocalisation de nombreuses entreprises artisanales et tout impact négatif sur la restauration, l’entretien et la conservation du vaste patrimoine de l’Union ; invite les institutions européennes à consulter et à impliquer le secteur du patrimoine dans toutes les discussions préliminaires relatives aux modifications réglementaires ou législatives ayant une incidence directe sur ses activités;</ins>
+      <ins>insiste sur le fait que maintenir la protection nécessaire de la santé humaine et de l’environnement n’est pas incompatible avec la préservation du patrimoine européen; souligne que le rapport intitulé «Renforcer la résilience du patrimoine culturel face au changement climatique», publié en 2022 par des experts de la Commission et des États membres, indique clairement que la crise climatique ne peut être résolue par une crise du patrimoine culturel; invite donc la Commission à tenir compte de ces considérations au moment de décider d’inclure des substances énumérées à l’annexe XIV du règlement concernant l’enregistrement, l’évaluation et l’autorisation des substances chimiques, ainsi que les restrictions applicables à ces substances (REACH), lorsque ces substances sont nécessaires à la restauration du patrimoine culturel; demande à la Commission, dans de tels cas, d’évaluer soigneusement les avantages socio-économiques découlant de l’utilisation de ces substances par rapport au risque pour la santé humaine ou l’environnement, afin que les deux    intérêts soient correctement préservés; demande qu’elle examine également l’existence de substances ou de technologies de remplacement appropriées, conformément à l’article 60 et à l’article 58, paragraphe 2, (et aux autres articles pertinents) du règlement REACH; souligne que le secteur du patrimoine a pris des mesures exemplaires en termes d’exigences légales pour protéger les artisans et les artistes dans l’exercice de leurs activités professionnelles; demande que le secteur culturel et les activités liées au patrimoine culturel bénéficient, le cas échéant, d’exemptions et de dérogations au règlement susmentionné, afin d’éviter la fermeture ou la délocalisation de nombreuses entreprises artisanales et tout impact négatif sur la restauration, l’entretien et</ins>
+  
+
+  
+       la 
+  
+
+  
+      <del>préservation</del>
+  
+
+  
+      <ins>conservation</ins>
+  
+
+  
+       du 
+  
+
+  
+      <del>patrimoine européen et demande que le secteur culturel soit exempté de manière permanente du règlement susmentionné</del>
+  
+
+  
+      <ins>vaste patrimoine de l’Union ; invite les institutions européennes à consulter et à impliquer le secteur du patrimoine dans toutes les discussions préliminaires relatives aux modifications réglementaires ou législatives ayant une incidence directe sur ses activités</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">304</div>
+  <div class="against">302</div>
+  <div class="abstention">12</div>
+</span>
+
+  
+    
+    <a href="/voting/">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(304/618 * 100%)">304</div>
-  
-  
-    <div class="-" style="width: calc(302/618 * 100%)">302</div>
-  
-  
-    <div class="0" style="width: calc(12/618 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
+🚫 Annulé
+
+</header>
+            
+                <div class="hidden">RE</div>
+                
+
+<p>
+
+  
+      49. rappelle l’article 3 du traité sur l’Union européenne, qui dispose que l’Union doit veiller à la sauvegarde et au développement du patrimoine culturel européen; 
+  
+
+  
+      <del>invite donc la Commission à tenir compte de cet aspect primordial lors de sa décision concernant l’inclusion du plomb dans la liste des substances soumises à autorisation figurant à l’annexe XIV du règlement concernant l’enregistrement, l’évaluation et l’autorisation des substances chimiques, ainsi que les restrictions applicables à ces substances (REACH); rappelle qu’une telle mesure pourrait entraîner la fermeture ou la délocalisation de nombreuses entreprises artisanales dans des domaines tels que l’industrie du vitrail et, à terme, avoir des répercussions sur la restauration du vaste patrimoine de l’Union, ainsi que provoquer la disparition de nombreuses productions agricoles traditionnelles; insiste sur la nécessité de concilier le niveau requis</del>
+  
+
+  
+      <ins>insiste sur le fait que maintenir la protection nécessaire de la santé humaine et de l’environnement n&#39;est pas incompatible avec la préservation du patrimoine européen; invite donc la Commission à tenir compte de ces considérations au moment de décider d’accorder ou non des autorisations pour les substances figurant à l’annexe XIV du règlement concernant l’enregistrement, l’évaluation et l’autorisation des substances chimiques, ainsi que les restrictions applicables à ces substances (REACH), lorsque ces substances sont nécessaires à la restauration du patrimoine culturel; demande à la Commission, dans de tels cas, d’évaluer soigneusement les avantages socio-économiques découlant de l’utilisation de ces substances par rapport au risque pour la santé humaine ou l’environnement, afin que les deux intérêts soient correctement préservés, et d’examiner l’existence de substances ou</ins>
+  
+
+  
+       de 
+  
+
+  
+      <del>protection</del>
+  
+
+  
+      <ins>technologies</ins>
+  
+
+  
+       de 
+  
+
+  
+      <del>la santé humaine et de l’environnement avec la préservation du patrimoine européen et demande que le secteur culturel soit exempté de manière permanente </del>
+  
+
+  
+      <ins>remplacement appropriées, conformément aux exigences de l’article 60 (et des autres articles pertinents) </ins>
+  
+
+  
+      du règlement 
+  
+
+  
+      <del>susmentionné</del>
+  
+
+  
+      <ins>REACH</ins>
+  
+
+  
+      ;
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+  
     
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
     
-    <article>
-    <header>📝 Amendement n°7 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
+<p>
 
   
       55. 
   
 
   
-      <del>demande à la Commission de </del>
+      <del>demande à la Commission de</del>
   
 
   
-      <ins>reconnaît l’importance capitale des actifs incorporels et des industries à forte intensité de propriété intellectuelle pour la croissance économique de l’Union ainsi que pour sa résilience et sa visibilité culturelles, en soulignant le rôle crucial que joue déjà la propriété intellectuelle dans la transformation numérique de l’Europe; insiste sur la nécessité de renforcer de manière satisfaisante la protection juridique de ces actifs et de ces industries, afin de permettre à tous les créateurs d’œuvres culturelles et créatives de bénéficier de leurs droits de propriété intellectuelle; demande à la Commission, dans ce contexte, de prendre les mesures nécessaires pour </ins>
+      <ins>reconnaît l’importance capitale des actifs incorporels et des industries à forte intensité de propriété intellectuelle pour la croissance économique de l’Union ainsi que pour sa résilience et sa visibilité culturelles, en soulignant le rôle crucial que joue déjà la propriété intellectuelle dans la transformation numérique de l’Europe; insiste sur la nécessité de renforcer de manière satisfaisante la protection juridique de ces actifs et de ces industries, afin de permettre à tous les créateurs d’œuvres culturelles et créatives de bénéficier de leurs droits de propriété intellectuelle; demande à la Commission, dans ce contexte, de prendre les mesures nécessaires pour</ins>
   
 
   
-      protéger la propriété intellectuelle du paysage numérisé européen,
+       protéger la propriété intellectuelle du paysage numérisé européen
   
 
   
-      <del> qui doit rester européen;</del>
+      <del>, qui doit rester européen;</del>
+  
+
+  
+      <ins>,</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
     
-    <article>
-    <header>📝 Amendement n°8 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
+<p>
 
   
       70. encourage les États membres et le SEAE à intégrer les politiques culturelles, les relations culturelles internationales et la diplomatie culturelle dans 
@@ -442,65 +773,113 @@
       la formation de l’ensemble de leur personnel diplomatique afin de sensibiliser les diplomates aux relations culturelles internationales en tant que domaine essentiel et indépendant de la diplomatie publique, ainsi que de développer les compétences politiques et stratégiques appropriées dans le domaine des relations culturelles internationales et de la diplomatie culturelle; attend avec intérêt les résultats de l’Académie diplomatique européenne, récemment mise en place sur la base d’un projet pilote du Parlement européen, ainsi que la publication, au mois de novembre, de l’étude de faisabilité commandée par le SEAE;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
     
-    <article>
-    <header>📝 Amendement n°9 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
+<p>
 
   
       82. charge sa Présidente de transmettre la présente 
   
 
   
-      <del>décision au Conseil et à la Commission.</del>
+      <del>décision</del>
   
 
   
-      <ins>résolution au Conseil, à la Commission et au Service européen pour l’action extérieure.</ins>
+      <ins>résolution</ins>
+  
+
+  
+       au Conseil
+  
+
+  
+      <del> et </del>
+  
+
+  
+      <ins>, </ins>
+  
+
+  
+      à la Commission
+  
+
+  
+      <ins> et au Service européen pour l’action extérieure</ins>
+  
+
+  
+      .
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
     
-    <article>
-    <header>📝 Amendement n°10 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
+<p>
 
   
       58. condamne l’utilisation de la culture, notamment par l’intermédiaire des établissements culturels et éducatifs, par les gouvernements autoritaires en particulier, qui tentent de redéfinir les règles et les valeurs internationales en remettant en cause leur universalité et d’exercer leur influence politique en violant la liberté artistique et académique;
@@ -510,100 +889,298 @@
       <ins> souligne, par exemple, le rôle joué par les instituts Confucius pour permettre à la Chine d’exercer un contrôle strict sur tous les sujets qui la concernent dans le domaine de la recherche et de l’enseignement, ce qui constitue une violation de la protection constitutionnelle de la liberté et de l’autonomie du monde universitaire et de l’enseignement;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">258</div>
+  <div class="against">279</div>
+  <div class="abstention">72</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(258/609 * 100%)">258</div>
-  
-  
-    <div class="-" style="width: calc(279/609 * 100%)">279</div>
-  
-  
-    <div class="0" style="width: calc(72/609 * 100%)">72</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE</div>
+                
 
-<section>
-
-  
-      78. demande à la Commission de condamner fermement la destruction du patrimoine historique, artistique et culturel lors des récents conflits, ainsi que la destruction systématique et ciblée politiquement ou idéologiquement du patrimoine historique, artistique et culturel, de même que l’éradication des identités et des cultures d’États souverains, de peuples ou de minorité
-  
+<p>
 
   
-      <del>s;</del>
+      78. demande à la Commission de condamner fermement la destruction du patrimoine historique, artistique et culturel lors des récents conflits, ainsi que la destruction systématique et ciblée politiquement ou idéologiquement du patrimoine historique, artistique et culturel, de même que l’éradication des identités et des cultures d’États souverains, de peuples ou de minorités
   
 
   
-      <ins>s, y compris la politique de l’Azerbaïdjan consistant à effacer et à nier le patrimoine culturel arménien dans et autour du Haut-Karabakh et la destruction délibérée de sites culturels en Ukraine en raison de la guerre d’agression non provoquée et illégale menée par la Russie;</ins>
+      <ins>, y compris la politique de l’Azerbaïdjan consistant à effacer et à nier le patrimoine culturel arménien dans et autour du Haut-Karabakh et la destruction délibérée de sites culturels en Ukraine en raison de la guerre d’agression non provoquée et illégale menée par la Russie</ins>
   
 
   
-       rappelle que la destruction du patrimoine culturel peut constituer un crime de guerre et une violation des droits de l’homme, et rappelle également, dans ce contexte, les engagements pris par les États membres en matière de responsabilité de protéger, y compris en ce qui concerne la protection du patrimoine culturel au lendemain et au cours des conflits armés; appelle de ses vœux l’inclusion de la protection du patrimoine culturel dans les missions et opérations de la politique de sécurité et de défense commune de l’Union afin de fournir aux partenaires locaux une 
+      ; rappelle que la destruction du patrimoine culturel peut constituer un crime de guerre et une violation des droits de l’homme, et rappelle également, dans ce contexte, les engagements pris par les États membres en matière de responsabilité de protéger, y compris en ce qui concerne la protection du patrimoine culturel au lendemain et au cours des conflits armés; appelle de ses vœux l’inclusion de la protection du patrimoine culturel dans les missions et opérations de la politique de sécurité et de défense commune de l’Union afin de fournir aux partenaires locaux une
   
 
   
-      <ins>   </ins>
+      <del> </del>
   
 
   
-      assistance et une formation qui leur permettront de répondre aux problèmes de sécurité liés au patrimoine culturel; préconise des sanctions ciblées à l’encontre des personnes et des entités responsables de la destruction, du vandalisme ou du trafic de patrimoine culturel, en tant qu’étape importante pour exercer un effet 
+      <ins>    </ins>
   
 
   
-      <del>   </del>
+      assistance et une formation qui leur permettront de répondre aux problèmes de sécurité liés au patrimoine culturel; préconise des sanctions ciblées à l’encontre des personnes et des entités responsables de la destruction, du vandalisme ou du trafic de patrimoine culturel, en tant qu’étape importante pour exercer un effet
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
       dissuasif et faire en sorte que les coupables aient à répondre de leurs actes;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/2047(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0279_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Horizons, Mouvement Démocrate)
+    
   
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-12-14-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Reconquête!</header>
+            . – J’ai voté contre ce texte. Si globalement l’agenda culturel européen pourrait être favorable aux artistes, le texte est trop politisé et veut plus d’UE, une dimension «de genre», l’intégration des migrants, de la communauté LGBT, etc.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J’ai voté contre ce texte.Le concept de « culture » regroupe ici, en réalité, un galimatias idéologique qu’il est peu opportun de propager à travers le monde.C’est d’autant plus vrai que je ne suis pas favorable à ce que l’Union européenne s’arroge un rôle de représentation diplomatique et culturelle. Cette mission incombe, à mon sens, aux États membres.J’ai tenu à voter pour l’amendement relatif à l’utilisation du plomb, qui est indispensable pour certaines industries comme les cristalleries ou les vitraillistes. Je me suis exprimée à plusieurs reprises sur cette question, qui concerne ma région au premier chef.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce texte évalue la mise en œuvre du nouvel agenda européen de la culture de 2018 et de la stratégie de l’Union européenne dans le domaine des relations culturelles internationales publiée en 2016. Il rappelle l’impact de la pandémie sur les secteurs culturels ainsi que le besoin de consacrer une part significative des budgets des plans nationaux de relance à la reprise culturelle, à hauteur de 2%, alors que la majorité des États membres sont restés en-deçà de ce chiffre. Il souligne le rôle fondamental des activités culturelles dans le bien-être individuel et la nécessité de protéger la culture de la marchandisation ainsi que de conserver et promouvoir notre patrimoine culturel. Partageant les orientations de ce texte, j’ai voté en sa faveur.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Une fois de plus la Commission a une vision utilitariste de la culture, elle s’en sert pour étendre son idéologie supranationaliste, ne parle que de transition écologique et de migration. La culture française et les traditions de nos pays qui composent l’Union européenne méritent de plus grandes ambitions. J’ai voté contre ce dossier.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il instrumentalise la culture pour en faire un outil de propagande aux mains de l’Union européenne, propageant ainsi les lubies immigrationnistes et écologistes qui ne servent pas les intérêts de la France.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution sur la mise en œuvre du nouvel agenda européen de la culture et de la stratégie de l’Union européenne dans le domaine des relations culturelles internationales. Le texte rappelle que les industries de la culture et de la création représentent plus de 4 % du PIB de l’Union et plus de 7 millions d’emplois. Il prend acte de la mise en œuvre globalement satisfaisante du nouvel agenda européen de la culture et suggère plusieurs pistes d’amélioration. Il recommande par exemple aux États membres d’exploiter pleinement le potentiel offert par les financements, les programmes et les politiques de l’Union consacrés à la culture, de même que leurs synergies avec d’autres programmes tels qu’Horizon Europe, Erasmus+ et le nouveau Bauhaus européen.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            Ce rapport d’initiative vise à la mise en œuvre du nouvel agenda européen de la culture et de la stratégie de l’Union européenne dans le domaine des relations culturelles internationales. Il a été l’occasion pour le groupe PPE de déposer un amendement visant à exempter les activités liées à la préservation du patrimoine du champ d’application du règlement sur les produits chimiques dans le cadre de l’entretien et la conservation du vaste patrimoine de l’Union européenne. En effet, la Commission européenne prépare une réforme de cette réglementation et pourrait, à travers une approche trop stricte empêcher l’usage du plomb par certains artisans. Cela pourrait menacer la restauration de notre patrimoine, partout en Europe. J’ai donc soutenu l’amendement déposée par le PPE pour permettre au secteur du vitrail notamment de continuer à fonctionner. J’ai également soutenu ce rapport dans son ensemble.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à évaluer la mise en œuvre du nouvel agenda européen de la culture de 2018. Il invite notamment à garantir l’inclusion des groupes les plus marginalisés et sous-représentés dans les activités culturelles, rappelle les difficultés rencontrées par la secteur en raison de la pandémie, demande de renforcer les aides à destination des artistes et recommande d’améliorer les conditions de travail et de rémunération des intermittents. J’ai donc voté pour ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Reconquête!</header>
+            . – J’ai voté contre ce texte. Si, globalement, l’agenda culturel européen peut être favorable aux artistes, le texte est trop politisé et veut plus d’Union européenne, une dimension «de genre», l’intégration des migrants, de la communauté LGBT, etc.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai voté en faveur du rapport sur la mise en œuvre du nouvel agenda européen de la culture et de la stratégie de l&#39;Union européenne en matière de relations culturelles internationales. Malgré les deux années de pandémie de COVID-19 qui ont touché durement le secteur de la culture, les méthodes de travail développées par le nouvel agenda européen ont obtenu de bons résultats, notamment sur la coopération entre les États membres, les organisations de la société civile et les partenaires internationaux. Pour les années à venir, l’accent sera mis sur la relance des secteurs et industries culturels, la protection et la valorisation de l’héritage culturel, ainsi que l’innovation et la stratégie digitale. Il est primordial que l’accès à la culture soit facilité pour l’ensemble des citoyens européens car c’est aussi par la culture que se transmet des éléments essentiels à la vie d’une société et à l’éducation de nos enfants, particulièrement pour comprendre ce qui fait l’identité européenne et nos valeurs communes. La culture peut servir à pacifier les relations entre les communautés à travers le dialogue et les échanges interculturels, c’est pourquoi le nouvel agenda européen porte en son sein des ambitions afin de renforcer les relations culturelles internationales.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport car la diplomatie doit rester une affaire d’État et l’Union européenne ne doit pas se mêler de faire de la diplomatie culturelle. Par ailleurs la «culture» mise en avant par le Parlement est faite d’expression individuelle, de submersion migratoire et de théorie des genres.Nous avons pour la culture française de plus vastes ambitions.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Une fois de plus la commission CULT a une vision utilitariste de la culture, elle s’en sert pour étendre son idéologie supranationaliste, ne parle que de transition écologique et de migration. La culture française, et les traditions de nos pays qui composent l’Europe méritent de plus grandes ambitions. J’ai voté contre ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Le rapport a pour objectif d&#39;évaluer la mise en œuvre du nouvel agenda européen de la culture de 2018 et de la communication conjointe de 2016 de la Commission européenne et du Service Européen de l’Action Extérieure vers une stratégie de l&#39;UE pour les relations culturelles internationales. Un accent particulier est mis sur l&#39;accessibilité de la culture de manière inclusive, et au développement durable et à la lutte contre le changement climatique.Des allusions plus ou moins explicites à l’immigration sont semées dans le texte, suggérant parfois que la « culture européenne » est le vecteur d’inclusion le plus fort, et « que l&#39;Europe est une communauté culturelle, fondée sur des valeurs et une histoire commune, et sur une intégration continue » justifiant par-là la submersion migratoire. La civilisation européenne et son héritage helléno-chrétien sont effacés au profit des soi-disant « valeurs européennes » défendues par l’idéologie bruxelloise.Une fois de plus, la Commission a une vision utilitariste de la culture, elle s’en sert pour étendre son idéologie supranationaliste, ne parle que de transition écologique et de migration. La culture française, et les traditions de nos pays qui composent l’Europe méritent de plus grandes ambitions.J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b></b> | </header>
+            Ce rapport a pour objectif d’évaluer la mise en œuvre du nouvel agenda européen de la culture de 2018 intitulé «Vers une stratégie de l’UE dans le domaine des relations culturelles internationales». Il s’articule autour de trois grands piliers : la dimension sociale, la dimension économique et la dimension extérieure des politiques culturelles. Le rapport fait des propositions pertinentes concernant la prise en compte des minorités culturelles et des personnes handicapées dans le développement de politiques inclusives et promouvant la santé mentale et la diversité. Le texte demande également un soutien financier accru de la part des Etats pour le secteur culturel, durement touché par la pandémie. Le rapport préconise aussi de mieux lutter contre le trafic d’œuvres d’art. Il propose également à raison d&#39;associer plus étroitement les outre-mer dans le renforcement des politiques culturelles. J’ai donc voté pour ce rapport.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197534</div>
+            
+            <header><b>François-Xavier BELLAMY</b> | Les Républicains</header>
+            
+                <p> – Monsieur le Président, ce texte sur la culture est l’occasion de parler d’une menace qui, je crois, à travers un règlement purement technique, pourrait toucher directement le patrimoine européen, parce que la Commission s’apprête à publier une révision des règlements REACH et CLP sur les substances chimiques. À travers cela, il y a un risque majeur: celui de nouvelles normes qui interdiraient des productions pourtant vitales pour notre patrimoine.</p>
+            
+                <p>Prenez la lavande, par exemple. Improbable, mais vrai: la Commission pourrait traiter comme un produit chimique à proscrire l’extrait de cette plante, merveille provençale avec laquelle les hommes parfument et soignent depuis l’empire romain. Je pense aussi au plomb, qui est explicitement menacé. Si le plomb était concerné demain, il deviendrait impossible de travailler le vitrail, par exemple. Quand il faudra des dizaines de milliers d’euros de dossiers pour une simple autorisation temporaire, quel artisan pourra continuer de travailler? Des métiers d’art ont déjà disparu, non par manque d’ouvrage, mais par excès de normes. «</p>
+            
+                <p>«</p>
+            
+                <p>Après ces siècles d’efforts, nous allons menacer la restauration de Notre-Dame-de-Paris à coups de formulaires administratifs, de même que l’entretien de la moindre chapelle de village. </p>
+            
+                <p>La fierté de nos prédécesseurs, ce qui a fait l’Europe, c’est la grandeur des œuvres qu’ils ont laissées. Nous ne pouvons pas la défaire aujourd’hui par la hauteur des murs administratifs que nous érigeons contre tous ceux qui essaient désespérément de créer, de transmettre et d’entretenir ce que nous avons reçu. </p>
+            
+                <p>Chers amis, chers collègues, c’est le même sujet, au fond: on ne sauvera pas la nature en fragilisant la culture. Avec notre groupe, Madame la Commissaire, nous déposons un amendement pour rétablir ce principe simple: la Commission doit prévoir une exemption – en prenant en compte, bien sûr, la santé et l’environnement – à chaque fois qu’une nouvelle norme mettrait en danger une filière culturelle ou patrimoniale. Nous comptons sur vous. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197511</div>
+            
+            <header><b>Salima YENBOU</b> | Les Écologistes</header>
+            
+                <p>Après six ans, il était grand temps d’évaluer le succès des politiques culturelles de l’Union, d’évaluer la mise en œuvre de deux axes qui constituent le pilier de ces politiques. Un long travail, qui aboutit aujourd’hui non seulement à une évaluation de ce qui a été fait jusqu’à maintenant, mais aussi à des recommandations fortes et ambitieuses pour relancer et soutenir les politiques culturelles européennes, et surtout pour répondre concrètement aux besoins des acteurs culturels. Il est primordial que nous soyons beaucoup plus attentifs aux besoins des bénéficiaires de nos politiques.</p>
+            
+                <p>L’heure n’est plus à la mise en œuvre d’une politique culturelle de l’urgence, de réponse aux crises ou de gestion de crise. Un seul exemple résume parfaitement cette situation: les conditions de travail et les statuts des employés du secteur culturel, qui restent profondément précaires. Combien de fois devrons nous rappeler que les secteurs créatif et culturel ont souffert de manière insupportable de la crise de la COVID-19? Que devons-nous faire pour vous convaincre ?</p>
+            
+                <p>Je m’adresse spécialement aux membres du Conseil, dont je salue la présence aujourd’hui. Cette pandémie n’a fait que rendre encore plus visibles les problèmes du secteur culturel déjà existants, dont nous avons toutes et tous connaissance depuis des années. Les artistes et les travailleurs du secteur attendent depuis trop longtemps que les États membres prennent des mesures concrètes et législatives pour réglementer leurs conditions de travail. À travers ma voix, le Parlement ne fait que répéter son appel à la création d’un vrai et digne statut des artistes. </p>
+            
+                <p>C’est également l’occasion de mettre en lumière le fait suivant: les problématiques du secteur culturel ne s’appliquent pas seulement aux citoyens de l’Union européenne, et il est très important de le rappeler. Nous parlons constamment du besoin de cohérence entre nos politiques internes et externes. C’est bien, mais les politiques culturelles ne doivent pas constituer une exception. Il n’est plus à démontrer que les approches se fondant sur la culture et la communication interculturelle sont d’une efficacité inégalée pour tisser des liens et pour renforcer nos relations et notre coopération internationales. </p>
+            
+                <p>C’est pour cela que les relations culturelles doivent être au cœur de nos efforts de diplomatie. Qu’il s’agisse des liens indéniables avec la durabilité environnementale, de la protection des monuments et du patrimoine culturel dans les zones de conflits, ou de la lutte contre le trafic illégal d’objets d’art, la dimension internationale de la culture et son rôle sur la scène planétaire ne sont pas à sous-estimer, bien au contraire. Au commencement de ces liens, il est primordial d’accentuer et d’accélérer la restitution des œuvres spoliées. Nous le devons. D’ailleurs, Madame la Commissaire, nous sommes encore en attente de la proposition de la Commission pour le plan d’action de l’Union européenne sur le trafic de biens culturels, pourtant prévue avant la fin de cette année – c’est-à-dire dans dix-huit jours. </p>
+            
+                <p>Un dernier mot sur le plan de travail du Conseil pour la période 2023-2026: nous avons travaillé de façon étroite avec la présidence tchèque, et je me réjouis de voir que les thèmes et les priorités recensés dans mon rapport sont mentionnés dans le plan de travail. Mais je reste encore sur ma faim, désolée. Certes, vous recommandez des démarches pour affronter le problème – échange de bonnes pratiques, partage d’expériences, mise au point des initiatives existantes, etc. – mais à quand les actions? À quand le concret? </p>
+            
+                <p>Je conclurai en soulignant une fois encore l’importance de ce rapport, qui définit et renforce la philosophie et l’approche globale de l’Union européenne et de ses États membres vis-à-vis des politiques culturelles. Cette approche nécessite une forte implication politique et une coordination entre tous les acteurs impliqués, dans nos institutions, et surtout avec nos partenaires sur le terrain: les artistes, les travailleurs du secteur, les instituts culturels, la société civile, les communautés et les populations locales. Investissons davantage dans cette direction. Investissons en matière de moyens financiers et de ressources humaines plus spécialisées et qualifiées. Surtout, engageons-nous politiquement! </p>
+            
+                <p>L’héritage du dernier mandat de la Commission se ressent encore fortement dans le milieu des relations culturelles de l’Union. Je suis sûre, Madame la Commissaire, que je peux compter sur vous pour passer ce message à M. Borrell également. Les secteurs culturel et créatif ne méritent rien de moins que ce que la Commission, le SEAE, les États membres et nous, au Parlement, savons et pouvons faire, si – et seulement si – nous le voulons vraiment. À nous de jouer.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197511</div>
+            
+            <header><b>Salima YENBOU</b> | Les Écologistes</header>
+            
+                <p>Pour revenir sur la question, il est évident que nous avons à cœur la protection de l’héritage culturel. Les instruments ne sont pas interdits, ils sont soumis à autorisation en raison de leur caractère potentiellement dangereux. La santé, je crois, vaut bien quelques formulaires. Nous voulons de beaux vitraux, mais en même temps, nous voulons aussi combattre le cancer. L’amendement de Renew répond à deux objectifs, Monsieur Bellamy – ah, il n’est plus là! Il répond à la protection et à la promotion de l’héritage culturel d’un côté, mais il répond aussi à la protection de la santé humaine et de l’environnement de l’autre. Ces deux versants ne sont pas en conflit. Nous pouvons justement avoir l’un et l’autre, alors pourquoi se priver? </p>
+            
+                <p>Quant à nos racines, l’anthropologie et l’histoire le disent: elles sont à trouver en Mésopotamie. Dans l’Antiquité, les Grecs comme les Romains ont construit leur culture grâce aux échanges commerciaux et culturels avec les Phéniciens. Est-ce de ces racines que la droite parle? Je lui pose la question, bien évidemment. </p>
+            
+                <p>Je voudrais par ailleurs rappeler que l’inclusion n’est plus à discuter, elle est une valeur européenne non négociable et n’appartient pas plus à un parti qu’à un groupe politique. </p>
+            
+                <p>Cela me fait sourire, parce que personne au sein du groupe ECR n’a jamais participé aux réunions ni envoyé de commentaires, et, aujourd’hui, leurs préoccupations restent des mots vides d’action – juste une petite vidéo à utiliser… Vous ne faites que critiquer ceux qui travaillent depuis neuf mois sur ce rapport pour faire avancer et exister la question culturelle. Je crois donc que tout est dit dans ce commentaire.</p>
+            
+                <p>Je voudrais finir par remercier toutes celles et tous ceux qui ont participé à ce beau travail exhaustif et ambitieux: tous les rapporteurs fictifs, tous les membres du personnel, toutes les parties prenantes, tous les collègues de la DG EAC et du SEAE, ainsi que la présidence tchèque.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197629</div>
+            
+            <header><b>Maxette PIRBAKAS</b> | Reconquête!</header>
+            
+                <p> – Monsieur le Président, Madame la Rapporteure, chers collègues, Madame la Commissaire, l’agenda culturel européen fondé sur la promotion de la diversité et de l’inclusivité constitue un moyen revendiqué d’éduquer les masses européennes, à défaut d’être un moyen d’européaniser certaines populations habitant notre continent. Sur le volet diversitaire, je constate que Netflix a un impact infiniment supérieur à tout ce que la Commission pourra produire, quitte à intégrer une bouillie inclusive. Au moins, avec les GAFAM, c’est esthétique.</p>
+            
+                <p>La rapporteure prend soin de préciser qu’elle n’adhère pas à la théorie de la guerre des cultures. Pourtant, nous y sommes. C’est bien une guerre culturelle qui est menée par la Commission et ses amis éveillés contre les peuples européens, pour leur imposer au forceps une certaine vision du monde. L’objectif réel n’est pas la célébration du génie culturel européen, mais de faire de l’Europe le meilleur élève de la culture mondialisée et de l’idéologie qu’elle promeut.</p>
+            
+                <p>Loin de valoriser notre exception culturelle, l’agenda nous abaisse au rang d’éponge de la culture des autres, ce qu’illustre l’exposé des motifs, qui cite George Floyd et la réévaluation des relations culturelles et de pouvoir entre le Nord et le Sud. La vision culturelle de la Commission sous-jacente à l’agenda culturel européen est aussi creuse et verbeuse qu’une série Disney. Moi qui suis guadeloupéenne, antillaise, ultramarine et enracinée dans une culture caribéenne, mais aussi une Européenne qui revendique ses héritages multiples et culturels et qui défends ses spécificités, je ne partage en rien votre vision.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

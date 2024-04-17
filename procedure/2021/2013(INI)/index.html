@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Une stratégie pharmaceutique pour l’Europe</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Une stratégie pharmaceutique pour l’Europe</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(527/689 * 100%)">527</div>
-  
-  
-    <div class="-" style="width: calc(92/689 * 100%)">92</div>
+    <div class="for" style="width: calc(527/689 * 100%)">527</div>
   
   
-    <div class="0" style="width: calc(70/689 * 100%)">70</div>
+    <div class="against" style="width: calc(92/689 * 100%)">92</div>
+  
+  
+    <div class="abstention" style="width: calc(70/689 * 100%)">70</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,19 +88,20 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(49/78 * 100%)">49</div>
+    <div class="for" style="width: calc(49/78 * 100%)">49</div>
   
   
-    <div class="-" style="width: calc(29/78 * 100%)">29</div>
+    <div class="against" style="width: calc(29/78 * 100%)">29</div>
   
   
 </div>
  
 </section>
-            <a href="/voting/137462">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/137462">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -104,7 +109,7 @@
     
         
         
-            <li>Produits et industrie pharmaceutiques</li>
+            <li>Cohésion économique, sociale et territoriale</li>
         
     
         
@@ -114,52 +119,182 @@
     
         
         
-            <li>Cohésion économique, sociale et territoriale</li>
+            <li>Produits et industrie pharmaceutiques</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2013(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0317_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-11-23-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197512,197521,197503,197531,96740,197527,96743,197500,97236</div>
+                
 
-<section>
+<p>
 
   
       163. note que la protection par brevet 
   
 
   
-      <del>est </del>
+      <del>est</del>
   
 
   
-      <ins>devrait être </ins>
+      <ins>devrait être</ins>
   
 
   
-      une incitation essentielle pour les entreprises à investir dans l’innovation et à fabriquer de nouveaux médicaments; relève dans le même temps que les brevets produisent un effet d’exclusion qui peut limiter l’offre sur le marché ainsi que l’accès aux médicaments et aux produits pharmaceutiques; souligne qu’il convient de trouver un équilibre entre l’incitation à l’innovation par l’effet d’exclusion du brevet, l’accès garanti aux médicaments et la protection de la santé publique; rappelle qu’une entreprise qui commercialise un médicament peut bénéficier de l’exclusivité des données pendant huit ans à compter de la délivrance de la première autorisation de mise sur le marché, conformément à l’article 14,    paragraphe 11, du Commission à proposer une révision de ce règlement afin de 
+       une incitation essentielle pour les entreprises à investir dans l’innovation et à fabriquer de nouveaux médicaments; relève dans le même temps que les brevets produisent un effet d’exclusion qui peut limiter l’offre sur le marché ainsi que l’accès aux médicaments et aux produits pharmaceutiques; souligne qu’il convient de trouver un équilibre entre l’incitation à l’innovation par l’effet d’exclusion du brevet, l’accès garanti aux médicaments et la protection de la santé publique; rappelle qu’une entreprise qui commercialise un médicament peut bénéficier de l’exclusivité des données pendant huit ans à compter de la délivrance de la première autorisation de mise sur le marché, conformément à l’article 14,    paragraphe 11, du Commission à proposer une révision de ce règlement afin de 
   
 
   
-      <del>permettre l’autorisation temporaire de l’octroi de licences obligatoires en cas de crise sanitaire pour </del>
+      <del>permettre l’autorisation temporaire de</del>
   
 
   
-      <ins>faciliter l’octroi de licences obligatoires et de </ins>
+      <ins>faciliter</ins>
   
 
   
-      permettre la production de versions génériques de médicaments vitaux; rappelle que cette mesure, qui compte parmi les mesures de flexibilité aménagées dans le système de protection des brevets au regard de la santé publique, figure déjà dans l’accord sur les ADPIC de l’OMC, tel que 
+       l’octroi de licences obligatoires 
+  
+
+  
+      <del>en cas de crise sanitaire pour</del>
+  
+
+  
+      <ins>et de</ins>
+  
+
+  
+       permettre la production de versions génériques de médicaments vitaux; rappelle que cette mesure, qui compte parmi les mesures de flexibilité aménagées dans le système de protection des brevets au regard de la santé publique, figure déjà dans l’accord sur les ADPIC de l’OMC, tel que 
   
 
   
@@ -175,59 +310,296 @@
   
 
   
-      <del>la concession de licences volontaires plutôt que l’octroi, d’emblée, de licences </del>
+      <del>la concession</del>
   
 
   
-      <ins>l’octroi de licences volontaires et </ins>
+      <ins>l’octroi</ins>
   
 
   
-      obligatoires; souligne que les accords de libre-échange ne devraient pas se concentrer exclusivement sur la mise en application des normes en matière de propriété intellectuelle dans les pays tiers, mais qu’ils devraient tenir compte de l’incidence sur les médicaments génériques et biosimilaires dans l’Union et dans les pays tiers, et veiller à la coordination des normes réglementaires;
+       de licences volontaires 
+  
+
+  
+      <del>plutôt que l’octroi, d’emblée, de licences</del>
+  
+
+  
+      <ins>et</ins>
+  
+
+  
+       obligatoires; souligne que les accords de libre-échange ne devraient pas se concentrer exclusivement sur la mise en application des normes en matière de propriété intellectuelle dans les pays tiers, mais qu’ils devraient tenir compte de l’incidence sur les médicaments génériques et biosimilaires dans l’Union et dans les pays tiers, et veiller à la coordination des normes réglementaires;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(148/665 * 100%)">148</div>
-  
-  
-    <div class="-" style="width: calc(501/665 * 100%)">501</div>
-  
-  
-    <div class="0" style="width: calc(16/665 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/137328">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+      Michèle RIVASI (EELV), 
     
+      Yannick JADOT (EELV), 
+    
+      Benoît BITEAU (EELV), 
+    
+      Manuel BOMPARD (LFI), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Anne-Sophie PELLETIER (LFI), 
+    
+      Mounir SATOURI (EELV) et 
+    
+      Marie TOUSSAINT (EELV)
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2013(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0317_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">148</div>
+  <div class="against">501</div>
+  <div class="abstention">16</div>
+</span>
+
   
+    
+    <a href="/voting/137328">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-11-23-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Ce texte entend donner les lignes directrices d’une stratégie en matière pharmaceutique. Si la dépendance européenne aux produits pharmaceutiques venant de pays tiers est réelle, la vision proposée est bien trop centralisatrice au bénéfice des institutions européennes. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce rapport.Ce texte répond, certes, à une préoccupation majeure à l&#39;issue de la pandémie de COVID-19 : celle relative à notre dépendance dans le domaine pharmaceutique.Pour autant, la réponse avancée par ce rapport n&#39;est pas satisfaisante. En effet, l&#39;idée d&#39;un marché unique du médicament a d&#39;ores et déjà montré ses limites, à la faveur de la crise sanitaire.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Là où l’UE devrait se contenter d’un rôle de facilitateur, en permettant aux États membres de rapatrier la filière selon leur propre tissu industriel, et en les aidant par un cadre juridique et économique stable, c’est finalement tout un marché unique du médicament que le texte met en place, alors même que cette approche a fait la preuve de ses limites durant la récente crise. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car, en contradiction avec son objectif de lutte pour l’indépendance dans le domaine pharmaceutique, il met en place un marché unique du médicament, dont la crise du Covid-19 a pourtant démontré les failles.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Ce texte présente les attentes du Parlement européen au sujet de la stratégie pharmaceutique pour l’Europe présentée par la Commission en novembre 2020.Si ce texte tout comme l&#39;initiative posent des questions importantes, aucun ne remet en question l’importance du secteur pharmaceutique privé guidé par les profits, aux dépens de la santé des citoyens. Cela aurait pu être l’occasion de redonner aux États un rôle plus important dans la production pharmaceutique, cela n’a pas été le cas. C’est une opportunité ratée de faire de ce secteur un pilier stratégique de l’UE. J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            Ce texte est une rapport d’initiative du Parlement européen qui répond à une préoccupation de l’UE, confirmée par la pandémie de Covid-19 : la dépendance européenne vis-à-vis des pays tiers pour tout le secteur pharmaceutique.Sans valeur législative, ce texte espère donc tracer les lignes d’une vraie stratégie européenne pour les produits pharmaceutiques, en touchant un peu à tout.Pour autant, comme c’est souvent le cas, ce texte va beaucoup trop loin : là où l’UE devrait se contenter d’un rôle de facilitateur, en permettant aux États membres de rapatrier la filière selon leur propre tissu industriel, et en les aidant par un cadre juridique et économique stable, c’est finalement tout un marché unique du médicament que le texte met en place, alors même que cette approche a fait la preuve de ses limites durant la récente crise. J&#39;ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution portant sur une stratégie pharmaceutique pour l’Europe. Le texte émet des recommandations pour lutter contre les disparités d&#39;accès aux médicaments au sein des États membres et mieux promouvoir la recherche et le développement de nouveaux médicaments. Il insiste sur la nécessité de mettre en place une filière de production de produits pharmaceutiques fabriqués en Europe. Enfin, pour éviter les pénuries, il suggère d’établir des réserves européennes de médicaments et de matériels médicaux stratégiques.
+        </article>
+    
+        <article>
+            <div class="hidden">30482</div>
+            
+            <header><b>Younous OMARJEE</b> | La France Insoumise</header>
+            . – Ce rapport d’initiative reprend les grandes lignes de la stratégie pharmaceutique proposée par la Commission européenne en novembre 2020. Si je reconnais que le texte dresse un constat juste notamment sur la pénurie de médicaments et la dépendance lié à l’importation de médicaments durant la crise du COVID-19, je regrette néanmoins l’inadéquation des solutions apportées. Je regrette également que ces solutions se concentrent sur la compétitivité et le financement des entreprises pharmaceutiques privées par l’argent public. J’ai donc voté contre ce rapport qui incite insidieusement à financer les bénéfices privés des entreprises pharmaceutiques par l’argent des contribuables.
+        </article>
+    
+        <article>
+            <div class="hidden">96885</div>
+            
+            <header><b>Dominique RIQUET</b> | Parti Radical</header>
+            Il est indubitable que la pandémie de COVID-19 a mis en exergue la dépendance de l&#39;Union envers certains pays tiers pour son approvisionnement pharmaceutique. Au regard de l&#39;importance de l&#39;industrie pharmaceutique européenne pour notre économie et notre autonomie stratégique, il est indispensable de soutenir l&#39;innovation et la compétitivité de ce secteur mais aussi d&#39;œuvrer pour assurer la disponibilité et le caractère abordable des médicaments en toutes circonstances pour l&#39;ensemble des citoyens européens. En tant que rapporteur pour mon groupe en commission de l’Industrie, de l’Énergie et de la Recherche, je me suis donc prononcé en faveur d&#39;une mise à jour de la stratégie pharmaceutique de l&#39;Union qui permet de définir une vision à long terme pour renforcer la résilience et la compétitivité de notre industrie pharmaceutique. Ce rapport, qui donne le cap à suivre pour la révision de la législation pharmaceutique prévue en 2022, est une étape clé.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            Ce rapport d’initiative du Parlement européen fait suite à la publication de la stratégie pharmaceutique européenne par la Commission en novembre 2020. Le rapport intègre des mesures nécessaires telles que le retour de l’autonomie industrielle pharmaceutique européenne, la création de procédures de passations conjointes de marché efficaces, la mise en place de réserves européennes de médicaments et matériel médical stratégiques, ou encore la lutte contre les pénuries des équipements et des médicaments. Mettre en place ces mesures permettra de créer l’Europe de la santé que nous appelons de nos vœux et c’est pour cette raison que j’ai décidé de voter en faveur de ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations et les propositions du parlement sur la proposition de stratégie pharmaceutique européenne présentée par la Commission en novembre 2020. Il insiste malheureusement sur les partenariats publics-privés qui socialisent les pertes et privatisent les profits, défend le système de brevets et de propriété intellectuelle des médicaments y compris lorsqu’ils sont financés par des fonds publics et encourage les États membres à financer les entreprises pharmaceutiques plutôt qu’à développer des pôles publics du médicament. J’ai donc voté contre ce texte qui ne tire aucune leçon de la pandémie et voit la santé comme un marché comme un autre plutôt que comme un bien commun devant être sorti des logiques de concurrence et de profit.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Le 25 novembre 2020, la Commission européenne a présenté une stratégie pharmaceutique pour l&#39;Union européenne. Bien que prétendant vouloir garantir aux patients l&#39;accès à des médicaments innovants et abordables, cette stratégie est intégralement orientée vers la profitabilité de l&#39;industrie pharmaceutique européenne. Ce sont pourtant les stratégies économiques des laboratoires pharmaceutiques qui ont entraîné une fragilité croissante des chaînes de production pharmaceutique. En effet, la recherche permanente d&#39;une baisse des coûts par les laboratoires pharmaceutiques a conduit à des mises en sous-traitance de production auprès des façonniers et une recherche croissante des pays à bas coût de main d&#39;œuvre pour la fourniture de principes actifs. Cette stratégie des laboratoires a eu pour effet d’aggraver de manière exponentielle les pénuries de médicaments au sein de l&#39;Union, fragilisant le système sanitaire des États membres et entraînant des risques considérables pour la santé et la sécurité des patients. Pour pallier les défaillances et le court-termisme des laboratoires pharmaceutiques privés, une véritable stratégie industrielle européenne doit être mise en œuvre pour recréer les conditions d&#39;une production pharmaceutique de proximité. Cette stratégie industrielle pharmaceutique européenne doit être au service d&#39;une véritable stratégie de santé publique centrée sur l&#39;intérêt des patients. Seule une production publique, contrôlée non seulement par les États membres, mais aussi par les usagers des systèmes de santé comme par les salariés de l&#39;industrie, peut réaliser de manière effective cette stratégie de santé publique. Il est donc urgent de constituer des pôles publics du médicament partout dans l’Union. Je tiens à le rappeler fermement : le système des brevets sur les médicaments est un jeu de dupe qui se fait au détriment des pouvoirs publics, des institutions de sécurité sociale, des citoyens et des patients, puisque les citoyens payent deux fois, et extrêmement cher, les médicaments, que ce soit par les aides à la recherche ou par les remboursements des médicaments. Les médicaments sont un bien commun à l&#39;humanité et ne devraient pas être des biens marchands exploités uniquement sur des critères de rentabilité et de profitabilité. Ce rapport du Parlement entérine la vision « Big Pharma » de la Commission européenne qui résolument contraire à tout ceci. Je le rejette donc fermement et invite mes collègues à lire de toute urgence l’excellent rapport de l’Observatoire transparence médicaments réalisé avec le soutien de notre groupe parlementaire.
+        </article>
+    
+        <article>
+            <div class="hidden">197585</div>
+            
+            <header><b>Pierre KARLESKIND</b> | Renaissance</header>
+            La crise de la Covid-19 nous a montré qu’il était essentiel que les Etats membres coordonnent leurs politiques en matière de santé. En se dotant d’une stratégie pharmaceutique, l’Union européenne se donne les moyens d’atteindre ses objectifs d’indépendance stratégique en matière d’approvisionnement de médicaments. Plus généralement, cette stratégie pharmaceutique a aussi pour objectif de développer la recherche européenne en matière de santé autour des besoins du patient et des systèmes de santé des Etats Membres.J’ai voté pour ce rapport d’initiative car il soutient la proposition de la Commission tout en demandant à ce que transparence soit faite sur la formation des prix des médicaments et que les achats groupés de médicaments au niveau européen soient généralisés, des avancées non négligeables pour les consommateurs européens !
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Le paragraphe d’origine et l’amendement sont aussi mauvais l’un que l’autre : les deux veulent permettre l’octroi de licences obligatoires (en occasions différentes), et portent atteinte à la propriété intellectuelle.
+        </article>
+    
+        <article>
+            <div class="hidden">197536</div>
+            
+            <header><b>Nathalie COLIN-OESTERLÉ</b> | Les centristes</header>
+            J&#39;ai voté en faveur de ce rapport d&#39;initiative parlementaire qui fait suite à la publication de la stratégie pharmaceutique publiée par la Commission européenne en novembre 2020. Ce rapport est un texte équilibré qui intègre la plupart des mesures recommandées dans mon rapport sur les pénuries adopté l&#39;an dernier par le Parlement européen, notamment l&#39;importance de retrouver une souveraineté sanitaire européenne, d&#39;accentuer la coordination entre États membres, de relocaliser en Europe la production de médicaments, de créer des réserves communes de médicaments, mais également d&#39;augmenter les capacités de recherche, la coordination et l’échange d’informations sur la question des maladies rares ou des cancers pédiatriques en particulier. Je veillerai à ce que la Commission européenne tienne compte de ces propositions lorsqu&#39;elle initiera la révision de la législation pharmaceutique en 2022.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté, à l’instar de mes collègues Renew, en faveur de cette stratégie qui s’inscrit dans le cadre de la crise du Covid-19 et adresse les difficultés d’approvisionnement au sein de l’UE.Le 25 novembre 2020, la Commission européenne avait présenté une stratégie mettant en exergue les difficultés d’approvisionnement au sein de l’Europe et la nécessité d’y remédier, notamment en abordant la question du cycle complet des médicaments - la recherche, les essais, l’autorisation de mise sur le marché, la consommation et l’élimination. Cette stratégie comporte également le renforcement de la transparence du prix des médicaments et insiste sur la production de médicaments durables.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            Le rapport sur une stratégie pharmaceutique pour l’Europe contribue à renforcer la mise en œuvre de la stratégie présentée par la Commission européenne le 15 novembre 2020. Il s’agit notamment de garantir l’accès des patients à des médicaments abordables, d’encourager l’innovation et de réduire les formalités administratives. Dans un contexte de pandémie mondiale, j’ai ainsi apporté mon soutien à un texte qui encourage à rendre les médicaments plus abordables et disponibles tout en s’attaquant aux pénuries, qui ont une incidence directe sur la santé et la sécurité des patients, ainsi que sur leur traitement. Également, je souscris aux dispositions visant à promouvoir la plaquette électronique comme mesure complémentaire à la plaquette en papier, tout en réduisant les emballages et les conditionnements.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport car il va beaucoup trop loin en proposant notamment un marché unique du médicament et en s’ingérant dans de nombreux domaines.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            La dépendance européenne aux produits venant de pays tiers est une réalité que l’on ne peut nier. En effet, il n’y a pratiquement plus de filière pharmaceutique en Europe, la recherche tarde ou s’expatrie vers des pays plus accueillants. Pour autant, ce texte va à mes yeux beaucoup trop loin : là où l’UE devrait se contenter d’un rôle de facilitateur, en permettant aux États membres de rapatrier la filière selon leur propre tissu industriel et en les aidant par un cadre juridique et économique stable, c’est finalement tout un marché unique du médicament que le texte met en place, alors même que cette approche a fait la preuve de ses limites durant la récente crise sanitaire.J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Ce texte est une rapport d’initiative du Parlement européen qui répond à une préoccupation de l’UE, confirmée par la pandémie de Covid-19 : la dépendance européenne vis-à-vis des pays tiers pour tout le secteur pharmaceutique. Ce texte (sans valeur législative) espère donc tracer les lignes d’une vraie stratégie européenne pour les produits pharmaceutiques, en touchant un peu à tout : résistance antimicrobienne, recherche, prix, génériques, retards de mise sur le marché, partenariat public-privé, essais cliniques... la dépendance européenne aux produits venant de pays tiers est une réalité que l’on ne peut nier : il n’y a pratiquement plus de filière pharmaceutique en Europe, la recherche tarde ou s’expatrie vers des pays plus accueillants... Pour autant, comme c’est souvent le cas, ce texte va beaucoup trop loin : là où l’UE devrait se contenter d’un rôle de facilitateur, en permettant aux États membres de rapatrier la filière selon leur propre tissu industriel, et en les aidant par un cadre juridique et économique stable, c’est finalement tout un marché unique du médicament que le texte met en place, alors même que cette approche a fait la preuve de ses limites durant la récente crise. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Ce rapport d’initiative répond à une préoccupation de l’Union européenne : la dépendance européenne vis-à-vis des pays tiers pour tout le secteur pharmaceutique.Ce texte (sans valeur législative) espère donc tracer les lignes d’une vraie stratégie européenne pour les produits pharmaceutiques, en touchant à tout : résistance antimicrobienne, recherche, prix, génériques, retards de mise sur le marché, partenariat public-privé, essais cliniques...La dépendance européenne aux produits venant de pays tiers est une réalité que l’on ne peut nier : il n’y a pratiquement plus de filière pharmaceutique en Europe, la recherche tarde ou s’expatrie vers des pays plus accueillants.Pour autant, comme c’est souvent le cas, ce texte va beaucoup trop loin : là où l’Union européenne devrait se contenter d’un rôle de facilitateur, en permettant aux États membres de rapatrier la filière selon leur propre tissu industriel, et en les aidant par un cadre juridique et économique stable, c’est finalement tout un marché unique du médicament que le texte met en place, alors même que cette approche a fait la preuve de ses limites durant la récente crise.Pour toutes ces raisons j’ai voté contre ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            . – Ce rapport d’initiative du Parlement répond à une préoccupation : la dépendance européenne vis-à-vis des pays tiers pour tout le secteur pharmaceutique. Mais là où l’UE devrait se contenter d’un rôle de facilitateur, en permettant aux États membres de rapatrier la filière selon leur propre tissu industriel, et en les aidant par un cadre juridique et économique stable, c’est finalement tout un marché unique du médicament que le texte met en place, alors même que cette approche a fait la preuve de ses limites durant la crise. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre cette stratégie pharmaceutique car le projet constitue une nouvelle tentative de l’Union d’étendre ses compétences en instaurant notamment un marché unique du médicament.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197593</div>
+            
+            <header><b>Véronique TRILLET-LENOIR</b> | Renaissance</header>
+            
+                <p>Aujourd’hui, vous l’avez dit, je le redis, nous posons ensemble les fondations d’une véritable Europe de la santé et du médicament. Une Europe capable de garantir à tous les citoyens un accès équitable à des médicaments contrôlés, abordables et disponibles.</p>
+            
+                <p>Garantir la santé et la sécurité du patient doit être notre priorité, tout en restant attentif à la soutenabilité des systèmes de santé. La mise en œuvre de la stratégie pharmaceutique devra comporter des mesures législatives fortes. Nous y sommes prêts sur quatre grands piliers.</p>
+            
+                <p>Le premier: garantir l’accès à des médicaments abordables et sûrs via la révision des législations sur l’accès aux médicaments. Ces législations sont dépassées, inadaptées pour prévenir et gérer les tensions, et pas seulement en cas de crise. Avant la pandémie, de trop nombreux patients ont été confrontés à ces situations insupportables. Nous veillerons, au Parlement européen, à ce que ce problème soit traité dans son ensemble à tous les niveaux de la chaîne de production, avec comme priorité absolue les besoins du patient.</p>
+            
+                <p>Deuxièmement, restaurer notre indépendance pharmaceutique via un rapatriement partiel de la production des médicaments en Europe. Vous proposez un dialogue structuré entre industriels et autorités. Vous avez raison, nous avons besoin des partenariats public-privé. Ces relocalisations, nous pourrons également les accompagner avec des aides d’État ou d’autres incitations. Nous ne devrons pas pour autant sacrifier nos exigences environnementales et sociétales.</p>
+            
+                <p>Troisièmement, booster la recherche et le développement de médicaments innovants. Très bonne nouvelle: la révision des législations sur les médicaments pédiatriques et orphelins. Ces législations ralentissent depuis trop longtemps le développement de médicaments innovants, par exemple dans le domaine du cancer. La recherche et le développement de médicaments issus de nouvelles technologies doivent également être une des priorités de l’Union européenne dans le cadre d’Horizon 2020. La crise de la COVID-19 nous a montré à quel point il est important d’encourager les politiques de recherche.</p>
+            
+                <p>Enfin, quatrième point, nous devrons aborder la question du prix des médicaments. Une coopération plus étroite en matière de fixation du prix, de process de paiement et d’achats groupés de médicaments devrait nous permettre de transformer l’essai des achats groupés de vaccins anti-COVID, qui a été une très grande réussite. J’espère que la Commission proposera la révision de la directive sur la transparence des mesures régissant la fixation des prix.</p>
+            
+                <p>L’ensemble de ces réformes nous permettraient d’amorcer la mise en place d’un cercle vertueux, depuis l’évaluation conjointe par la technologie HTA – que vous avez rappelée – les contrôles efficaces, la transparence des procédures de détermination des prix et peut-être plus tard du remboursement, la sécurisation des productions et des réserves. Les défis à relever sont très nombreux, mais nous sommes plus forts ensemble et ensemble, nous y parviendrons.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            
+                <p> – Madame la Présidente, au début de la crise de la COVID, les Européens ont découvert avec consternation que 80 % des principes actifs de nos médicaments étaient fabriqués en Chine ou en Inde. Nous étions habitués de votre part à la perte de souveraineté industrielle, technologique ou agricole. Voici que nous vivons avec violence la perte de souveraineté pharmaceutique, abandonnant notre santé à des puissances étrangères et lointaines, et donc aux aléas de la diplomatie.</p>
+            
+                <p>Loin de constituer un électrochoc, l’Union européenne s’est jetée à cette occasion sur une seule et unique solution: des vaccins étrangers dont les conditions d’achat furent pour le moins opaques et dont le coût est suffisamment exorbitant pour venir grossir de mille dollars de bénéfices par seconde les comptes bancaires des laboratoires. L’Union européenne n’a proposé aucune alternative pour un autre vaccin issu d’essais cliniques honnêtes et transparents ou même pour des traitements.</p>
+            
+                <p>Comment peut-on parler de stratégie s’il n’y a pas le début d’une ambition? Il est urgent que nous mettions fin à cette dépendance qui touche prioritairement les anti-infectieux, les anticancéreux, les médicaments de réanimation d’urgence, les médicaments de cardiologie ou les anesthésiques.</p>
+            
+                <p>Premièrement, relocalisons ou plutôt aidons les nations européennes à relocaliser les unités de production vitales. Deuxièmement, ne laissons plus le marché seul décisionnaire des productions de médicaments. Pour cela, l’Union européenne doit se faire violence et donner des objectifs à l’industrie pharmaceutique. En effet, si le marché est seul décisionnaire, nous disposerons à foison de crèmes antirides et de traitements contre les troubles érectiles. Mais trop peu d’investissements sur la recherche de traitements contre le cancer, la maladie d’Alzheimer ou les maladies orphelines.</p>
+            
+                <p>Enfin, l’Agence européenne du médicament doit devenir une instance de contre-expertise indépendante, afin de ne pas laisser aux laboratoires le rôle de juge ou partie ou, pire, le rôle de législateur de l’ombre. L’affaire Cahuzac en France avait en effet dévoilé la puissance néfaste des laboratoires et leur influence sur la vie politique. Au nom de la démocratie, mais également au nom de la santé de tous les Européens, il est indispensable de reprendre la main sur cette industrie vitale, afin de la mettre au service exclusif de la santé et du progrès scientifique.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

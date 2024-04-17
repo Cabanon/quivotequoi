@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Politique de la concurrence - rapport annuel 2020</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Politique de la concurrence - rapport annuel 2020</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(508/691 * 100%)">508</div>
-  
-  
-    <div class="-" style="width: calc(115/691 * 100%)">115</div>
+    <div class="for" style="width: calc(508/691 * 100%)">508</div>
   
   
-    <div class="0" style="width: calc(68/691 * 100%)">68</div>
+    <div class="against" style="width: calc(115/691 * 100%)">115</div>
+  
+  
+    <div class="abstention" style="width: calc(68/691 * 100%)">68</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,19 +88,20 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(50/78 * 100%)">50</div>
+    <div class="for" style="width: calc(50/78 * 100%)">50</div>
   
   
-    <div class="-" style="width: calc(28/78 * 100%)">28</div>
+    <div class="against" style="width: calc(28/78 * 100%)">28</div>
   
   
 </div>
  
 </section>
-            <a href="/voting/132417">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/132417">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -114,20 +119,138 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2223(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0168_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-06-07-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       49. estime que le Parlement devrait jouer un rôle actif dans le débat politique sur la politique de concurrence, notamment en organisant une audition publique avec les PDG des GAFA (Google, Amazon, Facebook et Apple) concernant leurs stratégies en matière de pratiques de concurrence et de fiscalité;
@@ -137,49 +260,51 @@
       <ins> regrette que les quatre PDG aient décliné les invitations à cette audition; regrette en outre que le Parlement ne dispose pas de mécanismes appropriés pour imposer légalement de telles participations, et espère qu’il sera remédié rapidement à cette situation;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ECR
+    
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">664</div>
+  <div class="against">14</div>
+  <div class="abstention">18</div>
+</span>
+
+  
+    
+    <a href="/voting/131831">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(664/696 * 100%)">664</div>
-  
-  
-    <div class="-" style="width: calc(14/696 * 100%)">14</div>
-  
-  
-    <div class="0" style="width: calc(18/696 * 100%)">18</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/131831">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       J. considérant qu’une architecture de marché ouverte en matière de négociation et de compensation, permettant une véritable concurrence entre les infrastructures de marché, est essentielle pour préserver et renforcer la résilience des marchés des capitaux de l’Union, encourager les innovations axées sur le marché et offrir ainsi de meilleurs résultats aux retraités, aux entreprises et aux investisseurs;
@@ -189,117 +314,121 @@
       <ins> que la nécessité de disposer d’une infrastructure de marché ouverte doit être mise en balance avec des considérations relatives à la stabilité financière;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">374</div>
+  <div class="against">254</div>
+  <div class="abstention">69</div>
+</span>
+
+  
+    
+    <a href="/voting/131835">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(374/697 * 100%)">374</div>
-  
-  
-    <div class="-" style="width: calc(254/697 * 100%)">254</div>
-  
-  
-    <div class="0" style="width: calc(69/697 * 100%)">69</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/131835">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       12. se félicite de l’adoption de l’encadrement temporaire des aides d’État et des amendements qui le prolongent et l’élargissent, en réaction aux évolutions inattendues liées à la crise de la COVID-19, afin de permettre aux États membres de soutenir les entreprises pendant la pandémie; soutient le maintien de mesures d’exception tant que la 
   
 
   
-      <del>reprise se poursuit,</del>
+      <del>reprise se poursuit</del>
   
 
   
-      <ins>situation épidémiologique l’exige,</ins>
+      <ins>situation épidémiologique l’exige</ins>
   
 
   
-       mais souligne que l’encadrement est un instrument temporaire; relève que le rétablissement d’une concurrence effective à moyen et à long terme est essentiel pour assurer une reprise rapide et cohérente; 
+      , mais souligne que l’encadrement est un instrument temporaire; relève que le rétablissement d’une concurrence effective à moyen et à long terme est essentiel pour assurer une reprise rapide et cohérente;
   
 
   
-      <ins>souligne que les mesures de soutien devraient être davantage ciblées à mesure que la reprise avance; </ins>
+      <ins> souligne que les mesures de soutien devraient être davantage ciblées à mesure que la reprise avance;</ins>
   
 
   
-      constate des différences importantes entre les États membres en ce qui concerne leur marge de manœuvre budgétaire disponible pour l’octroi d’aides d’État;
+       constate des différences importantes entre les États membres en ce qui concerne leur marge de manœuvre budgétaire disponible pour l’octroi d’aides d’État;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">342</div>
+  <div class="against">292</div>
+  <div class="abstention">63</div>
+</span>
+
+  
+    
+    <a href="/voting/131827">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(342/697 * 100%)">342</div>
-  
-  
-    <div class="-" style="width: calc(292/697 * 100%)">292</div>
-  
-  
-    <div class="0" style="width: calc(63/697 * 100%)">63</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/131827">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       83. indique que le domaine fiscal relève principalement de la compétence des États, qu’il est tributaire des visions politiques et de l’action des gouvernements et des parlements, et qu’il est fondé sur des politiques budgétaires et des aspirations politiques en matière de finances publiques; se félicite de la vigilance dont fait preuve la Commission européenne dans l’application des règles relatives aux aides d’État dans le domaine de la fiscalité; rappelle que les aides d’État sélectives de nature fiscale peuvent créer des conditions de concurrence inégales sur le marché intérieur et que la planification fiscale agressive porte atteinte non seulement à la concurrence loyale, mais aussi au bon fonctionnement des systèmes sociaux en général; souligne l’importance de réformer le régime d’imposition actuel afin de garantir que les impôts soient payés là où la valeur est créée; demande à la Commission, à cet égard, de réexaminer ses lignes directrices sur les aides d’État en matière fiscale afin d’évaluer quelles mesures d’aide d’État de nature fiscale faussent la concurrence;
@@ -309,221 +438,285 @@
       <ins> relève avec inquiétude que des décisions importantes en matière d’aides d’État de nature fiscale ont été annulées par le Tribunal; invite la Commission à préparer ces décisions de manière plus scrupuleuse de sorte qu’elles    soient acceptables devant un tribunal;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">300</div>
+  <div class="against">310</div>
+  <div class="abstention">87</div>
+</span>
+
+  
+    
+    <a href="/voting/131834">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(300/697 * 100%)">300</div>
-  
-  
-    <div class="-" style="width: calc(310/697 * 100%)">310</div>
-  
-  
-    <div class="0" style="width: calc(87/697 * 100%)">87</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/131834">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       64. 
   
 
   
-      <del>demande que toutes les règles de l’Union en matière de concurrence et d’aides d’État soient mises en correspondance avec les objectifs sociétaux à long terme, en particulier le pacte vert pour l’Europe, compte tenu des engagements de l’Union en matière de climat; regrette que, si la définition du bouquet énergétique reste une compétence nationale, la plupart des États membres ne subordonnent pas les aides d’État à la réalisation </del>
+      <del>demande</del>
   
 
   
-      <ins>rappelle que la définition de la composition du bouquet énergétique des États membres relève de la compétence </ins>
+      <ins>rappelle</ins>
   
 
   
-      de ces 
+       que 
   
 
   
-      <del>objectifs;</del>
+      <del>toutes les règles de l’Union en matière de concurrence et d’aides d’État soient mises en correspondance avec les objectifs sociétaux à long terme, en particulier le pacte vert pour l’Europe, compte tenu des engagements de l’Union en matière de climat; regrette que, si</del>
   
 
   
-      <ins>derniers;</ins>
+      <ins>la définition de</ins>
+  
+
+  
+       la 
+  
+
+  
+      <del>définition</del>
+  
+
+  
+      <ins>composition</ins>
+  
+
+  
+       du bouquet énergétique 
+  
+
+  
+      <del>reste une compétence nationale, la plupart des États membres ne subordonnent pas les aides d’État à</del>
+  
+
+  
+      <ins>des États membres relève de</ins>
+  
+
+  
+       la 
+  
+
+  
+      <del>réalisation</del>
+  
+
+  
+      <ins>compétence</ins>
+  
+
+  
+       de ces 
+  
+
+  
+      <del>objectifs</del>
+  
+
+  
+      <ins>derniers</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">157</div>
+  <div class="against">526</div>
+  <div class="abstention">12</div>
+</span>
+
+  
+    
+    <a href="/voting/131832">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(157/695 * 100%)">157</div>
-  
-  
-    <div class="-" style="width: calc(526/695 * 100%)">526</div>
-  
-  
-    <div class="0" style="width: calc(12/695 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/131832">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>67 bis. déplore les appels récurrents lancés par la Banque centrale européenne (BCE) et l’Autorité bancaire européenne (ABE) en faveur de la consolidation des banques dans la zone euro1 bis; juge que cette vision ne tient pas compte de la profonde diversité des environnements bancaires selon les États membres; rappelle que, de manière générale, les petites banques détiennent relativement peu de créances douteuses (les prêts non performants représentaient seulement 2,3 % du total des prêts au début de la pandémie), mais possèdent d’importants coussins de liquidité (le ratio de couverture des besoins de liquidité moyen était supérieur à 200 %, soit plus du double du minimum requis) et une bonne solvabilité (avec 17 % de fonds propres de base de catégorie 1, très au- dessus des exigences minimales) en comparaison avec les grandes banques; est d’avis qu’une consolidation bancaire plus poussée pourrait entraîner des violations de l’article 102 du traité FUE;  _____________  1a de Guindos, L., «Euro area banks: the profitability challenge», discours prononcé lors de la conférence annuelle de l’ABI, à Rome, le 25 juin 2019; Enria, A., «Is less more? Profitability and consolidation in the European    banking sector», exposé lors de la conférence internationale annuelle du CIRSF, à Lisbonne, le 4 juillet 2019; Supervision bancaire de la BCE, «Guide on the supervisory approach to consolidation in the banking sector», 1er juillet 2020; ABE, «Risk Assessment of the European Banking System», décembre 2020.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">87</div>
+  <div class="against">520</div>
+  <div class="abstention">87</div>
+</span>
+
+  
+    
+    <a href="/voting/131833">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(87/694 * 100%)">87</div>
-  
-  
-    <div class="-" style="width: calc(520/694 * 100%)">520</div>
-  
-  
-    <div class="0" style="width: calc(87/694 * 100%)">87</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/131833">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       15. 
   
 
   
-      <del>invite la Commission à adopter une proposition législative sur l’interdiction de la protection de la propriété intellectuelle pour les inventions ou les découvertes liées à des vaccins destinés à traiter des maladies infectieuses endémiques ou pandémiques touchant la population mondiale;</del>
+      <del>invite la Commission à adopter une proposition législative sur l’interdiction de la protection de la propriété intellectuelle pour les inventions ou les découvertes liées à des vaccins destinés à traiter des maladies infectieuses endémiques ou pandémiques touchant la population mondiale</del>
   
 
   
-      <ins>prend acte du fait qu’à la lumière de la pandémie de COVID-19, il est nécessaire, bien que la propriété intellectuelle soit protégée en tant que droit fondamental dans la charte des droits fondamentaux de l’Union européenne, de mettre en place une coopération entre la Commission et les États membres pour appliquer, lorsque cela s’avère urgent et nécessaire, une levée obligatoire des droits de propriété intellectuelle afin d’intensifier la production et la distribution de produits médicaux essentiels;</ins>
+      <ins>prend acte du fait qu’à la lumière de la pandémie de COVID-19, il est nécessaire, bien que la propriété intellectuelle soit protégée en tant que droit fondamental dans la charte des droits fondamentaux de l’Union européenne, de mettre en place une coopération entre la Commission et les États membres pour appliquer, lorsque cela s’avère urgent et nécessaire, une levée obligatoire des droits de propriété intellectuelle afin d’intensifier la production et la distribution de produits médicaux essentiels</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">199</div>
+  <div class="against">410</div>
+  <div class="abstention">88</div>
+</span>
+
+  
+    
+    <a href="/voting/131828">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(199/697 * 100%)">199</div>
-  
-  
-    <div class="-" style="width: calc(410/697 * 100%)">410</div>
-  
-  
-    <div class="0" style="width: calc(88/697 * 100%)">88</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/131828">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       18. invite la Commission et les États membres à lancer une feuille de route post- COVID-19 pour des aides d’État mieux ciblées afin de promouvoir la 
@@ -542,119 +735,319 @@
   
 
   
-      <del>lutter contre la fragmentation et les distorsions du marché dues à des conditions de concurrence inégales, une analyse de l’incidence des aides d’État sur le marché intérieur, ainsi que des orientations claires sur la meilleure manière d’utiliser les instruments de la politique de concurrence pour favoriser la reprise;</del>
+      <del>lutter contre la fragmentation et les distorsions du marché dues à des conditions de concurrence inégales, une analyse de l’incidence des aides d’État sur le marché intérieur, ainsi que des orientations claires sur la meilleure manière d’utiliser les instruments de la politique de concurrence pour favoriser la reprise</del>
   
 
   
-      <ins>permettre aux investissements et aux subventions publics d’être dirigés vers les industries stratégiques et les PME, car elles peuvent jouer un rôle crucial dans le processus de réindustrialisation de l’Union, tout en contribuant à la réalisation des objectifs de la transition verte, promouvant par là la viabilité climatique, l’emploi et le développement économique;</ins>
+      <ins>permettre aux investissements et aux subventions publics d’être dirigés vers les industries stratégiques et les PME, car elles peuvent jouer un rôle crucial dans le processus de réindustrialisation de l’Union, tout en contribuant à la réalisation des objectifs de la transition verte, promouvant par là la viabilité climatique, l’emploi et le développement économique</ins>
   
 
   
-       exhorte en outre la Commission à intégrer les stratégies industrielle, numérique et verte dans la définition des conditions futures des aides d’État;
+      ; exhorte en outre la Commission à intégrer les stratégies industrielle, numérique et verte dans la définition des conditions futures des aides d’État;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">173</div>
+  <div class="against">512</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/131830">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(173/696 * 100%)">173</div>
-  
-  
-    <div class="-" style="width: calc(512/696 * 100%)">512</div>
-  
-  
-    <div class="0" style="width: calc(11/696 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/131830">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       15. 
   
 
   
-      <del>invite la Commission à adopter une proposition législative sur l’interdiction de la protection de la propriété intellectuelle pour les inventions ou les découvertes liées à des vaccins destinés à </del>
+      <del>invite la Commission à adopter une proposition législative sur l’interdiction de la protection de la propriété intellectuelle pour les inventions ou les découvertes liées à des vaccins destinés à</del>
   
 
   
-      <ins>soutient fermement des mesures efficaces destinées à remédier à la pénurie de vaccins contre la COVID-19, en particulier dans les pays à revenu faible et intermédiaire, et soutient par conséquent la Commission et les États membres dans les efforts qu’ils déploient pour convaincre les pays tiers de lever les interdictions d’exportation en vigueur et d’accélérer les dons de vaccins, et invite la Commission et les États membres à intensifier encore leur appui aux transferts de technologies et à l’octroi volontaire de licences relatives à des droits de propriété intellectuelle pour </ins>
+      <ins>soutient fermement des mesures efficaces destinées à remédier à la pénurie de vaccins contre la COVID-19, en particulier dans les pays à revenu faible et intermédiaire, et soutient par conséquent la Commission et les États membres dans les efforts qu’ils déploient pour convaincre les pays tiers de lever les interdictions d’exportation en vigueur et d’accélérer les dons de vaccins, et invite la Commission et les États membres à intensifier encore leur appui aux transferts de technologies et à l’octroi volontaire de licences relatives à des droits de propriété intellectuelle pour</ins>
   
 
   
-      traiter des maladies infectieuses endémiques ou pandémiques touchant la population mondiale;
+       traiter des maladies infectieuses endémiques ou pandémiques touchant la population mondiale;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(355/697 * 100%)">355</div>
-  
-  
-    <div class="-" style="width: calc(307/697 * 100%)">307</div>
-  
-  
-    <div class="0" style="width: calc(35/697 * 100%)">35</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/131829">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2223(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0168_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">355</div>
+  <div class="against">307</div>
+  <div class="abstention">35</div>
+</span>
+
   
+    
+    <a href="/voting/131829">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-06-07-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Certains éléments sont positifs tels que la prise en compte des dangers que représentent les GAFAM ou encore le constat que les accords de libre-échange ont été néfastes pour l’agriculture française et européenne. La politique de concurrence se concentre toujours sur les seuls problèmes de compétitivité et d’export international en négligeant tout à fait la nécessité pour les entreprises françaises et européennes de reprendre possession de leur marché intérieur. En raison de cette ambivalence, je me suis abstenu.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce rapport.Il s&#39;agit d&#39;un examen annuel de la politique de concurrence de l&#39;Union européenne. Cette fois, le rapport souligne des avancées concernant les GAFAM, mais se concentre essentiellement sur les questions de compétition internationale hors UE, en passant sous silence la concurrence intra-européenne, parfois déloyale.Par ailleurs, il est regrettable que le passage relatif aux accords de libre-échange, dont la teneur était assez critique, ait été supprimé du texte.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce texte est un rapport annuel pour l’année 2020 sur la politique de concurrence européenne. Le rapport porte sur les réponses politiques qui ont dû être mises en place lors de la pandémie, notamment les modifications temporaires sur le marché unique pour que les entreprises puissent s&#39;adapter à la crise sanitaire. Le rapport porte aussi sur la politique de concurrence à l’ère du numérique. Il est important de s’attaquer aux pratiques déloyales et d’éliminer les obstacles à la concurrence en ligne sur le marché unique numérique européen. J’ai voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Si dans ce dossier on note de très bonnes avancées telles que la question des Gafam et du danger que représente leur emprise, le cadre idéologique du rapport ainsi que sa méthodologie d’élaboration restent en faveur d’un marché ouvert, en négligeant totalement la nécessité pour les entreprises françaises et européennes de reprendre possession de leur marché intérieur. J’ai donc voté contre.J’ai soutenu l’amendement déposé par le groupe Identité et Démocratie pour établir fermement que le mix énergétique relève de la stricte souveraineté nationale.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            Je me suis abstenu sur ce rapport annuel sur la politique de concurrence car son contenu est de qualité très inégale. Il dresse le constat évident que les accords de libre-échange ont été néfastes pour l’agriculture européenne, tout en fixant l’objectif incohérent de parvenir à un marché commun encore plus ouvert.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            J’ai voté contre ce rapport qui se concentre exclusivement sur la défense des règles de concurrence actuelles, en ayant une vue critique sur les aides d&#39;État qui ont été exceptionnellement autorisées pendant la pandémie de Covid-19 et en demandant une surveillance plus forte de ces aides afin d&#39;éviter les distorsions du marché. Il va même jusqu’à proposer d&#39;en finir avec ce soutien spécial le plus rapidement possible. En ce qui concerne l&#39;alignement de la politique industrielle sur les objectifs sociaux et climatiques de l&#39;UE, le rapport n’a aucune ambition.L’Union européenne souffre précisément de ses propres règles sur la concurrence qui viennent empêcher l’émergence de géants industriels européens. Son logiciel obsolète concernant les aides d’État est à rebours de ce que la compétition mondiale exige, au moment précis où les USA votent un plan de 290 milliards de dollars d’investissements publics sur les infrastructures et où la Chine met en place un plan quinquennal d’investissement.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            Le rapport sur l’examen de la politique de la concurrence revient tous les ans. Il s’agit pour le Parlement d’exposer des directions qu’il souhaite voir prendre aux dispositifs qui l’encadrent, ainsi qu’à la Commission qui a la compétence pour l’appliquer.Il s’agit d’un rapport qui couvre une liste de demandes qui vont des pratiques anti-trust à la régulation des entreprises du numérique, en passant par la concentration dans certains secteurs économiques.Le contenu du rapport offre de très bonnes avancées comme la question des Gafam, celle des «acquisitions tueuses», des accords de libre-échange néfastes à l’agriculture, du regret de la concentration de la production dans l’industrie et l’agriculture. Ces éléments positifs du dossier sont contrebalancés par des éléments très idéologiques comme le fait de négliger la nécessité pour les entreprises françaises et européennes de reprendre possession de leur marché intérieur ou bien d’utiliser des enjeux internationaux pour passer sous silence le problème de la concurrence intra-européenne souvent déloyale du fait des disparités dans le marché unique, ou alors de condamner les aides d’État dans le secteur de l’énergie selon les principes du Green New Deal, ce qui pourrait poser des problèmes à notre industrie nucléaire.J’ai donc choisi l’ABSTENTION.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport relatif à la politique de concurrence. Le texte souligne qu’une lutte ferme et efficace contre le dumping social, environnemental et fiscal est nécessaire pour garantir des conditions de concurrence équitables pour les entreprises dans le marché unique et au niveau mondial. Il déplore l’extrême concentration dans la chaîne d’approvisionnement agricole et alimentaire européenne au détriment des consommateurs, des petits agriculteurs, de l’environnement et de la biodiversité. J’ai soutenu des dispositions qui rappellent que la composition du bouquet énergétique demeure une compétence des États membres.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter l’opinion du Parlement européen sur la politique de concurrence au sein de l’Union. Il ne tire pas les leçons de la crise que nous traversons en persistant à défendre une application «stricte et impartiale» des règles de concurrence, en appelant à rétablir l’encadrement des aides publiques aux entreprises, sans demander de contrepartie sociale et écologique aux aides, et en demandant un renforcement du contrôle de la Commission sur les politiques économiques des États. J’ai donc voté contre ce texte qui ne remet aucunement en cause les dogmes de la main invisible du marché et de l’effacement du rôle d’État stratège.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce rapport vise à donner l’avis du Parlement sur la politique de concurrence de l’Union. Ce rapport est une preuve exemplaire de la puissance de résistance des dogmes les plus absurdes face à la réalité. Ce rapport n’a rien oublié, rien appris de la terrible épreuve de la pandémie. Ce texte se contente de repeindre en vert les règles actuelles qui nous ont mené à un profond désarmement industriel et à la casse des services publics et des droits sociaux. Il appelle de ses vœux un retour aux règles de la concurrence sauvage de tous contre tous. À l’heure d’une urgence sociale sans précédent et du plus grand défi collectif lancé à l’existence de l’humanité, l’obstination d’un tel carcan dogmatique est mortifère. Je n’ai donc aucune difficulté à rejeter fermement cette profession de foi néolibérale.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Suite à une modification du paragraphe 82, la critique directe de la politique des accords de libre-échange à tout prix a été supprimée.Contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai voté en faveur du rapport annuel 2020 sur la politique de concurrence qui dresse un état des lieux de l’application des règles en matière d’aides d’État, d’ententes et de concentrations. Je salue les dispositions de ce texte qui évoquent les questions de concurrence dans le secteur numérique, notamment celles liées à la puissance des GAFA. Bien que nous saluons l’adoption de l’encadrement temporaire des aides d’État en réaction à la crise de la COVID‑19, afin de permettre aux États membres de soutenir les entreprises pendant la pandémie, nous rappelons que l’encadrement est un instrument temporaire.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport car il encense les accords de libre-échange qui nuisent tant à l’agriculture française et il s’ingère par ailleurs dans la politique énergétique de la France.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            Ce rapport contient des avancées intéressantes: il pose clairement le danger que représentent les GAFAM, critique la concentration de la production dans l’agriculture et l’industrie, ainsi que les «acquisitions tueuses» de grandes entreprises vis-à-vis des PME innovantes. Toutefois, il n’aborde le problème de la compétitivité que sous l’angle des exportations, ce qui constitue une approche insuffisante, et néglige les problèmes de concurrence déloyale au sein même du marché unique. Enfin, le vote d’un amendement qui retire du texte les critiques à l’égard de la politique de libre-échange de la Commission européenne m’a poussé à voter contre la version finale de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – J’ai décidé de m’abstenir sur ce vote car le contenu du rapport est très mitigé. En effet, s’il contient de bons points, comme par exemple la prise en compte du danger des Gafam ou le constat du rôle néfaste du libre-échange sur l’agriculture, il est prisonnier d’un cadre idéologique. Il va alors passer sous silence la concurrence déloyale entre États membres au sein du marché unique et s’aligner sur le désastreux Green New Deal (véritable danger pour notre industrie nucléaire).
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Le rapport sur l’examen de la politique de la concurrence revient tous les ans. Il s’agit pour le Parlement d’exposer des directions qu’il souhaite voir prendre aux dispositifs qui l’encadrent, ainsi qu’à la Commission qui a la compétence pour l’appliquer. Le contenu du rapport est mitigé. On note ainsi de bonnes avancées comme la question des Gafam et du danger que représente leur emprise. Pour autant, le cadre idéologique du rapport ainsi que sa méthodologie d’élaboration restent les mêmes sur plusieurs points. D’abord, la fin en soi d’un marché ouvert est toujours consacrée au début du texte du rapport, ce qui entre en contradiction avec les bonnes avancées en matière d’agriculture. Ensuite, la politique de concurrence se concentre toujours sur les seuls problèmes de compétitivité et d’export international comme voie royale économique, en négligeant tout à fait la nécessité pour les entreprises françaises et européennes de reprendre possession de leur marché intérieur. J’ai voté contre ce rapport qui tombe dans l’écueil d’utiliser des enjeux internationaux très réels comme les défis posés par la Chine et les États-Unis pour passer sous silence le problème de la concurrence intra-européenne souvent déloyale du fait des disparités dans le marché unique.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Le rapport sur l’examen de la politique de la concurrence revient tous les ans. Il s’agit pour le Parlement d’exposer des directions qu’il souhaite voir prendre aux dispositifs qui l’encadrent, ainsi qu’à la Commission qui a la compétence pour l’appliquer.Il faut signaler d’abord qu’il s’agit d’un rapport très long, qui couvre une liste de demandes qui vont des pratiques anti-trust à la régulation des entreprises du numérique.Le contenu du rapport est mitigé. On note ainsi de très bonnes avancées qui sont les suivantes: la question des Gafam et du danger que représente leur emprise; le constat que les accords de libre-échange ont été très néfastes à l’agriculture.Ensuite, la politique de concurrence se concentre toujours sur les seuls problèmes de compétitivité et d’export international comme voie royale économique, en négligeant la nécessité pour les entreprises françaises et européennes de reprendre possession de leur marché intérieur.Pour toutes ces raisons j’ai choisi de m’abstenir sur ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Le rapport sur l’examen de la politique de la concurrence revient tous les ans. Il s’agit pour le Parlement d’exposer des directions qu’il souhaite voir prendre aux dispositifs qui l’encadrent, ainsi qu’à la Commission qui a la compétence pour l’appliquer. Le texte comporte des avancées très positives comme les réflexions sur la question de l’emprise des Gafam sur nos vies; le sujet des «acquisitions tueuses» de grandes entreprises sur les plus petites produisant une innovation qui menace leur modèle; le constat que les accords de libre-échange ont été très néfastes à l’agriculture… Hélas, ce rapport reste prisonnier d’un cadre idéologique qui le conduit notamment à faire l’impasse sur la nécessité pour les entreprises françaises et européennes de reprendre possession de leur marché intérieur. Le texte aborde également un point très sensible, celui des aides d’État dans le secteur de l’énergie et leur alignement sur les principes du Green New Deal, ce qui pourrait poser des problèmes à notre industrie nucléaire. Je me suis donc abstenue.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            . – Ce rapport annuel reprend les directions que le Parlement européen souhaite prendre pour les dispositifs qui encadrent les politiques de la concurrence, ainsi qu’à la Commission qui a la compétence pour les appliquer.Bien que tout le contenu ne soit pas à jeter, le rapport néglige complètement, d’une part, la nécessité pour les entreprises françaises et européennes de reprendre possession de leur marché intérieur, et d’autre part, le problème de la concurrence intra-européenne souvent déloyale du fait des disparités dans le marché unique.Pour ces raisons, j’ai voté contre de rapport.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            
+                <p> – Madame la Présidente, ma très grande entreprise ne connaît pas la crise. En 2021, les géants du CAC 40 vont verser 51 milliards d’euros à leurs actionnaires. C’est 22 % de plus que l’an dernier. Un véritable miracle, n’est-ce pas? En fait, pas vraiment, car toutes ces entreprises, comme Total ou Sanofi, ont touché des aides de l’État. Et le scandale ne s’arrête pas là, car le CAC 40 prévoit de supprimer en même temps 30 000 emplois rien qu’en France.</p>
+            
+                <p>Pendant qu’on laisse les PME mourir, on subventionne l’enrichissement des actionnaires, et l’Union européenne, si prompte à bloquer toute aide aux entreprises publiques, applaudit des deux mains. Cette politique au service d’une poignée de privilégiés a trop duré. L’État et l’Union européenne doivent reprendre la main et conditionner les aides. Pas un euro d’argent public ne doit servir à supprimer des emplois, faire de l’évasion fiscale ou détruire la planète. C’est un levier stratégique essentiel pour la bifurcation écologique et l’emploi. Mais c’est aussi et surtout un impératif de justice face aux inégalités qui explosent.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197581</div>
+            
+            <header><b>Stéphanie YON-COURTIN</b> | Renaissance</header>
+            
+                <p>La pandémie que nous avons traversée et dont nous commençons à entrevoir la fin, au moins sur le plan sanitaire, a illustré le rôle fondamental de notre politique de concurrence. La mobilisation rapide et efficace de la Commission européenne, avec la mise en place du cadre temporaire en matière d’aides d’État, a notamment permis aux États membres de pouvoir aider, comme il le fallait, les entreprises touchées brutalement par les conséquences économiques de la COVID.</p>
+            
+                <p>Cette situation exceptionnelle n’a pas vocation à rester définitive. Nous devons rapidement reconstruire notre économie sur des bases solides en préservant la concurrence au sein de notre marché unique. Toutefois, un retour à la normale ne signifie pas revenir au monde d’hier. Nous avons tiré les enseignements de cette crise en matière d’autonomie stratégique et d’harmonisation de notre marché unique. Notre politique de concurrence est un des outils pour y parvenir et pour combattre toute distorsion de concurrence qui fragiliserait notre économie, nos économies et notre marché intérieur.</p>
+            
+                <p>Je me réjouis que la Commission européenne, en dépit de la crise, ait continué à avancer sur des sujets cruciaux tels que la concurrence déloyale sur le plan international, avec l’instrument sur les subventions étrangères, ainsi que sur les déséquilibres en matière de concurrence en ligne, avec l’acte sur les marchés numériques.</p>
+            
+                <p>Il y a bien un pilote dans l’avion et nous savons où nous allons. Le Parlement européen doit aussi prendre toute sa place dans le cockpit pour être informé et pour être associé à la feuille de route ambitieuse en matière de politique de concurrence et de relance pour les années à venir.</p>
+            
+                <p>Relance et concurrence sont deux problématiques intimement liées aux objectifs que nous nous sommes fixés en matière de politique commerciale, industrielle, environnementale, numérique, de protection des consommateurs et de compétitivité.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">204421</div>
+            
+            <header><b>Jean-Lin LACAPELLE</b> | Rassemblement national</header>
+            
+                <p> – Madame la Présidente, madame la Commissaire, chers collègues, dans l&#39;idéologie libérale qui a inspiré les traités européens, la concurrence a toujours été le seul objectif. Esclaves de la théorie selon laquelle la concurrence optimiserait sans cesse la créativité et le rendement, vous avez édifié un monde où tous les acteurs économiques sont censés en permanence se montrer vigilants et performants. </p>
+            
+                <p>Cette course à la rentabilité, qui a sacrifié des millions d&#39;emplois, a constitué un système inhumain et stupide qui a permis aux grandes entreprises, par la mondialisation, par la délocalisation, d&#39;échapper au contrôle de leurs États et d&#39;abuser de leurs règles dans les pays où il n&#39;y en a aucune. Vous commencez à prendre la mesure de cette catastrophe et vous nous proposez une réforme des aides publiques d&#39;État qui va enfin favoriser la recherche et les projets européens, notamment dans le numérique, alors qu&#39;hier, vous refusiez ce volontarisme au motif que ce n&#39;était pas équitable vis-à-vis des pays extra-européens.</p>
+            
+                <p>Notre groupe a toujours dénoncé la concurrence déloyale et ses ravages. Les correctifs qu&#39;apporte l&#39;Union européenne, en revanche, ne sont pas suffisants. C&#39;est une véritable rupture idéologique qu&#39;il faut mettre en place, en renouant avec le protectionnisme intelligent, en instaurant la préférence nationale dans certaines commandes publiques, en relançant la croissance par l&#39;investissement. Ce projet doit être celui de la raison comme de la paix sociale, en opposition avec le conflit permanent de la concurrence. </p>
+            
+                <p>Nous avons eu raison depuis trente ans. Il est temps de tourner la page et de nous faire confiance.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">204420</div>
+            
+            <header><b>Claude GRUFFAT</b> | Les Écologistes</header>
+            
+                <p>En France, 100 % des grandes entreprises ont touché des aides publiques exceptionnelles, sans aucune conditionnalité écologique ou sociale. Quand nos TPE et PME luttent pour leur survie, 26 de nos 40 champions nationaux reversent 51 milliards d’euros de dividendes à leurs actionnaires, soit 22 % de plus que l’an passé: l’équivalent budgétaire français de l’Éducation nationale ou des dépenses de personnel des hôpitaux publics. Pour Bruno Le Maire, le ministre français des finances, c’est dans les moments de crise qu’il faut profiter de l’argent de l’État. En disant cela, il ne s’adressait pas aux demandeurs d’aide alimentaire dont le nombre explose, ni aux étudiants désespérés, ni aux soignants en </p>
+            
+                <p>Crise ou pas, l’économie, pour eux, se résume à faire passer la richesse de la poche des contribuables à celle de l’actionnaire. Et ceci sans contrepartie, sans ruissellement, mais avec concentration des richesses, avec licenciements, avec évasion et opacité fiscales, avec négation de l’urgence climatique.</p>
+            
+                <p>Chers collègues, sans conditionnalité associée aux aides d’État, le monde d’après ressemblera furieusement au monde d’avant en pire, et nous ne l’acceptons pas. Trop de conséquences néfastes en découleront. C’est grave.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

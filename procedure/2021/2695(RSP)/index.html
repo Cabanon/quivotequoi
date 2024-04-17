@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Résolution sur la situation au Tchad</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Résolution sur la situation au Tchad</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(635/693 * 100%)">635</div>
-  
-  
-    <div class="-" style="width: calc(27/693 * 100%)">27</div>
+    <div class="for" style="width: calc(635/693 * 100%)">635</div>
   
   
-    <div class="0" style="width: calc(31/693 * 100%)">31</div>
+    <div class="against" style="width: calc(27/693 * 100%)">27</div>
+  
+  
+    <div class="abstention" style="width: calc(31/693 * 100%)">31</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(53/77 * 100%)">53</div>
+    <div class="for" style="width: calc(53/77 * 100%)">53</div>
   
   
-    <div class="-" style="width: calc(22/77 * 100%)">22</div>
+    <div class="against" style="width: calc(22/77 * 100%)">22</div>
   
   
-    <div class="0" style="width: calc(2/77 * 100%)">2</div>
+    <div class="abstention" style="width: calc(2/77 * 100%)">2</div>
   
 </div>
  
 </section>
-            <a href="/voting/131766">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/131766">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -106,12 +111,12 @@
     
         
         
-            <li>Situation politique des pays-tiers, conflits régionaux et locaux</li>
+            <li>Relations extérieures de l&#39;Union</li>
         
     
         
         
-            <li>Relations extérieures de l&#39;Union</li>
+            <li>Situation politique des pays-tiers, conflits régionaux et locaux</li>
         
     
         
@@ -121,80 +126,198 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2695(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/RC-9-2021-0290_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-05-17-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       2. condamne 
   
 
   
-      <del>la prise militaire du pouvoir </del>
+      <del>la prise militaire du pouvoir</del>
   
 
   
-      <ins>le coup d’État militaire perpétré </ins>
+      <ins>le coup d’État militaire perpétré</ins>
   
 
   
-      par le Conseil militaire de transition le 20 avril 2021, la suspension de la constitution tchadienne qui s&#39;en est suivie et la dissolution du gouvernement; rejette la mise en place, par le Conseil militaire de transition, d&#39;une charte qui n&#39;a pas été soumise à une consultation démocratique;
+       par le Conseil militaire de transition le 20 avril 2021, la suspension de la constitution tchadienne qui s&#39;en est suivie et la dissolution du gouvernement; rejette la mise en place, par le Conseil militaire de transition, d&#39;une charte qui n&#39;a pas été soumise à une consultation démocratique;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">127</div>
+  <div class="against">547</div>
+  <div class="abstention">19</div>
+</span>
+
+  
+    
+    <a href="/voting/131743">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(127/693 * 100%)">127</div>
-  
-  
-    <div class="-" style="width: calc(547/693 * 100%)">547</div>
-  
-  
-    <div class="0" style="width: calc(19/693 * 100%)">19</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/131743">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       6. condamne à la restriction du droit de manifestation et le recours à la violence par le Conseil militaire de transition contre des manifestants; invite instamment le Conseil militaire de transition à libérer toutes les personnes emprisonnées à la suite de manifestations récentes; demande également la mise en place d&#39;une commission d&#39;enquête indépendante et impartiale pour enquêter sur les abus commis pendant les manifestations et sur les éventuelles violations des droits de l&#39;homme qui ont pu se produire, y compris l&#39;utilisation apparente d&#39;une force inutile et disproportionnée pour disperser les manifestants;
@@ -204,49 +327,51 @@
       <ins> demande la mise en place d’une commission d’enquête indépendante, sous l’égide du Haut- Commissariat des Nations unies aux droits de l&#39;homme, qui pourrait faire toute la lumière sur cette répression, laquelle a fait au moins neuf morts;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">61</div>
+  <div class="against">627</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    
+    <a href="/voting/131745">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(61/693 * 100%)">61</div>
-  
-  
-    <div class="-" style="width: calc(627/693 * 100%)">627</div>
-  
-  
-    <div class="0" style="width: calc(5/693 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/131745">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       8. demande au VP/HR ainsi qu’à la délégation et aux missions de l’UE au Tchad de garantir la pleine mise en œuvre des orientations de l&#39;UE concernant les défenseurs des droits de l&#39;homme et du plan d’action de l’UE en faveur des droits de l&#39;homme et de la démocratie, y compris en observant les manifestations et en apportant le soutien requis, mentionné dans le plan de transition de la société civile vers la fin de la crise;
@@ -256,49 +381,51 @@
       <ins> souligne, à l’intention du Conseil, que toute nouvelle utilisation disproportionnée de la force devrait faire l’objet d’un débat en vue d’imposer des sanctions ciblées;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">119</div>
+  <div class="against">557</div>
+  <div class="abstention">17</div>
+</span>
+
+  
+    
+    <a href="/voting/131746">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(119/693 * 100%)">119</div>
-  
-  
-    <div class="-" style="width: calc(557/693 * 100%)">557</div>
-  
-  
-    <div class="0" style="width: calc(17/693 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/131746">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       9. invite la communauté internationale à soutenir le Tchad dans ses efforts sur la voie de la démocratie; demande, en particulier, à l&#39;Union africaine et au G5 d’aider le Tchad en permettant un dialogue ouvert à tous et intersociétal, en vue d&#39;une solution durable et pacifique; réaffirme la nécessité de s&#39;abstenir de toute ingérence extérieure intrusive et de protéger l&#39;unité, la stabilité et l&#39;intégrité territoriale du Tchad; 
@@ -312,213 +439,225 @@
       <ins>souligne, en particulier en ce moment crucial de l&#39;histoire du pays, l&#39;importance de la non-ingérence de puissances étrangères dans les affaires intérieures du Tchad dans des questions autres que la lutte contre le terrorisme.</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">124</div>
+  <div class="against">543</div>
+  <div class="abstention">26</div>
+</span>
+
+  
+    
+    <a href="/voting/131747">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(124/693 * 100%)">124</div>
-  
-  
-    <div class="-" style="width: calc(543/693 * 100%)">543</div>
-  
-  
-    <div class="0" style="width: calc(26/693 * 100%)">26</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/131747">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>9 bis. invite les États membres à geler les avoirs financiers sur leur sol des auteurs du coup d’État du 20 avril 2021, notamment du président autoproclamé Mahamat Idriss Déby Itno et des autres membres du Conseil militaire de transition;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">118</div>
+  <div class="against">550</div>
+  <div class="abstention">25</div>
+</span>
+
+  
+    
+    <a href="/voting/131748">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(118/693 * 100%)">118</div>
-  
-  
-    <div class="-" style="width: calc(550/693 * 100%)">550</div>
-  
-  
-    <div class="0" style="width: calc(25/693 * 100%)">25</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/131748">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       14. demande 
   
 
   
-      <del>une évaluation des financements de l&#39;Union alloués à la région, pour veiller à l&#39;absence de détournement de fonds;</del>
+      <del>une évaluation des financements de l&#39;Union alloués à la région, pour veiller à l&#39;absence de détournement de fonds</del>
   
 
   
-      <ins>à la Commission d&#39;ouvrir une procédure de consultation, avant d&#39;imposer d&#39;éventuelles sanctions, au titre de l&#39;article 96 de l&#39;accord de Cotonou; demande une évaluation de l&#39;aide au développement déjà versée au Tchad, en particulier au travers du fonds fiduciaire d&#39;urgence pour l&#39;Afrique, afin de vérifier que les fonds alloués ont été utilisés à bon escient et n&#39;ont pas été utilisés à d&#39;autres fins, en particulier à des fins militaires; demande, en outre, une évaluation des financements de l&#39;Union alloués à la région, pour veiller à l&#39;absence de détournement de fonds, et demande qu’une plus grande transparence soit assurée et que davantage d’informations publiques soient communiquées au Parlement en ce qui concerne l’allocation des ressources du fonds fiduciaire d&#39;urgence pour l&#39;Afrique;</ins>
+      <ins>à la Commission d&#39;ouvrir une procédure de consultation, avant d&#39;imposer d&#39;éventuelles sanctions, au titre de l&#39;article 96 de l&#39;accord de Cotonou; demande une évaluation de l&#39;aide au développement déjà versée au Tchad, en particulier au travers du fonds fiduciaire d&#39;urgence pour l&#39;Afrique, afin de vérifier que les fonds alloués ont été utilisés à bon escient et n&#39;ont pas été utilisés à d&#39;autres fins, en particulier à des fins militaires; demande, en outre, une évaluation des financements de l&#39;Union alloués à la région, pour veiller à l&#39;absence de détournement de fonds, et demande qu’une plus grande transparence soit assurée et que davantage d’informations publiques soient communiquées au Parlement en ce qui concerne l’allocation des ressources du fonds fiduciaire d&#39;urgence pour l&#39;Afrique</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">164</div>
+  <div class="against">489</div>
+  <div class="abstention">40</div>
+</span>
+
+  
+    
+    <a href="/voting/131752">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(164/693 * 100%)">164</div>
-  
-  
-    <div class="-" style="width: calc(489/693 * 100%)">489</div>
-  
-  
-    <div class="0" style="width: calc(40/693 * 100%)">40</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/131752">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
-
-  
-      12. rappelle que le changement climatique, l’insécurité alimentaire, la croissance démographique, l&#39;exploitation des ressources naturelles, la pauvreté et un manque de perspectives éducatives et é
-  
+<p>
 
   
-      <del>conomiques </del>
+      12. rappelle que le changement climatique, l’insécurité alimentaire, la croissance démographique, l&#39;exploitation des ressources naturelles, la pauvreté et un manque de perspectives éducatives et économiques
   
 
   
-      <ins>conomiques, ainsi que des ingérences violentes et idéologiques de groupes djihadistes étrangers, </ins>
+      <del> </del>
+  
+
+  
+      <ins>, ainsi que des ingérences violentes et idéologiques de groupes djihadistes étrangers, </ins>
   
 
   
       sont des causes profondes de l&#39;instabilité, de la violence et du recrutement de terroristes à travers le Sahel; observe que la pandémie de COVID-19 a exacerbé ces pressions et considérablement entravé les progrès du développement; souligne que la coordination de l&#39;aide en matière de sécurité, de développement, de soutien humanitaire et démocratique est nécessaire pour assurer le développement durable à long terme dans l’ensemble de la région; approuve le passage à une approche plus intégrée de la stabilisation, plus axée sur les dimensions civiles et politiques;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">423</div>
+  <div class="against">260</div>
+  <div class="abstention">10</div>
+</span>
+
+  
+    
+    <a href="/voting/131751">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(423/693 * 100%)">423</div>
-  
-  
-    <div class="-" style="width: calc(260/693 * 100%)">260</div>
-  
-  
-    <div class="0" style="width: calc(10/693 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/131751">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       1. déplore le meurtre du président Idris Déby et les récentes violences et pertes de vies du fait d&#39;attaques de groupes armés dans la région; réaffirme sa préoccupation face à la crise prolongée au Tchad et à l’instabilité de la situation sécuritaire dans le Nord, et condamne vivement les violations répétées des droits de l’homme et du droit international et humanitaire;
@@ -528,49 +667,51 @@
       <ins> condamne le soutien de la Turquie au groupe «FACT», responsable de l’assassinat du président Déby;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">81</div>
+  <div class="against">591</div>
+  <div class="abstention">17</div>
+</span>
+
+  
+    
+    <a href="/voting/131742">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(81/689 * 100%)">81</div>
-  
-  
-    <div class="-" style="width: calc(591/689 * 100%)">591</div>
-  
-  
-    <div class="0" style="width: calc(17/689 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/131742">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       2. condamne la prise militaire du pouvoir par le Conseil militaire de transition le 20 avril 2021, la suspension de la constitution tchadienne qui s&#39;en est suivie et la dissolution du gouvernement; rejette la mise en place, par le Conseil militaire de transition, d&#39;une charte qui n&#39;a pas été soumise à une consultation démocratique;
@@ -580,49 +721,51 @@
       <ins> rappelle que la stabilité du Tchad est essentielle pour la région du Sahel; demande à l’UE de ne soutenir aucune initiative qui aboutirait à la déstabilisation du pays; rappelle qu’il y a Tchad, qui sont soumis à d’intenses pressions de la part de divers groupes afin qu’ils émigrent en Europe;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">105</div>
+  <div class="against">532</div>
+  <div class="abstention">53</div>
+</span>
+
+  
+    
+    <a href="/voting/131744">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(105/690 * 100%)">105</div>
-  
-  
-    <div class="-" style="width: calc(532/690 * 100%)">532</div>
-  
-  
-    <div class="0" style="width: calc(53/690 * 100%)">53</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/131744">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       10. reconnaît le rôle important que joue le Tchad dans la lutte contre le terrorisme au sein du groupe du G5 Sahel; insiste sur l&#39;importance du respect des conventions internationales en matière de droits de l&#39;homme; insiste sur la préservation de l&#39;intégrité et de la stabilité territoriales du Tchad dans le contexte sécuritaire fragile de la région; souligne les besoins humanitaires du Sahel;
@@ -632,96 +775,147 @@
       <ins> souligne qu’il y a une relation directe entre la déstabilisation de la Libye et les troubles qui se développent au Tchad;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">92</div>
+  <div class="against">550</div>
+  <div class="abstention">49</div>
+</span>
+
+  
+    
+    <a href="/voting/131749">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(92/691 * 100%)">92</div>
-  
-  
-    <div class="-" style="width: calc(550/691 * 100%)">550</div>
-  
-  
-    <div class="0" style="width: calc(49/691 * 100%)">49</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/131749">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       <ins>11 bis. rend hommage à l’armée française qui coopère avec les pays du G5 Sahel dans la lutte contre les groupes islamistes et criminels dans la région du Sahel; honore la mémoire des soldats français qui sont morts pendant les opérations Serval et Barkhane;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(302/678 * 100%)">302</div>
-  
-  
-    <div class="-" style="width: calc(366/678 * 100%)">366</div>
-  
-  
-    <div class="0" style="width: calc(10/678 * 100%)">10</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/131750">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+    ID
+    (🇫🇷 : Rassemblement national)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2695(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/RC-9-2021-0290_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">302</div>
+  <div class="against">366</div>
+  <div class="abstention">10</div>
+</span>
+
   
+    
+    <a href="/voting/131750">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-05-17-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197494</div>
+            
+            <header><b>Nathalie LOISEAU</b> | Renaissance</header>
+            
+                <p>Toutefois, le poids de l’armée au Tchad est à la fois la force et la faiblesse de ce pays; car si on repousse son ennemi à la pointe de son fusil, on ne gouverne pas en uniforme, ni par la force, ni en se recroquevillant sur son clan. Trop longtemps, certains ont cru que la stabilité du Tchad passait par le maintien au pouvoir d’un régime autoritaire. J’invite l’Europe et l’Union africaine, mais surtout tous les Tchadiens, à les démentir et à faire la démonstration que c’est par l’ouverture et l’inclusivité que la transition tchadienne réussira. Au Tchad comme ailleurs, la place des militaires est de servir l’État, pas de se substituer à lui. </p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197534</div>
+            
+            <header><b>François-Xavier BELLAMY</b> | Les Républicains</header>
+            
+                <p>Comment ne pas voir que ce qui suscite le terrorisme à N’Djamena comme à Paris, Vienne ou Londres, c’est d’abord l’idéologie islamiste? Le déni de réalité confond cause et conséquence. Comment ne pas voir que cette idéologie islamiste, partout où elle l’a emporté, à Kaboul comme à Mossoul, a fermé toute perspective d’avenir, interdit l’éducation, et imposé la violence et la guerre? Comment ne pas voir que l’Europe est, a été et sera toujours la cible, pour ce qu’elle est, pour ce qu’elle représente, de cette idéologie de mort?</p>
+            
+                <p>Je partage évidemment pleinement l’amendement que notre collègue Arnaud Danjean a déposé pour rappeler cette évidence: l’Europe doit sortir du déni, enfin. Cette menace djihadiste, les militaires français, appuyés dans la région par quelques-uns de nos pays, la connaissent bien pour la combattre chaque jour et avoir payé le prix du sang face à elle. Depuis 2013, 55 soldats français sont tombés dans ce combat qui nous concerne tous, car la sécurité de l’Europe se joue aussi au Sahel.</p>
+            
+                <p>Elle suppose l’emploi de la force face à des ennemis qui sont déterminés et soutenus par des acteurs qui veulent nous déstabiliser, et qu’une fois encore, nous laissons agir impunément. Faut-il rappeler le rôle que la Turquie joue, par exemple, sur le front libyen du Tchad? Chers collègues, c’est ensemble que nous devons agir, aussi bien au Sahel qu’ici, dans nos pays, face à cette menace, la même qui menace nos démocraties.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197500</div>
+            
+            <header><b>Mounir SATOURI</b> | Les Écologistes</header>
+            
+                <p>Mahamat Idriss Déby viole la constitution tchadienne et n’a aucune légitimité démocratique. Mahamat Idriss Déby, à travers ce coup d’État qui se déroule au Tchad, a été avalisé par le gouvernement français; pourtant il ne le sera pas par le Parlement européen. Nous condamnons la prise de pouvoir militaire et la suspension de la constitution tchadienne, et rejetons la charte proposée par la junte sans aucune consultation démocratique. Par notre voix, l’Europe demande à la junte de permettre des élections le plus rapidement possible. Nous veillerons à ce que la diplomatie européenne s’emploie à convaincre ses partenaires tchadiens d’honorer leur droit démocratique. Ce Parlement demande ceci d’une voix forte.</p>
+            
+                <p>Aujourd’hui, nous pouvons être fiers de représenter l’Europe des valeurs, tandis que d’autres s’engagent dans la compromission. Beaucoup de membres de ce Parlement dans le groupe Verts ont également demandé le gel des avoirs des auteurs du coup d’État. Nous continuons cette bataille pour que l’Union utilise tous les leviers à sa disposition pour protéger les droits démocratiques.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

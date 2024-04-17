@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Coopération UE-OTAN dans le cadre des relations transatlantiques</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Coopération UE-OTAN dans le cadre des relations transatlantiques</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(493/686 * 100%)">493</div>
-  
-  
-    <div class="-" style="width: calc(90/686 * 100%)">90</div>
+    <div class="for" style="width: calc(493/686 * 100%)">493</div>
   
   
-    <div class="0" style="width: calc(103/686 * 100%)">103</div>
+    <div class="against" style="width: calc(90/686 * 100%)">90</div>
+  
+  
+    <div class="abstention" style="width: calc(103/686 * 100%)">103</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,35 +88,26 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(35/79 * 100%)">35</div>
+    <div class="for" style="width: calc(35/79 * 100%)">35</div>
   
   
-    <div class="-" style="width: calc(29/79 * 100%)">29</div>
+    <div class="against" style="width: calc(29/79 * 100%)">29</div>
   
   
-    <div class="0" style="width: calc(15/79 * 100%)">15</div>
+    <div class="abstention" style="width: calc(15/79 * 100%)">15</div>
   
 </div>
  
 </section>
-            <a href="/voting/134946">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/134946">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Relations extérieures de l&#39;Union</li>
-        
-    
-        
-        
-            <li>Relations avec les pays tiers</li>
-        
     
         
         
@@ -126,456 +121,552 @@
     
         
         
+            <li>Relations extérieures de l&#39;Union</li>
+        
+    
+        
+        
+            <li>Relations avec les pays tiers</li>
+        
+    
+        
+        
             <li>Politique étrangère et de sécurité commune (PESC)</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2257(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0192_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-07-06-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>– vu la déclaration conjointe adoptées lors du sommet UE-États-Unis du 15 juin 2021,</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">591</div>
+  <div class="against">42</div>
+  <div class="abstention">51</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/134489">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(591/684 * 100%)">591</div>
-  
-  
-    <div class="-" style="width: calc(42/684 * 100%)">42</div>
-  
-  
-    <div class="0" style="width: calc(51/684 * 100%)">51</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134489">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>– vu la déclaration conjointe adoptées lors du sommet UE-Canada du 15 juin 2021,</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">591</div>
+  <div class="against">42</div>
+  <div class="abstention">51</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/134490">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(591/684 * 100%)">591</div>
-  
-  
-    <div class="-" style="width: calc(42/684 * 100%)">42</div>
-  
-  
-    <div class="0" style="width: calc(51/684 * 100%)">51</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134490">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>– vu le communiqué du sommet de Bruxelles publié par les chefs d&#39;État et de gouvernement participant à la réunion du Conseil de l&#39;Atlantique Nord qui s’est tenue à Bruxelles le 14 juin 2021,</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">591</div>
+  <div class="against">42</div>
+  <div class="abstention">51</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/134491">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(591/684 * 100%)">591</div>
-  
-  
-    <div class="-" style="width: calc(42/684 * 100%)">42</div>
-  
-  
-    <div class="0" style="width: calc(51/684 * 100%)">51</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134491">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>– vu le communiqué du 13 juin 2021 des dirigeants du G7 intitulé «Notre programme commun d’action mondiale pour reconstruire sur une base plus solide»,</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">588</div>
+  <div class="against">61</div>
+  <div class="abstention">35</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/134492">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(588/684 * 100%)">588</div>
-  
-  
-    <div class="-" style="width: calc(61/684 * 100%)">61</div>
-  
-  
-    <div class="0" style="width: calc(35/684 * 100%)">35</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134492">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>– vu le sommet États-Unis-Russie qui s&#39;est tenu le 16 juin 2021 à Genève,</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">600</div>
+  <div class="against">7</div>
+  <div class="abstention">76</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/134493">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(600/683 * 100%)">600</div>
-  
-  
-    <div class="-" style="width: calc(7/683 * 100%)">7</div>
-  
-  
-    <div class="0" style="width: calc(76/683 * 100%)">76</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134493">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      B. considérant que l’Union et l’OTAN ont entamé un processus de réflexion pour s’adapter efficacement aux changements sans précédent qui interviennent dans le domaine de la sécurité mondiale; qu’en juin 2020, les dirigeants de l’Union ont décidé de lancer un processus visant à définir une «boussole stratégique»; 
-  
+<p>
 
   
-      <del>que les dirigeants de l’OTAN doivent lancer un processus d’actualisation du concept stratégique de l’OTAN lors de leur prochain sommet;</del>
+      B. considérant que l’Union et l’OTAN ont entamé un processus de réflexion pour s’adapter efficacement aux changements sans précédent qui interviennent dans le domaine de la sécurité mondiale; qu’en juin 2020, les dirigeants de l’Union ont décidé de lancer un processus visant à définir une «boussole stratégique»; que
   
 
   
-      <ins>que, lors du récent sommet qui les a réunis le 14 juin 2021, les dirigeants de l’OTAN ont décidé de commencer à travailler sur le prochain concept stratégique qui sera adopté lors de leur prochain sommet, en 2022;</ins>
+      <del> les dirigeants de l’OTAN doivent lancer un processus d’actualisation du concept stratégique de l’OTAN</del>
+  
+
+  
+      <ins>, lors du récent sommet qui les a réunis le 14 juin 2021, les dirigeants de l’OTAN ont décidé de commencer à travailler sur le prochain concept stratégique qui sera adopté</ins>
+  
+
+  
+       lors de leur prochain sommet
+  
+
+  
+      <ins>, en 2022</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">592</div>
+  <div class="against">46</div>
+  <div class="abstention">46</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/134494">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(592/684 * 100%)">592</div>
-  
-  
-    <div class="-" style="width: calc(46/684 * 100%)">46</div>
-  
-  
-    <div class="0" style="width: calc(46/684 * 100%)">46</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134494">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      9. se félicite 
-  
+<p>
 
   
-      <ins>du signal fort lancé au regard de l’unité et de la coopération transatlantique lors du sommet de l’OTAN du 14 juin 2021, lequel témoigne du fait que l’alliance continue d’être d&#39;une importance capitale et capable de s’adapter aux enjeux actuels et à venir; estime que les conclusions sur la coopération UE-OTAN devraient également être prises en compte dans les travaux sur le prochain concept stratégique de l’OTAN; se félicite </ins>
+      9.
   
 
   
-      de la nomination par le secrétaire général de l’OTAN du groupe d’experts indépendant, et salue en particulier ses recommandations en faveur d’une coopération renforcée entre l’Union et l’
+      <ins> se félicite du signal fort lancé au regard de l’unité et de la coopération transatlantique lors du sommet de l’OTAN du 14 juin 2021, lequel témoigne du fait que l’alliance continue d’être d&#39;une importance capitale et capable de s’adapter aux enjeux actuels et à venir; estime que les conclusions sur la coopération UE-OTAN devraient également être prises en compte dans les travaux sur le prochain concept stratégique de l’OTAN;</ins>
   
 
   
-      <del>OTAN, qui montrent clairement qu’il existe encore une marge d’amélioration;</del>
+       se félicite de la nomination par le secrétaire général de l’OTAN du groupe d’experts indépendant, et salue en particulier ses recommandations en faveur d’une coopération renforcée entre l’Union et l’OTAN
   
 
   
-      <ins>OTAN;</ins>
+      <del>, qui montrent clairement qu’il existe encore une marge d’amélioration</del>
   
 
   
-       approuve les propositions faites en décembre 2020 par la présidente de la Commission et le VP/HR en faveur d’un dialogue UE-États-Unis en matière de sécurité et de défense; se félicite de l’engagement clairement exprimé par l’administration Biden de nouer le dialogue avec les partenaires de l’Union et de l’OTAN dans tous les domaines;
+      ; approuve les propositions faites en décembre 2020 par la présidente de la Commission et le VP/HR en faveur d’un dialogue UE-États-Unis en matière de sécurité et de défense; se félicite de l’engagement clairement exprimé par l’administration Biden de nouer le dialogue avec les partenaires de l’Union et de l’OTAN dans tous les domaines;
   
 
   
       <del> souligne à la fois l’importance capitale de la présence des forces américaines en Europe pour la sécurité de l’Europe et son engagement sans faille en faveur de la coopération transatlantique en matière de sécurité; souligne qu’un partenariat solide entre l’Union et les États-Unis est indispensable à la réussite de la coopération entre l’Union et l’OTAN; souligne que le partenariat transatlantique tire profit de l’élaboration d’une politique étrangère prévisible et d’un engagement multilatéral; considère le changement politique à la tête des États-Unis comme une occasion de réaffirmer des valeurs communes, telles que la démocratie, l’état de droit, le    multilatéralisme, la paix et la prospérité, ainsi que de renforcer la coopération internationale dans la lutte contre les menaces communes, ce qui pourrait comprendre, dans la mesure du possible, des sanctions communes;</del>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">576</div>
+  <div class="against">73</div>
+  <div class="abstention">35</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/134478">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(576/684 * 100%)">576</div>
-  
-  
-    <div class="-" style="width: calc(73/684 * 100%)">73</div>
-  
-  
-    <div class="0" style="width: calc(35/684 * 100%)">35</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134478">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>9 bis. se félicite vivement du sommet UE- États-Unis du 15 juin 2021 et de l’expression de l’indéfectible soutien à une coopération OTAN-UE solide; salue la reconnaissance conjointe, par l’Union et les États-Unis, de la contribution que les initiatives de sécurité et de défense de l’Union peuvent apporter à la sécurité européenne et transatlantique, et se félicite du projet d&#39;instaurer un dialogue UE-États-Unis spécifiquement consacré à la sécurité et à la défense; souligne à la fois l’importance capitale de la présence des forces américaines en Europe pour la sécurité de l’Europe et son engagement sans faille en faveur de la coopération transatlantique en matière de sécurité; souligne qu’un partenariat solide entre l’Union et les États-Unis est indispensable à la réussite de la coopération entre l’Union et l’OTAN; souligne que le partenariat transatlantique tire profit de l’élaboration d’une politique étrangère prévisible et d’un dialogue multilatéral; considère le changement politique à la tête des États-Unis comme une occasion de réaffirmer des valeurs communes, telles que la démocratie, l’état de droit, le multilatéralisme, la paix et la prospérité, ainsi que de renforcer la coopération internationale dans la lutte contre les menaces communes, ce qui pourrait comprendre, dans la mesure du possible,    des sanctions communes;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">568</div>
+  <div class="against">93</div>
+  <div class="abstention">23</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/134479">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(568/684 * 100%)">568</div>
-  
-  
-    <div class="-" style="width: calc(93/684 * 100%)">93</div>
-  
-  
-    <div class="0" style="width: calc(23/684 * 100%)">23</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134479">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       10. 
   
 
   
-      <del>considère </del>
+      <del>considère</del>
   
 
   
-      <ins>adhère pleinement à la position exprimée dans le communiqué final du récent sommet de l’OTAN, selon laquelle le processus stratégique en cours au sein de l’OTAN et de l’Union constitue une occasion unique d’intensifier la consultation mutuelle et la coopération afin de renforcer la sécurité des citoyens et de promouvoir la paix et la stabilité dans la zone euro-atlantique et au-delà; demande donc une nouvelle fois </ins>
+      <ins>adhère pleinement à la position exprimée dans le communiqué final du récent sommet de l’OTAN, selon laquelle le processus stratégique en cours au sein de l’OTAN et de l’Union constitue une occasion unique d’intensifier la consultation mutuelle et la coopération afin de renforcer la sécurité des citoyens et de promouvoir la paix et la stabilité dans la zone euro-atlantique et au-delà; demande donc une nouvelle fois</ins>
   
 
   
-      que les travaux en cours et futurs menés en parallèle, tant 
+       que les travaux en cours et futurs menés en parallèle, tant 
   
 
   
@@ -587,196 +678,209 @@
   
 
   
-      <del>sur la mise à jour attendue du </del>
+      <del>sur la mise à jour attendue du</del>
   
 
   
-      <ins>ceux, récemment annoncés, sur le prochain </ins>
+      <ins>ceux, récemment annoncés, sur le prochain</ins>
   
 
   
-      concept stratégique de l’OTAN, constituent une occasion unique de définir des priorités claires et de dégager des synergies supplémentaires afin de renforcer le lien transatlantique et la coopération entre l’Union et l’OTAN; invite tous les acteurs concernés à profiter de cette occasion pour lier ces processus, tant au niveau politique que technique; souligne que les deux processus devraient assurer la cohérence et recenser les menaces régionales et mondiales communes, ainsi que les prochaines étapes nécessaires pour y faire face; est convaincu que la boussole stratégique de l’Union pourrait jeter les bases d’une contribution de l’Union 
+       concept stratégique de l’OTAN, constituent une occasion unique de définir des priorités claires et de dégager des synergies supplémentaires afin de renforcer le lien transatlantique et la coopération entre l’Union et l’OTAN; invite tous les acteurs concernés à profiter de cette occasion pour lier ces processus, tant au niveau politique que technique; souligne que les deux processus devraient assurer la cohérence et recenser les menaces régionales et mondiales communes, ainsi que les prochaines étapes nécessaires pour y faire face; est convaincu que la boussole stratégique de l’Union pourrait jeter les bases d’une contribution de l’Union 
   
 
   
-      <del>à la mise à jour du </del>
+      <del>à la mise à jour du</del>
   
 
   
-      <ins>au prochain </ins>
+      <ins>au prochain</ins>
   
 
   
-      concept stratégique de l’OTAN; estime que ces processus distincts 
+       concept stratégique de l’OTAN; estime que ces processus distincts
   
 
   
-      <ins>   </ins>
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
   
 
   
       devraient mettre en évidence la valeur ajoutée de chaque organisation séparément, contribuer si nécessaire à une meilleure répartition des tâches et, grâce à un dialogue constant et à une coordination étroite, déterminer qui, de l’Union européenne ou de l’OTAN, doit être chef de file dans un domaine donné, dans une optique de renforcement mutuel;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">565</div>
+  <div class="against">79</div>
+  <div class="abstention">40</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/134480">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(565/684 * 100%)">565</div>
-  
-  
-    <div class="-" style="width: calc(79/684 * 100%)">79</div>
-  
-  
-    <div class="0" style="width: calc(40/684 * 100%)">40</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134480">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       13. 
   
 
   
-      <del>estime que le sommet de l’OTAN prévu le 14 juin 2021 offre une occasion importante d’examiner l’état actuel de la coopération entre l’Union et l’OTAN, de la faire progresser et de réaffirmer le lien transatlantique ;</del>
+      <del>estime que le</del>
   
 
   
-      <ins>salue le discours positif sur la coopération UE-OTAN tenu dans le communiqué final du sommet de l’OTAN du 14 juin 2021; estime toutefois qu&#39;il convient d&#39;intensifier notablement les efforts déployés pour renforcer la coopération UE-OTAN et parvenir à un véritable partenariat stratégique;</ins>
+      <ins>salue le discours positif sur la coopération UE-OTAN tenu dans le communiqué final du</ins>
   
 
   
-       souligne que l’Union est un partenaire de l’OTAN et que la coopération UE-OTAN se renforce mutuellement et repose sur les principes directeurs qui ont été arrêtés, à savoir la transparence, la réciprocité, l’inclusion et l’autonomie décisionnelle des deux organisations; souligne que la mise au point de capacités de défense cohérentes, complémentaires et interopérables est essentielle pour renforcer la sécurité de la zone euro-atlantique, conformément au principe du réservoir unique de forces; réaffirme qu’une capacité d’action européenne, en partenariat ou de manière autonome, est indispensable à la complémentarité et pour contribuer à l’accomplissement des missions essentielles de l’OTAN, mais aussi pour améliorer la prévention des conflits, et donc pour la sécurité du continent européen dans son ensemble;
+       sommet de l’OTAN 
+  
+
+  
+      <del>prévu le</del>
+  
+
+  
+      <ins>du</ins>
+  
+
+  
+       14 juin 2021
+  
+
+  
+      <del> offre une occasion importante d’examiner l’état actuel de la coopération entre l’Union et l’OTAN, de la faire progresser et de réaffirmer le lien transatlantique ; </del>
+  
+
+  
+      <ins>; estime toutefois qu&#39;il convient d&#39;intensifier notablement les efforts déployés pour renforcer la coopération UE-OTAN et parvenir à un véritable partenariat stratégique; </ins>
+  
+
+  
+      souligne que l’Union est un partenaire de l’OTAN et que la coopération UE-OTAN se renforce mutuellement et repose sur les principes directeurs qui ont été arrêtés, à savoir la transparence, la réciprocité, l’inclusion et l’autonomie décisionnelle des deux organisations; souligne que la mise au point de capacités de défense cohérentes, complémentaires et interopérables est essentielle pour renforcer la sécurité de la zone euro-atlantique, conformément au principe du réservoir unique de forces; réaffirme qu’une capacité d’action européenne, en partenariat ou de manière autonome, est indispensable à la complémentarité et pour contribuer à l’accomplissement des missions essentielles de l’OTAN, mais aussi pour améliorer la prévention des conflits, et donc pour la sécurité du continent européen dans son ensemble;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">568</div>
+  <div class="against">77</div>
+  <div class="abstention">39</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/134481">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(568/684 * 100%)">568</div>
-  
-  
-    <div class="-" style="width: calc(77/684 * 100%)">77</div>
-  
-  
-    <div class="0" style="width: calc(39/684 * 100%)">39</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134481">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      15. 
-  
+<p>
 
   
-      <ins>salue la clarté du discours tenu dans le communiqué du sommet de l’OTAN du 14 juin 2021 sur l’importance de la résilience; </ins>
+      15.
   
 
   
-      insiste sur le fait que tant l’Union que l’OTAN devraient renforcer leur coopération et la coordonner plus efficacement dans le domaine clé de la résilience, et souligne l’ambition de l’Union de concevoir une approche constructive en vue de renforcer les différents aspects civils et militaires de la résilience, notamment dans le domaine de la protection des infrastructures essentielles, comme les transports, l’énergie et les technologies de l’information, ainsi que son rôle en tant qu’acteur majeur dans la lutte contre la désinformation et les fausses nouvelles;
+      <ins> salue la clarté du discours tenu dans le communiqué du sommet de l’OTAN du 14 juin 2021 sur l’importance de la résilience;</ins>
+  
+
+  
+       insiste sur le fait que tant l’Union que l’OTAN devraient renforcer leur coopération et la coordonner plus efficacement dans le domaine clé de la résilience, et souligne l’ambition de l’Union de concevoir une approche constructive en vue de renforcer les différents aspects civils et militaires de la résilience, notamment dans le domaine de la protection des infrastructures essentielles, comme les transports, l’énergie et les technologies de l’information, ainsi que son rôle en tant qu’acteur majeur dans la lutte contre la désinformation et les fausses nouvelles;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">568</div>
+  <div class="against">48</div>
+  <div class="abstention">68</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/134482">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(568/684 * 100%)">568</div>
-  
-  
-    <div class="-" style="width: calc(48/684 * 100%)">48</div>
-  
-  
-    <div class="0" style="width: calc(68/684 * 100%)">68</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134482">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°12 | 
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       16. se félicite de la décision 
@@ -787,31 +891,31 @@
   
 
   
-      du Conseil du 6 mai 
+      du Conseil du 6 mai 2021
   
 
   
-      <del>2021 d’approuver la demande de participation des </del>
+      <del> d’approuver la demande de participation des</del>
   
 
   
-      <ins>2021, qui autorise les Pays-Bas, en tant que coordonnateur du projet de mobilité militaire, à inviter les </ins>
+      <ins>, qui autorise les Pays-Bas, en tant que coordonnateur du projet de mobilité militaire, à inviter les</ins>
   
 
   
-      États-Unis, 
+       États-Unis, 
   
 
   
-      <del>du </del>
+      <del>du</del>
   
 
   
-      <ins>le </ins>
+      <ins>le</ins>
   
 
   
-      Canada et 
+       Canada et 
   
 
   
@@ -819,23 +923,23 @@
   
 
   
-      la Norvè
+      la Norvège
   
 
   
-      <del>ge </del>
+      <ins>, à la suite de leurs demandes respectives, à participer</ins>
   
 
   
-      <ins>ge, à la suite de leurs demandes respectives, à participer </ins>
+       au projet de CSP sur la mobilité militaire; souligne qu’une telle participation marquerait une étape importante vers une plus grande cohérence entre les efforts respectifs de l’Union et de l’OTAN en matière de développement des capacités, et constituerait un exemple concret d’un partenariat transatlantique revigoré; rappelle que la participation exceptionnelle de pays tiers à des projets de la CSP, à condition qu’elle ne compromette pas l’objectif consistant à promouvoir la PSDC de l’Union et qu’elle soit soumise à un ensemble convenu de conditions de nature politique, juridique et de fond, peut être dans l’intérêt stratégique de l’Union, en particulier si elle fournit une expertise technique ou des capacités supplémentaires; estime que cela vaut en particulier pour des partenaires stratégiques tels que les alliés de l’OTAN, les pays des Balkans occidentaux et les pays du partenariat oriental; rappelle sa position selon laquelle la participation de pays tiers ne peut être qu’exceptionnelle, décidée au cas par cas et à l’invitation des États membres de l’Union, et souligne qu’une
   
 
   
-      au projet de CSP sur la mobilité militaire; souligne qu’une telle participation marquerait une étape importante vers une plus grande cohérence entre les efforts respectifs de l’Union et de l’OTAN en matière de développement des capacités, et constituerait un exemple concret d’un partenariat transatlantique revigoré; rappelle que la participation exceptionnelle de pays tiers à des projets de la CSP, à condition qu’elle ne compromette pas l’objectif consistant à promouvoir la PSDC de l’Union et qu’elle soit soumise à un ensemble convenu de conditions de nature politique, juridique et de fond, peut être dans l’intérêt stratégique de l’Union, en particulier si elle fournit une expertise technique ou des capacités supplémentaires; estime que cela vaut en particulier pour des partenaires stratégiques tels que les alliés de l’OTAN, les pays des Balkans occidentaux et les pays du partenariat oriental; rappelle sa position selon laquelle la participation de pays tiers ne peut être qu’exceptionnelle, décidée au cas par cas et à l’invitation des États membres de l’Union, et souligne qu’une 
+      <del> </del>
   
 
   
-      <ins>   </ins>
+      <ins>    </ins>
   
 
   
@@ -850,121 +954,119 @@
       participation de pays tiers doit respecter les règles pertinentes définies dans la décision
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">584</div>
+  <div class="against">83</div>
+  <div class="abstention">17</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/134483">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(584/684 * 100%)">584</div>
-  
-  
-    <div class="-" style="width: calc(83/684 * 100%)">83</div>
-  
-  
-    <div class="0" style="width: calc(17/684 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134483">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°13 | 
+        
+            <article id="13">
+            <header>📝 Amendement n°13 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      20. exprime sa profonde préoccupation face aux politiques révisionnistes, militaristes et agressives continuellement menées par la Russie sous l’égide du président Poutine; 
-  
+<p>
 
   
-      <ins>salue la clarté du discours à l’égard de la Russie lors des récents sommets de l’OTAN et de l’Union et des États-Unis, et se félicite de la mise en place d&#39;un dialogue de haut niveau UE-États-Unis sur la Russie; </ins>
+      20. exprime sa profonde préoccupation face aux politiques révisionnistes, militaristes et agressives continuellement menées par la Russie sous l’égide du président Poutine;
   
 
   
-      souligne que l’OTAN et l’Union européenne doivent adopter une stratégie volontariste et cohérente, et réagir de manière conforme au droit, rapide et unie aux actes d’agression et de provocation traditionnels et hybrides de la Russie; condamne une nouvelle fois l’annexion illégitime et illégale de la Crimée en 2014 par la Russie; condamne le recours continuel par la Russie aux cyberattaques, aux campagnes de désinformation, aux fausses informations et aux tentatives d’assassinat et d’empoisonnement de responsables de l’opposition; invite l’Union et l’OTAN à tirer parti des engagements actuels et à les étendre afin de contrecarrer les agressions et activités de la Russie directement ou indirectement dirigées contre l’Ukraine, la Géorgie et la Moldavie, ainsi que ses actions de revendication persistantes dans les régions de la Baltique et de la mer Noire, dans la mer d’Azov, en Méditerranée orientale et dans le Grand 
+      <ins> salue la clarté du discours à l’égard de la Russie lors des récents sommets de l’OTAN et de l’Union et des États-Unis, et se félicite de la mise en place d&#39;un dialogue de haut niveau UE-États-Unis sur la Russie;</ins>
   
 
   
-      <ins>   </ins>
+       souligne que l’OTAN et l’Union européenne doivent adopter une stratégie volontariste et cohérente, et réagir de manière conforme au droit, rapide et unie aux actes d’agression et de provocation traditionnels et hybrides de la Russie; condamne une nouvelle fois l’annexion illégitime et illégale de la Crimée en 2014 par la Russie; condamne le recours continuel par la Russie aux cyberattaques, aux campagnes de désinformation, aux fausses informations et aux tentatives d’assassinat et d’empoisonnement de responsables de l’opposition; invite l’Union et l’OTAN à tirer parti des engagements actuels et à les étendre afin de contrecarrer les agressions et activités de la Russie directement ou indirectement dirigées contre l’Ukraine, la Géorgie et la Moldavie, ainsi que ses actions de revendication persistantes dans les régions de la Baltique et de la mer Noire, dans la mer d’Azov, en Méditerranée orientale et dans le Grand
   
 
   
-      Nord; rappelle l’importance du respect des frontières internationales et de l’intégrité territoriale des voisins de la Russie; rappelle que les partenaires transatlantiques doivent coordonner leur double approche 
+      <del> </del>
   
 
   
-      <del>   </del>
+      <ins>    </ins>
+  
+
+  
+      Nord; rappelle l’importance du respect des frontières internationales et de l’intégrité territoriale des voisins de la Russie; rappelle que les partenaires transatlantiques doivent coordonner leur double approche
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
       de dissuasion et de dialogue avec la Russie en entretenant des contacts réguliers dans les domaines de la maîtrise des armements, de la transparence militaire et de toute autre question liée à la sécurité;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">578</div>
+  <div class="against">77</div>
+  <div class="abstention">27</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/134484">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(578/682 * 100%)">578</div>
-  
-  
-    <div class="-" style="width: calc(77/682 * 100%)">77</div>
-  
-  
-    <div class="0" style="width: calc(27/682 * 100%)">27</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134484">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°14 | 
+        
+            <article id="14">
+            <header>📝 Amendement n°14 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       22. reconnaît que l’influence et la volonté d’affirmation croissantes ainsi que la montée en puissance militaire, technologique et politique de la Chine doivent faire l’objet d’une stratégie transatlantique coordonnée;
@@ -975,87 +1077,23 @@
   
 
   
-       exprime sa vive préoccupation au sujet des politiques menées par les autorités du parti communiste chinois (PCC) en ce qui concerne, entre autres, la répression de la démocratie à Hong Kong, le traitement discriminatoire des minorités religieuses et culturelles, en particulier des Ouïgours dans le Xinjiang, les menaces à l’égard de Taïwan ou les politiques et actions agressives en mer de Chine méridionale; souligne en outre combien il est significatif que la Chine, en tant que régime autoritaire, soit entrée en concurrence systémique avec le partenariat transatlantique, porte atteinte à l’ordre international fondé sur des règles, établi tout au long de nombreuses décennies, et tente à présent de le remodeler conformément aux valeurs, à la doctrine et aux intérêts du PCC; rappelle la présence accrue de la Chine sur la scène internationale ainsi qu’en Europe par le truchement de son initiative «une ceinture, une route», ses investissements dans des 
+       exprime sa vive préoccupation au sujet des politiques menées par les autorités du parti communiste chinois (PCC) en ce qui concerne, entre autres, la répression de la démocratie à Hong Kong, le traitement discriminatoire des minorités religieuses et culturelles, en particulier des Ouïgours dans le Xinjiang, les menaces à l’égard de Taïwan ou les politiques et actions agressives en mer de Chine méridionale; souligne en outre combien il est significatif que la Chine, en tant que régime autoritaire, soit entrée en concurrence systémique avec le partenariat transatlantique, porte atteinte à l’ordre international fondé sur des règles, établi tout au long de nombreuses décennies, et tente à présent de le remodeler conformément aux valeurs, à la doctrine et aux intérêts du PCC; rappelle la présence accrue de la Chine sur la scène internationale ainsi qu’en Europe par le truchement de son initiative «une ceinture, une route», ses investissements dans des
   
 
   
-      <ins>   </ins>
+      <del> </del>
   
 
   
-      infrastructures critiques en Europe, ses activités dans le cyberespace, dans les régions arctiques et en Afrique, ainsi que 
+      <ins>    </ins>
   
 
   
-      <del>   </del>
+      infrastructures critiques en Europe, ses activités dans le cyberespace, dans les régions arctiques et en Afrique, ainsi que
   
 
   
-      ses vols avérés de propriété intellectuelle et son stockage de missiles balistiques; demande d’observer de près les activités de la Chine dans le domaine des technologies de l’information et de la communication (TIC), notamment en ce qui concerne son initiative de route de la soie numérique, afin de prévenir les dépendances à l’égard des infrastructures contrôlées par des entreprises chinoises, qui engendrerait un risque d’influence unilatérale de la Chine sur l’élaboration de normes internationales en matière de TIC; invite l’Union et l’OTAN à renforcer la coordination en vue de sécuriser les infrastructures numériques critiques et les réseaux de télécommunications contre les manipulations par des pays étrangers, en procédant à l’élimination progressive des équipements produits par des entités de pays non démocratiques tels que la Chine;
-  
- 
-</section>
-
-    
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(584/683 * 100%)">584</div>
-  
-  
-    <div class="-" style="width: calc(77/683 * 100%)">77</div>
-  
-  
-    <div class="0" style="width: calc(22/683 * 100%)">22</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134485">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°15 | 
-
-✅️ Adopté
-
-</header>
-    
-        
-
-<section>
-
-  
-      33. est conscient que les attaques hybrides et les cyberattaques menées par des acteurs hostiles, étatiques et non étatiques, remettent en question la définition traditionnelle des conflits interétatiques, de l’espionnage et du sabotage; demande à l’Union de perfectionner sa propre boîte à outils destinée à protéger les infrastructures critiques contre les attaques hybrides; salue les travaux entrepris dans le cadre du forum de consultation pour l’énergie durable dans le secteur de la défense et de la sécurité de l’Agence européenne de défense (AED) afin d’améliorer la protection des infrastructures critiques au sein de l’Union; souligne que l’Union européenne et l’OTAN devraient poursuivre le renforcement de leurs propres capacités pour prévenir et décourager les attaques hybrides et les cyberattaques, y compris contre leurs propres institutions, et y réagir; 
-  
-
-  
-      <ins>se félicite que le communiqué du sommet de l’OTAN de 2021 clarifie le fait que le Conseil de l’Atlantique Nord peut invoquer l’article 5 en cas de guerre hybride, comme il peut le faire en cas d’attaque armée; </ins>
-  
-
-  
-      appelle à une coopération et une formation accrues dans le domaine de la cyberprotection; propose la création d’un centre commun d’information sur les cybermenaces et la création d’un groupe de travail commun 
-  
-
-  
-      <ins>   </ins>
-  
-
-  
-      UE-OTAN sur la cybersécurité, afin de définir les réponses collectives aux cybermenaces et de s’accorder sur celles-
+      <del>    </del>
   
 
   
@@ -1063,191 +1101,381 @@
   
 
   
-      ci; demande une étroite coordination entre l’Agence de l’Union européenne pour la cybersécurité 
-  
-
-  
-      <del>   </del>
-  
-
-  
-      (ENISA) et le Centre coopératif d’excellence pour la cyberdéfense de l’OTAN à cet égard; demande une coordination accrue entre l’Union et l’OTAN en ce qui concerne l’identification collective des auteurs de cyberincidents malveillants;
+      ses vols avérés de propriété intellectuelle et son stockage de missiles balistiques; demande d’observer de près les activités de la Chine dans le domaine des technologies de l’information et de la communication (TIC), notamment en ce qui concerne son initiative de route de la soie numérique, afin de prévenir les dépendances à l’égard des infrastructures contrôlées par des entreprises chinoises, qui engendrerait un risque d’influence unilatérale de la Chine sur l’élaboration de normes internationales en matière de TIC; invite l’Union et l’OTAN à renforcer la coordination en vue de sécuriser les infrastructures numériques critiques et les réseaux de télécommunications contre les manipulations par des pays étrangers, en procédant à l’élimination progressive des équipements produits par des entités de pays non démocratiques tels que la Chine;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">584</div>
+  <div class="against">77</div>
+  <div class="abstention">22</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/134485">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(567/683 * 100%)">567</div>
-  
-  
-    <div class="-" style="width: calc(80/683 * 100%)">80</div>
-  
-  
-    <div class="0" style="width: calc(36/683 * 100%)">36</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134486">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°16 | 
+        
+            <article id="15">
+            <header>📝 Amendement n°15 | 
 
 ✅️ Adopté
 
 </header>
+            
+                <div class="hidden"></div>
+                
+
+<p>
+
+  
+      33. est conscient que les attaques hybrides et les cyberattaques menées par des acteurs hostiles, étatiques et non étatiques, remettent en question la définition traditionnelle des conflits interétatiques, de l’espionnage et du sabotage; demande à l’Union de perfectionner sa propre boîte à outils destinée à protéger les infrastructures critiques contre les attaques hybrides; salue les travaux entrepris dans le cadre du forum de consultation pour l’énergie durable dans le secteur de la défense et de la sécurité de l’Agence européenne de défense (AED) afin d’améliorer la protection des infrastructures critiques au sein de l’Union; souligne que l’Union européenne et l’OTAN devraient poursuivre le renforcement de leurs propres capacités pour prévenir et décourager les attaques hybrides et les cyberattaques, y compris contre leurs propres institutions, et y réagir;
+  
+
+  
+      <ins> se félicite que le communiqué du sommet de l’OTAN de 2021 clarifie le fait que le Conseil de l’Atlantique Nord peut invoquer l’article 5 en cas de guerre hybride, comme il peut le faire en cas d’attaque armée;</ins>
+  
+
+  
+       appelle à une coopération et une formation accrues dans le domaine de la cyberprotection; propose la création d’un centre commun d’information sur les cybermenaces et la création d’un groupe de travail commun
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
+  
+
+  
+      UE-OTAN sur la cybersécurité, afin de définir les réponses collectives aux cybermenaces et de s’accorder sur celles
+  
+
+  
+      <del>-</del>
+  
+
+  
+      <ins>- </ins>
+  
+
+  
+      ci; demande une étroite coordination entre l’Agence de l’Union européenne pour la cybersécurité
+  
+
+  
+      <del>    (</del>
+  
+
+  
+      <ins> (</ins>
+  
+
+  
+      ENISA) et le Centre coopératif d’excellence pour la cyberdéfense de l’OTAN à cet égard; demande une coordination accrue entre l’Union et l’OTAN en ce qui concerne l’identification collective des auteurs de cyberincidents malveillants;
+  
+ 
+</p>
+
+                <i>Déposé par 
+
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">567</div>
+  <div class="against">80</div>
+  <div class="abstention">36</div>
+</span>
+
+  
+    
+    <a href="/voting/134486">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
+        
     
         
+        
+            <article id="16">
+            <header>📝 Amendement n°16 | 
 
-<section>
+✅️ Adopté
+
+</header>
+            
+                <div class="hidden"></div>
+                
+
+<p>
 
   
       48. 
   
 
   
-      <del>demande </del>
+      <del>demande</del>
   
 
   
-      <ins>se félicite de l’engagement pris par l’Union et les États-Unis, lors du récent sommet qui les a réunis, d’œuvrer à </ins>
+      <ins>se félicite de l’engagement pris par l’Union et les États-Unis, lors du récent sommet qui les a réunis, d’œuvrer à</ins>
   
 
   
-      la conclusion d’un arrangement administratif entre l’AED et les États-
+       la conclusion d’un arrangement administratif entre l’AED et les États-Unis
   
 
   
-      <del>Unis, ainsi que </del>
+      <del>, ainsi que</del>
   
 
   
-      <ins>Unis; plaide pour la conclusion d&#39;un accord similaire avec </ins>
+      <ins>; plaide pour la conclusion d&#39;un accord similaire avec</ins>
   
 
   
-      d’autres alliés de l’OTAN non membres de l’Union, en particulier ceux avec lesquels l’Union a engagé des négociations d’adhésion, le cas échéant, tout en respectant toutes les garanties nécessaires pour protéger les intérêts de l’Union et de ses États membres en matière de sécurité et de défense, en vue d’approfondir la coopération transatlantique en matière de défense en veillant à ce que la technologie militaire utilisée soit pleinement interopérable sur le plan technique;
+       d’autres alliés de l’OTAN non membres de l’Union, en particulier ceux avec lesquels l’Union a engagé des négociations d’adhésion, le cas échéant, tout en respectant toutes les garanties nécessaires pour protéger les intérêts de l’Union et de ses États membres en matière de sécurité et de défense, en vue d’approfondir la coopération transatlantique en matière de défense en veillant à ce que la technologie militaire utilisée soit pleinement interopérable sur le plan technique;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">564</div>
+  <div class="against">94</div>
+  <div class="abstention">26</div>
+</span>
+
+  
     
-    <footer>
+    <a href="/voting/134487">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(564/684 * 100%)">564</div>
-  
-  
-    <div class="-" style="width: calc(94/684 * 100%)">94</div>
-  
-  
-    <div class="0" style="width: calc(26/684 * 100%)">26</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/134487">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°17 | 
+        
+            <article id="17">
+            <header>📝 Amendement n°17 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       53. 
   
 
   
-      <del>se déclare fermement convaincu de </del>
+      <del>se déclare fermement convaincu de</del>
   
 
   
-      <ins>adhère pleinement à la déclaration formulée dans le récent communiqué de l’OTAN, selon laquelle l’Union demeure un partenaire unique et essentiel pour l’OTAN; réitère, à cet égard, sa ferme conviction quant à </ins>
+      <ins>adhère pleinement à la déclaration formulée dans le récent communiqué de l’OTAN, selon laquelle l’Union demeure un partenaire unique et essentiel pour l’OTAN; réitère, à cet égard, sa ferme conviction quant à</ins>
   
 
   
-      la nécessité de resserrer les liens entre l’OTAN et l’Union pour établir un authentique partenariat stratégique afin d’en exploiter le plein potentiel, en se fondant sur les progrès extraordinaires déjà réalisés et dans le but général de créer une véritable relation entre les deux organisations; demande la tenue régulière de sommets spéciaux avec la participation de tous les chefs d’État ou de gouvernement de l’OTAN et de l’Union européenne afin de maintenir la confiance et la compréhension au plus haut niveau, et exprime sa vision à long terme d’un Conseil de partenariat UE-OTAN; encourage en outre le débat sur la création d’un conseil permanent des ministres de la défense européens, qui devrait collaborer de manière étroite avec les ministres de la défense des pays membres de l’OTAN; souligne le principe d’inclusion à cet égard;
+       la nécessité de resserrer les liens entre l’OTAN et l’Union pour établir un authentique partenariat stratégique afin d’en exploiter le plein potentiel, en se fondant sur les progrès extraordinaires déjà réalisés et dans le but général de créer une véritable relation entre les deux organisations; demande la tenue régulière de sommets spéciaux avec la participation de tous les chefs d’État ou de gouvernement de l’OTAN et de l’Union européenne afin de maintenir la confiance et la compréhension au plus haut niveau, et exprime sa vision à long terme d’un Conseil de partenariat UE-OTAN; encourage en outre le débat sur la création d’un conseil permanent des ministres de la défense européens, qui devrait collaborer de manière étroite avec les ministres de la défense des pays membres de l’OTAN; souligne le principe d’inclusion à cet égard;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">568</div>
+  <div class="against">80</div>
+  <div class="abstention">33</div>
+</span>
+
+  
     
-    <footer>
-        
-            
+    <a href="/voting/134488">📣 Vote nominal : voir le détail</a>
+  
 
-<div class="votes small">
-  
-    <div class="+" style="width: calc(568/681 * 100%)">568</div>
-  
-  
-    <div class="-" style="width: calc(80/681 * 100%)">80</div>
-  
-  
-    <div class="0" style="width: calc(33/681 * 100%)">33</div>
-  
-</div>
-
+</footer>
             
-                
-                
-                    
-                
-                <a href="/voting/134488">📣 Vote nominal : voir le détail</a>
-            
+            </article>
         
-    </footer>
-    </article>
     
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Le rapport illustre parfaitement l’espoir des atlantistes de retrouver une légitimité de l’union UE-OTAN. Il démontre encore une fois la volonté de certaines personnalités politiques de justifier la prétendue nécessité de cette coopération mais ne démontre en réalité que la soumission de l’UE face aux États-Unis en matière de politique de sécurité et défense, ce qui n’est pas acceptable. Tous les arguments de propagande classique (comme les menaces hybrides, le terrorisme, la cyberdéfense) sont avancés dans le but d’œuvrer à une Europe de la défense qui serait alignée sur l’OTAN. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre cette résolution, qui s&#39;en tient à une ligne strictement atlantiste, notamment en ce qui concerne la Russie. Ce n&#39;est évidemment pas dans les intérêts objectifs de la France.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce rapport d’initiative porte sur la coopération entre l’Union européenne et l’OTAN dans le cadre des relations transatlantiques. Il met en avant l&#39;importance de la coopération en matière de défense, énumère les défis communs et les risques auxquels sont confrontées les deux organisations. Après plus de 70 ans de lien transatlantique, il est important de continuer à consolider les relations car ce partenariat est vital pour les deux organisations. J’ai voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Ce rapport illustre parfaitement l’espoir des atlantistes de retrouver une légitimité de l’union UE-OTAN. Il démontre encore une fois la volonté de certains de justifier la prétendue nécessité de cette coopération mais ne démontre en réalité que la soumission de l’UE face aux États-Unis en matière de politique de sécurité et défense, ce qui n’est pas acceptable, puisqu’elle doit rester la prérogative des États membres souverains. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il s’attache à démontrer la prétendue nécessité de la coopération de l’Union européenne avec l’OTAN. Je refuse cette soumission de la France aux États-Unis : notre politique de défense doit rester nationale.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            Ce rapport étudie les relations entre l’Union européenne et l’OTAN. Comme prévu, ce rapport constitue, malheureusement, une hagiographie de l’alliance atlantique qui aurait, pour l’Europe, « constitué le fondement de sa stabilité et de sa sécurité depuis la fin de la Seconde Guerre mondiale ». Il souligne même, entre autres, que toute autonomie stratégique européenne doit servir à renforcer l’alliance atlantique.Ce texte est en opposition avec la mise en place d’une défense européenne indépendante et souveraine. J&#39;ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            Le rapport illustre parfaitement l’espoir des atlantistes de retrouver une légitimité de l’union UE-OTAN. Il démontre encore une fois la volonté de certaines personnalités politiques de justifier la prétendue nécessité de cette coopération mais ne démontre en réalité que la soumission de l’UE aux intérêts des États-Unis en matière de politique de sécurité et défense, ce qui n’est pas acceptable, puisqu’elle doit rester la prérogative des États membres souverains.Tous les arguments de propagande classique (comme les menaces hybrides, le terrorisme, la cyberdéfense) sont avancés dans le but d’œuvrer à une Europe de la défense et qui tend à renforcer l’OTAN. J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            Je me suis abstenue sur cette résolution relative à la coopération UE-OTAN dans le cadre des relations transatlantiques. Si le texte contenait des dispositions intéressantes, par exemple l’affirmation que l’Union européenne et l’OTAN ont des intérêts convergents en matière de sécurité et de défense, il évoquait la Russie en des termes particulièrement peu diplomatiques, voire offensants : « malveillante, agressive, révisionniste », etc. Soucieuse de restaurer un dialogue respectueux et apaisé entre nos deux puissances, dans un contexte où 7 ans de sanctions réciproques inutiles n’ont résolu aucun différend, je ne pouvais cautionner ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">30482</div>
+            
+            <header><b>Younous OMARJEE</b> | La France Insoumise</header>
+            . – J’ai voté contre ce rapport sur la coopération entre l’UE et l’OTAN. Il souligne que toute autonomie stratégique européenne doit servir à renforcer l’alliance atlantique. Ce n’est pas ma conception du principe de défense européenne.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations et les recommandations du Parlement européen sur la coopération entre l’Union européenne et l’OTAN. Il considère notamment que l’OTAN doit être l’alpha et l&#39;oméga de la stratégie militaire européenne et demande une intégration encore plus poussée des États membres dans l’OTAN. J’ai donc voté contre ce texte qui s’inscrit dans une vision atlantiste béate et ne fait preuve d’aucun recul critique sur le partenariat militaire entre l’Union européenne et les États-Unis.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce rapport est un exercice de caricature de propagande atlantiste remarquable. En effet, ce rapport appelle à la constitution d’un partenariat étroit et renforcé entre l’Union et les États-Unis, et souligne la nécessité d’accroître le rôle et la puissance de l’Alliance atlantique. L’OTAN est d’ailleurs dépeinte comme étant le fondement de la stabilité et de la sécurité du continent européen depuis la fin de la Seconde Guerre mondiale. Le rapport appelle à la constitution d’un front transatlantique commun contre la Russie et la Chine et à agir en commun partout dans le monde.Je refuse la vassalisation de l’Europe aux États-Unis qui nous conduit à participer à leur marche à la guerre avec leurs rivaux internationaux. Je rejette donc ce rapport sans aucune hésitation.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Cette résolution maintient l’Union européenne prisonnière de l’euro-atlantisme. Elle pousse à un défi vis-à-vis de la Russie et de la Chine contraire aux intérêts de la France.Contre.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté en faveur de ce rapport qui rappelle l’ambition de l’UE d’être un acteur de premier plan pour la paix et la sécurité mondiale et réaffirme le soutien du Parlement à la relation transatlantique. Cette relation cruciale depuis les deux guerres mondiales se voit aujourd’hui confrontée à de nouveaux défis de taille : la lutte contre le terrorisme, la réponse aux pandémies, la conquête spatiale et, bien entendu, le changement climatique. Face à ces défis, aucun État ne peut agir seul, le rapport prône donc un renforcement de notre relation avec nos alliés transatlantiques. Il appelle également les États à adopter une position coordonnée face aux récentes politiques agressives en Chine et en Russie. Enfin, il souligne que la poursuite de l’autonomie stratégique de l’UE ne signifie pas un affaiblissement de l’OTAN mais au contraire un renforcement de la sécurité transatlantique et la complémentarité avec les capacités de l’OTAN.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport car il ne correspond pas aux intérêts de la France.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport qui illustre les ambitions des atlantistes européens de légitimer l’union UE-OTAN. Un certain nombre de personnalités politiques veulent, encore plus, assujettir l’UE aux États-Unis en matière de politique de sécurité et de défense.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            Le rapport marque un virage à 360 degrés de l’attitude de l’UE à l’égard des relations avec la Russie depuis le Sommet de Lisbonne de 2010 sur les questions de la coopération dans les domaines d’intérêts communs : la Russie bascule désormais de partenaire à un adversaire dont il faut contrer la croissance. Le texte plaide pour le renforcement de la coopération OTAN-UE dans de nombreux domaines afin de faire « face à de divers défis auxquels l’UE est confrontée » : les cyberattaques, la désinformation, le changement climatique (qui serait « une menace pour la sécurité des Alliés »).Le rapport illustre parfaitement l’espoir des atlantistes de retrouver une légitimité de l’union UE-OTAN. Il démontre encore une fois la volonté de certaines personnalités politiques de justifier la prétendue nécessité de cette coopération mais ne démontre en réalité que la soumission de l’UE face aux États-Unis en matière de politique de sécurité et défense, ce qui n’est pas acceptable, puisqu’elle doit rester la prérogative des États membres souverains. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Le rapport marque un virage à 360 degrés de l’attitude de l’UE à l’égard des relations avec la Russie depuis le Sommet de Lisbonne de 2010 sur les questions de la coopération dans les domaines d’intérêts communs : la Russie bascule désormais de partenaire à un adversaire dont il faut contrer la croissance.Le rapport illustre parfaitement l’espoir des atlantistes de retrouver une légitimité de l’union UE-OTAN. Il démontre encore une fois la volonté de certaines personnalités politiques de justifier la coopération mais ne démontre en réalité que la soumission de l’UE face aux États-Unis en matière de politique de sécurité et défense, ce qui n’est pas acceptable, puisqu’elle doit rester la prérogative des États membres souverains.Tous les arguments de propagande classique (comme les menaces hybrides, le terrorisme, la cyberdéfense) sont avancés dans le but d’œuvrer à une Europe de la défense et qui tend à renforcer l’OTAN.À la lecture de ce rapport, j’ai voté contre.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2257(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0192_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-07-06-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

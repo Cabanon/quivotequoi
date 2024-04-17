@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Activités du Médiateur européen - rapport annuel 2018</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Activités du Médiateur européen - rapport annuel 2018</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(563/629 * 100%)">563</div>
-  
-  
-    <div class="-" style="width: calc(3/629 * 100%)">3</div>
+    <div class="for" style="width: calc(563/629 * 100%)">563</div>
   
   
-    <div class="0" style="width: calc(63/629 * 100%)">63</div>
+    <div class="against" style="width: calc(3/629 * 100%)">3</div>
+  
+  
+    <div class="abstention" style="width: calc(63/629 * 100%)">63</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,19 +88,20 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(51/67 * 100%)">51</div>
+    <div class="for" style="width: calc(51/67 * 100%)">51</div>
   
   
   
-    <div class="0" style="width: calc(16/67 * 100%)">16</div>
+    <div class="abstention" style="width: calc(16/67 * 100%)">16</div>
   
 </div>
  
 </section>
-            <a href="/voting/111166">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/111166">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -104,7 +109,7 @@
     
         
         
-            <li>Médiateur européen</li>
+            <li>Droits du citoyen</li>
         
     
         
@@ -114,275 +119,359 @@
     
         
         
-            <li>Droits du citoyen</li>
+            <li>Médiateur européen</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2134(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2019-0032_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-01-16-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       19. réaffirme que l’
   
 
   
-      <del>indépendance </del>
+      <del>indépendance</del>
   
 
   
-      <ins>intégrité </ins>
+      <ins>intégrité</ins>
   
 
   
-      de la Banque centrale européenne (BCE) 
+       de la Banque centrale européenne (BCE) 
   
 
   
-      <del>permet aux membres de son directoire de décider, de manière responsable et sous réserve de l’obligation de rendre dûment compte de leur action, de participer à des instances, même fermées au public, s’ils estiment qu’une telle mesure est nécessaire pour garantir la bonne marche de la politique monétaire de la BCE; prend acte </del>
+      <del>permet aux membres de son directoire de décider, de manière responsable et sous réserve de l’obligation de rendre dûment compte de leur action, de participer à des instances, même fermées au public, s’ils estiment qu’une telle mesure est nécessaire pour garantir la bonne marche de la politique monétaire de la BCE; prend acte</del>
   
 
   
-      <ins>et son indépendance vis-à-vis des intérêts financiers privés doivent être garanties; souligne que les membres de son directoire doivent s’abstenir d’être simultanément membres d’instances ou d’autres organisations dans lesquelles siègent des membres des conseils d’administration de banques soumises à la surveillance de la BCE et ne doivent pas participer à des instances fermées au public; se félicite </ins>
+      <ins>et son indépendance vis-à-vis des intérêts financiers privés doivent être garanties; souligne que les membres de son directoire doivent s’abstenir d’être simultanément membres d’instances ou d’autres organisations dans lesquelles siègent des membres des conseils d’administration de banques soumises à la surveillance de la BCE et ne doivent pas participer à des instances fermées au public; se félicite</ins>
   
 
   
-      de l’avis de la Médiatrice du 5 juillet 2018;
+       de l’avis de la Médiatrice du 5 juillet 2018;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">333</div>
+  <div class="against">312</div>
+  <div class="abstention">22</div>
+</span>
+
+  
+    
+    <a href="/voting/111752">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(333/667 * 100%)">333</div>
-  
-  
-    <div class="-" style="width: calc(312/667 * 100%)">312</div>
-  
-  
-    <div class="0" style="width: calc(22/667 * 100%)">22</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/111752">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>19 bis. déplore que l’adoption et l’application de règles minimales en matière de responsabilité par la BCE, comme cela avait été recommandé, ne se soient pas encore concrétisées; estime que le fait de ne pas assurer la transparence des activités de la BCE pourrait conduire à mettre en cause son indépendance vis-à- vis des intérêts financiers privés;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">373</div>
+  <div class="against">284</div>
+  <div class="abstention">14</div>
+</span>
+
+  
+    
+    <a href="/voting/111754">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(373/671 * 100%)">373</div>
-  
-  
-    <div class="-" style="width: calc(284/671 * 100%)">284</div>
-  
-  
-    <div class="0" style="width: calc(14/671 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/111754">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | Partie 1 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | Partie 1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(455/668 * 100%)">455</div>
-  
-  
-    <div class="-" style="width: calc(192/668 * 100%)">192</div>
-  
-  
-    <div class="0" style="width: calc(21/668 * 100%)">21</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/111756">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | Partie 2 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | Partie 2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        <p>🔜 Vote par division : aperçu bientôt disponible</p>
-    
-    <footer>
+            
+                <p>🔜 Vote par division : aperçu bientôt disponible</p>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(327/668 * 100%)">327</div>
-  
-  
-    <div class="-" style="width: calc(300/668 * 100%)">300</div>
-  
-  
-    <div class="0" style="width: calc(41/668 * 100%)">41</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/111757">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       M. considérant que le Médiateur a un rôle crucial à jouer pour ce qui est de garantir la responsabilité des institutions de l’Union et 
   
 
   
-      <del>d’optimiser la </del>
+      <del>d’optimiser la</del>
   
 
   
-      <ins>un niveau élevé de </ins>
+      <ins>un niveau élevé de</ins>
   
 
   
-      transparence et 
+       transparence et 
   
 
   
-      <del>l’</del>
+      <del>l</del>
   
 
   
-      <ins>d’</ins>
+      <ins>d</ins>
   
 
   
-      impartialité de l’administration et des processus décisionnels de l’Union afin de protéger efficacement les droits des citoyens, l’objectif étant de renforcer leur confiance, leur engagement et leur participation à la vie démocratique de l’Union;
+      ’impartialité de l’administration et des processus décisionnels de l’Union afin de protéger efficacement les droits des citoyens, l’objectif étant de renforcer leur confiance, leur engagement et leur participation à la vie démocratique de l’Union;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
-    <article>
-    <header>📝 Amendement n°5 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       P. considérant que l’enquête a révélé que le Conseil manque de transparence en ce qui concerne l’accès public à ses documents législatifs et ses pratiques actuelles dans son processus décisionnel, notamment pendant la phase préparatoire au niveau du Comité des représentants permanents (Coreper) et des groupes de travail; qu’à la suite de la réticence du Conseil à mettre en œuvre ses recommandations, la Médiatrice a présenté au Parlement, le 16 mai 2018, le rapport transparence du processus législatif du Conseil; que le Parlement a 
@@ -393,15 +482,15 @@
   
 
   
-      adopté, le 17 janvier 
+      adopté, le 17 janvier 2019
   
 
   
-      <del>2019, </del>
+      <del>, </del>
   
 
   
-      <ins>2019 </ins>
+      <ins> </ins>
   
 
   
@@ -413,108 +502,125 @@
   
 
   
-      pleinement les recommandations de la Médiatrice; que la présidence finlandaise s’est engagée à renforcer l’ouverture et la transparence législative du Conseil;   
+      pleinement les recommandations de la Médiatrice; que la présidence finlandaise s’est engagée à renforcer l’ouverture et la transparence législative du Conseil
   
 
   
-      <del>___________</del>
+      <del>;   ___________</del>
   
 
   
-      <ins>   ___________ 4 Textes adoptés de cette date,</ins>
+      <ins>;      ___________ 4 Textes adoptés de cette date,</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">389</div>
+  <div class="against">245</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    🤖 Vote électronique
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(389/642 * 100%)">389</div>
-  
-  
-    <div class="-" style="width: calc(245/642 * 100%)">245</div>
-  
-  
-    <div class="0" style="width: calc(8/642 * 100%)">8</div>
-  
-</div>
-
-            
-                🤖 Vote électronique
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       S. considérant qu’en 2018, la Médiatrice a lancé une 
   
 
   
-      <del>stratégie </del>
+      <del>stratégie</del>
   
 
   
-      <ins>initiative stratégique </ins>
+      <ins>initiative stratégique</ins>
   
 
   
-      de lutte contre le harcèlement 
+       de lutte contre le harcèlement 
   
 
   
-      <del>en vérifiant </del>
+      <del>en vérifiant</del>
   
 
   
-      <ins>qui vérifie </ins>
+      <ins>qui vérifie</ins>
   
 
   
-      les politiques de lutte contre le harcèlement mises en place par l’administration européenne; que la Médiatrice a décidé d’écrire en 2018 à 26 institutions et organismes européens pour leur demander des précisions sur ces politiques et sur la manière dont elles sont mises en œuvre;
+       les politiques de lutte contre le harcèlement mises en place par l’administration européenne; que la Médiatrice a décidé d’écrire en 2018 à 26 institutions et organismes européens pour leur demander des précisions sur ces politiques et sur la manière dont elles sont mises en œuvre;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
-    <article>
-    <header>📝 Amendement n°7 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       23. 
@@ -533,63 +639,75 @@
   
 
   
-      <del>constitue </del>
+      <del>constitue</del>
   
 
   
-      <ins>constituerait </ins>
+      <ins>constituerait</ins>
   
 
   
-      une avancée vers le renforcement des règles existantes en matière de représentation d’intérêts et vers la suppression des lacunes; estime toutefois que les institutions ne doivent pas s’arrêter là et qu’elles doivent continuer à prendre des mesures législatives contraignantes pour toutes les institutions et organismes de l’Union européenne;
+       une avancée vers le renforcement des règles existantes en matière de représentation d’intérêts et vers la suppression des lacunes; estime toutefois que les institutions ne doivent pas s’arrêter là et qu’elles doivent continuer à prendre des mesures législatives contraignantes pour toutes les institutions et organismes de l’Union européenne;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
-    <article>
-    <header>📝 Amendement n°8 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
-
-  
-      <del>27.</del>
-  
+<p>
 
   
-      <ins>7.</ins>
+      <del>27</del>
   
 
   
-       se félicite de l’enquête menée par la Médiatrice en 2018 sur la procédure de nomination 
+      <ins>7</ins>
   
 
   
-      <del>du </del>
+      . se félicite de l’enquête menée par la Médiatrice en 2018 sur la procédure de nomination 
   
 
   
-      <ins>de l’ancien </ins>
+      <del>du</del>
   
 
   
-      secrétaire général de la Commission et prend acte de ses conclusions concernant quatre cas de mauvaise administration; regrette que, malgré le soutien apporté par le Parlement aux recommandations de la Médiatrice, la Commission 
+      <ins>de l’ancien</ins>
+  
+
+  
+       secrétaire général de la Commission et prend acte de ses conclusions concernant quatre cas de mauvaise administration; regrette que, malgré le soutien apporté par le Parlement aux recommandations de la Médiatrice, la Commission 
   
 
   
@@ -600,29 +718,41 @@
       ne les ait pas mises en œuvre; se déclare particulièrement préoccupé par le fait que la Commission n’a pas mis en place de procédure de nomination spécifique et demande que la nouvelle Commission en crée une, garantissant ainsi les normes les plus élevées en matière de transparence, d’éthique et d’état de droit;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
-    <article>
-    <header>📝 Amendement n°9 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       46. rappelle que le nouveau projet de statut du Médiateur européen, qui a récemment été adopté par le Parlement, contient une disposition prévoyant un délai de trois ans avant qu’un membre du Parlement européen ne soit éligible au poste de Médiateur;
@@ -632,84 +762,230 @@
       <ins> rappelle que, dans son avis sur le nouveau projet de statut, la Commission s’interroge sur la proportionnalité de l’exclusion de tous les titulaires de fonctions publiques, y compris les anciens juges de la Cour de justice de l’Union européenne, les membres de la Cour des comptes européenne et les députés au Parlement européen, de la fonction de Médiateur européen;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
     
-    <article>
-    <header>📝 Amendement n°11 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>R bis. considérant qu’une plus grande transparence du processus de prise de décision en trilogue améliorera la confiance des citoyens dans les institutions de l’Union européenne;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
+    
+    ECR
     
     
-    <article>
-    <header>📝 Amendement n°12 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">ECR</div>
+                
 
-<section>
+<p>
 
   
       <ins>4 bis. invite instamment la Médiatrice à veiller à ce que le processus de prise de décision en trilogue devienne plus transparent;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2134(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2019-0032_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+    ECR
+    
+    
   
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-01-16-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            Ce rapport très inégal est louable par sa volonté d’assurer plus de transparence mais s’égare dans des considérations idéologiques malvenues en faveur du fédéralisme ou des migrants, heureusement sans conséquence. Je me suis donc abstenu.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            Je me suis abstenue sur ce texte.Les avancées en matière de transparence sont louables. Mais ce texte n&#39;est pas compatible avec la défense des identités nationales.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Le Médiateur européen est habilité à recevoir les plaintes émanant de tout citoyen de l’Union ou de toute personne physique ou morale résidant ou ayant son siège dans un État membre qui soient relatives à des cas de mauvaise administration dans l’action des institutions, organes ou organismes de l’Union. J’ai soutenu ce texte défendant l’idée qu’il est important pour l’opinion publique de savoir comment ses gouvernements contribuent à l’élaboration de la législation européenne. Ce rapport soutient notamment la proposition visant à améliorer la transparence législative au sein du Conseil afin de permettre au public de suivre plus facilement le processus législatif de l’Union.
+        </article>
+    
+        <article>
+            <div class="hidden">96952</div>
+            
+            <header><b>Sylvie GUILLAUME</b> | Parti socialiste</header>
+            La médiatrice européenne a fourni un travail important, en particulier en 2018. Son action méconnue mais pourtant essentielle est saluée par ce rapport en faveur duquel j&#39;ai voté.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            Je me suis abstenu sur ce rapport. Certes, il contient des avancées en matière de transparence ou de lutte contre le «pantouflage». Mais il comprend également des positionnements idéologiques contraires à la défense des identités et des souverainetés (transformation du Conseil en instance «parlementaire», protection des migrants, déclaration européiste...).
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport annuel 2018 sur les activités du Médiateur européen. Le texte souligne qu’en 2018, la Médiatrice a ouvert 490 enquêtes et en a clôturé 545. Il note que le taux de suivi des recommandations de la Médiatrice par la Commission européenne, établi à 76 %, s’inscrit dans une tendance à la baisse continue. Enfin, il salue la refonte du site internet du Médiateur européen qui en fait un outil plus fonctionnel et plus lisible pour les citoyens de l’Union.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport donne la position du parlement européen sur l’activité de la Médiatrice européenne et soutient plusieurs de ses recommandations notamment sur la transparence des décisions du Conseil, la lutte contre la discrimination des femmes ou la révision du code de conduite des membres de la Commission. J’ai donc voté pour ce rapport qui souligne la nécessité de renforcer fortement les règles éthiques dans les institutions européennes.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce texte prend position sur le rapport annuel de la Médiatrice européenne, l’équivalent pour l’Union européenne du Défenseur des droits en France, Mme O’Reilly. Le bilan de Mme O’Reilly à ce poste est extrêmement louable : elle a dénoncé le manque de transparence des négociations commerciales entre les États-Unis et l’Union européenne (le fameux TAFTA) ; elle a exigé la tenue d’un registre de transparence obligatoire pour les lobbies et a appuyé la nécessité d’une révision du code de conduite des Commissaires. Les combats de la Médiatrice européenne sont justes et nécessaires. Ce rapport du Parlement en entérine plusieurs, je vote donc pour.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai voté en faveur du rapport annuel sur les activités du médiateur européen pour l’année 2018. Alors que 45 % des Européens ont déclaré en 2018 ne pas connaître leurs droits en tant que citoyens de l’Union européenne, le rapport rappelle le rôle primordial du Médiateur européen dans la protection des droits des citoyens européens. Pour s’assurer que tout citoyen ait le droit de participer à la vie démocratique de l’Union, j’ai été particulièrement attentive à ce que le rapport mentionne l’importance d’une meilleure visibilité du travail du Médiateur européen auprès des citoyens. Je salue, à ce titre, la mise en place d’un nouveau site web plus fonctionnel pour les citoyens, accessible dans les 24 langues de l’Union. Afin d’accroître davantage l’impact du travail du Médiateur européen, la coopération entre les médiateurs nationaux et le médiateur européen devra être renforcée.
+        </article>
+    
+        <article>
+            <div class="hidden">197686</div>
+            
+            <header><b>Julie LECHANTEUX</b> | Rassemblement national</header>
+            Abstention: le rapport contient des avancées en matière de transparence mais il comprend également des positionnements idéologiques contraires à la défense des identités et des souverainetés.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            Je me suis abstenue sur ce vote.Le rapport contient des avancées en matière de transparence ou de lutte contre le « pantouflage », mais il comprend également des positionnements idéologiques contraires à la défense des identités et des souverainetés (transformation du Conseil en instance « parlementaire », protection des migrants, déclaration européiste…).
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            
+                <p>Page 9, la Médiatrice dénonce, en effet, la manière dont la Commission européenne a nommé son secrétaire général, l’Allemand Martin Selmayr en février 2018. Elle dénonce, à cette occasion, «quatre occurrences de mauvaise administration, dont la création d’un état d’urgence fictif pour pourvoir le poste». J’en déduis que j’avais raison de dénoncer l’illégalité de sa nomination, aussi bien dans cet hémicycle que dans la commission des affaires juridiques. Hélas, il a fallu 16 mois pour m’entendre et se débarrasser de Selmayr. Suite à ce scandale, la Médiatrice a demandé qu’une procédure détaillée soit mise en place pour la nomination du secrétaire général. Hélas, elle souligne dans son rapport que «la Commission s’est refusée à mettre en place une telle procédure». Le manque de transparence subsiste donc.</p>
+            
+                <p>Page 13, la Médiatrice épingle également la Banque centrale européenne et plus précisément son président Mario Draghi, auquel elle reproche d’avoir adhéré à une organisation privée, «le Groupe des 30», qui réunit notamment les directeurs des grandes banques privées. Malgré ces remontrances, Draghi est resté membre du Groupe des 30. La Médiatrice en déduit de façon très inquiétante que cela est de nature à faire douter de l’indépendance de la Banque centrale européenne par rapport aux lobbies financiers.</p>
+            
+                <p>La Médiatrice confirme ainsi la réalité de ce que je ne cesse de dénoncer: l’Union européenne manque de transparence et d’éthique.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197502</div>
+            
+            <header><b>Marie-Pierre VEDRENNE</b> | Mouvement Démocrate</header>
+            
+                <p> – Monsieur le Président, Monsieur le Commissaire, Madame la Médiatrice, merci au rapporteur pour son travail.</p>
+            
+                <p>La confiance des citoyens en l’Union européenne passe notamment par davantage de transparence. Des avancées ont eu lieu dans nos institutions, par exemple dans le domaine commercial. La Commission européenne doit continuer à publier les documents de négociation et le Conseil rendre publics les mandats. Des améliorations sont possibles, nous l’avons tous souligné, et elles sont nécessaires. Le Conseil, spécifiquement, doit garantir plus de transparence dans son fonctionnement. Nous devons également mettre toute notre énergie pour qu’un accord soit adopté au plus vite pour la mise en place du registre de transparence commun obligatoire et juridiquement contraignant pour les représentations d’intérêt.</p>
+            
+                <p>Rapprocher les citoyens des institutions européennes, c’est lutter efficacement contre l’euroscepticisme. En ce sens, nous devons tous poursuivre notre travail et renforcer la stratégie lancée par la Médiatrice pour accroître sa visibilité. Vous pourrez compter sur mon soutien.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

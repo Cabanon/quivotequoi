@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Contrôle multilatéral des armes et des armes de destruction massive, et régimes de désarmement: défis et perspectives</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Contrôle multilatéral des armes et des armes de destruction massive, et régimes de désarmement: défis et perspectives</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(536/695 * 100%)">536</div>
-  
-  
-    <div class="-" style="width: calc(128/695 * 100%)">128</div>
+    <div class="for" style="width: calc(536/695 * 100%)">536</div>
   
   
-    <div class="0" style="width: calc(31/695 * 100%)">31</div>
+    <div class="against" style="width: calc(128/695 * 100%)">128</div>
+  
+  
+    <div class="abstention" style="width: calc(31/695 * 100%)">31</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,30 +88,26 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(37/79 * 100%)">37</div>
+    <div class="for" style="width: calc(37/79 * 100%)">37</div>
   
   
-    <div class="-" style="width: calc(36/79 * 100%)">36</div>
+    <div class="against" style="width: calc(36/79 * 100%)">36</div>
   
   
-    <div class="0" style="width: calc(6/79 * 100%)">6</div>
+    <div class="abstention" style="width: calc(6/79 * 100%)">6</div>
   
 </div>
  
 </section>
-            <a href="/voting/137989">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/137989">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Contrôle des armements, non-prolifération nucléaire</li>
-        
     
         
         
@@ -119,137 +119,293 @@
             <li>Politique étrangère et de sécurité commune (PESC)</li>
         
     
+        
+        
+            <li>Contrôle des armements, non-prolifération nucléaire</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2001(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0324_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-12-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197500,197512,197506,204420,197574,197503,197531,96868,97236,197511</div>
+                
 
-<section>
-
-  
-      Q. considérant que la France et le Royaume-Uni, étant les seuls pays européens dotés de l’arme nucléaire, partagent l’opinion selon laquelle une dissuasion nucléaire minimale et crédible est essentielle à la sécurité collective de l’Europe et de l’OTAN; que depuis le retrait du Royaume-Uni de l’Union européenne, la France est le seul État membre doté d’armes nucléaires et poursuit la modernisation de son arsenal nucléaire; qu’en 2020, le président français Emmanuel Macron a proposé de lancer un «dialogue stratégique» avec les partenaires européens intéressés sur le rôle que la dissuasion nucléaire française peut 
-  
+<p>
 
   
-      <del>jouer dans «notre sécurité collective»;</del>
+      Q. considérant que la France et le Royaume-Uni, étant les seuls pays européens dotés de l’arme nucléaire, partagent l’opinion selon laquelle une dissuasion nucléaire minimale et crédible est essentielle à la sécurité collective de l’Europe et de l’OTAN; que depuis le retrait du Royaume-Uni de l’Union européenne, la France est le seul État membre doté d’armes nucléaires et poursuit la modernisation de son arsenal nucléaire; qu’en 2020, le président français Emmanuel Macron a proposé de lancer un «dialogue stratégique» avec les partenaires européens intéressés sur le rôle que la dissuasion nucléaire française peut jouer
   
 
   
-      <ins>jouer;</ins>
+      <del> dans «notre sécurité collective»; </del>
   
 
   
-       que le Royaume-Uni a annoncé qu’il allait relever de plus de 40 % le plafond de son stock 
+      <ins>; </ins>
   
 
   
-      <del>   </del>
+      que le Royaume-Uni a annoncé qu’il allait relever de plus de 40 % le plafond de son stock
   
 
   
-      nucléaire global, pour atteindre 
+      <del>    </del>
   
 
   
-      <ins>   </ins>
+      <ins> </ins>
+  
+
+  
+      nucléaire global, pour atteindre
+  
+
+  
+      <del> </del>
+  
+
+  
+      <ins>    </ins>
   
 
   
       260 ogives disponibles sur le plan opérationnel et rendre son dispositif nucléaire plus opaque en ne déclarant plus les chiffres de son stock;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Karima DELLI (EELV), 
+    
+      Benoît BITEAU (EELV), 
+    
+      Damien CARÊME (EELV), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV), 
+    
+      Marie TOUSSAINT (EELV), 
+    
+      Salima YENBOU (EELV) et 
+    
+      Claude GRUFFAT (EELV)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">168</div>
+  <div class="against">490</div>
+  <div class="abstention">38</div>
+</span>
+
+  
+    
+    <a href="/voting/137658">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(168/696 * 100%)">168</div>
-  
-  
-    <div class="-" style="width: calc(490/696 * 100%)">490</div>
-  
-  
-    <div class="0" style="width: calc(38/696 * 100%)">38</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/137658">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197500,197512,197506,204420,197574,197503,197531,96868,97236,197511,197512,197506,204420,197574,197503,197531,96868,97236,96743,197511</div>
+                
 
-<section>
-
-  
-      17. prend acte de l’entrée en vigueur du traité sur l’interdiction des armes nuclé
-  
+<p>
 
   
-      <del>aires et salue sa perspective de vivre dans un monde sans armes nucléaires; rappelle que </del>
+      17. prend acte de l’entrée en vigueur du traité sur l’interdiction des armes nucléaires
   
 
   
-      <ins>aires, dont 86 États sont signataires et auquel 56 États sont parties, et salue sa perspective de vivre dans un monde sans armes nucléaires; reconnaît la compatibilité juridique du traité sur l’interdiction des armes nucléaires avec le TNP; rappelle </ins>
+      <del> et salue sa perspective de vivre dans un monde sans armes nucléaires; rappelle que</del>
   
 
   
-      le rôle du TNP en tant que cadre indispensable pour poursuivre l’objectif du désarmement nucléaire et assurer la stabilité internationale et la sécurité 
+      <ins>, dont 86 États sont signataires et auquel 56 États sont parties, et salue sa perspective de vivre dans un monde sans armes nucléaires; reconnaît la compatibilité juridique du traité sur l’interdiction des armes nucléaires avec le TNP; rappelle</ins>
   
 
   
-      <del>collective ne doit pas être affaibli;</del>
+       le rôle du TNP en tant que cadre indispensable pour poursuivre l’objectif du désarmement nucléaire et assurer la stabilité internationale et la sécurité collective
   
 
   
-      <ins>collective;</ins>
+      <del> ne doit pas être affaibli</del>
   
 
   
-       souligne l’importance du TNP, auquel 191 États sont parties, et insiste sur la nécessité de veiller à son efficacité; invite dès lors tous les États 
+      ; souligne l’importance du TNP, auquel 191 États sont parties, et insiste sur la nécessité de veiller à son efficacité; invite dès lors tous les États
   
 
   
-      <ins>   </ins>
+      <del> </del>
   
 
   
-      parties au TNP à s’engager de manière constructive dans le cadre du TNP et à convenir de mesures réalistes, efficaces, tangibles, réciproques et 
+      <ins>    </ins>
   
 
   
-      <del>   </del>
+      parties au TNP à s’engager de manière constructive dans le cadre du TNP et à convenir de mesures réalistes, efficaces, tangibles, réciproques et
+  
+
+  
+      <del>    </del>
+  
+
+  
+      <ins> </ins>
   
 
   
@@ -257,203 +413,418 @@
   
 
   
-      <del>ne doit pas affaiblir </del>
+      <del>ne doit pas affaiblir</del>
   
 
   
-      <ins>n’affaiblit pas </ins>
+      <ins>n’affaiblit pas</ins>
   
 
   
-      la sécurité des États membres;
+       la sécurité des États membres;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Karima DELLI (EELV), 
+    
+      Michèle RIVASI (EELV), 
+    
+      Benoît BITEAU (EELV), 
+    
+      Damien CARÊME (EELV), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV), 
+    
+      Marie TOUSSAINT (EELV), 
+    
+      Salima YENBOU (EELV) et 
+    
+      Claude GRUFFAT (EELV)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">192</div>
+  <div class="against">490</div>
+  <div class="abstention">14</div>
+</span>
+
+  
+    
+    <a href="/voting/137654">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(192/696 * 100%)">192</div>
-  
-  
-    <div class="-" style="width: calc(490/696 * 100%)">490</div>
-  
-  
-    <div class="0" style="width: calc(14/696 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/137654">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197500,197512,197506,204420,197574,197503,197531,96868,97236,197511,197512,197506,204420,197574,197503,197531,96868,97236,96743,197511,197512,197506,204420,197574,197503,197531,96868,97236,96743,197511</div>
+                
 
-<section>
+<p>
 
   
       <ins>17 bis. félicite l’Allemagne pour s’être engagée à participer à la première réunion des États parties au traité sur l’interdiction des armes nucléaires en tant qu’État observateur et invite davantage d’États membres à y participer également;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Karima DELLI (EELV), 
+    
+      Michèle RIVASI (EELV), 
+    
+      Benoît BITEAU (EELV), 
+    
+      Damien CARÊME (EELV), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV), 
+    
+      Marie TOUSSAINT (EELV), 
+    
+      Salima YENBOU (EELV) et 
+    
+      Claude GRUFFAT (EELV)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">185</div>
+  <div class="against">494</div>
+  <div class="abstention">17</div>
+</span>
+
+  
+    
+    <a href="/voting/137655">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(185/696 * 100%)">185</div>
-  
-  
-    <div class="-" style="width: calc(494/696 * 100%)">494</div>
-  
-  
-    <div class="0" style="width: calc(17/696 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/137655">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°4 | 
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197500,197512,197506,204420,197574,197503,197531,96868,97236,197511,197512,197506,204420,197574,197503,197531,96868,97236,96743,197511,197512,197506,204420,197574,197503,197531,96868,97236,96743,197511,197512,197506,204420,197574,197503,96750,197531,96868,97236,96743,197511</div>
+                
 
-<section>
+<p>
 
   
       <ins>17 ter. invite le SEAE à assister à la première réunion des États parties au traité sur l’interdiction des armes nucléaires en qualité d’observateur;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      François ALFONSI (R&amp;PS), 
+    
+      Karima DELLI (EELV), 
+    
+      Michèle RIVASI (EELV), 
+    
+      Benoît BITEAU (EELV), 
+    
+      Damien CARÊME (EELV), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV), 
+    
+      Marie TOUSSAINT (EELV), 
+    
+      Salima YENBOU (EELV) et 
+    
+      Claude GRUFFAT (EELV)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">183</div>
+  <div class="against">498</div>
+  <div class="abstention">15</div>
+</span>
+
+  
+    
+    <a href="/voting/137656">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(183/696 * 100%)">183</div>
-  
-  
-    <div class="-" style="width: calc(498/696 * 100%)">498</div>
-  
-  
-    <div class="0" style="width: calc(15/696 * 100%)">15</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/137656">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197500,197512,197506,204420,197574,197503,197531,96868,97236,197511,197512,197506,204420,197574,197503,197531,96868,97236,96743,197511,197512,197506,204420,197574,197503,197531,96868,97236,96743,197511,197512,197506,204420,197574,197503,96750,197531,96868,97236,96743,197511,197512,197506,204420,197574,197503,197531,96868,97236,96743,197511</div>
+                
 
-<section>
+<p>
 
   
       <ins>17 quater. demande qu’une délégation du Parlement européen soit envoyée pour observer la première réunion des États parties au traité sur l’interdiction des armes nucléaires;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(191/696 * 100%)">191</div>
-  
-  
-    <div class="-" style="width: calc(493/696 * 100%)">493</div>
-  
-  
-    <div class="0" style="width: calc(12/696 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/137657">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+      François ALFONSI (R&amp;PS), 
     
+      Karima DELLI (EELV), 
+    
+      Michèle RIVASI (EELV), 
+    
+      Benoît BITEAU (EELV), 
+    
+      Damien CARÊME (EELV), 
+    
+      David CORMAND (EELV), 
+    
+      Gwendoline DELBOS-CORFIELD (EELV), 
+    
+      Caroline ROOSE (EELV), 
+    
+      Mounir SATOURI (EELV), 
+    
+      Marie TOUSSAINT (EELV), 
+    
+      Salima YENBOU (EELV) et 
+    
+      Claude GRUFFAT (EELV)
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2001(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0324_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">191</div>
+  <div class="against">493</div>
+  <div class="abstention">12</div>
+</span>
+
   
+    
+    <a href="/voting/137657">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-12-13-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Ce rapport s’inscrit dans la logique des Nations unies en matière de désarmement, et cherche à faire de l’UE l’instance décisionnaire dans ce domaine. C’est clairement une atteinte à la souveraineté des États membres, dont le désarmement ou non ne regarde en rien les institutions européennes. Idem sur la question de l’arme nucléaire, dont ce texte remet en cause l’utilisation. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce rapport.Après le Brexit, la France demeure la seule puissance nucléaire de l&#39;Union européenne. Or, ce texte comporte certaines dispositions préconisant l&#39;interdiction des armes nucléaires. Au regard du rôle conféré par ce texte à des instances supranationales, je ne saurais le soutenir.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Le rapport s’inscrit dans la logique des Nations unies en matière de désarmement.Il cherche à faire de l’Union européenne l’instance décisionnaire dans ce domaine. Position inacceptable, car il s’agit d’une atteinte à la souveraineté des États; mais aussi parce que le désarmement doit demeurer strictement l’apanage des États, comme l’a montré, depuis les années 60, l’historique des programmes de désarmement, de SALT à START.J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce rapport car il appelle au désarmement progressif de façon trop naïve. En outre, il confie de plus en plus de pouvoir décisionnel aux instances supranationales, ce qui pour la France, puissance nucléaire incontournable, est inacceptable.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution sur les défis et les perspectives pour les régimes multilatéraux de contrôle des armes de destruction massive et de désarmement. Le texte réaffirme notamment l’engagement de l’UE en faveur du maintien de régimes internationaux efficaces de contrôle des armements, de désarmement et de non-prolifération, en particulier le TNP.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations et les recommandations du Parlement européen sur l’avancée et les améliorations à apporter aux régimes multilatéraux de contrôle des armes de destruction massive. Il souligne à raison la nécessité d’accélérer le désarmement et de créer les conditions d’un monde sans armes nucléaires, chimiques, bactériologiques ou radiologiques. Il n’appelle en revanche pas clairement les États-Unis et la Russie, qui cumulent à eux deux 90 % de l’arsenal nucléaire actuel à rejoindre le traité sur l’interdiction de l’armement nucléaire, afin d’enclencher un désarmement nucléaire mondial coordonné et simultané auquel la France pourrait se joindre. Je me suis donc abstenue sur ce texte qui présente une ambition de désarmement que je partage, mais qui aurait dû mettre l’accent sur la nécessité d’un premier pas des États-Unis et de la Russie pour initier ce processus.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            . – Ce rapport appelle l’Union à jouer un rôle constructif dans les efforts mondiaux de non-prolifération fondés sur le droit public international afin de faire avancer la réduction et l’élimination de tous les arsenaux nucléaires et à créer les conditions pour parvenir à un monde exempt d’armes nucléaires, chimiques, biologiques ou radiologiques. Si ce rapport part d’une louable intention, il est néanmoins particulièrement biaisé. En effet, il se félicite du rôle joué par l’OTAN au niveau mondial, tait sciemment les actions des États-Unis (dont les dépenses militaires sont, de très loin, les plus importantes au niveau mondial) et ne condamne que les actions menées par la Fédération de Russie. Je regrette ce deux poids, deux mesures et me vois donc contraint de m’abstenir sur ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197557</div>
+            
+            <header><b>Christophe GRUDLER</b> | Mouvement Démocrate</header>
+            Inquiets de l’état du désarmement mondial, nous avons adopté une résolution, le 15 décembre 2021 au Parlement européen, analysant les défis et les perspectives des régimes multilatéraux de contrôle des armements et de désarmement pour les armes de destruction massive. Il en ressort que le rôle des armes nucléaires dans les doctrines militaires devrait diminuer, mais aussi que les traités contraignants sont essentiels au maintien de la paix et de la stabilité.Nous, parlementaires européens, rappelons que le retrait ou l’abandon des principaux traités de contrôle des armements, et ce d’autant plus face à la modernisation de l’arsenal nucléaire chinois, porterait gravement atteinte à la stabilité assurée par les régimes internationaux de contrôle des armements.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce texte, qui part d&#39;une bonne intention mais est inacceptable pour la France, seul pays de l&#39;Union européenne à posséder l&#39;arme nucléaire, car il met en danger sa force de dissuasion. Par ailleurs ce texte met trop en avant le SEAE et les instances supranationales.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté contre ce rapport car il demande l’interdiction des armes nucléaires et donne du pouvoir aux instances supranationales.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            J&#39;ai voté contre ce rapport car il appelle au désarmement progressif de façon trop naïve. En outre, il confie de plus en plus de pouvoir décisionnel aux instances supranationales, ce qui pour la France, puissance nucléaire incontournable, est inacceptable.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – J&#39;ai voté contre ce rapport car il appelle au désarmement progressif de façon trop naïve. En outre, il confie de plus en plus de pouvoir décisionnel aux instances supranationales, ce qui pour la France, puissance nucléaire incontournable, est inacceptable.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            La seule puissance nucléaire de l’Union européenne, après le Brexit, demeure la France: sa posture particulière d’indépendance nationale sur ces questions en Europe et son attachement particulier à la sécurité et à la règle de droit la poussent à tout faire pour amener ses partenaires européens à définir de façon autonome des intérêts de sécurité communs. Par ailleurs, en juillet 2017 a été adopté le traité d’interdiction des armes nucléaires (TIAN) à l’Assemblée générale des Nations unies, traité extrêmement nocif. Aucun des 122 pays signataires ne possède l’arme nucléaire. La question du désarmement, dans lequel ce rapport s’inscrit, est épineuse, puisqu’il n’est pas question pour la France de perdre son seul outil réel d’indépendance et de statut de grande puissance. Le rapport cherche à faire de l’Union européenne l’instance décisionnaire dans ce domaine. Position inacceptable, car il s’agit d’une atteinte à la souveraineté des États; mais aussi parce que le désarmement doit demeurer strictement l’apanage des États. Le rapport est enfin favorable au TICE, traité d’interdiction complète des essais nucléaires, danger pour un pays comme la France, qui remettrait en cause son architecture stratégique fondamentale. Au vu de ces arguments, j’ai donc voté contre ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Ce rapport fait suite à un autre du même rapporteur voté en plénière en octobre 2020, consacré au traité de non-prolifération des armes nucléaires (TNP), sur lequel nous nous étions abstenus.La seule puissance nucléaire de l’Union européenne, après le Brexit, est la France.Le rapport s’inscrit dans la logique des Nations unies en matière de désarmement. Il cherche à faire de l’Union européenne l’instance décisionnaire dans ce domaine. Position inacceptable, car il s’agit d’une atteinte à la souveraineté des États; mais aussi parce que le désarmement doit demeurer strictement l’apanage des États, comme l’a montré, depuis les années 60, l’historique des programmes de désarmement, de SALT à START.Surtout, le rapporteur voit favorablement le TICE, traité d’interdiction complète des essais nucléaires, danger pour un pays comme la France, qui remettrait en cause son architecture stratégique fondamentale.J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Ce rapport fait suite à un autre du même rapporteur voté en plénière en octobre 2020, consacré au traité de non-prolifération des armes nucléaires (TNP), sur lequel nous nous étions abstenus. Le rapport s’inscrit dans la logique onusienne en matière de désarmement. Il cherche à faire de l’Union européenne l’instance décisionnaire dans ce domaine. Position inacceptable, car il s’agit d’une atteinte à la souveraineté des États; mais aussi parce que le désarmement doit demeurer strictement l’apanage desdits États. De surcroît, le rapporteur voit favorablement le TICE, traité d’interdiction complète des essais nucléaires, qui est un danger pour un pays comme la France, en ce qu’il remettrait en cause son architecture stratégique fondamentale. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            Ce texte va dans le sens de l’interdiction des armes nucléaires et cherche à donner un rôle à l’Union européenne en en faisant une instance décisionnaire en la matière. Étant donné l’importance sur le plan international pour la France d’être une puissance nucléaire, nous ne pouvons que refuser cette atteinte à notre souveraineté en nous opposant à ce texte.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

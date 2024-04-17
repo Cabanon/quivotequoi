@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Programme-cadre pour la recherche et l’innovation «Horizon Europe» 2021–2027</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,27 +22,39 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Programme-cadre pour la recherche et l’innovation «Horizon Europe» 2021–2027</h2>
 
 
 
-
 <h3>🎯 Votes principaux</h3>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -49,7 +62,7 @@
     
         
         
-            <li>Politiques communautaires</li>
+            <li>Innovation</li>
         
     
         
@@ -59,12 +72,7 @@
     
         
         
-            <li>Innovation</li>
-        
-    
-        
-        
-            <li>Programme-cadre CE, UE</li>
+            <li>Politiques communautaires</li>
         
     
         
@@ -72,22 +80,115 @@
             <li>Recherche et développement technologique et espace</li>
         
     
+        
+        
+            <li>Programme-cadre CE, UE</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2018/0224(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0122_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-04-26-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE,S&amp;D,GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <del>Pour information, le texte de la déclaration est l  «L’article 218, paragraphe 6, deuxième alinéa, du Parlement européen dans le cas d’accords d’ FUE. En outre, les conditions présidant à l’asso «Horizon Europe» sont souvent prévues par ce approbation, le Parlement européen doit être im les étapes de la procédure, conformément à l’ar ailleurs, afin de garantir un véritable contrôle p portent sur l’ensemble des aspects pertinents de donné concernant le programme-cadre «Horizo  Le Parlement européen escompte donc que, lor paragraphe 9, du traité FUE, adopte une décisio l’Union dans une instance créée par un accord programme-cadre «Horizon Europe», ces positi l’exigence d’obtenir l’approbation du Parlemen de déterminer les aspects essentiels de la partic «Horizon Europe».  C’est pourquoi le Parlement européen considèr les décisions du Conseil prises en vertu de l’art    lorsqu’elles concernent des parties d’accords d’ pays tiers au programme-cadre «Horizon Europ du Conseil est envisagée par le négociateur de l lorsqu’il adresse des directives au négociateur, immédiatement et pleinement informé à toutes avis motivé expliquant pourquoi l’adoption d’u instance créée par un accord est nécessaire à la dans le [règlement «Horizon Europe»] et dans l programme spécifique].»</del>
@@ -97,48 +198,179 @@
       <ins>2 bis. approuve sa déclaration annexée à la présente résolution;   e suivant:  point a) i), du traité FUE prévoit l’approbation association au sens de l’article 217 du traité ciation d’un pays tiers au programme-cadre s accords d’association. Afin de donner son médiatement et pleinement informé à toutes ticle 218, paragraphe 10, du traité FUE. Par arlementaire, il est nécessaire que ces accords la relation de l’Union avec un pays tiers n Europe».  sque le Conseil, conformément à l’article 218, n établissant les positions à prendre au nom de qui implique l’association d’un pays tiers au ons n’aboutissent pas à un contournement de t européen en laissant à cette instance le soin ipation de ce pays tiers au programme-cadre   e qu’il convient de limiter au strict minimum icle 218, paragraphe 9, du traité FUE    association qui portent sur l’association d’un e». En outre, si l’adoption d’une telle décision ’Union ou par le Conseil ou son comité spécial le Parlement européen entend être les étapes de la procédure, y compris par un ne position au nom de l’Union par une réalisation des objectifs de l’Union définis a [décision du Conseil établissant le</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
-        
-            
-
-<div class="votes small">
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    , 
   
-    <div class="+" style="width: calc(677/699 * 100%)">677</div>
-  
-  
-    <div class="-" style="width: calc(5/699 * 100%)">5</div>
-  
-  
-    <div class="0" style="width: calc(17/699 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/129586">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2018/0224(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2021-0122_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">677</div>
+  <div class="against">5</div>
+  <div class="abstention">17</div>
+</span>
+
   
+    
+    <a href="/voting/129586">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2021-04-26-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b></b> | </header>
+            . – Ce programme, destiné aux chercheurs des secteurs publics et privés, est à l’initiative de projets collaboratifs avec des partenaires issus des pays membres de l’UE et déclinables à toutes les échelles territoriales. Cet effort de ciblage peut être bénéfique pour les entreprises françaises et encourager la réindustrialisation et l’émergence de nouvelles compétences sur le territoire français. Pour toutes ces raisons, j’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b></b> | </header>
+            J’ai voté pour ce programme destiné aux chercheurs du secteur public comme privé. Il s’agit d’un élément essentiel à la relance et la réindustrialisation de l’Europe.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b></b> | </header>
+            J’ai soutenu ce dossier qui s’inscrit dans le cadre de la relance et de la nécessaire réindustrialisation de l’UE: un effort de ciblage, qui bénéficiera aux entreprises françaises et à l’éclosion de nouvelles compétences sur notre territoire.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b></b> | </header>
+            J’ai voté pour ce rapport car ses orientations sont largement pensées pour épouser les contraintes des PME en matière de recherche et innovation. Il fixe les principes généraux pour l’attribution des financements des projets de recherche et d’innovation. La plupart des projets sont collaboratifs avec plusieurs partenaires issus de plusieurs pays membres de l’Union européenne. Dans le cadre de la relance et de la nécessaire réindustrialisation de l’UE, je soutiens cet effort de ciblage qui bénéficiera aux entreprises françaises et à l’éclosion de nouvelles compétences sur notre territoire.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b></b> | </header>
+            «Horizon Europe» est un programme de financement («programme-cadre») destiné à soutenir la recherche et l’innovation. Portant sur la période budgétaire 2021-2027, il succède au programme «Horizon 2020». Il repose sur trois piliers: d’abord, la recherche fondamentale et la science dite «ouverte» (c’est-à-dire en accès libre et diffusée auprès du grand public); ensuite, les défis mondiaux prioritaires et la compétitivité industrielle; enfin, l’innovation et le transfert de connaissances et de compétences. Nous votions ici sur l’établissement du programme-cadre issu d’un compromis entre les institutions européennes. Malgré quelques points de vigilance, le programme prévoit un soutien essentiel à la recherche fondamentale et à la recherche en sciences humaines, ainsi qu’une action pour réduire les écarts de rémunération entre chercheurs européens. J’ai voté pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b></b> | </header>
+            Ce programme est destiné aux chercheurs des secteurs publics et privés, et est réparti en piliers de financements. Il se fonde sur des appels à projets. La plupart des projets sont des collaborations entre plusieurs partenaires issus de plusieurs pays membres de l&#39;Union européenne. Les conditions de participation et d’éligibilité sont précisées dans chaque appel, et la dimension du programme est déclinable à toutes les échelles territoriales (locale, régionale, nationale, européenne). Nous soutenons, dans le cadre de la relance et de la nécessaire réindustrialisation de l’Union européenne, cet effort de ciblage, qui bénéficiera aux entreprises françaises et à l’éclosion de nouvelles compétences sur notre territoire. J&#39;ai donc voté pour cette deuxième lecture.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b></b> | </header>
+            J’ai voté en faveur de ce rapport relatif à la définition des règles de participation et de diffusion du programme-cadre Horizon Europe. Ce texte prévoit notamment de reconstituer pour Horizon Europe jusqu’à 500 millions d’euros sur 2021-2027, à partir de crédits non exécutés issus du programme Horizon 2020 qui l’a précédé. Jusqu’à 300 millions d’euros abonderont «Numérique, industrie et espace», en particulier pour soutenir la recherche quantique.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b></b> | </header>
+            Ce rapport vise à approuver l’établissement du programme Horizon Europe pour la période 2021-2027. Il prévoit d’accorder 95,5 milliards € de crédits pour des projets de recherche et d’innovation, incluant notamment une attention particulière à la recherche fondamentale, aux enjeux climatiques et environnementaux, aux sciences sociales et un soutien accru pour les PME. J’ai donc voté pour ce texte qui apportera un soutien bienvenu aux chercheurs et chercheuses européens.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b></b> | </header>
+            Neuvième programme-cadre de l’Union pour la recherche et l’innovation, Horizon Europe succède pour la période 2021-2027 au programme Horizon 2020. Doté d’un budget total de 95,5 milliards d’euros à prix constants (le Parlement demandait initialement 120 milliards), Horizon Europe repose sur trois piliers: 1) Excellence scientifique; 2) Problématiques mondiales et compétitivité industrielle européenne; 3) Europe innovante. Je suis globalement satisfait de l’issue des négociations interinstitutionnelles, mais le programme prévoit un soutien particulièrement bienvenu en faveur de la recherche fondamentale, des sciences humaines, des PME et pour réduire les écarts de rémunération entre chercheurs au niveau européen. Par ailleurs, les négociations ont apporté des garanties en matière de «respect des droits de humains» dans le cadre des accords d’association et de coopération internationale. Je vote donc en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197551</div>
+            
+            <header><b></b> | </header>
+            . – J’ai voté en faveur de l’accord en trilogue de décembre 2020 sur le nouveau programme Horizon Europe 2021-2027.Doté d’un budget de près de 100 milliards d’euros, Horizon Europe soutiendra la recherche notamment dans les domaines de la santé, du numérique, du climat ou encore de l’énergie et de l’espace.Avec un soutien accru aux PME et favorisant les synergies avec les programmes européens, notamment Invest EU, ce programme Horizon Europe offrira des opportunités réelles pour nos Outre-mer.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b></b> | </header>
+            Ce programme est destiné aux chercheurs des secteurs publics et privés; il est réparti en piliers de financements (voir la note de session sur les «programmes spécifiques Horizon Europe») et basé sur des appels à projets. La plupart des projets sont collaboratifs avec plusieurs partenaires issus de plusieurs pays membres de l’Union européenne. Les conditions de participation et d’éligibilité sont précisées dans chaque appel, et la dimension du programme est déclinable à toutes les échelles territoriales (locales, régionales, nationales, européennes). Nous soutenons, dans le cadre de la relance et de la nécessaire réindustrialisation de l’UE, cet effort de ciblage, qui bénéficiera aux entreprises françaises et à l’éclosion de nouvelles compétences sur notre territoire. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b></b> | </header>
+            Le texte fixe les principes généraux qui serviront de critères pour la répartition du budget de 95 milliards d’euros destiné à la recherche et à l’innovation. Ces orientations sont largement pensées pour épouser les contraintes des PME en matière de R&amp;D. Par exemple, lors de la mise en œuvre du programme, la Commission devra viser une simplification administrative continue et une réduction de la charge pour les demandeurs et les bénéficiaires. Ces principes vont dans le bon sens. Nous soutenons, dans le cadre de la relance et de la nécessaire réindustrialisation de l’UE, cet effort de ciblage, qui bénéficiera aux entreprises françaises et au développement de nouvelles compétences sur notre territoire. J’ai donc voté en faveur de ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b></b> | </header>
+            Il s’agit d’un rapport législatif qui prévoit un règlement portant sur l’établissement du programme-cadre pour la recherche et l’innovation «Horizon Europe» et définissant ses règles de participation et de diffusion. À la suite du programme «Horizon 2020», le programme-cadre pour la recherche et l’innovation «Horizon Europe» pour la période 2021-2027 aura donc pour objectif de générer un impact scientifique, technologique, économique et sociétal à partir des investissements de l’Union dans la recherche et l’innovation, afin de renforcer les bases scientifique et technologique de l’Union et de favoriser le développement de sa compétitivité dans tous les États membres. Le programme devra notamment garantir une approche multidisciplinaire et prévoir, le cas échéant, l’intégration des sciences sociales et humaines dans tous les pôles et dans toutes les activités menées au titre du programme. Ce programme est destiné aux chercheurs des secteurs publics et privés; il est réparti en piliers de financements et basé sur des appels à projets. La plupart des projets sont collaboratifs avec plusieurs partenaires issus de plusieurs pays membres de l’Union européenne. J’ai voté en faveur de ce rapport qui bénéficiera aux entreprises françaises et à l’éclosion de nouvelles compétences sur notre territoire.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b></b> | </header>
+            Ce programme est destiné à financer les chercheurs des secteurs publics et privés. La plupart des projets sont collaboratifs avec plusieurs partenaires issus de plusieurs pays membres de l&#39;Union européenne. Les conditions de participation et d’éligibilité sont précisées dans chaque appel d’offre et la dimension du programme est déclinable à toutes les échelles territoriales (locale, régionale, nationale, européenne). Il faut soutenir, dans le cadre de la relance et de la nécessaire réindustrialisation de l’UE, cet effort de ciblage qui bénéficiera aux entreprises françaises et au développement de nouvelles compétences sur notre territoire.C’est pourquoi j’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b></b> | </header>
+            Il s’agit ici de fixer les principes généraux qui présideront à l’attribution des financements en matière de recherche et d’innovation dans le cadre du programme «Horizon Europe». Résolument tournées vers la relance économique et la compétitivité, ces orientations sont aussi largement pensées pour épouser les contraintes des PME en matière de R&amp;I. Sans surprise, les problématiques climatiques et environnementales recevront une part substantielle lors de l’attribution des financements, avec un peu plus d’un tiers des 95 milliards que représente le budget total d’Horizon Europe, un tiers aussi pour les sciences et la recherche fondamentale, et le reste distribué entre l’innovation et les problématiques sociétales. Comme nous l’avons noté précédemment, ce programme est destiné aux chercheurs des secteurs publics et privés, et est réparti en piliers de financements. Nous soutenons, dans le cadre de la relance et de la nécessaire réindustrialisation de l’UE, cet effort de ciblage, qui bénéficiera aux entreprises françaises et à l’éclosion de nouvelles compétences sur notre territoire. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b></b> | </header>
+            J’ai voté en faveur de ce rapport législatif qui prévoit de fixer les principes généraux en vue d’attribuer les financements du programme-cadre pour la recherche et l’innovation «Horizon Europe».Ce programme à destination des secteurs publics et privés est tourné vers la relance économique et la compétitivité, en tenant largement compte des PME et de leurs contraintes en matière de R&amp;I.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

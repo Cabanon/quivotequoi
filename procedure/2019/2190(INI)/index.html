@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Assurer la sécurité des produits dans le marché unique</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Assurer la sécurité des produits dans le marché unique</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(688/697 * 100%)">688</div>
-  
-  
-    <div class="-" style="width: calc(8/697 * 100%)">8</div>
+    <div class="for" style="width: calc(688/697 * 100%)">688</div>
   
   
-    <div class="0" style="width: calc(1/697 * 100%)">1</div>
+    <div class="against" style="width: calc(8/697 * 100%)">8</div>
+  
+  
+    <div class="abstention" style="width: calc(1/697 * 100%)">1</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,17 +88,18 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(79/79 * 100%)">79</div>
+    <div class="for" style="width: calc(79/79 * 100%)">79</div>
   
   
   
 </div>
  
 </section>
-            <a href="/voting/125365">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/125365">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -107,11 +112,6 @@
     
         
         
-            <li>Sécurité des produits et des services, responsabilité du fait du produit</li>
-        
-    
-        
-        
             <li>Marché intérieur, marché unique</li>
         
     
@@ -120,117 +120,471 @@
             <li>Cohésion économique, sociale et territoriale</li>
         
     
+        
+        
+            <li>Sécurité des produits et des services, responsabilité du fait du produit</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2190(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0207_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-11-23-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197527,197697,113892,204418,197698,96952,204420,197574,197503,97236,96743,197511,96740,24505,197529,197533,197521</div>
+                
 
-<section>
+<p>
 
   
       <ins>A bis. considérant que le principe de précaution, tel que prévu à l’article 191, paragraphe 2, du traité FUE, et défini notamment dans la communication de la Commission du 2 février 2000 sur le recours au principe de précaution sécurité des produits et des consommateurs et devrait être dûment pris en considération dans la définition des critères d’évaluation de la sécurité d’un produit;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
+      Michèle RIVASI (EELV), 
+    
+      Sylvie GUILLAUME (PS), 
+    
+      Yannick JADOT (EELV), 
+    
+      Emmanuel MAUREL (GRS), 
+    
+      Eric ANDRIEU (PS), 
+    
+      Manon AUBRY (LFI), 
+    
+      Manuel BOMPARD (LFI), 
+    
+      Damien CARÊME (EELV), 
+    
+      Leila CHAIBI (LFI), 
+    
+      David CORMAND (EELV), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Pierre LARROUTUROU (ND), 
+    
+      Anne-Sophie PELLETIER (LFI), 
+    
+      Marie TOUSSAINT (EELV), 
+    
+      Salima YENBOU (EELV), 
+    
+      Claude GRUFFAT (EELV) et 
+    
+      Nora MEBAREK (PS)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">325</div>
+  <div class="against">356</div>
+  <div class="abstention">19</div>
+</span>
+
+  
+    
+    <a href="/voting/124910">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(325/700 * 100%)">325</div>
-  
-  
-    <div class="-" style="width: calc(356/700 * 100%)">356</div>
-  
-  
-    <div class="0" style="width: calc(19/700 * 100%)">19</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124910">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">197527,197697,113892,204418,197698,96952,204420,197574,197503,97236,96743,197511,96740,24505,197529,197533,197521,197527,197697,113892,204418,197698,96952,204420,197574,197503,97236,96743,197511,96740,24505,197529,197533,197521</div>
+                
 
-<section>
+<p>
 
   
       <ins>2 bis. souligne que le principe de précaution devrait être la pierre angulaire de la révision de la DSGP;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(323/700 * 100%)">323</div>
-  
-  
-    <div class="-" style="width: calc(360/700 * 100%)">360</div>
-  
-  
-    <div class="0" style="width: calc(17/700 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/124909">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+      Michèle RIVASI (EELV), 
     
+      Sylvie GUILLAUME (PS), 
+    
+      Yannick JADOT (EELV), 
+    
+      Emmanuel MAUREL (GRS), 
+    
+      Eric ANDRIEU (PS), 
+    
+      Manon AUBRY (LFI), 
+    
+      Manuel BOMPARD (LFI), 
+    
+      Damien CARÊME (EELV), 
+    
+      Leila CHAIBI (LFI), 
+    
+      David CORMAND (EELV), 
+    
+      Aurore LALUCQ (PP), 
+    
+      Pierre LARROUTUROU (ND), 
+    
+      Anne-Sophie PELLETIER (LFI), 
+    
+      Marie TOUSSAINT (EELV), 
+    
+      Salima YENBOU (EELV), 
+    
+      Claude GRUFFAT (EELV) et 
+    
+      Nora MEBAREK (PS)
+    
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2019/2190(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2020-0207_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">323</div>
+  <div class="against">360</div>
+  <div class="abstention">17</div>
+</span>
+
   
+    
+    <a href="/voting/124909">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-11-23-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Ce rapport fait le constat que la directive relative à la sécurité générale des produits, datant de 2001, n’est plus du tout adaptée aux réalités modernes et met la santé des consommateurs en péril. S’il ne pointe pas du doigt la mondialisation sauvage, il demande une meilleure protection des consommateurs, plus de contrôles sur le respect des normes concernant les produits en provenance des pays tiers, ainsi qu’une meilleure lutte contre la concurrence déloyale. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            J&#39;ai voté pour ce texte.La directive de 2001 sur la sécurité générale des produits devait être adaptée aux enjeux de la vente en ligne. Ce texte plaide pour le renforcement de la sécurité des consommateurs en ce qui concerne les produits importés de pays tiers, ainsi que pour une concurrence équitable. Les suggestions relatives à un contrôle accru des produits importés vont d&#39;ailleurs dans ce sens.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            L&#39;objectif de ce rapport d’initiative est de fournir des lignes directrices à la Commission européenne en vue de la révision de la directive sur la sécurité générale des produits en 2021. Le rapport souligne que la transparence et l&#39;application rigoureuse des règles de l&#39;Union européenne en matière de sécurité des produits sont essentielles pour la protection des consommateurs et la concurrence loyale entre les entreprises. C’est d’ailleurs particulièrement le cas, dans le cadre de la crise que nous traversons, pour les équipements médicaux. Ces produits, notamment vendus en ligne, et importés de pays tiers peuvent être l’objet de désinformation ou de contrefaçon. Le texte souligne donc la nécessité pour les plateformes de vente et places de marché en ligne de prendre des mesures proactives pour lutter contre les pratiques trompeuses et la désinformation. J’ai voté en faveur de ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            Des associations de consommateurs ont récemment relevé que deux produits sur trois achetés sur des plateformes en ligne ne respectaient pas la législation européenne en matière de sécurité. Pour éviter les risques pour les consommateurs, il est nécessaire de revoir la législation actuelle pour l’adapter aux nouveaux modes de consommation. J’ai donc voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            La Directive qui fixe le cadre légal sur la sécurité des produits date de 2001, les habitudes de consommation ont changé en près de 20 ans, notamment le développement croissant des marketplaces pour les achats sur internet. Cette évolution pose avec force la question de la responsabilité de ces plateformes sur les produits qu’on y trouve, d’autant qu’une étude européenne de consommateurs a démontré que 66% des produits achetés sur ces plateformes ne respectaient pas les normes européennes de sécurité.Ce rapport introduit le principe de précaution, de même que lutte contre la contrefaçon, et responsabilité des plateformes. J’ai voté pour ce rapport qui renforce les droits des consommateurs et la lutte contre les contrefaçons, fléau qui pénalisent de nombreuses entreprises européennes et nous coûtent de nombreux emplois.
+        </article>
+    
+        <article>
+            <div class="hidden">124765</div>
+            
+            <header><b>Joëlle MÉLIN</b> | Rassemblement national</header>
+            Des associations européennes de consommateurs ont effectué des tests de sécurité sur des appareils électriques, des jouets, des cosmétiques achetés sur des plateformes en ligne. Ils ont constaté que 2/3 des produits ne respectaient pas la législation européenne en matière de sécurité. La directive relative à la sécurité générale des produits (directive 2001/95/CE) est la pierre angulaire de la législation européenne en matière de sécurité des produits. La DSGP remonte à 2001 et n&#39;est pas adaptée à l’ère des achats en ligne à l&#39;échelle mondiale. Sa révision est nécessaire ne fait que réduire les conséquences sans traiter la cause du problème : la mondialisation avec des délocalisations de la production qui ont provoqué l’augmentation des importations de produits de mauvaise qualité en provenance de pays tiers. J’ai malgré tout voté en faveur de ce texte bien évidemment.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport relatif à la sécurité des produits dans le marché unique. Le texte formule des recommandations à la Commission en vue de la révision de la directive sur la sécurité générale des produits qui aura lieu en 2021. Il suggère par exemple d’étendre les règles actuelles, qui figurent parmi les plus protectrices du monde pour le consommateur, aux nouveaux produits tels que ceux relatifs à l’intelligence artificielle ou les objets connectés. Il propose aussi de rendre plus effectifs les rappels de produits non alimentaires.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les propositions du Parlement européen pour renforcer la directive sur la sécurité des produits au sein du marché unique. Elle alerte sur les insuffisances du cadre réglementaire actuel inadapté à l&#39;essor du commerce sur internet, défend le principe de précaution, appelle à renforcer la lutte contre la contrefaçon et demande des mesures proactives de la part des plateformes en ligne pour garantir le respect des normes européennes. J’ai donc voté pour ce texte qui va dans le sens d’une meilleure protection des consommateurs européens.
+        </article>
+    
+        <article>
+            <div class="hidden">197521</div>
+            
+            <header><b>Manuel BOMPARD</b> | La France Insoumise</header>
+            Ce rapport porte sur la directive qui fixe le cadre légal sur la sécurité des produits, adoptée en 2001 et jamais révisée depuis. Or pourtant le mode de consommation a profondément changé depuis lors, notamment avec le développement exponentiel des plateformes d’achat sur internet, dont l’importance a encore été soulignée par la pandémie actuelle. Ce développement pose évidemment la question de la responsabilité des plateformes quant aux produits qui y sont vendus, inquiétude d’autant plus légitime que plusieurs études des associations de défense des consommateurs ont révélé que l’immense majorité des produits achetés sur ces plateformes ne respectent pas les normes européennes de sécurité. Ce texte insiste sur la nécessité d’assurer le respect du principe de précaution et exige une protection renforcée contre les contrefaçons. Il s’agit donc d’un bon rapport que je soutiens sans difficultés.
+        </article>
+    
+        <article>
+            <div class="hidden">197589</div>
+            
+            <header><b>Laurence FARRENG</b> | Mouvement Démocrate</header>
+            J&#39;ai voté en faveur de ce rapport, qui précise la position du Parlement européen en amont de la proposition de la Commission européenne visant à réviser la directive relative à la sécurité générale des produits. Nous y insistons notamment sur la prise en compte de points clés tels que la sécurité appliquée aux technologies émergentes et aux produits connectés, les systèmes de certification en matière de cyber-sécurité, le principe de précaution, ou encore la lutte contre les produits de contrefaçon. Les technologies évoluent rapidement, il faut donc moderniser nos outils législatifs.
+        </article>
+    
+        <article>
+            <div class="hidden">197585</div>
+            
+            <header><b>Pierre KARLESKIND</b> | Renaissance</header>
+            J’ai soutenu ce rapport visant à contribuer à la prochaine proposition de la Commission relative à la sécurité générale des produits (DSGP). Des enjeux clés sont couverts par ce rapport tels que la sécurité appliquée aux technologies émergentes et aux produits connectés, les systèmes de certification en matière de cyber-sécurité, le principe de précaution, les marchés en ligne ou encore les produits de contrefaçon etc. Il est important d&#39;assurer la sécurité des produits à l’échelle européenne pour que chaque citoyen européen soit équitablement protégé peu importe l’endroit où il se trouve.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            Ce rapport n&#39;aborde pas l&#39;hyper mondialisation comme un problème en soi, mais il souligne que la protection des consommateurs doit être renforcée et qu&#39;il faut garantir des conditions de concurrence équitables entre les entreprises européennes et celles des pays tiers en ce qui concerne le respect des règles de l&#39;UE sur la sécurité des produits.
+        </article>
+    
+        <article>
+            <div class="hidden">135511</div>
+            
+            <header><b>Valérie HAYER</b> | Renaissance</header>
+            J’ai voté en faveur de cette résolution qui permet au Parlement d’adresser ses recommandations à la Commission européenne en matière de protection de tous les produits vendus dans le marché unique, en particulier les produits sensibles (comme les équipement médicaux), et les objets connectés de plus en plus nombreux. Des règles harmonisées en matière de sécurité des produits doit être un objectif que se doit d’atteindre de la Commission. Les questions de sécurité incluent les enjeux de cybersécurité pour les nouvelles technologies et les produits connectés. En particulier, les technologies utilisant l’intelligence artificielle (IA), bien qu’offrant de réelles opportunités, doivent être dignes de confiance, tout comme la 5G. Cette résolution demande que la surveillance des marchés soit renforcée, le Parlement européen déplorant un manque de moyens financiers consacrés à cela et un cadre juridique insuffisant. Cette exigence s’applique également aux places de marchés en ligne : une coopération entre ces acteurs et l’UE est ainsi nécessaire (y compris les acteurs étrangers). Enfin, la résolution évoque l’enjeu de transparence et de traçabilité des produits vendus dans le marché unique, ainsi que l’importance du rappel des produits dangereux.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai voté en faveur du rapport qui émet des recommandations et propose des principes directeurs à la Commission européenne en vue de la révision de la directive sur la sécurité générale des produits prévue en 2021. Afin de garantir une protection accrue des consommateurs, tous les produits circulant au sein de l’Union européenne, qu’ils soient fabriqués dans l’Union ou importés, doivent appliquer, de manière rigoureuse les règles en matière de sécurité pour les produits. À l’ère du numérique, nous demandons également à la Commission européenne d’intensifier la lutte contre les produits et services dangereux, et notamment ceux vendus en ligne. Les plateformes et marchés en ligne doivent prendre des mesures proactives pour s’attaquer aux contrefaçons, mais aussi pour retirer les publicités sur les produits dangereux. Une révision de la directive sur la sécurité générale des produits sera nécessaire pour l’adapter à la numérisation des produits.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – J’ai voté pour ce rapport car s’il n&#39;aborde pas l&#39;hyper mondialisation comme un problème en soi, il souligne néanmoins la nécessité de renforcer la protection des consommateurs et demande des conditions de concurrence équitables entre les entreprises européennes et celles des pays tiers.
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            La directive relative à la sécurité générale des produits, datant de 2001, n&#39;est pas adaptée aux défis de sécurité spécifiquesliés aux achats en ligne et à la mondialisation des marchés du 21e siècle.Bien que ce rapport n&#39;aborde pas l&#39;hypermondialisation comme un problème en soi, il souligne néanmoins notamment : 1/ que la protection des consommateurs doit être renforcée, notamment en ce qui concerne les produits achetés en ligne et importés de pays tiers, 2/ il faut garantir des conditions de concurrence équitables entre les entreprises européennes et celles des pays tiers en ce qui concerne le respect des règles de l&#39;UE sur la sécurité des produits.Les suggestions du rapport concernant les contrôles et la surveillance supplémentaires des produits importés contribueront également à lutter contre la concurrence déloyale des entreprises de pays tiers qui sont en concurrence avec les entreprises françaises et européennes. C’est une bonne base en attendant la prochaine révision de la Directive.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            La directive relative à la sécurité générale des produits, datant de 2001, n&#39;est pas adaptée aux défis de sécurité liés aux achats en ligne et à la mondialisation des marchés du XXIe siècle. Bien que ce rapport n&#39;aborde pas l&#39;hyper mondialisation comme un problème en soi, il souligne néanmoins deux point importants. Premièrement, que la protection des consommateurs doit être renforcée, notamment en ce qui concerne les produits achetés en ligne et importés de pays tiers. Deuxièmement, qu’il faut garantir des conditions de concurrence équitables entre les entreprises européennes et celles des pays tiers en ce qui concerne le respect des règles de l&#39;UE sur la sécurité des produits. Compte tenu de ces points positifs, j’ai voté en faveur du texte, qui constitue une base satisfaisante en attendant la prochaine révision de la Directive.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Non pas sans aspect négatif, le rapport souligne tout de même la nécessaire protection des consommateurs. Il cherche aussi à garantir des conditions de concurrence équitable de nos entreprises européennes face à celles de pays tiers. Pour nos consommateurs et nos entreprises, j’ai donc voté en faveur du texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197597</div>
+            
+            <header><b>Hélène LAPORTE</b> | Rassemblement national</header>
+            La pierre angulaire de la législation européenne en matière de sécurité des produits non harmonisés est la directive relative à la sécurité générale des produits (directive 2001/95/CE). La DSGP remonte à 2001 et n&#39;est pas faite pour une ère d&#39;achats en ligne à l&#39;échelle mondiale, où soixante-neuf pour cent des internautes ont fait des achats en ligne en 2018. Des associations européennes de consommateurs ont constaté que deux produits sur trois ne respectaient pas la législation européenne en matière de sécurité, avec des conséquences possibles telles qu&#39;un choc électrique, un incendie ou une suffocation. Le rapport souligne qu&#39;un nombre croissant de vendeurs - en particulier de pays tiers - proposent des produits dangereux ou illégaux dans le marché unique. J’ai voté pour ce rapport car les produits achetés en ligne et importés de pays tiers doivent être traités avec la même vigilance que les produits hors ligne, mais comme le fait remarquer le rapporteur, ce n&#39;est pas encore le cas.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            La pierre angulaire de la législation européenne en matière de sécurité des produits non harmonisés est la directive relative à la sécurité générale des produits. Des associations européennes de consommateurs ont effectué des tests de sécurité sur différents biens achetés en ligne. Deux produits sur trois ne respectaient pas la législation européenne en matière de sécurité. Le rapport souligne qu&#39;un nombre croissant de vendeurs - en particulier de pays tiers - proposent des produits dangereux ou illégaux dans le marché unique. Bien que ce rapport n&#39;aborde pas l&#39;hyper mondialisation comme un problème en soi, il souligne néanmoins que la protection des consommateurs doit être renforcée. La surveillance supplémentaire des produits importés contribuera également à lutter contre la concurrence déloyale des entreprises de pays tiers qui sont en concurrence avec les entreprises françaises et européennes. Suite aux nombreux arguments positifs, j’ai voté en faveur de ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            L’explosion du nombre d’achats en ligne crée une situation nouvelle et des produits dangereux ou illégaux sont proposés à la vente. L’actuelle législation européenne, la directive relative à la sécurité générale des produits (DSGP) qui date de 2001, n’est plus adaptée à la donne actuelle. En cette période de pandémie, ce rapport souligne notamment la nécessité de renforcer la surveillance du marché et des capacités des autorités douanières pour les produits médicaux importés. Il conseille aussi à bon droit d&#39;inclure des dispositions relatives à la surveillance du marché et à l&#39;application de la législation dans tous les accords de libre-échange de l&#39;UE. Nous touchons là en premier lieu aux problèmes générés par la mondialisation que sont la délocalisation de la production et l&#39;augmentation des importations douteuses. Il s’agirait aussi de garantir une concurrence équitable entre les entreprises européennes et celles des pays tiers en ce qui concerne le respect des règles de l&#39;UE. Dans cette optique, les souhaits exprimés ici d’une surveillance accrue des importations contribueront aussi à lutter contre la concurrence déloyale. J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté en faveur de ce texte qui propose notamment de renforcer la sécurité des consommateurs lorsqu’ils effectuent des achats en ligne, importés de pays tiers. Ce rapport est également favorable à une concurrence plus équitable entre les entreprises européennes et celles des pays tiers, notamment en termes de sécurité des produits.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Rapport d&#39;exécution sur l&#39;accord de retrait du Royaume-Uni de l&#39;Union européenne</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Rapport d&#39;exécution sur l&#39;accord de retrait du Royaume-Uni de l&#39;Union européenne</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(537/618 * 100%)">537</div>
-  
-  
-    <div class="-" style="width: calc(43/618 * 100%)">43</div>
+    <div class="for" style="width: calc(537/618 * 100%)">537</div>
   
   
-    <div class="0" style="width: calc(38/618 * 100%)">38</div>
+    <div class="against" style="width: calc(43/618 * 100%)">43</div>
+  
+  
+    <div class="abstention" style="width: calc(38/618 * 100%)">38</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,19 +88,20 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(53/72 * 100%)">53</div>
+    <div class="for" style="width: calc(53/72 * 100%)">53</div>
   
   
-    <div class="-" style="width: calc(19/72 * 100%)">19</div>
+    <div class="against" style="width: calc(19/72 * 100%)">19</div>
   
   
 </div>
  
 </section>
-            <a href="/voting/153623">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/153623">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -109,128 +114,282 @@
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2202(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0052_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-03-15-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       <ins>– vu l’accord de principe annoncé concernant le cadre de Windsor;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°2 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       <ins>L bis. considérant que l’accord de principe récemment annoncé concernant le cadre de Windsor définit les termes d’une mise en œuvre souple mais efficace du protocole; que le gouvernement britannique a annoncé, dans ce contexte, la suspension du projet de loi sur le protocole sur l’Irlande du Nord;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°3 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       le Royaume-Uni avait enregistré, au titre du dispositif d’obtention du statut de date limite du 30 juin 2021; relève traitées ont donné lieu à l’obtention du statut de résident permanent, 
   
 
   
-      <del>40 </del>
+      <del>40</del>
   
 
   
-      <ins>39 </ins>
+      <ins>39</ins>
   
 
   
-      % résident provisoire et 
+       % résident provisoire et 
   
 
   
-      <del>10 </del>
+      <del>10</del>
   
 
   
-      <ins>11 </ins>
+      <ins>11</ins>
   
 
   
-      % à un autre
+       % à un autre
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°4 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="4">
+            <header>📝 Amendement n°4 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       15. se déclare préoccupé par les très longs délais en matière de prise de décisions relatives aux droits des citoyens par les autorités britanniques; relève qu’en 
@@ -244,109 +403,145 @@
       attente de décision; se déclare particulièrement préoccupé par les délais constatés dans les dossiers de regroupement familial; relève qu’en juillet 2021, les décisions dans les dossiers de regroupement familial étaient prises en moyenne en 95 jours calendaires, délai passé en juin 2022 à 291 jours calendaires; demande aux autorités britanniques de faire tout leur possible pour accélérer les processus de prise de décision;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°5 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
-
-  
-      18. salue et suit attentivement le recours en justice formé en décembre 2021 par l’autorité de contrôle indépendante devant la Haute cour de justice du Royaume-Uni contre la position du gouvernement britannique qui prévoit que les citoyens de l’Union qui n’auront ni demandé le statut de résident permanent ni redemandé le statut de résident provisoire à l’expiration de leur statut de résident provisoire perdront automatiquement leurs droits; relève que, dans l’arrêt rendu le 21 décembre 2022, la Haute cour de justice du Royaume-Uni a déclaré que le dispositif actuel d’obtention du statut de résident permanent était illégal à cet égard; approuve la participation de la Commission à l’action en justice; 
-  
+<p>
 
   
-      <ins>salue la récente annonce du ministère de l’intérieur britannique confirmant qu’il ne fera pas appel de l’arrêt et attend que celui-ci soit rapidement appliqué; </ins>
+      18. salue et suit attentivement le recours en justice formé en décembre 2021 par l’autorité de contrôle indépendante devant la Haute cour de justice du Royaume-Uni contre la position du gouvernement britannique qui prévoit que les citoyens de l’Union qui n’auront ni demandé le statut de résident permanent ni redemandé le statut de résident provisoire à l’expiration de leur statut de résident provisoire perdront automatiquement leurs droits; relève que, dans l’arrêt rendu le 21 décembre 2022, la Haute cour de justice du Royaume-Uni a déclaré que le dispositif actuel d’obtention du statut de résident permanent était illégal à cet égard; approuve la participation de la Commission à l’action en justice;
   
 
   
-      souligne qu’en vertu de l’article 15, paragraphe 3, de l’accord de retrait, une fois acquis, le droit de séjour permanent ne se perd que par des absences d’une durée supérieure à cinq ans consécutifs de l’État d’accueil;
+      <ins> salue la récente annonce du ministère de l’intérieur britannique confirmant qu’il ne fera pas appel de l’arrêt et attend que celui-ci soit rapidement appliqué;</ins>
+  
+
+  
+       souligne qu’en vertu de l’article 15, paragraphe 3, de l’accord de retrait, une fois acquis, le droit de séjour permanent ne se perd que par des absences d’une durée supérieure à cinq ans consécutifs de l’État d’accueil;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°6 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       32. déplore vivement 
   
 
   
-      <del>le manque de volonté politique du Royaume-Uni et son incapacité à agir de bonne foi et à respecter ses engagements au titre du protocole; dénonce la réticence du Royaume-Uni à se conformer aux obligations en matière douanière, en matière de surveillance et en matière de contrôle des risques applicables à la circulation des marchandises entre la Grande-Bretagne et l’Irlande du Nord; regrette la réticence du Royaume-Uni à transposer et appliquer la législation de l’Union en vigueur en matière de droits d’accise et de TVA;</del>
+      <del>le manque de volonté politique du Royaume-Uni et son incapacité à agir de bonne foi et à respecter ses engagements au titre du protocole; dénonce la réticence du Royaume-Uni à se conformer aux obligations en matière douanière, en matière de surveillance et en matière de contrôle des risques applicables à la circulation des marchandises entre la Grande-Bretagne et l’Irlande du Nord; regrette la réticence du Royaume-Uni à transposer et appliquer la législation de l’Union en vigueur en matière de droits d’accise et de TVA</del>
   
 
   
-      <ins>l’incapacité du Royaume-Uni, ces trois dernières années, à respecter ses engagements au titre du protocole;</ins>
+      <ins>l’incapacité du Royaume-Uni, ces trois dernières années, à respecter ses engagements au titre du protocole</ins>
   
 
   
-       regrette, en particulier, le manque de soutien apporté au personnel de l’Union chargé de surveiller les contrôles douaniers en mer d’Irlande, l’accès insuffisant du personnel de l’Union aux données douanières britanniques et le recours à des périodes de grâce unilatérales successives, en violation flagrante du protocole, qui ont compromis les vérifications aux frontières;
+      ; regrette, en particulier, le manque de soutien apporté au personnel de l’Union chargé de surveiller les contrôles douaniers en mer d’Irlande, l’accès insuffisant du personnel de l’Union aux données douanières britanniques et le recours à des périodes de grâce unilatérales successives, en violation flagrante du protocole, qui ont compromis les vérifications aux frontières;
   
 
   
       <del> se félicite, dans le même temps, du récent accord entre l’Union et le Royaume-Uni sur le partage des données commerciales et espère que cet accord sera rapidement finalisé;</del>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°7 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       36. se déclare vivement préoccupé par le 
@@ -360,192 +555,428 @@
       projet de loi sur le protocole sur l’Irlande du Nord, qui conférerait aux ministres britanniques des pouvoirs étendus leur permettant de cesser unilatéralement d’appliquer les dispositions du protocole, ce qui pourrait compromettre l’accord de Belfast/du Vendredi Saint, contribuer à l’incertitude économique et politique en Irlande du Nord et avoir des répercussions négatives sur la protection des consommateurs, les entreprises et les travailleurs;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°8 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
-
-  
-      37. 
-  
+<p>
 
   
-      <del>déplore le fait que le Royaume-Uni continue de privilégier le recours à des mesures unilatérales pour rompre des accords bilatéraux, malgré l’existence de deux mécanismes de règlement des différends prévus par l’accord de retrait; rappelle que le Royaume-Uni a d’abord eu l’intention de rompre les accords bilatéraux au moyen de son projet de loi sur le marché intérieur; </del>
+      37.
   
 
   
-      souligne qu’un accord bilatéral ne peut être modifié unilatéralement et que cela 
+      <del> déplore le fait que le Royaume-Uni continue de privilégier le recours à des mesures unilatérales pour rompre des accords bilatéraux, malgré l’existence de deux mécanismes de règlement des différends prévus par l’accord de retrait; rappelle que le Royaume-Uni a d’abord eu l’intention de rompre les accords bilatéraux au moyen de son projet de loi sur le marché intérieur;</del>
   
 
   
-      <del>nuit </del>
+       souligne qu’un accord bilatéral ne peut être modifié unilatéralement et que cela 
   
 
   
-      <ins>pourrait nuire </ins>
+      <del>nuit</del>
   
 
   
-      à la relation entre l’Union et le Royaume-Uni; 
+      <ins>pourrait nuire</ins>
   
 
   
-      <del>juge cette attitude des autorités britanniques contraire à l’esprit de dialogue et au principe de bonne foi; invite dès lors le gouvernement britannique à retirer immédiatement cette proposition, à s’abstenir de toute action unilatérale et à mettre pleinement en œuvre les accords qu’il a signés; </del>
+       à la relation entre l’Union et le Royaume-Uni;
   
 
   
-      invite une nouvelle fois les autorités britanniques à respecter pleinement l’accord de Belfast/du Vendredi Saint dans son intégralité, comme indiqué dans l’accord de retrait, et à veiller à ce que les droits des citoyens d’Irlande du Nord ne soient pas amoindris;
+      <del> juge cette attitude des autorités britanniques contraire à l’esprit de dialogue et au principe de bonne foi; invite dès lors le gouvernement britannique à retirer immédiatement cette proposition, à s’abstenir de toute action unilatérale et à mettre pleinement en œuvre les accords qu’il a signés;</del>
+  
+
+  
+       invite une nouvelle fois les autorités britanniques à respecter pleinement l’accord de Belfast/du Vendredi Saint dans son intégralité, comme indiqué dans l’accord de retrait, et à veiller à ce que les droits des citoyens d’Irlande du Nord ne soient pas amoindris;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°9 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       38. se félicite de la 
   
 
   
-      <del>reprise des pourparlers techniques entre l’Union et le Royaume-Uni et encourage les négociateurs de l’Union et du Royaume- Uni à trouver une solution commune et à veiller au respect du protocole;</del>
+      <del>reprise des pourparlers techniques</del>
   
 
   
-      <ins>récente annonce d’un accord de principe entre l’Union et le Royaume-Uni relatif au protocole, dit cadre de Windsor, qui garantira la mise en œuvre souple mais effective du protocole et le respect de l’accord de Belfast/du Vendredi Saint, tout en protégeant l’intégrité du marché unique de l’Union; espère le rétablissement, dans les plus brefs délais, du partage des pouvoirs en Irlande du Nord, conformément aux engagements pris au titre de l’accord de Belfast/du Vendredi Saint et dans l’intérêt de la population nord-irlandaise; attend la mise en œuvre intégrale de l’accord politique, grâce à quoi un nouveau chapitre du partenariat UE-Royaume-Uni, fondé sur la confiance mutuelle et la pleine coopération, s’ouvrira; se félicite par conséquent que le gouvernement britannique ait annoncé, dans le contexte du cadre de Windsor, qu’il mettrait fin à la procédure relative au projet de loi sur le protocole sur l’Irlande du Nord et qu’il ne travaille plus sur ce projet de loi;</ins>
+      <ins>récente annonce d’un accord de principe</ins>
+  
+
+  
+       entre l’Union et le Royaume-Uni 
+  
+
+  
+      <del>et encourage les négociateurs de l’Union et du Royaume- Uni à trouver une solution commune et à veiller au respect du protocole</del>
+  
+
+  
+      <ins>relatif au protocole, dit cadre de Windsor, qui garantira la mise en œuvre souple mais effective du protocole et le respect de l’accord de Belfast/du Vendredi Saint, tout en protégeant l’intégrité du marché unique de l’Union; espère le rétablissement, dans les plus brefs délais, du partage des pouvoirs en Irlande du Nord, conformément aux engagements pris au titre de l’accord de Belfast/du Vendredi Saint et dans l’intérêt de la population nord-irlandaise; attend la mise en œuvre intégrale de l’accord politique, grâce à quoi un nouveau chapitre du partenariat UE-Royaume-Uni, fondé sur la confiance mutuelle et la pleine coopération, s’ouvrira; se félicite par conséquent que le gouvernement britannique ait annoncé, dans le contexte du cadre de Windsor, qu’il mettrait fin à la procédure relative au projet de loi sur le protocole sur l’Irlande du Nord et qu’il ne travaille plus sur ce projet de loi</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  
     
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
     
-    <article>
-    <header>📝 Amendement n°10 | 
+  
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+        
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">S&amp;D</div>
+                
 
-<section>
+<p>
 
   
       40. souligne que l’Union 
   
 
   
-      <del>reste </del>
+      <del>reste</del>
   
 
   
-      <ins>est toujours restée </ins>
+      <ins>est toujours restée</ins>
   
 
   
-      disposée à mener des discussions avec le gouvernement britannique afin de dégager des solutions communes de nature à permettre le fonctionnement pérenne à long terme du protocole; rappelle 
+       disposée à mener des discussions avec le gouvernement britannique afin de dégager des solutions communes de nature à permettre le fonctionnement pérenne à long terme du protocole; rappelle 
   
 
   
-      <del>son opposition à toute renégociation du protocole et souligne que les États membres de l’Union, le Parlement et la Commission restent unis à cet égard; se félicite des </del>
+      <del>son opposition à toute renégociation du protocole et souligne que les États membres de l’Union, le Parlement et la Commission restent unis à cet égard; se félicite des</del>
   
 
   
-      <ins>les </ins>
+      <ins>les</ins>
   
 
   
-      propositions ambitieuses formulées par la Commission en octobre 2021 pour trouver des solutions pragmatiques, raisonnables et flexibles pour surmonter les problèmes de mise en œuvre du 
+       propositions ambitieuses formulées par la Commission en octobre 2021 pour trouver des solutions pragmatiques, raisonnables et flexibles pour surmonter les problèmes de mise en œuvre du protocole
   
 
   
-      <del>protocole visant à atténuer l’impact du Brexit en Irlande du Nord; prie instamment le gouvernement britannique </del>
+      <del> visant à atténuer l’impact du Brexit en Irlande du Nord; prie instamment le gouvernement britannique</del>
   
 
   
-      <ins>protocole; salue l’annonce, faite par les deux parties, qu’il existe une volonté politique </ins>
+      <ins>; salue l’annonce, faite par les deux parties, qu’il existe une volonté politique</ins>
   
 
   
-      de s’engager de manière constructive dans de véritables négociations avec l’Union par l’intermédiaire du comité mixte UE- Royaume-Uni afin de trouver des solutions durables aux éventuels points de friction; demande au gouvernement britannique d’associer de sa propre initiative l’Assemblée d’Irlande du Nord et les autres responsables élus et acteurs concernés en Irlande du Nord aux discussions sur l’application du 
+       de s’engager de manière constructive dans de véritables négociations avec l’Union par l’intermédiaire du comité mixte UE- Royaume-Uni afin de trouver des solutions durables aux éventuels points de friction; demande au gouvernement britannique d’associer de sa propre initiative l’Assemblée d’Irlande du Nord et les autres responsables élus et acteurs concernés en Irlande du Nord aux discussions sur l’application du protocole
   
 
   
-      <del>protocole;</del>
+      <del>;</del>
   
 
   
-      <ins>protocole.</ins>
+      <ins>.</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2202(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0052_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Renaissance, Place publique, Nouvelle Donne)
+    
   
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-03-15-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            Ce rapport évalue la mise en œuvre des dispositions et principes les plus importants de l’accord de Brexit et du protocole sur l’Irlande du Nord. Le texte constate que le Brexit a causé de grandes incertitudes pour les citoyens et les entreprises et rappelle que sans accord, la sortie du Royaume-Uni de l’Union européenne aurait eu des conséquences bien plus graves. Il précise également que le Brexit, s’il s’est révélé particulièrement préjudiciable pour toutes les parties concernées, l’est plus encore pour le Royaume-Uni. Partageant les orientations de ce texte, j’ai voté en sa faveur.
+        </article>
+    
+        <article>
+            <div class="hidden">5565</div>
+            
+            <header><b>Brice HORTEFEUX</b> | Les Républicains</header>
+            Si nous devons établir une relation saine et de confiance entre notre Union et le gouvernement britannique, il est primordial que le Royaume-Uni respecte ses engagements internationaux. Je me réjouis donc de ce que le gouvernement britannique a récemment conclu un accord avec l’Union européenne, le « cadre de Windsor », destiné à résoudre les questions en suspens dans la mise en œuvre du protocole sur l&#39;Irlande du Nord. Suite à trois ans d’incertitudes et d’actions unilatérales du Royaume-Uni qui mettaient en péril l’accord du Vendredi Saint en Irlande du Nord, nous avançons aujourd’hui dans une relation de confiance et de respect mutuel.J’ai soutenu ce texte mais je mets toutefois en garde concernant le statut de résident provisoire qui bafoue les droits des citoyens de l’UE vivant au Royaume-Uni.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport et son analyse qui sont, à moins d’un vote contre le nouveau cadre de Windsor au Parlement britannique, complètement obsolètes.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il continue à reprocher au Royaume-Uni d’avoir souverainement décidé de quitter l’UE. En outre, il ne tient pas compte du « cadre de Windsor » récemment adopté, qui facilite le rapprochement de l’Irlande avec le Royaume-Uni ainsi que le souhaitait l’UE.
+        </article>
+    
+        <article>
+            <div class="hidden">24505</div>
+            
+            <header><b>Emmanuel MAUREL</b> | Gauche républicaine et socialiste</header>
+            J’ai voté en faveur de ce rapport d’initiative qui fait suite au Brexit, rappelant la nécessité pour l’Union européenne et le Royaume-Uni d&#39;honorer pleinement leurs engagements en matière de droits des citoyens, ainsi que l’obligation pour les Britanniques de respecter la mise en œuvre du protocole irlandais. Bien qu’imparfait, l’accord de Windsor de février 2023 concerné par ce rapport permet de sortir du blocage causé par l’intransigeance britannique. Ainsi, l’accord prévoit que seules les marchandises dont la destination finale est la République d’Irlande – à l’intérieur, donc, du marché unique européen – seront soumises à des contrôles significatifs. Le Royaume-Uni s’est également engagé à renoncer à un projet de loi échafaudé par Boris Johnson accordant le pouvoir aux ministres britanniques de passer outre, unilatéralement, à certaines mesures du protocole. Ainsi, le respect de l’accord de Windsor, objet de ce rapport, est nécessaire.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution relative au rapport d’exécution sur l’accord de retrait du Royaume-Uni de l’Union européenne. Le texte évalue la mise en œuvre des dispositions et principes les plus importants de l&#39;accord de retrait et du protocole sur l&#39;Irlande du Nord. Il souligne que le retrait du Royaume-Uni a donné lieu à des perturbations commerciales entre l’UE et le Royaume-Uni et à des incertitudes accrues pour les citoyens et les entreprises. Il note que le Brexit s’est révélé préjudiciable pour toutes les parties concernées, et plus encore pour le Royaume-Uni. Enfin, il réaffirme l’engagement de l’Union à suivre de près la mise en œuvre de l’accord de retrait.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            Le rapport évalue la mise en œuvre des dispositions et principes les plus importants de l&#39;accord de retrait et du protocole sur l&#39;Irlande du Nord. Il propose des considérations générales sur la capacité de l&#39;accord à organiser un retrait ordonné du Royaume-Uni de l’Union européenne. Entre autres, le rapport constate que le retrait du Royaume-Uni a donné lieu à des perturbations commerciales entre l’UE et le Royaume-Uni et à des incertitudes accrues pour les citoyens et les entreprises et que le Brexit s’est révélé préjudiciable pour toutes les parties concernées, et plus encore pour le Royaume-Uni. J’ai donc décidé de soutenir ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations et les recommandations du Parlement européen sur la mise en œuvre de l’accord de retrait du Royaume-Uni de l’Union européenne. Il insiste notamment sur la nécessité pour les deux parties de tenir leurs engagements en matière de droits des citoyens et appelle les Britanniques à respecter les modalités du protocole irlandais pour éviter de raviver les tensions dans la région. J’ai donc voté pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197615</div>
+            
+            <header><b>Jérôme RIVIÈRE</b> | Rassemblement national</header>
+            . – J’ai voté contre ce texte, trop partisan.Il ne décrit que les conséquences négatives du Brexit (art.2), « le Brexit s’est par conséquent révélé préjudiciable pour toutes les parties concernées » et il insiste sur « l’incapacité persistante du Royaume-Uni à respecter ses engagements » (art.4).Par ailleurs, le texte est pro-CJUE (art.7) et contre la procédure britannique afin de devenir résident (elle est en 2 étapes, résident temporaire puis permanent, art.12).Le texte « se déclare particulièrement préoccupé par les délais constatés dans les dossiers de regroupement familial » (art.15). Le texte salue un recours qui est pourtant en cours et qui attaque le gouvernement britannique au sujet du statut de résident (art.18).Enfin, le cadre de Windsor semble rendre ce texte un peu obsolète.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            Ce rapport sur la mise en œuvre de l’accord de retrait du Royaume-Uni de l’Union européenne permet de dresser un état des lieux de l’exécution de l’accord et de réitérer nos appels à progresser dans certains domaines où des améliorations sont nécessaires. Je pense notamment aux droits des citoyens européens lorsqu’ils vivent au Royaume-Uni, afin qu’ils puissent circuler librement et jouir des droits établis par l’Union sur le sol britannique. Le rapport rappelle également que le Royaume-Uni doit s’acquitter de ses dettes financières envers l’Union. Bien que le Royaume Uni ait décidé de continuer à participer à un certain nombre de programmes phares de l’Union, je déplore néanmoins son retrait du programme Erasmus+. Malgré ces divergences, il était indispensable que l’Union et le Royaume-Uni soient capables de reprendre le dialogue pour aboutir à une solution garantissant la paix entre l’Irlande et l’Irlande du Nord, et s’assurer que les Britanniques se conforment à leurs obligations. Je ne peux que me réjouir de l’accord de Windsor qui garantira la libre circulation pour les Irlandais tout en protégeant notre marché intérieur.Pour l’ensemble de ces éléments, j’ai donc voté en faveur de ce rapport.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            J’ai voté contre ce texte qui déploie une rhétorique obsolète, sans tenir compte des avancées du récent cadre de Windsor, qui permet de régler sereinement les derniers ajustements consécutifs au retrait du Royaume-Uni de l’UE. En outre, ce texte du Parlement européen accorde une place prépondérante à la CJUE, alors que les Britanniques ont explicitement fait le choix de se retirer de sa juridiction.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Après plusieurs cycles de négociations, une version finale de l&#39;accord de retrait a été convenue entre le Royaume-Uni et l’Union européenne.Ce rapport daté poursuit l&#39;attitude négative et peu constructive de l&#39;UE à l&#39;égard du Brexit. Non seulement celui-ci n’explicite jamais les positions, les intérêts et les arguments britanniques, à savoir le refus de frontières internes à leur pays, mais il donne également l’impression que l’accord de retrait actuel était la seule alternative politique possible. Le rapport utilise toujours une rhétorique obsolète dénonçant, et à juste titre, les violations unilatérales du Royaume-Uni de l’accord de retrait. Cette rhétorique n’a plus lieu d’être étant donné l’évolution de la relation bilatérale entre Londres et Bruxelles et la mise en place d’une relation enfin apaisée entre le Royaume-Uni et le reste du continent. De plus, le rapport insiste sur l’adhésion obligatoire de Londres à la CJUE et la CEDH, ce qui constitue une ingérence excessive dans les affaire internes du Royaume-Uni.Ce rapport et son analyse sont obsolètes et ne contribuent pas à l’amélioration des relations entre le Parlement européen et le Royaume-Uni.J’ai donc voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport qui poursuit l&#39;attitude négative et peu constructive de l&#39;UE à l&#39;égard du Brexit. Non seulement celui-ci n’explicite jamais les positions, les intérêts et les arguments britanniques, à savoir le refus de frontières internes à leur pays, mais il donne également l’impression que l’accord de retrait actuel était la seule alternative politique possible.Critique principale, le rapport ne tient pas compte du cadre de Windsor récemment adopté, et qui facilite le rapprochement de l&#39;Irlande du Nord avec la Grande-Bretagne et renforce la souveraineté du Royaume-Uni sur son territoire, le tout en respectant l’accord de retrait initial. Par conséquent, le rapport ci-présent utilise toujours une rhétorique obsolète dénonçant, et à juste titre, les violations unilatérales du Royaume-Uni de l’accord de retrait. Cette rhétorique n’a plus lieu d’être étant donné l’évolution de la relation bilatérale entre Londres et Bruxelles.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b></b> | </header>
+            Ce rapport d’initiative rappelle la nécessité pour les parties européenne et britannique d’honorer pleinement leurs engagements en matière de droits des citoyens, et rappelle plus particulièrement aux Britanniques de respecter leurs engagements en ce qui concerne la mise en œuvre du protocole irlandais. Le rapport a été rédigé dans le contexte de la non-application du protocole irlandais. L’accord de Windsor ayant été approuvé la veille du vote, le texte amendé et voté lors de la session plénière prend acte des progrès réalisés récemment par le Royaume-Uni. Le rapport se félicite des discussions en cours et évoque l’importance de fournir aux citoyens britanniques et européens des garanties concernant leurs droits. Ainsi, j’ai décidé de voter en faveur de ce rapport.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">96750</div>
+            
+            <header><b>François ALFONSI</b> | Régions et Peuples Solidaires</header>
+            
+                <p> – Madame la Présidente, le Brexit a été une mauvaise décision. Elle impacte négativement l&#39;Union européenne, tout comme elle impacte négativement le Royaume-Uni. Et, au sein du Royaume-Uni, l&#39;Écosse, le Pays de Galles et l&#39;Irlande du Nord subissent les conséquences les plus graves de cette décision. Je rappelle que l&#39;Écosse et l&#39;Irlande du Nord ont voté très largement contre le Brexit et qu&#39;elles en subissent les conséquences contre leur volonté. </p>
+            
+                <p>Face à cette situation négative, l&#39;accord de retrait et l&#39;accord de coopération commerciale tels qu&#39;ils ont été négociés sont les meilleurs garants pour en atténuer les conséquences. Sous la direction de l&#39;ancien premier ministre Boris Johnson, le Royaume-Uni s&#39;était engagé dans une voie très négative. La proposition de loi interprétative des accords passés, qui avait été déposée unilatéralement par le gouvernement britannique, était un très mauvais signal. L&#39;Accord de Windsor, qui vient d&#39;être négocié, prévoit le retrait de ce projet de loi qui dénaturait le protocole sur l&#39;Irlande du Nord. C&#39;était absolument nécessaire pour établir la confiance mutuelle dans les négociations. </p>
+            
+                <p>Les évolutions positives depuis la prise de responsabilités du nouveau premier ministre Rishi Sunak permettent, si elles se confirment, de reprendre le fil du dialogue et de prendre en compte durablement les intérêts de l&#39;Irlande. Le rapport de notre collègue Pedro Silva Pereira a suivi de près ces évolutions. Le texte final que notre groupe va voter demain situe bien les enjeux. Aller de l&#39;avant, reconstruire une confiance durable avec les dirigeants britanniques. Et vigilance car, qu&#39;on le veuille ou non, la relation entre l&#39;Union européenne et le Royaume-Uni depuis le Brexit a durablement changé de nature.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            
+                <p> – Madame la Présidente, chers collègues, le droit des peuples à disposer d&#39;eux-mêmes est un droit fondamental. On ne peut pas, sans contradiction, comme l&#39;a fait l&#39;Union européenne, en défendre le principe tout en interdisant au peuple britannique d&#39;en bénéficier. Le peuple britannique a décidé en 2016, par référendum, de quitter l&#39;Union européenne. C&#39;est son choix souverain qu&#39;il faut respecter. </p>
+            
+                <p>Je regrette que, comme la Commission, le Parlement européen n&#39;ait pas cessé depuis de stigmatiser le Royaume-Uni, comme il le fait encore dans le rapport Silva Pereira. Le paragraphe deux de ce rapport affirme par exemple avec une certaine acrimonie que, je cite: «Le Brexit s&#39;est révélé préjudiciable pour toutes les parties concernées et plus encore pour le Royaume-Uni». </p>
+            
+                <p>Or, j&#39;estime que le Parlement européen n&#39;a pas à juger de ce qui est bon ou non pour ce pays. C&#39;est là l&#39;affaire du peuple britannique. Soyons plutôt positif et allons de l&#39;avant. Ce qui importe, c&#39;est de voir si l&#39;accord de retrait de 2020 a été convenablement appliqué. À cet égard, le pessimisme du rapport me semble déplacé pour deux raisons. D&#39;abord parce qu&#39;il met volontairement l&#39;accent sur les difficultés d&#39;application plutôt que sur les succès. Les difficultés d&#39;application était inévitable. Il ne fallait pas espérer qu&#39;on arrive à régler en deux ans tous les problèmes générés par un accord de retrait aussi complexe. </p>
+            
+                <p>Ce qui compte, c&#39;est que les succès sont incontestables. Le Royaume-Uni a par exemple bel et bien mis en place un statut de résident permanent pour certains ressortissants de l&#39;Union, comme il s&#39;y était engagé. Autre exemple de succès, l&#39;Autorité de contrôle indépendante fonctionne et a même exercé un recours devant la justice britannique, qui a débouché sur une condamnation d&#39;une mauvaise application de l&#39;accord par le gouvernement du Royaume-Uni. </p>
+            
+                <p>La deuxième raison pour laquelle le pessimisme du rapport est déplacé tient au cadre de Windsor, qui vient de démentir ses sombres analyses sur l&#39;Irlande du Nord. Cet accord gagnant-gagnant préserve le marché commun de l&#39;Union tout en répondant aux légitimes inquiétudes du Royaume-Uni de deux façons. D&#39;abord, en créant des corridors verts qui lui permettront d&#39;exporter de Grande-Bretagne des marchandises destinées uniquement à l&#39;Irlande du Nord, avec des formalités administratives réduites. Ensuite, en instituant un frein d&#39;urgence permettant au gouvernement britannique, à la demande du Parlement de Belfast, d&#39;empêcher l&#39;application en Irlande du Nord de certaines nouvelles dispositions de l&#39;Union. </p>
+            
+                <p>Un seul point me semble en définitive encore poser problème, il porte sur la compétence de la Cour de justice de l&#39;Union, mal acceptée par le Royaume-Uni, qu&#39;il serait sans doute préférable de remplacer par un tribunal arbitral spécialisé sur l&#39;Irlande du Nord.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197494</div>
+            
+            <header><b>Nathalie LOISEAU</b> | Renaissance</header>
+            
+                <p>Cet accord va le plus loin qu&#39;il nous soit possible d&#39;aller. Il va même très loin pour limiter les conséquences négatives du Brexit pour les populations d&#39;Irlande du Nord. On comprend que Rishi Sunak soit content. Dans son enthousiasme, le premier ministre britannique s&#39;est réjoui que l&#39;Irlande du Nord ait la chance d&#39;avoir accès à la fois au marché britannique et au marché unique européen. Rishi Sunak a raison, mais derrière son sourire, il y a un terrible aveu. Ce qu&#39;il vante comme une chance extraordinaire, c&#39;est ce dont disposait tout le Royaume-Uni quand il était membre de l&#39;Union européenne. C&#39;est ce qu&#39;il a perdu en la quittant.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197531</div>
+            
+            <header><b>Gwendoline DELBOS-CORFIELD</b> | Les Écologistes</header>
+            
+                <p> – Madam President, 20 years ago, the Good Friday Agreement was signed. This major step will be commemorated with the importance it deserves.</p>
+            
+                <p>Sadly, for more than a year now, the Assembly in Northern Ireland has not been sitting. In its absence, citizens in Northern Ireland have struggled to access health care and financial support for energy bills. Polling shows that those in favour of restoring the Assembly in Northern Ireland and those who support the Windsor framework are young people and women. But because of the institutions not fully functioning, young people and women are also among those seriously affected by the lack of access to basic care and by inflated energy prices.</p>
+            
+                <p>What matters most to people in Northern Ireland, as everywhere else in Europe, is everyday issues. As often is the case, when identity politics are instrumentalized and take up all the political space, it comes at the cost of people&#39;s needs. This is not only about the relationship between the EU and the UK. We also must consider the rights of citizens in Northern Ireland. The EU has a responsibility to protect the Good Friday Agreement, to prioritize the rights of citizens and to contribute to maintaining peace and democracy on the island of Ireland.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">204419</div>
+            
+            <header><b>Sandro GOZI</b> | Renaissance</header>
+            
+                <p> – Madame la Présidente, les engagements pris doivent être tous tenus, </p>
+            
+                <p>Cela doit être une bonne nouvelle aussi pour la plus grande réalisation européenne qui est le marché unique. L&#39;Accord de Windsor, à travers ce qu&#39;on appelle le </p>
+            
+                <p>C&#39;est une autre preuve bien concrète de notre volonté d&#39;établir une nouvelle relation avec nos amis britanniques, qui doit être toujours basée sur une confiance mutuelle.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

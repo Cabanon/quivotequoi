@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Résolution sur les manifestations contre le racisme après la mort de George Floyd</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Résolution sur les manifestations contre le racisme après la mort de George Floyd</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(493/664 * 100%)">493</div>
-  
-  
-    <div class="-" style="width: calc(104/664 * 100%)">104</div>
+    <div class="for" style="width: calc(493/664 * 100%)">493</div>
   
   
-    <div class="0" style="width: calc(67/664 * 100%)">67</div>
+    <div class="against" style="width: calc(104/664 * 100%)">104</div>
+  
+  
+    <div class="abstention" style="width: calc(67/664 * 100%)">67</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,21 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(47/77 * 100%)">47</div>
+    <div class="for" style="width: calc(47/77 * 100%)">47</div>
   
   
-    <div class="-" style="width: calc(22/77 * 100%)">22</div>
+    <div class="against" style="width: calc(22/77 * 100%)">22</div>
   
   
-    <div class="0" style="width: calc(8/77 * 100%)">8</div>
+    <div class="abstention" style="width: calc(8/77 * 100%)">8</div>
   
 </div>
  
 </section>
-            <a href="/voting/115496">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/115496">🗳 Voir le détail du vote</a>
         
     
     </article>
+
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -111,30 +116,148 @@
     
         
         
-            <li>Coopération policière, judiciaire et douanière en général</li>
+            <li>Lutte contre le racisme et la xénophobie</li>
         
     
         
         
-            <li>Lutte contre le racisme et la xénophobie</li>
+            <li>Coopération policière, judiciaire et douanière en général</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2685(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/B-9-2020-0196_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-06-17-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Indépendant</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                            <option value="Verts/ALE,197506">🇫🇷 Alliance Écologiste Indépendante</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE,GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       12. invite les institutions et les États membres de l’Union européenne à reconnaître officiellement les injustices du passé et les crimes contre l’humanité commis contre les personnes noires et les personnes de couleur; déclare que la traite 
@@ -148,529 +271,656 @@
       des esclaves est un crime contre l’humanité et demande que le 2 décembre soit désigné Journée européenne de commémoration de l’abolition de la traite des esclaves; encourage les États membres à inscrire l’histoire des personnes noires et des personnes de couleur dans leurs programmes scolaires;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+     et 
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">113</div>
+  <div class="against">569</div>
+  <div class="abstention">6</div>
+</span>
+
+  
+    
+    <a href="/voting/115322">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(113/688 * 100%)">113</div>
-  
-  
-    <div class="-" style="width: calc(569/688 * 100%)">569</div>
-  
-  
-    <div class="0" style="width: calc(6/688 * 100%)">6</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115322">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL,S&amp;D,Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>D bis. considérant que les femmes transgenres noires sont victime du taux de meurtres le plus élevé aux États-Unis et sont également confrontées à la brutalité policière et à la violence structurelle; que 9% des femmes transgenres noires sont incarcérées aux États-Unis, ce qui correspond environ à dix fois le taux de la population générale aux États-Unis;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    , 
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">295</div>
+  <div class="against">375</div>
+  <div class="abstention">16</div>
+</span>
+
+  
+    
+    <a href="/voting/115357">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(295/686 * 100%)">295</div>
-  
-  
-    <div class="-" style="width: calc(375/686 * 100%)">375</div>
-  
-  
-    <div class="0" style="width: calc(16/686 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115357">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL,S&amp;D,Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>Q bis. considérant que le racisme structurel se reflète également dans les inégalités socio-économiques et la pauvreté, et que ces facteurs interagissent et se renforcent mutuellement; que ce phénomène est particulièrement visible sur le marché du travail, où la plupart des travailleurs précaires sont des personnes de couleur, mais également dans le logement et l’éducation; que les actions en faveur de l’égalité et contre le racisme structurel doivent aller de pair et être menées de manière systématique;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    , 
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">492</div>
+  <div class="against">167</div>
+  <div class="abstention">14</div>
+</span>
+
+  
+    
+    <a href="/voting/115365">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(492/673 * 100%)">492</div>
-  
-  
-    <div class="-" style="width: calc(167/673 * 100%)">167</div>
-  
-  
-    <div class="0" style="width: calc(14/673 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115365">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°5 | 
+        
+            <article id="5">
+            <header>📝 Amendement n°5 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL,S&amp;D,Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>AA bis. considérant que les médias et les organisations de la société civile ont signalé que des incidents de racisme, de xénophobie et d’intolérance ont ciblé des communautés liées à la pandémie de COVID-19 dans la plupart des États membres de l’UE5; que les minorités raciales et ethniques de nombreux pays ont été victimes de contrôles et d’amendes discriminatoires, de profilage racial ainsi que de tactiques policières musclées et de violences, en particulier dans le contexte des pouvoirs de police accordés aux services répressifs dans le cadre des mesures de confinement liées à la COVID-19;  __________  5FRA, Coronavirus pandemic in the EU: Fundamental rights implications, https://op.europa.eu/en/publication-detail/- 01aa75ed71a1/language-en</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    , 
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">271</div>
+  <div class="against">396</div>
+  <div class="abstention">6</div>
+</span>
+
+  
+    
+    <a href="/voting/115374">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(271/673 * 100%)">271</div>
-  
-  
-    <div class="-" style="width: calc(396/673 * 100%)">396</div>
-  
-  
-    <div class="0" style="width: calc(6/673 * 100%)">6</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115374">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°6 | 
+        
+            <article id="6">
+            <header>📝 Amendement n°6 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL,S&amp;D,Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>21 bis. souligne que, dans l’exercice de leurs fonctions, la police et les forces de l’ordre devraient appliquer des moyens non violents avant de recourir à la force, et que toutes les opérations de police devraient être planifiées de manière à réduire au minimum le risque de recours excessif à la force ou de dommage; souligne que l’utilisation de la prise d’étranglement et d’autres formes de contrainte physique susceptibles d’entraîner une asphyxie positionnelle violent les droits humains fondamentaux, et demande dès lors l’interdiction de l’utilisation de telles techniques dans la police;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    , 
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">295</div>
+  <div class="against">349</div>
+  <div class="abstention">43</div>
+</span>
+
+  
+    
+    <a href="/voting/115338">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(295/687 * 100%)">295</div>
-  
-  
-    <div class="-" style="width: calc(349/687 * 100%)">349</div>
-  
-  
-    <div class="0" style="width: calc(43/687 * 100%)">43</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115338">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL,S&amp;D,Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>27 bis. souligne que les entités qui s’engagent dans des activités discriminatoires contre des communautés racisées, ou prennent des décisions ou mettent en œuvre des mesures à cet effet, ne devraient pas être éligibles à un financement au travers du budget de l’Union;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    , 
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">328</div>
+  <div class="against">310</div>
+  <div class="abstention">50</div>
+</span>
+
+  
+    
+    <a href="/voting/115348">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(328/688 * 100%)">328</div>
-  
-  
-    <div class="-" style="width: calc(310/688 * 100%)">310</div>
-  
-  
-    <div class="0" style="width: calc(50/688 * 100%)">50</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115348">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL,S&amp;D,Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>27 ter. invite la Commission et les États membres à évaluer et à traiter l’impact disproportionné de la pandémie de COVID-19 sur les groupes raciaux et ethniques qui ont déjà souffert de l’intensification du phénomène de bouc- émissaire, de la discrimination et des discours de haine, y compris de la part de personnalités politiques, ainsi que de l’application de politiques racistes, d’une augmentation des agressions à caractère raciste, du profilage racial et de la brutalité policière, d’un accès plus difficile à l’éducation, d’une insécurité financière accrue, d’une perte de revenu, de la fermeture ou de la réduction des services d’aide publics, de la surpopulation et d’un accès réduit à l’eau propre et à de bonnes conditions sanitaires;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    , 
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">283</div>
+  <div class="against">393</div>
+  <div class="abstention">12</div>
+</span>
+
+  
+    
+    <a href="/voting/115349">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(283/688 * 100%)">283</div>
-  
-  
-    <div class="-" style="width: calc(393/688 * 100%)">393</div>
-  
-  
-    <div class="0" style="width: calc(12/688 * 100%)">12</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115349">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°9 | 
+        
+            <article id="9">
+            <header>📝 Amendement n°9 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE,S&amp;D,GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>T bis. considérant que la militarisation du matériel et des tactiques de la police ne contribue pas au renforcement de la sécurité publique;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    , 
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">275</div>
+  <div class="against">390</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/115369">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(275/673 * 100%)">275</div>
-  
-  
-    <div class="-" style="width: calc(390/673 * 100%)">390</div>
-  
-  
-    <div class="0" style="width: calc(8/673 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115369">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°10 | 
+        
+            <article id="10">
+            <header>📝 Amendement n°10 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE,S&amp;D,GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>15 bis. demande que toutes les politiques de lutte contre la discrimination s’inscrivent dans une démarche intersectionnelle et tiennent compte des problématiques de genre, de manière à venir à bout des discriminations plurielles;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    , 
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">385</div>
+  <div class="against">296</div>
+  <div class="abstention">6</div>
+</span>
+
+  
+    
+    <a href="/voting/115332">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(385/687 * 100%)">385</div>
-  
-  
-    <div class="-" style="width: calc(296/687 * 100%)">296</div>
-  
-  
-    <div class="0" style="width: calc(6/687 * 100%)">6</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115332">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°11 | 
+        
+            <article id="11">
+            <header>📝 Amendement n°11 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE,S&amp;D,GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>15 ter. invite instamment les États membres à accroître la diversité au sein des forces de police et à élaborer des cadres aux fins du dialogue et de la coopération entre la police et les habitants;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    , 
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">438</div>
+  <div class="against">237</div>
+  <div class="abstention">13</div>
+</span>
+
+  
+    
+    <a href="/voting/115333">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(438/688 * 100%)">438</div>
-  
-  
-    <div class="-" style="width: calc(237/688 * 100%)">237</div>
-  
-  
-    <div class="0" style="width: calc(13/688 * 100%)">13</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115333">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°12 | 
+        
+            <article id="12">
+            <header>📝 Amendement n°12 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE,S&amp;D,GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>18 bis. rappelle aux États membres qu’il convient de mettre en place des mécanismes indépendants de traitement des plaintes à l’encontre de la police pour mener des enquêtes sur les cas de mauvaise conduite et de brutalité concernant les forces de l’ordre; souligne qu’en démocratie, la police doit être tenue responsable de ses actes devant la loi, les autorités et l’ensemble de la population dont elle est au service; estime que le principal prérequis de l’obligation de rendre des comptes est le maintien d’instruments de contrôle effectifs et efficaces;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    , 
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">350</div>
+  <div class="against">307</div>
+  <div class="abstention">31</div>
+</span>
+
+  
+    
+    <a href="/voting/115336">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(350/688 * 100%)">350</div>
-  
-  
-    <div class="-" style="width: calc(307/688 * 100%)">307</div>
-  
-  
-    <div class="0" style="width: calc(31/688 * 100%)">31</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115336">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°13 | 
+        
+            <article id="13">
+            <header>📝 Amendement n°13 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE,S&amp;D,GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       27. rappelle qu’il importe d’assurer un financement suffisant de l’UE au profit des activités des acteurs de la société civile, y compris ceux qui œuvrent à la lutte contre le racisme et la discrimination; déplore que le montant proposé pour la rubrique «Justice, Droits et Valeurs» ait encore été réduit dans les propositions révisées de cadre financier pluriannuel;
@@ -680,929 +930,1021 @@
       <ins> invite la Commission et le Conseil à renforcer cette rubrique de toute urgence et à lui allouer des ressources suffisantes, notamment en ce qui concerne le volet «Égalité», qui vise à combattre le racisme et la xénophobie; demande à la Commission d’apporter une véritable réponse aux préoccupations concernant la marge d’action toujours plus réduite de la société civile indépendante dans certains États membres;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    , 
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+     et 
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">283</div>
+  <div class="against">397</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/115346">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(283/688 * 100%)">283</div>
-  
-  
-    <div class="-" style="width: calc(397/688 * 100%)">397</div>
-  
-  
-    <div class="0" style="width: calc(8/688 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115346">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°14 | 
+        
+            <article id="14">
+            <header>📝 Amendement n°14 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>D ter. considérant que les forces de police de tous les États-Unis ont acquis du matériel militaire pour une valeur de plus de 7 milliards d’USD depuis la fin des années 1990 dans le cadre du programme 1033, que des forces de police lourdement militarisées se sont récemment livrées à des violences révoltantes à l’égard de manifestants, que ce n’est ni la première ni la seule fois que des manifestants contre les brutalités policières et le racisme aux États-Unis font face à des forces écrasantes, comme le démontre en particulier la réaction de la police, lourdement armée, aux manifestations contre le meurtre de Michael Brown à Ferguson, Missouri;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">277</div>
+  <div class="against">406</div>
+  <div class="abstention">4</div>
+</span>
+
+  
+    
+    <a href="/voting/115358">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(277/687 * 100%)">277</div>
-  
-  
-    <div class="-" style="width: calc(406/687 * 100%)">406</div>
-  
-  
-    <div class="0" style="width: calc(4/687 * 100%)">4</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115358">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°15 | 
+        
+            <article id="15">
+            <header>📝 Amendement n°15 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>H bis. considérant qu’au Brésil, des discours racistes et violents similaires du président Jair Bolsonaro ont contribué à l’augmentation des violences policières racistes, le nombre de personnes tuées par la police dans le pays ayant augmenté et Pedro, âgé de 14 ans, a été tué en mai 2020 par 72 coups de feu tirés par la police alors qu’il jouait dans la maison de son oncle; que 80 % des personnes tuées par la police en 2019 dans l’État de Rio de Janeiro étaient noires; que Marielle Franco, membre du conseil municipal de Rio de Janeiro, a été assassinée en mars 2018 et que son affaire, comme celles de nombreuses femmes noires au Brésil, n’a toujours pas été résolue;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">279</div>
+  <div class="against">401</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/115361">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(279/688 * 100%)">279</div>
-  
-  
-    <div class="-" style="width: calc(401/688 * 100%)">401</div>
-  
-  
-    <div class="0" style="width: calc(8/688 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115361">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°16 | 
+        
+            <article id="16">
+            <header>📝 Amendement n°16 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>Q ter. considérant que le racisme n’est pas un mal aléatoire qui touche la société, mais un outil créé et utilisé à des fins d’oppression économique;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">47</div>
+  <div class="against">549</div>
+  <div class="abstention">77</div>
+</span>
+
+  
+    
+    <a href="/voting/115366">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(47/673 * 100%)">47</div>
-  
-  
-    <div class="-" style="width: calc(549/673 * 100%)">549</div>
-  
-  
-    <div class="0" style="width: calc(77/673 * 100%)">77</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115366">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°17 | 
+        
+            <article id="17">
+            <header>📝 Amendement n°17 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>V bis. considérant que, ces dernières années, des personnes de couleur, y compris des personnes d’origine africaine, ont été tuées dans l’Union à la suite de brutalités politiques et pendant leur détention; qu’Adil a été tué le 14 avril 2020 à Bruxelles alors qu’il avait été pris en chasse par la police; qu’Adama Traoré a été tué en juillet 2016 en France alors qu’il était en garde à vue; qu’Ilyas Tahiri a été tué dans un centre pour mineurs en Espagne en juillet 2019;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">126</div>
+  <div class="against">536</div>
+  <div class="abstention">9</div>
+</span>
+
+  
+    
+    <a href="/voting/115372">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(126/671 * 100%)">126</div>
-  
-  
-    <div class="-" style="width: calc(536/671 * 100%)">536</div>
-  
-  
-    <div class="0" style="width: calc(9/671 * 100%)">9</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115372">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°18 | 
+        
+            <article id="18">
+            <header>📝 Amendement n°18 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>AC bis. considérant que couleur sont décédées ou ont disparu en Méditerranée; que des gouvernements européens ont abdiqué leurs responsabilités pour ce qui est de mener des opérations de recherche et de sauvetage en mer et qu’ils ont également entravé et criminalisé les organisations non gouvernementales qui sont intervenues pour sauver des vies;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">147</div>
+  <div class="against">503</div>
+  <div class="abstention">23</div>
+</span>
+
+  
+    
+    <a href="/voting/115375">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(147/673 * 100%)">147</div>
-  
-  
-    <div class="-" style="width: calc(503/673 * 100%)">503</div>
-  
-  
-    <div class="0" style="width: calc(23/673 * 100%)">23</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115375">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°19 | 
+        
+            <article id="19">
+            <header>📝 Amendement n°19 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>AD bis. considérant que force est de constater que, sur son territoire, l’Union met en œuvre des politiques ancrées dans le racisme; que ce phénomène est le plus marqué dans les politiques de migration et d’asile, où l’Europe forteresse constitue une expression très brutale du racisme et de l’exceptionnalisme européen; demande à la Commission et aux États membres de mettre un terme à la détention des migrants, forme spécifique de violence fondée sur l’origine des personnes; demande aux organes de contrôle des frontières des États membres et au corps européen de garde-frontières et de garde- côtes de mettre fin sans attendre à leurs politiques de refoulement et de violence à l’encontre des personnes de couleur;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">44</div>
+  <div class="against">564</div>
+  <div class="abstention">65</div>
+</span>
+
+  
+    
+    <a href="/voting/115376">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(44/673 * 100%)">44</div>
-  
-  
-    <div class="-" style="width: calc(564/673 * 100%)">564</div>
-  
-  
-    <div class="0" style="width: calc(65/673 * 100%)">65</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115376">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°20 | 
+        
+            <article id="20">
+            <header>📝 Amendement n°20 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>4 bis. appelle de ses vœux un embargo immédiat sur les armes contre les États- Unis, ainsi que l’interdiction d’exporter tous les biens susceptibles d’être utilisés dans le cadre du contrôle des foules;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">60</div>
+  <div class="against">561</div>
+  <div class="abstention">67</div>
+</span>
+
+  
+    
+    <a href="/voting/115313">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(60/688 * 100%)">60</div>
-  
-  
-    <div class="-" style="width: calc(561/688 * 100%)">561</div>
-  
-  
-    <div class="0" style="width: calc(67/688 * 100%)">67</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115313">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°21 | 
+        
+            <article id="21">
+            <header>📝 Amendement n°21 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>4 ter. invite les États-Unis à mettre un terme au Service de l&#39;immigration et du contrôle douanier, organe qui a été mis en place pendant la «guerre contre le terrorisme» du président Bush et qui reste actif aujourd’hui, terrorisant les communautés d’immigrants aux États- Unis;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">52</div>
+  <div class="against">555</div>
+  <div class="abstention">81</div>
+</span>
+
+  
+    
+    <a href="/voting/115315">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(52/688 * 100%)">52</div>
-  
-  
-    <div class="-" style="width: calc(555/688 * 100%)">555</div>
-  
-  
-    <div class="0" style="width: calc(81/688 * 100%)">81</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115315">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°22 | 
+        
+            <article id="22">
+            <header>📝 Amendement n°22 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>5 bis. condamne le suprémacisme blanc sous toutes ses formes, y compris l’utilisation de slogans qui visent à saper ou à affaiblir le mouvement «Black Lives Matter» et a en diluer la portée;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">371</div>
+  <div class="against">294</div>
+  <div class="abstention">22</div>
+</span>
+
+  
+    
+    <a href="/voting/115318">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(371/687 * 100%)">371</div>
-  
-  
-    <div class="-" style="width: calc(294/687 * 100%)">294</div>
-  
-  
-    <div class="0" style="width: calc(22/687 * 100%)">22</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115318">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°23 | 
+        
+            <article id="23">
+            <header>📝 Amendement n°23 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>12 bis. demande que des réparations adéquates soient de toute urgence accordées aux pays du Sud qui ont souffert du colonialisme et de la réduction en esclavage de leur peuple;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">118</div>
+  <div class="against">550</div>
+  <div class="abstention">17</div>
+</span>
+
+  
+    
+    <a href="/voting/115324">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(118/685 * 100%)">118</div>
-  
-  
-    <div class="-" style="width: calc(550/685 * 100%)">550</div>
-  
-  
-    <div class="0" style="width: calc(17/685 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115324">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°24 | 
+        
+            <article id="24">
+            <header>📝 Amendement n°24 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>12 ter. plaide pour le retrait ou une contextualisation des statues qui glorifient des propriétaires d’esclaves et des négriers ainsi que les personnes responsables des atrocités commises à l’époque coloniale de l’Europe;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">211</div>
+  <div class="against">402</div>
+  <div class="abstention">71</div>
+</span>
+
+  
+    
+    <a href="/voting/115325">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(211/684 * 100%)">211</div>
-  
-  
-    <div class="-" style="width: calc(402/684 * 100%)">402</div>
-  
-  
-    <div class="0" style="width: calc(71/684 * 100%)">71</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115325">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°25 | 
+        
+            <article id="25">
+            <header>📝 Amendement n°25 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>12 quater. demande à l’Union et aux États membres de reconnaître notre dette historique vis-à-vis du continent africain; demande que la dette extérieure des pays africains et celle d’autres pays du Sud soient annulées sans autres conditions d’ajustement structurel;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">115</div>
+  <div class="against">551</div>
+  <div class="abstention">21</div>
+</span>
+
+  
+    
+    <a href="/voting/115326">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(115/687 * 100%)">115</div>
-  
-  
-    <div class="-" style="width: calc(551/687 * 100%)">551</div>
-  
-  
-    <div class="0" style="width: calc(21/687 * 100%)">21</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115326">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°26 | 
+        
+            <article id="26">
+            <header>📝 Amendement n°26 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>13 bis. souligne que l’institutionnalisation de la peau blanche comme canon de beauté perpétue et renforce le racisme dans nos sociétés; demande, par conséquent, que des mesures spécifiques soient prises pour mettre fin à cette institutionnalisation, en particulier pour ce qui est des perceptions et des idées préconçues concernant certains types de cheveux et de coiffures;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">181</div>
+  <div class="against">473</div>
+  <div class="abstention">32</div>
+</span>
+
+  
+    
+    <a href="/voting/115327">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(181/686 * 100%)">181</div>
-  
-  
-    <div class="-" style="width: calc(473/686 * 100%)">473</div>
-  
-  
-    <div class="0" style="width: calc(32/686 * 100%)">32</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115327">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°27 | 
+        
+            <article id="27">
+            <header>📝 Amendement n°27 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>23 bis. dénonce le complexe carcéro- industriel; plaide pour l’adoption de politiques de décarcération dans le monde entier et pour le démantèlement du complexe carcéro-industriel;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">55</div>
+  <div class="against">604</div>
+  <div class="abstention">29</div>
+</span>
+
+  
+    
+    <a href="/voting/115342">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(55/688 * 100%)">55</div>
-  
-  
-    <div class="-" style="width: calc(604/688 * 100%)">604</div>
-  
-  
-    <div class="0" style="width: calc(29/688 * 100%)">29</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115342">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°28 | 
+        
+            <article id="28">
+            <header>📝 Amendement n°28 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>27 quater. invite les États membres à cesser d’ignorer les appels de détresse des personnes en mer et à cesser de les renvoyer dans les endroits qu’elles fuient; invite plutôt les États membres à mener des opérations de recherche et de sauvetage conformément aux obligations qui leur incombent au titre du droit international et à offrir des voies sûres et légales d’entrée dans l’Union;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">150</div>
+  <div class="against">512</div>
+  <div class="abstention">25</div>
+</span>
+
+  
+    
+    <a href="/voting/115350">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(150/687 * 100%)">150</div>
-  
-  
-    <div class="-" style="width: calc(512/687 * 100%)">512</div>
-  
-  
-    <div class="0" style="width: calc(25/687 * 100%)">25</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115350">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°29 | 
+        
+            <article id="29">
+            <header>📝 Amendement n°29 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       <ins>27 quinquies estime que la justice raciale nécessite une justice climatique parce que le changement climatique touche et tue, de manière disproportionnée, les personnes et les communautés de couleur; estime que les vies noires comptent également dans le contexte de la crise climatique et que l’Union et les acteurs des pays du Nord doivent dès lors reconnaître leur dette climatique, à savoir leur responsabilité historique en matière d’émissions, agir en conséquence et mettre à profit leurs ressources technologiques et financières privilégiées à cette fin; estime que toute stratégie de décarbonation non conforme à la limitation du réchauffement de la planète à 1,5 °C est, par conséquent, une politique raciste, puisqu’elle suppose que les vies noires sont sacrifiables; estime que le mécanisme international de Varsovie relatif aux pertes et préjudices a besoin d’un bras financier proportionné afin d’aider les pays qui subissent des pertes et des préjudices en raison du changement climatique, tels que le Mozambique au lendemain des cyclones Kenneth et Idai, et qu’il s’agit donc là d’une question de justice raciale;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">51</div>
+  <div class="against">558</div>
+  <div class="abstention">76</div>
+</span>
+
+  
+    
+    <a href="/voting/115351">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(51/685 * 100%)">51</div>
-  
-  
-    <div class="-" style="width: calc(558/685 * 100%)">558</div>
-  
-  
-    <div class="0" style="width: calc(76/685 * 100%)">76</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115351">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°30 | 
+        
+            <article id="30">
+            <header>📝 Amendement n°30 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       1. affirme que 
   
 
   
-      <del>la vie des noirs compte;</del>
+      <del>la vie des noirs compte</del>
   
 
   
-      <ins>toutes les vies comptent;</ins>
+      <ins>toutes les vies comptent</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">155</div>
+  <div class="against">524</div>
+  <div class="abstention">7</div>
+</span>
+
+  
+    
+    <a href="/voting/115311">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(155/686 * 100%)">155</div>
-  
-  
-    <div class="-" style="width: calc(524/686 * 100%)">524</div>
-  
-  
-    <div class="0" style="width: calc(7/686 * 100%)">7</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115311">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°31 | 
+        
+            <article id="31">
+            <header>📝 Amendement n°31 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       5. 
   
 
   
-      <del>soutient les manifestations massives récentes dans les capitales et villes européennes contre le racisme et la discrimination dans la foulée de la mort de George Floyd; souligne l’appel des manifestants à prendre position contre l’oppression et le racisme structurel en Europe; exprime sa solidarité, son respect et son soutien aux manifestants pacifiques, et pense que nos sociétés doivent mettre un terme au racisme et aux inégalités structurels; rappelle le droit de chaque individu à manifester pacifiquement, consacré par les traités internationaux; regrette les différents incidents violents qui ont eu lieu;</del>
+      <del>soutient</del>
   
 
   
-      <ins>réprouve les manifestations violentes et destructrices qui ont éclaté dans le monde entier à la suite du décès de George Floyd, qui a servi de prétexte à des violences, causant un préjudice économique, voire physique, inestimable; est consterné par la destruction et les pillages encouragés par, entre autres, la gauche et les groupes de la gauche radicale; condamne avec la plus grande fermeté tout acte de violence et de destruction; invite les personnes souhaitant manifester à le faire de manière pacifique; condamne le vandalisme et les dégradations des statues et d’autres objets appartenant au patrimoine artistique et culturel mondial;</ins>
+      <ins>réprouve</ins>
+  
+
+  
+       les manifestations 
+  
+
+  
+      <del>massives récentes dans les capitales et villes européennes contre le racisme et la discrimination dans la foulée de la mort de George Floyd; souligne l’appel des manifestants à prendre position contre l’oppression et le racisme structurel en Europe; exprime sa solidarité, son respect et son soutien aux manifestants pacifiques, et pense que nos sociétés doivent mettre un terme au racisme et aux inégalités structurels; rappelle</del>
+  
+
+  
+      <ins>violentes et destructrices qui ont éclaté dans le monde entier à la suite du décès de George Floyd, qui a servi de prétexte à des violences, causant un préjudice économique, voire physique, inestimable; est consterné par la destruction et les pillages encouragés par, entre autres, la gauche et les groupes de la gauche radicale; condamne avec la plus grande fermeté tout acte de violence et de destruction; invite les personnes souhaitant manifester à</ins>
+  
+
+  
+       le 
+  
+
+  
+      <del>droit</del>
+  
+
+  
+      <ins>faire</ins>
+  
+
+  
+       de 
+  
+
+  
+      <del>chaque individu à manifester pacifiquement, consacré par les traités internationaux; regrette les différents incidents violents qui ont eu lieu</del>
+  
+
+  
+      <ins>manière pacifique; condamne le vandalisme et les dégradations des statues et d’autres objets appartenant au patrimoine artistique et culturel mondial</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">147</div>
+  <div class="against">533</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/115316">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(147/688 * 100%)">147</div>
-  
-  
-    <div class="-" style="width: calc(533/688 * 100%)">533</div>
-  
-  
-    <div class="0" style="width: calc(8/688 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115316">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°32 | 
+        
+            <article id="32">
+            <header>📝 Amendement n°32 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       11. 
@@ -1616,497 +1958,537 @@
       <ins>estime que le traitement de la mort de George Floyd et des manifestations qui ont suivi par les médias généralistes a été partial et a alimenté les clivages de la société;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">97</div>
+  <div class="against">537</div>
+  <div class="abstention">54</div>
+</span>
+
+  
+    
+    <a href="/voting/115321">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(97/688 * 100%)">97</div>
-  
-  
-    <div class="-" style="width: calc(537/688 * 100%)">537</div>
-  
-  
-    <div class="0" style="width: calc(54/688 * 100%)">54</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115321">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°33 | 
+        
+            <article id="33">
+            <header>📝 Amendement n°33 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">ID</div>
+                
 
-<section>
+<p>
 
   
       21. 
   
 
   
-      <del>condamne le profilage racial et ethnique utilisé par la police et les services répressifs et estime que la police et les services répressifs doivent se montrer exemplaires en matière de lutte contre le racisme et la discrimination; demande à l’UE et aux États membres de mettre au point des politiques et des mesures de lutte contre la discrimination et de mettre un terme au profilage racial ou ethnique sous toutes ses formes dans le cadre de l’application du droit pénal, des mesures de lutte contre le terrorisme et du contrôle de l’immigration. souligne, en particulier, que les nouvelles technologies devant être utilisées par les services répressifs doivent être conçues et utilisées de manière à ne pas créer de risques de discrimination pour les minorités raciales et ethniques; propose une action pour renforcer la formation des membres des forces de police et des services répressifs à des stratégies de lutte contre le racisme et la discrimination et pour prévenir et identifier le profilage racial, et y réagir; demande aux États membres de ne pas laisser les cas de brutalité policière et d’abus impunis mais de mener des enquêtes, d’engager des poursuites et de les sanctionner;</del>
+      <del>condamne</del>
   
 
   
-      <ins>rappelle le principe de la responsabilité pénale des auteurs d’infractions graves et, à cet égard, exprime sa solidarité vis-à-vis d’une majorité d’agents de police respectueux de la loi, qui accomplissent la mission fondamentale qu’est le maintien de la sécurité publique, la plupart du temps dans un environnement très hostile;</ins>
+      <ins>rappelle</ins>
+  
+
+  
+       le 
+  
+
+  
+      <del>profilage racial et ethnique utilisé par la police et les services répressifs et estime que la police et les services répressifs doivent se montrer exemplaires en matière de lutte contre le racisme et la discrimination; demande à l’UE et aux États membres de mettre au point des politiques et des mesures de lutte contre la discrimination et de mettre un terme au profilage racial ou ethnique sous toutes ses formes dans le cadre de l’application du droit pénal, des mesures de lutte contre le terrorisme et du contrôle de l’immigration. souligne, en particulier, que les nouvelles technologies devant être utilisées par les services répressifs doivent être conçues et utilisées de manière à ne pas créer de risques de discrimination pour les minorités raciales et ethniques; propose une action pour renforcer la formation des membres des forces de police et des services répressifs à des stratégies de lutte contre le racisme et la discrimination et pour prévenir et identifier le profilage racial, et y réagir; demande aux États membres de ne pas laisser les cas de brutalité policière et d’abus impunis mais de mener des enquêtes, d’engager des poursuites et de les sanctionner</del>
+  
+
+  
+      <ins>principe de la responsabilité pénale des auteurs d’infractions graves et, à cet égard, exprime sa solidarité vis-à-vis d’une majorité d’agents de police respectueux de la loi, qui accomplissent la mission fondamentale qu’est le maintien de la sécurité publique, la plupart du temps dans un environnement très hostile</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    ID
+    (🇫🇷 : Rassemblement national)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">162</div>
+  <div class="against">518</div>
+  <div class="abstention">7</div>
+</span>
+
+  
+    
+    <a href="/voting/115337">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(162/687 * 100%)">162</div>
-  
-  
-    <div class="-" style="width: calc(518/687 * 100%)">518</div>
-  
-  
-    <div class="0" style="width: calc(7/687 * 100%)">7</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115337">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°34 | 
+        
+            <article id="34">
+            <header>📝 Amendement n°34 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>W bis. considérant que certains de ces contrôles et arrestations se sont traduits par des morts sur le territoire de l’Union; que certains mouvements sociaux ont surgi en soutien aux familles des victimes;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">278</div>
+  <div class="against">389</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    
+    <a href="/voting/115373">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(278/672 * 100%)">278</div>
-  
-  
-    <div class="-" style="width: calc(389/672 * 100%)">389</div>
-  
-  
-    <div class="0" style="width: calc(5/672 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115373">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°35 | 
+        
+            <article id="35">
+            <header>📝 Amendement n°35 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>4 bis. demande au gouvernement américain de s’attaquer de toute urgence aux inégalités et aux discriminations raciales, notamment en défendant les droits de l’homme universels, en tant que fondement de toute démocratie, en adoptant un plan d’action contre le racisme et la discrimination, en mettant en œuvre des actions positives et en favorisant l’égalité des chances et l’accès des personnes de couleur aux ressources fondamentales, comme l’éducation et la justice;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">285</div>
+  <div class="against">395</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/115314">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(285/688 * 100%)">285</div>
-  
-  
-    <div class="-" style="width: calc(395/688 * 100%)">395</div>
-  
-  
-    <div class="0" style="width: calc(8/688 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115314">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°36 | 
+        
+            <article id="36">
+            <header>📝 Amendement n°36 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>8 bis. est extrêmement préoccupé par la militarisation du matériel et des tactiques de la police ces dernières années, en particulier aux États-Unis, mais aussi en Europe, qui conduisent à une escalade plus rapide de la violence de la part des forces de police, comme l’ont montré les manifestations qui ont suivi le meurtre de George Floyd; rappelle que la militarisation de la police ne contribue pas à améliorer la sûreté publique ni à réduire la criminalité, et qu’elle dégrade fortement les relations entre la police et la population;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">278</div>
+  <div class="against">401</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/115320">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(278/687 * 100%)">278</div>
-  
-  
-    <div class="-" style="width: calc(401/687 * 100%)">401</div>
-  
-  
-    <div class="0" style="width: calc(8/687 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115320">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°37 | 
+        
+            <article id="37">
+            <header>📝 Amendement n°37 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       17. condamne tous les types d’incidents de crime de haine et de discours de haine, tant en ligne que hors ligne, qui se produisent au quotidien au sein de l’Union européenne, et rappelle que 
   
 
   
-      <del>le racisme et la xénophobie sont des crimes, pas des opinions;</del>
+      <del>le racisme et la xénophobie sont des crimes, pas des opinions</del>
   
 
   
-      <ins>les discours racistes et xénophobes ne relèvent pas de la liberté d’expression;</ins>
+      <ins>les discours racistes et xénophobes ne relèvent pas de la liberté d’expression</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">365</div>
+  <div class="against">248</div>
+  <div class="abstention">75</div>
+</span>
+
+  
+    
+    <a href="/voting/115334">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(365/688 * 100%)">365</div>
-  
-  
-    <div class="-" style="width: calc(248/688 * 100%)">248</div>
-  
-  
-    <div class="0" style="width: calc(75/688 * 100%)">75</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115334">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°38 | 
+        
+            <article id="38">
+            <header>📝 Amendement n°38 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>21 bis. souligne qu’il y a lieu d’accorder une plus grande attention aux mesures telles que la délivrance, aux personnes arrêtées ou soumises à des contrôles d’identité, de reçus indiquant le cadre juridique des actions menées;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">291</div>
+  <div class="against">365</div>
+  <div class="abstention">32</div>
+</span>
+
+  
+    
+    <a href="/voting/115339">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(291/688 * 100%)">291</div>
-  
-  
-    <div class="-" style="width: calc(365/688 * 100%)">365</div>
-  
-  
-    <div class="0" style="width: calc(32/688 * 100%)">32</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115339">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°39 | 
+        
+            <article id="39">
+            <header>📝 Amendement n°39 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>21 ter. rappelle que les programmes qui ont tenté de prédire les comportements des personnes à Chicago et Los Angeles ont été arrêtés après que des audits consternants ont mis en évidence leur impact discriminatoire et leur échec dans la pratique, qu’il a été mis un terme à des systèmes prédictifs basés sur le lieu à Los Angeles et dans d’autres villes qui avaient initialement adopté cette technologie, et que les scandales autour de la reconnaissance faciale, de la technologie d’analyse des réseaux sociaux et de la surveillance à grande échelle à l’aide de capteurs mettent en garde contre le fait que la technologie ne permet pas de résoudre les questions plus profondes de race, de pouvoir et de vie privée qui sont au cœur des activités de la police d’aujourd’hui;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">276</div>
+  <div class="against">395</div>
+  <div class="abstention">17</div>
+</span>
+
+  
+    
+    <a href="/voting/115340">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(276/688 * 100%)">276</div>
-  
-  
-    <div class="-" style="width: calc(395/688 * 100%)">395</div>
-  
-  
-    <div class="0" style="width: calc(17/688 * 100%)">17</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115340">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°40 | 
+        
+            <article id="40">
+            <header>📝 Amendement n°40 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>13 bis. invite les États membres à dénoncer les traditions racistes et afrophobes, telles que la pratique du grimage en noir, et à s’en abstenir;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">415</div>
+  <div class="against">216</div>
+  <div class="abstention">55</div>
+</span>
+
+  
+    
+    <a href="/voting/115328">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(415/686 * 100%)">415</div>
-  
-  
-    <div class="-" style="width: calc(216/686 * 100%)">216</div>
-  
-  
-    <div class="0" style="width: calc(55/686 * 100%)">55</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115328">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°41 | 
+        
+            <article id="41">
+            <header>📝 Amendement n°41 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">Verts/ALE</div>
+                
 
-<section>
+<p>
 
   
       <ins>23 bis. rappelle que les citoyens ont le droit de filmer les scènes de violence policière en guise de preuve et qu’ils ne devraient jamais être menacés par la police ou l’autorité compétente lorsqu’ils filment, ni être obligés de détruire les preuves, ni être privés de leurs biens pour les empêcher de témoigner;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">434</div>
+  <div class="against">205</div>
+  <div class="abstention">49</div>
+</span>
+
+  
+    
+    <a href="/voting/115343">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(434/688 * 100%)">434</div>
-  
-  
-    <div class="-" style="width: calc(205/688 * 100%)">205</div>
-  
-  
-    <div class="0" style="width: calc(49/688 * 100%)">49</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115343">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°42 | 
+        
+            <article id="42">
+            <header>📝 Amendement n°42 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE,S&amp;D,Verts/ALE,GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       L. considérant que 
@@ -2121,23 +2503,23 @@
   
 
   
-      <del>démocratique a </del>
+      <del>démocratique a</del>
   
 
   
-      <ins>ont </ins>
+      <ins>ont</ins>
   
 
   
-      fermement rejeté le recours excessif à la force, condamné toutes les formes de violence et de 
+       fermement rejeté le recours excessif à la force, condamné toutes les formes de violence et de racisme
   
 
   
-      <del>racisme </del>
+      <del> </del>
   
 
   
-      <ins>racisme, </ins>
+      <ins>, </ins>
   
 
   
@@ -2148,845 +2530,947 @@
       <ins> considérant que les dirigeants des institutions de l’Union devraient condamner publiquement et sans réserve le racisme et les brutalités policières qui ont conduit à la mort de George Floyd et d’autres personnes;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Indépendant, Mouvement Démocrate)
+    , 
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    , 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+     et 
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">376</div>
+  <div class="against">286</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/115364">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(376/673 * 100%)">376</div>
-  
-  
-    <div class="-" style="width: calc(286/673 * 100%)">286</div>
-  
-  
-    <div class="0" style="width: calc(11/673 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115364">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°44 | 
+        
+            <article id="44">
+            <header>📝 Amendement n°44 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE,S&amp;D,Verts/ALE,GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       14. invite les dirigeants de l’UE à organiser un sommet européen contre le racisme consacré à la lutte contre la discrimination structurelle en Europe dans un avenir proche; presse la Commission de présenter une stratégie globale contre le racisme et la discrimination et un cadre de l’UE pour des plans d’action nationaux contre le racisme assorti d’un volet spécial sur la lutte contre ces phénomènes dans les forces de l’ordre, tout en adoptant une approche intersectorielle; 
   
 
   
-      <del>invite le Conseil à envisager la création d’</del>
+      <del>invite</del>
   
 
   
-      <ins>prie instamment le Conseil de créer </ins>
+      <ins>prie instamment</ins>
+  
+
+  
+       le Conseil 
+  
+
+  
+      <del>à envisager la création d’</del>
+  
+
+  
+      <ins>de créer </ins>
   
 
   
       une formation du Conseil consacrée à l’égalité; invite les institutions européennes à mettre en place un groupe de travail interinstitutionnel pour lutter contre le racisme et la discrimination au niveau de l’UE;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Indépendant, Mouvement Démocrate)
+    , 
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    , 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+     et 
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">364</div>
+  <div class="against">306</div>
+  <div class="abstention">18</div>
+</span>
+
+  
+    
+    <a href="/voting/115329">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(364/688 * 100%)">364</div>
-  
-  
-    <div class="-" style="width: calc(306/688 * 100%)">306</div>
-  
-  
-    <div class="0" style="width: calc(18/688 * 100%)">18</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115329">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°45 | 
+        
+            <article id="45">
+            <header>📝 Amendement n°45 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE,S&amp;D,Verts/ALE,GUE/NGL</div>
+                
 
-<section>
-
-  
-      24. demande à la Commission de créer un groupe d’experts indépendants chargé de l’élaboration d’un Code européen d’éthique de la police formulant un ensemble de principes et d’
-  
+<p>
 
   
-      <del>orientations,</del>
+      24. demande à la Commission de créer un groupe d’experts indépendants chargé de l’élaboration d’un Code européen d’éthique de la police formulant un ensemble de principes et d’orientations
   
 
   
-      <ins>orientations pour les objectifs, l’efficacité, la surveillance et le contrôle de la police dans des sociétés démocratiques régies par l’état de droit,</ins>
+      <ins> pour les objectifs, l’efficacité, la surveillance et le contrôle de la police dans des sociétés démocratiques régies par l’état de droit</ins>
   
 
   
-       ce qui 
+      , ce qui 
   
 
   
-      <del>pourrait </del>
+      <del>pourrait</del>
   
 
   
-      <ins>peut </ins>
+      <ins>peut</ins>
   
 
   
-      également aider les forces de police à appliquer correctement l’interdiction du racisme, de la discrimination et du profilage ethnique dans leur travail quotidien;
+       également aider les forces de police à appliquer correctement l’interdiction du racisme, de la discrimination et du profilage ethnique dans leur travail quotidien;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Indépendant, Mouvement Démocrate)
+    , 
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    , 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+     et 
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">343</div>
+  <div class="against">268</div>
+  <div class="abstention">77</div>
+</span>
+
+  
+    
+    <a href="/voting/115344">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(343/688 * 100%)">343</div>
-  
-  
-    <div class="-" style="width: calc(268/688 * 100%)">268</div>
-  
-  
-    <div class="0" style="width: calc(77/688 * 100%)">77</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115344">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°46 | 
+        
+            <article id="46">
+            <header>📝 Amendement n°46 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">RE,S&amp;D,Verts/ALE,GUE/NGL</div>
+                
 
-<section>
+<p>
 
   
       27. 
   
 
   
-      <del>rappelle qu’il importe d’assurer un financement suffisant de l’UE au profit des activités des acteurs de la société civile, y compris ceux qui œuvrent à la lutte contre le racisme et la discrimination;</del>
+      <del>rappelle qu’il importe d’assurer un financement suffisant de l’UE au profit des activités des acteurs de la société civile, y compris ceux qui œuvrent à la lutte contre le racisme et la discrimination</del>
   
 
   
-      <ins>appelle de ses vœux un engagement financier sérieux dans le prochain CFP pour lutter contre le racisme et la discrimination dans l’ensemble de l’Union;</ins>
+      <ins>appelle de ses vœux un engagement financier sérieux dans le prochain CFP pour lutter contre le racisme et la discrimination dans l’ensemble de l’Union</ins>
   
 
   
-       déplore que le montant proposé pour la rubrique «Justice, Droits et Valeurs» ait 
+      ; déplore que le montant proposé pour la rubrique «Justice, Droits et Valeurs» ait 
   
 
   
-      <del>encore </del>
+      <del>encore été</del>
   
 
   
-      été 
+      <ins>été considérablement</ins>
   
 
   
-      <ins>considérablement </ins>
+       réduit dans les propositions révisées de cadre financier pluriannuel
   
 
   
-      réduit dans les propositions révisées de cadre financier 
+      <ins> de la Commission; demande à la Commission d’apporter une véritable réponse aux préoccupations concernant la marge d’action toujours plus réduite de la société civile indépendante dans certains États membres; rappelle qu’il importe d’assurer un financement suffisant au profit des activités des acteurs de la société civile qui œuvrent à la lutte contre le racisme et les discriminations</ins>
   
 
   
-      <del>pluriannuel;</del>
-  
-
-  
-      <ins>pluriannuel de la Commission; demande à la Commission d’apporter une véritable réponse aux préoccupations concernant la marge d’action toujours plus réduite de la société civile indépendante dans certains États membres; rappelle qu’il importe d’assurer un financement suffisant au profit des activités des acteurs de la société civile qui œuvrent à la lutte contre le racisme et les discriminations;</ins>
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    RE
+    (🇫🇷 : Renaissance, Parti Radical, Indépendant, Mouvement Démocrate)
+    , 
+  
+    
+    S&amp;D
+    (🇫🇷 : Parti socialiste, Place publique, Nouvelle Donne)
+    , 
+  
+    
+    Verts/ALE
+    (🇫🇷 : Régions et Peuples Solidaires, Les Écologistes, Alliance Écologiste Indépendante)
+     et 
+  
+    
+    GUE/NGL
+    (🇫🇷 : La France Insoumise, Gauche républicaine et socialiste)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">356</div>
+  <div class="against">319</div>
+  <div class="abstention">13</div>
+</span>
+
+  
+    
+    <a href="/voting/115347">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(356/688 * 100%)">356</div>
-  
-  
-    <div class="-" style="width: calc(319/688 * 100%)">319</div>
-  
-  
-    <div class="0" style="width: calc(13/688 * 100%)">13</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115347">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°47 | 
+        
+            <article id="47">
+            <header>📝 Amendement n°47 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>B bis. considérant que Derek Chauvin a été inculpé pour violences ayant entraîné la mort et homicide volontaire sans préméditation, faits passibles d’une peine maximale combinée de 35 ans d’emprisonnement; que trois autres policiers ayant participé à l’arrestation de George Floyd ont été licenciés et sont accusés de coresponsabilité et de complicité;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">329</div>
+  <div class="against">348</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/115353">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(329/688 * 100%)">329</div>
-  
-  
-    <div class="-" style="width: calc(348/688 * 100%)">348</div>
-  
-  
-    <div class="0" style="width: calc(11/688 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115353">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°49 | 
+        
+            <article id="49">
+            <header>📝 Amendement n°49 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>C bis. considérant que ce décès a déclenché une vague de manifestations contre le racisme dans les 50 États des États-Unis et à Washington, qui a ensuite gagné plusieurs parties du monde; que des manifestants se sont réunis devant le poste de police de Minneapolis qui employait les agents ayant participé à l’arrestation de George Floyd et y ont mis le feu; que des affrontements violents ont éclaté dans de nombreuses villes des États-Unis entre la police et les manifestants et que la garde nationale a été déployée;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">337</div>
+  <div class="against">345</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    
+    <a href="/voting/115355">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(337/687 * 100%)">337</div>
-  
-  
-    <div class="-" style="width: calc(345/687 * 100%)">345</div>
-  
-  
-    <div class="0" style="width: calc(5/687 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115355">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°50 | 
+        
+            <article id="50">
+            <header>📝 Amendement n°50 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>C ter. considérant que la violence et les destructions ne permettront pas de remédier au problème persistant de discrimination et qu’elles doivent être vivement dénoncées; que les manifestants doivent exprimer leurs revendications de manière pacifique, et que la police et autres forces de sécurité doivent s’abstenir d’aggraver une situation déjà tendue par un recours excessif à la force;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">331</div>
+  <div class="against">306</div>
+  <div class="abstention">51</div>
+</span>
+
+  
+    
+    <a href="/voting/115356">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(331/688 * 100%)">331</div>
-  
-  
-    <div class="-" style="width: calc(306/688 * 100%)">306</div>
-  
-  
-    <div class="0" style="width: calc(51/688 * 100%)">51</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115356">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°51 | 
+        
+            <article id="51">
+            <header>📝 Amendement n°51 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>I bis. considérant que comme le prescrit l’article 10 de la CEDH, l’exercice de ces libertés comportant des devoirs et des responsabilités, il peut être soumis à certaines formalités, conditions, restrictions ou sanctions prévues par la loi, qui constituent des mesures nécessaires, dans une société démocratique, à la sécurité nationale, à l’intégrité territoriale ou à la sûreté publique, à la défense de l’ordre et à la prévention du crime, à la protection de la santé ou de la morale, à la protection de la réputation ou des droits d’autrui, pour empêcher la divulgation d’informations confidentielles ou pour garantir l’autorité et l’impartialité du pouvoir judiciaire;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">357</div>
+  <div class="against">324</div>
+  <div class="abstention">7</div>
+</span>
+
+  
+    
+    <a href="/voting/115362">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(357/688 * 100%)">357</div>
-  
-  
-    <div class="-" style="width: calc(324/688 * 100%)">324</div>
-  
-  
-    <div class="0" style="width: calc(7/688 * 100%)">7</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115362">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°52 | 
+        
+            <article id="52">
+            <header>📝 Amendement n°52 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>I ter. considérant que, conformément à l’article 4, paragraphe 2, du traité UE, l’Union européenne «respecte les fonctions essentielles [des États membres], notamment celles qui ont pour objet d’assurer leur intégrité territoriale, de maintenir l’ordre public et de sauvegarder la sécurité nationale»; qu’en particulier, «la sécurité nationale reste de la seule responsabilité de chaque État membre»;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">351</div>
+  <div class="against">320</div>
+  <div class="abstention">16</div>
+</span>
+
+  
+    
+    <a href="/voting/115363">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(351/687 * 100%)">351</div>
-  
-  
-    <div class="-" style="width: calc(320/687 * 100%)">320</div>
-  
-  
-    <div class="0" style="width: calc(16/687 * 100%)">16</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115363">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°53 | 
+        
+            <article id="53">
+            <header>📝 Amendement n°53 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>5 bis. condamne les actes de pillage, d’incendie criminel, de vandalisme et de destruction de biens publics et privées perpétrés par certains manifestants violents; dénonce les forces extrémistes et antidémocratiques qui exploitent à dessein les manifestations pacifiques pour aggraver les conflits dans l’intention de répandre les troubles et l’anarchie;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">379</div>
+  <div class="against">301</div>
+  <div class="abstention">8</div>
+</span>
+
+  
+    
+    <a href="/voting/115319">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(379/688 * 100%)">379</div>
-  
-  
-    <div class="-" style="width: calc(301/688 * 100%)">301</div>
-  
-  
-    <div class="0" style="width: calc(8/688 * 100%)">8</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115319">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°54 | 
+        
+            <article id="54">
+            <header>📝 Amendement n°54 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       <ins>27 bis. condamne le fait que, partout dans le monde, les forces politiques extrémistes et xénophobes détournent de plus en plus les faits historiques et les données statistiques et scientifiques et emploient une symbolique et une rhétorique qui rappellent par certains aspects la propagande totalitaire, à savoir le racisme, l’antisémitisme et la haine à l’égard des minorités;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">349</div>
+  <div class="against">313</div>
+  <div class="abstention">25</div>
+</span>
+
+  
+    
+    <a href="/voting/115352">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(349/687 * 100%)">349</div>
-  
-  
-    <div class="-" style="width: calc(313/687 * 100%)">313</div>
-  
-  
-    <div class="0" style="width: calc(25/687 * 100%)">25</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115352">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°55 | 
+        
+            <article id="55">
+            <header>📝 Amendement n°55 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       17. condamne tous les types d’incidents de crime de haine et de discours de haine, tant en ligne que hors ligne, qui se produisent au quotidien 
   
 
   
-      <del>au sein de l’Union européenne,</del>
+      <del>au sein de l’Union européenne</del>
   
 
   
-      <ins>partout dans le monde,</ins>
+      <ins>partout dans le monde</ins>
   
 
   
-       et rappelle que le racisme et la xénophobie sont des crimes, pas des opinions;
+      , et rappelle que le racisme et la xénophobie sont des crimes, pas des opinions;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">331</div>
+  <div class="against">344</div>
+  <div class="abstention">13</div>
+</span>
+
+  
+    
+    <a href="/voting/115335">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(331/688 * 100%)">331</div>
-  
-  
-    <div class="-" style="width: calc(344/688 * 100%)">344</div>
-  
-  
-    <div class="0" style="width: calc(13/688 * 100%)">13</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115335">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°56 | 
+        
+            <article id="56">
+            <header>📝 Amendement n°56 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       F. considérant que 
   
 
   
-      <del>le président, Donald Trump, a fait déployer la garde nationale;</del>
+      <del>le président, Donald Trump, a fait déployer la garde nationale</del>
   
 
   
-      <ins>la garde nationale a été déployée dans les États dont les gouverneurs avaient sollicité son déploiement;</ins>
+      <ins>la garde nationale a été déployée dans les États dont les gouverneurs avaient sollicité son déploiement</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">327</div>
+  <div class="against">356</div>
+  <div class="abstention">5</div>
+</span>
+
+  
+    
+    <a href="/voting/115359">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(327/688 * 100%)">327</div>
-  
-  
-    <div class="-" style="width: calc(356/688 * 100%)">356</div>
-  
-  
-    <div class="0" style="width: calc(5/688 * 100%)">5</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115359">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°57 | 
+        
+            <article id="57">
+            <header>📝 Amendement n°57 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       G. considérant que la réaction et la rhétorique utilisée par le président des États-Unis, notamment la menace 
   
 
   
-      <del>de déployer </del>
+      <del>de déployer</del>
   
 
   
-      <ins>d&#39;un éventuel déploiement de </ins>
+      <ins>d&#39;un éventuel déploiement de</ins>
   
 
   
-      l’armée américaine si les manifestations ne cessaient pas, 
+       l’armée américaine si les manifestations ne cessaient pas, 
   
 
   
-      <del>sont venues jeter de l’huile sur le feu et n’ont servi qu’à conforter les manifestants dans leur indignation;</del>
+      <del>sont venues jeter de l’huile sur le feu et n’ont servi qu’à conforter les manifestants dans leur indignation</del>
   
 
   
-      <ins>pourraient avoir attiser ces manifestations;</ins>
+      <ins>pourraient avoir attiser ces manifestations</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">240</div>
+  <div class="against">375</div>
+  <div class="abstention">73</div>
+</span>
+
+  
+    
+    <a href="/voting/115360">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(240/688 * 100%)">240</div>
-  
-  
-    <div class="-" style="width: calc(375/688 * 100%)">375</div>
-  
-  
-    <div class="0" style="width: calc(73/688 * 100%)">73</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115360">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°58 | 
+        
+            <article id="58">
+            <header>📝 Amendement n°58 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       T. considérant que, dans 
   
 
   
-      <del>toute l’Union,</del>
+      <del>toute l’Union</del>
   
 
   
-      <ins>le monde entier,</ins>
+      <ins>le monde entier</ins>
   
 
   
-       certaines personnalités écoutées par l’opinion et des femmes et hommes politiques adoptent des positionnements racistes et xénophobes et entretiennent ainsi un climat social propice au racisme, aux discriminations et aux délits et crimes inspirés par la haine; que ce climat est alimenté par des mouvements populistes et extrémistes qui s’efforcent de diviser nos sociétés; que ces actes vont à l’encontre des valeurs communes européennes que tous les États membres se sont engagés à défendre;
+      , certaines personnalités écoutées par l’opinion et des femmes et hommes politiques adoptent des positionnements racistes et xénophobes et entretiennent ainsi un climat social propice au racisme, aux discriminations et aux délits et crimes inspirés par la haine; que ce climat est alimenté par des mouvements populistes et extrémistes qui s’efforcent de diviser nos sociétés; que ces actes vont à l’encontre des valeurs communes européennes que tous les États membres se sont engagés à défendre;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">271</div>
+  <div class="against">370</div>
+  <div class="abstention">32</div>
+</span>
+
+  
+    
+    <a href="/voting/115368">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(271/673 * 100%)">271</div>
-  
-  
-    <div class="-" style="width: calc(370/673 * 100%)">370</div>
-  
-  
-    <div class="0" style="width: calc(32/673 * 100%)">32</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115368">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°59 | 
+        
+            <article id="59">
+            <header>📝 Amendement n°59 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       U. considérant que le travail des forces de police et de maintien de l’ordre consiste à assurer la sécurité des personnes dans l’Union et à les protéger de la criminalité, du terrorisme et des actes ou activités illicites, ainsi qu’à appliquer la loi, parfois dans des circonstances difficiles;
@@ -2996,289 +3480,297 @@
       <ins> que les policiers risquent leur vie pour protéger les autres;</ins>
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">626</div>
+  <div class="against">34</div>
+  <div class="abstention">11</div>
+</span>
+
+  
+    
+    <a href="/voting/115370">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(626/671 * 100%)">626</div>
-  
-  
-    <div class="-" style="width: calc(34/671 * 100%)">34</div>
-  
-  
-    <div class="0" style="width: calc(11/671 * 100%)">11</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115370">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°60 | 
+        
+            <article id="60">
+            <header>📝 Amendement n°60 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       V. considérant que le racisme, la discrimination et le recours excessif ou létal à la force par la police existent également dans l’Union; 
   
 
   
-      <del>que les autorités de maintien de l’ordre de plusieurs États membres ont été critiquées pour avoir recouru de façon excessive </del>
+      <del>que les autorités de maintien de l’ordre de plusieurs États membres ont été critiquées pour avoir recouru de façon excessive</del>
   
 
   
-      <ins>qu’il convient de condamner fermement le recours disproportionné </ins>
+      <ins>qu’il convient de condamner fermement le recours disproportionné</ins>
   
 
   
-      à la force; que, lorsqu’une personne est contrôlée par la police ou par d’autres agents de l’État, le recours à la force physique qui n’est pas rendu strictement nécessaire par son comportement porte atteinte à la dignité humaine et constitue, en principe, une violation du droit stipulé à l’article 3 de la convention européenne des droits de l’homme10; qu’il convient de condamner fermement le recours disproportionné à la 
+       à la force; que, lorsqu’une personne est contrôlée par la police ou par d’autres agents de l’État, le recours à la force physique qui n’est pas rendu strictement nécessaire par son comportement porte atteinte à la dignité humaine et constitue, en principe, une violation du droit stipulé à l’article 3 de la convention européenne des droits de l’homme10; qu’il convient de condamner fermement le recours disproportionné à la
   
 
   
-      <del> force; </del>
+      <del>  force;   _____________________  </del>
   
 
   
-      <ins>force;</ins>
+      <ins> force;  _____________________   </ins>
   
 
   
-        _____________________  
+      10 Arrêt de la CJUE du 17 avril 2012
   
 
   
-      <ins> </ins>
+      <del>, </del>
   
 
   
-      10 Arrêt de la CJUE du 17 avril 2012, 
-  
-
-  
-      <ins> </ins>
+      <ins>,  </ins>
   
 
   
       affaire Rizvanov c. Azerbaïdjan, paragraphe 49.
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">282</div>
+  <div class="against">360</div>
+  <div class="abstention">31</div>
+</span>
+
+  
+    
+    <a href="/voting/115371">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(282/673 * 100%)">282</div>
-  
-  
-    <div class="-" style="width: calc(360/673 * 100%)">360</div>
-  
-  
-    <div class="0" style="width: calc(31/673 * 100%)">31</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115371">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°61 | 
+        
+            <article id="61">
+            <header>📝 Amendement n°61 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       4. invite le gouvernement et les autorités des États-Unis à prendre des mesures décisives pour lutter contre le racisme et les inégalités structurels dans le pays, lesquels se reflètent dans 
   
 
   
-      <del>la </del>
+      <del>la</del>
   
 
   
-      <ins>les affaires concrètes de </ins>
+      <ins>les affaires concrètes de</ins>
   
 
   
-      brutalité policière; condamne les 
+       brutalité policière; condamne les 
   
 
   
-      <del>interventions </del>
+      <del>interventions</del>
   
 
   
-      <ins>excès </ins>
+      <ins>excès</ins>
   
 
   
-      de la police contre des manifestants et des journalistes amé
+       de la police contre des manifestants et des journalistes américains
   
 
   
-      <del>ricains, et regrette vivement la menace du Président américain de déployer l’armée américaine;</del>
+      <del>, et regrette vivement la menace du Président américain de déployer l’armée américaine</del>
   
 
   
-      <ins>ricains pacifiques;</ins>
+      <ins> pacifiques</ins>
+  
+
+  
+      ;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">257</div>
+  <div class="against">398</div>
+  <div class="abstention">32</div>
+</span>
+
+  
+    
+    <a href="/voting/115312">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(257/687 * 100%)">257</div>
-  
-  
-    <div class="-" style="width: calc(398/687 * 100%)">398</div>
-  
-  
-    <div class="0" style="width: calc(32/687 * 100%)">32</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115312">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°62 | 
+        
+            <article id="62">
+            <header>📝 Amendement n°62 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       5. soutient les manifestations massives récentes dans les capitales et villes 
   
 
   
-      <del>européennes </del>
+      <del>européennes</del>
   
 
   
-      <ins>du monde entier </ins>
+      <ins>du monde entier</ins>
   
 
   
-      contre le racisme et la discrimination dans la foulée de la mort de George Floyd; souligne l’appel des manifestants à prendre position contre l’oppression et le racisme structurel en Europe; exprime sa solidarité, son respect et son soutien aux manifestants pacifiques, et pense que nos sociétés doivent mettre un terme au racisme et aux inégalités structurels; rappelle le droit de chaque individu à manifester pacifiquement, consacré par les traités internationaux; 
+       contre le racisme et la discrimination dans la foulée de la mort de George Floyd; souligne l’appel des manifestants à prendre position contre l’oppression et le racisme structurel en Europe; exprime sa solidarité, son respect et son soutien aux manifestants pacifiques, et pense que nos sociétés doivent mettre un terme au racisme et aux inégalités structurels; rappelle le droit de chaque individu à manifester pacifiquement, consacré par les traités internationaux; 
   
 
   
-      <del>regrette </del>
+      <del>regrette</del>
   
 
   
-      <ins>condamne </ins>
+      <ins>condamne</ins>
   
 
   
-      les différents incidents violents qui ont eu lieu;
+       les différents incidents violents qui ont eu lieu;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">371</div>
+  <div class="against">298</div>
+  <div class="abstention">19</div>
+</span>
+
+  
+    
+    <a href="/voting/115317">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(371/688 * 100%)">371</div>
-  
-  
-    <div class="-" style="width: calc(298/688 * 100%)">298</div>
-  
-  
-    <div class="0" style="width: calc(19/688 * 100%)">19</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115317">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°63 | 
+        
+            <article id="63">
+            <header>📝 Amendement n°63 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       15. invite 
@@ -3292,49 +3784,51 @@
       les États membres à promouvoir les politiques anti- discriminatoires dans tous les domaines et à élaborer des plans d’action nationaux contre le racisme qui abordent des domaines tels que l’éducation, le logement, la santé, l’emploi, la police, les services sociaux, le système judiciaire et la participation et la représentation politiques, en coopération étroite avec la société civile et les communautés concernées;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">292</div>
+  <div class="against">382</div>
+  <div class="abstention">14</div>
+</span>
+
+  
+    
+    <a href="/voting/115331">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(292/688 * 100%)">292</div>
-  
-  
-    <div class="-" style="width: calc(382/688 * 100%)">382</div>
-  
-  
-    <div class="0" style="width: calc(14/688 * 100%)">14</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115331">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°64 | 
+        
+            <article id="64">
+            <header>📝 Amendement n°64 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       22. condamne le recours 
@@ -3349,60 +3843,62 @@
   
 
   
-      <del>des </del>
+      <del>des</del>
   
 
   
-      <ins>de certaines </ins>
+      <ins>de certaines</ins>
   
 
   
-      autorités de l’État; encourage les autorités compétentes à garantir une enquête transparente, impartiale, indépendante et efficace en cas de soupçon ou d’allégation de recours disproportionné à la force; rappelle que les services répressifs doivent toujours rendre compte de l’exercice de leurs fonctions et de leur conformité avec les cadres juridiques et opérationnels applicables, en particulier les principes de base des Nations unies sur le recours à la force et l&#39;utilisation des armes à feu par les responsables de l&#39;application des lois;
+       autorités de l’État; encourage les autorités compétentes à garantir une enquête transparente, impartiale, indépendante et efficace en cas de soupçon ou d’allégation de recours disproportionné à la force; rappelle que les services répressifs doivent toujours rendre compte de l’exercice de leurs fonctions et de leur conformité avec les cadres juridiques et opérationnels applicables, en particulier les principes de base des Nations unies sur le recours à la force et l&#39;utilisation des armes à feu par les responsables de l&#39;application des lois;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">302</div>
+  <div class="against">382</div>
+  <div class="abstention">4</div>
+</span>
+
+  
+    
+    <a href="/voting/115341">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(302/688 * 100%)">302</div>
-  
-  
-    <div class="-" style="width: calc(382/688 * 100%)">382</div>
-  
-  
-    <div class="0" style="width: calc(4/688 * 100%)">4</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115341">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°65 | 
+        
+            <article id="65">
+            <header>📝 Amendement n°65 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       24. 
@@ -3421,107 +3917,109 @@
   
 
   
-      <del>formulant </del>
+      <del>formulant</del>
   
 
   
-      <ins>qui comporteraient </ins>
+      <ins>qui comporteraient</ins>
   
 
   
-      un ensemble de principes et 
+       un ensemble de principes et 
   
 
   
-      <del>d’orientations, ce qui pourrait également aider les forces de police à appliquer correctement l’interdiction du racisme, de la discrimination et du profilage ethnique </del>
+      <del>d’orientations, ce qui pourrait également aider les forces de police à appliquer correctement l’interdiction du racisme, de la discrimination et du profilage ethnique</del>
   
 
   
-      <ins>pourraient aider les forces de police </ins>
+      <ins>pourraient aider les forces de police</ins>
   
 
   
-      dans leur travail quotidien;
+       dans leur travail quotidien;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">281</div>
+  <div class="against">360</div>
+  <div class="abstention">47</div>
+</span>
+
+  
+    
+    <a href="/voting/115345">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(281/688 * 100%)">281</div>
-  
-  
-    <div class="-" style="width: calc(360/688 * 100%)">360</div>
-  
-  
-    <div class="0" style="width: calc(47/688 * 100%)">47</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115345">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°66 | 
+        
+            <article id="66">
+            <header>📝 Amendement n°66 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
-
-  
-      12. invite les institutions et les États membres de l’Union européenne à reconnaître officiellement les injustices du passé et les crimes contre l’humanité commis contre les personnes 
-  
+<p>
 
   
-      <del>noires et </del>
+      12. invite les institutions et les États membres de l’Union européenne à reconnaître officiellement les injustices du passé et les crimes contre l’humanité commis contre les personnes noires
   
 
   
-      <ins>noires, </ins>
+      <del> et </del>
   
 
   
-      les personnes de 
+      <ins>, </ins>
   
 
   
-      <del>couleur; déclare que la traite des esclaves </del>
+      les personnes de couleur
   
 
   
-      <ins>couleur et les Roms; déclare que l&#39;esclavage </ins>
+      <del>; déclare que la traite des esclaves</del>
   
 
   
-      est un crime contre l’humanité et demande que le 2 décembre soit désigné Journée européenne de commémoration de l’abolition de la traite des esclaves; encourage les États membres à inscrire l’histoire des personnes 
+      <ins> et les Roms; déclare que l&#39;esclavage</ins>
   
 
   
-      <del>noires et </del>
+       est un crime contre l’humanité et demande que le 2 décembre soit désigné Journée européenne de commémoration de l’abolition de la traite des esclaves; encourage les États membres à inscrire l’histoire des personnes noires
   
 
   
-      <ins>noires, </ins>
+      <del> et </del>
+  
+
+  
+      <ins>, </ins>
   
 
   
@@ -3536,49 +4034,51 @@
       dans leurs programmes scolaires;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">348</div>
+  <div class="against">312</div>
+  <div class="abstention">28</div>
+</span>
+
+  
+    
+    <a href="/voting/115323">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(348/688 * 100%)">348</div>
-  
-  
-    <div class="-" style="width: calc(312/688 * 100%)">312</div>
-  
-  
-    <div class="0" style="width: calc(28/688 * 100%)">28</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115323">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
-    
-
-    
-    
-    <article>
-    <header>📝 Amendement n°67 | 
+        
+            <article id="67">
+            <header>📝 Amendement n°67 | 
 
 ❌️ Rejeté
 
 </header>
-    
-        
+            
+                <div class="hidden">PPE</div>
+                
 
-<section>
+<p>
 
   
       14. invite les dirigeants de l’UE à organiser un sommet européen contre le racisme consacré à la lutte contre la discrimination 
@@ -3593,65 +4093,104 @@
   
 
   
-      <del>envisager la création d’une formation du Conseil consacrée à l’égalité;</del>
+      <del>envisager la création d’une formation du Conseil consacrée à l’égalité</del>
   
 
   
-      <ins>adopter une stratégie transversale et efficace en matière d&#39;égalité dans toutes les formations du Conseil;</ins>
+      <ins>adopter une stratégie transversale et efficace en matière d&#39;égalité dans toutes les formations du Conseil</ins>
   
 
   
-       invite les institutions européennes à mettre en place un groupe de travail interinstitutionnel pour lutter contre le racisme et la discrimination au niveau de l’UE;
+      ; invite les institutions européennes à mettre en place un groupe de travail interinstitutionnel pour lutter contre le racisme et la discrimination au niveau de l’UE;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  
     
-    <footer>
+    PPE
+    (🇫🇷 : Les Républicains, Les centristes)
+    
+  
+
+</i>
+                <footer>
+
+  
+<span class="votes inline">
+  <div class="for">220</div>
+  <div class="against">396</div>
+  <div class="abstention">71</div>
+</span>
+
+  
+    
+    <a href="/voting/115330">📣 Vote nominal : voir le détail</a>
+  
+
+</footer>
+            
+            </article>
         
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(220/687 * 100%)">220</div>
-  
-  
-    <div class="-" style="width: calc(396/687 * 100%)">396</div>
-  
-  
-    <div class="0" style="width: calc(71/687 * 100%)">71</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/115330">📣 Vote nominal : voir le détail</a>
-            
+    
         
-    </footer>
-    </article>
+        
     
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-    
-    
 
+    <section>
     
     
-
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2020/2685(RSP)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/B-9-2020-0196_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2020-06-17-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+        <article>
+            <div class="hidden">96952</div>
+            
+            <header><b>Sylvie GUILLAUME</b> | Parti socialiste</header>
+            
+                <p> – Madame la Présidente, je partage ce que de nombreux orateurs précédents ont dit de leur dégoût à l’égard du racisme et de la discrimination qui durent depuis de trop longues années, avec des indicateurs qui continuent d’être extrêmement inquiétants, comme la hausse du nombre de décès pendant une interpellation ou encore du nombre d’enquêtes pour injures ou discriminations.</p>
+            
+                <p>Du coup, je me centre sur trois sujets. D’abord, le texte phare, la directive contre les discriminations, la directive anti-discrimination, qui est encalminée depuis onze ans car le Conseil ne veut pas évoluer au prétexte sans doute que lutter contre toutes les discriminations serait trop cher. Il faut que cela cesse, soit avec des États membres qui mesurent mieux la gravité des enjeux, soit avec une nouvelle proposition législative.</p>
+            
+                <p>Ensuite, le texte de notre résolution manque, de mon point de vue, de référence à l’égard des acteurs indispensables que sont les ONG de lutte contre le racisme et les discriminations. Je crois qu’en les soutenant mieux, on pourrait éviter certaines dérives communautaristes.</p>
+            
+                <p>Enfin, le texte aborde la question des statistiques ethniques. Je crois qu’il faut être très prudent, de ce point de vue, d’abord pour un souci constitutionnel dans certains États membres et aussi parce que ces statistiques sont des photographies à un moment T qui ne peuvent à aucun moment se substituer à de réelles propositions économiques et sociales de réduction des inégalités.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197547</div>
+            
+            <header><b>Irène TOLLERET</b> | Renaissance</header>
+            
+                <p> – Madame la Présidente, mes chers collègues, je me félicite que nous ayons ce débat aujourd’hui.</p>
+            
+                <p>Dans cette assemblée, trop souvent, des partis néofascistes ou néonazis, pourtant incroyablement minoritaires, profitent de n’importe quel débat pour déverser leur rhétorique de haine de l’autre.</p>
+            
+                <p>Le débat d’aujourd’hui est donc très important pour rappeler un fait capital à nos concitoyens victimes de racisme en Europe: nous, eurodéputés, nous sommes là pour eux! Nous sommes là pour contrer ce discours de division. Nous sommes là pour parler plus fort que les mini-Trump, les demi-Bolsonaro, les ventriloques de Le Pen ou les Salvini au petit pied. Vote après vote, débat après débat, résolution après résolution, nous ne lâcherons pas une virgule, pas un mot, aux idéologies racialistes et xénophobes.</p>
+            
+                <p>Le projet européen s’est construit sur la réconciliation avec l’autre, l’Europe est le meilleur bouclier contre les droites extrêmes racistes. Au centre de notre identité, nous reconnaissons la fierté et la force de notre diversité. Non au racisme, unis dans la diversité, nous sommes plus forts, nous sommes plus beaux.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

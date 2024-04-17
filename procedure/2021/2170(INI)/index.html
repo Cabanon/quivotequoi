@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>La pauvreté des femmes en Europe</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,23 +22,34 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>La pauvreté des femmes en Europe</h2>
-
 
 
 
@@ -50,32 +62,24 @@
 
 </header>
     
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
+    
+        <b>🇪🇺 Votes de tous les députés européens</b>
         <section>
 
-<div class="votes ">
+<div class="votes">
   
-    <div class="+" style="width: calc(535/632 * 100%)">535</div>
-  
-  
-    <div class="-" style="width: calc(18/632 * 100%)">18</div>
+    <div class="for" style="width: calc(535/632 * 100%)">535</div>
   
   
-    <div class="0" style="width: calc(79/632 * 100%)">79</div>
+    <div class="against" style="width: calc(18/632 * 100%)">18</div>
+  
+  
+    <div class="abstention" style="width: calc(79/632 * 100%)">79</div>
   
 </div>
 </section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
         <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
+        <b>🇫🇷 Votes des députés français</b>
         
         
             <section>
@@ -84,31 +88,22 @@
 
 <div class="votes">
   
-    <div class="+" style="width: calc(67/67 * 100%)">67</div>
+    <div class="for" style="width: calc(67/67 * 100%)">67</div>
   
   
   
 </div>
  
 </section>
-            <a href="/voting/146625">🗳 Voir le détail du vote</a>
+            <a role="button" href="/voting/146625">🗳 Voir le détail du vote</a>
         
     
     </article>
 
+
 <h3>🏷 Sujets</h3>
 <ul>
     
-    
-        
-        
-            <li>Condition et droits de la femme</li>
-        
-    
-        
-        
-            <li>Inclusion sociale, pauvreté, revenu minimum</li>
-        
     
         
         
@@ -120,133 +115,407 @@
             <li>Cohésion économique, sociale et territoriale</li>
         
     
+        
+        
+            <li>Inclusion sociale, pauvreté, revenu minimum</li>
+        
+    
+        
+        
+            <li>Condition et droits de la femme</li>
+        
+    
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2170(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0194_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-07-05-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,124760,197691,131580,197680,182995,197683,197628,94649,197627,197626,197597,197686,197623,197687,197629,197615,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,197511,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°1 | 
+        
+        
+            <article id="1">
+            <header>📝 Amendement n°1 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>AK bis. considérant que la guerre de la Russie contre l’Ukraine se traduit par une nouvelle augmentation de la pauvreté, en particulier chez les femmes, tant parce qu’elle contraint les femmes et les enfants ukrainiens à fuir vers les pays voisins qu’en raison de la hausse des prix des services et des biens de base que tous les Européens subissent, mais qui touche particulièrement ceux qui disposent déjà de moins de ressources;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°2 | 
+        
+        
+            <article id="2">
+            <header>📝 Amendement n°2 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       <ins>45 bis. invite la Commission et les États membres à analyser l’impact inégal selon le sexe de l’inflation et des hausses des prix de l’énergie déclenchées par la guerre de la Russie contre l’Ukraine et à tenir compte de ce phénomène lors de la mise en œuvre de mesures visant à atténuer leur incidence sur les plus pauvres;</ins>
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°3 | 
+        
+        
+            <article id="3">
+            <header>📝 Amendement n°3 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden">197536</div>
+                
 
-<section>
-
-  
-      3. souligne qu’il est important de mettre en place des politiques qui tiennent compte du défi démographique et promeuvent l’égalité des chances pour tous, en particulier pour les personnes qui sont les plus touchées par la crise, 
-  
+<p>
 
   
-      <ins>comme les groupes vulnérables, les familles dans toute leur diversité, les jeunes et les personnes âgées, </ins>
+      3. souligne qu’il est important de mettre en place des politiques qui tiennent compte du défi démographique et promeuvent l’égalité des chances pour tous, en particulier pour les personnes qui sont les plus touchées par la crise,
   
 
   
-      et de s’assurer que tous les débouchés commerciaux créés par la révolution technologique et numérique actuelle sont axés sur les femmes;
+      <ins> comme les groupes vulnérables, les familles dans toute leur diversité, les jeunes et les personnes âgées,</ins>
+  
+
+  
+       et de s’assurer que tous les débouchés commerciaux créés par la révolution technologique et numérique actuelle sont axés sur les femmes;
   
  
-</section>
+</p>
 
+                <i>Déposé par 
+
+
+  des députés
+  
+    dont 
     
-    <footer>
-        
-            
-
-<div class="votes small">
-  
-    <div class="+" style="width: calc(360/633 * 100%)">360</div>
-  
-  
-    <div class="-" style="width: calc(76/633 * 100%)">76</div>
-  
-  
-    <div class="0" style="width: calc(197/633 * 100%)">197</div>
-  
-</div>
-
-            
-                
-                
-                    
-                
-                <a href="/voting/146724">📣 Vote nominal : voir le détail</a>
-            
-        
-    </footer>
-    </article>
+      Nathalie COLIN-OESTERLÉ (LC)
     
+  
 
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2021/2170(INI)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+</i>
+                <footer>
+
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2022-0194_FR.html" target="_blank">📜 Texte et amendements</a></li>
+<span class="votes inline">
+  <div class="for">360</div>
+  <div class="against">76</div>
+  <div class="abstention">197</div>
+</span>
+
   
+    
+    <a href="/voting/146724">📣 Vote nominal : voir le détail</a>
   
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2022-07-05-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+
+</footer>
+            
+            </article>
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Rassemblement national</header>
+            . – Je me suis abstenu sur ce texte qui, s’il dresse des constats justes sur le statut des femmes en Europe, s’appuie sur l’idéologie du genre et promeut des revendications idéologiques LGBT et immigrationnistes. Il y a néanmoins de bonnes choses sur les mariages forcés et sur la précarité des mères célibataires.
+        </article>
+    
+        <article>
+            <div class="hidden">124771</div>
+            
+            <header><b>Dominique BILDE</b> | Rassemblement national</header>
+            La question de la condition des femmes est un des enjeux majeurs actuels. Dans ce rapport, on peut constater que les femmes sont plus touchées par la pauvreté que les hommes et qu’un écart se creuse. Cela touche d’autant plus les familles monoparentales. Le covid-19 a servi de sonnette d’alarme pour pointer du doigt les situations des femmes dans la zone euro, dont les mères célibataires, les femmes victimes de violences et d’autres encore. Le rapport, bien qu’il soit genré, met en avant des revendications telles qu’un meilleur accès aux services publics, un investissement dans l’éducation et la lutte contre les harcèlements sur le lieu de travail. On y retrouve aussi la promotion des égalités, que ce soit dans le travail ou bien sur le salaire, ainsi qu’une lutte contre les mutilations génitales, les mariages précoces ou forcés et les trafics d’êtres humains. Pour ces raisons, j’ai décidé de voter pour ce rapport, afin de faire avancer cet enjeu social si important.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            . – Cette résolution s’appuie sur des statistiques démontrant que les femmes sont plus touchées par la pauvreté que les hommes en Europe. Elle s’interroge sur les causes et conséquences de ce taux plus élevé selon le sexe et met en avant certaines pistes d’explications comme les écarts de rémunération, de pension et de soins, ou encore les ménages monoparentaux. Des mesures sont proposées afin de s’assurer que les femmes ne soient pas touchées par la pauvreté en raison de discriminations. Partageant les ambitions de ce texte, j’ai voté en sa faveur.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté pour ce rapport car il invite les États membres à se saisir du sujet préoccupant des femmes pauvres et de leurs enfants en Europe. Il est urgent de réagir car l’inflation du prix des produits de première nécessité expose ces femmes à des difficultés encore plus graves.
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de cette résolution sur la pauvreté des femmes en Europe. Le texte rappelle qu’au sein de l’UE, le taux de pauvreté des femmes est supérieur à celui des hommes. Pour combattre cette situation, il invite la Commission à élaborer une stratégie européenne ambitieuse de lutte contre la pauvreté à l’horizon 2030, assortie d’objectifs concrets, notamment de lutte contre la pauvreté des femmes et de rupture du cycle de transmission intergénérationnelle des risques de pauvreté. Il suggère de réduire plus efficacement les inégalités auxquelles les femmes sont confrontées, en éliminant leurs principales composantes, en particulier les obstacles sur le marché du travail, ainsi qu’à l’accès à des services abordables et de qualité tels que les services de garde d’enfants et de soins de longue durée.
+        </article>
+    
+        <article>
+            <div class="hidden">24594</div>
+            
+            <header><b>Anne SANDER</b> | Les Républicains</header>
+            J&#39;ai voté en faveur de ce rapport d&#39;initiative qui analyse les causes et les conséquences des taux de pauvreté élevés chez les femmes. Il met en exergue les écarts de rémunération et de retraite, la pauvreté au travail, la violence à l&#39;égard des femmes, les questions de fiscalité ainsi que l&#39;aggravation de la pauvreté féminine pendant et après la pandémie. Il est également souligné que les femmes ayant des enfants sont victimes de discrimination sur le lieu de travail parce qu&#39;elles sont mères, et non pas parce que leurs performances professionnelles ne sont pas au même niveau que celles de leurs pairs. À cet égard, le rapport invite les États membres à promouvoir une image positive des mères en tant que salariées. En outre, le rapport invite la Commission et les États membres à intégrer l&#39;égalité entre les femmes et les hommes dans l&#39;ensemble de la législation et des programmes liés aux transports, à la mobilité, au logement abordable et à la planification urbaine.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à présenter les observations et les propositions du Parlement européen pour renforcer la lutte contre la pauvreté des femmes au sein de l’Union. Il souligne que les femmes sont plus touchées par l’exclusion sociale et la précarité que les hommes en raison de discriminations liées au genre et appelle notamment à agir contre la précarité menstruelle en mettant un terme à la “taxe tampon”, à développer les services publics notamment dans le secteur de la petite enfance, à mettre en place un salaire minimum européen ambitieux, etc. J’ai donc voté pour ce texte qui va dans le sens d’une meilleure prise en compte des enjeux d’égalité entre les femmes et les hommes au niveau européen.
+        </article>
+    
+        <article>
+            <div class="hidden">197576</div>
+            
+            <header><b>Sylvie BRUNET</b> | Mouvement Démocrate</header>
+            J’ai soutenu avec détermination ce rapport, qui analyse la pauvreté dans l’Union à travers le prisme homme/femme. Déjà plus touchées par la précarité que les hommes, les femmes ont vu l’écart de pauvreté entre les femmes et les hommes augmenter dans 21 États membres depuis 2017.Cette situation est révoltante, en particulier pour les mères célibataires, les retraitées ou les femmes en situation de handicap, les plus à risque de pauvreté. Ce rapport fait selon moi un état des lieux nécessaire sur l’urgence de la situation, pour des millions de femmes et d’enfants européens. Il liste surtout des pistes concrètes et holistiques pour remédier à la pauvreté féminine : revalorisation des métiers à dominance féminine, partage des tâches domestiques, lutte contre le harcèlement au travail qui isole les victimes et retarde leur progression dans l’entreprise... Nous proposons aux États membres des solutions efficaces et durables, afin de permettre à plus de citoyennes et de citoyens de mener une vie digne et sûre.
+        </article>
+    
+        <article>
+            <div class="hidden">197536</div>
+            
+            <header><b>Nathalie COLIN-OESTERLÉ</b> | Les centristes</header>
+            . – J’ai voté en faveur de la résolution évoquant les pistes d’amélioration visant à éradiquer la pauvreté des femmes en Europe. L’inégalité salariale au sein de l’Union européenne est en moyenne de 13 % et la pauvreté, qui a augmenté ces dernières années, touche davantage les femmes que les hommes. Nous devons être particulièrement attentifs aux effets pervers que peut avoir la pauvreté dans certains ménages. Si les violences à l’égard des femmes, notamment conjugales, existent dans tous les milieux, les femmes qui disposent de peu de ressources et qui dépendent économiquement de leur conjoint ont encore plus de difficultés à s’en sortir. Pour aider ces femmes, nous devons agir au niveau européen en faisant de la violence fondée sur le genre un nouveau domaine de criminalité et en créant des structures de prise en charge globale, de la mise à l’abri au soutien judiciaire.
+        </article>
+    
+        <article>
+            <div class="hidden">197628</div>
+            
+            <header><b>Jean-Paul GARRAUD</b> | Rassemblement national</header>
+            . – Bien que ce rapport soit entaché de revendications immigrationnistes et fédéralistes, le malheureux constat qu’il en fait est juste et invite en ce sens les États membres à prendre des mesures pérennes afin d’améliorer la situation des femmes pauvres et de leurs enfants en Europe. Situation qui s’est d’autant plus aggravée avec la pandémie de Covid-19 et qui ne s’améliore pas avec l’inflation des prix. J’ai donc voté pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            J&#39;ai voté en faveur de ce texte, qui dresse un diagnostic juste sur les risques de précarité qui touchent plus particulièrement les femmes en Europe, notamment dans le contexte de la pandémie de Covid-19 et de l&#39;inflation galopante qui touche la zone euro.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            . – Bien que ce rapport soit entaché de revendications immigrationnistes, genrées et fédéralistes, le malheureux constat qu’il en fait est juste et invite en ce sens les États membres à prendre ou soutenir des mesures (pour la plupart pérennes et de bon sens) afin d’améliorer la situation des femmes pauvres et de leurs enfants, en Europe. Situation qui s’est d’autant plus aggravée pour ces femmes avec la pandémie de Covid-19 et qui n’est pas près de s’améliorer avec l’inflation des prix (des biens de première nécessité et des logements). J’ai voté pour.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté en faveur de ce rapport sur la pauvreté des femmes en Europe. Bien que ce rapport soit entaché de revendications immigrationnistes, genrées et fédéralistes, il invite cependant les États membres à prendre des mesures pérennes afin d’améliorer la situation des femmes pauvres et de leurs enfants en Europe. Situation qui s’est d’autant plus aggravée avec la pandémie de Covid-19 et qui ne s’améliore pas avec l’inflation.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
+
+
+    <section>
+    
+    
+        <article>
+            <div class="hidden">197576</div>
+            
+            <header><b>Sylvie BRUNET</b> | Mouvement Démocrate</header>
+            
+                <p>Les femmes pauvres font face à des problématiques spécifiques qui doivent être traitées comme telles. Je voudrais saluer le travail accompli sur ce rapport, qui présente des pistes concrètes et pertinentes pour lutter contre la pauvreté des femmes et y remédier: favoriser leur indépendance, leur autonomie économique, revaloriser les métiers à dominance féminine, partager les tâches ménagères et lutter contre le harcèlement au travail qui peut précariser les femmes.</p>
+            
+                <p>Enfin – vous l’avez dit, Madame la Commissaire –, je voudrais souligner que tous les travaux que nous menons en ce moment, en commission de l’emploi et en commission des droits des femmes, doivent nous permettre de lutter contre la pauvreté des femmes. Que ce soit la transparence des salaires ou même l’économie sociale et solidaire, tous les sujets que nous traitons doivent au fond nous permettre d’arriver à des actions concrètes pour lutter contre la pauvreté des femmes.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197536</div>
+            
+            <header><b>Nathalie COLIN-OESTERLÉ</b> | Les centristes</header>
+            
+                <p> – Madame la Présidente, Madame la Commissaire, les statistiques le montrent: l’inégalité salariale au sein de l’Union européenne est en moyenne de 13 %, et la pauvreté touche davantage les femmes que les hommes. Elle a même augmenté ces dernières années.</p>
+            
+                <p>Si les violences à l’égard des femmes, notamment conjugales, existent dans tous les milieux, les femmes qui disposent de peu de ressources et qui dépendent économiquement de leur conjoint ont encore davantage de difficultés à s’en sortir; car si elles quittent leur domicile avec peu ou pas de ressources, comment peuvent-elles se loger ou se nourrir? </p>
+            
+                <p>La peur de sombrer dans la pauvreté et d’être exclues socialement ne doit pas – ne doit plus – être un frein. Pour aider ces femmes victimes de violences, nous devons profiter de la prochaine législation européenne pour créer un réseau de guichets uniques d’assistance. Il existe, en effet, de grandes disparités d’un État membre à l’autre en ce qui concerne les services fournis aux victimes. Or, nous devons assurer à ces femmes victimes une prise en charge globale, de la mise à l’abri au soutien économique, judiciaire, social et médical. Nous devons également créer une nouvelle infraction et définir un cadre commun afin de faire des violences fondées sur le genre un nouveau domaine de criminalité.</p>
+            
+        </article>
+    
+        <article>
+            <div class="hidden">197627</div>
+            
+            <header><b>Virginie JORON</b> | Rassemblement national</header>
+            
+                <p> – Monsieur le Président, chers collègues, dans le rapport sur la pauvreté des femmes en Europe, que nous soutenons, il est souligné que l’aggravation de la situation sociale et économique causée par la pandémie de COVID-19 a accru toutes les formes d’abus et de violence à l’égard des femmes. C’est pourquoi je vais vous parler de plus de 15 000 soignants suspendus en France, dont la majorité sont des femmes, sans salaire depuis presque un an.</p>
+            
+                <p>Je les ai rencontrées et j’ai vu de près cette détresse. Adulées pendant la première vague de COVID, elles sont devenues invisibles, voire à éliminer depuis un décret infâme de Macron. Ces infirmières, aides-soignantes, pompiers, médecins ont donc été suspendues parce qu’elles ne voulaient pas se faire injecter un produit en phase expérimentale. C’est curieux, non? Personne ne veut se pencher sur cette question. Elles ont été au front, connaissent mieux que personne les vaccins, mais leur consentement, qui devait être libre et éclairé, est dénigré, voire méprisé. </p>
+            
+                <p>Puisque la Commission de Bruxelles veut diriger cette crise COVID, qu’elle ouvre les yeux et condamne l’infâme régime de Macron à réintégrer de suite toutes ces personnes suspendues. Pour nos valeurs humanistes, pour notre honneur.</p>
+            
+        </article>
+    
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>

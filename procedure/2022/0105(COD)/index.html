@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
+        <title>Portail des émissions industrielles</title>
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
-        <link rel="stylesheet" href="/bundle.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+        <link rel="stylesheet" href="/bundle.css">
         <!-- Matomo -->
         <script>
         var _paq = window._paq = window._paq || [];
@@ -21,82 +22,39 @@
         </script>
         <!-- End Matomo Code -->
         
+<script defer src="/procedure.js"></script>
+
     </head>
     <body>
-        <header>
+        <header class="container">
             <nav>
-            <ul>
-                <li><h1>QuiVoteQuoi?</h1></li>
-            </ul>
-            <ul>
-                <li><a href="/members">Membres</a></li>
-            </ul>
+                <ul>
+                    <li>qui<b>vote</b>quoi<b style="color: #3C71F7">.eu</b></li>
+                </ul>
+                <ul>
+                    <li><a href="/" class="secondary">Recherche</a></li>
+                    <li>
+                        <details class="dropdown">
+                            <summary>
+                                Menu
+                            </summary>
+                            <ul dir="rtl">
+                                <li><a href="/members">Députés</a></li>
+                                <li><a href="/about">À propos</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
             </nav>
         </header>
-        <main>
+        <main class="container">
           
-<a href="/">◀️ Retourner à la recherche</a>
 <h2>Portail des émissions industrielles</h2>
-
 
 
 
 <h3>🎯 Votes principaux</h3>
 
-    <article>
-    <header>👍 Adoption du texte | 
-
-✅️ Adopté
-
-</header>
-    
-        <h6>🇪🇺 Votes de tous les députés européens</h6>
-        <section>
-
-<div class="votes ">
-  
-    <div class="+" style="width: calc(563/632 * 100%)">563</div>
-  
-  
-    <div class="-" style="width: calc(51/632 * 100%)">51</div>
-  
-  
-    <div class="0" style="width: calc(18/632 * 100%)">18</div>
-  
-</div>
-</section>
-        <details>
-            <summary>📊 Voir la légende</summary>
-            <ul>
-                <li>🟢 Pour</li>
-                <li>🔴 Contre</li>
-                <li>🟡 Abstention</li>
-                
-            </ul>
-        </details>
-        <hr>
-        <h6>🇫🇷 Votes des députés français</h6>
-        
-        
-            <section>
-
-
-
-<div class="votes">
-  
-    <div class="+" style="width: calc(53/73 * 100%)">53</div>
-  
-  
-    <div class="-" style="width: calc(20/73 * 100%)">20</div>
-  
-  
-</div>
- 
-</section>
-            <a href="/voting/156612">🗳 Voir le détail du vote</a>
-        
-    
-    </article>
 
 <h3>🏷 Sujets</h3>
 <ul>
@@ -104,12 +62,12 @@
     
         
         
-            <li>Politiques communautaires</li>
+            <li>Politique de l&#39;environnement</li>
         
     
         
         
-            <li>Politique de l&#39;environnement</li>
+            <li>Citoyenneté européenne</li>
         
     
         
@@ -124,7 +82,7 @@
     
         
         
-            <li>Accès du public à l&#39;information et aux documents, relations avec l&#39;administration</li>
+            <li>Droits du citoyen</li>
         
     
         
@@ -134,30 +92,152 @@
     
         
         
-            <li>Droits du citoyen</li>
+            <li>Politiques communautaires</li>
         
     
         
         
-            <li>Citoyenneté européenne</li>
+            <li>Accès du public à l&#39;information et aux documents, relations avec l&#39;administration</li>
         
     
 </ul>
 
-<h3>📓 Amendements</h3>
+<h3>📚 Sources</h3>
+<ul>
+    <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/0105(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
+    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0211_FR.html" target="_blank">📜 Texte et amendements</a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-07-11-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+        <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-03-12-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
+    
+</ul>
 
+<h3>🗃️ Données</h3>
+
+<section class="tabs">
+    
+
+
+<input name="tabs" type="radio" id="tab-1" checked>
+<label for="tab-1">📓 Amendements</label>
+
+
+<input name="tabs" type="radio" id="tab-2" >
+<label for="tab-2">🧩 Explications</label>
+
+
+<input name="tabs" type="radio" id="tab-3" >
+<label for="tab-3">🗣️ Interventions</label>
+
+<hr>
+
+    <form>
+        <fieldset role="group">
+            <select id="member" onchange="filter(this.value)" aria-label="Filtrer par sujet">
+                <option selected value="">👥 Filtrer par groupe/parti</option>
+                
+                    
+                    <optgroup label="Identité et démocratie (ID)">
+                        <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇪🇺 Tout le groupe Identité et démocratie</option> 
+                        
+                            <option value="ID,189065,124765,124738,124770,124771,197691,131580,197680,182995,197628,94649,197627,197626,197597,197686,197623,197687,197690,204421">🇫🇷 Rassemblement national</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Renew Europe (RE)">
+                        <option value="RE,22858,96711,96885,124693,197551,197577,197576,197505,197504,197589,197557,197543,135511,197585,197494,197508,197547,197593,197502,197511,197581,197499,204416,204419">🇪🇺 Tout le groupe Renew Europe</option> 
+                        
+                            <option value="RE,22858,96711,124693,197551,197504,197543,135511,197585,197494,197508,197547,197593,197581,197499,204416,204419">🇫🇷 Renaissance</option> 
+                        
+                            <option value="RE,96885">🇫🇷 Parti Radical</option> 
+                        
+                            <option value="RE,197577">🇫🇷 Horizons</option> 
+                        
+                            <option value="RE,197576,197505,197589,197557,197502">🇫🇷 Mouvement Démocrate</option> 
+                        
+                            <option value="RE,197511">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe des Verts/Alliance libre européenne (Verts/ALE)">
+                        <option value="Verts/ALE,96750,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇪🇺 Tout le groupe Groupe des Verts/Alliance libre européenne</option> 
+                        
+                            <option value="Verts/ALE,96750">🇫🇷 Régions et Peuples Solidaires</option> 
+                        
+                            <option value="Verts/ALE,96868,96743,96740,197512,197574,197503,197531,197506,197500,97236,204420">🇫🇷 Les Écologistes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Socialistes &amp; Démocrates (S&amp;D)">
+                        <option value="S&amp;D,96952,113892,197694,197697,197698,204418">🇪🇺 Tout le groupe Socialistes &amp; Démocrates</option> 
+                        
+                            <option value="S&amp;D,96952,113892,204418">🇫🇷 Parti socialiste</option> 
+                        
+                            <option value="S&amp;D,197694,197697">🇫🇷 Place publique</option> 
+                        
+                            <option value="S&amp;D,197698">🇫🇷 Nouvelle Donne</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Parti populaire européen (PPE)">
+                        <option value="PPE,190774,24594,96747,5565,72779,197534,197536,197535">🇪🇺 Tout le groupe Parti populaire européen</option> 
+                        
+                            <option value="PPE,190774,24594,96747,5565,72779,197534,197535">🇫🇷 Les Républicains</option> 
+                        
+                            <option value="PPE,197536">🇫🇷 Les centristes</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Groupe de la Gauche au Parlement européen (GUE/NGL)">
+                        <option value="GUE/NGL,30482,24505,197533,197521,197529,197527">🇪🇺 Tout le groupe Groupe de la Gauche au Parlement européen</option> 
+                        
+                            <option value="GUE/NGL,30482,197533,197521,197529,197527">🇫🇷 La France Insoumise</option> 
+                        
+                            <option value="GUE/NGL,24505">🇫🇷 Gauche républicaine et socialiste</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Conservateurs et réformistes européens (ECR)">
+                        <option value="ECR,">🇪🇺 Tout le groupe Conservateurs et réformistes européens</option> 
+                        
+                    </optgroup>
+                
+                    
+                    <optgroup label="Non-inscrits (NA)">
+                        <option value="NA,124760,197683,197629,197615">🇪🇺 Tout le groupe Non-inscrits</option> 
+                        
+                            <option value="NA,124760,197683,197629,197615">🇫🇷 Reconquête!</option> 
+                        
+                    </optgroup>
+                
+            </select>
+            <input type="reset" onclick="filter('')"/>
+        </fieldset>
+    </form>
+
+    <section>
     
     
-    <article>
-    <header>📝 Amendement n°7 | 
+        
+        
+            <article id="7">
+            <header>📝 Amendement n°7 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       (13) Le portail devrait également inclure  des données 
@@ -168,44 +248,51 @@
   
 
   
-      sur l’utilisation de l’eau, de l’énergie et des matières premières par les installations concerné
+      sur l’utilisation de l’eau, de l’énergie et des matières premières par les installations concernées
   
 
   
-      <del>es afin de </del>
+      <del> afin de</del>
   
 
   
-      <ins>es, sous réserve que l’étendue de ces données n’excède pas ce qui est nécessaire pour </ins>
+      <ins>, sous réserve que l’étendue de ces données n’excède pas ce qui est nécessaire pour</ins>
   
 
   
-      permettre le suivi des progrès accomplis vers une économie circulaire et extrêmement efficace dans l’utilisation des ressources.
+       permettre le suivi des progrès accomplis vers une économie circulaire et extrêmement efficace dans l’utilisation des ressources.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°8 | 
+        
+        
+            <article id="8">
+            <header>📝 Amendement n°8 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
+<p>
 
   
       (15) Les exploitants d’installations devraient également communiquer des informations 
@@ -216,102 +303,215 @@
   
 
   
-      concernant le volume de 
+      concernant le volume de production
   
 
   
-      <del>production, le nombre de salariés </del>
+      <del>, le nombre de salariés</del>
   
 
   
-      <ins>production </ins>
+       et les heures d’exploitation de l’installation concernée, ainsi que des informations sur les accidents qui ont conduit à des rejets, 
   
 
   
-      et les heures d’exploitation de l’installation concernée, ainsi que des informations sur les accidents qui ont conduit à des rejets, 
+      <del>afin de</del>
   
 
   
-      <del>afin de </del>
+      <ins>sous réserve que l’étendue de ces informations n’excède pas ce qui est nécessaire pour</ins>
   
 
   
-      <ins>sous réserve que l’étendue de ces informations n’excède pas ce qui est nécessaire pour </ins>
-  
-
-  
-      permettre la contextualisation des données communiquées sur les rejets de polluants et les transferts hors du site de déchets et d’eaux usées.
+       permettre la contextualisation des données communiquées sur les rejets de polluants et les transferts hors du site de déchets et d’eaux usées.
   
  
-</section>
+</p>
 
-    
-    <footer>
-        
-            🖐 Vote à main levée
-        
-    </footer>
-    </article>
-    
+                <i>Déposé par 
 
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
+        
     
-    
-    <article>
-    <header>📝 Amendement n°34 | 
+        
+        
+            <article id="34">
+            <header>📝 Amendement n°34 | 
 
 ✅️ Adopté
 
 </header>
-    
-        
+            
+                <div class="hidden"></div>
+                
 
-<section>
-
-  
-      e) les informations permettant la contextualisation des données communiquées conformément aux points a) à d), y compris le volume de production, le nombre 
-  
+<p>
 
   
-      <del>de salariés, le nombre </del>
+      e) les informations permettant la contextualisation des données communiquées conformément aux points a) à d), y compris le volume de production,
   
 
   
-      d’heures d’exploitation et les informations sur les accidents qui ont entraîné des rejets;
+      <del> le nombre de salariés,</del>
+  
+
+  
+       le nombre d’heures d’exploitation et les informations sur les accidents qui ont entraîné des rejets;
   
  
-</section>
+</p>
 
-    
-    <footer>
+                <i>Déposé par 
+
+
+  la commission 
+
+</i>
+                <footer>
+
+  🖐 Vote à main levée
+
+</footer>
+            
+            </article>
         
-            🖐 Vote à main levée
+    
         
-    </footer>
-    </article>
+        
     
+        
+        
+    
+        
+        
+    
+    <div class="empty">🚫 Aucun amendement</div>
+    </section>
+    
+    <section>
+    
+    
+        <article>
+            <div class="hidden">124760</div>
+            
+            <header><b>Nicolas BAY</b> | Reconquête!</header>
+            . – J’ai voté contre ce texte, élément du pacte vert qui détruira notre industrie au nom d’un environnementalisme hors-sol aux objectifs irréalisables, loin de l’écologie réelle. La charge supplémentaire pour les entreprises sera considérable, en plus d’être dépendante des pouvoir étendus de la Commission qui pourra modifier à son gré la liste des polluants à répertorier.
+        </article>
+    
+        <article>
+            <div class="hidden">190774</div>
+            
+            <header><b>Geoffroy DIDIER</b> | Les Républicains</header>
+            . – Le portail des émissions industrielles (IEP) est complémentaire de la directive relative aux émissions industrielles. Il permet notamment d&#39;améliorer la surveillance des installations pour le public et de répondre aux obligations internationales. Favorable à ce texte, j’ai voté en sa faveur.
+        </article>
+    
+        <article>
+            <div class="hidden">189065</div>
+            
+            <header><b>France JAMET</b> | Rassemblement national</header>
+            Cette révision par le Pacte vert se révèle particulièrement intrusive pour les données des sites industriels et va alourdir considérablement leurs charges administratives, avec des délais très courts. De plus, ce texte confère des pouvoirs à la Commission pour amender la liste des activités/polluants concernés, mettant l’industrie à la merci des quatre volontés de l’UE. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">124738</div>
+            
+            <header><b>Gilles LEBRETON</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport car il souhaite alourdir les charges bureaucratiques des entreprises européennes et donner à la Commission le pouvoir de contrôler leurs activités dès qu’elle les jugera « polluantes ».
+        </article>
+    
+        <article>
+            <div class="hidden">72779</div>
+            
+            <header><b>Nadine MORANO</b> | Les Républicains</header>
+            J’ai voté en faveur de ce rapport relatif au portail sur les émissions industrielles. Ce texte, qui accompagne la directive relative aux émissions industrielles, met en œuvre un outil de collecte et de surveillance des données relatives à ces émissions, nourri par les installations soumises à la directive.
+        </article>
+    
+        <article>
+            <div class="hidden">197533</div>
+            
+            <header><b>Manon AUBRY</b> | La France Insoumise</header>
+            Ce rapport vise à approuver la position du Parlement européen sur la création d’une base de données pour accompagner et évaluer la mise en œuvre de la directive sur les émissions industrielles. Il améliore la position initiale de la Commission en élargissant le type d’informations collectées et renforçant la transparence sur les entreprises qui enfreignent les règles environnementales en vigueur. J’ai donc voté pour ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197536</div>
+            
+            <header><b>Nathalie COLIN-OESTERLÉ</b> | Les centristes</header>
+            J’ai voté en faveur de la directive sur le portail des émissions industrielles. Celle-ci va de pair avec mon vote relatif à la directive relative aux émissions industrielles. Ce texte vise à mettre à jour l&#39;actuel registre européen des rejets et des transferts de polluants afin de l&#39;élargir à toutes les émissions industrielles qui tombent dans le champ d&#39;application de la directive relative aux émissions industrielles. L&#39;objectif est de rendre publiques les informations industrielles, en permettant aux citoyens d&#39;accéder aux données relatives aux permis octroyés aux installations et aux activités polluantes. Il accroit ainsi la transparence et la surveillance des activités industrielles.
+        </article>
+    
+        <article>
+            <div class="hidden">197535</div>
+            
+            <header><b>Agnès EVREN</b> | Les Républicains</header>
+            J’ai voté en faveur de cette proposition visant la création d’un portail sur les émissions industrielles. Ce rapport, lié à celui sur la directive sur les émissions industrielles permettra la communication des données environnementales des installations industrielles et plus de transparence avec le grand public.
+        </article>
+    
+        <article>
+            <div class="hidden">131580</div>
+            
+            <header><b>Jordan BARDELLA</b> | Rassemblement national</header>
+            Cette révision qui est en accord avec le Pacte vert se révèle trop intrusive pour les données des sites industriels. Ce qui va engendrer de facto les charges administratives avec un délai trop court. De plus, le texte octroie des pouvoirs à la Commission pour amender la liste des activités/polluants concernés et de fait mettre l’industrie à la merci des volontés de l’UE. J’ai voté contre cette révision.
+        </article>
+    
+        <article>
+            <div class="hidden">94649</div>
+            
+            <header><b>Catherine GRISET</b> | Rassemblement national</header>
+            . – Nonobstant l’aspect judicieux de ce texte au premier abord en ce qu’il permettrait d’informer le public sur la pollution émise par les industries, il demeure intrusif vis à vis des données des sites industriels. En plus d’alourdir les charges administratives de ces derniers, il confère à la Commission le pouvoir d’amender arbitrairement la liste des activités et polluants concernés. J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197680</div>
+            
+            <header><b>Aurélia BEIGNEUX</b> | Rassemblement national</header>
+            Ce texte révise un règlement de 2006 sur l&#39;accès à l&#39;information, la participation du public au processus décisionnel et l&#39;accès à la justice en matière d&#39;environnement, dans le sillage de la Convention d’Aarhus. Ce règlement se limitait jusque-là à &quot;l’amélioration de l&#39;accès du public à l&#39;information par l&#39;établissement de registres des rejets et transferts de polluants (RRTP) couvrant l&#39;ensemble du territoire&quot;.Ces sortes d’inventaires de la pollution doivent alimenter des bases de données et les mettre à disposition du public. La transparence est un des maîtres-mots de l’époque. À première vue, on pourrait croire à la bonne intention : informer le public sur la pollution émise par les industries semble judicieux. Or, cette révision vernie par le Pacte vert se révèle particulièrement intrusive pour les données des sites industriels et va alourdir considérablement leurs charges administratives, avec des délais très courts. De plus, le texte confère des pouvoirs à la Commission pour amender la liste des activités/polluants concernés, mettant l’industrie à la merci des quatre volontés de l’UE.J’ai donc voté contre ce texte.
+        </article>
+    
+        <article>
+            <div class="hidden">197691</div>
+            
+            <header><b>Mathilde ANDROUËT</b> | Rassemblement national</header>
+            Ce texte révise un règlement de 2006 sur l&#39;accès à l&#39;information, la participation du public au processus décisionnel et l&#39;accès à la justice en matière d&#39;environnement. De prime abord, on pourrait croire à une bonne intention : informer le public sur la pollution émise par les industries semble judicieux. Or, cette révision se révèle particulièrement intrusive pour les données des sites industriels et va alourdir considérablement leurs charges administratives, avec des délais très courts. De plus, le texte confère des pouvoirs à la Commission pour amender la liste des activités/polluants concernés, mettant l’industrie à la merci des quatre volontés de l’UE. J’ai voté contre.
+        </article>
+    
+        <article>
+            <div class="hidden">182995</div>
+            
+            <header><b>Annika BRUNA</b> | Rassemblement national</header>
+            J’ai voté contre ce rapport qui se révèle particulièrement intrusif pour les données des sites industriels et qui va alourdir considérablement leurs charges administratives, avec des délais très courts. De plus, le texte confère des pouvoirs à la Commission pour amender la liste des polluants concernés, mettant l’industrie à la merci des quatre volontés de l’UE.
+        </article>
+    
+        <article>
+            <div class="hidden">236053</div>
+            
+            <header><b></b> | </header>
+            Ce rapport a pour objet la création d’un portal sur les émissions industrielles et la communication de données environnementales. La création de ce portail permettrait une meilleure transparence en permettant à tous et à tous d’identifier les entreprises enfreignant les règles relatives aux émissions industrielles, d’identifier de nouvelles substances rejetées comme les PFAS, et permettrait également de comparer les installations industrielles et leurs rejets d’émissions. Ainsi, c’est pour toutes ces raisons que j’ai décidé de voter en faveur de ce rapport.
+        </article>
+    
+    <div class="empty">🚫 Aucune explication de vote</div>
+    </section>
 
-    
-    
 
+    <section>
     
     
-
-    
-    
-
-<h3>Sources</h3>
-<ul>
-  <li><a href="https://oeil.secure.europarl.europa.eu/oeil/popups/ficheprocedure.do?reference=2022/0105(COD)&amp;l=fr" target="_blank">ℹ️ Procédure</a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/A-9-2023-0211_FR.html" target="_blank">📜 Texte et amendements</a></li>
-  
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2023-07-11-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-    <li><a href="https://www.europarl.europa.eu/doceo/document/PV-9-2024-03-12-VOT_FR.html" target="_blank">🗳 Détails des votes </a></li>
-  
-</ul>
+    <div class="empty">🚫 Aucune intervention en plénière</div>
+    </section>
 
         </main>
+        <footer class="container">
+            <a href="https://github.com/cabanon/quivotequoi">Code source</a>
+        </footer>
     </body>
 </html>
