@@ -46,7 +46,6 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
             <b>🇫🇷 Votes des députés français</b>
             {% if primary.rcv %}
                 {% set voting = votings | where('doc', vote.doc) | where('amendment', vote.amendment) | find('split', vote.split) %}
-                <a href="/voting/{{ voting.id }}">📣 Vote nominal : voir le détail</a>
             
                 {% if primary.amendment %}
                     {% set final = votings | where('procedure_ref', procedure.reference ) | where('doc', primary.doc) | find('amendment', primary.amendment) %}
