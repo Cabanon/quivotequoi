@@ -26,15 +26,13 @@
     <a href="/procedure/{{ procedure.reference }}">{{ procedure.title }}</a>
     <footer>
       {% if procedure.status == 'Procédure terminée' %}
-        {% if final_vote.type == 'ADOPTION' %}
-          {% if final_vote.result == 'ADOPTED' %}✅️ Texte adopté{% else %}❌️ Texte rejeté {% endif %}
-          {% if final_vote.votes %}{{ inlinebar(final_vote.votes) }}{% endif %}
-        {% else %}
-          {% if final_vote.result == 'ADOPTED' %}❌️ Texte rejeté{% else %}✅️ Texte adopté{% endif %}
-          {% if final_vote.votes %}{{ inlinebar(final_vote.votes, invert=true) }}{% endif %}
-        {% endif %}
+        ✅️ Texte adopté
+        {% if final_vote.votes %}{{ inlinebar(final_vote.votes, invert=(final_vote.type == 'REJECTION')) }}{% endif %}
+      {% elif procedure.status == 'Procédure rejetée' %}
+        ❌️ Texte rejeté
+        {% if final_vote.votes %}{{ inlinebar(final_vote.votes, invert=(final_vote.type == 'REJECTION')) }}{% endif %}
       {% else %}
-        {{ procedure.status }}
+        ⏳ {{ procedure.status }}
       {% endif %}
     </footer>
   </article>
@@ -42,9 +40,9 @@
 {% endmacro %}
 
 {% macro fullbar(positions, members, small=false) %}
-{% set for_positions = positions | where('position', '+') %}
-{% set ag_positions = positions | where('position', '-') %}
-{% set ab_positions = positions | where('position', '0') %}
+{% set for_positions = positions | where('position', 'FOR') %}
+{% set ag_positions = positions | where('position', 'AGAINST') %}
+{% set ab_positions = positions | where('position', 'ABSTENTION') %}
 <div class="votes{% if small %} small{% endif %}">
   {% if for_positions.length %}
     <div class="for" style="width: calc({{ for_positions | length }}/{{ positions | length }} * 100%)">{{ for_positions | length }}</div>
@@ -110,11 +108,11 @@
 {% endmacro %}
 
 {% macro chip(pos) %}
-{% if pos == '+' %}
+{% if pos == 'FOR' %}
 <div class="chip for">POUR</div>
-{% elif pos == '-' %}
+{% elif pos == 'AGAINST' %}
 <div class="chip against">CONTRE</div>
-{% elif pos == '0' %}
+{% elif pos == 'ABSTENTION' %}
 <div class="chip abstention">ABSTENTION</div>
 {% else %}
 <div class="chip novote">PAS DE VOTE</div>

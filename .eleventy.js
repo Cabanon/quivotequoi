@@ -73,7 +73,7 @@ function getCurrent(arr, date) {
 module.exports = function(eleventyConfig) {
     // General filters
     eleventyConfig.addFilter("log", (e) => console.log(e))
-    eleventyConfig.addFilter("uniq", (e) => [...new Set(e)])
+    eleventyConfig.addFilter("uniq", (arr, key) => key ? [...new Map(arr.map(e => [e[key], e])).values()] : [...new Set(arr)])
     eleventyConfig.addFilter("startswith", function(str, value) { return str.startsWith(value) });
     eleventyConfig.addFilter("where_exp", function(arr, key, cond) {
         return arr.filter((el) => eval(`const { ${key} } = el; ${cond}`))
@@ -97,6 +97,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("int", function(arr) { return Array.isArray(arr) ? arr.map(i => parseInt(i)) : parseInt(arr) });
     eleventyConfig.addFilter("where_in", (arr1, key, arr2) => arr1.filter((e) => arr2.includes(e[key])));
     eleventyConfig.addFilter("where_includes", (arr1, key, value) => arr1.filter((e) => e[key].includes(value)));
+    eleventyConfig.addFilter("map_entries", (obj, key, value) => Object.entries(obj).map(([k, v]) => ({[key]: Number(k), [value]: v})));
 
     // Data specific filters
     eleventyConfig.addFilter("current", function(arr, date = new Date().toISOString()) {

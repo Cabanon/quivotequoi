@@ -44,7 +44,8 @@ permalink: "voting/{{ voting.id }}/index.html"
 {% endif %}
 {% set active_members = members | current(voting.date) %}
 <h4>🇫🇷 Députés français</h4>
-<section>{{ c.fullbar(voting.positions, active_members) }}</section>
+{% set positions = voting.positions | map_entries('member_id', 'position') %}
+<section>{{ c.fullbar(positions, active_members) }}</section>
 <h3>📊 Détails des votes</h3>
 <section class="tabs">
   {{ c.tabs(['👥 Par parti', '👤 Par député']) }}
@@ -52,7 +53,7 @@ permalink: "voting/{{ voting.id }}/index.html"
   <section id="groups">
     {% for groupid, g_members in active_members | groupby('group') %}
       {% set member_ids = g_members | map('id') %}
-      {% set g_positions = voting.positions | where_in('member_id', member_ids) %}
+      {% set g_positions = positions | where_in('member_id', member_ids) %}
       <div class="grid">
         <div>
           {% set group = groups | find('code', groupid) %}
@@ -71,7 +72,7 @@ permalink: "voting/{{ voting.id }}/index.html"
   <section id="members">
     <input id="search" oninput="filter()" type="search" placeholder="Cherchez un membre"/>
     {% for member in active_members | sort(false, false, 'last_name') %}
-      {% set position = voting.positions | find('member_id', member.id) %}
+      {% set position = positions | find('member_id', member.id) %}
       <div>
         {{ c.chip(position.position) }}
         <a href="/member/{{ member.id }}"><span class="nowrap"><b>{{ member.full_name }}</b></span></a>

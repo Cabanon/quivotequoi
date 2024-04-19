@@ -9,7 +9,6 @@ from datetime import datetime as dt, date, timezone, timedelta
 from dateutil.parser import parse as parsedate
 from pathlib import Path
 from enum import StrEnum, auto
-from itertools import batched
 
 import typer
 import lzip
@@ -241,6 +240,7 @@ def fetch_doc(doc):
             tmp = io.BytesIO(session.get(pdf_url).content)
             pdf = pp.open(tmp)
             for amd in extract_amendments([row for table in map(extract_table, pdf.pages) for row in table]):
+                amd['url'] = pdf_url
                 amendments.append(amd)
     return dict(ref=doc, procedure=procedure, url=url), amendments
 
@@ -374,7 +374,7 @@ def parse_amendment(subject, amd):
         re.search(fr'\b{word}\b', subject) for word in (
             'r(é|e)solution',
             'vote unique',
-            # 'proposition', 'proposal',
+            # 'accord provisoire',
             'recomm(a|e)ndation',
             # 'projet de décision du conseil', 'draft council decision'
         )
@@ -454,7 +454,7 @@ def main(data: Data):
                 docwriter = csv.DictWriter(docfile, fieldnames=['ref', 'procedure', 'url'])
                 docwriter.writeheader()
 
-                amdwriter = csv.DictWriter(amdfile, fieldnames=['doc', 'nr', 'old', 'new', 'authors'])
+                amdwriter = csv.DictWriter(amdfile, fieldnames=['doc', 'nr', 'old', 'new', 'authors', 'url'])
                 amdwriter.writeheader()
                 
                 for result in process_map(fetch_doc, docs):
@@ -654,12 +654,10 @@ def main(data: Data):
             session = CachedSession()
 
             with open('_data/votes.csv', 'w') as csvfile:
-                writer = csv.DictWriter(csvfile, fieldnames=['date', 'doc', 'author', 'type', 'rcv', 'amendment', 'split', 'result', 'votes', 'remarks', 'url'])
+                writer = csv.DictWriter(csvfile, fieldnames=['date', 'doc', 'subject', 'author', 'type', 'rcv', 'amendment', 'split', 'result', 'votes', 'remarks', 'url'])
                 writer.writeheader()
                 for sess_date in get_dates():
                     url = f"{EP_BASE_URL}PV-9-{sess_date.strftime("%Y-%m-%d")}-VOT_FR.xml"
-                    if not url:
-                        continue
                     request = session.get(url)
                     try:
                         request.raise_for_status()
@@ -701,6 +699,7 @@ def main(data: Data):
                                         dict(
                                             doc=doc,
                                             date=sess_date,
+                                            subject=subject,
                                             author=json.dumps(parse_author(author)) if author else None,
                                             type=type,
                                             rcv=rcv is not None and 'AN' in rcv,
@@ -752,6 +751,7 @@ def main(data: Data):
                                             dict(
                                                 date=sess_date,
                                                 doc=doc,
+                                                subject=voting.find('amendmentSubject').text,
                                                 author=json.dumps(parse_author(author)) if author else None,
                                                 type=type,
                                                 split=split,
@@ -764,9 +764,11 @@ def main(data: Data):
                                         )
                     
         case Data.VOTINGS:
+            session = CachedSession()
+
             with open('_data/members.csv') as csvfile:
                 reader = csv.DictReader(csvfile)
-                mepids = list(mep['id'] for mep in reader)
+                mepmap = {mep['last_name'].capitalize(): int(mep['id']) for mep in reader}
 
             with open('_data/docs.csv') as csvfile:
                 reader = csv.DictReader(csvfile)
@@ -776,18 +778,20 @@ def main(data: Data):
                 writer = csv.DictWriter(csvfile, fieldnames=['id', 'date', 'procedure_ref', 'doc', 'type', 'amendment', 'split', 'positions', 'url'])
                 writer.writeheader()
 
-                for pv in read_json("ep_votes.json"):
-                    vote_date = dt.fromisoformat(pv["ts"]).date()
-                    if (
-                        start_date < vote_date < end_date
-                        and all(key in pv.keys() for key in ('epref', 'votes'))
-                    ):  
-                        title = pv['title']
+                for sess_date in get_dates():
+                    url = f"{EP_BASE_URL}PV-9-{sess_date.strftime("%Y-%m-%d")}-RCV_FR.xml"
+                    request = session.get(url)
+                    try:
+                        request.raise_for_status()
+                    except requests.HTTPError:
+                        continue
+                    xml = ET.fromstring(request.content)
+                    for entry in xml.findall('RollCallVote.Result'):
+                        title = ''.join(entry.find('RollCallVote.Description.Text').itertext())
                         try:
                             doc = extract_doc(title)
                             ref = refs[doc]
                         except:
-                            print('Numéro de procédure introuvable dans:', title)
                             continue
                         match = re.search(r'am\s+(.*)', title.lower())
                         if match:
@@ -806,26 +810,24 @@ def main(data: Data):
                             amendment, split = None, None
                         type, amendment = parse_amendment(title, amendment)
                         vote = dict(
-                            id=pv["voteid"],
-                            date=vote_date,
+                            id=entry.get('Identifier'),
+                            date=sess_date,
                             type=type,
                             amendment=amendment,
                             split=split,
                             procedure_ref=ref,
                             doc=doc,
-                            url=pv['url'],
+                            url=url.replace('xml', '.html'),
                         )
-                        positions = []
-                        for position, votes in pv["votes"].items():
-                            for meps in votes["groups"].values():
-                                for mep in meps:
-                                    if str(mep["mepid"]) in mepids:
-                                        positions.append(
-                                            dict(
-                                                member_id=mep["mepid"],
-                                                position=position,
-                                            )
-                                        )
+                        positions = {}
+                        for position in ['For', 'Against', 'Abstention']:
+                            groups = entry.find(f'Result.{position}')
+                            if groups:
+                                for group in groups:
+                                    for rcv in group:
+                                        member_id = rcv.get('PersId', mepmap.get(rcv.text, None))
+                                        if member_id and int(member_id) in mepmap.values():
+                                            positions[member_id] = position.upper()
                         vote['positions'] = json.dumps(positions)
                         writer.writerow(vote)
 

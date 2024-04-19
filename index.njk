@@ -16,7 +16,7 @@
   </select>
   <select id="area" onchange="filter()" aria-label="Filtrer par zone géographique">
     <option selected value="">⛔ Pas de zone géographique sélectionnée</option>
-    {% for country in countries | sort() %}
+    {% for country in countries | sort(false, false, 'name') %}
       <option>{{ country.flag }} {{ country.name }}</option>
     {% endfor %}
   </select>

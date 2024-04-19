@@ -14,33 +14,48 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
 {% endblock %}
 
 {% block main %}
-<h2>{{ procedure.title }}</h2>
-{% set doc = docs | find('procedure', procedure.reference) %}
-{% set procedure_votes = votes | where('doc', doc.ref) %}
+<hgroup>
+    <h2>{{ procedure.title }}</h2>
+    <subtitle>{{ procedure.status }}</subtitle>
+</hgroup>
+{% set proc_docs = docs | where('procedure', procedure.reference) %}
+{% set doc_refs = proc_docs | map('ref') %}
+{% set procedure_votes = votes | where_in('doc', doc_refs) %}
 {% set primary_votes = procedure_votes | where_in('type', ['ADOPTION', 'REJECTION']) %}
-<h3>🎯 Votes principaux</h3>
+<h3>📌 Votes principaux</h3>
 {% for primary in primary_votes %}
     <article>
-    <header>{% if primary.type == 'ADOPTION' %}👍 Adoption du texte{% else %}👎 Rejet du texte{% endif %} | {{ c.adopted(primary.result) }}</header>
-    {% if primary.author %}
-        <i>Demandé par {{ c.authors(primary.author) }}</i>
-        <hr>
-    {% endif %}
-    {% if primary.votes %}
-        <b>🇪🇺 Votes de tous les députés européens</b>
-        <section>{{ c.simplebar(primary.votes) }}</section>
-        <hr>
-        <b>🇫🇷 Votes des députés français</b>
-        {% set finals = votings | where('procedure_ref', procedure.reference ) | where('type', primary.type) %}
-        {% if finals.length == 1 %}
-            <section>{{ c.fullbar(finals[0].positions) }}</section>
-            <a role="button" href="/voting/{{ finals[0].id }}">🗳 Voir le détail du vote</a>
-        {% else %}
-            🔎 Vote introuvable
+        <header>
+            {% if primary.type == 'ADOPTION' %}
+                👍 Adoption du texte
+            {% elif primary.type == 'REJECTION' %}
+                👎 Rejet du texte
+            {% else %}
+                📌 {{ primary.subject }}
+            {% endif %}
+            | {{ c.adopted(primary.result) }}
+        </header>
+        {% if primary.author %}
+            <i>Demandé par {{ c.authors(primary) }}</i>
+            <hr>
         {% endif %}
-    {% else %}
-        🖐 Vote à main levée
-    {% endif %}
+        {% if primary.votes %}
+            <b>🇪🇺 Votes de tous les députés européens</b>
+            <section>{{ c.simplebar(primary.votes) }}</section>
+            <hr>
+            <b>🇫🇷 Votes des députés français</b>
+            {% set finals = votings | where('procedure_ref', procedure.reference ) | where('type', primary.type) %}
+            {% if finals.length == 1 %}
+                {% set final_positions = finals[0].positions | map_entries('member_id', 'position') %}
+                {% set final_members = members | current(finals[0].date) %}
+                <section>{{ c.fullbar(final_positions, final_members) }}</section>
+                <a role="button" href="/voting/{{ finals[0].id }}">🗳 Voir le détail du vote</a>
+            {% else %}
+                🔎 Vote introuvable
+            {% endif %}
+        {% else %}
+            🖐 Vote à main levée
+        {% endif %}
     </article>
 {% endfor %}
 
@@ -59,15 +74,24 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
 
 <h3>📚 Sources</h3>
 <ul>
-    <li><a href="{{ procedure.url | replace('.json', '.do') }}" target="_blank">ℹ️ Procédure</a></li>
-    <li><a href="{{ doc.url }}" target="_blank">📜 Texte et amendements</a></li>
-    {% for url in procedure_votes | map('url') | uniq %}
-        <li><a href="{{ url | replace('.xml', '.html') }}" target="_blank">🗳 Détails des votes </a></li>
-    {% endfor %}
+    <li>ℹ️ Procédure <a href="{{ procedure.url | replace('.json', '.do') }}" target="_blank">{{ procedure.reference }}</a></li>
+    <li>📜 Textes et amendements
+        <ul>
+            {% for doc in proc_docs %}
+                <li><a href="{{ doc.url }}" target="_blank">{{ doc.ref }}</a></li>
+            {% endfor %}
+        </ul>
+    </li>
+    <li>🗳 Votes
+        <ul>
+            {% for vote in procedure_votes | uniq('date') %}
+                <li><a href="{{ vote.url | replace('.xml', '.html') }}" target="_blank">{{ vote.date | date }}</a></li>
+            {% endfor %}
+    </ul>
 </ul>
 
 <h3>🗃️ Données</h3>
-{% set active_members = members | current(procedure.date)%}
+{% set active_members = members | current(procedure.date) %}
 <section class="tabs">
     {{ c.tabs(['📓 Amendements', '🧩 Explications', '🗣️ Interventions']) }}
     <form>
@@ -91,7 +115,7 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
     <section>
     {% set amd_votes = procedure_votes | where ('type', 'AMENDMENT') | intsort('amendment') %}
     {% for vote in amd_votes %}
-        {% set amendment = amendments | where('doc', doc.ref) | find('nr', vote.amendment) %}
+        {% set amendment = amendments | where('doc', vote.doc) | find('nr', vote.amendment) %}
         {% if amendment %}
             <article id="{{ vote.amendment }}">
             <header>📝 Amendement n°{{ vote.amendment }}{% if vote.split %} | Partie {{ vote.split }}{% endif %} | {{ c.adopted(vote.result) }}</header>
@@ -101,7 +125,7 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
                 <div class="hidden">{% if vote.author[0] == 'DEPUTEES' %}{{ amendment.authors }}{% elif vote.author[0] == 'GROUP' %}{{ vote.author[1] }}{% endif %}</div>
                 {{ c.amendment(amendment) }}
                 <i>Déposé par {{ c.authors(vote, amendment) }}</i>
-                <footer>{{ c.vote(vote) }}</footer>
+                {% if vote.result != 'LAPSED' %}<footer>{{ c.vote(vote) }}</footer>{% endif %}
             {% endif %}
             </article>
         {% endif %}
@@ -110,7 +134,7 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
     </section>
     
     <section>
-    {% set proc_exps = explanations | where('doc', doc.ref) %}
+    {% set proc_exps = explanations | where_in('doc', doc_refs) %}
     {% for exp in proc_exps %}
         <article>
             <div class="hidden">{{ exp.member_id }}</div>
