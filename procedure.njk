@@ -57,7 +57,7 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
                     {% set final_positions = final.positions | map_entries('member_id', 'position') %}
                     {% set final_members = members | current(finals[0].date) %}
                     <section>{{ c.fullbar(final_positions, final_members) }}</section>
-                    <a role="button" href="/voting/{{ finals[0].id }}">🗳 Voir le détail du vote</a>
+                    <a role="button" href="/voting/{{ final.id }}">🗳 Voir le détail du vote</a>
                 {% else %}
                     🔎 Vote introuvable
                 {% endif %}
