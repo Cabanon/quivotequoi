@@ -255,7 +255,7 @@ def process_table(table, header=True):
         while i < col_nb:
             td = tr.find(f"TD[@COLNAME='C{i+1}']")
             if td is not None:
-                row.append(', '.join(td.itertext()).replace('\xa0', ' '))
+                row.append(' '.join(td.itertext()).replace('\xa0', ' '))
                 if 'COLSPAN' in td.keys() and len(rows) > 0: #skip colspan in header
                     cols_to_add = int(td.get('COLSPAN'))-1
                     row.extend(cols_to_add*[None])
@@ -790,11 +790,11 @@ def main(data: Data):
                         title = ''.join(entry.find('RollCallVote.Description.Text').itertext())
                         try:
                             doc = extract_doc(title)
-                            ref = refs[doc]
+                            ref = refs.get(doc, refs.get('RC-' + doc, None))
                         except:
                             continue
                         match = re.search(r'am\s+(.*)', title.lower())
-                        if match:
+                        if ref and match:
                             splits = match[1].split('/')
 
                             try:
