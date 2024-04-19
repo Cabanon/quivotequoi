@@ -44,7 +44,7 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
             <section>{{ c.simplebar(primary.votes) }}</section>
             <hr>
             <b>🇫🇷 Votes des députés français</b>
-            {% if vote.rcv %}
+            {% if primary.rcv %}
                 {% set voting = votings | where('doc', vote.doc) | where('amendment', vote.amendment) | find('split', vote.split) %}
                 <a href="/voting/{{ voting.id }}">📣 Vote nominal : voir le détail</a>
             
