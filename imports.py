@@ -226,7 +226,7 @@ def fetch_doc(doc):
         request = session.get(url)
         request.raise_for_status()
     except requests.HTTPError:
-        return {}
+        return doc
     html = bs4.BeautifulSoup(request.content, features="lxml")
     amendments = []
     try:
@@ -292,12 +292,15 @@ def get_dates():
         end = date(*map(int, (sess['year'], sess['monthEndDateSession'], sess['dayEndDateSession'])))
         sessions.add((start, end))
     
+    out = []
     for sess_start, sess_end in sessions:
+        dates = []
         tmp_date = sess_start
         while term_start <= tmp_date <= term_end and tmp_date <= sess_end:
-            print(tmp_date)
-            yield tmp_date
+            dates.append(tmp_date)
             tmp_date += timedelta(days=1)
+        out.append((sess_start, dates))
+    return out
 
 def parse_group(group):
     match group:
@@ -364,24 +367,28 @@ def parse_author(author):
 
 def parse_amendment(subject, amd):
     subject = subject.lower()
+    amd = str(amd).strip()
     if any(word in subject for word in ('rejet', 'reject')):
         return 'REJECTION', None
-    elif amd == '§':
-        return 'SEPARATE', None
-    elif amd:
+    elif amd == '§' or any(word in amd.lower() for word in ('pc', 'amendement oral')) or 'demande' in subject:
+        return 'IGNORE', None
+    elif 'accord provisoire' in subject:
+        return 'PROVISIONAL', amd
+    elif amd and amd != 'None':
         return 'AMENDMENT', amd
     elif any(
-        re.search(fr'\b{word}\b', subject) for word in (
-            'r(é|e)solution',
+        word in subject for word in (
+            'résolution',
             'vote unique',
-            # 'accord provisoire',
-            'recomm(a|e)ndation',
-            # 'projet de décision du conseil', 'draft council decision'
+            'proposition de la commission',
+            'recommendation',
         )
-    ):  
+    ):
         return 'ADOPTION', None
+    elif 'renvoi' in subject:
+        return 'RETURN', None
     else:
-        return 'PRIMARY', None
+        return 'IGNORE', None
 
 def parse_result(result):
     match result:
@@ -409,8 +416,6 @@ def extract_ref(text):
     return match[0] if match else None
 
 def main(data: Data):
-    start_date = date(2019, 7, 2)
-    end_date = date(2024, 7, 15)
     match data:
         case Data.MEMBERS:
             members = []
@@ -448,8 +453,12 @@ def main(data: Data):
 
             with open('_data/votes.csv') as csvfile:
                 reader = csv.DictReader(csvfile)
-                docs = set(vote['doc'] for vote in reader)
-            
+                docs = {}
+                for vote in reader:
+                    doc = vote['doc']
+                    ref = vote['ref']
+                    docs[doc] = ref or docs.get(doc, None)
+
             with open('_data/docs.csv', 'w') as docfile, open('_data/amendments.csv', 'w') as amdfile:
                 docwriter = csv.DictWriter(docfile, fieldnames=['ref', 'procedure', 'url'])
                 docwriter.writeheader()
@@ -457,11 +466,11 @@ def main(data: Data):
                 amdwriter = csv.DictWriter(amdfile, fieldnames=['doc', 'nr', 'old', 'new', 'authors', 'url'])
                 amdwriter.writeheader()
                 
-                for result in process_map(fetch_doc, docs):
-                    if result:
+                for result in process_map(fetch_doc, docs.keys()):
+                    try:
                         doc, amendments = result
-                    else:
-                        continue
+                    except:
+                        doc = dict(ref=result, procedure=docs[result])
                     docwriter.writerow(doc)
                     for amd in amendments:
                         amd['doc'] = doc['ref']
@@ -653,93 +662,105 @@ def main(data: Data):
             processed = set()
             session = CachedSession()
 
+            with open('_data/members.csv') as csvfile:
+                reader = csv.DictReader(csvfile)
+                mepmap = {mep['last_name'].capitalize(): int(mep['id']) for mep in reader}
+
             with open('_data/votes.csv', 'w') as csvfile:
-                writer = csv.DictWriter(csvfile, fieldnames=['date', 'doc', 'subject', 'author', 'type', 'rcv', 'amendment', 'split', 'result', 'votes', 'remarks', 'url'])
+                writer = csv.DictWriter(csvfile, fieldnames=['id', 'date', 'doc', 'ref', 'subject', 'subject_rcv', 'author', 'type', 'amendment', 'split', 'rcv', 'result', 'votes', 'positions', 'url', 'url_rcv'])
                 writer.writeheader()
-                for sess_date in get_dates():
-                    url = f"{EP_BASE_URL}PV-9-{sess_date.strftime("%Y-%m-%d")}-VOT_FR.xml"
-                    request = session.get(url)
-                    try:
-                        request.raise_for_status()
-                    except requests.HTTPError:
-                        continue
-                    xml = ET.fromstring(request.content)
-                    if sess_date < date(2024, 1, 16):
-                        for vote in xml[0].find('Vote.Results'):
-                            doc = rows = None
-                            title = vote.find('Vote.Result.Text.Title').text
-                            description = vote.find('Vote.Result.Description.Text')
-                            table = vote.find('Vote.Result.Table.Results/TABLE')
-                            if description is not None and table is not None:
-                                doc = extract_doc(''.join(description.itertext()))
-                                rows = process_table(table)
-                            else:
-                                continue
-                            for row in rows:
-                                subject = row['Objet'] or ''
-                                doc = extract_doc(subject) or doc
-                                result = parse_result(row['Vote'])
-                                rcv = row['AN, etc.']
-                                key = (doc, *row.values())
-                                if key in processed:
+                for sess_date, vote_dates in get_dates():
+                    sess_votes = []
+                    sess_votings = []
+                    for vote_date in vote_dates:
+                        print(vote_date)
+                        url = f"{EP_BASE_URL}PV-9-{vote_date.strftime("%Y-%m-%d")}-VOT_FR.xml"
+                        request = session.get(url)
+                        try:
+                            request.raise_for_status()
+                        except requests.HTTPError:
+                            continue
+                        xml = ET.fromstring(request.content)
+
+                        if vote_date < date(2024, 1, 16):
+                            for vote in xml[0].find('Vote.Results'):
+                                doc = rows = None
+                                title = vote.find('Vote.Result.Text.Title').text
+                                description = vote.find('Vote.Result.Description.Text')
+                                table = vote.find('Vote.Result.Table.Results/TABLE')
+                                if description is not None and table is not None:
+                                    desc = ''.join(description.itertext())
+                                    doc = extract_doc(desc)
+                                    rows = process_table(table)
+                                else:
                                     continue
-                                else:
-                                    processed.add(key)
-                                if doc and result is not None and rcv != 'div':
-                                    type, amendment = parse_amendment(subject, row.get('Am n°'))
-                                    remarks = row.get('Votes par AN/VE - observations')
-                                    try:
-                                        splits = remarks.split(', ', 4)
-                                        votes = list(map(int, splits[:3]))
-                                        remarks = ''.join(splits[3:])
-                                    except:
-                                        votes = None
-                                    author = row.get('Auteur')
-                                    writer.writerow(
-                                        dict(
-                                            doc=doc,
-                                            date=sess_date,
-                                            subject=subject,
-                                            author=json.dumps(parse_author(author)) if author else None,
-                                            type=type,
-                                            rcv=rcv is not None and 'AN' in rcv,
-                                            split=extract_split(row['AN, etc.']),
-                                            amendment=amendment,
-                                            result=result,
-                                            votes=json.dumps(votes) if votes else None,
-                                            remarks=remarks,
-                                            url=url,
-                                        )
-                                    )
-                            table = vote.find('Vote.Result.Table.Requests/TABLE')
-                            if table is not None:
-                                rows = process_table(table, header=False)
-                                div = None
-                                amd = None
-                                split = None
                                 for row in rows:
-                                    if div:
-                                        if amd:
-                                            try:
-                                                split = int(re.search(r'(\d+).*partie', row[0])[1])
-                                            except:
-                                                pass
-                                        else:
-                                            try:
-                                                amd = int(re.search(r'amendement\s+(\d+)', row[0])[1])
-                                            except:
-                                                pass
+                                    subject = row['Objet'] or ''
+                                    doc = extract_doc(subject) or doc
+                                    result = parse_result(row['Vote'])
+                                    rcv = row['AN, etc.']
+                                    key = (doc, *row.values())
+                                    if key in processed:
+                                        continue
                                     else:
-                                        div = 'division' in row[0].lower()
+                                        processed.add(key)
+                                    if doc and result is not None and rcv != 'div':
+                                        type, amendment = parse_amendment(subject, row.get('Am n°'))
+                                        remarks = row.get('Votes par AN/VE - observations')
+                                        try:
+                                            splits = re.findall(r'\d+', remarks)
+                                            votes = list(map(int, splits[:3]))
+                                        except:
+                                            votes = None
+                                        author = row.get('Auteur')
+                                        if doc == 'A9-0337/2023' and subject == 'Article 16, § 3 TUE':
+                                            continue
+                                        sess_votes.append(
+                                            dict(
+                                                doc=doc,
+                                                sess_date=sess_date,
+                                                date=vote_date,
+                                                subject=subject,
+                                                author=json.dumps(parse_author(author)) if author else None,
+                                                type=type,
+                                                rcv=rcv is not None and 'AN' in rcv,
+                                                split=extract_split(row['AN, etc.']),
+                                                amendment=amendment,
+                                                result=result,
+                                                votes=json.dumps(votes) if votes else None,
+                                                #remarks=remarks,
+                                                url=url,
+                                            )
+                                        )
                                     
-                    else: # New XML format on PE website
-                        for vote in xml.find('.//votes').findall('vote'):
-                            doc = extract_doc(vote.find('label').text or '')
-                            for voting in vote.findall('.//voting'):
-                                if voting.get('type') == "TITLE_BLOCK":
-                                    doc = extract_doc(voting.find('title').text) or doc
-                                else:
-                                    subject = (voting.find('title').text or '') + (voting.find('label').text or '')
+                                table = vote.find('Vote.Result.Table.Requests/TABLE')
+                                if table is not None:
+                                    rows = process_table(table, header=False)
+                                    div = None
+                                    amd = None
+                                    split = None
+                                    for row in rows:
+                                        if div:
+                                            if amd:
+                                                try:
+                                                    split = int(re.search(r'(\d+).*partie', row[0])[1])
+                                                except:
+                                                    pass
+                                            else:
+                                                try:
+                                                    amd = int(re.search(r'amendement\s+(\d+)', row[0])[1])
+                                                except:
+                                                    pass
+                                        else:
+                                            div = 'division' in row[0].lower()
+                                        
+                        else: # New XML format on PE website
+                            for vote in xml.find('.//votes').findall('vote'):
+                                desc = vote.find('label').text or ''
+                                doc = extract_doc(desc)
+                                for voting in vote.findall('.//voting'):
+                                    subject = (voting.find('title').text or '') + (voting.find('label').text or '') + (voting.find('amendmentSubject').text or '')
+                                    doc = extract_doc(subject) or doc
                                     rcv = getattr(voting.find('rcv/value'), 'text', None)
                                     split = extract_split(rcv or '')
                                     result = parse_result(voting.get('result'))
@@ -747,9 +768,10 @@ def main(data: Data):
                                         type, amendment = parse_amendment(subject or '', voting.find('amendmentNumber').text)
                                         votes = voting.find('observations').text
                                         author = voting.find('amendmentAuthor').text
-                                        writer.writerow(
+                                        sess_votes.append(
                                             dict(
-                                                date=sess_date,
+                                                sess_date=sess_date,
+                                                date=vote_date,
                                                 doc=doc,
                                                 subject=voting.find('amendmentSubject').text,
                                                 author=json.dumps(parse_author(author)) if author else None,
@@ -762,74 +784,103 @@ def main(data: Data):
                                                 url=url,
                                             )
                                         )
-                    
-        case Data.VOTINGS:
-            session = CachedSession()
 
-            with open('_data/members.csv') as csvfile:
-                reader = csv.DictReader(csvfile)
-                mepmap = {mep['last_name'].capitalize(): int(mep['id']) for mep in reader}
-
-            with open('_data/docs.csv') as csvfile:
-                reader = csv.DictReader(csvfile)
-                refs = {doc['ref']: doc['procedure'] for doc in reader}
-
-            with open('_data/votings.csv', 'w') as csvfile:
-                writer = csv.DictWriter(csvfile, fieldnames=['id', 'date', 'procedure_ref', 'doc', 'type', 'amendment', 'split', 'positions', 'url'])
-                writer.writeheader()
-
-                for sess_date in get_dates():
-                    url = f"{EP_BASE_URL}PV-9-{sess_date.strftime("%Y-%m-%d")}-RCV_FR.xml"
-                    request = session.get(url)
-                    try:
-                        request.raise_for_status()
-                    except requests.HTTPError:
-                        continue
-                    xml = ET.fromstring(request.content)
-                    for entry in xml.findall('RollCallVote.Result'):
-                        title = ''.join(entry.find('RollCallVote.Description.Text').itertext())
+                        url = f"{EP_BASE_URL}PV-9-{vote_date.strftime("%Y-%m-%d")}-RCV_FR.xml"
+                        request = session.get(url)
                         try:
-                            doc = extract_doc(title)
-                            ref = refs.get(doc, refs.get('RC-' + doc, None))
-                        except:
+                            request.raise_for_status()
+                        except requests.HTTPError:
                             continue
-                        match = re.search(r'am\s+(.*)', title.lower())
-                        if ref and match:
-                            splits = match[1].split('/')
-
+                        xml = ET.fromstring(request.content)
+                        for entry in xml.findall('RollCallVote.Result'):
+                            title = ''.join(entry.find('RollCallVote.Description.Text').itertext())
                             try:
-                                amendment = int(splits[0])
+                                doc = extract_doc(title)
                             except:
+                                continue
+                            match = re.search(r'am\s+(.*)', title.lower())
+                            ref = extract_ref(title)
+                            if match:
+                                splits = match[1].split('/')
+
                                 amendment = splits[0]
 
+                                try:
+                                    split = splits[1]
+                                except:
+                                    split = None
+                            else:
+                                amendment, split = None, None
+                            type, amendment = parse_amendment(title, amendment)
+                            id = entry.get('Identifier')
+                            if id in processed:
+                                continue
+                            else:
+                                processed.add(id)
+                            if doc:
+                                vote = dict(
+                                    id=id,
+                                    sess_date=sess_date,
+                                    date=vote_date,
+                                    subject=title,
+                                    type=type,
+                                    amendment=amendment,
+                                    split=split,
+                                    doc=doc,
+                                    ref=ref,
+                                    url=url.replace('.xml', '.html'),
+                                )
+                                positions = {}
+                                votes = []
+                                for position in ['For', 'Against', 'Abstention']:
+                                    groups = entry.find(f'Result.{position}')
+                                    votes.append(int(groups.get('Number')) if groups is not None else 0)
+                                    if groups is not None:
+                                        for group in groups:
+                                            for rcv in group:
+                                                member_id = rcv.get('PersId', mepmap.get(rcv.text, None))
+                                                if member_id and int(member_id) in mepmap.values():
+                                                    positions[member_id] = position.upper()
+                                vote['positions'] = json.dumps(positions)
+                                vote['votes'] = json.dumps(votes) if len(votes) else None
+                                sess_votings.append(vote)
+
+                        url = f"{EP_BASE_URL}PV-9-{vote_date.strftime("%Y-%m-%d")}_FR.html"
+                        pv = bs4.BeautifulSoup(session.get(url).content, features="lxml")
+                        for doc in set(vote['doc'] for vote in sess_votes + sess_votings):
+                            matches = pv.findAll(string=doc)
+                            for match in matches:
+                                lines = [p.text.lower() for p in match.find_parent('p').find_next_siblings('p')]
+                                for i, line in enumerate(lines):
+                                    if (
+                                        'renvoi en commission' in line 
+                                        and not any(vote['doc'] == doc and vote['type'] == 'RETURN' for vote in sess_votes + sess_votings)
+                                    ):  
+                                        result = 'ADOPTED' if 'approuvé' in lines[i+1] else 'REJECTED'
+                                        sess_votes.append(
+                                            dict(doc=doc, type='RETURN', url=url, date=vote_date, sess_date=sess_date, result=result)
+                                        )
+                        
+                    import pandas as pd
+                    votes_df = pd.DataFrame(sess_votes)
+                    votings_df = pd.DataFrame(sess_votings)
+                    if not votes_df.empty and not votings_df.empty:
+                        votes_df = votes_df.query('type != "IGNORE"')
+                        votings_df = votings_df.query('type != "IGNORE"')
+                        if not votes_df.empty and not votings_df.empty:
+                            on = ['sess_date', 'doc', 'amendment', 'split', 'type', 'votes']
                             try:
-                                split = int(splits[1])
-                            except:
-                                split = None
-                        else:
-                            amendment, split = None, None
-                        type, amendment = parse_amendment(title, amendment)
-                        vote = dict(
-                            id=entry.get('Identifier'),
-                            date=sess_date,
-                            type=type,
-                            amendment=amendment,
-                            split=split,
-                            procedure_ref=ref,
-                            doc=doc,
-                            url=url.replace('xml', '.html'),
-                        )
-                        positions = {}
-                        for position in ['For', 'Against', 'Abstention']:
-                            groups = entry.find(f'Result.{position}')
-                            if groups:
-                                for group in groups:
-                                    for rcv in group:
-                                        member_id = rcv.get('PersId', mepmap.get(rcv.text, None))
-                                        if member_id and int(member_id) in mepmap.values():
-                                            positions[member_id] = position.upper()
-                        vote['positions'] = json.dumps(positions)
-                        writer.writerow(vote)
+                                merged = votes_df.merge(votings_df, on=on, how='outer', suffixes=(None, '_rcv'), validate='1:1')
+                            except pd.errors.MergeError:
+                                print(votes_df[votes_df.duplicated(on, keep=False)].values.tolist())
+                                print(votings_df[votings_df.duplicated(on, keep=False)].values.tolist())
+                                exit()
+                            
+                            merged = merged.replace(pd.NaT, None)
+                            merged['date'] = merged.apply(lambda row: row['date_rcv'] or row['date'], axis=1)
+                            merged = merged.drop(columns=['sess_date', 'date_rcv'])
+                            writer.writerows(merged.to_dict('records'))
+                
 
 if __name__ == "__main__":
     typer.run(main)

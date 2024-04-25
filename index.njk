@@ -1,29 +1,17 @@
-{% import "components.njk" as c with context %}
 {% extends "parent.njk" %}
 
 {% block head %}
-<script defer src="/bundle.js"></script>
+<style>
+main { text-align: center; }
+h1 { display: flex; align-items: center; height: 50vh }
+</style>
 {% endblock %}
 
 {% block main %}
-<fieldset class="grid">
-  <input id="search" oninput="filter()" type="search" placeholder="Cherchez une procédure"/>
-  <select id="theme" onchange="filter()" aria-label="Filtrer par sujet">
-    <option selected value="">🚫 Pas de thème sélectionné</option>
-    {% for theme in subjects | where('theme') | map('theme') | uniq %}
-      <option>{{ theme }}</option>
-    {% endfor %}
-  </select>
-  <select id="area" onchange="filter()" aria-label="Filtrer par zone géographique">
-    <option selected value="">⛔ Pas de zone géographique sélectionnée</option>
-    {% for country in countries | sort(false, false, 'name') %}
-      <option>{{ country.flag }} {{ country.name }}</option>
-    {% endfor %}
-  </select>
-</fieldset>
-<div id="list">
-  {% for procedure in procedures | where_in('type', ['COD', 'RSP', 'INI']) | sort(true, true, 'date') %}
-    {{ c.procedure(procedure) }}
-  {% endfor %}
+<h1>Découvrez comment vote les députés français au Parlement Européen.</h1>
+<div class="grid">
+    <a role="button" href="/search">🗳️ Chercher un vote</a>
+    <a role="button" href="/members">👤 Chercher un député</a>
+    {# <a role="button" href="/how-it-works">🤔 Comment ça marche ?</a> #}
 </div>
 {% endblock %}

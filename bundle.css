@@ -2,7 +2,9 @@ ins { text-decoration: underline }
 
 body { overflow-x: hidden }
 
-.article.footer { overflow: auto }
+article > footer { overflow: auto }
+footer:empty { display: none }
+
 
 .stats { text-align: center }
 .nowrap { white-space: nowrap }
@@ -20,15 +22,22 @@ article:not([style="display: none;"]):last-of-type + .empty {
 
 .grid input, .grid select, article p:last-child { margin-bottom: unset !important }
 
+html,body { height: 100vh; }
 body > header {
   position: sticky;
   top: 0;
   z-index: 99;
 }
+
 nav {
   padding: var(--pico-spacing);
   margin: calc(-1 * var(--pico-spacing));
   background-color: var(--pico-background-color);
+}
+
+body > footer {
+  position: sticky;
+  top: 100vh;
 }
 
 .tabs > input {

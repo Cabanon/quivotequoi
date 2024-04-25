@@ -35,9 +35,10 @@ permalink: "member/{{ member.id }}/index.html"
         <article>
             <header>
                <div><a href="/procedure/{{ proc.reference }}">{{ proc.title }}</a></div>
-               <div>Amendement n°{{ amendment.nr }} | {{ c.adopted(vote.result) }}</div>
+               <div>Amendement n°{{ amendment.nr }} | {{ c.adopted(vote) }}</div>
             </header>
             {{ c.amendment(amendment) }}
+            <i>Déposé par {{ c.authors(vote, amendment) }}</i>
             <footer>{{ c.vote(vote) }}</footer>
         </article>
     {% endfor %}

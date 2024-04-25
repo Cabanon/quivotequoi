@@ -21,51 +21,39 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
 {% set proc_docs = docs | where('procedure', procedure.reference) %}
 {% set doc_refs = proc_docs | map('ref') %}
 {% set procedure_votes = votes | where_in('doc', doc_refs) %}
-{% set primary_votes = procedure_votes | where_in('type', ['ADOPTION', 'REJECTION']) %}
+{% set primary_votes = procedure_votes | where_exp('type', 'type != "AMENDMENT"') | where_exp('result', 'result != "LAPSED"') | sort(false, true, 'date') %}
 <h3>📌 Votes principaux</h3>
 {% for primary in primary_votes %}
+    {% set final = null %}
     <article>
         <header>
-            {% if primary.type == 'ADOPTION' %}
-                👍 Adoption du texte
-            {% elif primary.type == 'REJECTION' %}
-                👎 Rejet du texte
-            {% else %}
-                📌 {{ primary.subject }}
-            {% endif %}
-            | {{ c.adopted(primary.result) }}
+            {{ c.type(primary) }}
+            <div style="float: right">{{ c.adopted(primary) }}</div>
         </header>
         {% if primary.author %}
-            <i>Demandé par {{ c.authors(primary) }}</i>
+            <i>Proposé par {{ c.authors(primary) }}</i>
             <hr>
         {% endif %}
         {% if primary.votes %}
-            <b>🇪🇺 Votes de tous les députés européens</b>
+            <p>🇪🇺 Députés européens</p>
             <section>{{ c.simplebar(primary.votes) }}</section>
             <hr>
-            <b>🇫🇷 Votes des députés français</b>
-            {% if primary.rcv %}
-                {% set voting = votings | where('doc', vote.doc) | where('amendment', vote.amendment) | find('split', vote.split) %}
-            
-                {% if primary.amendment %}
-                    {% set final = votings | where('procedure_ref', procedure.reference ) | where('doc', primary.doc) | find('amendment', primary.amendment) %}
-                {% else %}
-                    {% set final = votings | where('procedure_ref', procedure.reference ) | find('type', primary.type) %}
-                {% endif %}
-                {% if final %}
-                    {% set final_positions = final.positions | map_entries('member_id', 'position') %}
-                    {% set final_members = members | current(finals[0].date) %}
-                    <section>{{ c.fullbar(final_positions, final_members) }}</section>
-                    <a role="button" href="/voting/{{ final.id }}">🗳 Voir le détail du vote</a>
-                {% else %}
-                    🔎 Vote introuvable
-                {% endif %}
-            {% else %}
+            <p>🇫🇷 Députés français{% if primary.id %}<a style="float: right" href="/vote/{{ primary.id }}">🗳 Voir le vote</a>{% endif %}</p>
+            {% if primary.positions %}
+                {% set final_positions = primary.positions | map_entries('member_id', 'position') %}
+                {% set final_members = members | current(finals[0].date) %}
+                <section>{{ c.fullbar(final_positions, final_members) }}</section>
+            {% elif primary.rcv %}
+                🔎 Vote introuvable
+            {% else %}   
                 🤖 Vote électronique
-            {% endif %}            
+            {% endif %}         
         {% else %}
             🖐 Vote à main levée
         {% endif %}
+        <footer>
+            <span style="float: right">{{ primary.date | date }}</span>
+        </footer>
     </article>
 {% endfor %}
 
@@ -128,15 +116,19 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
         {% set amendment = amendments | where('doc', vote.doc) | find('nr', vote.amendment) %}
         {% if amendment %}
             <article id="{{ vote.amendment }}">
-            <header>📝 Amendement n°{{ vote.amendment }}{% if vote.split %} | Partie {{ vote.split }}{% endif %} | {{ c.adopted(vote.result) }}</header>
+            <header>
+                📝 Amendement n°{{ vote.amendment }}{% if vote.split %} | Partie {{ vote.split }}{% endif %}
+                <span style="float: right">{{ c.adopted(vote) }}</span>
+            </header>
             {% if vote.split %}
                 <p>🔜 Vote par division : aperçu bientôt disponible</p>
             {% else %}
                 <div class="hidden">{% if vote.author[0] == 'DEPUTEES' %}{{ amendment.authors }}{% elif vote.author[0] == 'GROUP' %}{{ vote.author[1] }}{% endif %}</div>
                 {{ c.amendment(amendment) }}
-                <i>Déposé par {{ c.authors(vote, amendment) }}</i>
-                {% if vote.result != 'LAPSED' %}<footer>{{ c.vote(vote) }}</footer>{% endif %}
+                <p><i>Déposé par {{ c.authors(vote, amendment) }}</i></p>
             {% endif %}
+            <p><a href="{{ amendment.url }}">🔗 Voir la source</a></p>
+            {% if vote.result != 'LAPSED' %}<footer>{{ c.vote(vote) }}</footer>{% endif %}
             </article>
         {% endif %}
     {% endfor %}

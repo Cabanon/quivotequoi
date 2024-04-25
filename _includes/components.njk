@@ -13,6 +13,20 @@
 </p>
 {% endmacro %}
 
+{% macro type(vote) %}
+{% if vote.type == 'ADOPTION' %}
+  👍 Adoption du texte
+{% elif vote.type == 'REJECTION' %}
+  👎 Rejet du texte
+{% elif vote.type == 'PROVISIONAL' %}
+  🤝 Accord provisoire
+{% elif vote.type == 'RETURN' %}
+  ↩️ Renvoi en commission
+{% else %}
+  📌 {{ vote.subject }}
+{% endif %}
+{% endmacro %}
+
 {% macro procedure(procedure) %}
 {% set doc_refs = docs | where('procedure', procedure.reference ) | map('ref') %}
 {% set final_vote = votes | where_in('doc', doc_refs) | where_in('type', ['ADOPTION', 'REJECTION']) | last %}
@@ -82,15 +96,25 @@
 </span>
 {% endmacro %}
 
-{% macro adopted(string) %}
-{% if string == 'ADOPTED' %}
-✅️ Adopté
-{% elif string == 'REJECTED' %}
-❌️ Rejeté
-{% elif string == 'LAPSED' %}
-🚫 Annulé
+{% macro adopted(vote) %}
+{% if vote.result %}
+  {% if vote.result == 'ADOPTED' %}
+    ✅️ Approuvé
+  {% elif vote.result == 'REJECTED' %}
+    ❌️ Rejeté
+  {% elif vote.result == 'LAPSED' %}
+    🚫 Annulé
+  {% else %}
+    🔍 Résultat inconnu
+  {% endif %}
+{% elif vote.votes %}
+  {% if vote.votes[0] > vote.votes[1] %}
+    ✅️ Approuvé
+  {% else %}
+    ❌️ Rejeté
+  {% endif %}
 {% else %}
-🔍 Résultat introuvable
+  🔍 Résultat inconnu
 {% endif %}
 {% endmacro %}
 
@@ -130,9 +154,8 @@
 {% macro vote(vote) %}
 {% if vote.votes %}
   {{ inlinebar(vote.votes) }}
-  {% if vote.rcv %}
-    {% set voting = votings | where('doc', vote.doc) | where('amendment', vote.amendment) | find('split', vote.split) %}
-    <a href="/voting/{{ voting.id }}">📣 Vote nominal : voir le détail</a>
+  {% if vote.id %}
+    <a href="/vote/{{ vote.id }}">📣 Vote nominal : voir le détail</a>
   {% else %}
     🤖 Vote électronique
   {% endif %}
@@ -154,7 +177,7 @@
     {% endfor %}
   {% endif %}
 {% elif author[0] == 'COMMISSION' %}
-  la commission {{ author[1] | default('compétente') }}
+  la commission {{ author[1] or 'compétente' }}
 {% elif author[0] == 'GROUP' %}
   {% for group in author[1] %}
     {% set parties = members | current(vote.date) | where('group', group) | map('party') | uniq %}
@@ -162,6 +185,8 @@
     {% if parties.length %}(🇫🇷 : {{ parties | join(', ') }}){% endif %}
     {% if loop.revindex > 2 %}, {% elif loop.revindex == 2 %} et {% endif %}
   {% endfor %}
+{% elif author[0] == 'RAPPORTEUR' %}
+  le rapporteur
 {% endif %}
 {% endmacro %} 
 

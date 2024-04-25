@@ -1,0 +1,29 @@
+{% import "components.njk" as c with context %}
+{% extends "parent.njk" %}
+
+{% block head %}
+<script defer src="/bundle.js"></script>
+{% endblock %}
+
+{% block main %}
+<fieldset class="grid">
+  <input id="search" oninput="filter()" type="search" placeholder="Cherchez une procédure"/>
+  <select id="theme" onchange="filter()" aria-label="Filtrer par sujet">
+    <option selected value="">💡 Choisir un thème</option>
+    {% for theme in subjects | where('theme') | map('theme') | uniq %}
+      <option>{{ theme }}</option>
+    {% endfor %}
+  </select>
+  <select id="area" onchange="filter()" aria-label="Filtrer par zone géographique">
+    <option selected value="">🗺️ Choisir une zone</option>
+    {% for country in countries | sort(false, false, 'name') %}
+      <option>{{ country.flag }} {{ country.name }}</option>
+    {% endfor %}
+  </select>
+</fieldset>
+<div id="list">
+  {% for procedure in procedures | where_in('type', ['COD', 'RSP', 'INI']) | sort(true, true, 'date') %}
+    {{ c.procedure(procedure) }}
+  {% endfor %}
+</div>
+{% endblock %}
