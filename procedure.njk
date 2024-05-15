@@ -1,5 +1,6 @@
 ---
 pagination:
+    addAllPagesToCollections: true
     data: procedures
     size: 1
     alias: procedure
@@ -22,12 +23,23 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
 {% set doc_refs = proc_docs | map('ref') %}
 {% set procedure_votes = votes | where_in('doc', doc_refs) %}
 {% set primary_votes = procedure_votes | where_exp('type', 'type != "AMENDMENT"') | where_exp('result', 'result != "LAPSED"') | sort(false, true, 'date') %}
+{% set summary = news | where_includes('refs', procedure.reference) | first %}
+{% if summary %}
+<h3>🎯 Résumé</h3>
+<section>
+<ul>
+{% for fact in summary.facts %}
+    <li>{{ fact }}</li>
+{% endfor %}
+</ul>
+</section>
+{% endif %}
 <h3>📌 Votes principaux</h3>
 {% for primary in primary_votes %}
     {% set final = null %}
     <article>
         <header>
-            {{ c.type(primary) }}
+            {{ c.title(primary, procedure) }}
             <div style="float: right">{{ c.adopted(primary) }}</div>
         </header>
         {% if primary.author %}
@@ -57,19 +69,6 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
     </article>
 {% endfor %}
 
-<h3>🏷 Sujets</h3>
-<ul>
-    {{ procedure.subject }}
-    {% for code in procedure.subjects %}
-        {% set subject = subjects | find('code', code) %}
-        {% if subject %}
-            <li>{{ subject.name }}</li>
-        {% else %}
-            <li>{{ code }}</li>
-        {% endif %}
-    {% endfor %}
-</ul>
-
 <h3>📚 Sources</h3>
 <ul>
     <li>ℹ️ Procédure <a href="{{ procedure.url | replace('.json', '.do') }}" target="_blank">{{ procedure.reference }}</a></li>
@@ -86,6 +85,7 @@ permalink: "procedure/{{ procedure.reference }}/index.html"
                 <li><a href="{{ vote.url | replace('.xml', '.html') }}" target="_blank">{{ vote.date | date }}</a></li>
             {% endfor %}
     </ul>
+    {% if summary %}<li>🎯 <a href="{{ summary.url }}">Résumé</a>{% endif %}
 </ul>
 
 <h3>🗃️ Données</h3>

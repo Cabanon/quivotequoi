@@ -13,11 +13,11 @@
 </p>
 {% endmacro %}
 
-{% macro type(vote) %}
+{% macro title(vote, procedure) %}
 {% if vote.type == 'ADOPTION' %}
-  👍 Adoption du texte
+  👍 {{ vote.subject }}
 {% elif vote.type == 'REJECTION' %}
-  👎 Rejet du texte
+  👎 Proposition de rejet
 {% elif vote.type == 'PROVISIONAL' %}
   🤝 Accord provisoire
 {% elif vote.type == 'RETURN' %}
@@ -99,7 +99,7 @@
 {% macro adopted(vote) %}
 {% if vote.result %}
   {% if vote.result == 'ADOPTED' %}
-    ✅️ Approuvé
+    ✅️ {% if vote.type == 'RETURN' %}Approuvé{% else %}Adopté{% endif %}
   {% elif vote.result == 'REJECTED' %}
     ❌️ Rejeté
   {% elif vote.result == 'LAPSED' %}
@@ -123,9 +123,10 @@
   {% set attended = atts | where('attend') | length %}
   {% set total = atts | length %}
   {% set activity = activities | find('member_id', member.id) %}
+  {% set amds = amendments | where_includes('authors', member.id) | length %}
   <div class="grid stats">
     <div><h3>{{ attended | ratio(total) }}</h3>Taux de présence</div>
-    <div><h3>{{ activity.speeches }}</h3>Interventions en plénière</div>
+    <div><h3>{{ amds }}</h3>Amendements en plénières</div>
     <div><h3>{{ activity.reports }}</h3>Rapports</div>
     <div><h3>{{ activity.imotions }}</h3>Résolutions individuelles</div>
   </div>

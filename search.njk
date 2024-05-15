@@ -22,7 +22,7 @@
   </select>
 </fieldset>
 <div id="list">
-  {% for procedure in procedures | where_in('type', ['COD', 'RSP', 'INI']) | sort(true, true, 'date') %}
+  {% for procedure in procedures | sort(true, true, 'date') %}
     {{ c.procedure(procedure) }}
   {% endfor %}
 </div>

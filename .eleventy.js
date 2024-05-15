@@ -137,6 +137,7 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy("bundle.css");
     eleventyConfig.addPassthroughCopy("favicon.ico");
+    eleventyConfig.addPassthroughCopy("robots.txt");
     eleventyConfig.addPassthroughCopy("*.js");
 
     eleventyConfig.addDataExtension("csv", (contents, filePath) => {

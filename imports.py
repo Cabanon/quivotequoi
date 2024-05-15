@@ -9,6 +9,7 @@ from datetime import datetime as dt, date, timezone, timedelta
 from dateutil.parser import parse as parsedate
 from pathlib import Path
 from enum import StrEnum, auto
+from urllib import parse
 
 import typer
 import lzip
@@ -37,6 +38,7 @@ class Data(StrEnum):
     ATTENDANCES = auto()
     ACTIVITIES = auto()
     SPEECHES = auto()
+    NEWS = auto()
 
 
 class ReadableIterator(io.IOBase):
@@ -190,7 +192,7 @@ def extract_amendments(table):
             old = new = ''
         elif row[1].startswith('Amendement'):
             start = True
-        elif any(re.search(pattern, ''.join(row)) for pattern in (r'\d+.\d+.\d+', r'AM\\', r'PE\d{3}.\d{3}', r'\bFR\b', 'Unie dans la diversité', 'Or. en')):
+        elif any(re.search(pattern, ''.join(row)) for pattern in (r'\d+\.\d+\.\d+', r'AM\\', r'PE\d{3}.\d{3}', r'\bFR\b', 'Unie dans la diversité', 'Or. en')):
             continue
         elif 'http' in row[0] or 'Justification' in ''.join(row):
             start = False
@@ -365,30 +367,30 @@ def parse_author(author):
     else:
         return 'GROUP', list(filter(bool, (parse_group(part.strip()) for part in re.split(',|\n', author))))
 
-def parse_amendment(subject, amd):
-    subject = subject.lower()
+def parse_subject(subject, amd):
+    subject_lower = subject.lower()
     amd = str(amd).strip()
     if any(word in subject for word in ('rejet', 'reject')):
-        return 'REJECTION', None
-    elif amd == '§' or any(word in amd.lower() for word in ('pc', 'amendement oral')) or 'demande' in subject:
-        return 'IGNORE', None
-    elif 'accord provisoire' in subject:
-        return 'PROVISIONAL', amd
+        return subject, None, 'REJECTION'
+    elif amd == '§' or any(word in amd.lower() for word in ('pc', 'amendement oral')):
+        pass
     elif amd and amd != 'None':
-        return 'AMENDMENT', amd
-    elif any(
-        word in subject for word in (
-            'résolution',
-            'vote unique',
-            'proposition de la commission',
-            'recommendation',
-        )
-    ):
-        return 'ADOPTION', None
+        return subject, amd, 'AMENDMENT'
     elif 'renvoi' in subject:
-        return 'RETURN', None
+        return subject, None, 'RETURN'
+    elif 'résolution' in subject_lower:
+        return 'Proposition de résolution', None, 'ADOPTION'
+    elif 'vote unique' in subject_lower:
+        return 'Adoption du texte', None, 'ADOPTION'
+    elif "procédure d'approbation" in subject_lower:
+        return "Procédure d'approbation", None, 'ADOPTION'
+    elif re.search(r'proposition de la commissi?on', subject_lower):
+        return 'Proposition de la commission', None, 'ADOPTION'
     else:
-        return 'IGNORE', None
+        pass
+
+    return subject, amd, 'IGNORE'
+
 
 def parse_result(result):
     match result:
@@ -408,12 +410,33 @@ def extract_split(text):
 DOC_RE = r'(RC-)?(A|B|C)[0-9]-[0-9]{4}\/[0-9]{4}'
 def extract_doc(text):
     match = re.search(DOC_RE, text.upper())
-    return match[0] if match else None
+    doc = match[0] if match else None
+    if doc == 'A9-0280/2019':
+        doc = 'A9-0280/2021'
+    return doc
 
-PROC_RE = re.compile(r'[0-9]{4}/[0-9]{4}[A-Z]?\([A-Z]{3}\)')
+PROC_RE = re.compile(r'[0-9]{4}/[0-9]{4}[A-Z]?\([A-Z]{3}\)?')
 def extract_ref(text):
     match = PROC_RE.search(text)
     return match[0] if match else None
+
+LOC_RE = re.compile(r'((?:article|alinéa|considérant|après le considérant|§|paragraphe|après le paragraphe|point|après le point|annexe) \w+)')
+def extract_loc(text):
+    matches = LOC_RE.findall(text.lower())
+    return ', '.join(filter(bool, matches)) or None
+
+
+TITLE_RE = re.compile(rf'{LOC_RE.pattern}?[ -,]*(?:am ([\d -,]*\d))?(?:/(\d)\b)?')
+def parse_title(text):
+    matches = TITLE_RE.findall(text.lower())
+    loc = None
+    amendment = None
+    split = None
+    if len(matches):
+        groups = [', '.join(filter(bool, i)) or None for i in zip(*matches)]
+        loc, amendment, split = groups            
+        
+    return loc, amendment, split
 
 def main(data: Data):
     match data:
@@ -581,6 +604,46 @@ def main(data: Data):
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
                 writer.writeheader()
                 writer.writerows(attendances)
+        
+        case Data.NEWS:
+            session = CachedSession()
+
+            news = []
+            page = 0
+            while True:
+                print(page)
+                url = f"https://www.europarl.europa.eu/news/fr/page/{page}?minDate=02-07-2019&contentType=plenary"
+                page += 1
+                request = session.get(url)
+                html = bs4.BeautifulSoup(request.content, features='lxml')
+                links = html.find_all('a')
+                if links:
+                    for a in links:
+                        url = a.attrs['href']
+                        request = session.get(url)
+                        html = bs4.BeautifulSoup(request.content)
+                        title = a.select_one('.ep_name').text
+                        spans = html.find_all(string=re.compile('Fiche de procédure'))
+                        hrefs = [span.find_parent('a').attrs['href'] for span in spans]
+                        refs = [extract_ref(parse.unquote(href)) for href in hrefs if href]
+                        facts = [e.get_text(strip=True) for e in html.select('.ep-a_facts .ep-p_text')]
+                        if refs and facts:
+                            news.append(
+                                dict(
+                                    title=title,
+                                    refs=json.dumps(refs),
+                                    facts=json.dumps(facts),
+                                    url=url
+                                )
+                            )
+                else:
+                    break
+            
+            with open('_data/news.csv', 'w') as csvfile:
+                fieldnames = news[0].keys()
+                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+                writer.writeheader()
+                writer.writerows(news) 
 
         case Data.SUBJECTS:
             sess = requests.Session()
@@ -705,7 +768,8 @@ def main(data: Data):
                                     else:
                                         processed.add(key)
                                     if doc and result is not None and rcv != 'div':
-                                        type, amendment = parse_amendment(subject, row.get('Am n°'))
+                                        amendment = row.get('Am n°')
+                                        subject, amendment, type = parse_subject(subject, amendment)
                                         remarks = row.get('Votes par AN/VE - observations')
                                         try:
                                             splits = re.findall(r'\d+', remarks)
@@ -765,7 +829,8 @@ def main(data: Data):
                                     split = extract_split(rcv or '')
                                     result = parse_result(voting.get('result'))
                                     if doc and result is not None:
-                                        type, amendment = parse_amendment(subject or '', voting.find('amendmentNumber').text)
+                                        amendment = voting.find('amendmentNumber').text
+                                        subject, amendment, type = parse_subject(subject or '', amendment)
                                         votes = voting.find('observations').text
                                         author = voting.find('amendmentAuthor').text
                                         sess_votes.append(
@@ -773,7 +838,7 @@ def main(data: Data):
                                                 sess_date=sess_date,
                                                 date=vote_date,
                                                 doc=doc,
-                                                subject=voting.find('amendmentSubject').text,
+                                                subject=subject,
                                                 author=json.dumps(parse_author(author)) if author else None,
                                                 type=type,
                                                 split=split,
@@ -793,7 +858,7 @@ def main(data: Data):
                             continue
                         xml = ET.fromstring(request.content)
                         for entry in xml.findall('RollCallVote.Result'):
-                            title = ''.join(entry.find('RollCallVote.Description.Text').itertext())
+                            title = re.sub(r'\s+', ' ', ''.join(entry.find('RollCallVote.Description.Text').itertext()))
                             try:
                                 doc = extract_doc(title)
                             except:
@@ -811,7 +876,7 @@ def main(data: Data):
                                     split = None
                             else:
                                 amendment, split = None, None
-                            type, amendment = parse_amendment(title, amendment)
+                            subject, amendment, type = parse_subject(title, amendment)
                             id = entry.get('Identifier')
                             if id in processed:
                                 continue

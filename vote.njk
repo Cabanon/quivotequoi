@@ -8,7 +8,8 @@
       return paginationData.filter(vote => vote.id)
     },
   },
-  permalink: "vote/{{ vote.id }}/index.html"
+  permalink: "vote/{{ vote.id }}/index.html",
+  eleventyExcludeFromCollections: true
 }
 ---
 {% import "components.njk" as c with context %}
@@ -28,7 +29,7 @@
 <a href="/procedure/{{ vote.procedure_ref }}">◀️ Retourner à la procédure</a>
 <hgroup>
   <h2>{{ procedure.title }}</h2>
-  <subtitle>{% if vote.type == 'AMENDMENT' %}Amendement n°{{ vote.amendment }}{% else %}{{ c.type(vote) }}{% endif %}</subtitle>
+  <subtitle>{% if vote.type == 'AMENDMENT' %}Amendement n°{{ vote.amendment }}{% else %}{{ c.title(vote) }}{% endif %}</subtitle>
 </hgroup>
 {% if vote.split %}
   <p>⚠️ Il s'agit d'un vote par division, cela signifie que seule une partie de l'amendement ci-dessous a été voté. Pour en savoir plus, veuillez consulter la source des votes en bas de page</p>
