@@ -1,28 +1,4 @@
-ins { text-decoration: underline }
-
-body { overflow-x: hidden }
-
-article > footer { overflow: auto }
-footer:empty { display: none }
-
-
-.stats { text-align: center }
-.nowrap { white-space: nowrap }
-.hidden { display: none }
-
-.empty {
-  display: block;
-  text-align: center;
-  height: 50vh;
-  line-height: 50vh;
-}
-article:not([style="display: none;"]):last-of-type + .empty {
-  display: none;
-}
-
-.grid input, .grid select, article p:last-child { margin-bottom: unset !important }
-
-html,body { height: 100vh; }
+html,body { min-height: 100vh; }
 body > header {
   position: sticky;
   top: 0;
@@ -35,10 +11,25 @@ nav {
   background-color: var(--pico-background-color);
 }
 
-body > footer {
-  position: sticky;
-  top: 100vh;
+ins { text-decoration: underline }
+li > ul {margin-bottom: unset; }
+article > footer { overflow: auto }
+article:not([style="display: none;"]):last-of-type + .empty {
+  display: none;
 }
+
+.stats { text-align: center }
+.nowrap { white-space: nowrap }
+.hidden { display: none }
+
+.empty {
+  display: block;
+  text-align: center;
+  height: 50vh;
+  line-height: 50vh;
+}
+
+.grid input, .grid select, article p:last-child { margin-bottom: unset !important }
 
 .tabs > input {
   opacity: 0;
