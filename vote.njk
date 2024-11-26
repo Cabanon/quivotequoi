@@ -26,7 +26,7 @@
 {% block main %}
 {% set doc = docs | find('ref', vote.doc) %}
 {% set procedure = procedures | find('reference', doc.procedure) %}
-<a href="/procedure/{{ vote.procedure_ref }}">◀️ Retourner à la procédure</a>
+<a href="/procedure/{{ procedure.reference }}">◀️ Retourner à la procédure</a>
 <hgroup>
   <h2>{{ procedure.title }}</h2>
   <subtitle>{% if vote.type == 'AMENDMENT' %}Amendement n°{{ vote.amendment }}{% else %}{{ c.title(vote) }}{% endif %}</subtitle>
